@@ -104,7 +104,7 @@ bot.on('message', message => {
             var fact = Math.floor(Math.random() * facts.length);
             message.channel.send(facts[fact]);
             break;
-            
+
             case 'winrate':
                 var facts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
                  "11", "12", "13", "14", "15", "16", "17", "18", "19",
@@ -123,8 +123,8 @@ bot.on('message', message => {
                 .setTitle(`<@${tomute.id}>s winrate is....`)
                 .setColor('0x1AA9EE')
                 .addDescription('Check my cowboish website above :v')
-                .addField((facts[fact])+'%')
-                .setFooter('Cowboish bot')
+                .addField((facts[fact])+'%', 'trolololool')
+                .setFooter('Cowboish bot');
                 message.channel.sendEmbed(winEmbed);
             break;
 
