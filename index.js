@@ -122,9 +122,9 @@ bot.on('message', message => {
                 const winEmbed = Discord.RichEmbed()
                 .setTitle(`<@${tomute.id}>s winrate is....`)
                 .setColor('0x1AA9EE')
-                .addDescription('Check my cowboish website above :v')
+                .addDescription('Check my cowboish website above :v'+ 'https://rkanjo2.wixsite.com/cowboishbot')
                 .addField((facts[fact])+'%', 'trolololool')
-                .setFooter('Cowboish bot');
+                .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png')
                 message.channel.sendEmbed(winEmbed);
             break;
 
@@ -248,7 +248,7 @@ bot.on('message', message => {
                     const allowed = message.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
                     if (!allowed.length) return message.channel.send('It seems we are out of fresh memes!, Try again later.');
                     const randomnumber = Math.floor(Math.random() * allowed.length)
-                    message.channel.sendEmbed(memeEmbed);
+                    message.channel.sendEmbed(memeEmbed); break;
                 } catch (err) {
                     return console.log(err);
 
