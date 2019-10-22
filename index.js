@@ -117,10 +117,9 @@ bot.on('message', message => {
                 "80", "81", "82", "83", "84", "85", "86", "87", "88", "89",
                 "90", "91", "92", "93", "94", "95", "96", "97", "98", "99",
                 "100"];
-                let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
                 var fact = Math.floor(Math.random() * facts.length);
                 const winEmbed = Discord.RichEmbed()
-                .setTitle(`<@${tomute.id}>s winrate is....`)
+                .setTitle('ur winrate is....')
                 .setColor('0x1AA9EE')
                 .addDescription('Check my cowboish website above :v'+ 'https://rkanjo2.wixsite.com/cowboishbot')
                 .addField((facts[fact])+'%', 'trolololool')
@@ -248,7 +247,7 @@ bot.on('message', message => {
                     const allowed = message.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
                     if (!allowed.length) return message.channel.send('It seems we are out of fresh memes!, Try again later.');
                     const randomnumber = Math.floor(Math.random() * allowed.length)
-                    message.channel.sendEmbed(memeEmbed); break;
+                    message.channel.sendEmbed(memeEmbed);
                 } catch (err) {
                     return console.log(err);
 
