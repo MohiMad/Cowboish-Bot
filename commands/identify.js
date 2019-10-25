@@ -12,4 +12,5 @@ message.channel.send(facts[fact]);
 
 
 
-}}
+    }
+}

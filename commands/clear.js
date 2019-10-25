@@ -7,6 +7,5 @@ message.channel.bulkDelete(args[1]);
 
 
 
-
-
-}}
+    }
+}

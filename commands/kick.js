@@ -23,4 +23,5 @@ module.exports = {
                message.reply('Omg how can u be a moderator🤦‍u need to specify the person u want to kick lol')
            }
 
-        }}
+            }
+}

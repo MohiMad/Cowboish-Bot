@@ -12,9 +12,11 @@ var version = '1.0.2';
 
 const fs = require ('fs');
 bot.commands = new Discord.Collection();
+
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
 for (const file of commandFiles){
 const command = require(`./commands/${file}`);
+
 bot.commands.set(command.name, command);
 
 }
@@ -44,55 +46,53 @@ bot.on('message', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
 
-
-
     switch (args[0]) {
-        case 'yee':
+        case "yee":
             bot.commands.get('yee').execute(message, args);
             break;
 
-        case 'help':
+        case "help":
             bot.commands.get('help').execute(message, args);
             break;
 
-        case 'moderation':
+        case "moderation":
             bot.commands.get('moderation').execute(message, args);
             break;
 
-        case 'fun':
+        case "fun":
             bot.commands.get('fun').execute(message, args);
             break;
 
-        case 'config':
+        case "config":
             bot.commands.get('config').execute(message, args);
             break;
 
-        case 'info':
+        case "info":
             bot.commands.get('info').execute(message, args);
             break;
 
-        case 'clear':
+        case "clear":
             bot.commands.get('clear').execute(message, args);
             break;
 
-        case 'identify':
+        case "identify":
             bot.commands.get('identify').execute(message, args);
             break;
 
-        case 'winrate':
+        case "winrate":
             bot.commands.get('winrate').execute(message, args);
                 break;
 
-        case 'roll':
+        case "roll":
             bot.commands.get('roll').execute(message, args);
             break;
 
-        case 'kick':
+        case "kick":
             bot.commands.get('kick').execute(message, args);
             break;
 
 
-        case 'ban':
+        case "ban":
             
             bot.commands.get('ban').execute(message, args);
             break;

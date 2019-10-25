@@ -12,4 +12,6 @@ const funEmbed = new Discord.RichEmbed()
 message.channel.sendEmbed(funEmbed);
 
 
-}}
+        }
+    
+    }
