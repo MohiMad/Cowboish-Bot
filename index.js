@@ -47,6 +47,10 @@ bot.on('message', message => {
 
 
     switch (args[0]) {
+        case "roll20":
+            bot.commands.get('roll20').execute(message, args);
+                break;
+
         case "yee":
             bot.commands.get('yee').execute(message, args);
             break;

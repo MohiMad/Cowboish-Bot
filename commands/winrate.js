@@ -26,7 +26,6 @@ module.exports = {
                "80", "81", "82", "83", "84", "85", "86", "87", "88", "89",
                "90", "91", "92", "93", "94", "95", "96", "97", "98", "99",
                "100"];
-               let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
                var fact = Math.floor(Math.random() * facts.length);
                const winEmbed = new Discord.RichEmbed()
                .setTitle('My cowboish website ;D')
