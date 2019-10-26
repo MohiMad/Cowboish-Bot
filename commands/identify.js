@@ -19,7 +19,7 @@ var facts = ["Is the coordinator ho misses the flare gun xD", "Is the gardener w
 "is this the guy that can't kite for sh*t?", "is the guy who drops the pallet down infront of his teammates face... what a betrayl", "is the player that begs for gifts in the server chat", "Camp = report", "Man stop getting terror shocked!", "the 'i was laggy' excuse user", "Disconnects early game and gets found first... GG",
 "Surrenders...", "WHY DO I GET FOUND FIRST!!", "The guy who says switch character when ur playing as a lawyer", "The guy who only talks sh*t in server chat", "The guy who thinks that idv is a dating game, it's not Tinder V bro", "Pls hunter be friendly i luv u <3", "Toxics at the exit gate and gets dragged by the gamekeepers hook..",
 "The 'Don't move i'm coming' mindseye, gg", "Omg these randoms are soo baaad",
-"Lawyer is waifu for laifu :v", "The 'im a hero' cowboi"];
+, "The 'im a hero' cowboi"];
 var fact = Math.floor(Math.random() * facts.length);
 message.channel.send(facts[fact]);
 
