@@ -87,6 +87,10 @@ bot.on('message', message => {
             bot.commands.get('winrate').execute(message, args);
                 break;
 
+        case "essence":
+            bot.commands.get('essence').execute(message, args);
+                break;
+
         case "roll":
             bot.commands.get('roll').execute(message, args);
             break;
