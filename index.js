@@ -96,18 +96,8 @@ bot.on('message', message => {
             break;
 
             case 'randomize':
-                {var facts = ["1st Officer:watch::alarm_clock:", "Enchantress:skull:🌩️", "Mechanic:joystick::robot:", "Wilding:boar::apple:", "Barmaid:beer::beers:", "Acrobat🤹🏻‍♀️", "Prospector:doughnut::doughnut:", "Seer:eye_in_speech_bubble::owl:", "Forward:rugby_football::muscle:", "Embalmer:coffin::coffin:", "Dancer:dancer::dancer:", "Coordinator:gun:" , "Explorer:closed_book:", "Magician:tophat:", "Perfumer:butterfly:", "Priestess:milky_way::milky_way:", "Minds eye:eye_in_speech_bubble:", "Mercenary:boxing_glove::shield:", "Gardener:bamboo::tools:", "Lucky guy:four_leaf_clover:", "Doctor👩‍⚕️:syringe:", "Thief:flashlight::heavy_dollar_sign:", "Lawyer:eyeglasses::map:", "Cowboy:cowboy::cow2:"];
-                var fact = Math.floor(Math.random() * facts.length);
-                if (!args[1]) return message.reply('What do you want to randomize? Choose between **survivor** **hunter** **gamemode** or **member**')
-                if (args[1] === 'survivor') 
-                message.channel.send('BE THE ' + '**' + (facts[fact])+'**' );}
-            
-                
-                {var hunters = ["Geisha:chocolate_bar::kimono:", "Smiley Face:clown::rocket:", "Feaster:octopus:", "Axe Boy:fire::pick:", "Dream Witch:pick:", "Soul Weaver:spider_web::spider:", "Hell Ember:shark::fire:", "Gamekeeper:deer:", "Mad eyes:beers::beer:", "Wu chang:umbrella2::bell:", "Ripper☁️:fog:", "Evil Reptilian:frog::lizard:", "Bloody queen:rose::knife:", "No. 26:bomb::bomb:"];
-                var hunter = Math.floor(Math.random() * hunters.length);
-                if (args[1] === 'hunter') 
-                message.channel.send('Go and hunt as the ' + '**' + (hunters[hunter] + '**'));
-                break;}
+                bot.commands.get('roll').execute(message, args);
+                break;
 
         case "kick":
             bot.commands.get('kick').execute(message, args);
