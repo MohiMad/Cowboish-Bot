@@ -9,14 +9,16 @@ const snekfetch = require('snekfetch');
 const ms = require('ms');
 const PREFIX = '>';
 var version = '1.0.2';
+let args = message.content.substring(PREFIX.length).split(" ");
 
 
 const fs = require ('fs');}
 module.exports = {
     name: 'ban', 
     description: "bans a player",
-    execute(message, agrs){
+    execute(message, args){
 const usa = message.mentions.users.first();
+
 
 if (usa) {
     const member = message.guild.member(usa);

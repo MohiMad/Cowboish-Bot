@@ -14,7 +14,7 @@ const fs = require ('fs');
 module.exports = {
     name: 'essence', 
     description: "opens an essence",
-    execute(message, agrs){
+    execute(message, args){
             number = 45;
             imagNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
             message.channel.send('You opened an essence and got...', {files: ["./Cowboish-Bot/s8/" + 'essence' + imagNumber + ".png"]})

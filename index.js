@@ -59,17 +59,6 @@ bot.on('message', message => {
             bot.commands.get('help').execute(message, args);
             break;
 
-        case "moderation":
-            bot.commands.get('moderation').execute(message, args);
-            break;
-
-        case "fun":
-            bot.commands.get('fun').execute(message, args);
-            break;
-
-        case "config":
-            bot.commands.get('config').execute(message, args);
-            break;
 
         case "info":
             bot.commands.get('info').execute(message, args);

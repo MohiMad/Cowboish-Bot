@@ -9,12 +9,14 @@ const ms = require('ms');
 const PREFIX = '>';
 var version = '1.0.2';
 
-
+let args = message.content.substring(PREFIX.length).split(" ");
 const fs = require ('fs');
 module.exports = {
     name: 'help', 
     description: "sends help",
-    execute(message, agrs){
+    execute(message, args){
+        
+        
         {const helpEmbed = new RichEmbed()
                 .setColor('#0099ff')
                 .setTitle('Did someone say help?', true)
@@ -47,14 +49,14 @@ module.exports = {
                 if (args[1] === 'moderation')
                 message.channel.sendEmbed(modEmbed);}
                 
-                const genEmbed = new RichEmbed()
+              {  const genEmbed = new RichEmbed()
             .setTitle('⚙Help is here :D⚙', true)
             .setColor('#0099ff')
             .addField('help', 'Sends help..DUUUH', true)
             .addField('info', 'Sends info about the bot', true)
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
             if (args[1] === 'config')
-            message.channel.sendEmbed(genEmbed);
-
+            message.channel.sendEmbed(genEmbed);}
+              
     }
 }
