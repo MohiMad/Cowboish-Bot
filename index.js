@@ -95,8 +95,8 @@ bot.on('message', message => {
             bot.commands.get('roll').execute(message, args);
             break;
 
-            case 'randomize':
-                bot.commands.get('roll').execute(message, args);
+            case "randomize":
+                bot.commands.get('random').execute(message, args);
                 break;
 
         case "kick":
