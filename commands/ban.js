@@ -9,7 +9,6 @@ const snekfetch = require('snekfetch');
 const ms = require('ms');
 const PREFIX = '>';
 var version = '1.0.2';
-let args = message.content.substring(PREFIX.length).split(" ");
 
 
 const fs = require ('fs');}
