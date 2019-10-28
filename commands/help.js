@@ -32,7 +32,7 @@ module.exports = {
     .setTitle('😁Help is here :D😁')
     .setColor('#0099ff')
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-    .addField('`identify` `roll` `roll20` `ES82` `randomize`', 'Remember to use my prefix > before the commands ;D')
+    .addField('`identify` `roll` `roll20` `essence` `randomize`', 'Remember to use my prefix > before the commands ;D')
     .setFooter('YeeeeHawww :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
     if (args[1] === 'idv')
     message.channel.send(funEmbed);}

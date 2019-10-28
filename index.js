@@ -77,7 +77,7 @@ bot.on('message', message => {
                 break;
 
         case "essence":
-          break;  bot.commands.get('essence').execute(message, args);
+            bot.commands.get('essence').execute(message, args);
                 break;
 
         case "roll":
