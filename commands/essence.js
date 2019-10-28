@@ -16,6 +16,7 @@ module.exports = {
     description: "opens an essence",
     execute(message, args){
             number = 45;
+            imagNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
             const newEmbed = new RichEmbed()
             .setTitle('You opened an essence [S8 No.2] and got...')
             .attachFiles (["./Cowboiii/s8/" + 'essence' + imagNumber + ".PNG"])
