@@ -19,7 +19,7 @@ module.exports = {
             imagNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
             const newEmbed = new RichEmbed()
             .setTitle('You opened an essence [S8 No.2] and got...')
-            .attachFiles (["./Cowboiii/s8/" + 'essence' + imagNumber + ".PNG"])
+            .attachFiles (["./s8/" + 'essence' + imagNumber + ".PNG"])
             .setImage('attachment://essence' + imagNumber + '.PNG')
             .setColor('0x#1BEE1A')
             .setFooter('Cowboish bot');
