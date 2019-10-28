@@ -16,8 +16,14 @@ module.exports = {
     description: "opens an essence",
     execute(message, args){
             number = 45;
-            imagNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
-            message.channel.send('You opened an essence and got...', {files: ["./s8/" + 'essence' + imagNumber + ".PNG"]})
+            const newEmbed = new RichEmbed()
+            .setTitle('You opened an essence [S8 No.2] and got...')
+            .attachFiles (["./Cowboiii/s8/" + 'essence' + imagNumber + ".PNG"])
+            .setImage('attachment://essence' + imagNumber + '.PNG')
+            .setColor('0x#1BEE1A')
+            .setFooter('Cowboish bot');
+            message.channel.send(newEmbed);
+    
 
 
     }
