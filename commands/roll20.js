@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
+const bot = new Client();
 const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XaNAoQ.MpR8EcnF4IhKI_wk6-o8gFv9uDw';
 
 const cheerio = require('cheerio');
