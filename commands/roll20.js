@@ -22,6 +22,7 @@ module.exports = {
         .addField((facts[fact]), 'Yeee haaaaw >:D')
         .attachFiles (["./dice/" + "dice20.gif"])
         .setImage('attachment://dice20.gif')
+        .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         .setColor('0x#1BEE1A')
         .setFooter('Cowboish bot');
         message.channel.sendEmbed(rollEmbed);

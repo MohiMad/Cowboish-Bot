@@ -20,6 +20,7 @@ module.exports = {
             const newEmbed = new RichEmbed()
             .setTitle('You opened an essence [S8 No.2] and got...')
             .attachFiles (["./s8/" + 'essence' + imagNumber + ".PNG"])
+            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://essence' + imagNumber + '.PNG')
             .setColor('0x#1BEE1A')
             .setFooter('Cowboish bot');
