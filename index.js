@@ -26,18 +26,17 @@ bot.on('ready', () => {
     console.log('This bot is online!');
     bot.user.setActivity('Identit | >help')
     const activities_list = [
-        " >help command", 
-        "Identit",
-        "with some gurls", 
-        "Identity V",
-    "Welcome to Identit",
+        " Use >help to send help", 
+        "Identit | >help", 
+        "Identity V | >help",
+    "Welcome to Identit | >help",
     "Identit | >help"
         ];
     
         setInterval(() => {
             const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
             bot.user.setActivity(activities_list[index]); 
-        }, 10000);
+        }, 100000);
 })
 
 
