@@ -15,7 +15,6 @@ module.exports = {
     name: 'roll', 
     description: "rolls a 4 sided dice",
     execute(message, agrs){
-        var person  = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
         numba = 4;
         imagNumba = Math.floor (Math.random() * (numba - 1 + 1)) + 1;
         const diceEmbed = new RichEmbed()
