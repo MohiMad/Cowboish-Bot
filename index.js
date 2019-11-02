@@ -63,8 +63,12 @@ bot.on('message', message => {
             bot.commands.get('info').execute(message, args);
             break;
 
-        case 'lasso':
+        case "lasso":
             bot.commands.get('lasso').execute(message, args);
+        break;
+
+        case "bully":
+            bot.commands.get('bully').execute(message, args);
         break;
 
         case "clear":
