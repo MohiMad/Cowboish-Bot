@@ -1,6 +1,7 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XaNAoQ.MpR8EcnF4IhKI_wk6-o8gFv9uDw';
+const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
+const bot = new Client();
+
+const token = 'NjM2MjQxNjY5MTE2Nzg4NzQ3.Xa9Rvw.xYmP5jl2gAH2I1T6Ex9QOUmUO80';
 
 const cheerio = require('cheerio');
 const request = require('request');
@@ -8,13 +9,13 @@ const snekfetch = require('snekfetch');
 const ms = require('ms');
 const PREFIX = '>';
 var version = '1.0.2';
-
-
 const fs = require ('fs');
+
 module.exports = {
-    name: 'identify', 
-    description: "identifies what idv player ur",
-    execute(message, agrs){
+    name: 'identify',
+    description: "identifies ur friends",
+    execute(message, args){
+
         {if (!args[1]) return message.reply('Who do you want to identify? tag them in your 2nd args!')}
         let persona  = message.mentions.users.first()
 
