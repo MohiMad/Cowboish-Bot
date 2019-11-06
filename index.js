@@ -69,6 +69,7 @@ bot.on('message', message => {
 
         case "shoot":
                 bot.commands.get('shoot').execute(message, args);
+                break;
 
         case "bully":
             bot.commands.get('bully').execute(message, args);

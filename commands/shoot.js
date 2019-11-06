@@ -16,6 +16,7 @@ module.exports = {
     description: "shoots you",
     execute(message, args){
 let persona  = message.mentions.users.first()
+{if (!args[1]) return message.reply('Who do you want to shoot? Mention them in your 2nd args');}
 nuber = 5;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 var facts = [

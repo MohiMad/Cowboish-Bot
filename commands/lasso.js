@@ -15,6 +15,7 @@ module.exports = {
     name: 'lasso',
     description: "lassos you",
     execute(message, args){
+        {if (!args[1]) return message.reply('Who do you want to lasso? Mention them in your 2nd args');}
 let persona  = message.mentions.users.first()
 nuber = 8;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
