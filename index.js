@@ -67,6 +67,9 @@ bot.on('message', message => {
             bot.commands.get('lasso').execute(message, args);
         break;
 
+        case "shoot":
+                bot.commands.get('shoot').execute(message, args);
+
         case "bully":
             bot.commands.get('bully').execute(message, args);
         break;
