@@ -16,7 +16,7 @@ module.exports = {
     description: "lassos you",
     execute(message, args){
 let persona  = message.mentions.users.first()
-nuber = 3;
+nuber = 8;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 var facts = ['**' + message.author.username + '** Is lassoing **' + persona.username  + '** Have a nice ride :D', 
 '**' + message.author.username + '** lassoed **' + persona.username + '** what a ride!', '**' + persona.username + '** is riding on **' +  message.author.username + '** Yee Haaaw >:D'];
