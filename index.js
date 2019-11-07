@@ -30,7 +30,7 @@ bot.on('ready', () => {
         "Identit | >help", 
         "Identity V | >help",
     "Welcome to Identit | >help",
-    "Identit | >help"
+    "Identit | >help", `idv in ${bot.guilds.size} servers`
         ];
     
         setInterval(() => {
@@ -57,6 +57,10 @@ bot.on('message', message => {
         case "help":
             bot.commands.get('help').execute(message, args);
             break;
+
+        case 'guilds':
+        message.channel.send(`im in ${bot.guilds.size} servers <3`)
+        break;
 
 
         case "info":

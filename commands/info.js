@@ -7,7 +7,7 @@ const request = require('request');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
 const PREFIX = '>';
-var version = '1.0.2';
+var version = '2.0.0';
 
 
 const fs = require ('fs');
@@ -20,6 +20,9 @@ const embed = new Discord.RichEmbed()
 .setTitle('Bot Information', true)
 .addField('Cowboish bot', ('Version ' + version), true)
 .setColor(0xE9D01F)
+.addField('Birthday', '14/10/2019 <3')
+.addField('Gender', 'male')
+.addField('Parents', 'MohiMoo and MohiMeaaw :v')
 .addField('Website ', 'https://rkanjo2.wixsite.com/cowboishbot', true)
 .addField('Need help with commands?', 'Use >help', true)
 .setThumbnail('https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png')
