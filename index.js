@@ -33,7 +33,7 @@ bot.on("guildCreate", guild => {
     }
     
 
-    const welcomeEmbed = new RichEmbed()
+    const welcomeEmbed = new Discord.RichEmbed()
     .setTitle('Thank you for inviting me to the party ;D')
     .addField('Cowboish website 👆☝', 'My cowboish bithday 🎉🎊 14/10/2019')
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
