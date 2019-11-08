@@ -20,7 +20,33 @@ const command = require(`./commands/${file}`);
 bot.commands.set(command.name, command);
 
 }
+bot.on("guildCreate", guild => {
+    let channelID;
+    let channels = guild.channels;
+    channelLoop:
+    for (let c of channels) {
+        let channelType = c[1].type;
+        if (channelType === "text") {
+            channelID = c[0];
+            break channelLoop;
+        }
+    }
+    
 
+    const welcomeEmbed = new RichEmbed()
+    .setTitle('Thank you for inviting me to the party ;D')
+    .addField('Cowboish website 👆☝', 'My cowboish bithday 🎉🎊 14/10/2019')
+    .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+    .attachFiles (["./emoji" + ".png"])
+    .setThumbnail('attachment://emoji' + '.png')
+    .setColor('0xe8eb34')
+    .addField('My prefix is ">"', 'Remember using it before any command')
+    .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
+    .setFooter('Use >help to get help with using my commands ;D');
+
+    let channel = bot.channels.get(guild.systemChannelID || channelID);
+    channel.send(welcomeEmbed);
+});
 
 bot.on('ready', () => {
     console.log('This bot is online!');
