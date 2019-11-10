@@ -6,7 +6,6 @@ const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
-const PREFIX = '>';
 var version = '1.0.2';
 
 
@@ -66,7 +65,11 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
 
-    let args = message.content.substring(PREFIX.length).split(" ");
+    let prefix = ">";
+
+    let args = message.content.substring(prefix.length).split(" ");
+      if (args.length === 0) return;
+      if (!message.content.startsWith(prefix)) return;
 
 
     switch (args[0]) {
