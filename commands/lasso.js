@@ -17,7 +17,7 @@ module.exports = {
     execute(message, args){
         {if (!args[1]) return message.reply('Who do you want to lasso? Mention them in your 2nd args');}
 let persona  = message.mentions.users.first()
-nuber = 8;
+nuber = 9;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 var facts = [message.author.username + ' Is lassoing ' + persona.username  + ' Have a nice ride :D', 
 message.author.username + ' lassoed ' + persona.username + ' what a ride!',
