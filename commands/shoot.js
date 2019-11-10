@@ -20,9 +20,9 @@ let persona  = message.mentions.users.first()
 nuber = 5;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 var facts = [
-'oof **' + message.author.username + '** shot **' + persona.username  + '** that looks like it hurts!', 
-'**' + message.author.username + '** shot **' + persona.username + '** BOOM HEADSHOT!', 
-'**' + persona.username + '** got shot by **' +  message.author.username + '** shouldve brought excitement.'];
+'oof ' + message.author.username + ' shot ' + persona.username  + ' that looks like it hurts!', 
+message.author.username + ' shot ' + persona.username + ' BOOM HEADSHOT!', 
+persona.username + ' got shot by ' +  message.author.username + ' shouldve brought excitement.'];
 var fact = Math.floor(Math.random() * facts.length);
 const lassoembed = new RichEmbed()
 .setAuthor((facts[fact]), message.author.avatarURL)

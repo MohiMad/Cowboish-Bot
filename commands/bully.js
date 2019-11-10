@@ -20,8 +20,9 @@ module.exports = {
 let persona  = message.mentions.users.first()
 nube = 6;
 imagaNumbe = Math.floor (Math.random() * (nube - 1 + 1)) + 1;
-var facts = ['Oof **' + persona.username + '**' + ' is getting bullied by **' + message.author.username+ '**', 
-'cmon **' + message.author.username + '** dont do **' + persona.username + '** like dat!', 'Omg **' + message.author.username+ '** stop bullying **'+ persona.username +'**!'];
+var facts = ['Oof ' + persona.username + ' is getting bullied by ' + message.author.username, 
+'cmon ' + message.author.username + ' dont do ' + persona.username + ' like dat!', 
+'Omg ' + message.author.username+ ' stop bullying '+ persona.username +'!'];
 var fact = Math.floor(Math.random() * facts.length);
 
 {const bullyembed = new RichEmbed()

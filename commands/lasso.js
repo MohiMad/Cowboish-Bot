@@ -19,8 +19,9 @@ module.exports = {
 let persona  = message.mentions.users.first()
 nuber = 8;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
-var facts = ['**' + message.author.username + '** Is lassoing **' + persona.username  + '** Have a nice ride :D', 
-'**' + message.author.username + '** lassoed **' + persona.username + '** what a ride!', '**' + persona.username + '** is riding on **' +  message.author.username + '** Yee Haaaw >:D'];
+var facts = [message.author.username + ' Is lassoing ' + persona.username  + ' Have a nice ride :D', 
+message.author.username + ' lassoed ' + persona.username + ' what a ride!',
+persona.username + ' is riding on ' +  message.author.username + ' Yee Haaaw >:D'];
 var fact = Math.floor(Math.random() * facts.length);
 const lassoembed = new RichEmbed()
 .setAuthor((facts[fact]), message.author.avatarURL)
