@@ -25,6 +25,7 @@ module.exports = {
     .addField('😁IdentityV', 'use >idv', true)
     .addField('🔧Moderation', 'use >moderation    ', true)
     .addField('⚙Config', 'use >config', true)
+    .addField("For more info ", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)")
     .setFooter('Remember to use my prefix > and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
     if (!args[1]) return message.reply(helpEmbed);}
 

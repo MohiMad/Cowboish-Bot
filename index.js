@@ -35,15 +35,13 @@ bot.on("guildCreate", guild => {
 
     const welcomeEmbed = new Discord.RichEmbed()
     .setTitle('Thank you for inviting me to the party ;D')
-    .addField('Cowboish website 👆☝', 'My cowboish bithday 🎉🎊 14/10/2019')
-    .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+    .addField('My cowboish bithday 🎉🎊 14/10/2019', 'use >help and i will be there for help :)')
     .attachFiles (["./emoji" + ".png"])
     .setThumbnail('attachment://emoji' + '.png')
     .setColor('0xe8eb34')
     .addField('My prefix is ">"', 'Remember using it before any command')
     .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
-    .setFooter('Use >help to get help with using my commands ;D');
-
+    .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)");
     let channel = bot.channels.get(guild.systemChannelID || channelID);
     channel.send(welcomeEmbed);
 });

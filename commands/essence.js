@@ -20,7 +20,7 @@ module.exports = {
         number = 45;
         imagNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         const newEmbed = new RichEmbed()
-        .setTitle('You opened an essence [S8 No.2] and got...')
+        .setAuthor('You opened an essence [S8 No.2] and got...', message.author.avatarURL)
         .attachFiles (["./s8/" + 'essence' + imagNumber + ".PNG"])
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         .setImage('attachment://essence' + imagNumber + '.PNG')
@@ -30,7 +30,7 @@ module.exports = {
         numba = 32;
         imageNumba = Math.floor (Math.random() * (numba - 1 + 1)) + 1;
         const p5Embed = new RichEmbed()
-        .setTitle('You opened an essence [P5 No.2] and got...')
+        .setAuthor('You opened an essence [P5 No.2] and got...', message.author.avatarURL)
         .attachFiles (["./p5/" + 'p5-' + imageNumba + ".jpg"])
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         .setImage('attachment://p5-' + imageNumba + '.jpg')

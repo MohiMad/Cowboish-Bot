@@ -25,7 +25,7 @@ var facts = [
 '**' + persona.username + '** got shot by **' +  message.author.username + '** shouldve brought excitement.'];
 var fact = Math.floor(Math.random() * facts.length);
 const lassoembed = new RichEmbed()
-.setTitle((facts[fact]), message.author.avatarURL)
+.setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./flaregun/" + 'flaregun' + imagaNumber + ".gif"])
 .setImage('attachment://flaregun' + imagaNumber + '.gif')
 .setColor('0x#1BEE1A')

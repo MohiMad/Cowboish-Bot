@@ -23,7 +23,7 @@ var facts = ['**' + message.author.username + '** Is lassoing **' + persona.user
 '**' + message.author.username + '** lassoed **' + persona.username + '** what a ride!', '**' + persona.username + '** is riding on **' +  message.author.username + '** Yee Haaaw >:D'];
 var fact = Math.floor(Math.random() * facts.length);
 const lassoembed = new RichEmbed()
-.setTitle((facts[fact]), message.author.avatarURL)
+.setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./lassos/" + 'lasso' + imagaNumber + ".gif"])
 .setImage('attachment://lasso' + imagaNumber + '.gif')
 .setColor('0x#1BEE1A')

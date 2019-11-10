@@ -25,7 +25,7 @@ var facts = ['Oof **' + persona.username + '**' + ' is getting bullied by **' + 
 var fact = Math.floor(Math.random() * facts.length);
 
 {const bullyembed = new RichEmbed()
-.setTitle((facts[fact]))
+.setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./bully/" + 'bully' + imagaNumbe + ".gif"])
 .setImage('attachment://bully' + imagaNumbe + '.gif')
 .setColor('0x#1BEE1A')
