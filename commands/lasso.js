@@ -31,7 +31,8 @@ const lassoembed = new RichEmbed()
 .setImage('attachment://lasso' + imagaNumber + '.gif')
 .setColor('0x#1BEE1A')
 .setFooter('some of the gifs are not mine... credit is at bottom right!')
-if(message.mentions.users.first().id === persona.id) send (lassoembed);}
+if(message.mentions.users.first().id === persona.id) 
+message.channel.sendEmbed(lassoembed);}
 
     }
 }
