@@ -1,12 +1,6 @@
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
 const bot = new Client();
-const cheerio = require('cheerio');
-const request = require('request');
-const snekfetch = require('snekfetch');
-const ms = require('ms');
-const PREFIX = '>';
-var version = '1.0.2';
-const fs = require ('fs');
+
 
 module.exports = {
     name: 'lasso',
