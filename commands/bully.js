@@ -8,6 +8,7 @@ module.exports = {
     description: "bullyies you",
     execute(message, args){
 
+        if (!args[1]) return message.reply('Who do you want to bully? Mention them in your 2nd args');
 
 let persona  = message.mentions.users.first()
 
@@ -28,7 +29,6 @@ const bullyembed = new RichEmbed()
 .setColor('0x#1BEE1A')
 .setFooter('most of the gifs are not mine... credit is at the bottom!');
 
-if (!args[1]) return message.reply('Who do you want to bully? Mention them in your 2nd args');
 
 if(message.mentions.users.first().id === message.author.id) 
     message.channel.send ("Nah cmon,** " + message.author.username + '** why would you bully yourself? :C');

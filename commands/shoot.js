@@ -10,9 +10,7 @@ module.exports = {
 
         if (!args[1]) return message.reply('Who do you want to shoot? Mention them in your 2nd args');
 
-        if(message.mentions.users.first().id === message.author.id) 
-            message.channel.send ("Why would you... shoot yourself,** " + message.author.username + '**');
-
+        
         nuber = 5;
 
         imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;

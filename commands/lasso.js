@@ -8,7 +8,9 @@ module.exports = {
     name: 'lasso',
     description: "lassos you",
     execute(message, args){
+        if (!args[1]) return message.reply('Who do you want to lasso? Mention them in your 2nd args');
 
+        
         let persona  = message.mentions.users.first()
 
         nuber = 9;
@@ -27,11 +29,9 @@ module.exports = {
         .setImage('attachment://lasso' + imagaNumber + '.gif')
         .setColor('0x#1BEE1A')
         .setFooter('Want your replay to pop up here? submit it to me here => :D (MohiMeaww#2888)');
-
-        if (!args[1]) return message.reply('Who do you want to lasso? Mention them in your 2nd args');
-
+        
         if(message.mentions.users.first().id === message.author.id) 
-            message.channel.send ("Um sorry,** " + message.author.username + '** but you cant lasso yourself :v');
+            return message.channel.send ("Um sorry,** " + message.author.username + '** but you cant lasso yourself :v');
 
         else message.channel.sendEmbed(lassoembed);
 
