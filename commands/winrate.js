@@ -1,13 +1,13 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XaNAoQ.MpR8EcnF4IhKI_wk6-o8gFv9uDw';
-
+const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
+const bot = new Client();
 const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
 const PREFIX = '>';
 var version = '1.0.2';
+const fs = require ('fs');
+
 
 
 const fs = require ('fs');
@@ -15,7 +15,9 @@ module.exports = {
     name: 'winrate', 
     description: "sends a random winrate",
     execute(message, args){
+
         let persona  = message.mentions.users.first()
+
         var facts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
         "11", "12", "13", "14", "15", "16", "17", "18", "19",
        "20", "21", "22", "23", "24", "25", "26", "27", "28", "29",
@@ -27,18 +29,21 @@ module.exports = {
        "80", "81", "82", "83", "84", "85", "86", "87", "88", "89",
        "90", "91", "92", "93", "94", "95", "96", "97", "98", "99",
        "100"];
+
        var fact = Math.floor(Math.random() * facts.length);
+
         const wiEmbed = new Discord.RichEmbed()
-        .setAuthor(message.author.username + "'s winrate is " + (facts[fact])+'**%**', message.author.avatarURL)
+        .setAuthor(message.author.username + "'s winrate is " + (facts[fact])+'%', message.author.avatarURL)
         .setColor('0x1AA9EE')
         .setURL('https://rkanjo2.wixsite.com/cowboishbot');
-        {if (!args[1]) return message.channel.sendEmbed(wiEmbed)}
+
+        if (!args[1]) return message.channel.sendEmbed(wiEmbed)
 
                const winEmbed = new Discord.RichEmbed()
-               .setAuthor(persona.username + "'s winrate is " +  (facts[fact]) + '**%**', message.author.avatarURL)
+               .setAuthor(persona.username + "'s winrate is " +  (facts[fact]) + '%', message.author.avatarURL)
                .setColor('0x1AA9EE')
                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-               message.channel.sendEmbed(winEmbed);
+        message.channel.sendEmbed(winEmbed);
 
 
 

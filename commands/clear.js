@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XaNAoQ.MpR8EcnF4IhKI_wk6-o8gFv9uDw';
-
 const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');

@@ -1,8 +1,5 @@
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
 const bot = new Client();
-
-const token = 'NjM2MjQxNjY5MTE2Nzg4NzQ3.Xa9Rvw.xYmP5jl2gAH2I1T6Ex9QOUmUO80';
-
 const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');
@@ -17,7 +14,7 @@ module.exports = {
     execute(message, args){
 
         const persona = message.mentions.users.first()
-        {
+        
                     var infos = [
                     message.author.username + " Is the coordinator who misses her flare gun",
                     message.author.username +" Is the gardener who says 'Foucus on decoding' while dismantling a rocket chair...", 
@@ -39,10 +36,12 @@ module.exports = {
                     message.author.username + " is the 'Don't move i'm coming' mindseye, gg", 
                     "Omg these randoms are soo baaad, that's what " + message.author.username + ' said.',
                     message.author.username + " thinks he is the hero cowboi, heh"];
-                    var info = Math.floor(Math.random() * infos.length);
-                    if (!args[1])  return message.channel.send(infos[info])}
 
-                {var facts = [
+                    var info = Math.floor(Math.random() * infos.length);
+
+                    if (!args[1])  return message.channel.send(infos[info])
+
+                var facts = [
                 persona.username + " Is the coordinator who misses her flare gun",
                 persona.username +" Is the gardener who says 'Foucus on decoding' while dismantling a rocket chair...", 
                 persona.username + " is the wilding who decodes the whole match, dude u better be a minds eye", 
@@ -65,7 +64,7 @@ module.exports = {
                 persona.username + " thinks he is the hero cowboi, heh"];
                 var fact = Math.floor(Math.random() * facts.length);
 
-                message.channel.send(facts[fact]);}
+                message.channel.send(facts[fact]);
 
     }
 }

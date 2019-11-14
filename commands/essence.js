@@ -1,7 +1,5 @@
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
 const bot = new Client();
-const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XaNAoQ.MpR8EcnF4IhKI_wk6-o8gFv9uDw';
-
 const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');
@@ -37,13 +35,13 @@ module.exports = {
         .setColor('0x#1BEE1A')
         .setFooter('NOTE: This command doesnt have the same ingame percentage');
     
-        {if (!args[1]) message.channel.send('What essence do you want to open? please choose between ``p5`` or ``s8``');}
+        if (!args[1]) message.channel.send('What essence do you want to open? please choose between ``p5`` or ``s8``');
 
-        {if ((args[1]) == 'p5')
-        message.channel.sendEmbed(p5Embed);}
+        if ((args[1]) == 'p5')
+        message.channel.sendEmbed(p5Embed);
 
-        {if ((args[1]) == 's8')
-        message.channel.sendEmbed(newEmbed);}
+        if ((args[1]) == 's8')
+        message.channel.sendEmbed(newEmbed);
 
 
 
