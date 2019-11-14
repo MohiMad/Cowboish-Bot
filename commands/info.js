@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+var version = '1.0.2';
 module.exports = {
     name: 'info', 
     description: "info about bot",
