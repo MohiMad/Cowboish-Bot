@@ -1,10 +1,5 @@
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
 const bot = new Client();
-
-
-
-
-const fs = require ('fs');
 module.exports = {
     name: 'yee', 
     description: "haaaw",
