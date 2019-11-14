@@ -28,7 +28,7 @@ module.exports = {
 
         if (!args[1]) return message.channel.sendEmbed(wiEmbed)
 
-               const winEmbed = new Discord.RichEmbed()
+               const winEmbed = new RichEmbed()
                .setAuthor(persona.username + "'s winrate is " +  (facts[fact]) + '%', message.author.avatarURL)
                .setColor('0x1AA9EE')
                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
