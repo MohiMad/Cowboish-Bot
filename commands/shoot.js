@@ -17,6 +17,8 @@ module.exports = {
     execute(message, args){
 let persona  = message.mentions.users.first()
 {if (!args[1]) return message.reply('Who do you want to shoot? Mention them in your 2nd args');}
+{if(message.mentions.users.first().id === message.author.id) 
+    message.channel.send ("Why would you... shoot yourself,** " + message.author.username + '**')};
 nuber = 5;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 var facts = [
@@ -24,13 +26,13 @@ var facts = [
 message.author.username + ' shot ' + persona.username + ' BOOM HEADSHOT!', 
 persona.username + ' got shot by ' +  message.author.username + ' shouldve brought excitement.'];
 var fact = Math.floor(Math.random() * facts.length);
-const lassoembed = new RichEmbed()
+{const lassoembed = new RichEmbed()
 .setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./flaregun/" + 'flaregun' + imagaNumber + ".gif"])
 .setImage('attachment://flaregun' + imagaNumber + '.gif')
 .setColor('0x#1BEE1A')
 .setFooter('some of the gifs are not mine... credit is at bottom right!')
-message.channel.sendEmbed(lassoembed);
+message.channel.sendEmbed(lassoembed)};
 
     }
 }

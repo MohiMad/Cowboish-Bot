@@ -17,6 +17,8 @@ module.exports = {
     execute(message, args){
 
 {if (!args[1]) return message.reply('Who do you want to bully? Mention them in your 2nd args');}
+{if(message.mentions.users.first().id === message.author.id) 
+    message.channel.send ("Nah cmon,** " + message.author.username + '** why would you bully yourself? :C')};
 let persona  = message.mentions.users.first()
 nube = 6;
 imagaNumbe = Math.floor (Math.random() * (nube - 1 + 1)) + 1;

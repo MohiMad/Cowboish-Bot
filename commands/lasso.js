@@ -16,6 +16,8 @@ module.exports = {
     description: "lassos you",
     execute(message, args){
         {if (!args[1]) return message.reply('Who do you want to lasso? Mention them in your 2nd args');}
+        {if(message.mentions.users.first().id === message.author.id) 
+            message.channel.send ("Um sorry,** " + message.author.username + '** but you cant lasso yourself :v')};
 let persona  = message.mentions.users.first()
 nuber = 9;
 imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
