@@ -9,7 +9,7 @@ const embed = new Discord.RichEmbed()
 
 .setTitle('Bot Information', true)
 .addField('Cowboish bot', ('Version ' + version), true)
-.setColor(0xE9D01F)
+.setColor("RANDOM")
 .addField('Birthday', '14/10/2019 <3')
 .addField('Gender', 'male')
 .addField('Parents', 'MohiMoo and MohiMeaaw :v')

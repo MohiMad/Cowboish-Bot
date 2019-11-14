@@ -26,7 +26,7 @@ module.exports = {
         .setAuthor((facts[fact]), message.author.avatarURL)
         .attachFiles (["./flaregun/" + 'flaregun' + imagaNumber + ".gif"])
         .setImage('attachment://flaregun' + imagaNumber + '.gif')
-        .setColor('0x#1BEE1A')
+        .setColor("RANDOM")
         .setFooter('Want your replay to pop up here? add me to submit it => (MohiMeaww#2888)');
         
         if(message.mentions.users.first().id === message.author.id) 

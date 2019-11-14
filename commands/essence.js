@@ -14,7 +14,7 @@ module.exports = {
         .attachFiles (["./s8/" + 'essence' + imagNumber + ".PNG"])
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         .setImage('attachment://essence' + imagNumber + '.PNG')
-        .setColor('0x#1BEE1A')
+        .setColor("RANDOM")
         .setFooter('NOTE: This command doesnt have the same ingame percentage');
 
         numba = 32;
@@ -24,7 +24,7 @@ module.exports = {
         .attachFiles (["./p5/" + 'p5-' + imageNumba + ".jpg"])
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         .setImage('attachment://p5-' + imageNumba + '.jpg')
-        .setColor('0x#1BEE1A')
+        .setColor("RANDOM")
         .setFooter('NOTE: This command doesnt have the same ingame percentage');
     
         if (!args[1]) message.channel.send('What essence do you want to open? please choose between ``p5`` or ``s8``');

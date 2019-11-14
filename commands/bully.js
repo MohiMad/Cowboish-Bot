@@ -26,7 +26,7 @@ const bullyembed = new RichEmbed()
 .setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./bully/" + 'bully' + imagaNumbe + ".gif"])
 .setImage('attachment://bully' + imagaNumbe + '.gif')
-.setColor('0x#1BEE1A')
+.setColor("RANDOM")
 .setFooter('Want your replay to pop up here? add me to submit it => (MohiMeaww#2888)');
 
 

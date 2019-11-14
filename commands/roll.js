@@ -14,7 +14,7 @@ module.exports = {
         .attachFiles (["./dice/" + 'dice' + imagNumba + ".gif"])
         .setImage('attachment://dice' + imagNumba + '.gif')
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-        .setColor('0x#1BEE1A')
+        .setColor("RANDOM")
         .setFooter('Cowboish Bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         message.channel.send(diceEmbed);

@@ -9,7 +9,7 @@ module.exports = {
 
 
 const helpEmbed = new RichEmbed()
-    .setColor('#0099ff')
+    .setColor("RANDOM")
     .setTitle('Did someone say help?', true)
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
     .addField('😁IdentityV', 'use >help idv', true)
@@ -21,7 +21,7 @@ const helpEmbed = new RichEmbed()
 
 const funEmbed = new RichEmbed()
     .setTitle('😁Help is here :D😁')
-    .setColor('#0099ff')
+    .setColor("RANDOM")
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
     .addField('`identify` `roll` `roll20` `essence` `randomize` `bully` `lasso` `shoot` `winrate`', 'Remember to use my prefix > before the commands ;D')
     .setFooter('YeeeeHawww :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
@@ -30,7 +30,7 @@ const funEmbed = new RichEmbed()
 
     const modEmbed = new RichEmbed()
     .setTitle('🔧So u need sum help huh?🔧')
-    .setColor('#0099ff')
+    .setColor("RANDOM")
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
     .addField('`kick` `ban` `clear`', 'Remember to use my prefix > before the commands ;D')
     .setFooter('A wild Cowboii :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
@@ -39,7 +39,7 @@ const funEmbed = new RichEmbed()
     
     const genEmbed = new RichEmbed()
 .setTitle('⚙Help is here :D⚙', true)
-.setColor('#0099ff')
+.setColor("RANDOM")
 .setURL('https://rkanjo2.wixsite.com/cowboishbot')
 .addField('`help`', 'Sends help..DUUUH', true)
 .addField('`info`', 'Sends info about the bot', true)

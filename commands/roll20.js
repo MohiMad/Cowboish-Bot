@@ -16,7 +16,7 @@ module.exports = {
         .attachFiles (["./dice/" + "dice20.gif"])
         .setImage('attachment://dice20.gif')
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-        .setColor('0x#1BEE1A')
+        .setColor("RANDOM")
         .setFooter('Cowboish bot');
 
         message.channel.sendEmbed(rollEmbed);

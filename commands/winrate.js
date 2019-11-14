@@ -30,7 +30,7 @@ module.exports = {
 
                const winEmbed = new RichEmbed()
                .setAuthor(persona.username + "'s winrate is " +  (facts[fact]) + '%', message.author.avatarURL)
-               .setColor('0x1AA9EE')
+               .setColor("RANDOM")
                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         message.channel.sendEmbed(winEmbed);
 
