@@ -33,7 +33,7 @@ const bullyembed = new RichEmbed()
 if(message.mentions.users.first().id === message.author.id) 
     message.channel.send ("Nah cmon,** " + message.author.username + '** why would you bully yourself? :C');
 
-else message.channel.sendEmbed(lassoembed);
+else message.channel.sendEmbed(bullyembed);
 
 }
 }
