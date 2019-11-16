@@ -13,6 +13,7 @@ const helpEmbed = new RichEmbed()
     .setTitle('Did someone say help?', true)
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
     .addField('😁IdentityV', 'use >help idv', true)
+    .addField('😁Actions', 'use >help actions', true)
     .addField('🔧Moderation', 'use >help moderation    ', true)
     .addField('⚙Config', 'use >help config', true)
     .addField("For more info ", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)")
@@ -23,10 +24,19 @@ const funEmbed = new RichEmbed()
     .setTitle('😁Help is here :D😁')
     .setColor("RANDOM")
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-    .addField('`identify` `roll` `roll20` `essence` `randomize` `bully` `lasso` `shoot` `winrate`', 'Remember to use my prefix > before the commands ;D')
+    .addField('`identify` `roll` `roll20` `essence` `randomize`', 'Remember to use my prefix > before the commands ;D')
     .setFooter('YeeeeHawww :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
     if (args[1] === 'idv')
     message.channel.send(funEmbed);
+
+    const fuEmbed = new RichEmbed()
+    .setTitle('Identity V actions :)')
+    .setColor("RANDOM")
+    .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+    .addField('`crash` `bully` `lasso` `shoot` `stun`', 'Remember to use my prefix > before the commands ;D')
+    .setFooter('Want your replays to show in this bots roleplay commands? feel free to send them to me here (MohiMeaww#2888)', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+    if (args[1] === 'actions')
+    message.channel.send(fuEmbed);
 
     const modEmbed = new RichEmbed()
     .setTitle('🔧So u need sum help huh?🔧')
