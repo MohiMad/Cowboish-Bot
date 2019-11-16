@@ -90,6 +90,13 @@ bot.on('message', message => {
             message.channel.send(`im in ${bot.guilds.size} servers <3`)
         break;
 
+        case "stun":
+            bot.commands.get('stun').execute(message, args);
+                break; 
+
+        case "crash":
+            bot.commands.get('crash').execute(message, args);
+                break; 
 
         case "info":
             bot.commands.get('info').execute(message, args);
