@@ -68,17 +68,17 @@ bot.on('message', async message => {
 
     let args = message.content.substring(prefix.length).split(" ");
 
-
       if (!message.content.startsWith(prefix)) return;
 
     switch (args[0]) {
+
+
         case "roll20":
             bot.commands.get('roll20').execute(message, args);
                 break;
 
-        case 'meme':
+        case "meme":
                 bot.commands.get('meme').execute(message, args);
-
         break;
 
         
