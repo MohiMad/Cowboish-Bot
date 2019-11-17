@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XaNAoQ.MpR8EcnF4IhKI_wk6-o8gFv9uDw';
-const got = require ('got');
 const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');
@@ -76,10 +75,6 @@ bot.on('message', async message => {
         case "roll20":
             bot.commands.get('roll20').execute(message, args);
                 break;
-
-       
-
-        
 
         case "yee":
             bot.commands.get('yee').execute(message, args);
