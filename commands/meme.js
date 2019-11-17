@@ -1,6 +1,6 @@
-const snekfetch = require ("snekfetch");
+const Discord = require('discord.js');
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
-const got = require ('got');
+const got = require ("got");
 
 module.exports = {
     name: 'meme', 
