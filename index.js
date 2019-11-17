@@ -77,9 +77,7 @@ bot.on('message', async message => {
             bot.commands.get('roll20').execute(message, args);
                 break;
 
-        case "meme":
-                bot.commands.get('meme').execute(message, args);
-        break;
+       
 
         
 
