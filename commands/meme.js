@@ -1,5 +1,5 @@
 const snekfetch = require ("snekfetch");
-const {Client, RichEmbed, Attachment, Collection, Discord} = require('discord.js');
+const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
 const got = require ('got');
 
 module.exports = {
