@@ -92,6 +92,9 @@ bot.on('message', async message => {
             bot.commands.get('meme').execute(message, args);  
         break;
 
+        case 'idv':
+            bot.commands.get('idv').execute(message, args);  
+        break;
 
         case "stun":
             bot.commands.get('stun').execute(message, args);
