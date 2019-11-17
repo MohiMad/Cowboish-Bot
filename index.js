@@ -64,19 +64,26 @@ bot.on('ready', () => {
 })
 
 
-bot.on('message', message => {
+bot.on('message', async message => {
 
     let prefix = ">";
 
     let args = message.content.substring(prefix.length).split(" ");
-      if (args.length === 0) return;
-      if (!message.content.startsWith(prefix)) return;
 
+
+      if (!message.content.startsWith(prefix)) return;
 
     switch (args[0]) {
         case "roll20":
             bot.commands.get('roll20').execute(message, args);
                 break;
+
+        case 'meme':
+                bot.commands.get('meme').execute(message, args);
+
+        break;
+
+        
 
         case "yee":
             bot.commands.get('yee').execute(message, args);
