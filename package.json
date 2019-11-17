@@ -14,7 +14,8 @@
     "discord.js": "^11.5.1",
     "ms": "^2.1.2",
     "request": "^2.88.0",
-    "snekfetch": "^4.0.4"
+    "snekfetch": "^4.0.4",
+    "got": "^9.6.0"
   },
   "devDependencies": {},
   "repository": {

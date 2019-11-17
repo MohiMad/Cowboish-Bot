@@ -88,6 +88,11 @@ bot.on('message', async message => {
             message.channel.send(`im in ${bot.guilds.size} servers <3`)
         break;
 
+        case 'meme':
+            bot.commands.get('meme').execute(message, args);  
+        break;
+
+
         case "stun":
             bot.commands.get('stun').execute(message, args);
                 break; 
