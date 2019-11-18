@@ -84,6 +84,10 @@ bot.on('message', async message => {
             bot.commands.get('help').execute(message, args);
             break;
 
+        case "mute":
+            bot.commands.get('mute').execute(message, args);
+        break;
+
         case 'guilds':
             message.channel.send(`im in ${bot.guilds.size} servers <3`)
         break;
