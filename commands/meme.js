@@ -4,7 +4,7 @@ const got = require ('got');
 module.exports = {
     name: 'meme', 
     description: "sends a random meme",
-    execute(message, args){
+    execute( message, args){
 
         const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json", "https://www.reddit.com/r/me_irl/random/.json"];
 

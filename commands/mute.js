@@ -4,7 +4,7 @@ const ms = require ('ms');
 module.exports = {
     name: 'help',
     description: "sends help!",
-    execute(message, args){
+    execute(message, args, async){
 
 let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
