@@ -63,7 +63,7 @@ message.channel.sendEmbed(genEmbed);
 
 const helpmbed = new RichEmbed()
     .setColor("RANDOM")
-    .setTitle("🤣Don't move i'm coming :v🤣", true)
+    .setTitle("🤣Don't move i'm coming :v", true)
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
     .addField('🤣Fun commands🤣', '`meme` `joke`', true)
     .setFooter('Remember to use my prefix > and before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
