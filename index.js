@@ -175,9 +175,9 @@ bot.on('message', async message => {
             bot.commands.get('mute').execute(message, args);
                 
         break;
-        
+
         case 'ping':
-            const m = await msg.channel.send("Ping?");
+            const m = await message.channel.send("Ping?");
             m.edit(`Pong! Latency is ${m.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
             break;
 
