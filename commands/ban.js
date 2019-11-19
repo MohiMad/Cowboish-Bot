@@ -13,7 +13,7 @@ if (usa) {
     const member = message.guild.member(usa);
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-        return message.reply("You can't kick but can get kicked 😗😗").then(m => m.delete(5000));
+        return message.reply("You can't ban idiot 😗😗").then(m => m.delete(5000));
     }
 
     if (member) {
