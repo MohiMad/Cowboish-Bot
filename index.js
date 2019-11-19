@@ -13,7 +13,14 @@ const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith(
 for (const file of commandFiles){
 const command = require(`./commands/${file}`);
 
+
+
 bot.commands.set(command.name, command);
+
+
+var time = new Date();
+var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
+
 
 }
 bot.on("guildCreate", guild => {
