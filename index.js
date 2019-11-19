@@ -117,6 +117,12 @@ bot.on('message', async message => {
             bot.commands.get('idv').execute(message, args);  
         break;
 
+        case 'say':
+            const sayMessage = args.join(" ");
+            message.delete().catch(O_o=>{}); 
+            message.channel.send(sayMessage);
+        break;
+
         case "stun":
             bot.commands.get('stun').execute(message, args);
                 break; 
