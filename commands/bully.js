@@ -12,7 +12,7 @@ module.exports = {
 
 let persona  = message.mentions.users.first()
 
-nube = 6;
+nube = 8;
 
 imagaNumbe = Math.floor (Math.random() * (nube - 1 + 1)) + 1;
 
