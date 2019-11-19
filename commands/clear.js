@@ -16,7 +16,7 @@ module.exports = {
             return message.reply("oof i don't have MANAGE_MESSAGES permission, can't delete messages...").then(m => m.delete(5000));
         }
         else message.channel.bulkDelete(args[1]);
-        message.channel.send ('Successully deleted '+(args[1]) + ' messages :D  got the order from => **' + message.author.username + '**')
+        message.channel.send ('Successully deleted '+(args[1]) + ' messages :D  got the order from => **' + message.author.username + '**').then(m => m.delete(5000));
         
 
 

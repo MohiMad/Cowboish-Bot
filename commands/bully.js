@@ -8,7 +8,7 @@ module.exports = {
     description: "bullyies you",
     execute(message, args){
 
-        if (!args[1]) return message.reply('Who do you want to bully? Mention them in your 2nd args');
+        if (!args[1]) return message.reply("Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(1000));
 
 let persona  = message.mentions.users.first()
 

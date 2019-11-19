@@ -8,7 +8,7 @@ module.exports = {
     description: "crash you",
     execute(message, args){
 
-        if (!args[1]) return message.reply('Who do you want to land on? Mention them in your 2nd args');
+        if (!args[1]) return message.reply("Who do you want to land on? Mention them right after the command | example: >crash @Cowboish Bot . wait... don't do that to me plz :v").then(m => m.delete(1000));
 
 let persona  = message.mentions.users.first()
 

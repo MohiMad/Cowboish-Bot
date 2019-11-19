@@ -8,7 +8,7 @@ module.exports = {
 
         let persona  = message.mentions.users.first()
 
-        if (!args[1]) return message.reply('Who do you want to shoot? Mention them in your 2nd args');
+        if (!args[1]) return message.reply("Who do you want to shoot? Mention them right after the command | example: >shoot @Cowboish Bot. Btw plz don't do that to me :(").then(m => m.delete(1000));
 
         
         nuber = 5;
