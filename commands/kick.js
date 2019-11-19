@@ -9,6 +9,10 @@ module.exports = {
 
            if (user) {
                const member = message.guild.member(user);
+
+               if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return message.reply("You can't kick but can get kicked 😗😗").then(m => m.delete(5000));
+            }
                if (member) {
                    member.kick('oof looks like u got kicked!').then(() => {
                        message.reply(`F in the chat for ${user.tag} for getting kicked`);
