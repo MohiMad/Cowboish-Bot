@@ -85,7 +85,7 @@ bot.on('message', async message => {
             break;
 
         case 'guilds':
-            message.channel.send(`im in ${bot.guilds.size} servers <3`)
+            message.channel.send(`Cowboish Bot is now in ${bot.guilds.size} servers :D`)
         break;
 
         case 'meme':
