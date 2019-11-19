@@ -46,7 +46,7 @@ bot.on("guildCreate", guild => {
     .addField('My cowboish bithday 🎉🎊 14/10/2019', 'use >help and i will be there for help :)')
     .attachFiles (["./emoji" + ".png"])
     .setThumbnail('attachment://emoji' + '.png')
-    .setColor('0xe8eb34')
+    .setColor("RANDOM")
     .addField('My prefix is ">"', 'Remember using it before any command')
     .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
     .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)");
