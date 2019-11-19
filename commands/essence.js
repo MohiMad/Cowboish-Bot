@@ -30,7 +30,7 @@ module.exports = {
         numb = 32;
         imageNumb = Math.floor (Math.random() * (numb - 1 + 1)) + 1;
         const Embed = new RichEmbed()
-        .setAuthor(message.author.username + ' opened an essence [P5 No.2] and got...', message.author.avatarURL)
+        .setAuthor(message.author.username + ' opened an essence [P5 No.1] and got...', message.author.avatarURL)
         .attachFiles (["./hasan/" + 'e' + imageNumb + ".jpg"])
         .setURL('https://rkanjo2.wixsite.com/cowboishbot')
         .setImage('attachment://e' + imageNumb + '.jpg')
