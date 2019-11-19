@@ -93,6 +93,10 @@ bot.on('message', async message => {
             bot.commands.get('roll20').execute(message, args);
                 break;
 
+        case "joke":
+            bot.commands.get('joke').execute(message, args);
+                break;
+
         case "yee":
             bot.commands.get('yee').execute(message, args);
             break;
