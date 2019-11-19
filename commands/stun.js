@@ -8,7 +8,7 @@ module.exports = {
     description: "stuns you",
     execute(message, args){
 
-        if (!args[1]) return message.reply('Who do you want to shut the pallet on? Mention them in your 2nd args');
+        if (!args[1]) return message.reply("Who do you want to shut the pallet on? Mention them right after the command | example: >shoot @Cowboish Bot.").then(m => m.delete(10000));
 
 let persona  = message.mentions.users.first()
 

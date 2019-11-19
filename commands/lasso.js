@@ -8,7 +8,7 @@ module.exports = {
     name: 'lasso',
     description: "lassos you",
     execute(message, args){
-        if (!args[1]) return message.reply('Who do you want to lasso? Mention them right after the command | example: >lasso @Cowboish Bot . Oh yes lasso me >:D').then(m => m.delete(1000));
+        if (!args[1]) return message.reply('Who do you want to lasso? Mention them right after the command | example: >lasso @Cowboish Bot . Oh yes lasso me >:D').then(m => m.delete(10000));
 
         
         let persona  = message.mentions.users.first()
