@@ -118,8 +118,14 @@ bot.on('message', async message => {
         break;
 
         case 'say':
-            const sayMessage = args.join(" ");
+
+            const sayMessage = args.slice(1).join(" ");
+
             message.delete().catch(O_o=>{}); 
+
+            if (!args[1]) 
+            message.channel.send("Tell me what to say...");
+
             message.channel.send(sayMessage);
         break;
 
