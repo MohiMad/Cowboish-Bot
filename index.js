@@ -17,6 +17,7 @@ bot.commands.set(command.name, command);
 
 }
 bot.on("guildCreate", guild => {
+    console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
     let channelID;
     let channels = guild.channels;
     channelLoop:
@@ -27,6 +28,10 @@ bot.on("guildCreate", guild => {
             break channelLoop;
         }
     }
+
+    bot.on("guildDelete", guild => {
+        console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+    });
     
 
     const welcomeEmbed = new Discord.RichEmbed()
@@ -44,7 +49,12 @@ bot.on("guildCreate", guild => {
 });
 
 bot.on('ready', () => {
-    console.log('This bot is online!');
+    console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
+    console.log(`--------------------------------------------`);
+    console.log(`Bot has started, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
+    console.log(`Bot is up and running`);
+    console.log(`--------------------------------------------`);
+
     bot.user.setActivity('Identit | >help')
     const activities_list = [
         " Use >help to send help", 

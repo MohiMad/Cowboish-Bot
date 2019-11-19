@@ -18,7 +18,7 @@ module.exports = {
         imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 
         var facts = [ 
-        'Yoooink!' + message.author.username + ' lassoed ' + persona.username,
+        'Yoooink! ' + message.author.username + ' lassoed ' + persona.username,
         persona.username + ' is riding on ' +  message.author.username + ' Yee Haaaw >:D',
         message.author.username + ' stole ' + persona.username  + " from the hunter's hands"];
 
