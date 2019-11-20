@@ -18,6 +18,8 @@ module.exports = {
 
             let memeUrl = `https://reddit.com${permalink}`;
 
+            var joke = content[0].data.children[0].data.selftext;
+
             let memeImage = content[0].data.children[0].data.url;
 
             let memeTitle = content[0].data.children[0].data.title;
@@ -31,6 +33,7 @@ module.exports = {
             .setURL (`${memeUrl}`)
             .setColor("RANDOM")
             .setImage(memeImage)
+            .addField(joke)
             .setFooter(`Provided by (r/IdentityV)|👍 ${memeUpvotes}|💬 ${memeNumComments}`);
             message.channel.send(embeed);
                
