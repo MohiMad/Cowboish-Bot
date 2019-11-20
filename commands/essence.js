@@ -37,8 +37,6 @@ module.exports = {
         .setColor("RANDOM")
         .setFooter('NOTE: This command doesnt have the same ingame percentage');
     
-        if (!args[1]) message.channel.send('What essence do you want to open? please choose between ``p5-1``, ``p5-2`` or ``s8``');
-
         if ((args[1]) == 'p5-2'){
         message.channel.sendEmbed(p5Embed);}
 
