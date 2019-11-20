@@ -48,7 +48,7 @@ module.exports = {
         if ((args[1]) == 'p5-1'){
         message.channel.sendEmbed(Embed);
         
-        }else {return message.channel.send('What essence do you want to open? please choose between ``p5-1``, ``p5-2`` or ``s8``')};
+        } else { return message.channel.send('What essence do you want to open? please choose between ``p5-1``, ``p5-2`` or ``s8``')};
     
 
 
