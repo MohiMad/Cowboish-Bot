@@ -29,7 +29,7 @@ module.exports = {
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
             const embeed = new RichEmbed()
-            .setAuthor(`${memeTitle}[${memeUrl}]`)
+            .setAuthor(`[${memeTitle}](${memeUrl})`)
         
             .setColor("RANDOM")
             .setDescription(`${joke}                 ${memeImage}`)
