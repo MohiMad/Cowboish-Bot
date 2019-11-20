@@ -11,8 +11,6 @@ execute : async (message, args) => {
     let profilepic = target.avatarURL;
     let url = `https://arcadia-api.xyz/api/v1/triggered?url=${profilepic}`;
 
-    message.channel.startTyping();
-
     snekfetch.get(url, {
         headers: {
             "Authorization": token
@@ -23,7 +21,7 @@ execute : async (message, args) => {
                attachment: res.body,
                name: `${target.tag}-triggered.gif`
            }]
-        }).then(() => message.channel.stopTyping());
+        })
     }).catch(err => console.error(err));
 
 }
