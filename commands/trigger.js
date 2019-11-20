@@ -7,7 +7,7 @@ module.exports = {
     description: "triggers you n ur friends",
 execute : async (message, args) => {
 
-  let target = message.mentions.users.first() || message.guild.members.get(args[0]).user || message.author;
+  let target = message.mentions.users.first() || message.author;
     let profilepic = target.avatarURL;
     let url = `https://arcadia-api.xyz/api/v1/triggered?url=${profilepic}`;
 
