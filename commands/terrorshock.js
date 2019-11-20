@@ -1,14 +1,11 @@
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
-const bot = new Client();
-
-
 
 module.exports = {
     name: 'terror shock', 
     description: "terrorshocks you",
     execute(message, args){
 
-        if (!args[1]) return message.reply("Who do you want to terrorshock? Mention them right after the command | example: >crash @Cowboish Bot . wait... don't do that to me plz :v").then(m => m.delete(10000));
+    if (!args[1]) return message.reply("Who do you want to terrorshock? Mention them right after the command | example: >crash @Cowboish Bot . wait... don't do that to me plz :v").then(m => m.delete(10000));
 
 let persona  = message.mentions.users.first()
 
