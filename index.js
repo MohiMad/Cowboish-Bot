@@ -137,6 +137,10 @@ bot.on('message', async message => {
             bot.commands.get('crash').execute(message, args);
                 break; 
 
+        case "terrorshock":
+            bot.commands.get('terrorshock').execute(message, args);
+        break;
+
         case "info":
             bot.commands.get('info').execute(message, args);
             break;
