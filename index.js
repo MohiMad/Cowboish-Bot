@@ -97,6 +97,11 @@ bot.on('message', async message => {
             bot.commands.get('joke').execute(message, args);
                 break;
 
+        case 'trigger':
+            bot.commands.get('trigger').execute(message, args);
+
+        break;
+
         case "yee":
             bot.commands.get('yee').execute(message, args);
             break;
