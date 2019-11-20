@@ -32,8 +32,7 @@ module.exports = {
             .setTitle(`${memeTitle}`)
             .setURL (`${memeUrl}`)
             .setColor("RANDOM")
-            .setDescription(joke)
-            .setImage(memeImage)
+            .setDescription(joke + "                     " + memeImage)
             .setFooter(`Provided by (r/IdentityV) |👍 ${memeUpvotes}|💬 ${memeNumComments}`);
             message.channel.send(embeed);
                
