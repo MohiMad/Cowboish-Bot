@@ -40,10 +40,10 @@ module.exports = {
         if ((args[1]) == 'p5-2'){
         message.channel.sendEmbed(p5Embed);}
 
-        if ((args[1]) == 's8'){
+        else if ((args[1]) == 's8'){
         message.channel.sendEmbed(newEmbed);}
 
-        if ((args[1]) == 'p5-1'){
+        else if ((args[1]) == 'p5-1'){
         message.channel.sendEmbed(Embed);}
         
         else { return message.channel.send('What essence do you want to open? please choose between ``p5-1``, ``p5-2`` or ``s8``')};
