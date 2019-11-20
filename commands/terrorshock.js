@@ -1,7 +1,7 @@
 const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
 
 module.exports = {
-    name: 'terror shock', 
+    name: 'terrorshock', 
     description: "terrorshocks you",
     execute(message, args){
 
