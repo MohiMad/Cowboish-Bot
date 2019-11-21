@@ -88,6 +88,30 @@ bot.on('message', async message => {
 
     switch (args[0]) {
 
+        case 'menurole':
+                message.channel.send('React with the following emojis to get the role :cowboy: => COWBOY role');
+                let muterole = message.guild.roles.find(muterole => muterole.name === "Cowboy");
+                message.react('🤠');
+                if(!muterole){
+                    muterole = await message.guild.createRole({
+                      name: "Cowboy",
+                      color: "#000000",
+                      permissions:[]})     }        
+    
+                      const filter = (reaction, user) => {
+                        return ['🤠'].includes(reaction.emoji.name) && user.id === message.author.id;
+                    };                
+    
+                      message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    .then(collected => {
+                        const reaction = collected.first();
+                if (reaction.emoji.name === '🤠') {
+                        message.reply('You got the cowboy role!');
+                        await(message.author.addRole(muterole.id));
+                }
+                    })
+                break;
+
 
         case "roll20":
             bot.commands.get('roll20').execute(message, args);
@@ -201,29 +225,7 @@ bot.on('message', async message => {
             m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
             break;
         
-            case 'menurole':
-            message.channel.send('React with the following emojis to get the role :cowboy: => COWBOY role');
-            let muterole = message.guild.roles.find(muterole => muterole.name === "Cowboy");
-            message.react('🤠');
-            if(!muterole){
-                muterole = await message.guild.createRole({
-                  name: "Cowboy",
-                  color: "#000000",
-                  permissions:[]})     }        
-
-                  const filter = (reaction, user) => {
-                    return ['🤠'].includes(reaction.emoji.name) && user.id === message.author.id;
-                };                
-
-                  message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                .then(collected => {
-                    const reaction = collected.first();
-            if (reaction.emoji.name === '🤠') {
-                    message.reply('You got the cowboy role!');
-                    await(author.addRole(muterole.id));
-            }
-                })
-            break;
+           
 
     }
 });
