@@ -211,10 +211,15 @@ bot.on('message', async message => {
                   color: "#000000",
                   permissions:[]})     }        
 
+
+                  message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                .then(collected => {
+                    const reaction = collected.first();
             if (reaction.emoji.name === '🤠') {
                     message.reply('You got the cowboy role!');
                     await(author.addRole(muterole.id));
             }
+                })
             break;
 
     }
