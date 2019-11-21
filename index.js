@@ -202,9 +202,9 @@ bot.on('message', async message => {
             break;
         
             case 'menurole':
-            message.channel.send('React with the following emojis to get the role :cowboy: : COWBOY');
+            message.channel.send('React with the following emojis to get the role :cowboy: => COWBOY role');
             let muterole = message.guild.roles.find(muterole => muterole.name === "Cowboy");
-            sentMessage.react('🤠');
+            message.react('🤠');
             if(!muterole){
                 muterole = await message.guild.createRole({
                   name: "Cowboy",
