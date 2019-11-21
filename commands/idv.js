@@ -28,7 +28,7 @@ module.exports = {
 
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
-            let txt = memeImage || joke;
+            let txt = memeImage || " ";
 
             const embeed = new RichEmbed()
             .setTitle(`${memeTitle}`)
