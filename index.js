@@ -89,11 +89,15 @@ bot.on('message', async message => {
     switch (args[0]) {
 
         case 'menurole':
+
                 message.channel.send('React with the following emojis to get the role :cowboy: => COWBOY role');
-                let muterole = message.guild.roles.find(muterole => muterole.name === "Cowboy");
+
+                let cowboy = message.guild.roles.find(cowboy => cowboy.name === "Cowboy");
+
                 message.react('🤠');
-                if(!muterole){
-                    muterole = await message.guild.createRole({
+
+                if(!cowboy){
+                    cowboy = await message.guild.createRole({
                       name: "Cowboy",
                       color: "#000000",
                       permissions:[]})     }        
@@ -103,11 +107,16 @@ bot.on('message', async message => {
                     };                
     
                       message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+
                     .then(collected => {
+
                         const reaction = collected.first();
+
                 if (reaction.emoji.name === '🤠') {
+
                         message.reply('You got the cowboy role!');
-                        (message.author.addRole(muterole.id));
+
+                        message.member.addRole(cowboy.id);
                 }
                     })
                 break;
