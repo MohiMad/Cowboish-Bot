@@ -97,11 +97,6 @@ bot.on('message', async message => {
             bot.commands.get('joke').execute(message, args);
                 break;
 
-        case 'trigger':
-            bot.commands.get('trigger').execute(message, args);
-
-        break;
-
         case "yee":
             bot.commands.get('yee').execute(message, args);
             break;
@@ -205,7 +200,22 @@ bot.on('message', async message => {
             const m = await message.channel.send("Ping?");
             m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
             break;
+        
+            case 'menurole':
+            message.channel.send('React with the following emojis to get the role :cowboy: : COWBOY');
+            let muterole = message.guild.roles.find(muterole => muterole.name === "Cowboy");
+            sentMessage.react('🤠');
+            if(!muterole){
+                muterole = await message.guild.createRole({
+                  name: "Cowboy",
+                  color: "#000000",
+                  permissions:[]})     }        
 
+            if (reaction.emoji.name === '🤠') {
+                    message.reply('You got the cowboy role!');
+                    await(author.addRole(muterole.id));
+            }
+            break;
 
     }
 });
