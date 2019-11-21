@@ -28,12 +28,14 @@ module.exports = {
 
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
+            let txt = memeImage || joke || memeImage + joke;
+
             const embeed = new RichEmbed()
             .setTitle(`${memeTitle}`)
             .setURL(`${memeUrl}`)
             .setColor("RANDOM")
             .setDescription(`${joke}`)
-            .setImage(`${memeImage}`)
+            .setImage(`${txt}`)
             .setFooter(`Provided by (r/IdentityV) |👍 ${memeUpvotes}|💬 ${memeNumComments}`);
             message.channel.send(embeed);
                

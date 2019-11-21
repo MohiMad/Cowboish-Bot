@@ -11,7 +11,7 @@ module.exports = {
         if (!args[1]) return message.reply("Who do you want to shoot? Mention them right after the command | example: >shoot @Cowboish Bot. Btw plz don't do that to me :(").then(m => m.delete(10000));
 
         
-        nuber = 5;
+        nuber = 7;
 
         imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 
