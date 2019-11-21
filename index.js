@@ -88,8 +88,8 @@ bot.on('message', async message => {
 
     switch (args[0]) {
 
-        case 'menurole':
-
+        case "menurole":
+            bot.commands.get('menurole').execute(message, args);
                 break;
 
 
