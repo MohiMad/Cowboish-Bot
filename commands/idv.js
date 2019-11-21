@@ -39,6 +39,6 @@ module.exports = {
             .setFooter(`Provided by (r/IdentityV) |👍 ${memeUpvotes}|💬 ${memeNumComments}`);
             message.channel.send(embeed);
                
-        }).catch(console.error) .then (message.channel.send ('Oof looks like the post is too long... please try again :)'));
+        }).catch(console.error);
     }
 }
