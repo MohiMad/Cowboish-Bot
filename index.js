@@ -211,6 +211,9 @@ bot.on('message', async message => {
                   color: "#000000",
                   permissions:[]})     }        
 
+                  const filter = (reaction, user) => {
+                    return ['🤠'].includes(reaction.emoji.name) && user.id === message.author.id;
+                };                
 
                   message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
