@@ -107,7 +107,7 @@ bot.on('message', async message => {
                         const reaction = collected.first();
                 if (reaction.emoji.name === '🤠') {
                         message.reply('You got the cowboy role!');
-                        await(message.author.addRole(muterole.id));
+                        (message.author.addRole(muterole.id));
                 }
                     })
                 break;
