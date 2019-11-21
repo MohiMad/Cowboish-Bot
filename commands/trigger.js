@@ -7,22 +7,16 @@ module.exports = {
     description: "triggers you n ur friends",
 execute : async (message, args) => {
 
-  let target = message.mentions.users.first() || message.author;
-    let profilepic = target.avatarURL;
-    let url = `https://arcadia-api.xyz/api/v1/triggered?url=${profilepic}`;
+    let profilepic = message.author.avatarURL;
 
-    snekfetch.get(url, {
-        headers: {
-            "Authorization": token
+    message.channel.send({
+        file: {
+            attachment: "https://cute-api.tk/v1/generate/triggered?url=" + profilepic,
+            name: "triggered.gif"
         }
-    }).then(async res => {
-        await message.channel.send({
-           files: [{
-               attachment: res.body,
-               name: `${target.tag}-triggered.gif`
-           }]
-        })
-    }).catch(err => console.error(err));
+    });
+
+
 
 }
 
