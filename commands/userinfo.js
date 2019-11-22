@@ -1,7 +1,7 @@
 
 const {Client, RichEmbed} = require('discord.js');
 const { stripIndents } = require("common-tags");
-const { getMember, formatDate } = require("functions.js");
+const { getMember, formatDate } = require("../../functions.js");
 
 module.exports = {
     name: 'userinfo',
