@@ -15,7 +15,8 @@
     "ms": "^2.1.2",
     "request": "^2.88.0",
     "snekfetch": "^4.0.4",
-    "got": "^9.6.0"
+    "got": "^9.6.0",
+    "common-tags": "^1.8.0"
   },
   "devDependencies": {},
   "repository": {
