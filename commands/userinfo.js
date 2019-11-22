@@ -1,10 +1,11 @@
 
-const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
-const bot = new Client();
+const {Client, RichEmbed} = require('discord.js');
+const { stripIndents } = require("common-tags");
+const { getMember, formatDate } = require("../../functions.js");
 
 module.exports = {
-    name: 'shoot',
-    description: "shoots you",
+    name: 'userinfo',
+    description: "shows the members info",
     execute(message, args){
 
  const member = getMember(message, args.join(" "));
