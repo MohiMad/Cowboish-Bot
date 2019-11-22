@@ -33,7 +33,7 @@ module.exports = {
             message.reply('Please choose a rolemenu. Available rolemenus rn ``survivor``');
 
         if (args[1] === 'survivor')
-        let filter = m => m.author.id === message.author.id;
+        const filter = m => m.author.id === message.author.id;
         message.channel.reply('Are you sure you want to create this rolemenu? it will create a total of 20 survivor roles. please type ``yes`` to activate or ``no`` to cancel').then(r => r.delete(10000));
         message.channel.awaitMessages(filter, {
             max: 1,
