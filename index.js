@@ -92,9 +92,6 @@ bot.on('message', async message => {
             bot.commands.get('menurole').execute(message, args);
                 break;
                 
-       
-
-
         case "roll20":
             bot.commands.get('roll20').execute(message, args);
                 break;
