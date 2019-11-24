@@ -5,7 +5,7 @@ module.exports = {
     name: 'blink',
     description: "blink yo azz",
     execute(message, args){
-        if (!args[1]) return message.reply('Who do you want to blinj? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
+        if (!args[1]) return message.reply('Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
 
         
         let persona  = message.mentions.users.first()
@@ -27,7 +27,7 @@ module.exports = {
         .setImage('attachment://blink' + imagaNumber + '.gif')
         .setColor("RANDOM");        
         if(message.mentions.users.first().id === message.author.id) 
-            return message.channel.send ("Nah don't waste you blink on yourself, **" + message.author.username + "**");
+            return message.channel.send ("Nah don't waste the blink on yourself, **" + message.author.username + "**");
 
         else message.channel.sendEmbed(lassoembed);
 

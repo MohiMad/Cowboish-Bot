@@ -15,6 +15,7 @@ const embed = new Discord.RichEmbed()
 .addField('Parents', 'MohiMoo and MohiMeaaw :v')
 .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)")
 .addField('Need help with commands?', 'Use >help', true)
+.addField('Cowboish stats', `**${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
 .setThumbnail('https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
 message.channel.sendEmbed(embed);

@@ -36,10 +36,6 @@ bot.on("guildCreate", guild => {
         }
     }
 
-    bot.on("guildDelete", guild => {
-        console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-    });
-
 
     const welcomeEmbed = new Discord.RichEmbed()
         .setTitle('Thank you for inviting me to the party ;D')
@@ -58,7 +54,6 @@ bot.on("guildCreate", guild => {
 bot.on('ready', () => {
     console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
     console.log(`--------------------------------------------`);
-    console.log(`Bot has started, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
     console.log(`Bot is up and running`);
     console.log(`--------------------------------------------`);
 
