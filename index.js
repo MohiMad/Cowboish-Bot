@@ -216,7 +216,7 @@ bot.on('message', async message => {
             break;
 
         case 'guilds':
-            message.channel.send(`Cowboish Bot is now in ${bot.guilds.size} servers :D`)
+            message.channel.send(`Cowboish stats => **${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
             break;
 
         //End of config commands
