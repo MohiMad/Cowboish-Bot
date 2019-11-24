@@ -33,8 +33,7 @@ const funEmbed = new RichEmbed()
     .setTitle('Identity V actions :)')
     .setColor("RANDOM")
     .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-    .addField('`crash` `bully` `lasso` `shoot` `stun` `terrorshock`', 'Remember to use my prefix > before the commands ;D')
-    .setFooter('Want your replays to show in this bots roleplay commands? feel free to send them to me here (MohiMeaww#2888)', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+    .addField('`crash` `bully` `lasso` `shoot` `stun` `terrorshock`', 'Remember to use my prefix > before the commands ;D');    
     if (args[1] === 'actions')
     message.channel.send(fuEmbed);
 

@@ -24,9 +24,7 @@ const bullyembed = new RichEmbed()
 .setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./stuns/" + 'stun' + imagaNumbe + ".gif"])
 .setImage('attachment://stun' + imagaNumbe + '.gif')
-.setColor("RANDOM")
-.setFooter('Want your replay to pop up here? add me to submit it ;D (MohiMeaww#2888)');
-
+.setColor("RANDOM");
 
 if(message.mentions.users.first().id === message.author.id) 
     message.channel.send ("I won't do that for you,** " + message.author.username);

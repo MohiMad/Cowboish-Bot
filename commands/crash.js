@@ -23,8 +23,7 @@ const bullyembed = new RichEmbed()
 .setAuthor((facts[fact]), message.author.avatarURL)
 .attachFiles (["./crashs/" + 'crash' + imagaNumbe + ".gif"])
 .setImage('attachment://crash' + imagaNumbe + '.gif')
-.setColor("RANDOM")
-.setFooter('Want your replay to pop up here? add me to submit it ;D (MohiMeaww#2888)');
+.setColor("RANDOM");
 
 
 if(message.mentions.users.first().id === message.author.id) 

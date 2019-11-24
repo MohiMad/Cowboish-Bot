@@ -28,8 +28,7 @@ module.exports = {
         .setAuthor((facts[fact]), message.author.avatarURL)
         .attachFiles (["./lassos/" + 'lasso' + imagaNumber + ".gif"])
         .setImage('attachment://lasso' + imagaNumber + '.gif')
-        .setColor("RANDOM")
-        .setFooter('Want your replay to pop up here? add me to submit it => (MohiMeaww#2888)');
+        .setColor("RANDOM");
         
         if(message.mentions.users.first().id === message.author.id) 
             return message.channel.send ("Um sorry,** " + message.author.username + '** but you cant lasso yourself :v');

@@ -26,9 +26,8 @@ module.exports = {
         .setAuthor((facts[fact]), message.author.avatarURL)
         .attachFiles (["./flaregun/" + 'flaregun' + imagaNumber + ".gif"])
         .setImage('attachment://flaregun' + imagaNumber + '.gif')
-        .setColor("RANDOM")
-        .setFooter('Want your replay to pop up here? add me to submit it => (MohiMeaww#2888)');
-        
+        .setColor("RANDOM");
+                
         if(message.mentions.users.first().id === message.author.id) 
         message.channel.send ("Why would ** " + message.author.username + '** shoot themself 🤔🤔');
 

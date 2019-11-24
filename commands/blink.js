@@ -16,8 +16,8 @@ module.exports = {
 
         imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 
-        var facts = ["Oof " + persona + " got their ass blinked by " + person, 
-        person + " used their blink on " + persona + " nice blink tbh"];
+        var facts = ["Oof " + persona.username + " got their ass blinked by " + person, 
+        person + " used their blink on " + persona.username + " nice blink tbh"];
 
         var fact = Math.floor(Math.random() * facts.length);
 
@@ -25,11 +25,9 @@ module.exports = {
         .setAuthor((facts[fact]), message.author.avatarURL)
         .attachFiles (["./blink/" + 'blink' + imagaNumber + ".gif"])
         .setImage('attachment://blink' + imagaNumber + '.gif')
-        .setColor("RANDOM")
-        .setFooter('Want your replay to pop up here? add me to submit them => (MohiMeaww#2888)');
-        
+        .setColor("RANDOM");        
         if(message.mentions.users.first().id === message.author.id) 
-            return message.channel.send ("Nah don't waste you blink on yourself, " + message.author.username);
+            return message.channel.send ("Nah don't waste you blink on yourself, **" + message.author.username + "**");
 
         else message.channel.sendEmbed(lassoembed);
 
