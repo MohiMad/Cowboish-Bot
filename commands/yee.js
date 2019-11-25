@@ -5,7 +5,7 @@ module.exports = {
     description: "haaaw",
     execute(message, args){
 
-        var facts = ["Haaaw >:D", "Yeeeeeeeeeeeet", "Pizza?", "did someone say Yee?"];
+        var facts = ["Haaaw >:D", "Yeeeeeeeeeeeet", "Pizzaa?", "did someone say Yee?, Heeey :D"];
 
         var fact = Math.floor(Math.random() * facts.length);
 
