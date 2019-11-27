@@ -43,7 +43,7 @@ module.exports = {
             message.reply('What essence do you want to open? please type ``p5-1``, ``p5-2`` or ``s8`` down below... ');
         message.channel.awaitMessages(filter, {
             max: 1,
-            time: 10000
+            time: 20000
         }).then(collected => {
 
             if ((args[1]) || (collected.first().content === 'p5-2')){
