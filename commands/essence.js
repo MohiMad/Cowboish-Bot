@@ -40,10 +40,10 @@ module.exports = {
         const filter = m => m.author.id === message.author.id;
 
         if (!args[1])
-            message.reply('What essence do you want to open? please type one of these essences down below... ``p5-1``, ``p5-2`` or ``s8``');
+            message.reply('What essence do you want to open? please type ``p5-1``, ``p5-2`` or ``s8`` down below... ');
         message.channel.awaitMessages(filter, {
-            max: 10,
-            time: 100000
+            max: 1,
+            time: 10000
         }).then(collected => {
 
             if ((args[1]) || (collected.first().content === 'p5-2')){
