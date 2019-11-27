@@ -46,15 +46,15 @@ module.exports = {
             time: 10000
         }).then(collected => {
 
-            if ((args[1]) || collected.first() == 'p5-2') {
+            if ((args[1]) || (collected.first().content === 'p5-2')){
                 message.channel.sendEmbed(p5Embed);
             }
 
-            else if ((args[1]) || collected.first() == 's8') {
+            else if ((args[1]) || (collected.first().content === 's8')) {
                 message.channel.sendEmbed(newEmbed);
             }
 
-            else if ((args[1]) || collected.first() == 'p5-1') {
+            else if ((args[1]) || (collected.first().content === 'p5-1')) {
                 message.channel.sendEmbed(Embed);
             }
         })
