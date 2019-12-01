@@ -47,13 +47,10 @@ const funEmbed = new RichEmbed()
     message.channel.sendEmbed(modEmbed);
     
     const genEmbed = new RichEmbed()
-.setTitle('⚙Help is here :D⚙', true)
+.setTitle('⚙ Help is here :D ⚙', true)
 .setColor("RANDOM")
 .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-.addField('`help`', 'Sends help..DUUUH', true)
-.addField('`info`', 'Sends info about the bot', true)
-.addField('`ping`', 'Shows the bots ping', true)
-.addField('`guilds`', 'Shows how many servers the bot is in', true)
+.addField('Here are the bots config commands', '`help`, `ping`, `guilds`, `ìnfo`, `userinfo`')
 
 .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 if (args[1] === 'config')
