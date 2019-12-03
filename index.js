@@ -27,7 +27,7 @@ for (const file of commandFiles) {
 bot.on("guildCreate", guild => {
     const logs = bot.channels.find('name', '📑》cowboish_logs')
     if (!logs) return; 
-    else logs.send(`👏Just joined a new server named 👉 **${guild.name}** The server has **${guild.memberCount}** members!`);
+    else logs.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
 
     let channelID;
     let channels = guild.channels;
