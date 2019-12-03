@@ -46,18 +46,33 @@ module.exports = {
             time: 20000
         }).then(collected => {
 
-            if ((args[1]) || (collected.first().content === 'p5-2')){
+            if ((collected.first().content === 'p5-2')){
                 message.channel.sendEmbed(p5Embed);
             }
 
-            else if ((args[1]) || (collected.first().content === 's8')) {
+            else if ((collected.first().content === 's8')) {
                 message.channel.sendEmbed(newEmbed);
             }
 
-            else if ((args[1]) || (collected.first().content === 'p5-1')) {
+            else if ((collected.first().content === 'p5-1')) {
                 message.channel.sendEmbed(Embed);
             }
-        })
+
+            
+        });
+
+        if ((args[1]) === ('p5-1'))
+            message.channel.sendEmbed(p5Embed);
+              
+            if ((args[1]) === ('p5-2'))
+            message.channel.sendEmbed(Embed);
+
+            if ((args[1]) === ('s8'))
+            message.channel.sendEmbed(newEmbed);
+              
+              
+       
+
 
 
 
