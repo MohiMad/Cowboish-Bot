@@ -7,6 +7,7 @@ const snekfetch = require('snekfetch');
 const ms = require('ms');
 var version = '1.0.2';
 const fs = require('fs');
+const logs = bot.channels.find('name', '📑》cowboish_logs')
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
@@ -25,7 +26,6 @@ for (const file of commandFiles) {
 
 }
 bot.on("guildCreate", guild => {
-    const logs = bot.channels.find('name', '📑》cowboish_logs')
     if (!logs) return; 
     else logs.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
 
@@ -39,6 +39,12 @@ bot.on("guildCreate", guild => {
             break channelLoop;
         }
     }
+
+    bot.on("guildDelete", guild => {
+        if (!logs) return; 
+        else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
+    
+    });
 
 
     const welcomeEmbed = new Discord.RichEmbed()
