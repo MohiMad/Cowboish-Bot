@@ -26,9 +26,9 @@ for (const file of commandFiles) {
 }
 bot.on("guildCreate", guild => {
     console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-    const channel = client.channels.find('name', '📑》cowboish_logs')
-    if (!channel) return; 
-    else channel.send(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+    const logs = client.channels.find('name', '📑》cowboish_logs')
+    if (!logs) return; 
+    else logs.send(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
 
     let channelID;
     let channels = guild.channels;
