@@ -10,6 +10,7 @@ const fs = require('fs');
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
+
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
 
@@ -25,6 +26,10 @@ for (const file of commandFiles) {
 }
 bot.on("guildCreate", guild => {
     console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+    const channel = client.channels.find('name', '📑》cowboish_logs')
+    if (!channel) return; 
+    else channel.send(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+
     let channelID;
     let channels = guild.channels;
     channelLoop:
