@@ -55,7 +55,7 @@ bot.on("guildCreate", guild => {
         .setColor("RANDOM")
         .addField('My prefix is ">"', 'Remember using it before any command')
         .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
-        .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)");
+        .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8) | " + ["Cowboish Server"]("https://discordapp.com/invite/YWcSukS"));
 
     let channel = bot.channels.get(guild.systemChannelID || channelID);
     channel.send(welcomeEmbed);
