@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'NjMyMjkxODAwNTg1MDc2NzYx.XduTDQ.EbNApplniB0v8cyWCDOxdtf2mD0';
 const cheerio = require('cheerio');
 const request = require('request');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
+const config = require("./config.json")
 var version = '1.0.2';
 const fs = require('fs');
-const logs = bot.channels.find('name', '📑》cowboish_logs')
+const logs = bot.channels.find('name', '📑》cowboish_logs');
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
@@ -243,5 +243,5 @@ bot.on('message', async message => {
 
 
 
-bot.login(token);
+bot.login(config.token);
 
