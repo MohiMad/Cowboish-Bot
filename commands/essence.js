@@ -39,27 +39,8 @@ module.exports = {
 
         const filter = m => m.author.id === message.author.id;
 
-        if (!args[1])
-            message.reply('What essence do you want to open? please type ``p5-1``, ``p5-2`` or ``s8`` down below... ');
-        message.channel.awaitMessages(filter, {
-            max: 1,
-            time: 20000
-        }).then(collected => {
-
-            if ((collected.first().content === 'p5-2')){
-                message.channel.sendEmbed(p5Embed);
-            }
-
-            else if ((collected.first().content === 's8')) {
-                message.channel.sendEmbed(newEmbed);
-            }
-
-            else if ((collected.first().content === 'p5-1')) {
-                message.channel.sendEmbed(Embed);
-            }
-
-            
-        });
+        
+       
 
         if ((args[1]) === ('p5-1'))
             message.channel.sendEmbed(p5Embed);
@@ -71,7 +52,32 @@ module.exports = {
             message.channel.sendEmbed(newEmbed);
 
             else{
-                message.channel.send("Oops looks like you chose an invalid essence name essences available are \n``s8``, ``p5-1``, ``p5-2``");
+                message.channel.reply("Oops looks like you chose an invalid essence name essences available are \n``s8``, ``p5-1``, ``p5-2`` please type one of them down bleow");
+
+                message.channel.awaitMessages(filter, {
+                    max: 1,
+                    time: 20000
+                }).then(collected => {
+        
+                    let ess = collected.first();
+        
+                    if ((ess.content === 'p5-2')){
+                        message.channel.sendEmbed(p5Embed);
+                    }
+        
+                    else if ((ess.content === 's8')) {
+                        message.channel.sendEmbed(newEmbed);
+                    }
+        
+                    else if ((ess.content === 'p5-1')) {
+                        message.channel.sendEmbed(Embed);
+                    }
+        
+                    
+                }).catch(collected => {
+                    return;
+                });
+
             }
               
               
