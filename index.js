@@ -44,15 +44,23 @@ bot.on("guildCreate", guild => {
     
     });
 
+        const dble = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', { webhookPort: 5000, webhookAuth: 'mmkdmkmmkdmk' });
+        dble.webhook.on('ready', hook => {
+        console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
+        });
 
-        // Optional events
-    dbl.on('posted', () => {
-        console.log('Server count posted!');
-    })
+        dble.webhook.on('vote', vote => {
+
+            const voteEmbed = new RichEmbed()
+            .addField("Someone just voted to me on **top.gg** :D", "Wanna vote to me as well? click [HERE](https://top.gg/bot/632291800585076761/vote) to do so :)");
+
+            if (!logs) return; 
+        else logs.send(voteEmbed);
     
-    dbl.on('error', e => {
-    console.log(`Oops! ${e}`);
-    })
+        });
+
+
+      
 
 
     const welcomeEmbed = new Discord.RichEmbed()
