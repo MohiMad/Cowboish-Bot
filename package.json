@@ -16,7 +16,8 @@
     "request": "^2.88.0",
     "snekfetch": "^4.0.4",
     "got": "^9.6.0",
-    "common-tags": "^1.8.0"
+    "common-tags": "^1.8.0",
+    "dblapi.js" : "^2.3.0"
   },
   "devDependencies": {},
   "repository": {

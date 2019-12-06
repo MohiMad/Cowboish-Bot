@@ -1,13 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cheerio = require('cheerio');
-const request = require('request');
-const snekfetch = require('snekfetch');
-const ms = require('ms');
 const config = require("./config.json")
-var version = '1.0.2';
 const fs = require('fs');
 const logs = bot.channels.find('name', '📑》cowboish_logs');
+const DBL = require("dblapi.js");
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
+
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
@@ -45,6 +43,16 @@ bot.on("guildCreate", guild => {
         else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
     
     });
+
+
+        // Optional events
+    dbl.on('posted', () => {
+        console.log('Server count posted!');
+    })
+    
+    dbl.on('error', e => {
+    console.log(`Oops! ${e}`);
+    })
 
 
     const welcomeEmbed = new Discord.RichEmbed()
