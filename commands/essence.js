@@ -64,11 +64,15 @@ module.exports = {
         if ((args[1]) === ('p5-1'))
             message.channel.sendEmbed(p5Embed);
               
-            if ((args[1]) === ('p5-2'))
+            else if ((args[1]) === ('p5-2'))
             message.channel.sendEmbed(Embed);
 
-            if ((args[1]) === ('s8'))
+            else if ((args[1]) === ('s8'))
             message.channel.sendEmbed(newEmbed);
+
+            else{
+                message.channel.send("Oops looks like you chose an invalid essence name essences available are \n``s8``, ``p5-1``, ``p5-2``");
+            }
               
               
        
