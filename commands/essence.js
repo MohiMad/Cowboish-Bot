@@ -52,7 +52,7 @@ module.exports = {
             message.channel.sendEmbed(newEmbed);
 
             else{
-                message.channel.reply("Oops looks like you chose an invalid essence name essences available are \n``s8``, ``p5-1``, ``p5-2`` please type one of them down bleow");
+                message.reply("Oops looks like you chose an invalid essence name essences available are \n``s8``, ``p5-1``, ``p5-2`` please type one of them down bleow");
 
                 message.channel.awaitMessages(filter, {
                     max: 1,
