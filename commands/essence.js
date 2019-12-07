@@ -14,8 +14,15 @@ module.exports = {
             .attachFiles(["./s8/" + 'essence' + imagNumber + ".PNG"])
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://essence' + imagNumber + '.PNG')
-            .setColor("RANDOM")
-            .setFooter('NOTE: This command doesnt have the same ingame percentage');
+            .setColor("RANDOM");
+
+        numbe = 50;
+        imagNumbe = Math.floor(Math.random() * (numbe - 1 + 1)) + 1;
+        const essEmbed = new RichEmbed()
+                .setAuthor(message.author.username + ' opened an essence [S8 No.1] and got...', message.author.avatarURL)
+                .attachFiles(["./s8-2/" + 'ess' + imagNumbe + ".PNG"])
+                .setImage('attachment://ess' + imagNumbe + '.PNG')
+                .setColor("RANDOM");
 
         numba = 32;
         imageNumba = Math.floor(Math.random() * (numba - 1 + 1)) + 1;
@@ -24,8 +31,7 @@ module.exports = {
             .attachFiles(["./p5/" + 'p5-' + imageNumba + ".jpg"])
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://p5-' + imageNumba + '.jpg')
-            .setColor("RANDOM")
-            .setFooter('NOTE: This command doesnt have the same ingame percentage');
+            .setColor("RANDOM");
 
         numb = 32;
         imageNumb = Math.floor(Math.random() * (numb - 1 + 1)) + 1;
@@ -34,9 +40,8 @@ module.exports = {
             .attachFiles(["./hasan/" + 'e' + imageNumb + ".jpg"])
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://e' + imageNumb + '.jpg')
-            .setColor("RANDOM")
-            .setFooter('NOTE: This command doesnt have the same ingame percentage');
-
+            .setColor("RANDOM");
+            
         const filter = m => m.author.id === message.author.id;
 
         
@@ -48,8 +53,11 @@ module.exports = {
             else if ((args[1]) === ('p5-2'))
             message.channel.sendEmbed(Embed);
 
-            else if ((args[1]) === ('s8'))
+            else if ((args[1]) === ('s8-2'))
             message.channel.sendEmbed(newEmbed);
+
+            else if ((args[1]) === ('s8-1'))
+            message.channel.sendEmbed(essEmbed);
 
             else{
                 message.reply("Oops looks like you chose an invalid essence name essences available are ``s8``, ``p5-1``, ``p5-2`` please type one of them down bleow");
@@ -65,12 +73,16 @@ module.exports = {
                         message.channel.sendEmbed(p5Embed);
                     }
         
-                    else if ((ess.content === 's8')) {
+                    else if ((ess.content === 's8-2')) {
                         message.channel.sendEmbed(newEmbed);
                     }
         
                     else if ((ess.content === 'p5-1')) {
                         message.channel.sendEmbed(Embed);
+                    }
+
+                    else if ((ess.content === 's8-1')) {
+                        message.channel.sendEmbed(essEmbed);
                     }
         
                     
