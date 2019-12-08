@@ -21,9 +21,9 @@ for (const file of commandFiles) {
 }
 
 //End of command handler
-bot.on("guildCreate", guild, member => {
+bot.on("guildCreate", guild => {
 
-    const create = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+    const create = guild.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
 
     if (!create) return; 
     else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
@@ -54,9 +54,9 @@ bot.on("guildCreate", guild, member => {
     channel.send(welcomeEmbed);
     //sends the embed when joined
 
-    bot.on("guildDelete", guild, member => {
+    bot.on("guildDelete", guild => {
 
-        const logs = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+        const logs = guild.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
 
         if (!logs) return; 
         
@@ -65,23 +65,6 @@ bot.on("guildCreate", guild, member => {
     });
     //if bot deleted it will let me know (NOT WORKING)
 
-
-        const dble = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', { webhookPort: 5000, webhookAuth: 'mmkdmkmmkdmk' });
-        dble.webhook.on('ready', hook => {
-        console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
-        });
-
-        dble.webhook.on('vote', vote => {
-
-            const voteEmbed = new RichEmbed()
-            .addField("Someone just voted to me on **top.gg** :D", "Wanna vote to me as well? click [HERE](https://top.gg/bot/632291800585076761/vote) to do so :)");
-
-            const votes = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
-
-            if (!votes) return; 
-        else votes.send(voteEmbed);
-    
-        });//if voted on top.gg it will tell me
 
 
       
