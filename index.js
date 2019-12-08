@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json")
 const fs = require('fs');
-const logs = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
@@ -22,11 +21,12 @@ for (const file of commandFiles) {
 }
 
 //End of command handler
-bot.on("guildCreate", guild => {
+bot.on("guildCreate", guild, member => {
 
-    
-    if (!logs) return; 
-    else logs.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
+    const create = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+
+    if (!create) return; 
+    else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
 //Sends a message to my server if bot joins a new server (NOT WORKING)
 
 //Channel loop so bot sends a message to the server it joined
@@ -54,7 +54,10 @@ bot.on("guildCreate", guild => {
     channel.send(welcomeEmbed);
     //sends the embed when joined
 
-    bot.on("guildDelete", guild => {
+    bot.on("guildDelete", guild, member => {
+
+        const logs = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+
         if (!logs) return; 
         
         else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
@@ -73,8 +76,10 @@ bot.on("guildCreate", guild => {
             const voteEmbed = new RichEmbed()
             .addField("Someone just voted to me on **top.gg** :D", "Wanna vote to me as well? click [HERE](https://top.gg/bot/632291800585076761/vote) to do so :)");
 
-            if (!logs) return; 
-        else logs.send(voteEmbed);
+            const votes = member.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+
+            if (!votes) return; 
+        else votes.send(voteEmbed);
     
         });//if voted on top.gg it will tell me
 
