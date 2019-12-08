@@ -23,7 +23,7 @@ for (const file of commandFiles) {
 //End of command handler
 bot.on("guildCreate", guild => {
 
-    const create = guild.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+    const create = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
 
     if (!create) return; 
     else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
@@ -56,7 +56,7 @@ bot.on("guildCreate", guild => {
 
     bot.on("guildDelete", guild => {
 
-        const logs = guild.guild.channels.find(ch => ch.name === '📑》cowboish_logs');
+        const logs = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
 
         if (!logs) return; 
         
