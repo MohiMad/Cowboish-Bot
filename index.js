@@ -17,10 +17,10 @@ for (const file of commandFiles) {
 
     var time = new Date();
     var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
+ 
+} 
 
-}
-
-//End of command handler
+//*End of command handler
 bot.on("guildCreate", guild => {
 
     const create = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
