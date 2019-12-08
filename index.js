@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json")
 const fs = require('fs');
-const logs = bot.channels.get('651476936379596830');
+const logs = bot.guilds.get(message.guild.id).channels.get(651476936379596830);
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
@@ -24,7 +24,9 @@ for (const file of commandFiles) {
 
 }
 bot.on("guildCreate", guild => {
+
     if (!logs) return; 
+
     else logs.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
 
     let channelID;
@@ -40,6 +42,7 @@ bot.on("guildCreate", guild => {
 
     bot.on("guildDelete", guild => {
         if (!logs) return; 
+        
         else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
     
     });
