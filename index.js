@@ -6,6 +6,7 @@ const logs = bot.channels.find('name', '📑》cowboish_logs');
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
+//Command handler HERE 
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
@@ -13,22 +14,22 @@ const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith(
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
 
-
-
     bot.commands.set(command.name, command);
-
 
     var time = new Date();
     var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
 
-
 }
+
+//End of command handler
 bot.on("guildCreate", guild => {
 
+    
     if (!logs) return; 
-
     else logs.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
+//Sends a message to my server if bot joins a new server (NOT WORKING)
 
+//Channel loop so bot sends a message to the server it joined
     let channelID;
     let channels = guild.channels;
     channelLoop:
@@ -39,6 +40,19 @@ bot.on("guildCreate", guild => {
             break channelLoop;
         }
     }
+    const welcomeEmbed = new Discord.RichEmbed()
+        .setTitle('Thank you for inviting me to the party ;D')
+        .addField('My cowboish bithday 🎉🎊 14/10/2019', 'use >help and i will be there for help :)')
+        .attachFiles(["./emoji" + ".png"])
+        .setThumbnail('attachment://emoji' + '.png')
+        .setColor("RANDOM")
+        .addField('My prefix is ">"', 'Remember using it before any command')
+        .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
+        .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)");
+
+    let channel = bot.channels.get(guild.systemChannelID || channelID);
+    channel.send(welcomeEmbed);
+    //sends the embed when joined
 
     bot.on("guildDelete", guild => {
         if (!logs) return; 
@@ -46,6 +60,8 @@ bot.on("guildCreate", guild => {
         else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
     
     });
+    //if bot deleted it will let me know (NOT WORKING)
+
 
         const dble = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', { webhookPort: 5000, webhookAuth: 'mmkdmkmmkdmk' });
         dble.webhook.on('ready', hook => {
@@ -60,24 +76,13 @@ bot.on("guildCreate", guild => {
             if (!logs) return; 
         else logs.send(voteEmbed);
     
-        });
+        });//if voted on top.gg it will tell me
 
 
       
 
 
-    const welcomeEmbed = new Discord.RichEmbed()
-        .setTitle('Thank you for inviting me to the party ;D')
-        .addField('My cowboish bithday 🎉🎊 14/10/2019', 'use >help and i will be there for help :)')
-        .attachFiles(["./emoji" + ".png"])
-        .setThumbnail('attachment://emoji' + '.png')
-        .setColor("RANDOM")
-        .addField('My prefix is ">"', 'Remember using it before any command')
-        .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
-        .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)");
-
-    let channel = bot.channels.get(guild.systemChannelID || channelID);
-    channel.send(welcomeEmbed);
+    
 });
 
 bot.on('ready', () => {
@@ -93,12 +98,13 @@ bot.on('ready', () => {
         "Identity V | >help",
         "Welcome to Identit | >help",
         "Identit | >help", `idv in ${bot.guilds.size} servers`
+        //random activity list
     ];
 
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         bot.user.setActivity(activities_list[index]);
-    }, 100000);
+    }, 100000);//sets the activity each 120 s
 })
 
 
@@ -109,8 +115,11 @@ bot.on('message', async message => {
     let args = message.content.substring(prefix.length).split(" ");
 
     if (!message.content.startsWith(prefix)) return;
+    //ulitiy stuff
+
 
     switch (args[0]) {
+
 
         //Identity V commands Starts Here!
         case "menurole":
@@ -163,15 +172,7 @@ bot.on('message', async message => {
             break;
 
         case 'say':
-
-            const sayMessage = args.slice(1).join(" ");
-
-            message.delete().catch(O_o => { });
-
-            if (!args[1])
-                message.channel.send("Tell me what to say...");
-
-            message.channel.send(sayMessage);
+            bot.commands.get('say').execute(message, args);
             break;
 
         //End Of Fun commands

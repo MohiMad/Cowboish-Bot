@@ -15,6 +15,7 @@ module.exports = {
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://essence' + imagNumber + '.PNG')
             .setColor("RANDOM");
+            //[S8 No.2]
 
         numbe = 50;
         imagNumbe = Math.floor(Math.random() * (numbe - 1 + 1)) + 1;
@@ -23,6 +24,7 @@ module.exports = {
                 .attachFiles(["./s8-2/" + 'ess' + imagNumbe + ".PNG"])
                 .setImage('attachment://ess' + imagNumbe + '.PNG')
                 .setColor("RANDOM");
+                //[S8 No.1]
 
         numba = 32;
         imageNumba = Math.floor(Math.random() * (numba - 1 + 1)) + 1;
@@ -32,6 +34,8 @@ module.exports = {
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://p5-' + imageNumba + '.jpg')
             .setColor("RANDOM");
+            //[P5 No.2]
+
 
         numb = 32;
         imageNumb = Math.floor(Math.random() * (numb - 1 + 1)) + 1;
@@ -41,11 +45,10 @@ module.exports = {
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://e' + imageNumb + '.jpg')
             .setColor("RANDOM");
+            //[P5 No.1]
+
             
         const filter = m => m.author.id === message.author.id;
-
-        
-       
 
         if ((args[1]) === ('p5-1'))
             message.channel.sendEmbed(p5Embed);
