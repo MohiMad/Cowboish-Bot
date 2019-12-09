@@ -50,7 +50,7 @@ const funEmbed = new RichEmbed()
 .setTitle('⚙ Help is here :D ⚙', true)
 .setColor("RANDOM")
 .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-.addField('Here are the bots config commands', '`help`, `ping`, `guilds`, `ìnfo`, `userinfo`')
+.addField('Here are the bots config commands', '`help`, `ping`, `guilds`, `ìnfo`, `userinfo`, `suggest`')
 
 .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 if (args[1] === 'config')
