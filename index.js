@@ -85,7 +85,8 @@ bot.on('ready', () => {
         "Identit | >help",
         "Identity V | >help",
         "Welcome to Identit | >help",
-        "Identit | >help", `idv in ${bot.guilds.size} servers`
+        "Identit | >help", `idv in ${bot.guilds.size} servers`,
+        "do >suggest to suggest something to Mohi :)"
         //random activity list
     ];
 
@@ -240,6 +241,11 @@ bot.on('message', async message => {
         case 'guilds':
             message.channel.send(`Cowboish stats => **${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
             break;
+        
+        case 'suggest':
+                bot.commands.get('suggest').execute(message, args);
+
+        break;
 
         //End of config commands
 
