@@ -243,7 +243,7 @@ bot.on('message', async message => {
             break;
         
         case 'suggest':
-                bot.commands.get('suggest').execute(message, args);
+                bot.commands.get('suggest').execute(message, args, bot);
 
         break;
 

@@ -3,7 +3,7 @@ const {Client, RichEmbed} = require('discord.js');
 module.exports = {
     name: 'suggest',
     description: "sends a suggestion to mohimoo",
-    execute(message, args){
+    execute(message, args, bot){
 
 
 const suggest = bot.channels.find(ch => ch.name === '👀》cowboish-suggestions');
