@@ -17,6 +17,18 @@ module.exports = {
             .setColor("RANDOM");
             //[S8 No.2]
 
+
+            nmber = 48;
+        imagNmber = Math.floor(Math.random() * (nmber - 1 + 1)) + 1;
+        const s9Embed = new RichEmbed()
+            .setAuthor(message.author.username + ' opened an essence [S9] and got...', message.author.avatarURL)
+            .attachFiles(["./s9-1/" + 's9-' + imagNmber + ".PNG"])
+            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+            .setImage('attachment://s9-' + imagNmber + '.PNG')
+            .setColor("RANDOM");
+
+        
+
         numbe = 50;
         imagNumbe = Math.floor(Math.random() * (numbe - 1 + 1)) + 1;
         const essEmbed = new RichEmbed()
@@ -62,8 +74,11 @@ module.exports = {
             else if ((args[1]) === ('s8-1'))
             message.channel.sendEmbed(essEmbed);
 
+            else if ((args[1]) === ('s9'))
+            message.channel.sendEmbed(s9Embed);
+
             else{
-                message.reply("Oops looks like you chose an invalid essence name essences available are ``s8-1``, ``s8-2``, ``p5-1``, ``p5-2`` please type one of them down bleow");
+                message.reply("Oops looks like you chose an invalid essence name essences available are ``s8-1``, ``s8-2``, ``p5-1``, ``p5-2``, ``s9`` please type one of them down bleow");
 
                 message.channel.awaitMessages(filter, {
                     max: 1,
@@ -86,6 +101,10 @@ module.exports = {
 
                     else if ((ess.content === 's8-1')) {
                         message.channel.sendEmbed(essEmbed);
+                    }
+
+                    else if ((ess.content === 's9')) {
+                        message.channel.sendEmbed(s9Embed);
                     }
         
                     
