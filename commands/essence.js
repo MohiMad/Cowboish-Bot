@@ -71,12 +71,12 @@ module.exports = {
 
         if (cooldown.has(message.author.id)){
             message.delete();
-            message.channel.sendEmbed(coolEmbed);
+            message.channel.sendEmbed(coolEmbed).then(m => m.delete(5000));
 
             setTimeout(() => {
                 cooldown.delete(message.author.id)
 
-            }, seconds * 1000)
+            }, seconds * 1000);
 
         }
 
