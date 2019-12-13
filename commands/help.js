@@ -16,7 +16,7 @@ const helpEmbed = new RichEmbed()
     .addField('🔧Moderation', 'use >help moderation    ', true)
     .addField('⚙Config', 'use >help config', true)
     .addField('Fun🤣', 'use >help fun', true)
-    .addField("For more info ", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
+    .addField("For more info ", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
     .setFooter('Remember to use my prefix > and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
     if (!args[1]) return message.channel.send(helpEmbed);
 

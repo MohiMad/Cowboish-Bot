@@ -63,7 +63,7 @@ module.exports = {
 
             const coolEmbed = new RichEmbed()
             .setTitle("Take it easy on me dude!")
-            .addField("You'll have to wait **3** seconds after you opened an essence before you can open another one", "Instead of waiting, why don't you vote to me on [Top.gg](https://top.gg/bot/632291800585076761/vote)?");
+            .addField("You'll have to wait **3** seconds after you opened an essence before you can open another one", "Instead of waiting, why don't you vote to me on [Top.gg](https://top.gg/bot/632291800585076761/vote) ;D");
 
 
             
@@ -108,7 +108,7 @@ module.exports = {
 
 
             else{
-                message.reply("Oops looks like you chose an invalid essence name essences available are ``s8-1``, ``s8-2``, ``p5-1``, ``p5-2``, ``s9`` please type one of them down bleow");
+                message.reply("Oops looks like you chose an invalid essence name, essences available are ``s8-1``, ``s8-2``, ``p5-1``, ``p5-2``, ``s9`` please type one of them down bleow");
 
                 message.channel.awaitMessages(filter, {
                     max: 1,
