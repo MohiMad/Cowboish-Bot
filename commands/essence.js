@@ -1,6 +1,7 @@
 const { Client, RichEmbed, Attachment, Collection } = require('discord.js');
 const bot = new Client();
-
+let cooldown = new Set();
+let seconds = 3;
 module.exports = {
     name: 'essence',
     description: "opens an essence",
@@ -59,23 +60,43 @@ module.exports = {
             .setColor("RANDOM");
             //[P5 No.1]
 
+
+            const coolEmbed = new RichEmbed()
+            .setTitle("Take it easy on me dude!")
+            .addField("You'll have to wait **3** seconds after you opened an essence before you can open another one", "Instead of waiting, why don't you vote to me on [Top.gg](https://top.gg/bot/632291800585076761/vote)?");
+
+
             
         const filter = m => m.author.id === message.author.id;
 
-        if ((args[1]) === ('p5-1'))
-            message.channel.sendEmbed(p5Embed);
+        if (cooldown.has(message.author.id)){
+            message.delete();
+            message.channel.sendEmbed(coolEmbed);
+        }
+
+        else if ((args[1]) === ('p5-1'))
+            message.channel.sendEmbed(p5Embed)
+            .then(cooldown.add(message.author.id));
               
             else if ((args[1]) === ('p5-2'))
-            message.channel.sendEmbed(Embed);
+            message.channel.sendEmbed(Embed)
+            .then(cooldown.add(message.author.id));
+
 
             else if ((args[1]) === ('s8-2'))
-            message.channel.sendEmbed(newEmbed);
+            message.channel.sendEmbed(newEmbed)
+            .then(cooldown.add(message.author.id));
+
 
             else if ((args[1]) === ('s8-1'))
-            message.channel.sendEmbed(essEmbed);
+            message.channel.sendEmbed(essEmbed)
+            .then(cooldown.add(message.author.id));
+
 
             else if ((args[1]) === ('s9'))
-            message.channel.sendEmbed(s9Embed);
+            message.channel.sendEmbed(s9Embed)
+            .then(cooldown.add(message.author.id));
+
 
             else{
                 message.reply("Oops looks like you chose an invalid essence name essences available are ``s8-1``, ``s8-2``, ``p5-1``, ``p5-2``, ``s9`` please type one of them down bleow");
@@ -111,6 +132,11 @@ module.exports = {
                 }).catch(collected => {
                     return;
                 });
+                
+                setTimeout(() => {
+                    cooldown.delete(message.author.id)
+
+                }, seconds * 1000)
 
             }
               
