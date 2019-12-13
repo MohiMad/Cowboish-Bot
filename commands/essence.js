@@ -63,7 +63,7 @@ module.exports = {
 
             const coolEmbed = new RichEmbed()
             .setTitle("Take it easy on me dude!")
-            .addField("You'll have to wait **3** seconds after you opened an essence before you can open another one", "Instead of waiting, why don't you vote to me on [Top.gg](https://top.gg/bot/632291800585076761/vote) ;D");
+            .addField("You'll have to wait **3** seconds after you opened an essence before you can open another one...", "Instead of waiting, why don't you vote to me on [Top.gg](https://top.gg/bot/632291800585076761/vote) <:cowboy:649130677253439508> ");
 
 
             
