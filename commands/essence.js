@@ -72,7 +72,15 @@ module.exports = {
         if (cooldown.has(message.author.id)){
             message.delete();
             message.channel.sendEmbed(coolEmbed);
+
+            setTimeout(() => {
+                cooldown.delete(message.author.id)
+
+            }, seconds * 1000)
+
         }
+
+        
 
         else if ((args[1]) === ('p5-1'))
             message.channel.sendEmbed(p5Embed)
@@ -96,6 +104,7 @@ module.exports = {
             else if ((args[1]) === ('s9'))
             message.channel.sendEmbed(s9Embed)
             .then(cooldown.add(message.author.id));
+
 
 
             else{
@@ -133,11 +142,7 @@ module.exports = {
                     return;
                 });
                 
-                setTimeout(() => {
-                    cooldown.delete(message.author.id)
-
-                }, seconds * 1000)
-
+                
             }
               
               
