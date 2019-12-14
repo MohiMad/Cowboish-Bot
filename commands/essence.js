@@ -27,7 +27,7 @@ module.exports = {
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setImage('attachment://s9-' + imagNmber + '.PNG')
             .setColor("RANDOM");
-
+            //S9 essence 1
         
 
         numbe = 50;
@@ -83,6 +83,7 @@ module.exports = {
         
 
         else if ((args[1]) === ('p5-1'))
+            
             message.channel.sendEmbed(p5Embed)
             .then(cooldown.add(message.author.id));
               
@@ -145,24 +146,7 @@ module.exports = {
                 
             }
               
-              
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
         }
 }

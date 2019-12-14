@@ -10,6 +10,7 @@ const suggest = bot.channels.find(ch => ch.name === '👀》cowboish-suggestions
 
 const sayMessage = args.slice(1).join(" ");
 
+
 message.delete().catch(O_o => { });
 
 const suggestEmbed = new RichEmbed()
@@ -20,6 +21,11 @@ const suggestEmbed = new RichEmbed()
 if (!args[1])
     message.channel.send("You can't suggest nothing :v");
 else
+
+const thanksEmbed = new RichEmbed()
+.addField("Thank you for your feedback!", "Your suggestion has been sent to [Cowboish Server](https://discordapp.com/invite/YWcSukS) succesfully! Feel free to join if you want to see what <@478527909250990090> thinks about it :)")
+
+
 
 
 (suggest.sendEmbed(suggestEmbed)).then(sentEmbed => {
