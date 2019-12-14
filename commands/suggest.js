@@ -20,7 +20,7 @@ const suggestEmbed = new RichEmbed()
 
 const thanksEmbed = new RichEmbed()
 .setTitle("Thank you for your feedback!")
-.addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Your suggestion has been sent to [Cowboish Server](https://discordapp.com/invite/YWcSukS) succesfully! Feel free to join if you want to see what <@478527909250990090> thinks about it :)")
+.addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Your suggestion has been sent to [Cowboish Server](https://discordapp.com/invite/YWcSukS) succesfully! Feel free to join if you want to see what <@478527909250990090> thinks about it :)")
 .setColor("RANDOM");
 
 
