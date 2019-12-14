@@ -24,13 +24,14 @@ else
 
 const thanksEmbed = new RichEmbed()
 .addField("Thank you for your feedback!", "Your suggestion has been sent to [Cowboish Server](https://discordapp.com/invite/YWcSukS) succesfully! Feel free to join if you want to see what <@478527909250990090> thinks about it :)")
-
+.setColor("RANDOM")
+.setTimeStamp();
 
 
 
 (suggest.sendEmbed(suggestEmbed)).then(sentEmbed => {
     sentEmbed.react('❌').then(sentEmbed.react('✅')).then(sentEmbed.react('🔶'))
-}).then(message.channel.send("🙌 Suggested succesfully... thank you for you feedback!"));
+}).then(message.channel.send(thanksEmbed));
 
     }
 
