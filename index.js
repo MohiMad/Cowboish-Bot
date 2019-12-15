@@ -86,7 +86,8 @@ bot.on('ready', () => {
         "Identity V | >help",
         "Welcome to Identit | >help",
         "Identit | >help", `idv in ${bot.guilds.size} servers`,
-        "do >suggest to suggest something to Mohi :)"
+        "do >suggest to suggest something to Mohi :)",
+        `Milestone: ${bot.guilds.size}/50 <3`
         //random activity list
     ];
 
