@@ -112,31 +112,28 @@ bot.on('message', async message => {
 
 
         //Identity V commands Starts Here!
-        case "menurole":
-            bot.commands.get('menurole').execute(message, args);
-            break;
 
-        case "roll20":
+        case "roll20": case "r20":
             bot.commands.get('roll20').execute(message, args);
             break;
 
-        case "identify":
+        case "identify": case "whois": case "stereotype":
             bot.commands.get('identify').execute(message, args);
             break;
 
-        case "winrate":
+        case "winrate": case "wr":
             bot.commands.get('winrate').execute(message, args);
             break;
 
-        case "essence":
+        case "essence": case "ess": case "e":
             bot.commands.get('essence').execute(message, args);
             break;
 
-        case "roll":
+        case "roll": case "r": case "dice":
             bot.commands.get('roll').execute(message, args);
             break;
 
-        case "randomize":
+        case "randomize": case "random": case "pick":
             bot.commands.get('random').execute(message, args);
             break;
 
@@ -145,7 +142,8 @@ bot.on('message', async message => {
 
 
         //Fun Commands Starts Here!
-        case "joke":
+
+        case "joke": case "lemmelaugh":
             bot.commands.get('joke').execute(message, args);
             break;
 
@@ -153,15 +151,15 @@ bot.on('message', async message => {
             bot.commands.get('yee').execute(message, args);
             break;
 
-        case 'meme':
+        case 'meme': case "memes":
             bot.commands.get('meme').execute(message, args);
             break;
 
-        case 'idv':
+        case 'idv': case "identityv": 
             bot.commands.get('idv').execute(message, args);
             break;
 
-        case 'say':
+        case 'say': case "repeat": 
             bot.commands.get('say').execute(message, args);
             break;
 
@@ -171,6 +169,7 @@ bot.on('message', async message => {
 
 
         //Identity V Actions 
+
         case "blink":
             bot.commands.get('blink').execute(message, args);
             break;
@@ -183,19 +182,19 @@ bot.on('message', async message => {
             bot.commands.get('crash').execute(message, args);
             break;
 
-        case "terrorshock":
+        case "terrorshock": case "tc":
             bot.commands.get('terrorshock').execute(message, args);
             break;
 
-        case "lasso":
+        case "lasso": case "yoink":
             bot.commands.get('lasso').execute(message, args);
             break;
 
-        case "shoot":
+        case "shoot": case "flaregun":
             bot.commands.get('shoot').execute(message, args);
             break;
 
-        case "bully":
+        case "bully": 
             bot.commands.get('bully').execute(message, args);
             break;
         //End of Identity V Actions
@@ -203,51 +202,65 @@ bot.on('message', async message => {
 
 
         //Moderation Commands starts here
-        case "clear":
+
+        case "clear": case "purge": case "delete":
+
             bot.commands.get('clear').execute(message, args);
+
             break;
 
         case "kick":
+
             bot.commands.get('kick').execute(message, args);
+
             break;
 
         case "ban":
+
             bot.commands.get('ban').execute(message, args);
+
             break;
 
-        case "mute":
+        case "mute": case "shutup":
+
             bot.commands.get('mute').execute(message, args);
+
             break;
+
         //End of moderation commands
 
 
         //Config commands starts here
-        case "info":
+
+        case "info": case "botinfo":
+
             bot.commands.get('info').execute(message, args);
+
             break;
 
-        case "userinfo":
+        case "userinfo": case "usrinfo":
             bot.commands.get('userinfo').execute(message, args);
         break;
 
-        case "serverinfo":
+        case "serverinfo": case "srvrinfo":
             bot.commands.get('serverinfo').execute(message, args);
         break;
 
-        case 'ping':
+        case 'ping': 
             const m = await message.channel.send("Ping?");
             m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
             break;
 
-        case "help":
+        case "help": case "commands": case "helpme":
             bot.commands.get('help').execute(message, args);
             break;
 
-        case 'guilds':
+        case 'guilds': case "servers":
+
             message.channel.send(`Cowboish stats => **${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
             break;
         
-        case 'suggest':
+        case 'suggest': case "reportbug": case "issue":
                 bot.commands.get('suggest').execute(message, args, bot);
 
         break;
