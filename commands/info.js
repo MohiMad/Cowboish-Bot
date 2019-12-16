@@ -1,25 +1,37 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const { RichEmbed } = require("discord.js");
+const { stripIndents } = require("common-tags");
+const { getMember, formatDate } = require("../functions.js");
+
 var version = '2.0';
+
 module.exports = {
     name: 'info', 
     description: "info about bot",
-    execute(message, agrs){
-const embed = new Discord.RichEmbed()
+    execute(message, args, bot){
 
-.setTitle('Bot Information', true)
-.addField('Cowboish bot', ('Version ' + version), true)
-.setColor("RANDOM")
-.addField('Birthday', '14/10/2019 <3')
-.addField('Gender', 'male')
-.addField('Parents', 'MohiMoo and MohiMeaaw :v')
-.addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" +  " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
-.addField('Need help with commands?', 'Use >help', true)
-.setThumbnail('https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+const betterEmbed = new RichEmbed()
+.setThumbnail(bot.displayAvatarURL)
+.setColor(bot.displayHexColor === '#000000' ? '#ffffff' : bot.displayHexColor)
 
-message.channel.sendEmbed(embed);
+.addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", 
+stripIndents`👇 <@632291800585076761> information 👇
+**> ⚙️ Bot's prefix : >**
+**> 📌 Do >help to recieve help**
+**> <:cowboy:649130677253439508> Creator <@478527909250990090>**
+**> ID: 632291800585076761 **
+**> 💬 Username: Cowboish Bot **
+**> 📎 Tag : Cowboish bot#0820**
+**> 🎉 Account's birthday : 🎂 14/10/2019**`, true)
+.addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", stripIndents`**For more information**
+[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)
+[Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
+[Cowboish Server](https://discordapp.com/invite/YWcSukS)`)
+.attachFiles(["./emoji" + ".png"])
+.setThumbnail('attachment://emoji' + '.png')
+.setTimestamp();
 
-
+message.channel.sendEmbed(betterEmbed);
 
     }
+
 }
