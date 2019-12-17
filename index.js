@@ -41,15 +41,17 @@ bot.on("guildCreate", guild => {
         }
     }
     const welcomeEmbed = new Discord.RichEmbed()
-        .setTitle('Thank you for inviting me to the party ;D')
-        .addField('My cowboish bithday 🎉🎊 14/10/2019', 'use >help and i will be there for help :)')
-        .attachFiles(["./emoji" + ".png"])
-        .setThumbnail('attachment://emoji' + '.png')
-        .setColor("RANDOM")
-        .addField('My prefix is ">"', 'Remember using it before any command')
-        .addField(`Now i'm in **${bot.guilds.size}** servers :)`, 'And growing <3')
-        .addField("Support me ♡ ♥", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)");
-
+        .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
+        stripIndents`**>My cowboish birthday 🎉🎊 14/10/2019**
+        **> 👍 | do >help and i will be there for help :)**
+        **> 🔧 | My prefix is > remember using it before any command of my commands**
+        **> 🙂 | Now im in ${bot.guilds.size}, servers and growing <3**
+        **> ❔  | Errors or suggestions? do >suggest/>issue**`)
+        .addBlankField()
+        .addField("💗 | Support me", 
+        stripIndents`
+        [Cowboish website](https://rkanjo2.wixsite.com/cowboishbot) | [Invite me to servers around](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | [Cowboish Server](https://discordapp.com/invite/YWcSukS)`);
+        
     let channel = bot.channels.get(guild.systemChannelID || channelID);
     channel.send(welcomeEmbed);
     //sends the embed when joined
