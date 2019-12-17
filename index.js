@@ -5,6 +5,9 @@ const fs = require('fs');
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
+const { stripIndents } = require ("common-tags");
+
+
 //Command handler HERE 
 bot.commands = new Discord.Collection();
 
