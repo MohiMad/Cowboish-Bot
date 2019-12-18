@@ -110,6 +110,13 @@ bot.on('message', async message => {
     let args = message.content.substring(prefix.length).split(" ");
 
     if (!message.content.startsWith(prefix)) return;
+
+    
+    if (message.author.id === bot.user.id) return;
+
+
+    if (message.author.bot) return;
+
     //ulitiy stuff
 
 
