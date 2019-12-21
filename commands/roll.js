@@ -13,6 +13,12 @@ module.exports = {
         let rollattach = 'dice' + imagNumba + ".gif";
         //ends here
 
+        const coolEmbed = new RichEmbed()
+            .setTitle("Ooof stop abusing me dude")
+            .setColor("0xe80000")
+            .setDescription("Let's wait **10** seconds so both me and you can rest a lil");
+            
+
 
         //if dice result is two
         let dice2Chance1 = 'Here! take these **20** clues <:clue:655384523735040000>';
