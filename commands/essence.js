@@ -17,17 +17,6 @@ module.exports = {
             .setImage('attachment://essence' + imagNumber + '.PNG')
             .setColor("RANDOM");
             //[S8 No.2]
-
-
-            nmber = 48;
-        imagNmber = Math.floor(Math.random() * (nmber - 1 + 1)) + 1;
-        const s9Embed = new RichEmbed()
-            .setAuthor(message.author.username + ' opened an essence [S9] and got...', message.author.avatarURL)
-            .attachFiles(["./s9-1/" + 's9-' + imagNmber + ".PNG"])
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .setImage('attachment://s9-' + imagNmber + '.PNG')
-            .setColor("RANDOM");
-            //S9 essence 1
         
 
         numbe = 50;
@@ -103,8 +92,7 @@ module.exports = {
 
 
             else if ((args[1]) === ('s9'))
-            message.channel.sendEmbed(s9Embed)
-            .then(cooldown.add(message.author.id));
+            message.channel.send(`Hey ${message.author.username}!\nThis essence have been moved to the "logicpath" category, for more info do ` + "`>help logicpath`" );
 
 
 
@@ -135,7 +123,7 @@ module.exports = {
                     }
 
                     else if ((ess.content === 's9')) {
-                        message.channel.sendEmbed(s9Embed);
+                        message.channel.send(`Hey ${message.author.username}!\nThis essence have been moved to the "logicpath" category, for more info do ` + "`>help logicpath`" );
                     }
         
                     

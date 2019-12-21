@@ -7,6 +7,16 @@ const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMD
 
 const { stripIndents } = require ("common-tags");
 
+//MONGOOSE STUFF
+const mongoose = require("mongoose");
+
+let uri = "mongodb+srv://MohiMoo:mmkdmkmmkdmk@minicowboi-yk7bw.mongodb.net/welcome?retryWrites=true&w=majority"
+
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+//-----------------------------------------------------//
 
 //Command handler HERE 
 bot.commands = new Discord.Collection();
@@ -29,7 +39,7 @@ bot.on("guildCreate", guild => {
     const create = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
 
     if (!create) return; 
-    else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**) The server has **${guild.memberCount}** members!\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
+    else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**)\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
 //Sends a message to my server if bot joins a new server (NOT WORKING)
 
 //Channel loop so bot sends a message to the server it joined
@@ -141,9 +151,7 @@ bot.on('message', async message => {
             bot.commands.get('essence').execute(message, args);
             break;
 
-        case "roll": case "r": case "dice":
-            bot.commands.get('roll').execute(message, args);
-            break;
+       
 
         case "randomize": case "random": case "pick":
             bot.commands.get('random').execute(message, args);
@@ -176,6 +184,35 @@ bot.on('message', async message => {
             break;
 
         //End Of Fun commands
+
+        //IDENTITY V LOGICPATH COMMANDS
+        case "roll": case "r": case "dice":
+            bot.commands.get('roll').execute(message, args);
+            break;
+
+        case "open":
+            bot.commands.get('open').execute(message, args);
+        break;
+
+        case "LP": case "logicpath": case "inv": case "inventroy":
+            bot.commands.get('logicpath').execute(message, args);
+        break;
+
+        case "quick": case "play":
+            bot.commands.get('quick').execute(message, args);
+        break;
+
+        case "hunter": case "hunt":
+            bot.commands.get('hunt').execute(message, args);
+        break;
+
+        case "dailyreward": case "daily":
+            bot.commands.get('daily').execute(message, args);
+        break;
+
+
+
+        //END OF LOGICPATH
 
 
 
