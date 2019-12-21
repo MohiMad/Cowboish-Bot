@@ -1,4 +1,5 @@
 const { Client, RichEmbed, Attachment, Collection } = require('discord.js');
+const cooldown = new Set();
 
 module.exports = {
     name: 'quick',
