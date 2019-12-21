@@ -66,7 +66,7 @@ module.exports = {
 
             }            
 
-            if (cooldown.has(message.author.id)){
+            else if (cooldown.has(message.author.id)){
                 message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
     
                 setTimeout(() => {
@@ -76,7 +76,7 @@ module.exports = {
 
             }
 
-            if (facts[fact] === quick1 || quick3 || quick4 || quick5 || quick8){
+            else if (facts[fact] === quick1 || quick3 || quick4 || quick5 || quick8){
 
                 message.reply(facts[fact])
                 .then(cooldown.add(message.author.id));
