@@ -6,7 +6,7 @@ module.exports = {
     description: "sends a random meme",
     execute( message, args){
 
-        const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json", "https://www.reddit.com/r/me_irl/random/.json"];
+        const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json"];
 
             const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
