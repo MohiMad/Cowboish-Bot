@@ -6,6 +6,7 @@ module.exports = {
     name: 'ban', 
     description: "bans a player",
     execute(message, args){
+        
 const usa = message.mentions.users.first();
 
 

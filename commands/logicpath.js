@@ -60,7 +60,7 @@ module.exports = {
 
                 })
                 newLP.save().catch(err => console.log(err))
-                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
+                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"));
 
 
             } else {

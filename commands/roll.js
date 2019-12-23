@@ -141,11 +141,14 @@ module.exports = {
                 newLP.save().catch(err => console.log(err))
                 .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
 
-            }             //DICE 1 EVENT
+            }             //DICE 1 EVENT 
 
 
             else if (cooldown.has(message.author.id)){
-                message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
+                message.delete().catch(O_o => { });
+
+                message.channel.sendEmbed(coolEmbed)
+                .then(m => m.delete(20000));
     
                 setTimeout(() => {
                     cooldown.delete(message.author.id)

@@ -44,11 +44,13 @@ module.exports = {
 
                 })
                 newLP.save().catch(err => console.log(err))
-                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
+                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"));
 
             }
 
-            if (cooldown.has(message.author.id)){
+            else if (cooldown.has(message.author.id)){
+                message.delete().catch(O_o => { });
+
                 message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
     
                 setTimeout(() => {
@@ -64,6 +66,7 @@ module.exports = {
                 .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Here! take these **3**<:dice:655384578499936257>  **500**<:clue:655384523735040000>")
                 .setColor("0xffd500")
                 .setFooter("Remember to come back the next day to get your rewards again :)");
+
 
                 message.channel.sendEmbed(dailyEmbed)
                 .then(cooldown.add(message.author.id));
