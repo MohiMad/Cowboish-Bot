@@ -18,7 +18,8 @@
     "got": "^9.6.0",
     "common-tags": "^1.8.0",
     "mongoose" : "^5.7.14",
-    "dblapi.js" : "^2.3.0"
+    "dblapi.js" : "^2.3.0",
+    "ddblapi.js": "^1.0.0"
   },
   "devDependencies": {},
   "repository": {

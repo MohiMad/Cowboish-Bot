@@ -1,17 +1,33 @@
+//_______________Modules_____________
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json")
 const fs = require('fs');
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
-
 const { stripIndents } = require ("common-tags");
+//___________________________________
 
-//MONGOOSE STUFF
+//_____________Divine discord login____________
+
+const { ddblAPI } = require('ddblapi.js');
+    const ddbl = new ddblAPI('632291800585076761',
+    '4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
+
+    ddbl.postStats('SERVER_COUNT')
+    .then(console.log);
+
+    ddbl.getStats('632291800585076761')
+    .then(console.log);
+
+     ddbl.getVotes()
+    .then(console.log);  
+    //________________________________
+
+//_______________MONGOOSE STUFF____________________
 const mongoose = require("mongoose");
 
 let uri = "mongodb+srv://MohiMoo:mmkdmkmmkdmk@minicowboi-yk7bw.mongodb.net/welcome?retryWrites=true&w=majority"
-
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -27,13 +43,12 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
 
     bot.commands.set(command.name, command);
-
     var time = new Date();
     var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
- 
 } 
 
-//*End of command handler
+//__________-*End of command handler____________
+
 bot.on("guildCreate", guild => {
 
     const create = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
