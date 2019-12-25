@@ -26,14 +26,21 @@ module.exports = {
                  <:clue:655384523735040000> | *Clues* ➜ **${LP.Clues}**
                  <:inspirations:655840409674711060> | *Inspirations* ➜ **${LP.Inspirations}**
                  <:frags:655840344725913600> | *Fragments* ➜ **${LP.frags}**
+
+                 **Essences**
                  <:ess1:655840713904488469> | Essence *s9-1* ➜ **${LP.Ess1}**
-                 <:ess3:655840571616919586> | Essence *s9-2* ➜ **${LP.Ess2}**
-                 <:ess2:655840643847028751> | Essence *s9-3* ➜ **${LP.Ess3}**`, true)
+                 <:ess3:655840571616919586> | CAO III essence ➜ **${LP.Ess2}**
+                 <:ess2:655840643847028751> | Essence *s9-2* ➜ **${LP.Ess3}**`, true)
                  .addField("Skins", stripIndents`
+
                  S: **${LP.S}**
+
                  A: **${LP.A}**
+
                  B: **${LP.B}**
+
                  C: **${LP.C}**
+                 
                  D: **${LP.D}**
                  `, true);
 

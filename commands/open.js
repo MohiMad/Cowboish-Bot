@@ -19,7 +19,7 @@ module.exports = {
             .setFooter("1 S skin was added to your collection!");
             //For S skins
 
-            var Askins = ["s9-2:PNG", "s9-3.PNG"];
+            var Askins = ["s9-2.PNG", "s9-3.PNG"];
             var Askin = Math.floor(Math.random() * Askins.length);
 
             const AEmbed = new RichEmbed()

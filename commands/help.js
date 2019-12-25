@@ -73,7 +73,7 @@ module.exports = {
         const testEmbed = new RichEmbed()
             .setTitle("Identity V logicpath commands!")
             .setDescription("In this category you get to play matches and roll dices to be able to open the s9-1 by doing `>open` :D")
-            .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔" ,"`daily` | `hunt` | `logicpath` | ``open`` | ``quick`` | ``roll``")
+            .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔" ,"`daily` | `hunt` | `logicpath` | ``open`` | ``quick`` | ``roll`` | ``shop`` | ``buy``")
             .setColor("RANDOM")
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
         

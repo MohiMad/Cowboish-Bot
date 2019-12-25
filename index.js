@@ -210,11 +210,17 @@ bot.on('message', async message => {
             bot.commands.get('daily').execute(message, args);
         break;
 
+        case "shop":
+            bot.commands.get('shop').execute(message, args);
+        break;
+
+        case "buy":
+            bot.commands.get('buy').execute(message, args);
+        break;
+
 
 
         //END OF LOGICPATH
-
-
 
 
         //Identity V Actions 
