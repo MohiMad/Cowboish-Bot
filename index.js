@@ -8,6 +8,22 @@ const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMD
 const { stripIndents } = require ("common-tags");
 //___________________________________
 
+//_____________Divine discord login____________
+
+const { ddblAPI } = require('ddblapi.js');
+const ddbl = new ddblAPI('632291800585076761',
+'4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
+
+ddbl.postStats(`${bot.guilds.size}`)
+.then(console.log); 
+
+ddbl.getStats('632291800585076761')
+.then(console.log);
+
+ ddbl.getVotes()
+.then(console.log);  
+//________________________________
+
 
 //_______________MONGOOSE STUFF____________________
 const mongoose = require("mongoose");
@@ -115,21 +131,7 @@ bot.on('ready', () => {
 
 bot.on('message', async message => {
 
-    //_____________Divine discord login____________
-
-    const { ddblAPI } = require('ddblapi.js');
-    const ddbl = new ddblAPI('632291800585076761',
-    '4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
-
-    ddbl.postStats(`${message.guilds.size}`)
-    .then(console.log); 
-
-    ddbl.getStats('632291800585076761')
-    .then(console.log);
-
-     ddbl.getVotes()
-    .then(console.log);  
-    //________________________________
+    
 
 
     let prefix = ">";
