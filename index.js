@@ -14,7 +14,7 @@ const { ddblAPI } = require('ddblapi.js');
     const ddbl = new ddblAPI('632291800585076761',
     '4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
 
-    ddbl.postStats('SERVER_COUNT')
+    ddbl.postStats(`${message.guilds.size}`)
     .then(console.log); 
 
     ddbl.getStats('632291800585076761')
