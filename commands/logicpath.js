@@ -44,9 +44,7 @@ module.exports = {
                  D: **${LP.D}**
                  `, true);
 
-        
-
-
+    
             if(!LP){
                 const newLP = new logicPath({
                     UserID: message.author.id,
@@ -63,7 +61,6 @@ module.exports = {
                     B: 0,
                     C: 0,
                     D: 0
-
 
                 })
                 newLP.save().catch(err => console.log(err))

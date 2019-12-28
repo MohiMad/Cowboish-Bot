@@ -28,17 +28,41 @@ module.exports = {
 
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
-            let txt = memeImage || " ";
+            
 
             const embeed = new RichEmbed()
             .setTitle(`${memeTitle}`)
             .setURL(`${memeUrl}`)
+            .setDescription(`[${memeImage}](${memeImage})\n${joke}`)
             .setColor("RANDOM")
-            .setDescription(`${joke}`)
-            .setImage(`${txt}`)
-            .setFooter(`Provided by (r/IdentityV) |👍 ${memeUpvotes}|💬 ${memeNumComments}`);
-            message.channel.send(embeed);
+            .setFooter(`Provided by r/IdentityV | 👍 ${memeUpvotes}| 💬 ${memeNumComments}`);
+
+            if(memeImage.endsWith(".jpg")){
+                embeed.setImage(`${memeImage}`)
+                message.channel.send(embeed);
+
+
+            }
+            else if(memeImage.endsWith(".png")){
+                embeed.setImage(`${memeImage}`)
+                message.channel.send(embeed);
+
+
+            }
+            else if(memeImage.endsWith(".gif")){
+                embeed.setImage(`${memeImage}`)
+                message.channel.send(embeed);
+
+
+            }
+            else {
+                message.channel.send(embeed);
+            }
+
+
+            
                
-        }).catch(console.error);
+        }).catch(err => console.log(err))
+        .then(message.channel.send(`Sry ${message.author.username}!\nAn error has occured, probably because the post is too long... please try again!`));
     }
 }
