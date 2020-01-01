@@ -62,7 +62,7 @@ module.exports = {
 
             
                
-        }).catch(err => console.log(err))
-        .then(message.channel.send(`Sry ${message.author.username}!\nAn error has occured, probably because the post is too long... please try again!`));
-    }
+        }).catch(err => console.log(err));
+        
+        }
 }

@@ -100,13 +100,10 @@ bot.on('ready', () => {
 
     bot.user.setActivity('Identit | >help')
     const activities_list = [
-        " Use >help to send help",
-        "Identit | >help",
-        "Identity V | >help",
+        `Identity V in ${bot.guilds.size} servers` ,
         "Welcome to Identit | >help",
-        "Identit | >help", `idv in ${bot.guilds.size} servers`,
-        "do >suggest to suggest something to Mohi :)",
-        `Milestone: ${bot.guilds.size}/50 <3`
+        "Identit | >help", 
+        `Milestone ${bot.guilds.size}/100 <3`
         //random activity list
     ];
 
@@ -118,9 +115,6 @@ bot.on('ready', () => {
 
 
 bot.on('message', async message => {
-
-    
-
 
     let prefix = ">";
 
