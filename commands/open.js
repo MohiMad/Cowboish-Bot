@@ -44,7 +44,7 @@ module.exports = {
             .setColor("0x14de3c")
             .setFooter("It's alright, you will get something better next time :D");
         //for C skins
-        var Dskins = ["s9-35.PNG", "s9-36.PNG", "s9-37.PNG", "s9-38.PNG", "s9-39.PNG", "s9-40.PNG", "s9-41.PNG", "s9-42.PNG", "s9-43.PNG", "s9-44.PNG", "s9-45.PNG", "s9-46.PNG", "s9-47.PNG", "s9-48.PNG"];
+        var Dskins = ["s9-35.PNG", "s9-36.PNG", "s9-37.PNG", "s9-38.PNG", "s9-39.PNG", "s9-40.PNG", "s9-41.PNG", "s9-42.PNG"];
         var Dskin = Math.floor(Math.random() * Dskins.length);
         const DEmbed = new RichEmbed()
             .setAuthor(`Lmao ${message.author.username} got a graffiti `, message.author.avatarURL)
