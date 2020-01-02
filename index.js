@@ -334,12 +334,13 @@ bot.on('guildMemberAdd', async member => {
 
     const guild = await Guild.findOne({ guildID: member.guild.id });
 
+        if(!guild) return;
 
-        if(guild.welcome.enabled === false) return;
+        else if(guild.welcome.enabled === false) return;
 
-        if(!guild.welcome.message || guild.welcome.message.length < 1) return;
+        else if(!guild.welcome.message || guild.welcome.message.length < 1) return;
 
-        if(guild.welcome.channel === null) return;
+        else if(guild.welcome.channel === null) return;
 
 
         const welcomeMessage = guild.welcome.message
@@ -370,13 +371,15 @@ bot.on('guildMemberLeave', async member => {
 
         const guild = await Guild.findOne({ guildID: member.guild.id });
 
-        if((guild.leave.enabled) === false) return;
+        if(!guild) return;
 
-        if(!guild.leave.message || guild.leave.message.length < 1) return;
+        else if((guild.leave.enabled) === false) return;
 
-        if((!guild.leave.message) === null) return;
+        else if(!guild.leave.message || guild.leave.message.length < 1) return;
 
-        if((guild.leave.channel) === null) return;
+        else if((!guild.leave.message) === null) return;
+
+        else if((guild.leave.channel) === null) return;
 
         const leaveMessage = guild.leave.message
         .replace("memberCount", member.guild.memberCount)
