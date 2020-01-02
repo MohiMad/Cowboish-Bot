@@ -312,19 +312,88 @@ bot.on('message', async message => {
             break;
 
         case 'guilds': case "servers":
-
             message.channel.send(`Cowboish stats => **${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
             break;
         
         case 'suggest': case "reportbug": case "issue":
                 bot.commands.get('suggest').execute(message, args, bot);
+        break;
 
+        case "setup": case "set":
+            bot.commands.get('setup').execute(message, args, bot);
         break;
 
         //End of config commands
 
     }
-});
+});//___________end of message event_________
+
+bot.on('guildMemberAdd', async member => {
+
+    const Guild = require("./models/guild");
+
+    const guild = await Guild.findOne({ guildID: member.guild.id });
+
+
+        if(guild.welcome.enabled === false) return;
+
+        if(!guild.welcome.message || guild.welcome.message.length < 1) return;
+
+        if(guild.welcome.channel === null) return;
+
+
+        const welcomeMessage = guild.welcome.message
+        .replace("memberCount", member.guild.memberCount)
+        .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
+        .replace("serverName",  member.guild.name)
+        .replace("userName", member.user.username)
+        .replace("userMention", member.user.toString())
+        .replace("userTag", member.user.tag);
+
+
+        const welcomeChannel = member.guild.channels.get(guild.welcome.channel);
+
+        if(!welcomeChannel) return;
+
+        else{
+
+        welcomeChannel.send(welcomeMessage)
+        .catch(() => void null);
+
+        }
+
+});//:::::::::end of Guild member add::::::::::
+
+bot.on('guildMemberLeave', async member => {
+    
+        const Guild = require("./models/guild");
+
+        const guild = await Guild.findOne({ guildID: member.guild.id });
+
+        if((guild.leave.enabled) === false) return;
+
+        if(!guild.leave.message || guild.leave.message.length < 1) return;
+
+        if((!guild.leave.message) === null) return;
+
+        if((guild.leave.channel) === null) return;
+
+        const leaveMessage = guild.leave.message
+        .replace("memberCount", member.guild.memberCount)
+        .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
+        .replace("serverName",  member.guild.name)
+        .replace("userName", member.user.username)
+        .replace("userMention", member.user.toString())
+        .replace("userTag", member.user.tag);
+
+        const leaveChannel = member.guild.channels.get(guild.leave.channel);
+
+        if(leaveChannel === null) return;
+
+        leaveChannel.send(leaveMessage);
+
+});//__________________end of Guild member leave event_____________-
+
 
 
 
