@@ -16,7 +16,7 @@ module.exports = {
             if (err) console.log(err);
             
             let LPEmbed = new RichEmbed()
-                .setTitle(`${users.username} Identity V info`)
+                .setTitle(`${message.author.username} Identity V info`)
                 .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", 
                 stripIndents` 🚶 | *LogicPath steps* ➜ **${LP.logic}**
                  <:dice:655384578499936257> | *Dices* ➜ **${LP.Dices}**
