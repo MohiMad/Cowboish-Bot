@@ -248,7 +248,7 @@ module.exports = {
                 message.channel.send(AcaoEmbed);
             
                 LP.Ess2 = LP.Ess2 - 1;
-                LP.A = LP.S + A;
+                LP.A = LP.A + 1;
                 LP.save().catch(err => console.log(err));
             }
             else if ((randomCaoEmbeds[CaoREmbed]) === CaoBEmbed){
