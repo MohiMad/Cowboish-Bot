@@ -1,4 +1,4 @@
-const { Client, RichEmbed, Attachment, Collection } = require('discord.js');
+const { RichEmbed } = require('discord.js');
 const cooldown = new Set();
 module.exports = {
     name: 'roll',
@@ -13,31 +13,28 @@ module.exports = {
         let rollattach = 'dice' + imagNumba + ".gif";
         //ends here
 
-        const coolEmbed = new RichEmbed()
-            .setTitle("Ooof stop abusing me dude")
-            .setColor("0xe80000")
-            .setDescription("Let's wait **10** seconds so both me and you can rest a lil");
-            
-
 
         //if dice result is two
         let dice2Chance1 = 'Here! take these **20** clues <:clue:655384523735040000>';
 
-        let dice2Chance2 = "Here is your **10** clues <:clue:655384523735040000> and **1**<:ess1:655840713904488469> do ``open`` to open it!";
+        let dice2Chance2 = "Here is your **10** clues <:clue:655384523735040000> and **1**<:ess1:655840713904488469> do ``open s9-1`` to open it!";
 
         let dice2Chance3 = "Noice you get **20** inspirations <:inspirations:655840409674711060> and **10** clues <:clue:655384523735040000>";
 
         let dice2Chance4 = "You walked 2 steps in your logicpath and got **20** clues <:clue:655384523735040000>";
 
+        let dice2Chance5 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000> use them wisely!\nto open the CAOII essence, do ``open cao``";
 
-        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4];
+
+
+        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4, dice2Chance5];
 
         var fact2 = Math.floor(Math.random() * facts2.length);
         //dice2 embed
 
         const diceEmbed = new RichEmbed()
             .setDescription(`**${message.author.username}** rolled that dice <:dice:655384578499936257> and got a **2** `)
-            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts2[fact2]))
+            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts2[fact2]))
             .attachFiles(["./dice/" + rollattach])
             .setThumbnail('attachment://' + rollattach)
             .setColor("RANDOM");//embed2 ends here
@@ -50,16 +47,18 @@ module.exports = {
 
         let dice1Chance3 = "You walked **1** step in your logicpath and got **10** clues <:clue:655384523735040000>";
 
-        let dice1Chance4 = "You were **1** step away from getting **1**<:ess1:655840713904488469> and now you have it! do ``open`` to open it.";
+        let dice1Chance4 = "You were **1** step away from getting **1**<:ess1:655840713904488469> and now you have it! do ``open s9-1`` to open it.";
+
+        let dice1Chance5 = "One <:ess3:655840571616919586> is now in your pocket... wait is it?\nTo open the cao essence do ``open cao``";
 
 
-        var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4];
+        var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5];
 
         var fact1 = Math.floor(Math.random() * facts1.length);
         //Dice embed 1 
         const diceEmbed1 = new RichEmbed()
             .setDescription(`**${message.author.username}** rolled a <:dice:655384578499936257> dice but they unlucky af so they get a **1** `)
-            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts1[fact1]))
+            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts1[fact1]))
             .attachFiles(["./dice/" + rollattach])
             .setThumbnail('attachment://' + rollattach)
             .setColor("RANDOM");
@@ -71,8 +70,10 @@ module.exports = {
 
         let dice4Chance3 = "You walked **4** steps in your logicpath and got 40 clues <:clue:655384523735040000> and **1** <:ess1:655840713904488469>";
 
+        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess3:655840571616919586> - Two birds with one stone :/\nTo open the CAOIII essence do ``open cao``";
 
-        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3];
+
+        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4];
 
         var fact4 = Math.floor(Math.random() * facts4.length);
 
@@ -80,7 +81,7 @@ module.exports = {
         //Dice embed no 4
         const diceEmbed4 = new RichEmbed()
             .setDescription(`**${message.author.username}** rolled a dice <:dice:655384578499936257> and got a ` + "**4** , lucky you!")
-            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts4[fact4]))
+            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts4[fact4]))
             .attachFiles(["./dice/" + rollattach])
             .setThumbnail('attachment://' + rollattach)
             .setColor("RANDOM");
@@ -92,14 +93,15 @@ module.exports = {
 
         let dice3Chance3 = "Oh look, you got **10** clues <:clue:655384523735040000> and **50** <:inspirations:655840409674711060>";
 
+        let dice3Chance4 = "**20** <:clue:655384523735040000> & **1** <:ess3:655840571616919586> are now yours\nTo open the CAOII essence do ``open cao`` ";
 
-        var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3];
+        var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3, dice3Chance4];
         var fact3 = Math.floor(Math.random() * facts3.length);
 
         //for dice embed 3
         const diceEmbed3 = new RichEmbed()
             .setDescription(`Looks like **${message.author.username}** got a ` + " **3** from the dice <:dice:655384578499936257> they just rolled.")
-            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts3[fact3]))
+            .addField('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', (facts3[fact3]))
             .attachFiles(["./dice/" + rollattach])
             .setThumbnail('attachment://' + rollattach)
             .setColor("RANDOM");
@@ -141,14 +143,11 @@ module.exports = {
                 newLP.save().catch(err => console.log(err))
                 .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
 
-            }             //DICE 1 EVENT 
+            }             //DICE 1 EVENT
 
 
             else if (cooldown.has(message.author.id)){
-                message.delete().catch(O_o => { });
-
-                message.channel.sendEmbed(coolEmbed)
-                .then(m => m.delete(20000));
+                message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
     
                 setTimeout(() => {
                     cooldown.delete(message.author.id)
@@ -229,6 +228,20 @@ module.exports = {
                 LP.save().catch(err => console.log(err));
 
             }
+            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance5) {
+                message.channel.send(diceEmbed1)
+                .then(cooldown.add(message.author.id));
+
+
+                LP.logic = LP.logic + 1;
+
+                LP.Dices = LP.Dices - 1;
+
+                LP.Ess2 = LP.Ess2 + 1;
+
+                LP.save().catch(err => console.log(err));
+
+            }
             //Dice 2 event
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance1) {
                 message.channel.send(diceEmbed)
@@ -283,6 +296,19 @@ module.exports = {
                 LP.save().catch(err => console.log(err));
 
             }
+            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance5) {
+                message.channel.send(diceEmbed)
+                .then(cooldown.add(message.author.id));
+
+
+                LP.Clues = LP.Clues + 10;
+                LP.logic = LP.logic + 2;
+                LP.Dices = LP.Dices - 1;
+                LP.Ess2 = LP.Ess2 + 1;
+
+                LP.save().catch(err => console.log(err));
+
+            }
             //dice 3 here
             else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance1) {
                 message.channel.send(diceEmbed3)
@@ -326,6 +352,17 @@ module.exports = {
 
                 LP.save().catch(err => console.log(err));
             }
+            else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance4) {
+                message.channel.send(diceEmbed3)
+                .then(cooldown.add(message.author.id));
+
+                LP.Clues = LP.Clues + 20;
+                LP.Dices = LP.Dices - 1;
+                LP.logic = LP.logic + 3;
+                LP.Ess2 = LP.Ess2 + 1 ;
+
+                LP.save().catch(err => console.log(err));
+            }
             //dice 4 here
 
             else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance1) {
@@ -363,6 +400,21 @@ module.exports = {
                 LP.Dices = LP.Dices - 1;
 
                 LP.Ess1 = LP.Ess1 + 1;
+                LP.logic = LP.logic + 4;
+
+                LP.save().catch(err => console.log(err));
+            }
+            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance4) {
+                message.channel.send(diceEmbed4)
+                .then(cooldown.add(message.author.id));
+
+
+                LP.Clues = LP.Clues + 10;
+                LP.Dices = LP.Dices - 1;
+
+                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
+
                 LP.logic = LP.logic + 4;
 
                 LP.save().catch(err => console.log(err));
