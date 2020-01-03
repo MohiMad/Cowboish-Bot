@@ -12,6 +12,11 @@ module.exports = {
         let imagNumba = Math.floor(Math.random() * (numba - 1 + 1)) + 1;
         let rollattach = 'dice' + imagNumba + ".gif";
         //ends here
+        
+        const coolEmbed = new RichEmbed()
+            .setTitle("Ooof i'm tired, can i get carried?")
+            .setDescription("To keep spamming away, there is a cooldown set to 10 seconds for this command, so now lemme rest just 10 seconds")
+            .setColor("0xeb4034");
 
 
         //if dice result is two
