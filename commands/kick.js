@@ -1,33 +1,49 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const { RichEmbed } = require('discord.js');
+const { findMember } = require("../functions.js");
 
 module.exports = {
     name: 'kick', 
-    description: "kicks a person",
-    execute(message, agrs){
-           const user = message.mentions.users.first();
+    description: "kick them trolls",
+    execute : async (message, args) => {
+        const member = await findMember(message, args[1]);
+        
+        const reason = args.slice(2).join(" ") || "No Reason";
 
-           if (user) {
-               const member = message.guild.member(user);
+        const errEmbed = new RichEmbed()
+            .setAuthor("Oops an error has occured!", message.author.AvatarURL)
+            .setColor("0xe80202")
+            .setTimestamp();
 
-               if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-                return message.reply("You can't kick but can get kicked 😗😗").then(m => m.delete(5000));
-            }
-               if (member) {
-                   member.kick('oof looks like u got kicked!').then(() => {
-                       message.reply(`F in the chat for ${user.tag} for getting kicked`);
-                   }).catch(err => {
-                       message.reply('Smh im unable to kick this guy🙄 how op..');
-                       console.log(err);
-                   });
+        if(!message.member.hasPermission("KICK_MEMBERS", false, true, true)){
 
-               } else {
-                   message.reply("Bruh this user doesnt exist in this server, make sure u typed it right")
-               }
+            errEmbed.setDescription("You don't have the required permission to use this command!");
+            message.channel.send(errEmbed);
+        }
 
-           } else {
-               message.reply('Omg how can u be a moderator🤦‍u need to specify the person u want to kick lol')
-           }
+        else if(!args[1]){
+            errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `>kick <@tagMember> <reason here>`");
+            message.channel.send(errEmbed);
+        }
+        
+        else if(!member){
+            errEmbed.setDescription("Couldn't find that member!");
 
-            }
+        }
+        
+		else if(!member.kickable){
+            errEmbed.setDescription("This member is not kickable! please nerf");
+            message.channel.send(errEmbed);
+        }
+        else{
+        member.kick(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
+        
+		const kickEmbed = new RichEmbed()
+			.setColor("0xe80202")
+            .setAuthor(`Kick Case`, member.user.displayAvatarURL)
+            .setDescription(`**Kicked By:** ${message.author.tag}\n**Kicked User:** ${member.user.tag}\n **Reason:** ${reason ? reason : "No reason provided!"}`);
+        
+        message.channel.send(kickEmbed);
+        }
+    }
+
 }

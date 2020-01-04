@@ -112,8 +112,6 @@ module.exports = {
             .setColor("RANDOM");
         //_______________________________________________
 
-        const mongoose = require("mongoose");
-
 
         const logicPath = require("../models/logicpath.js");
 
@@ -152,6 +150,7 @@ module.exports = {
 
 
             else if (cooldown.has(message.author.id)){
+                message.delete();
                 message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
     
                 setTimeout(() => {

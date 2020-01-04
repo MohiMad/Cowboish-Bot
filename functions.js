@@ -19,6 +19,19 @@ module.exports = {
             
         return target;
     },
+    findMember: async (message, toFind) => {
+		let member;
+		if(message.mentions && message.mentions.members.size == 0 && message.mentions.users.size > 0) {
+			const toFetch = await message.guild.fetchMember(message.mentions.users.first());
+			return toFetch;
+		}
+		else{
+			if(!toFind) return message.member;
+			toFind = toFind.toLowerCase();
+			member = message.mentions.members.first() || message.guild.members.find((x) => x.user.username.toLowerCase() === toFind) || message.guild.members.get(toFind);
+		}
+		return member;
+	},
 
     formatDate: function(date) {
         return new Intl.DateTimeFormat('en-US').format(date)

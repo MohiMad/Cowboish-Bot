@@ -1,34 +1,52 @@
 
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const { RichEmbed } = require('discord.js');
+const { findMember } = require("../functions.js");
 
 module.exports = {
     name: 'ban', 
     description: "bans a player",
-    execute(message, args){
+    execute : async (message, args) => {
+        const member = await findMember(message, args[1]);
+
+        const reason = args.slice(2).join(" ") || "No Reason";
+
         
-const usa = message.mentions.users.first();
+        const errEmbed = new RichEmbed()
+            .setAuthor("Oops, an error has occured!", message.author.AvatarURL)
+            .setColor("RED")
+            .setTimestamp();
+        
+        if(!message.member.hasPermission("BAN_MEMBERS", false, true, true)){
+            errEmbed.setDescription("You don't have the needed permissions to use this command");
+            message.channel.send(errEmbed);
+        }
 
-
-if (usa) {
-    const member = message.guild.member(usa);
-
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-        return message.reply("You can't ban idiot 😗😗").then(m => m.delete(5000));
-    }
-
-    if (member) {
-        member.ban({ ression: 'oof u got banned from this server' }).then(() => {
-            message.reply(`oof ${user.tag} got banned :v`)
-
-        })
-    } else {
-        message.reply("Bruh this user doesn\'t exist in this server, make sure u typed it right")
-    }
-} else {
-    message.reply('Omg how can u be a moderator xd, u need to specify the person u want to ban lol')
-}
-
+        if(!args[1]){
+            errEmbed.setDescription("Please mention a member or provide their ID\nUsage: `>ban <@Tagmember>`");
+            message.channel.send(errEmbed);
+        }
+        
+        else if(!member){
+            errEmbed.setDescription("Couldn't find that member!");
+            message.channel.send(errEmbed);
+        
+        }
+        
+        else if(!member.bannable){
+            errEmbed.setDescription("I'm sorry i can't ban that member, how op :O");
+            message.channel.send(errEmbed);
+        }
+        else {
+                
+        member.kick(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
+        
+        const banEmbed = new RichEmbed()
+			.setColor("#000000")
+			.setAuthor(`Ban case`, member.user.displayAvatarURL)
+            .setDescription(`**Banned By:** ${message.author.tag}\n**Banned User:** ${member.user.tag}\n **Reason:** ${reason ? reason : "No reason provided!"}`);
+            
+        message.channel.send(banEmbed);
+        }
 
         }
     }
