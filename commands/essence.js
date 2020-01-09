@@ -62,10 +62,7 @@ module.exports = {
             message.delete();
             message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
 
-            setTimeout(() => {
-                cooldown.delete(message.author.id)
-
-            }, seconds * 1000);
+            
 
         }
 
@@ -133,6 +130,10 @@ module.exports = {
                 
                 
             }
+            setTimeout(() => {
+                cooldown.delete(message.author.id)
+
+            }, seconds * 1000);
               
             
 

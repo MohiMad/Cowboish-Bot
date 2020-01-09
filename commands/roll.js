@@ -153,11 +153,6 @@ module.exports = {
                 message.delete();
                 message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
     
-                setTimeout(() => {
-                    cooldown.delete(message.author.id)
-    
-                }, 10000);
-
             }
 
             else if (LP.Dices === 0){
@@ -423,6 +418,11 @@ module.exports = {
 
                 LP.save().catch(err => console.log(err));
             }
+
+            setTimeout(() => {
+                cooldown.delete(message.author.id)
+
+            }, 10000);
 
 
         });
