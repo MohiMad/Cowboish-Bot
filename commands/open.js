@@ -111,7 +111,7 @@ module.exports = {
             }
 
             else if ((args[1]) === "s9-1") {
-                const m = await message.channel.send("<:ess1:655840713904488469> Opening the essence");
+                const m = message.channel.send("<:ess1:655840713904488469> Opening the essence");
 
 
                 if (LP.Ess1 === 0) {
@@ -250,7 +250,7 @@ module.exports = {
 
             }//for the s9-1 essence
             else if ((args[1]) === "cao") {
-                const m2 = await message.channel.send("<:ess3:655840571616919586> Opening the essence");
+                const m2 = message.channel.send("<:ess3:655840571616919586> Opening the essence");
 
                 const ScaoEmbed = new RichEmbed()
                     .setAuthor(`Eyy congrats ${message.author.username} you got an S skin!`, message.author.avatarURL)
