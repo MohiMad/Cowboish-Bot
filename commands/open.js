@@ -10,6 +10,9 @@ module.exports = {
     description: "opens an sessenc ofr yga ",
     execute : async (message, args) => {
 
+        const m = await message.channel.send("<:ess1:655840713904488469> Opening the essence");
+        const m2 = await message.channel.send("<:ess3:655840571616919586> Opening the essence");
+
         const SEmbed = new RichEmbed()
             .setAuthor(`Congrats ${message.author.username}! you got Postman's limited skin 👏`, message.author.avatarURL)
             .attachFiles(["./s9-1/s9-1.PNG"])
@@ -118,7 +121,22 @@ module.exports = {
 
 
                 else if ((randomEmbeds[REmbed]) === (SEmbed)) {
-                    message.channel.send(SEmbed);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence.");
+
+                    }, 1000);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence..")
+
+                    }, 1500);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence...")
+
+                    }, 2000);
+                    setTimeout(() => {
+                        m.edit(SEmbed)
+
+                    }, 2500);
 
                     LP.S = LP.S + 1;
                     LP.Ess1 = LP.Ess1 - 1;
@@ -128,7 +146,22 @@ module.exports = {
                 }
 
                 else if ((randomEmbeds[REmbed]) === (AEmbed)) {
-                    message.channel.send(AEmbed);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence.");
+
+                    }, 1000);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence..")
+
+                    }, 1500);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence...")
+
+                    }, 2000);
+                    setTimeout(() => {
+                        m.edit(AEmbed)
+
+                    }, 2500);
 
                     LP.A = LP.A + 1;
 
@@ -139,8 +172,22 @@ module.exports = {
                 }
 
                 else if ((randomEmbeds[REmbed]) === (BEmbed)) {
-                    message.channel.send(BEmbed);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence.");
 
+                    }, 1000);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence..")
+
+                    }, 1500);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence...")
+
+                    }, 2000);
+                    setTimeout(() => {
+                        m.edit(BEmbed)
+
+                    }, 2500);
                     LP.B = LP.B + 1;
                     LP.Ess1 = LP.Ess1 - 1;
 
@@ -149,8 +196,23 @@ module.exports = {
                 }
 
                 else if ((randomEmbeds[REmbed]) === (CEmbed)) {
-                    message.channel.send(CEmbed);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence.");
 
+                    }, 1000);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence..")
+
+                    }, 1500);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence...")
+
+                    }, 2000);
+                    setTimeout(() => {
+                        m.edit(CEmbed)
+
+                    }, 2500);
+                    
                     LP.C = LP.C + 1;
 
                     LP.Ess1 = LP.Ess1 - 1;
@@ -163,7 +225,22 @@ module.exports = {
                 //for D values
 
                 else {
-                    message.channel.send(DEmbed);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence.");
+
+                    }, 1000);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence..")
+
+                    }, 1500);
+                    setTimeout(() => {
+                        m.edit("<:ess1:655840713904488469> Opening the essence...")
+
+                    }, 2000);
+                    setTimeout(() => {
+                        m.edit(DEmbed)
+
+                    }, 2500);
 
                     LP.Ess1 = LP.Ess1 - 1;
 
@@ -238,36 +315,107 @@ module.exports = {
             }
             
             else if ((randomCaoEmbeds[CaoREmbed]) === ScaoEmbed){
-                message.channel.send(ScaoEmbed);
-            
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence.");
+
+                }, 1000);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence..");
+
+                }, 1500);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence...");
+
+                }, 2000);
+                setTimeout(() => {
+                    m2.edit(ScaoEmbed)
+
+                }, 2500);            
+                
                 LP.Ess2 = LP.Ess2 - 1;
                 LP.S = LP.S + 1;
                 LP.save().catch(err => console.log(err));
             }
             else if ((randomCaoEmbeds[CaoREmbed]) === AcaoEmbed){
-                message.channel.send(AcaoEmbed);
-            
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence.");
+
+                }, 1000);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence..");
+
+                }, 1500);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence...");
+
+                }, 2000);
+                setTimeout(() => {
+                    m2.edit(AcaoEmbed)
+                }, 2500);       
+                                
                 LP.Ess2 = LP.Ess2 - 1;
                 LP.A = LP.A + 1;
                 LP.save().catch(err => console.log(err));
             }
             else if ((randomCaoEmbeds[CaoREmbed]) === CaoBEmbed){
-                message.channel.send(CaoBEmbed);
-            
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence.");
+
+                }, 1000);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence..");
+
+                }, 1500);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence...");
+
+                }, 2000);
+                setTimeout(() => {
+                    m2.edit(CaoBEmbed)
+                }, 2500);
+
                 LP.Ess2 = LP.Ess2 - 1;
                 LP.B = LP.B + 1;
                 LP.save().catch(err => console.log(err));
             }
             else if ((randomCaoEmbeds[CaoREmbed]) === CaoCEmbed){
-                message.channel.send(CaoCEmbed);
-            
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence.");
+
+                }, 1000);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence..");
+
+                }, 1500);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence...");
+
+                }, 2000);
+                setTimeout(() => {
+                    m2.edit(CaoCEmbed)
+                }, 2500);
+
                 LP.Ess2 = LP.Ess2 - 1;
                 LP.C = LP.C + 1;
                 LP.save().catch(err => console.log(err));
             }
             else {
-                message.channel.send(CaoDEmbed);
-            
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence.");
+
+                }, 1000);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence..");
+
+                }, 1500);
+                setTimeout(() => {
+                    m2.edit("<:ess3:655840571616919586> Opening the essence...");
+
+                }, 2000);
+                setTimeout(() => {
+                    m2.edit(CaoDEmbed)
+                }, 2500);
+
                 LP.Ess2 = LP.Ess2 - 1 ;
                 LP.D = LP.D + 1 ;
                 LP.save().catch(e => console.log(e));
