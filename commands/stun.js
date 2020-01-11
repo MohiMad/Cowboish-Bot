@@ -1,7 +1,4 @@
 const { RichEmbed } = require('discord.js');
-const bot = new Client();
-
-
 
 module.exports = {
     name: 'stun', 
