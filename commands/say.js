@@ -6,7 +6,7 @@ module.exports = {
 
 const sayMessage = args.slice(1).join(" ");
 
-message.delete().catch(O_o => { });
+if (message.deletable) message.delete();
 
 if (!args[1])
     message.channel.send("Tell me what to say...");

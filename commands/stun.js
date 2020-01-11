@@ -1,4 +1,4 @@
-const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
+const { RichEmbed } = require('discord.js');
 const bot = new Client();
 
 
@@ -29,6 +29,6 @@ const bullyembed = new RichEmbed()
 if(message.mentions.users.first().id === message.author.id) 
     message.channel.send ("I won't do that for you,** " + message.author.username);
 
-else message.channel.sendEmbed(bullyembed);
+else message.channel.send(bullyembed);
     }
 }

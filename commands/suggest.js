@@ -1,4 +1,4 @@
-const {Client, RichEmbed} = require('discord.js');
+const { RichEmbed } = require('discord.js');
 
 module.exports = {
     name: 'suggest',
@@ -11,7 +11,7 @@ const suggest = bot.channels.find(ch => ch.name === '👀》cowboish-suggestions
 const sayMessage = args.slice(1).join(" ");
 
 
-message.delete().catch(O_o => { });
+if (message.deletable) message.delete();
 
 const suggestEmbed = new RichEmbed()
 .setAuthor(message.author.username + " suggestes the following...", message.author.avatarURL)
@@ -32,7 +32,7 @@ else
 
 
 
-(suggest.sendEmbed(suggestEmbed)).then(sentEmbed => {
+(suggest.send(suggestEmbed)).then(sentEmbed => {
     sentEmbed.react('❌').then(sentEmbed.react('✅')).then(sentEmbed.react('🔶'))
 }).then(message.channel.send(thanksEmbed));
 

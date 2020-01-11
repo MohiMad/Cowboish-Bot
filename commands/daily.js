@@ -1,4 +1,4 @@
-const { Client, RichEmbed, Attachment, Collection } = require('discord.js');
+const { RichEmbed } = require('discord.js');
 let cooldown = new Set();
 
 module.exports = {
@@ -49,9 +49,9 @@ module.exports = {
             }
 
             else if (cooldown.has(message.author.id)){
-                message.delete().catch(O_o => { });
+                if (message.deletable) message.delete();
 
-                message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
+                message.channel.send(coolEmbed).then(m => m.delete(20000));
     
                 
             }
@@ -64,7 +64,7 @@ module.exports = {
                 .setFooter("Remember to come back the next day to get your rewards again :)");
 
 
-                message.channel.sendEmbed(dailyEmbed)
+                message.channel.send(dailyEmbed)
                 .then(cooldown.add(message.author.id));
 
                 LP.Dices = LP.Dices + 3;

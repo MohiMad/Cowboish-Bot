@@ -150,8 +150,8 @@ module.exports = {
 
 
             else if (cooldown.has(message.author.id)){
-                message.delete();
-                message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
+                if (message.deletable) message.delete();
+                message.channel.send(coolEmbed).then(m => m.delete(20000));
     
             }
 

@@ -1,5 +1,5 @@
-const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
-const bot = new Client();
+const { RichEmbed } = require('discord.js');
+
 module.exports = {
     name: 'winrate', 
     description: "sends a random winrate",
@@ -32,7 +32,8 @@ module.exports = {
                .setAuthor(persona.username + "'s winrate is " +  (facts[fact]) + '%', message.author.avatarURL)
                .setColor("RANDOM")
                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-        message.channel.sendEmbed(winEmbed);
+
+        message.channel.send(winEmbed);
 
 
 

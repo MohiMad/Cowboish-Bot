@@ -1,8 +1,4 @@
-const {Client, RichEmbed} = require('discord.js');
-const bot = new Client();
-const Discord = require('discord.js');
-
-
+const { RichEmbed } = require('discord.js');
 
 module.exports = {
     name: 'lasso',
@@ -33,7 +29,7 @@ module.exports = {
         if(message.mentions.users.first().id === message.author.id) 
             return message.channel.send ("Um sorry,** " + message.author.username + '** but you cant lasso yourself :v');
 
-        else message.channel.sendEmbed(lassoembed);
+        else message.channel.send(lassoembed);
 
     }
 }

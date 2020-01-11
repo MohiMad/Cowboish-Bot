@@ -1,4 +1,4 @@
-const {Client, RichEmbed, Attachment, Collection, Discord} = require('discord.js');
+const { RichEmbed } = require('discord.js');
 const got = require ('got');
 
 module.exports = {

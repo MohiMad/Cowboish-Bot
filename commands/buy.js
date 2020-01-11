@@ -1,5 +1,4 @@
 const logicPath = require("../models/logicpath.js");
-const { stripIndents } = require('common-tags');
 
 const { RichEmbed } = require('discord.js');
 

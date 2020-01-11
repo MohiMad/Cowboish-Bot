@@ -1,4 +1,4 @@
-const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
+const { RichEmbed } = require('discord.js');
 
 module.exports = {
     name: 'terrorshock', 
@@ -29,7 +29,7 @@ const bullyembed = new RichEmbed()
 if(message.mentions.users.first().id === message.author.id) 
     message.channel.send ("U... wanna terrorshock yourself?,** " + message.author.username + '** is that even possible??!');
 
-else message.channel.sendEmbed(bullyembed);
+else message.channel.send(bullyembed);
 
 }
 }

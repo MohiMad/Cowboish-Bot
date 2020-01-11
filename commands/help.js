@@ -1,4 +1,4 @@
-const { Client, RichEmbed, Attachment, Collection } = require('discord.js');
+const { RichEmbed } = require('discord.js');
 
 
 module.exports = {
@@ -47,7 +47,7 @@ module.exports = {
             .setFooter('A wild Cowboii :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'moderation')
-            message.channel.sendEmbed(modEmbed);
+            message.channel.send(modEmbed);
 
         const genEmbed = new RichEmbed()
             .setTitle('⚙ Help is here :D ⚙', true)
@@ -57,7 +57,7 @@ module.exports = {
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'config')
-            message.channel.sendEmbed(genEmbed);
+            message.channel.send(genEmbed);
 
 
         const helpmbed = new RichEmbed()
@@ -68,7 +68,7 @@ module.exports = {
             .setFooter('Remember to use my prefix > and before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'fun')
-            message.channel.sendEmbed(helpmbed);
+            message.channel.send(helpmbed);
 
         const testEmbed = new RichEmbed()
             .setTitle("Identity V logicpath commands!")

@@ -1,7 +1,4 @@
-const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
-const bot = new Client();
-
-
+const { RichEmbed } = require('discord.js');
 
 module.exports = {
     name: 'crash', 
@@ -29,7 +26,7 @@ const bullyembed = new RichEmbed()
 if(message.mentions.users.first().id === message.author.id) 
     message.channel.send ("Ehh sorry,** " + message.author.username + '** but you cant land on your self :v');
 
-else message.channel.sendEmbed(bullyembed);
+else message.channel.send(bullyembed);
 
 }
 }

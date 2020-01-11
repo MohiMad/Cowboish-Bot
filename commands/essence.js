@@ -1,5 +1,5 @@
-const { Client, RichEmbed, Attachment, Collection } = require('discord.js');
-const bot = new Client();
+const { RichEmbed } = require('discord.js');
+
 let cooldown = new Set();
 let seconds = 3;
 module.exports = {
@@ -59,8 +59,8 @@ module.exports = {
         const filter = m => m.author.id === message.author.id;
 
         if (cooldown.has(message.author.id)){
-            message.delete();
-            message.channel.sendEmbed(coolEmbed).then(m => m.delete(20000));
+            if (message.deletable) message.delete();
+            message.channel.send(coolEmbed).then(m => m.delete(20000));
 
             
 
@@ -70,21 +70,21 @@ module.exports = {
 
         else if ((args[1]) === ('p5-1'))
             
-            message.channel.sendEmbed(p5Embed)
+            message.channel.send(p5Embed)
             .then(cooldown.add(message.author.id));
               
             else if ((args[1]) === ('p5-2'))
-            message.channel.sendEmbed(Embed)
+            message.channel.send(Embed)
             .then(cooldown.add(message.author.id));
 
 
             else if ((args[1]) === ('s8-2'))
-            message.channel.sendEmbed(newEmbed)
+            message.channel.send(newEmbed)
             .then(cooldown.add(message.author.id));
 
 
             else if ((args[1]) === ('s8-1'))
-            message.channel.sendEmbed(essEmbed)
+            message.channel.send(essEmbed)
             .then(cooldown.add(message.author.id));
 
 
@@ -104,19 +104,19 @@ module.exports = {
                     let ess = collected.first();
         
                     if ((ess.content === 'p5-2')){
-                        message.channel.sendEmbed(p5Embed);
+                        message.channel.send(p5Embed);
                     }
         
                     else if ((ess.content === 's8-2')) {
-                        message.channel.sendEmbed(newEmbed);
+                        message.channel.send(newEmbed);
                     }
         
                     else if ((ess.content === 'p5-1')) {
-                        message.channel.sendEmbed(Embed);
+                        message.channel.send(Embed);
                     }
 
                     else if ((ess.content === 's8-1')) {
-                        message.channel.sendEmbed(essEmbed);
+                        message.channel.send(essEmbed);
                     }
 
                     else if ((ess.content === 's9')) {

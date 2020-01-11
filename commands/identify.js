@@ -1,7 +1,3 @@
-const {Client, RichEmbed, Attachment, Collection} = require('discord.js');
-const bot = new Client();
-
-
 module.exports = {
     name: 'identify',
     description: "identifies ur friends",

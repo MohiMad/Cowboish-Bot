@@ -1,4 +1,4 @@
-const {Client, RichEmbed, Attachment, Collection, Discord} = require('discord.js');
+const { RichEmbed } = require('discord.js');
 const got = require ('got');
 
 module.exports = {
@@ -32,6 +32,7 @@ module.exports = {
             .setColor("RANDOM")
             .setImage(memeImage)
             .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
+
             message.channel.send(embeed);
                
         }).catch(console.error);
