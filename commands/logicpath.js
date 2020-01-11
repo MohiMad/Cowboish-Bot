@@ -8,6 +8,8 @@ module.exports = {
     description: "logic info",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
         logicPath.findOne({
             UserID: message.author.id
 
@@ -67,10 +69,11 @@ module.exports = {
                 }
         })
 
-
-            
-        
-           
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
 
     }
 }

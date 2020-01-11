@@ -5,6 +5,8 @@ module.exports = {
     description: "sends a suggestion to mohimoo",
     execute(message, args, bot, MohiMoo, errWhere){
 
+        try{
+
 
 const suggest = bot.channels.find(ch => ch.name === '👀》cowboish-suggestions');
 
@@ -35,6 +37,12 @@ else
 (suggest.send(suggestEmbed)).then(sentEmbed => {
     sentEmbed.react('❌').then(sentEmbed.react('✅')).then(sentEmbed.react('🔶'))
 }).then(message.channel.send(thanksEmbed));
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
 
     }
 

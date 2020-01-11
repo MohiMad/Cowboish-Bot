@@ -3,6 +3,8 @@ module.exports = {
     description: "identifies ur friends",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
         let target = message.mentions.users.first() || message.author;
         
                     var infos = [
@@ -32,6 +34,12 @@ module.exports = {
                     var info = Math.floor(Math.random() * infos.length);
 
                     message.channel.send(infos[info]);
+
+                }catch(err){
+                    MohiMoo.send(errWhere + "\n```" + err + "```");
+                    console.log(err);
+                    message.channel.send("❌ **An error has occured!** sorry :C");
+                }
                 
 
     }

@@ -8,6 +8,8 @@ module.exports = {
     description: "shop list for ya",
     execute(message, args, MohiMoo, errWhere) {
 
+        try{
+
             //___________Main shop list_________________
         const shopEmbed = new RichEmbed()
         .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
@@ -58,8 +60,15 @@ module.exports = {
 
         else {
             message.reply("what are you dooooiing! this list doesn't exist");
+
         }
 
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
 
     }
 }

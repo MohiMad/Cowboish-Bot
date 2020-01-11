@@ -5,6 +5,8 @@ module.exports = {
     description: "rolls a 4 sided dice",
     execute(message, args, MohiMoo, errWhere) {
 
+        try{
+
         //------------------Some value here
 
         //random dice chances
@@ -427,11 +429,11 @@ module.exports = {
 
         });
 
-
-
-
-        
-
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
 
     }
 }

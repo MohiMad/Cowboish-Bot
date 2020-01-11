@@ -6,6 +6,8 @@ module.exports = {
     description: "info about bot",
     execute(message, args, bot, MohiMoo, errWhere){
 
+        try{
+
 const betterEmbed = new RichEmbed()
     .setThumbnail(bot.displayAvatarURL)
     .setColor(bot.displayHexColor === '#000000' ? '#ffffff' : bot.displayHexColor)
@@ -28,6 +30,12 @@ const betterEmbed = new RichEmbed()
     .setTimestamp();
 
     message.channel.send(betterEmbed);
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
 
     }
 

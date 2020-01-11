@@ -5,6 +5,8 @@ module.exports = {
     description: "shoots you",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
         let persona  = message.mentions.users.first()
 
         if (!args[1]) return message.reply("Who do you want to shoot? Mention them right after the command | example: >shoot @Cowboish Bot. Btw plz don't do that to me :(").then(m => m.delete(10000));
@@ -31,6 +33,13 @@ module.exports = {
         message.channel.send ("Why would ** " + message.author.username + '** shoot themself 🤔🤔');
 
     else message.channel.send(lassoembed);
+
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
         
 
     }

@@ -5,6 +5,8 @@ module.exports = {
     description: "terrorshocks you",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
     if (!args[1]) return message.reply("Who do you want to terrorshock? Mention them right after the command | example: >crash @Cowboish Bot . wait... don't do that to me plz :v").then(m => m.delete(10000));
 
 let persona  = message.mentions.users.first()
@@ -30,6 +32,12 @@ if(message.mentions.users.first().id === message.author.id)
     message.channel.send ("U... wanna terrorshock yourself?,** " + message.author.username + '** is that even possible??!');
 
 else message.channel.send(bullyembed);
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
 
 }
 }

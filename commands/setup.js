@@ -5,6 +5,10 @@ module.exports = {
     name: 'setup',
     description: "set some stuff for the guild",
     execute(message, args, MohiMoo, errWhere) {
+
+        try {
+
+
         const errEmbed = new RichEmbed()
             .setTitle("❌ Ooops an error has occurred! ❌")
             .setColor("0xf72020");
@@ -189,6 +193,12 @@ module.exports = {
 
         })//________________Guild. finde one_________________
 
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
+    
 
     }
 }

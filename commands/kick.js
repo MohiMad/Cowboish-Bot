@@ -5,6 +5,8 @@ module.exports = {
     name: 'kick', 
     description: "kick them trolls",
     execute : async (message, args, MohiMoo, errWhere) => {
+
+        try{
         const member = await findMember(message, args[1]);
         
         const reason = args.slice(2).join(" ") || "No Reason";
@@ -44,6 +46,13 @@ module.exports = {
         
         message.channel.send(kickEmbed);
         }
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
+    
     }
 
 }

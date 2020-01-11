@@ -6,6 +6,8 @@ module.exports = {
     description: "sends a random meme",
     execute( message, args, MohiMoo, errWhere){
 
+        try{
+
         const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json"];
 
             const random = subReddits[Math.floor(Math.random() * subReddits.length)];
@@ -35,6 +37,12 @@ module.exports = {
 
             message.channel.send(embeed);
                
-        }).catch(console.error);
+        })
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
+    
     }
 }

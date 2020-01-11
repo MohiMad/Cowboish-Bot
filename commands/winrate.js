@@ -5,6 +5,8 @@ module.exports = {
     description: "sends a random winrate",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
         let persona  = message.mentions.users.first()
 
         var facts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
@@ -34,6 +36,12 @@ module.exports = {
                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
 
         message.channel.send(winEmbed);
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
 
 
 

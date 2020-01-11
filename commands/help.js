@@ -6,6 +6,8 @@ module.exports = {
     description: "sends help!",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
 
         const helpEmbed = new RichEmbed()
             .setColor("RANDOM")
@@ -80,6 +82,12 @@ module.exports = {
             if (args[1] === "logicpath"){
                 message.channel.send(testEmbed);
             }
+
+        }catch(err){
+            MohiMoo.send(errWhere + "\n```" + err + "```");
+            console.log(err);
+            message.channel.send("❌ **An error has occured!** sorry :C");
+        }
 
 
 

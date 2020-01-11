@@ -6,6 +6,9 @@ module.exports = {
     description: "play a match as a hunter",
     execute(message, args, MohiMoo, errWhere) {
 
+
+        try{
+
         let dice = "<:dice:655384578499936257>";
 
         var quick1 = (`you won! don't get too happy the survivors were hounds...\n**1** ${dice} is now in your inventory!`);
@@ -119,6 +122,12 @@ module.exports = {
 
         
         })
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
 
         }
     }

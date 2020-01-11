@@ -10,6 +10,8 @@ module.exports = {
     description: "opens an sessenc ofr yga ",
     execute : async (message, args, MohiMoo, errWhere) => {
 
+        try{
+
 
         const SEmbed = new RichEmbed()
             .setAuthor(`Congrats ${message.author.username}! you got Postman's limited skin 👏`, message.author.avatarURL)
@@ -285,6 +287,12 @@ module.exports = {
             }//__________if args === cao___________-
 
         })//_______find one_________
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
            
     }
 }

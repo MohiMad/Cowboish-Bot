@@ -7,6 +7,8 @@ module.exports = {
     description: "shows the info of the server",
     execute(message, args, MohiMoo, errWhere){
 
+		try{
+
 		const created = formatDate(message.guild.createdAt)
 		const joined = formatDate(message.author.joinedAt);
 
@@ -48,7 +50,13 @@ module.exports = {
 			);
 			
 
-         message.channel.send(embed);
+		 message.channel.send(embed);
+		 
+		}catch(err){
+			MohiMoo.send(errWhere + "\n```" + err + "```");
+			console.log(err);
+			message.channel.send("❌ **An error has occured!** sorry :C");
+		}
         
 	}
 

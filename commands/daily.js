@@ -87,6 +87,8 @@ module.exports = {
     }catch(err){
         MohiMoo.send(errWhere + "\n```" + err + "```");
         console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+
     }
 
 

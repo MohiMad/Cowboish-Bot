@@ -4,6 +4,7 @@ module.exports = {
     name: 'mute',
     description: "mute!",
 execute : async (message, args, MohiMoo, errWhere) => {
+  try{
 
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tomute) return message.reply("Couldn't find user! make sure that you tagged them right after the command example >mute <member> s/h/d");
@@ -38,6 +39,12 @@ execute : async (message, args, MohiMoo, errWhere) => {
       tomute.removeRole(muterole.id);
       message.channel.send(`<@${tomute.id}> has been unmuted!`);
     }, ms(mutetime));
+
+  }catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
   
 
 

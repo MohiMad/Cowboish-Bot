@@ -4,6 +4,8 @@ module.exports = {
     description: "randomizes a surv",
     execute(message, args, MohiMoo, errWhere){
 
+        try{
+
 var facts = ["1st Officer:watch::alarm_clock:", "Enchantress:skull:🌩️", "Mechanic:joystick::robot:", "Wilding:boar::apple:", "Barmaid:beer::beers:", "Acrobat🤹🏻‍♀️", "Prospector:doughnut::doughnut:", "Seer:eye_in_speech_bubble::owl:", "Forward:rugby_football::muscle:", "Embalmer:coffin::coffin:", "Dancer:dancer::dancer:", "Coordinator:gun:" , "Explorer:closed_book:", "Magician:tophat:", "Perfumer:butterfly:", "Priestess:milky_way::milky_way:", "Minds eye:eye_in_speech_bubble:", "Mercenary:boxing_glove::shield:", "Gardener:bamboo::tools:", "Lucky guy:four_leaf_clover:", "Doctor👩‍⚕️:syringe:", "Thief:flashlight::heavy_dollar_sign:", "Lawyer:eyeglasses::map:", "Cowboy:cowboy::cow2:"];
 
 var fact = Math.floor(Math.random() * facts.length);
@@ -20,6 +22,12 @@ var hunter = Math.floor(Math.random() * hunters.length);
 
 if (args[1] === 'hunter') 
 message.channel.send('Go and hunt as the ' + '**' + (hunters[hunter] + '**'));
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
 
     }
 }

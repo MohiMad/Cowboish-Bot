@@ -9,6 +9,8 @@ module.exports = {
     description: "sends a random joke",
     execute( message, args, MohiMoo, errWhere){
 
+        try{
+
         const coolEmbed = new RichEmbed()
             .setTitle("Slow it down maaan!")
             .setDescription("I'm a bot, but bots deserves some rest as well\n**You probably didn't read the joke... READ IT!**\nThis command has a cooldown of **3** seconds!")
@@ -58,6 +60,12 @@ module.exports = {
         }, 30000);
 
 })
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+    message.channel.send("❌ **An error has occured!** sorry :C");
+}
 
     }
 }
