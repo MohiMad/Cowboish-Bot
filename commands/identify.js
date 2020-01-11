@@ -1,7 +1,7 @@
 module.exports = {
     name: 'identify',
     description: "identifies ur friends",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         let target = message.mentions.users.first() || message.author;
         

@@ -4,7 +4,7 @@ let cooldown = new Set();
 module.exports = {
     name: 'hunt',
     description: "play a match as a hunter",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere) {
 
         let dice = "<:dice:655384578499936257>";
 

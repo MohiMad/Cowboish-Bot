@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'roll20', 
     description: "rolls a 20 sided dice",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         var facts = ["10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
 

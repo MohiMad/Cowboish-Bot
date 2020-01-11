@@ -4,7 +4,7 @@ const { stripIndents } = require("common-tags");
 module.exports = {
     name: 'info', 
     description: "info about bot",
-    execute(message, args, bot){
+    execute(message, args, bot, MohiMoo, errWhere){
 
 const betterEmbed = new RichEmbed()
     .setThumbnail(bot.displayAvatarURL)

@@ -4,7 +4,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'setup',
     description: "set some stuff for the guild",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere) {
         const errEmbed = new RichEmbed()
             .setTitle("❌ Ooops an error has occurred! ❌")
             .setColor("0xf72020");

@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'shoot',
     description: "shoots you",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         let persona  = message.mentions.users.first()
 

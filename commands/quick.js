@@ -4,7 +4,7 @@ const cooldown = new Set();
 module.exports = {
     name: 'quick',
     description: "play a quick match",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere) {
 
         let quick1 = ("You played as enchantress<:enchantress:648834319409872897> but your ping was high and you got downed easily, luckily you had a hero cowboy <:cowboy:649130677253439508> in the game who carried you the whole time\nYou managed to get a win and got **1** <:dice:655384578499936257> ");
         let quick2 = ("You chose to play as the op lawyer, the hunter was too afraid to face you so they chose to be friendly\nYou got a 4 man win and got **2** <:dice:655384578499936257>  ");

@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'stun', 
     description: "stuns you",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         if (!args[1]) return message.reply("Who do you want to shut the pallet on? Mention them right after the command | example: >stun @Cowboish Bot.").then(m => m.delete(10000));
 

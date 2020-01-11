@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'winrate', 
     description: "sends a random winrate",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         let persona  = message.mentions.users.first()
 

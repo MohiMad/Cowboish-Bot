@@ -5,7 +5,10 @@ let seconds = 3;
 module.exports = {
     name: 'essence',
     description: "opens an essence",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere){
+
+
+        try{
 
 
         number = 45;
@@ -134,6 +137,11 @@ module.exports = {
                 cooldown.delete(message.author.id)
 
             }, seconds * 1000);
+
+        }catch(err){
+            MohiMoo.send(errWhere + "\n```" + err + "```");
+            console.log(err);
+        }
               
             
 

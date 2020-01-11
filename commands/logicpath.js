@@ -6,7 +6,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'logicpath',
     description: "logic info",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         logicPath.findOne({
             UserID: message.author.id

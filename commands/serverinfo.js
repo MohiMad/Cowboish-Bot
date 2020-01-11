@@ -5,7 +5,7 @@ const { formatDate } = require ("../functions.js");
 module.exports = {
     name: 'serverinfo', 
     description: "shows the info of the server",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
 		const created = formatDate(message.guild.createdAt)
 		const joined = formatDate(message.author.joinedAt);

@@ -1,7 +1,7 @@
 module.exports = {
     name: 'yee', 
     description: "haaaw",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         var facts = ["Haaaw >:D", "Yeeeeeeeeeeeet", "Pizzaa?", "did someone say Yee?, Heeey :D"];
 

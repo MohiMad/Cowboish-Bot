@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'lasso',
     description: "lassos you",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
         if (!args[1]) return message.reply('Who do you want to lasso? Mention them right after the command | example: >lasso @Cowboish Bot . Oh yes lasso me >:D').then(m => m.delete(10000));
 
         

@@ -4,7 +4,9 @@ let cooldown = new Set();
 module.exports = {
     name: 'daily',
     description: "daily rewards",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere) {
+
+        try{
 
         const coolEmbed = new RichEmbed()
             .setTitle("Take it easy on me dude!")
@@ -81,6 +83,11 @@ module.exports = {
             }, 86400000);
 
         })
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+    }
 
 
 

@@ -6,7 +6,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'shop',
     description: "shop list for ya",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere) {
 
             //___________Main shop list_________________
         const shopEmbed = new RichEmbed()

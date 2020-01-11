@@ -5,7 +5,9 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'buy',
     description: "buy some stuff",
-    execute(message, args) {
+    execute(message, args, MohiMoo, errWhere) {
+
+        try{
 
         const buyEmbed = new RichEmbed()
         .setTimestamp()
@@ -80,6 +82,11 @@ module.exports = {
         }
 
     })//LP 
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+}
 
     }
 

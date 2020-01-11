@@ -2,7 +2,7 @@
 module.exports = {
     name: 'say',
     description: "repeats what you just said!",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
 const sayMessage = args.slice(1).join(" ");
 

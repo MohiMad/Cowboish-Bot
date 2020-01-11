@@ -2,7 +2,9 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'bully', 
     description: "bullyies you",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
+
+        try{
 
         if (!args[1]) return message.reply("Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(10000));
 
@@ -30,6 +32,12 @@ if(message.mentions.users.first().id === message.author.id)
     message.channel.send ("Nah cmon,** " + message.author.username + '** why would you bully yourself? :C');
 
 else message.channel.send(bullyembed);
+
+}catch(err){
+    MohiMoo.send(errWhere + "\n```" + err + "```");
+    console.log(err);
+}
+
 
 }
 }

@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'terrorshock', 
     description: "terrorshocks you",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
     if (!args[1]) return message.reply("Who do you want to terrorshock? Mention them right after the command | example: >crash @Cowboish Bot . wait... don't do that to me plz :v").then(m => m.delete(10000));
 

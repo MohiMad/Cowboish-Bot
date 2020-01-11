@@ -7,7 +7,7 @@ const { getMember, formatDate } = require("../functions.js");
 module.exports = {
     name: 'userinfo', 
     description: "show info",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
         
 
         const member = getMember(message, args.join(" "));

@@ -8,7 +8,7 @@ const logicPath = require("../models/logicpath.js");
 module.exports = {
     name: 'open',
     description: "opens an sessenc ofr yga ",
-    execute : async (message, args) => {
+    execute : async (message, args, MohiMoo, errWhere) => {
 
 
         const SEmbed = new RichEmbed()

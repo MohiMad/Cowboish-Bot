@@ -5,7 +5,10 @@ const { findMember } = require("../functions.js");
 module.exports = {
     name: 'ban', 
     description: "bans a player",
-    execute : async (message, args) => {
+    execute : async (message, args, MohiMoo, errWhere) => {
+
+
+
         const member = await findMember(message, args[1]);
 
         const reason = args.slice(2).join(" ") || "No Reason";
@@ -15,6 +18,8 @@ module.exports = {
             .setAuthor("Oops, an error has occured!", message.author.AvatarURL)
             .setColor("RED")
             .setTimestamp();
+
+        try{
         
         if(!message.member.hasPermission("BAN_MEMBERS", false, true, true)){
             errEmbed.setDescription("You don't have the needed permissions to use this command");
@@ -47,6 +52,11 @@ module.exports = {
             
         message.channel.send(banEmbed);
         }
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+        message.channel.send("❌ **An error has occured!** sorry :C");
+    }
 
         }
     }

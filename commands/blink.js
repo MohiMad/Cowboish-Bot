@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'blink',
     description: "blink yo azz",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
         if (!args[1]) return message.reply('Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
 
         
@@ -25,10 +25,17 @@ module.exports = {
         .attachFiles (["./blink/" + 'blink' + imagaNumber + ".gif"])
         .setImage('attachment://blink' + imagaNumber + '.gif')
         .setColor("RANDOM");        
+
+        try{
         if(message.mentions.users.first().id === message.author.id) 
             return message.channel.send ("Nah don't waste the blink on yourself, **" + message.author.username + "**");
 
         else message.channel.send(lassoembed);
+
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+    }
 
     }
 }

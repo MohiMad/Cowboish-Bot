@@ -2,7 +2,10 @@
 module.exports = {
     name: 'clear', 
     description: "clear commands",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
+
+        try{
+
         if (!args[1]) return message.reply('How many messeges do u want me to sweep?').then(m => m.delete(5000));
 
         if (args[1] > 100) return message.reply ("I can't delete more than 100 mesaages dum dum").then(m => m.delete(5000));
@@ -16,6 +19,10 @@ module.exports = {
         else message.channel.bulkDelete(args[1]);
         message.channel.send ('Successully deleted '+(args[1]) + ' messages :D  got the order from => **' + message.author.username + '**').then(m => m.delete(5000));
         
+    }catch(err){
+        MohiMoo.send(errWhere + "\n```" + err + "```");
+        console.log(err);
+    }
 
 
     }

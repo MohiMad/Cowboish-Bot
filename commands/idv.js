@@ -4,7 +4,7 @@ const got = require ('got');
 module.exports = {
     name: 'idv', 
     description: "sends a random idv post",
-    execute(message, args){
+    execute(message, args, MohiMoo, errWhere){
 
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
 
