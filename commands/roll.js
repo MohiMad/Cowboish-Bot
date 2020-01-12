@@ -30,7 +30,7 @@ module.exports = {
 
         let dice2Chance4 = "You walked 2 steps in your logicpath and got **20** clues <:clue:655384523735040000>";
 
-        let dice2Chance5 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000> use them wisely!\nto open the CAOII essence, do ``open cao``";
+        let dice2Chance5 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000> use them wisely!\nto open the COAII essence, do ``open cao``";
 
 
 
@@ -56,7 +56,7 @@ module.exports = {
 
         let dice1Chance4 = "You were **1** step away from getting **1**<:ess1:655840713904488469> and now you have it! do ``open s9-1`` to open it.";
 
-        let dice1Chance5 = "One <:ess3:655840571616919586> is now in your pocket... wait is it?\nTo open the cao essence do ``open cao``";
+        let dice1Chance5 = "One <:ess3:655840571616919586> is now in your pocket... wait is it?\nTo open the coa essence do ``open coa``";
 
 
         var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5];
@@ -77,7 +77,7 @@ module.exports = {
 
         let dice4Chance3 = "You walked **4** steps in your logicpath and got 40 clues <:clue:655384523735040000> and **1** <:ess1:655840713904488469>";
 
-        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess3:655840571616919586> - Two birds with one stone :/\nTo open the CAOIII essence do ``open cao``";
+        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess3:655840571616919586> - Two birds with one stone :/\nTo open the COAIII essence do ``open coa``";
 
 
         var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4];
@@ -100,7 +100,7 @@ module.exports = {
 
         let dice3Chance3 = "Oh look, you got **10** clues <:clue:655384523735040000> and **50** <:inspirations:655840409674711060>";
 
-        let dice3Chance4 = "**20** <:clue:655384523735040000> & **1** <:ess3:655840571616919586> are now yours\nTo open the CAOII essence do ``open cao`` ";
+        let dice3Chance4 = "**20** <:clue:655384523735040000> & **1** <:ess3:655840571616919586> are now yours\nTo open the COAII essence do ``open coa`` ";
 
         var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3, dice3Chance4];
         var fact3 = Math.floor(Math.random() * facts3.length);

@@ -29,10 +29,10 @@ module.exports = {
             }
 
         if(!args[1]){
-            message.reply("Are you messing with me? please provide what you want to buy after the command!\nexample `>buy cao`");
+            message.reply("Are you messing with me? please provide what you want to buy after the command!\nexample `>buy coa`");
         }
 
-        else if ( (args[1]) === "cao" ){
+        else if ( (args[1]) === "coa" ){
             if(LP.Inspirations < 96){
                 message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 

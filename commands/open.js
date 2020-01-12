@@ -105,7 +105,7 @@ module.exports = {
                         stripIndents`Essences available are..
                         <:ess1:655840713904488469> | **Essences s9-1** ─ ID ➜  __*s9-1*__
 
-                        <:ess3:655840571616919586> | **CAO III essence** - ID: __*cao*__
+                        <:ess3:655840571616919586> | **COA III essence** - ID: __*coa*__
                 `)
                     .setFooter("Example - >open s9-1");
 
