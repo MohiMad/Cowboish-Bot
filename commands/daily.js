@@ -61,7 +61,7 @@ module.exports = {
 
                 const dailyEmbed = new RichEmbed()
                 .setTitle("🎁 Here is your daily reward 🎁")
-                .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Here! take these **3**<:dice:655384578499936257>  **500**<:clue:655384523735040000>")
+                .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Here! take these **3**<:dice:655384578499936257>  **200**<:clue:655384523735040000>")
                 .setColor("0xffd500")
                 .setFooter("Remember to come back the next day to get your rewards again :)");
 
@@ -70,7 +70,7 @@ module.exports = {
                 .then(cooldown.add(message.author.id));
 
                 LP.Dices = LP.Dices + 3;
-                LP.Clues = LP.Clues + 500;
+                LP.Clues = LP.Clues + 200;
                 LP.save().catch(err => console.log(err));
 
 

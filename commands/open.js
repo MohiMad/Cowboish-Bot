@@ -178,7 +178,7 @@ module.exports = {
                 }
 
             }//for the s9-1 essence
-            else if ((args[1]) === "cao") {
+            else if ((args[1]) === "coa") {
 
                 const ScaoEmbed = new RichEmbed()
                     .setAuthor(`Eyy congrats ${message.author.username} you got an S skin!`, message.author.avatarURL)
