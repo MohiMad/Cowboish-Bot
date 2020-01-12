@@ -18,6 +18,7 @@ const dbl = new DBL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMD
 dbl.webhook.on('ready', hook => {
     console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
   });
+  
   dbl.webhook.on('vote', vote => {
     console.log(`User with ID ${vote.user} just voted!`);
   });
@@ -50,7 +51,7 @@ for (const file of commandFiles) {
 
 bot.on("guildCreate", guild => {
 
-    const create = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
+    const create = bot.channels.get('651476936379596830');
 
     if (!create) return; 
     else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**)\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
@@ -85,7 +86,7 @@ bot.on("guildCreate", guild => {
 
     bot.on("guildDelete", guild => {
 
-        const logs = bot.channels.find(ch => ch.name === '📑》cowboish_logs');
+        const logs = bot.channels.get('651476936379596830');
 
         if (!logs) return; 
         
@@ -123,7 +124,7 @@ bot.on('message', async message => {
 
     const MohiMoo = bot.users.get("478527909250990090");
 
-    const errWhere = `Hit an error in the channel ${message.channel} in the guild ${message.guild}`;
+    let errWhere = (`Hit an error in the channel ${message.channel} in the guild ${message.guild}`);
 
 
     let prefix = ">";
