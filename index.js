@@ -124,7 +124,7 @@ bot.on('message', async message => {
 
     const MohiMoo = bot.users.get("478527909250990090");
 
-    let errWhere = (`Hit an error in the channel ${message.channel} in the guild ${message.guild}`);
+    let errWhere = ("Hit an error in the channel" + message.channel + "in the guild" + message.guild );
 
 
     let prefix = ">";
