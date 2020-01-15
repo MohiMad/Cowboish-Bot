@@ -13,9 +13,9 @@ const { stripIndents } = require ("common-tags");
 
 const { ddblAPI } = require('ddblapi.js');
 
-    const ddbl = new ddblAPI('632291800585076761', '4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
+    const ddbl = new ddblAPI('4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
 
-    ddbl.postStats(`${bot.guilds.size}`)
+    ddbl.postStats('632291800585076761', `${bot.guilds.size}`)
     .then(console.log);
 
 
@@ -117,7 +117,8 @@ bot.on('ready', () => {
         `Identity V in ${bot.guilds.size} servers` ,
         "Welcome to Identit | >help",
         "Identit | >help", 
-        `Milestone ${bot.guilds.size}/100 <3`
+        `milestone ${bot.guilds.size}/100 <3`,
+        `${bot.guilds.size} guilds | ${bot.users.size} users`
         //random activity list
     ];
 
