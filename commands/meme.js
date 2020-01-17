@@ -6,12 +6,12 @@ module.exports = {
     description: "sends a random meme",
     execute( message, args, MohiMoo, errWhere){
 
-        try{
-
         const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json"];
 
-            const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+        const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
+        try{
+            
         got(random).then(response => {
 
             let content = JSON.parse(response.body);
@@ -28,16 +28,18 @@ module.exports = {
 
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
+
             const embeed = new RichEmbed()
-            .setTitle(`${memeTitle}`)
-            .setURL (`${memeUrl}`)
-            .setColor("RANDOM")
-            .setImage(memeImage)
-            .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
+                .setTitle(`${memeTitle}`)
+                .setURL (`${memeUrl}`)
+                .setColor("RANDOM")
+                .setImage(memeImage)
+                .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
 
             message.channel.send(embeed);
                
-        })
+        });
+        
     }catch(err){
         MohiMoo.send(errWhere + "\n```" + err + "```");
         console.log(err);

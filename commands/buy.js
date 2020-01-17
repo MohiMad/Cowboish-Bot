@@ -24,8 +24,75 @@ module.exports = {
         
 
             if (!LP) {
-            message.reply("dude, you don't have an identity v account, but it's all fine, you can do `>quick` and i will create on for ya ;D");
-
+                const newLP = new logicPath({
+                    UserID: message.author.id,
+                    logic: 0,
+                    Dices: 15,
+                    Clues: 0,
+                    Ess1: 5,
+                    Ess2: 5,
+                    Ess3: 5,
+                    Inspirations: 0,
+                    frags: 0,
+                    S: 0,
+                    A: 0,
+                    B: 0,
+                    C: 0,
+                    D: 0,
+                    Echoes: 0,
+    
+                    ID: 0,
+    
+                    Survivors: {
+                        Cowboy: false,
+                        Mercenary: false,
+                        Coordinator: false,
+                        Priestess: false,
+                        Mechanic: false,
+                        Mindseye: false,
+                        Prefumer: false,
+                        Dancer: false,
+                        Seer: false,
+                        Embalmer: false,
+                        Acrobat: false,
+                        Officer: false,
+                        Barmaid: false,
+                        Magician: false,
+                        Explorer: false,
+                        Forward: false,
+                        Prospector: false,
+                        Enchantress: false,
+                        Wilding: false,
+                        Postman: false,
+                        NewSurv: false,
+                        AnotherSurv: false,
+                    },
+    
+                    Hunters: {
+    
+                        WuChang: false,
+                        AxeBoi: false,
+                        Lizard: false,
+                        Clown: false,
+                        GameKeeper: false,
+                        Ripper: false,
+                        SoulWeaver: false,
+                        Geisha: false,
+                        PhotoGrapher: false,
+                        MadEyes: false,
+                        Feaster: false,
+                        DreamWitch: false,
+                        BloodyQueen: false,
+                        Pingu: false,
+                        Sister: false,
+                        NewHunta: false,
+                        AnotherHunta: false
+    
+            }
+    
+            });
+            newLP.save().catch(err => console.log(err))
+            .then(message.reply("oof you didn't have any data saved, but now you do\n**Please run the command again!**"));
             }
 
         if(!args[1]){

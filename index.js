@@ -13,7 +13,7 @@ const { stripIndents } = require ("common-tags");
 
 const { ddblAPI } = require('ddblapi.js');
 
-    const ddbl = new ddblAPI('4e66be8dd67dfbcadd0f11bc79d6401814173674484144af4bfd4970d0657883cd229c3f2bf47de979b6edf95901ae2cedbc35a477621c7d49f31ea22ba39943');
+    const ddbl = new ddblAPI('632291800585076761', '9cee67cc72fe627280b36f1f979b42e4d65ca6283fa6f521c4b13a2a2f61a0b455fc253d3f79cb4c3b617d02fb6242e7d5cd2b53247994b65154e608d48a65ac');
 
     ddbl.postStats('632291800585076761', `${bot.guilds.size}`)
     .then(console.log);

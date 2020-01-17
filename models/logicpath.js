@@ -1,36 +1,89 @@
 const mongoose = require ("mongoose");
 
-    const LPSchema = mongoose.Schema({
+const LPSchema = mongoose.Schema({
         
-        UserID: String,
+    UserID: String,
 
-        logic: Number,
+    Updated: Boolean,
 
-        Dices: Number,
+    logic: Number,
 
-        Clues: Number,
+    Dices: Number,
 
-        Ess1: Number,
+    Clues: Number,
 
-        Ess2: Number,
+    Ess1: Number,
 
-        Ess3:Number,
+    Ess2: Number,
 
-        Inspirations: Number,
+    Ess3:Number,
 
-        frags: Number,
+    Inspirations: Number,
 
-        S: Number,
+    frags: Number,
 
-        A: Number,
+    S: Number,
 
-        B: Number,
+    A: Number,
 
-        C: Number,
+    B: Number,
 
-        D: Number
+    C: Number,
+
+    D: Number,
+
+    Echoes: Number,
+
+    ID: String,
+
+    Survivors: {
+        Cowboy: Boolean,
+        Mercenary: Boolean,
+        Coordinator: Boolean,
+        Priestess: Boolean,
+        Mechanic: Boolean,
+        Mindseye: Boolean,
+        Prefumer: Boolean,
+        Dancer: Boolean,
+        Seer: Boolean,
+        Embalmer: Boolean,
+        Acrobat: Boolean,
+        Officer: Boolean,
+        Barmaid: Boolean,
+        Magician: Boolean,
+        Explorer: Boolean,
+        Forward: Boolean,
+        Prospector: Boolean,
+        Enchantress: Boolean,
+        Wilding: Boolean,
+        Postman: Boolean,
+        NewSurv: Boolean,
+        AnotherSurv: Boolean,
+    },
+
+    Hunters: {
+
+        WuChang: Boolean,
+        AxeBoi: Boolean,
+        Lizard: Boolean,
+        Clown: Boolean,
+        GameKeeper: Boolean,
+        Ripper: Boolean,
+        SoulWeaver: Boolean,
+        Geisha: Boolean,
+        PhotoGrapher: Boolean,
+        MadEyes: Boolean,
+        Feaster: Boolean,
+        DreamWitch: Boolean,
+        BloodyQueen: Boolean,
+        Pingu: Boolean,
+        Sister: Boolean,
+        NewHunta: Boolean,
+        AnotherHunta: Boolean
+
+    }
 
 
-    });
+});
 
     module.exports = mongoose.model("logicPath", LPSchema);
