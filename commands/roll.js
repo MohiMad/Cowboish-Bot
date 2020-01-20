@@ -32,9 +32,11 @@ module.exports = {
 
         let dice2Chance5 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000> use them wisely!\nto open the COAII essence, do ``open cao``";
 
+        let dice2Chance6 = "Congrats! here is your **1** <:ess2:655840643847028751> use it wisely\nTo open the essence you just got, do `>open s9-2`";
 
 
-        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4, dice2Chance5];
+
+        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4, dice2Chance5, dice2Chance6];
 
         var fact2 = Math.floor(Math.random() * facts2.length);
         //dice2 embed
@@ -58,7 +60,6 @@ module.exports = {
 
         let dice1Chance5 = "One <:ess3:655840571616919586> is now in your pocket... wait is it?\nTo open the coa essence do ``open coa``";
 
-
         var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5];
 
         var fact1 = Math.floor(Math.random() * facts1.length);
@@ -79,8 +80,9 @@ module.exports = {
 
         let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess3:655840571616919586> - Two birds with one stone :/\nTo open the COAIII essence do ``open coa``";
 
+        let dice4Chance5 = "Here ya go! you get **1** <:ess2:655840643847028751> and **20** <:clue:655384523735040000>\nTo open the essence you just got, do `>open s9-2`";
 
-        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4];
+        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4, dice4Chance5];
 
         var fact4 = Math.floor(Math.random() * facts4.length);
 
@@ -191,7 +193,9 @@ module.exports = {
                         NewHunta: false,
                         AnotherHunta: false
     
-            }
+            },
+            Opened: []
+
     
                 })
                 newLP.save().catch(err => console.log(err))
@@ -359,6 +363,17 @@ module.exports = {
                 LP.save().catch(err => console.log(err));
 
             }
+            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance6) {
+                message.channel.send(diceEmbed)
+                .then(cooldown.add(message.author.id));
+
+                LP.logic = LP.logic + 2;
+                LP.Dices = LP.Dices - 1;
+                LP.Ess3 = LP.Ess3 + 1;
+
+                LP.save().catch(err => console.log(err));
+
+            }
             //dice 3 here
             else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance1) {
                 message.channel.send(diceEmbed3)
@@ -464,6 +479,20 @@ module.exports = {
 
                 LP.Ess1 = LP.Ess1 + 1;
                 LP.Ess2 = LP.Ess2 + 1;
+
+                LP.logic = LP.logic + 4;
+
+                LP.save().catch(err => console.log(err));
+            }
+            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance5) {
+                message.channel.send(diceEmbed4)
+                .then(cooldown.add(message.author.id));
+
+
+                LP.Clues = LP.Clues + 20;
+                LP.Dices = LP.Dices - 1;
+
+                LP.Ess3 = LP.Ess3 + 1;
 
                 LP.logic = LP.logic + 4;
 

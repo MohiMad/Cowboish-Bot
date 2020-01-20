@@ -11,14 +11,6 @@ const { stripIndents } = require ("common-tags");
 
 //_____________Divine discord login____________
 
-const { ddblAPI } = require('ddblapi.js');
-
-    const ddbl = new ddblAPI('632291800585076761', '9cee67cc72fe627280b36f1f979b42e4d65ca6283fa6f521c4b13a2a2f61a0b455fc253d3f79cb4c3b617d02fb6242e7d5cd2b53247994b65154e608d48a65ac');
-
-    ddbl.postStats('632291800585076761', `${bot.guilds.size}`)
-    .then(console.log);
-
-
 //________________________________
 
 const dbl = new DBL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY", { webhookPort: 5000, webhookAuth: 'mmkdmkmmkdmk' });
