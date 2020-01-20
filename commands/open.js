@@ -359,6 +359,8 @@ module.exports = {
                     s9Embed.setAuthor(`💛 ${message.author.username} got the Sister's S skin! 💛`, message.author.avatarURL);
                     s9Embed.setFooter("Too many S's in the title :'D");
                     LP.S = LP.S + 1;
+                    LP.Ess3 = LP.Ess3 -1;
+
                     LP.save().catch(err => console.log(err));
 
                 }
@@ -368,6 +370,8 @@ module.exports = {
                     s9Embed.setAuthor(`💜 ${message.author.username} gets an A skin 💜`, message.author.avatarURL);
                     s9Embed.setFooter("You probably wish you could get that ingame xD");
                     LP.A = LP.A + 1;
+                    LP.Ess3 = LP.Ess3 -1;
+
                     LP.save().catch(err => console.log(err));
 
                 }
@@ -376,6 +380,8 @@ module.exports = {
                     s9Embed.setAuthor(`💙 That's a B skin for ya, ${message.author.username} 💙`, message.author.avatarURL);
                     s9Embed.setFooter("I don't wanna hear compliments a B skin is better than a graffiti");
                     LP.B = LP.B + 1;
+                    LP.Ess3 = LP.Ess3 -1;
+
                     LP.save().catch(err => console.log(err));
 
 
@@ -385,7 +391,10 @@ module.exports = {
                     s9Embed.setAuthor(`💚 I'm sorry ${message.author.username}, but that's what you got 💚`, message.author.avatarURL);
                     s9Embed.setFooter(":))");
                     LP.C = LP.C + 1;
+                    LP.Ess3 = LP.Ess3 -1;
+
                     LP.save().catch(err => console.log(err));
+
 
                 }
                 else if(item === "s9-10.jpg" || "s9-11.jpg" || "s9-12.jpg" || "s9-13.jpg" || "s9-14.jpg" || "s9-15.jpg" || "s9-16.jpg" || "s9-17.jpg" || "s9-18.jpg" || "s9-19.jpg" || "s9-20.jpg" || "s9-31.jpg" || "s9-32.jpg" || "s9-33.jpg" || "s9-34.jpg" || "s9-35.jpg" || "s9-36.jpg" || "s9-37.jpg" || "s9-38.jpg" || "s9-39.jpg" || "s9-40.jpg" || "s9-41.jpg" || "s9-42.jpg" || "s9-43.jpg" || "s9-44.jpg" || "s9-45.jpg" || "s9-46.jpg" || "s9-47.jpg" || "s9-48.jpg" || "s9-49.jpg"){
@@ -394,12 +403,13 @@ module.exports = {
                     s9Embed.setAuthor(`🖤 You get some useless stuff, ${message.author.username} 🖤`, message.author.avatarURL);
                     s9Embed.setFooter("It might not be a graffiti... i'm a bot after all :)");
                     LP.D = LP.D + 1;
+                    LP.Ess3 = LP.Ess3 -1;
+
                     LP.save().catch(err => console.log(err));
+
 
                 }
                     
-                    LP.Ess3 = LP.Ess3 -1;
-                    LP.save().catch(err => console.log(err));
                     message.channel.send(s9Embed);
                 
             }//s9-2 essence bracket
