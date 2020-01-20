@@ -81,7 +81,8 @@ const LPSchema = mongoose.Schema({
         NewHunta: Boolean,
         AnotherHunta: Boolean
 
-    }
+    },
+    Opened: Array
 
 
 });

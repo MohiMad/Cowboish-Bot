@@ -138,7 +138,8 @@ module.exports = {
                         NewHunta: false,
                         AnotherHunta: false
     
-            }
+            },
+            Opened: []
     
                 })
                 newLP.save().catch(err => console.log(err))
@@ -155,7 +156,9 @@ module.exports = {
                         stripIndents`Essences available are..
                         <:ess1:655840713904488469> | **Essences s9-1** ─ ID ➜  __*s9-1*__
 
-                        <:ess3:655840571616919586> | **COA III essence** - ID: __*coa*__
+                        <:ess3:655840571616919586> | **COA III essence** ─ ID: __*coa*__
+
+                        <:ess2:655840643847028751> | **Essence s9-2** ─ ID: __*s9-2*__
                 `)
                     .setFooter("Example - >open s9-1");
 
@@ -335,6 +338,71 @@ module.exports = {
             }
                   
             }//__________if args === cao___________-
+
+            else if((args[1]) === "s9-2"){
+
+                let number = 49;
+                let Rnumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
+
+                let item = "s9-" + Rnumber + ".jpg";
+
+                const s9Embed = new RichEmbed()
+                    .attachFiles(["./s9-2/" + item ])
+                    .setImage('attachment://' + item);
+
+                if(LP.Ess3 === 0){
+                    return message.reply(`you have 0 s9-2 essences <:ess2:655840643847028751>, try rolling some dices or buy some from the shop!`);
+                }
+
+                else if(item === "s9-1.jpg"){
+                    s9Embed.setColor("0xfcba03");
+                    s9Embed.setAuthor(`💛 ${message.author.username} got the Sister's S skin! 💛`, message.author.avatarURL);
+                    s9Embed.setFooter("Too many S's in the title :'D");
+                    LP.S = LP.S + 1;
+                    LP.save().catch(err => console.log(err));
+
+                }
+
+                else if(item === "s9-2.jpg" || "s9-3.jpg"){
+                    s9Embed.setColor("0xbb2af5");
+                    s9Embed.setAuthor(`💜 ${message.author.username} gets an A skin 💜`, message.author.avatarURL);
+                    s9Embed.setFooter("You probably wish you could get that ingame xD");
+                    LP.A = LP.A + 1;
+                    LP.save().catch(err => console.log(err));
+
+                }
+                else if(item === "s9-4.jpg" || "s9-5.jpg" || "s9-6.jpg" || "s9-7.jpg" || "s9-8.jpg" || "s9-9.jpg"){
+                    s9Embed.setColor("0x2e65b8");
+                    s9Embed.setAuthor(`💙 That's a B skin for ya, ${message.author.username} 💙`, message.author.avatarURL);
+                    s9Embed.setFooter("I don't wanna hear compliments a B skin is better than a graffiti");
+                    LP.B = LP.B + 1;
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+                else if(item === "s9-21.jpg" || "s9-22.jpg" || "s9-23.jpg" || "s9-24.jpg" || "s9-25.jpg" || "s9-26.jpg" || "s9-27.jpg" || "s9-28.jpg" || "s9-29.jpg" || "s9-30.jpg"){
+                    s9Embed.setColor("0x1BE926");
+                    s9Embed.setAuthor(`💚 I'm sorry ${message.author.username}, but that's what you got 💚`, message.author.avatarURL);
+                    s9Embed.setFooter(":))");
+                    LP.C = LP.C + 1;
+                    LP.save().catch(err => console.log(err));
+
+                }
+                else if(item === "s9-10.jpg" || "s9-11.jpg" || "s9-12.jpg" || "s9-13.jpg" || "s9-14.jpg" || "s9-15.jpg" || "s9-16.jpg" || "s9-17.jpg" || "s9-18.jpg" || "s9-19.jpg" || "s9-20.jpg" || "s9-31.jpg" || "s9-32.jpg" || "s9-33.jpg" || "s9-34.jpg" || "s9-35.jpg" || "s9-36.jpg" || "s9-37.jpg" || "s9-38.jpg" || "s9-39.jpg" || "s9-40.jpg" || "s9-41.jpg" || "s9-42.jpg" || "s9-43.jpg" || "s9-44.jpg" || "s9-45.jpg" || "s9-46.jpg" || "s9-47.jpg" || "s9-48.jpg" || "s9-49.jpg"){
+
+                    s9Embed.setColor("0xffffff");
+                    s9Embed.setAuthor(`🖤 You get some useless stuff, ${message.author.username} 🖤`, message.author.avatarURL);
+                    s9Embed.setFooter("It might not be a graffiti... i'm a bot after all :)");
+                    LP.D = LP.D + 1;
+                    LP.save().catch(err => console.log(err));
+
+                }
+                    
+                    LP.Ess3 = LP.Ess3 -1;
+                    LP.save().catch(err => console.log(err));
+                    message.channel.send(s9Embed);
+                
+            }//s9-2 essence bracket
 
         })//_______find one_________
 

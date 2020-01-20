@@ -109,7 +109,8 @@ module.exports = {
                         NewHunta: false,
                         AnotherHunta: false
     
-            }
+            },
+            Opened: []
     
                 })
                 newLP.save().catch(err => console.log(err))
