@@ -358,10 +358,18 @@ module.exports = {
                     s9Embed.setColor("0xfcba03");
                     s9Embed.setAuthor(`💛 ${message.author.username} got the Sister's S skin! 💛`, message.author.avatarURL);
                     s9Embed.setFooter("Too many S's in the title :'D");
-                    LP.S = LP.S + 1;
-                    LP.Ess3 = LP.Ess3 -1;
 
-                    LP.save().catch(err => console.log(err));
+                    if(LP.Opened.includes(item)){
+                        s9Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 2000;
+                   }
+                   else{
+                    LP.S = LP.S + 1;
+                    LP.Opened = [...LP.Opened, item];
+                   }
+
+                LP.Ess3 = LP.Ess3 -1;
+                LP.save().catch(err => console.log(err));
 
                 }
 
@@ -369,7 +377,16 @@ module.exports = {
                     s9Embed.setColor("0xbb2af5");
                     s9Embed.setAuthor(`💜 ${message.author.username} gets an A skin 💜`, message.author.avatarURL);
                     s9Embed.setFooter("You probably wish you could get that ingame xD");
+
+                    if(LP.Opened.includes(item)){
+                        s9Embed.setDescription("You already got that skin before so here takes these **1000** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 1000;
+                   }
+                   else{
                     LP.A = LP.A + 1;
+                    LP.Opened = [...LP.Opened, item];
+                   }
+
                     LP.Ess3 = LP.Ess3 -1;
 
                     LP.save().catch(err => console.log(err));
@@ -379,7 +396,17 @@ module.exports = {
                     s9Embed.setColor("0x2e65b8");
                     s9Embed.setAuthor(`💙 That's a B skin for ya, ${message.author.username} 💙`, message.author.avatarURL);
                     s9Embed.setFooter("I don't wanna hear compliments a B skin is better than a graffiti");
+
+                    if(LP.Opened.includes(item)){
+                        s9Embed.setDescription("You already got that skin before! Here takes these **200** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 200;
+                   }
+                   else{
                     LP.B = LP.B + 1;
+
+                    LP.Opened = [...LP.Opened, item];
+                   }
+
                     LP.Ess3 = LP.Ess3 -1;
 
                     LP.save().catch(err => console.log(err));
@@ -390,7 +417,17 @@ module.exports = {
                     s9Embed.setColor("0x1BE926");
                     s9Embed.setAuthor(`💚 I'm sorry ${message.author.username}, but that's what you got 💚`, message.author.avatarURL);
                     s9Embed.setFooter(":))");
+
+                    if(LP.Opened.includes(item)){
+                        s9Embed.setDescription("You have this item already! here, take these **72** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 72;
+                   }
+                   else{
                     LP.C = LP.C + 1;
+
+                    LP.Opened = [...LP.Opened, item];
+                   }
+
                     LP.Ess3 = LP.Ess3 -1;
 
                     LP.save().catch(err => console.log(err));
@@ -402,7 +439,17 @@ module.exports = {
                     s9Embed.setColor("0xffffff");
                     s9Embed.setAuthor(`🖤 You get some useless stuff, ${message.author.username} 🖤`, message.author.avatarURL);
                     s9Embed.setFooter("It might not be a graffiti... i'm a bot after all :)");
+
+                    if(LP.Opened.includes(item)){
+                        s9Embed.setDescription("You have this item already! here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                   }
+                   else{
                     LP.D = LP.D + 1;
+
+                    LP.Opened = [...LP.Opened, item];
+                   }
+
                     LP.Ess3 = LP.Ess3 -1;
 
                     LP.save().catch(err => console.log(err));
