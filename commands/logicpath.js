@@ -34,7 +34,7 @@ module.exports = {
                     **Essences**
                     <:ess1:655840713904488469> | Essence *s9-1* ➜ **0**
                     <:ess3:655840571616919586> | COAII Essence ➜ **0**
-                    <:ess2:655840643847028751> | Essence *s9-3* ➜ **0**`)
+                    <:ess2:655840643847028751> | Essence *s9-2* ➜ **0**`)
                     .addField("Skins", stripIndents`
                     S: **0**
                     A: **0**
@@ -57,7 +57,7 @@ module.exports = {
                     **Essences**
                     <:ess1:655840713904488469> | Essence *s9-1* ➜ **${LP.Ess1}**
                     <:ess3:655840571616919586> | COAII Essence ➜ **${LP.Ess2}**
-                    <:ess2:655840643847028751> | Essence *s9-3* ➜ **${LP.Ess3}**`)
+                    <:ess2:655840643847028751> | Essence *s9-2* ➜ **${LP.Ess3}**`)
                     .addField("Skins", stripIndents`
                     S: **${LP.S}**
                     A: **${LP.A}**
