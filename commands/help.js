@@ -75,9 +75,12 @@ module.exports = {
 
         const testEmbed = new RichEmbed()
             .setTitle("Identity V logicpath commands!")
+            .setColor("RANDOM")
             .setDescription(stripIndents`
             In this category you get to play matches and roll dices to be able to open the season's current essences :D
+
             **LogicPath commands!**
+
             __*>daily*__ ➜ Get your daily reward, **24** hours cooldown
 
             __*>hunt*__ ➜ Hunt as the Hunter to get some dices
@@ -95,8 +98,6 @@ module.exports = {
             __*>buy*__ ➜ Buy Survivors, Hunters or essences
 
             `)
-            .addField("`daily` | `hunt` | `logicpath` | ``open`` | ``quick`` | ``roll`` | ``shop`` | ``buy``")
-            .setColor("RANDOM")
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
         
             if (args[1] === "logicpath"){
