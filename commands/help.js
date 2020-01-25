@@ -1,5 +1,6 @@
 const { RichEmbed } = require('discord.js');
 
+const { stripIndents } = require('common-tags');
 
 module.exports = {
     name: 'help',
@@ -74,8 +75,27 @@ module.exports = {
 
         const testEmbed = new RichEmbed()
             .setTitle("Identity V logicpath commands!")
-            .setDescription("In this category you get to play matches and roll dices to be able to open the s9-1 by doing `>open` :D")
-            .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔" ,"`daily` | `hunt` | `logicpath` | ``open`` | ``quick`` | ``roll`` | ``shop`` | ``buy``")
+            .setDescription(stripIndents`
+            In this category you get to play matches and roll dices to be able to open the season's current essences :D
+            **LogicPath commands!**
+            __*>daily*__ ➜ Get your daily reward, **24** hours cooldown
+
+            __*>hunt*__ ➜ Hunt as the Hunter to get some dices
+
+            __*>quick*__ ➜ Play a quick match as a survivor to get dices
+
+            __*>roll*__ ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)
+
+            __*>open*__ ➜ Open the season's current essences (<:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)
+
+            __*>logicpath*__ ➜ Check your logicpath status
+
+            __*>shop*__ ➜ A list of stuff you can buy (Survivors, Hunters and essences)
+
+            __*>buy*__ ➜ Buy Survivors, Hunters or essences
+
+            `)
+            .addField("`daily` | `hunt` | `logicpath` | ``open`` | ``quick`` | ``roll`` | ``shop`` | ``buy``")
             .setColor("RANDOM")
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
         
