@@ -206,6 +206,10 @@ bot.on('message', async message => {
             bot.commands.get('logicpath').execute(message, args, bot, errWhere, MohiMoo);
         break;
 
+        case "ID": case "setID":
+            bot.commands.get('id').execute(message, args, bot, errWhere, MohiMoo);
+        break;
+
         case "quick": case "play":
             bot.commands.get('quick').execute(message, args, errWhere, MohiMoo);
         break;
@@ -329,6 +333,8 @@ bot.on('message', async message => {
         case "setup": case "set":
             bot.commands.get('setup').execute(message, args, errWhere, MohiMoo, bot);
         break;
+
+        
     }
         //End of config commands
 
