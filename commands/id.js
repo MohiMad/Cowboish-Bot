@@ -108,17 +108,29 @@ module.exports = {
             message.reply("the ID given must contain **numbers** only and is **6, 7 or 8** numbers long!")
 
         }
-        else if(args[1].length !== 7 || 6 || 8){
-            message.reply("the ID given must contain **numbers** only and is **7** numbers long!")
-
-        }
-        else{
-
+        else if(args[1].length === 6 ){
             LP.ID = args[1];
             LP.save().catch(err => console.log(err));
 
             message.channel.send("Succesfully set your ID to **" + args[1] + "**");
 
+        }
+        else if(args[1].length === 7 ){
+            LP.ID = args[1];
+            LP.save().catch(err => console.log(err));
+
+            message.channel.send("Succesfully set your ID to **" + args[1] + "**");
+
+        }
+        else if(args[1].length === 8 ){
+            LP.ID = args[1];
+            LP.save().catch(err => console.log(err));
+
+            message.channel.send("Succesfully set your ID to **" + args[1] + "**");
+
+        }
+        else{
+            message.reply("the ID given must contain **numbers** only and is **6, 7 or 8** numbers long!");
         }
     }catch(err){
         MohiMoo.send(errWhere + "\n```" + err + "```");
