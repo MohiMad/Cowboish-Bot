@@ -108,7 +108,7 @@ module.exports = {
             message.reply("the ID given must contain **numbers** only and is **7** numbers long!")
 
         }
-        else if(args[1].length !== 7){
+        else if(args[1].length !== 7 || args[1].length !== 6 || args[1].length !== 8){
             message.reply("the ID given must contain **numbers** only and is **7** numbers long!")
 
         }
