@@ -105,10 +105,10 @@ module.exports = {
         }
 
         else if(isNaN(args[1])){
-            message.reply("the ID given must contain **numbers** only and is **7** numbers long!")
+            message.reply("the ID given must contain **numbers** only and is **6, 7 or 8** numbers long!")
 
         }
-        else if(args[1].length !== 7 || args[1].length !== 6 || args[1].length !== 8){
+        else if(args[1].length !== 7 || 6 || 8){
             message.reply("the ID given must contain **numbers** only and is **7** numbers long!")
 
         }
