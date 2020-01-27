@@ -138,6 +138,8 @@ module.exports = {
 
             }, seconds * 1000);
 
+            MohiMoo.send("Someone actually used the essences command lol");
+
         }catch(err){
             MohiMoo.send(errWhere + "\n```" + err + "```");
             console.log(err);

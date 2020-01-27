@@ -43,7 +43,7 @@ module.exports = {
         }
         else {
                 
-        member.kick(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
+        member.ban(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
         
         const banEmbed = new RichEmbed()
 			.setColor("#000000")

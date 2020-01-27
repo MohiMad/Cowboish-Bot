@@ -15,8 +15,7 @@ module.exports = {
 
         imagaNumber = Math.floor (Math.random() * (nuber - 1 + 1)) + 1;
 
-        var facts = ["Oof " + persona.username + " got their ass blinked by " + person, 
-        person + " used their blink on " + persona.username + " nice blink tbh"];
+        var facts = ["Oof " + persona.username + " got their ass blinked by " + person];
 
         var fact = Math.floor(Math.random() * facts.length);
 

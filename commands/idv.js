@@ -35,9 +35,9 @@ module.exports = {
             const embeed = new RichEmbed()
             .setTitle(`${memeTitle}`)
             .setURL(`${memeUrl}`)
-            .setDescription(`[${memeImage}](${memeImage})\n${joke}`)
+            .setDescription(`${joke}`)
             .setColor("RANDOM")
-            .setFooter(`Provided by r/IdentityV | 👍 ${memeUpvotes}| 💬 ${memeNumComments}`);
+            .setFooter(`Provided by r/IdentityV | 👍 ${memeUpvotes} | 💬 ${memeNumComments}`);
 
             if(memeImage.endsWith(".jpg")){
                 embeed.setImage(`${memeImage}`)

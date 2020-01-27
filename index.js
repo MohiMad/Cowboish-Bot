@@ -5,7 +5,7 @@ const config = require("./config.json")
 const fs = require('fs');
 const DBL = require("dblapi.js");
 
-const { stripIndents } = require ("common-tags");
+const { stripIndents } = require("common-tags");
 //___________________________________
 
 
@@ -17,11 +17,11 @@ const dbl = new DBL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMD
 
 dbl.webhook.on('ready', hook => {
     console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
-  });
-  
-  dbl.webhook.on('vote', vote => {
+});
+
+dbl.webhook.on('vote', vote => {
     console.log(`User with ID ${vote.user} just voted!`);
-  });
+});
 
 
 //_______________MONGOOSE STUFF____________________
@@ -45,7 +45,7 @@ for (const file of commandFiles) {
     bot.commands.set(command.name, command);
     var time = new Date();
     var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
-} 
+}
 
 //__________-*End of command handler____________
 
@@ -53,11 +53,11 @@ bot.on("guildCreate", guild => {
 
     const create = bot.channels.get('651476936379596830');
 
-    if (!create) return; 
+    if (!create) return;
     else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**)\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
-//Sends a message to my server if bot joins a new server (NOT WORKING)
+    //Sends a message to my server if bot joins a new server (NOT WORKING)
 
-//Channel loop so bot sends a message to the server it joined
+    //Channel loop so bot sends a message to the server it joined
     let channelID;
     let channels = guild.channels;
     channelLoop:
@@ -70,16 +70,16 @@ bot.on("guildCreate", guild => {
     }
     const welcomeEmbed = new Discord.RichEmbed()
         .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
-        stripIndents`**>My cowboish birthday 🎉🎊 14/10/2019**
+            stripIndents`**>My cowboish birthday 🎉🎊 14/10/2019**
         **> 👍 | do >help and i will be there for help :)**
         **> 🔧 | My prefix is > remember using it before any command of my commands**
         **> 🙂 | Now im in ${bot.guilds.size}, servers and growing <3**
         **> ❔  | Errors or suggestions? do >suggest/>issue**`)
         .addBlankField()
-        .addField("💗 | Support me", 
-        stripIndents`
+        .addField("💗 | Support me",
+            stripIndents`
         [Cowboish website](https://rkanjo2.wixsite.com/cowboishbot) | [Invite me to servers around](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | [Cowboish Server](https://discordapp.com/invite/YWcSukS)`);
-        
+
     let channel = bot.channels.get(guild.systemChannelID || channelID);
     channel.send(welcomeEmbed);
     //sends the embed when joined
@@ -88,27 +88,26 @@ bot.on("guildCreate", guild => {
 
         const logs = bot.channels.get('651476936379596830');
 
-        if (!logs) return; 
-        
+        if (!logs) return;
+
         else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
-    
+
     });
     //if bot deleted it will let me know (NOT WORKING)
 
-    
+
 });
 
 bot.on('ready', () => {
     console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
-    console.log(`--------------------------------------------`);
-    console.log(`Bot is up and running`);
-    console.log(`--------------------------------------------`);
+    console.log(`___________________________________________`);
+    console.log(`Now let's lasso sum peeps >:D`);
+    console.log(`___________________________________________`);
 
-    bot.user.setActivity('Identit | >help')
     const activities_list = [
-        `Identity V in ${bot.guilds.size} servers` ,
+        `Identity V in ${bot.guilds.size} servers`,
         "Welcome to Identit | >help",
-        "Identit | >help", 
+        "Identit | >help",
         `milestone ${bot.guilds.size}/100 <3`,
         `${bot.guilds.size} guilds | ${bot.users.size} users`
         //random activity list
@@ -125,7 +124,7 @@ bot.on('message', async message => {
 
     const MohiMoo = bot.users.get("478527909250990090");
 
-    let errWhere = ("Hit an error in the channel" + message.channel + "in the guild" + message.guild );
+    let errWhere = ("Hit an error in the channel" + message.channel + "in the guild" + message.guild);
 
 
     let prefix = ">";
@@ -134,7 +133,7 @@ bot.on('message', async message => {
 
     if (!message.content.startsWith(prefix)) return;
 
-    
+
     if (message.author.id === bot.user.id) return;
 
 
@@ -161,7 +160,7 @@ bot.on('message', async message => {
             bot.commands.get('essence').execute(message, args, errWhere, MohiMoo);
             break;
 
-       
+
 
         case "randomize": case "random": case "pick":
             bot.commands.get('random').execute(message, args, errWhere, MohiMoo);
@@ -183,11 +182,11 @@ bot.on('message', async message => {
             bot.commands.get('meme').execute(message, args, errWhere, MohiMoo);
             break;
 
-        case 'idv': case "identityv": 
+        case 'idv': case "identityv":
             bot.commands.get('idv').execute(message, args, errWhere, MohiMoo);
             break;
 
-        case 'say': case "repeat": 
+        case 'say': case "repeat":
             bot.commands.get('say').execute(message, args, errWhere, MohiMoo);
             break;
 
@@ -200,35 +199,35 @@ bot.on('message', async message => {
 
         case "open":
             bot.commands.get('open').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
         case "LP": case "logicpath": case "inv": case "inventroy":
             bot.commands.get('logicpath').execute(message, args, bot, errWhere, MohiMoo);
-        break;
+            break;
 
         case "ID": case "setID":
             bot.commands.get('id').execute(message, args, bot, errWhere, MohiMoo);
-        break;
+            break;
 
         case "quick": case "play":
             bot.commands.get('quick').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
         case "hunter": case "hunt":
             bot.commands.get('hunt').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
         case "dailyreward": case "daily":
             bot.commands.get('daily').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
         case "shop":
             bot.commands.get('shop').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
         case "buy":
             bot.commands.get('buy').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
 
 
@@ -261,7 +260,7 @@ bot.on('message', async message => {
             bot.commands.get('shoot').execute(message, args, errWhere, MohiMoo);
             break;
 
-        case "bully": 
+        case "bully":
             bot.commands.get('bully').execute(message, args, errWhere, MohiMoo);
             break;
         //End of Identity V Actions
@@ -271,27 +270,19 @@ bot.on('message', async message => {
         //Moderation Commands starts here
 
         case "clear": case "purge": case "delete":
-
             bot.commands.get('clear').execute(message, args, errWhere, MohiMoo);
-
             break;
 
         case "kick":
-
             bot.commands.get('kick').execute(message, args, errWhere, MohiMoo);
-
             break;
 
         case "ban":
-
             bot.commands.get('ban').execute(message, args, errWhere, MohiMoo);
-
             break;
 
         case "mute": case "shutup":
-
             bot.commands.get('mute').execute(message, args, errWhere, MohiMoo);
-
             break;
 
         //End of moderation commands
@@ -300,20 +291,18 @@ bot.on('message', async message => {
         //Config commands starts here
 
         case "info": case "botinfo":
-
             bot.commands.get('info').execute(message, args, errWhere, MohiMoo);
-
             break;
 
         case "userinfo": case "usrinfo":
             bot.commands.get('userinfo').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
         case "serverinfo": case "srvrinfo":
             bot.commands.get('serverinfo').execute(message, args, errWhere, MohiMoo);
-        break;
+            break;
 
-        case 'ping': 
+        case 'ping':
             const m = await message.channel.send("Ping?");
             m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
             break;
@@ -325,20 +314,20 @@ bot.on('message', async message => {
         case 'guilds': case "servers":
             message.channel.send(`Cowboish stats => **${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
             break;
-        
+
         case 'suggest': case "reportbug": case "issue":
-                bot.commands.get('suggest').execute(message, args, bot);
-        break;
+            bot.commands.get('suggest').execute(message, args, bot);
+            break;
 
         case "setup": case "set":
             bot.commands.get('setup').execute(message, args, errWhere, MohiMoo, bot);
-        break;
+            break;
 
-        
+
     }
-        //End of config commands
+    //End of config commands
 
-    
+
 
 });//___________end of message event_________
 
@@ -348,66 +337,66 @@ bot.on('guildMemberAdd', async member => {
 
     const guild = await Guild.findOne({ guildID: member.guild.id });
 
-        if(!guild) return;
+    if (!guild) return;
 
-        else if(guild.welcome.enabled === false) return;
+    else if (guild.welcome.enabled === false) return;
 
-        else if(!guild.welcome.message || guild.welcome.message.length < 1) return;
+    else if (!guild.welcome.message || guild.welcome.message.length < 1) return;
 
-        else if(guild.welcome.channel === null) return;
+    else if (guild.welcome.channel === null) return;
 
 
-        const welcomeMessage = guild.welcome.message
+    const welcomeMessage = guild.welcome.message
         .replace("memberCount", member.guild.memberCount)
         .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
-        .replace("serverName",  member.guild.name)
+        .replace("serverName", member.guild.name)
         .replace("userName", member.user.username)
         .replace("userMention", member.user.toString())
         .replace("userTag", member.user.tag);
 
 
-        const welcomeChannel = member.guild.channels.get(guild.welcome.channel);
+    const welcomeChannel = member.guild.channels.get(guild.welcome.channel);
 
-        if(!welcomeChannel) return;
+    if (!welcomeChannel) return;
 
-        else{
+    else {
 
         welcomeChannel.send(welcomeMessage)
-        .catch(() => void null);
+            .catch(() => void null);
 
-        }
+    }
 
 });//:::::::::end of Guild member add::::::::::
 
 bot.on('guildMemberLeave', async member => {
-    
-        const Guild = require("./models/guild");
 
-        const guild = await Guild.findOne({ guildID: member.guild.id });
+    const Guild = require("./models/guild");
 
-        if(!guild) return;
+    const guild = await Guild.findOne({ guildID: member.guild.id });
 
-        else if((guild.leave.enabled) === false) return;
+    if (!guild) return;
 
-        else if(!guild.leave.message || guild.leave.message.length < 1) return;
+    else if ((guild.leave.enabled) === false) return;
 
-        else if((!guild.leave.message) === null) return;
+    else if (!guild.leave.message || guild.leave.message.length < 1) return;
 
-        else if((guild.leave.channel) === null) return;
+    else if ((!guild.leave.message) === null) return;
 
-        const leaveMessage = guild.leave.message
+    else if ((guild.leave.channel) === null) return;
+
+    const leaveMessage = guild.leave.message
         .replace("memberCount", member.guild.memberCount)
         .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
-        .replace("serverName",  member.guild.name)
+        .replace("serverName", member.guild.name)
         .replace("userName", member.user.username)
         .replace("userMention", member.user.toString())
         .replace("userTag", member.user.tag);
 
-        const leaveChannel = member.guild.channels.get(guild.leave.channel);
+    const leaveChannel = member.guild.channels.get(guild.leave.channel);
 
-        if(leaveChannel === null) return;
+    if (leaveChannel === null) return;
 
-        leaveChannel.send(leaveMessage);
+    leaveChannel.send(leaveMessage);
 
 });//__________________end of Guild member leave event_____________-
 

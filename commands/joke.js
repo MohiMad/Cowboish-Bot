@@ -34,7 +34,8 @@ module.exports = {
         .setTitle(title)
         .setURL(memeUrl)
         .setColor("RANDOM")
-        .setDescription(joke + "\n\nJoke from [r/jokes](https://www.reddit.com/r/jokes)");
+        .setFooter("Joke from r/jokes")
+        .setDescription(joke);
 
         if (cooldown.has(message.author.id)){
             if(message.deletable) message.delete();
