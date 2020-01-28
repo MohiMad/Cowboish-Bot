@@ -74,35 +74,30 @@ module.exports = {
             else if(!args[1]){
 
                 if((guild.welcome.channel) === null){
-                    doneEmbed.addField("Welcome Channel is not set!", "Do `>setup welcomechannel <#channelhere>`");
+                    doneEmbed.addField("<:nae:671454247505625110> Welcome Channel is not set!", "Do `>setup welcomechannel <#channelhere>`");
                     }else{
-                        doneEmbed.addField("Welcome channel", `<#${guild.welcome.channel}>`);
+                        doneEmbed.addField("👋 Welcome channel", `<#${guild.welcome.channel}>`);
                     }
 
                     if((guild.welcome.message) === null){
-                        doneEmbed.addField("Welcome message is not set!", "Do `>setup welcomemessage <message here, can be long>`");
+                        doneEmbed.addField("<:nae:671454247505625110> Welcome message is not set!", "Do `>setup welcomemessage <message here, can be long>`");
                     }
                     else{
-                        doneEmbed.addField("Welcome message", `${guild.welcome.message}`);
+                        doneEmbed.addField("👋 Welcome message", `${guild.welcome.message}`);
                     }
                     if((guild.leave.channel) === null){
-                        doneEmbed.addField("Leave channel is not set!", "Do `>setup leavechannel <#channelTagHere>`");
+                        doneEmbed.addField("<:nae:671454247505625110> Leave channel is not set!", "Do `>setup leavechannel <#channelTagHere>`");
                     }
                     else{
-                        doneEmbed.addField("Leave channel", `<#${guild.leave.channel}>`);
+                        doneEmbed.addField("😢 Leave channel", `<#${guild.leave.channel}>`);
                     }
                     if((guild.leave.message) === null){
-                        doneEmbed.addField("Leave message is not set!", "Do `>setup leavemessage <messsage goes here!>`");
+                        doneEmbed.addField("<:nae:671454247505625110> Leave message is not set!", "Do `>setup leavemessage <messsage goes here!>`");
                     }
                     else{
-                        doneEmbed.addField("Leave message", `${guild.leave.message}`);
+                        doneEmbed.addField("😢 Leave message", `${guild.leave.message}`);
                     }
-                    if((guild.autoroles.length) === 0){
-                        doneEmbed.addField("There is no autorole for new members", "If you want to set one, use `>setup autorole add <tagTheRoleHere>`" );
-                    }
-                    else{
-                        doneEmbed.addField("Autorole", `The autorole given to new members is ${guild.autoroles}` );
-                    }
+                    
                 
                 
                     message.channel.send(doneEmbed);
