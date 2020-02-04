@@ -1,4 +1,5 @@
 const { RichEmbed } = require('discord.js');
+const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'bully', 
     description: "bullyies you",
@@ -6,7 +7,7 @@ module.exports = {
 
         try{
 
-        if (!args[1]) return message.reply("Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(10000));
+        if (!args[1]) return ErrorMsg(this.bot, message,"Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(10000));
 
 let persona  = message.mentions.users.first()
 

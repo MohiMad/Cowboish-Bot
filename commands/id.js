@@ -1,4 +1,5 @@
 const logicPath = require("../models/logicpath.js");
+const { ErrorMsg } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 

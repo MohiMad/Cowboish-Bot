@@ -1,3 +1,4 @@
+const { ErrorMsg } = require("../functions.js");
 
 module.exports = {
     name: 'random', 

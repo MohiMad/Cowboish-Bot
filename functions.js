@@ -1,3 +1,4 @@
+const { RichEmbed } = require('discord.js');
 module.exports = {
     getMember: function(message, toFind = '') {
         toFind = toFind.toLowerCase();
@@ -36,6 +37,15 @@ module.exports = {
     formatDate: function(date) {
         return new Intl.DateTimeFormat('en-US').format(date)
     },
+    ErrorMsg: (bot, message, error) => {
+		const errEmbed = new RichEmbed()
+			.setTitle("<:nae:671454247505625110> Wrong usage! >:/")
+			.setColor("RED")
+			.setDescription(error)
+			.setAuthor(message.author.username,  message.author.displayAvatarURL)
+			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
+		message.channel.send(errEmbed);
+	},
 
     
 }

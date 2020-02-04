@@ -1,4 +1,5 @@
 const { RichEmbed } = require('discord.js');
+const { ErrorMsg } = require("../functions.js");
 
 module.exports = {
     name: 'shoot',
