@@ -104,14 +104,14 @@ bot.on('ready', () => {
     console.log(`Now let's lasso sum peeps >:D`);
     console.log(`___________________________________________`);
 
-    //*`Identity V in ${bot.guilds.size} servers`, "Welcome to Identit | >help", `milestone ${bot.guilds.size}/100 <3`, `${bot.guilds.size} guilds | ${bot.users.size} users`
-
-
-    //
     
 
     const activities_list = [
-        `🥳 celebrating ${bot.guilds.size} servers 🎉`
+        `🥳 celebrating ${bot.guilds.size} servers 🎉`, 
+        `Identity V in ${bot.guilds.size} servers 💕`, 
+        "Welcome to Identit | >help", 
+        `milestone ${bot.guilds.size}/100 💕`, 
+        `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
     ];
 
     setInterval(() => {
