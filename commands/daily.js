@@ -6,17 +6,15 @@ module.exports = {
     description: "daily rewards",
     execute(message, args, MohiMoo, errWhere) {
 
-        try{
-
         const coolEmbed = new RichEmbed()
             .setTitle("Take it easy on me dude!")
             .setColor("0xe80000")
             .setDescription("It's a DAILY reward so you have to wait 24 hours until you can get your reward again..");
-            
 
 
 
-            const logicPath = require("../models/logicpath.js");
+
+        const logicPath = require("../models/logicpath.js");
 
         logicPath.findOne({
             UserID: message.author.id
@@ -24,7 +22,7 @@ module.exports = {
         }, (err, LP) => {
 
             if (err) console.log(err);
-        
+
 
             if (!LP) {
 
@@ -44,9 +42,9 @@ module.exports = {
                     C: 0,
                     D: 0,
                     Echoes: 0,
-    
+
                     ID: 0,
-    
+
                     Survivors: {
                         Cowboy: false,
                         Mercenary: false,
@@ -71,9 +69,9 @@ module.exports = {
                         NewSurv: false,
                         AnotherSurv: false,
                     },
-    
+
                     Hunters: {
-    
+
                         WuChang: false,
                         AxeBoi: false,
                         Lizard: false,
@@ -91,34 +89,34 @@ module.exports = {
                         Sister: false,
                         NewHunta: false,
                         AnotherHunta: false
-    
-            },
-            Opened: []
-    
+
+                    },
+                    Opened: []
+
                 })
                 newLP.save().catch(err => console.log(err))
-                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"));
+                    .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"));
 
             }
 
-            else if (cooldown.has(message.author.id)){
+            else if (cooldown.has(message.author.id)) {
                 if (message.deletable) message.delete();
 
                 message.channel.send(coolEmbed).then(m => m.delete(20000));
-    
-                
+
+
             }
             else {
 
                 const dailyEmbed = new RichEmbed()
-                .setTitle("🎁 Here is your daily reward 🎁")
-                .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Here! take these **3**<:dice:655384578499936257>  **200**<:clue:655384523735040000>")
-                .setColor("0xffd500")
-                .setFooter("Remember to come back the next day to get your rewards again :)");
+                    .setTitle("🎁 Here is your daily reward 🎁")
+                    .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", "Here! take these **3**<:dice:655384578499936257>  **200**<:clue:655384523735040000>")
+                    .setColor("0xffd500")
+                    .setFooter("Remember to come back the next day to get your rewards again :)");
 
 
                 message.channel.send(dailyEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
                 LP.Dices = LP.Dices + 3;
                 LP.Clues = LP.Clues + 200;
@@ -127,7 +125,7 @@ module.exports = {
 
 
             }
-            
+
             setTimeout(() => {
                 cooldown.delete(message.author.id)
 
@@ -135,12 +133,7 @@ module.exports = {
 
         })
 
-    }catch(err){
-        MohiMoo.send(errWhere + "\n```" + err + "```");
-        console.log(err);
-        message.channel.send("❌ **An error has occured!** sorry :C");
 
-    }
 
 
 

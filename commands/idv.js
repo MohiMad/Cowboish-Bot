@@ -6,8 +6,6 @@ module.exports = {
     description: "sends a random idv post",
     execute(message, args, MohiMoo, errWhere){
 
-        try{
-
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
 
             const random = subReddits[Math.floor(Math.random() * subReddits.length)];
@@ -66,11 +64,5 @@ module.exports = {
                
         })
     
-    }catch(err){
-            MohiMoo.send(errWhere + "\n```" + err + "```");
-            console.log(err);
-            message.channel.send("❌ **An error has occured!** sorry :C");
-        }
-        
         }
 }

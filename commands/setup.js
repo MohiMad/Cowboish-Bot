@@ -6,25 +6,25 @@ module.exports = {
     description: "set some stuff for the guild",
     execute(message, args, MohiMoo, errWhere) {
 
-        try {
+
 
 
         const errEmbed = new RichEmbed()
             .setTitle("❌ Ooops an error has occurred! ❌")
             .setColor("0xf72020");
 
-            const doneEmbed = new RichEmbed()
-                .setTitle(`${message.guild.name} setup information!`)
-                .setDescription("If there is no info given, then the setup is null!")
-                .setColor("RANDOM");
+        const doneEmbed = new RichEmbed()
+            .setTitle(`${message.guild.name} setup information!`)
+            .setDescription("If there is no info given, then the setup is null!")
+            .setColor("RANDOM");
 
-            const sucEmbed = new RichEmbed()
-                .setTitle("Changes committed succesfully!")
-                .setColor("0x20f72b")
-                .setTimestamp();
+        const sucEmbed = new RichEmbed()
+            .setTitle("Changes committed succesfully!")
+            .setColor("0x20f72b")
+            .setTimestamp();
 
 
-        
+
 
         Guild.findOne({
 
@@ -70,40 +70,40 @@ module.exports = {
                 errEmbed.setFooter("MANAGE_GUILD permission is required");
                 return message.channel.send(errEmbed);
             }
-            
-            else if(!args[1]){
 
-                if((guild.welcome.channel) === null){
+            else if (!args[1]) {
+
+                if ((guild.welcome.channel) === null) {
                     doneEmbed.addField("<:nae:671454247505625110> Welcome Channel is not set!", "Do `>setup welcomechannel <#channelhere>`");
-                    }else{
-                        doneEmbed.addField("👋 Welcome channel", `<#${guild.welcome.channel}>`);
-                    }
+                } else {
+                    doneEmbed.addField("👋 Welcome channel", `<#${guild.welcome.channel}>`);
+                }
 
-                    if((guild.welcome.message) === null){
-                        doneEmbed.addField("<:nae:671454247505625110> Welcome message is not set!", "Do `>setup welcomemessage <message here, can be long>`");
-                    }
-                    else{
-                        doneEmbed.addField("👋 Welcome message", `${guild.welcome.message}`);
-                    }
-                    if((guild.leave.channel) === null){
-                        doneEmbed.addField("<:nae:671454247505625110> Leave channel is not set!", "Do `>setup leavechannel <#channelTagHere>`");
-                    }
-                    else{
-                        doneEmbed.addField("😢 Leave channel", `<#${guild.leave.channel}>`);
-                    }
-                    if((guild.leave.message) === null){
-                        doneEmbed.addField("<:nae:671454247505625110> Leave message is not set!", "Do `>setup leavemessage <messsage goes here!>`");
-                    }
-                    else{
-                        doneEmbed.addField("😢 Leave message", `${guild.leave.message}`);
-                    }
-                    
-                
-                
-                    message.channel.send(doneEmbed);
+                if ((guild.welcome.message) === null) {
+                    doneEmbed.addField("<:nae:671454247505625110> Welcome message is not set!", "Do `>setup welcomemessage <message here, can be long>`");
+                }
+                else {
+                    doneEmbed.addField("👋 Welcome message", `${guild.welcome.message}`);
+                }
+                if ((guild.leave.channel) === null) {
+                    doneEmbed.addField("<:nae:671454247505625110> Leave channel is not set!", "Do `>setup leavechannel <#channelTagHere>`");
+                }
+                else {
+                    doneEmbed.addField("😢 Leave channel", `<#${guild.leave.channel}>`);
+                }
+                if ((guild.leave.message) === null) {
+                    doneEmbed.addField("<:nae:671454247505625110> Leave message is not set!", "Do `>setup leavemessage <messsage goes here!>`");
+                }
+                else {
+                    doneEmbed.addField("😢 Leave message", `${guild.leave.message}`);
+                }
+
+
+
+                message.channel.send(doneEmbed);
             }//::::::::To setup embed::::::::::::::::::
 
-            if((args[1]) === "welcomechannel"){
+            if ((args[1]) === "welcomechannel") {
                 const channel = (message.mentions.channels.first());
                 if (args[2] === "disable") {
                     sucEmbed.setDescription("✅ Succesfully set greetings to flase");
@@ -123,77 +123,72 @@ module.exports = {
                     guild.welcome.enabled = true;
                     guild.welcome.channel = channel.id;
                     guild.save().catch(console.error);
+                }
+            }//_____________end of welcomechannel setup______________
+
+            if ((args[1]) === "welcomemessage") {
+                if (!args[2]) {
+                    errEmbed.setDescription("Please set a welcome message you want me to send whenever a new member joins\nExample: `>setup welcomemessage <welcomemessage here, can be long af!>`\nRemember that the placeholders are always active\n**memberCount**: gets how many members there are in the server\n**botCount**: gets how many bots there is in the server\n**serverName**: gets the name of the server\n**userName**: gets the name of the member\n**userMention**: mentions the new member\n**userTag**: gets the new member's tag");
+                    message.channel.send(errEmbed);
+                }
+                else {
+                    sucEmbed.setDescription(`✅ Welcome message is now set to\n*${args.slice(2).join(" ")}*\nYou're all set for the greetings! Cowboish bot will now greet new members ;D`);
+                    message.channel.send(sucEmbed);
+
+                    guild.welcome.message = args.slice(2).join(" ");
+                    guild.save().catch(console.error);
+
+                }
+
             }
-        }//_____________end of welcomechannel setup______________
+            if ((args[1]) === "leavechannel") {
+                const channel = (message.mentions.channels.first());
 
-        if((args[1]) === "welcomemessage"){
-            if(!args[2]){
-                errEmbed.setDescription("Please set a welcome message you want me to send whenever a new member joins\nExample: `>setup welcomemessage <welcomemessage here, can be long af!>`\nRemember that the placeholders are always active\n**memberCount**: gets how many members there are in the server\n**botCount**: gets how many bots there is in the server\n**serverName**: gets the name of the server\n**userName**: gets the name of the member\n**userMention**: mentions the new member\n**userTag**: gets the new member's tag");
-                message.channel.send(errEmbed);
-            }
-            else{
-                sucEmbed.setDescription(`✅ Welcome message is now set to\n*${args.slice(2).join(" ")}*\nYou're all set for the greetings! Cowboish bot will now greet new members ;D`);
-                message.channel.send(sucEmbed);
+                if (args[2] === "disable") {
+                    sucEmbed.setDescription(`✅ Leave channel is disabled now!\nI will no longer say bai to members...`);
+                    message.channel.send(sucEmbed);
 
-                guild.welcome.message = args.slice(2).join(" ");
-                guild.save().catch(console.error);
-                
-            }
+                    guild.leave.enabled = false;
+                    return guild.save().catch(console.error);
+                }
 
-        }
-        if((args[1]) === "leavechannel"){
-            const channel = (message.mentions.channels.first());
+                else if (!channel) {
+                    errEmbed.setDescription("Please provide the channel name after the command\nExample: `>setup leavechannel <#channelname>`");
+                    message.channel.send(errEmbed);
+                }
+                else {
 
-            if (args[2] === "disable") {
-                sucEmbed.setDescription(`✅ Leave channel is disabled now!\nI will no longer say bai to members...`);
-                message.channel.send(sucEmbed);
+                    sucEmbed.setDescription(`✅ Leave channel is now set to <#${channel}>!\nOne more step! you need to set the leave message by doing\n` + "`>setup leavemessage <leave message here..>`");
+                    message.channel.send(sucEmbed);
 
-                guild.leave.enabled = false;
-                return guild.save().catch(console.error);
-            }
+                    guild.leave.enabled = true;
+                    guild.leave.channel = channel.id;
+                    guild.save().catch(console.error);
+                }
+            }//_____________SETUP FOR THE LEAVE CHANNEL_____________
 
-            else if (!channel) {
-                errEmbed.setDescription("Please provide the channel name after the command\nExample: `>setup leavechannel <#channelname>`");
-                message.channel.send(errEmbed);
-            }
-            else {
+            if ((args[1]) === "leavemessage") {
 
-                sucEmbed.setDescription(`✅ Leave channel is now set to <#${channel}>!\nOne more step! you need to set the leave message by doing\n` + "`>setup leavemessage <leave message here..>`");
-                message.channel.send(sucEmbed);
+                if (!args[2]) {
+                    errEmbed.setDescription("Please set a welcome message you want me to send whenever a new member joins\nExample: `>setup leavemessage <leavemessage here, can be long>`\nRemember that the placeholders are always active!\n::------------------------------------::\n**memberCount**: gets how many members there are in the server\n**botCount**: gets how many bots there is in the server\n**serverName**: gets the name of the server\n**userName**: gets the name of the member\n**userMention**: mentions the new member\n**userTag**: gets the new member's tag");
+                    message.channel.send(errEmbed);
+                }
+                else {
+                    sucEmbed.setDescription(`✅ Leave message is now set to\n*${args.slice(2).join(" ")}*\nYou're all set! Cowboish bot will now say goodbye to the badboiz`);
+                    message.channel.send(sucEmbed);
 
-                guild.leave.enabled = true;
-                guild.leave.channel = channel.id;
-                guild.save().catch(console.error);
-        }
-    }//_____________SETUP FOR THE LEAVE CHANNEL_____________
+                    guild.leave.message = args.slice(2).join(" ");
+                    guild.save().catch(console.error);
 
-    if((args[1]) === "leavemessage"){
+                }
 
-        if(!args[2]){
-            errEmbed.setDescription("Please set a welcome message you want me to send whenever a new member joins\nExample: `>setup leavemessage <leavemessage here, can be long>`\nRemember that the placeholders are always active!\n::------------------------------------::\n**memberCount**: gets how many members there are in the server\n**botCount**: gets how many bots there is in the server\n**serverName**: gets the name of the server\n**userName**: gets the name of the member\n**userMention**: mentions the new member\n**userTag**: gets the new member's tag");
-            message.channel.send(errEmbed);
-        }
-        else{
-            sucEmbed.setDescription(`✅ Leave message is now set to\n*${args.slice(2).join(" ")}*\nYou're all set! Cowboish bot will now say goodbye to the badboiz`);
-                message.channel.send(sucEmbed);
-
-            guild.leave.message = args.slice(2).join(" ");
-            guild.save().catch(console.error);
-
-        }
-
-    }//------------Leave message here::::::::::::
+            }//------------Leave message here::::::::::::
 
 
 
         })//________________Guild. finde one_________________
 
-    }catch(err){
-        MohiMoo.send(errWhere + "\n```" + err + "```");
-        console.log(err);
-        message.channel.send("❌ **An error has occured!** sorry :C");
-    }
-    
+
 
     }
 }

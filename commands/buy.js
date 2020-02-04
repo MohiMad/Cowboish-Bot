@@ -6,9 +6,9 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'buy',
     description: "buy some stuff",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
-        try {
+
 
             const buyEmbed = new RichEmbed()
                 .setTimestamp()
@@ -755,12 +755,7 @@ module.exports = {
 
             })//LP 
 
-        } catch (err) {
-            MohiMoo.send(errWhere + "\n```" + err + "```");
-            console.log(err);
-            message.channel.send("❌ **An error has occured!** sorry :C");
-
-        }
+        
 
     }
 

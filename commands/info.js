@@ -6,7 +6,6 @@ module.exports = {
     description: "info about bot",
     execute(message, args, bot, MohiMoo, errWhere){
 
-        try{
 
 const betterEmbed = new RichEmbed()
     .setThumbnail(bot.displayAvatarURL)
@@ -36,11 +35,6 @@ const betterEmbed = new RichEmbed()
 
     message.channel.send(betterEmbed);
 
-}catch(err){
-    MohiMoo.send(errWhere + "\n```" + err + "```");
-    console.log(err);
-    message.channel.send("❌ **An error has occured!** sorry :C");
-}
 
     }
 

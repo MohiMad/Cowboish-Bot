@@ -5,8 +5,6 @@ module.exports = {
     description: "rolls a 4 sided dice",
     execute(message, args, MohiMoo, errWhere) {
 
-        try{
-
         //------------------Some value here
 
         //random dice chances
@@ -14,7 +12,7 @@ module.exports = {
         let imagNumba = Math.floor(Math.random() * (numba - 1 + 1)) + 1;
         let rollattach = 'dice' + imagNumba + ".gif";
         //ends here
-        
+
         const coolEmbed = new RichEmbed()
             .setTitle("Ooof i'm tired, can i get carried?")
             .setDescription("To keep spamming away, there is a cooldown set to 10 seconds for this command, so now lemme rest just 10 seconds")
@@ -125,7 +123,7 @@ module.exports = {
         }, (err, LP) => {
 
             if (err) console.log(err);
-        
+
 
             if (!LP) {
 
@@ -145,9 +143,9 @@ module.exports = {
                     C: 0,
                     D: 0,
                     Echoes: 0,
-    
+
                     ID: 0,
-    
+
                     Survivors: {
                         Cowboy: false,
                         Mercenary: false,
@@ -172,9 +170,9 @@ module.exports = {
                         NewSurv: false,
                         AnotherSurv: false,
                     },
-    
+
                     Hunters: {
-    
+
                         WuChang: false,
                         AxeBoi: false,
                         Lizard: false,
@@ -192,42 +190,42 @@ module.exports = {
                         Sister: false,
                         NewHunta: false,
                         AnotherHunta: false
-    
-            },
-            Opened: []
 
-    
+                    },
+                    Opened: []
+
+
                 })
                 newLP.save().catch(err => console.log(err))
-                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
+                    .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
 
             }             //DICE 1 EVENT
 
 
-            else if (cooldown.has(message.author.id)){
+            else if (cooldown.has(message.author.id)) {
                 if (message.deletable) message.delete();
                 message.channel.send(coolEmbed).then(m => m.delete(20000));
-    
+
             }
 
-            else if (LP.Dices === 0){
+            else if (LP.Dices === 0) {
 
                 const noEmbed = new RichEmbed()
-                .setTitle("Oops looks like you ran out of dices <:dice:655384578499936257>")
-                .setDescription("To get more dices<:dice:655384578499936257>, do `>quick`, `>daily` or `>hunt`")
-                .setFooter("For more info, do >help logicpath");
+                    .setTitle("Oops looks like you ran out of dices <:dice:655384578499936257>")
+                    .setDescription("To get more dices<:dice:655384578499936257>, do `>quick`, `>daily` or `>hunt`")
+                    .setFooter("For more info, do >help logicpath");
 
                 return message.channel.send(noEmbed);
 
 
             }
-            
+
 
 
             else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance1) {
 
                 message.channel.send(diceEmbed1)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 10;
@@ -238,10 +236,10 @@ module.exports = {
 
 
             }
-            
+
             else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance3) {
                 message.channel.send(diceEmbed1)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Dices = LP.Dices - 1;
@@ -256,7 +254,7 @@ module.exports = {
             }
             else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance2) {
                 message.channel.send(diceEmbed1)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.logic = LP.logic + 1;
@@ -270,7 +268,7 @@ module.exports = {
 
             else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance4) {
                 message.channel.send(diceEmbed1)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.logic = LP.logic + 1;
@@ -284,7 +282,7 @@ module.exports = {
             }
             else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance5) {
                 message.channel.send(diceEmbed1)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.logic = LP.logic + 1;
@@ -299,7 +297,7 @@ module.exports = {
             //Dice 2 event
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance1) {
                 message.channel.send(diceEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.logic = LP.logic + 2;
@@ -312,7 +310,7 @@ module.exports = {
             }
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance2) {
                 message.channel.send(diceEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.logic = LP.logic + 2;
@@ -326,7 +324,7 @@ module.exports = {
             }
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance3) {
                 message.channel.send(diceEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
 
@@ -340,7 +338,7 @@ module.exports = {
             }
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance4) {
                 message.channel.send(diceEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 20;
@@ -352,7 +350,7 @@ module.exports = {
             }
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance5) {
                 message.channel.send(diceEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 10;
@@ -365,7 +363,7 @@ module.exports = {
             }
             else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance6) {
                 message.channel.send(diceEmbed)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
                 LP.logic = LP.logic + 2;
                 LP.Dices = LP.Dices - 1;
@@ -377,7 +375,7 @@ module.exports = {
             //dice 3 here
             else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance1) {
                 message.channel.send(diceEmbed3)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
 
@@ -391,7 +389,7 @@ module.exports = {
 
             else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance2) {
                 message.channel.send(diceEmbed3)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
 
@@ -405,7 +403,7 @@ module.exports = {
             }
             else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance3) {
                 message.channel.send(diceEmbed3)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
 
@@ -419,12 +417,12 @@ module.exports = {
             }
             else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance4) {
                 message.channel.send(diceEmbed3)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
                 LP.Clues = LP.Clues + 20;
                 LP.Dices = LP.Dices - 1;
                 LP.logic = LP.logic + 3;
-                LP.Ess2 = LP.Ess2 + 1 ;
+                LP.Ess2 = LP.Ess2 + 1;
 
                 LP.save().catch(err => console.log(err));
             }
@@ -432,7 +430,7 @@ module.exports = {
 
             else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance1) {
                 message.channel.send(diceEmbed4)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 40;
@@ -444,7 +442,7 @@ module.exports = {
             }
             else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance2) {
                 message.channel.send(diceEmbed4)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Ess1 = LP.Ess1 + 1;
@@ -458,7 +456,7 @@ module.exports = {
             }
             else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance3) {
                 message.channel.send(diceEmbed4)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 40;
@@ -471,7 +469,7 @@ module.exports = {
             }
             else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance4) {
                 message.channel.send(diceEmbed4)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 10;
@@ -486,7 +484,7 @@ module.exports = {
             }
             else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance5) {
                 message.channel.send(diceEmbed4)
-                .then(cooldown.add(message.author.id));
+                    .then(cooldown.add(message.author.id));
 
 
                 LP.Clues = LP.Clues + 20;
@@ -507,11 +505,6 @@ module.exports = {
 
         });
 
-    }catch(err){
-        MohiMoo.send(errWhere + "\n```" + err + "```");
-        console.log(err);
-        message.channel.send("❌ **An error has occured!** sorry :C");
-    }
 
     }
 }

@@ -1,35 +1,34 @@
 const { RichEmbed } = require('discord.js');
 const { stripIndents } = require('common-tags');
-const { formatDate } = require ("../functions.js");
+const { formatDate } = require("../functions.js");
 
 module.exports = {
-    name: 'serverinfo', 
-    description: "shows the info of the server",
-    execute(message, args, MohiMoo, errWhere){
+	name: 'serverinfo',
+	description: "shows the info of the server",
+	execute(message, args, MohiMoo, errWhere) {
 
-		try{
 
 		const created = formatDate(message.guild.createdAt)
 		const joined = formatDate(message.author.joinedAt);
 
 
-	const embed = new RichEmbed()
-            .setColor("RANDOM")
+		const embed = new RichEmbed()
+			.setColor("RANDOM")
 
-            
-            .setDescription(`Info about **${message.guild.name}** (ID: ${message.guild.id})`)
-            
-			.addField( 
+
+			.setDescription(`Info about **${message.guild.name}** (ID: ${message.guild.id})`)
+
+			.addField(
 				'❯ Channels',
 				stripIndents`
 				🙎‍♂️ ${message.guild.channels.filter(ch => ch.type === 'text').size} Text, ${
 					message.guild.channels.filter(ch => ch.type === 'voice').size
-				} 🎙️ Voice
+					} 🎙️ Voice
 				💤 AFK: ${
 					message.guild.afkChannelID
 						? `<#${message.guild.afkChannelID}> after ${message.guild.afkTimeout / 60}min`
 						: 'None'
-				}
+					}
 			`,
 			)
 			.addField(
@@ -48,16 +47,11 @@ module.exports = {
 				🕐 Created at: ${(created)}
 			`,
 			);
-			
 
-		 message.channel.send(embed);
-		 
-		}catch(err){
-			MohiMoo.send(errWhere + "\n```" + err + "```");
-			console.log(err);
-			message.channel.send("❌ **An error has occured!** sorry :C");
-		}
-        
+
+		message.channel.send(embed);
+
+
 	}
 
 }

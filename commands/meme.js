@@ -1,17 +1,16 @@
 const { RichEmbed } = require('discord.js');
-const got = require ('got');
+const got = require('got');
 
 module.exports = {
-    name: 'meme', 
+    name: 'meme',
     description: "sends a random meme",
-    execute( message, args, MohiMoo, errWhere){
+    execute(message, args, MohiMoo, errWhere) {
 
         const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
-        try{
-            
+
         got(random).then(response => {
 
             let content = JSON.parse(response.body);
@@ -31,20 +30,15 @@ module.exports = {
 
             const embeed = new RichEmbed()
                 .setTitle(`${memeTitle}`)
-                .setURL (`${memeUrl}`)
+                .setURL(`${memeUrl}`)
                 .setColor("RANDOM")
                 .setImage(memeImage)
                 .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
 
             message.channel.send(embeed);
-               
+
         });
-        
-    }catch(err){
-        MohiMoo.send(errWhere + "\n```" + err + "```");
-        console.log(err);
-        message.channel.send("❌ **An error has occured!** sorry :C");
-    }
-    
-    }
+
+
+}
 }

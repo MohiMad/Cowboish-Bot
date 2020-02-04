@@ -1,72 +1,66 @@
 
 
 const { RichEmbed } = require('discord.js');
-const got = require ('got');
+const got = require('got');
 const cooldown = new Set();
 
 module.exports = {
-    name: 'joke', 
+    name: 'joke',
     description: "sends a random joke",
-    execute( message, args, MohiMoo, errWhere){
+    execute(message, args, MohiMoo, errWhere) {
 
-        try{
 
         const coolEmbed = new RichEmbed()
             .setTitle("Slow it down maaan!")
             .setDescription("I'm a bot, but bots deserves some rest as well\n**You probably didn't read the joke... READ IT!**\nThis command has a cooldown of **3** seconds!")
             .setColor("RANDOM");
 
- got('https://www.reddit.com/r/jokes/random/.json').then(response => {
+        got('https://www.reddit.com/r/jokes/random/.json').then(response => {
 
-    let content = JSON.parse(response.body);
+            let content = JSON.parse(response.body);
 
-    var title = content[0].data.children[0].data.title;
+            var title = content[0].data.children[0].data.title;
 
-    var joke = content[0].data.children[0].data.selftext;
+            var joke = content[0].data.children[0].data.selftext;
 
-    let permalink = content[0].data.children[0].data.permalink;
-
-
-    let memeUrl = `https://reddit.com${permalink}`;
+            let permalink = content[0].data.children[0].data.permalink;
 
 
-    const jokeEmbed = new RichEmbed()
-        .setTitle(title)
-        .setURL(memeUrl)
-        .setColor("RANDOM")
-        .setFooter("Joke from r/jokes")
-        .setDescription(joke);
+            let memeUrl = `https://reddit.com${permalink}`;
 
-        if (cooldown.has(message.author.id)){
-            if(message.deletable) message.delete();
 
-            message.channel.send(coolEmbed).then(m => m.delete(20000));
-        }
+            const jokeEmbed = new RichEmbed()
+                .setTitle(title)
+                .setURL(memeUrl)
+                .setColor("RANDOM")
+                .setFooter("Joke from r/jokes")
+                .setDescription(joke);
 
-        else if(joke.length > 2048 ){
-            message.reply("oof the joke is way too long... sorry please try again!");
-        }
-        
-        else{
+            if (cooldown.has(message.author.id)) {
+                if (message.deletable) message.delete();
 
-    message.channel.send(jokeEmbed)
-    .then(cooldown.add(message.author.id))
-    .catch(err => console.log(err));
+                message.channel.send(coolEmbed).then(m => m.delete(20000));
+            }
 
-        }
+            else if (joke.length > 2048) {
+                message.reply("oof the joke is way too long... sorry please try again!");
+            }
 
-        setTimeout(() => {
-            cooldown.delete(message.author.id)
+            else {
 
-        }, 30000);
+                message.channel.send(jokeEmbed)
+                    .then(cooldown.add(message.author.id))
+                    .catch(err => console.log(err));
 
-})
+            }
 
-}catch(err){
-    MohiMoo.send(errWhere + "\n```" + err + "```");
-    console.log(err);
-    message.channel.send("❌ **An error has occured!** sorry :C");
+            setTimeout(() => {
+                cooldown.delete(message.author.id)
+
+            }, 30000);
+
+        })
+
+
 }
-
-    }
 }

@@ -104,13 +104,13 @@ bot.on('ready', () => {
     console.log(`Now let's lasso sum peeps >:D`);
     console.log(`___________________________________________`);
 
-    
+
 
     const activities_list = [
-        `🥳 celebrating ${bot.guilds.size} servers 🎉`, 
-        `Identity V in ${bot.guilds.size} servers 💕`, 
-        "Welcome to Identit | >help", 
-        `milestone ${bot.guilds.size}/100 💕`, 
+        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
+        `Identity V in ${bot.guilds.size} servers 💕`,
+        "Welcome to Identit | >help",
+        `milestone ${bot.guilds.size}/100 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
     ];
 
@@ -124,9 +124,6 @@ bot.on('ready', () => {
 bot.on('message', async message => {
 
     const MohiMoo = bot.users.get("478527909250990090");
-
-    let errWhere = ("Hit an error in the channel" + message.channel + "in the guild" + message.guild);
-
 
     let prefix = ">";
 
@@ -146,25 +143,25 @@ bot.on('message', async message => {
 
         //Identity V commands Starts Here!
         case "roll20": case "r20":
-            bot.commands.get('roll20').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('roll20').execute(message, args, MohiMoo);
             break;
 
         case "identify": case "whois": case "stereotype":
-            bot.commands.get('identify').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('identify').execute(message, args, MohiMoo);
             break;
 
         case "winrate": case "wr":
-            bot.commands.get('winrate').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('winrate').execute(message, args, MohiMoo);
             break;
 
         case "essence": case "ess": case "e":
-            bot.commands.get('essence').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('essence').execute(message, args, MohiMoo);
             break;
 
 
 
         case "randomize": case "random": case "pick":
-            bot.commands.get('random').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('random').execute(message, args, MohiMoo);
             break;
 
         //End Of identity V commands
@@ -172,62 +169,62 @@ bot.on('message', async message => {
         //Fun Commands Starts Here!
 
         case "joke": case "lemmelaugh":
-            bot.commands.get('joke').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('joke').execute(message, args, MohiMoo);
             break;
 
         case "yee":
-            bot.commands.get('yee').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('yee').execute(message, args, MohiMoo);
             break;
 
         case 'meme': case "memes":
-            bot.commands.get('meme').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('meme').execute(message, args, MohiMoo);
             break;
 
         case 'idv': case "identityv":
-            bot.commands.get('idv').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('idv').execute(message, args, MohiMoo);
             break;
 
         case 'say': case "repeat":
-            bot.commands.get('say').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('say').execute(message, args, MohiMoo);
             break;
 
         //End Of Fun commands
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
-            bot.commands.get('roll').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('roll').execute(message, args, MohiMoo);
             break;
 
         case "open":
-            bot.commands.get('open').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('open').execute(message, args, MohiMoo);
             break;
 
         case "LP": case "logicpath": case "inv": case "inventroy":
-            bot.commands.get('logicpath').execute(message, args, bot, errWhere, MohiMoo);
+            bot.commands.get('logicpath').execute(message, args, bot, MohiMoo);
             break;
 
         case "ID": case "setID":
-            bot.commands.get('id').execute(message, args, bot, errWhere, MohiMoo);
+            bot.commands.get('id').execute(message, args, bot, MohiMoo);
             break;
 
         case "quick": case "play":
-            bot.commands.get('quick').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('quick').execute(message, args, MohiMoo);
             break;
 
         case "hunter": case "hunt":
-            bot.commands.get('hunt').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('hunt').execute(message, args, MohiMoo);
             break;
 
         case "dailyreward": case "daily":
-            bot.commands.get('daily').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('daily').execute(message, args, MohiMoo);
             break;
 
         case "shop":
-            bot.commands.get('shop').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('shop').execute(message, args, MohiMoo);
             break;
 
         case "buy":
-            bot.commands.get('buy').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('buy').execute(message, args, MohiMoo);
             break;
 
 
@@ -238,31 +235,31 @@ bot.on('message', async message => {
         //Identity V Actions 
 
         case "blink":
-            bot.commands.get('blink').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('blink').execute(message, args, MohiMoo);
             break;
 
         case "stun":
-            bot.commands.get('stun').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('stun').execute(message, args, MohiMoo);
             break;
 
         case "crash":
-            bot.commands.get('crash').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('crash').execute(message, args, MohiMoo);
             break;
 
         case "terrorshock": case "tc":
-            bot.commands.get('terrorshock').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('terrorshock').execute(message, args, MohiMoo);
             break;
 
         case "lasso": case "yoink":
-            bot.commands.get('lasso').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('lasso').execute(message, args, MohiMoo);
             break;
 
         case "shoot": case "flaregun":
-            bot.commands.get('shoot').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('shoot').execute(message, args, MohiMoo);
             break;
 
         case "bully":
-            bot.commands.get('bully').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('bully').execute(message, args, MohiMoo);
             break;
         //End of Identity V Actions
 
@@ -271,19 +268,19 @@ bot.on('message', async message => {
         //Moderation Commands starts here
 
         case "clear": case "purge": case "delete":
-            bot.commands.get('clear').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('clear').execute(message, args, MohiMoo);
             break;
 
         case "kick":
-            bot.commands.get('kick').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('kick').execute(message, args, MohiMoo);
             break;
 
         case "ban":
-            bot.commands.get('ban').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('ban').execute(message, args, MohiMoo);
             break;
 
         case "mute": case "shutup":
-            bot.commands.get('mute').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('mute').execute(message, args, MohiMoo);
             break;
 
         //End of moderation commands
@@ -292,15 +289,15 @@ bot.on('message', async message => {
         //Config commands starts here
 
         case "info": case "botinfo":
-            bot.commands.get('info').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('info').execute(message, args, MohiMoo);
             break;
 
         case "userinfo": case "usrinfo":
-            bot.commands.get('userinfo').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('userinfo').execute(message, args, MohiMoo);
             break;
 
         case "serverinfo": case "srvrinfo":
-            bot.commands.get('serverinfo').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('serverinfo').execute(message, args, MohiMoo);
             break;
 
         case 'ping':
@@ -309,7 +306,7 @@ bot.on('message', async message => {
             break;
 
         case "help": case "commands": case "helpme":
-            bot.commands.get('help').execute(message, args, errWhere, MohiMoo);
+            bot.commands.get('help').execute(message, args, MohiMoo);
             break;
 
         case 'guilds': case "servers":
@@ -321,7 +318,7 @@ bot.on('message', async message => {
             break;
 
         case "setup": case "set":
-            bot.commands.get('setup').execute(message, args, errWhere, MohiMoo, bot);
+            bot.commands.get('setup').execute(message, args, MohiMoo, bot);
             break;
 
 

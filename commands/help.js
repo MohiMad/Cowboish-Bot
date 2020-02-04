@@ -5,9 +5,7 @@ const { stripIndents } = require('common-tags');
 module.exports = {
     name: 'help',
     description: "sends help!",
-    execute(message, args, MohiMoo, errWhere){
-
-        try{
+    execute(message, args, MohiMoo, errWhere) {
 
 
         const helpEmbed = new RichEmbed()
@@ -99,15 +97,9 @@ module.exports = {
 
             `)
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
-        
-            if (args[1] === "logicpath"){
-                message.channel.send(testEmbed);
-            }
 
-        }catch(err){
-            MohiMoo.send(errWhere + "\n```" + err + "```");
-            console.log(err);
-            message.channel.send("❌ **An error has occured!** sorry :C");
+        if (args[1] === "logicpath") {
+            message.channel.send(testEmbed);
         }
 
 

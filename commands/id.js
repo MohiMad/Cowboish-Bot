@@ -8,8 +8,6 @@ module.exports = {
     description: "id info",
     execute : async(message, args, bot, errWhere, MohiMoo) => {
 
-        try{
-
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         if(!LP){
@@ -133,11 +131,6 @@ module.exports = {
         else{
             message.reply("the ID given must contain **numbers** only and is **6, 7 or 8** numbers long!");
         }
-    }catch(err){
-        MohiMoo.send(errWhere + "\n```" + err + "```");
-        console.log(err);
-        message.channel.send("❌ **An error has occured!** sorry :C");
-    }
 
     }
 }

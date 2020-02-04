@@ -5,12 +5,10 @@ const { getMember, formatDate } = require("../functions.js");
 
 
 module.exports = {
-    name: 'userinfo', 
+    name: 'userinfo',
     description: "show info",
-    execute(message, args, MohiMoo, errWhere){
+    execute(message, args, MohiMoo, errWhere) {
 
-        try{
-        
 
         const member = getMember(message, args.join(" "));
 
@@ -38,16 +36,11 @@ module.exports = {
             **> 🎉 Account's birthday**• ${created}`, true)
             .setTimestamp()
 
-        if (member.user.presence.game) 
+        if (member.user.presence.game)
             embed.addField('🔴Currently playing', stripIndents`**>** ${member.user.presence.game.name}`);
 
         message.channel.send(embed);
 
-    }catch(err){
-        MohiMoo.send(errWhere + "\n```" + err + "```");
-        console.log(err);
-        message.channel.send("❌ **An error has occured!** sorry :C");
-    }
 
 
 

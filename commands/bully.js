@@ -1,46 +1,41 @@
 const { RichEmbed } = require('discord.js');
 const { ErrorMsg } = require("../functions.js");
 module.exports = {
-    name: 'bully', 
+    name: 'bully',
     description: "bullyies you",
-    execute(message, args, MohiMoo, errWhere){
-
-        try{
-
-        if (!args[1]) return ErrorMsg(this.bot, message,"Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(10000));
-
-let persona  = message.mentions.users.first()
-
-nube = 8;
-
-imagaNumbe = Math.floor (Math.random() * (nube - 1 + 1)) + 1;
-
-var facts = ['Oof ' + persona.username + ' is getting bullied by ' + message.author.username, 
-'cmon ' + message.author.username + ' dont do ' + persona.username + ' like dat!', 
-'Omg ' + message.author.username+ ' stop bullying '+ persona.username +'!'];
-
-var fact = Math.floor(Math.random() * facts.length);
-
-const bullyembed = new RichEmbed()
-.setAuthor((facts[fact]), message.author.avatarURL)
-.attachFiles (["./bully/" + 'bully' + imagaNumbe + ".gif"])
-.setImage('attachment://bully' + imagaNumbe + '.gif')
-.setColor("RANDOM")
-.setFooter('Want your replay to pop up here? add me to submit it => (MohiMeaww#2888)');
+    execute(message, args, MohiMoo) {
 
 
-if(message.mentions.users.first().id === message.author.id) 
-    message.channel.send ("Nah cmon,** " + message.author.username + '** why would you bully yourself? :C');
 
-else message.channel.send(bullyembed);
+        if (!args[1]) return ErrorMsg(this.bot, message, "Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(10000));
 
-}catch(err){
-    MohiMoo.send(errWhere + "\n```" + err + "```");
-    console.log(err);
-    message.channel.send("❌ **An error has occured!** sorry :C");
+        let persona = message.mentions.users.first()
 
-}
+        nube = 8;
+
+        imagaNumbe = Math.floor(Math.random() * (nube - 1 + 1)) + 1;
+
+        var facts = ['Oof ' + persona.username + ' is getting bullied by ' + message.author.username,
+        'cmon ' + message.author.username + ' dont do ' + persona.username + ' like dat!',
+        'Omg ' + message.author.username + ' stop bullying ' + persona.username + '!'];
+
+        var fact = Math.floor(Math.random() * facts.length);
+
+        const bullyembed = new RichEmbed()
+            .setAuthor((facts[fact]), message.author.avatarURL)
+            .attachFiles(["./bully/" + 'bully' + imagaNumbe + ".gif"])
+            .setImage('attachment://bully' + imagaNumbe + '.gif')
+            .setColor("RANDOM")
+            .setFooter('Want your replay to pop up here? add me to submit it => (MohiMeaww#2888)');
 
 
-}
+        if (message.mentions.users.first().id === message.author.id)
+            message.channel.send("Nah cmon,** " + message.author.username + '** why would you bully yourself? :C');
+
+        else message.channel.send(bullyembed);
+
+
+
+
+    }
 }

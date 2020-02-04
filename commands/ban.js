@@ -5,7 +5,7 @@ const { findMember, ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'ban',
     description: "bans a player",
-    execute: async (message, args, MohiMoo, errWhere) => {
+    execute: async (message, args, MohiMoo) => {
 
 
 
