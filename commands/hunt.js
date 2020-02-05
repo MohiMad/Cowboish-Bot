@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 let cooldown = new Set();
-const { newLP } = require("../function.js");
+const { newLP } = require("../functions.js");
 
 module.exports = {
     name: 'hunt',
