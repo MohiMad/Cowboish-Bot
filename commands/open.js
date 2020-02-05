@@ -2,7 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 const { stripIndents } = require("common-tags");
 
-const { newLP } = require("../function.js");
+const { newLP } = require("../functions.js");
 
 
 const logicPath = require("../models/logicpath.js");

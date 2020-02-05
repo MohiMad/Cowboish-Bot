@@ -6,9 +6,6 @@ module.exports = {
     description: "set some stuff for the guild",
     execute(message, args, MohiMoo) {
 
-
-
-
         const errEmbed = new RichEmbed()
             .setTitle("❌ Ooops an error has occurred! ❌")
             .setColor("0xf72020");
