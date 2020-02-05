@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
 const { RichEmbed } = require('discord.js');
-const { newLP } = require("../function.js");
+const { newLP } = require("../functions.js");
 
 
 module.exports = {
