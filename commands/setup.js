@@ -4,7 +4,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'setup',
     description: "set some stuff for the guild",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
 

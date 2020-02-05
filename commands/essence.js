@@ -5,7 +5,7 @@ let seconds = 3;
 module.exports = {
     name: 'essence',
     description: "opens an essence",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
 

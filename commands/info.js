@@ -4,7 +4,7 @@ const { stripIndents } = require("common-tags");
 module.exports = {
     name: 'info', 
     description: "info about bot",
-    execute(message, args, bot, MohiMoo, errWhere){
+    execute(message, args, bot, MohiMoo){
 
 
 const betterEmbed = new RichEmbed()

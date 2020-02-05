@@ -5,7 +5,7 @@ const { stripIndents } = require('common-tags');
 module.exports = {
     name: 'help',
     description: "sends help!",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
         const helpEmbed = new RichEmbed()

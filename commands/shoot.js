@@ -4,7 +4,7 @@ const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'shoot',
     description: "shoots you",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
         let persona = message.mentions.users.first()

@@ -4,7 +4,7 @@ const { findMember, ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'kick',
     description: "kick them trolls",
-    execute: async (message, args, MohiMoo, errWhere) => {
+    execute: async (message, args, MohiMoo) => {
         const member = await findMember(message, args[1]);
 
         const reason = args.slice(2).join(" ") || "No Reason";

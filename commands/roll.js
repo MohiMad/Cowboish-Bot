@@ -3,7 +3,7 @@ const cooldown = new Set();
 module.exports = {
     name: 'roll',
     description: "rolls a 4 sided dice",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
         //------------------Some value here
 

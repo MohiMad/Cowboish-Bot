@@ -2,6 +2,8 @@ const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
 const { RichEmbed } = require('discord.js');
+const { newLP } = require("../function.js");
+
 
 module.exports = {
     name: 'shop',
@@ -11,78 +13,8 @@ module.exports = {
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
 
-        if (!LP) {
-            const newLP = new logicPath({
-                UserID: message.author.id,
-                logic: 0,
-                Dices: 15,
-                Clues: 0,
-                Ess1: 5,
-                Ess2: 5,
-                Ess3: 5,
-                Inspirations: 0,
-                frags: 0,
-                S: 0,
-                A: 0,
-                B: 0,
-                C: 0,
-                D: 0,
-                Echoes: 0,
+        if (!LP) { newLP(message) }
 
-                ID: 0,
-
-                Survivors: {
-                    Cowboy: false,
-                    Mercenary: false,
-                    Coordinator: false,
-                    Priestess: false,
-                    Mechanic: false,
-                    Mindseye: false,
-                    Prefumer: false,
-                    Dancer: false,
-                    Seer: false,
-                    Embalmer: false,
-                    Acrobat: false,
-                    Officer: false,
-                    Barmaid: false,
-                    Magician: false,
-                    Explorer: false,
-                    Forward: false,
-                    Prospector: false,
-                    Enchantress: false,
-                    Wilding: false,
-                    Postman: false,
-                    NewSurv: false,
-                    AnotherSurv: false,
-                },
-
-                Hunters: {
-
-                    WuChang: false,
-                    AxeBoi: false,
-                    Lizard: false,
-                    Clown: false,
-                    GameKeeper: false,
-                    Ripper: false,
-                    SoulWeaver: false,
-                    Geisha: false,
-                    PhotoGrapher: false,
-                    MadEyes: false,
-                    Feaster: false,
-                    DreamWitch: false,
-                    BloodyQueen: false,
-                    Pingu: false,
-                    Sister: false,
-                    NewHunta: false,
-                    AnotherHunta: false
-
-                },
-                Opened: []
-
-            })
-            newLP.save().catch(err => console.log(err))
-                .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"))
-        }
 
         //___________Main shop list_________________
         const shopEmbed = new RichEmbed()

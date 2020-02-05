@@ -3,7 +3,7 @@ const ms = require('ms');
 module.exports = {
   name: 'mute',
   description: "mute!",
-  execute: async (message, args, MohiMoo, errWhere) => {
+  execute: async (message, args, MohiMoo) => {
 
 
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));

@@ -2,7 +2,7 @@ const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'clear',
     description: "clear commands",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
             if (!args[1]) return message.reply('How many messeges do u want me to sweep?').then(m => m.delete(5000));

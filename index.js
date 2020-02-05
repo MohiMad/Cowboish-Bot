@@ -289,7 +289,7 @@ bot.on('message', async message => {
         //Config commands starts here
 
         case "info": case "botinfo":
-            bot.commands.get('info').execute(message, args, MohiMoo);
+            bot.commands.get('info').execute(message, args, bot, MohiMoo);
             break;
 
         case "userinfo": case "usrinfo":

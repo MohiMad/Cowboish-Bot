@@ -7,7 +7,7 @@ const cooldown = new Set();
 module.exports = {
     name: 'joke',
     description: "sends a random joke",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
         const coolEmbed = new RichEmbed()

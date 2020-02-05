@@ -1,4 +1,6 @@
 const { RichEmbed } = require('discord.js');
+const logicPath = require("./models/logicpath.js");
+
 module.exports = {
     getMember: function(message, toFind = '') {
         toFind = toFind.toLowerCase();
@@ -39,13 +41,87 @@ module.exports = {
     },
     ErrorMsg: (bot, message, error) => {
 		const errEmbed = new RichEmbed()
-			.setTitle("<:nae:671454247505625110> Wrong usage! >:/")
+			.setTitle("<:nae:671454247505625110> Errrrrrooor >:/")
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username,  message.author.displayAvatarURL)
 			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
 		message.channel.send(errEmbed);
-	},
+    },
+    newLP: (message) => {
+        const newLP = new logicPath({
+            UserID: message.author.id,
+            logic: 0,
+            Dices: 15,
+            Clues: 0,
+            Ess1: 5,
+            Ess2: 5,
+            Ess3: 5,
+            Inspirations: 0,
+            frags: 0,
+            S: 0,
+            A: 0,
+            B: 0,
+            C: 0,
+            D: 0,
+            Echoes: 0,
+
+            ID: 0,
+
+            Survivors: {
+                Cowboy: false,
+                Mercenary: false,
+                Coordinator: false,
+                Priestess: false,
+                Mechanic: false,
+                Mindseye: false,
+                Prefumer: false,
+                Dancer: false,
+                Seer: false,
+                Embalmer: false,
+                Acrobat: false,
+                Officer: false,
+                Barmaid: false,
+                Magician: false,
+                Explorer: false,
+                Forward: false,
+                Prospector: false,
+                Enchantress: false,
+                Wilding: false,
+                Postman: false,
+                NewSurv: false,
+                AnotherSurv: false,
+            },
+
+            Hunters: {
+
+                WuChang: false,
+                AxeBoi: false,
+                Lizard: false,
+                Clown: false,
+                GameKeeper: false,
+                Ripper: false,
+                SoulWeaver: false,
+                Geisha: false,
+                PhotoGrapher: false,
+                MadEyes: false,
+                Feaster: false,
+                DreamWitch: false,
+                BloodyQueen: false,
+                Pingu: false,
+                Sister: false,
+                NewHunta: false,
+                AnotherHunta: false
+
+            },
+            Opened: []
+
+        })
+        newLP.save().catch(err => console.log(err))
+            .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you!\nPlease try to run the command again :)"))
+
+
+    }
 
     
 }

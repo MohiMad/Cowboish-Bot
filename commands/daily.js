@@ -1,10 +1,12 @@
 const { RichEmbed } = require('discord.js');
 let cooldown = new Set();
+const { newLP } = require("../functions.js");
+
 
 module.exports = {
     name: 'daily',
     description: "daily rewards",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
         const coolEmbed = new RichEmbed()
             .setTitle("Take it easy on me dude!")
@@ -24,80 +26,7 @@ module.exports = {
             if (err) console.log(err);
 
 
-            if (!LP) {
-
-                const newLP = new logicPath({
-                    UserID: message.author.id,
-                    logic: 0,
-                    Dices: 15,
-                    Clues: 0,
-                    Ess1: 5,
-                    Ess2: 5,
-                    Ess3: 5,
-                    Inspirations: 0,
-                    frags: 0,
-                    S: 0,
-                    A: 0,
-                    B: 0,
-                    C: 0,
-                    D: 0,
-                    Echoes: 0,
-
-                    ID: 0,
-
-                    Survivors: {
-                        Cowboy: false,
-                        Mercenary: false,
-                        Coordinator: false,
-                        Priestess: false,
-                        Mechanic: false,
-                        Mindseye: false,
-                        Prefumer: false,
-                        Dancer: false,
-                        Seer: false,
-                        Embalmer: false,
-                        Acrobat: false,
-                        Officer: false,
-                        Barmaid: false,
-                        Magician: false,
-                        Explorer: false,
-                        Forward: false,
-                        Prospector: false,
-                        Enchantress: false,
-                        Wilding: false,
-                        Postman: false,
-                        NewSurv: false,
-                        AnotherSurv: false,
-                    },
-
-                    Hunters: {
-
-                        WuChang: false,
-                        AxeBoi: false,
-                        Lizard: false,
-                        Clown: false,
-                        GameKeeper: false,
-                        Ripper: false,
-                        SoulWeaver: false,
-                        Geisha: false,
-                        PhotoGrapher: false,
-                        MadEyes: false,
-                        Feaster: false,
-                        DreamWitch: false,
-                        BloodyQueen: false,
-                        Pingu: false,
-                        Sister: false,
-                        NewHunta: false,
-                        AnotherHunta: false
-
-                    },
-                    Opened: []
-
-                })
-                newLP.save().catch(err => console.log(err))
-                    .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you! please try to run the command again :)"));
-
-            }
+            if (!LP) { newLP(message) }
 
             else if (cooldown.has(message.author.id)) {
                 if (message.deletable) message.delete();

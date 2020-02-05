@@ -3,7 +3,7 @@ const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'say',
     description: "repeats what you just said!",
-    execute(message, args, MohiMoo, errWhere) {
+    execute(message, args, MohiMoo) {
 
 
         const sayMessage = args.slice(1).join(" ");
