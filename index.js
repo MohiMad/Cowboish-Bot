@@ -70,11 +70,11 @@ bot.on("guildCreate", guild => {
     }
     const welcomeEmbed = new Discord.RichEmbed()
         .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
-            stripIndents`**>My cowboish birthday 🎉🎊 14/10/2019**
-        **> 👍 | do >help and i will be there for help :)**
-        **> 🔧 | My prefix is > remember using it before any command of my commands**
-        **> 🙂 | Now im in ${bot.guilds.size}, servers and growing <3**
-        **> ❔  | Errors or suggestions? do >suggest/>issue**`)
+            stripIndents`My cowboish birthday 🎉🎊 **14/10/2019**
+        👍 | Do *>help* and i will be there for help :)
+        🔧 | My prefix is **>** remember using it before any command of my commands
+        🙂 | Now im in **${bot.guilds.size}**, servers and growing <3
+        ❔  | **Errors** or **suggestions**? do *>suggest*/*>issue*`)
         .addBlankField()
         .addField("💗 | Support me",
             stripIndents`

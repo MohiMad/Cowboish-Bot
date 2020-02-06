@@ -15,6 +15,7 @@ module.exports = {
 
 
 
+        try{
 
         const SEmbed = new RichEmbed()
             .setAuthor(`Congrats ${message.author.username}! you got Postman's limited skin 👏`, message.author.avatarURL)
@@ -387,6 +388,15 @@ module.exports = {
             message.channel.send(s9Embed);
 
         }//s9-2 essence bracket
+    }catch(err){
+        console.log(err);
+        if(err.message === "Cannot read property 'Ess3' of null") return MohiMoo.send(message.author.id + " had dis error");
+        else if(err.message === "Cannot read property 'Ess1' of null") return MohiMoo.send(message.author.id + " had dis error");
+        else if(err.message === "Cannot read property 'Ess2' of null") return MohiMoo.send(message.author.id + " had dis error");
+        MohiMoo.send("````" + err + "````");
+        message.reply("sorry, hit an unfamiliar error!");
+        
+    }
 
     }
 }
