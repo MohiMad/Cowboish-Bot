@@ -88,8 +88,7 @@ module.exports = {
 			.setDescription(stripIndents`
 			**Question about** : ${char}
 			**Difficulty** : ${Difficulty}
-			**Time** : 30 seconds
-			**Tries**: 1
+			**Time** : 60 seconds
 			**Reward** : 1 Dice <:dice:655384578499936257>` + "\n\n" + question)
 			.setImage(Thumb)
 			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1")
