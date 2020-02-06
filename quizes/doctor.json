@@ -1,0 +1,22 @@
+[
+	{
+		"Question": "**Question:**\nWhat's the name of the skin in the thumbnail?",
+		"Answer": ["holy angel", "Holy angel", "Holy Angel"], 
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673091125065678858/fspsUUe4JvcAAAAASUVORK5CYII.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the doctor's name?",
+		"Answer": ["emily dyer", "Emily", "emily"],
+		"Difficulty": "Ez",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673094739607814144/e9ec085e296702e40aebb5964f1b17c8.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat the color of the doctor's hair?",
+		"Answer": ["Brown", "brown"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673094739607814144/e9ec085e296702e40aebb5964f1b17c8.png"
+    }
+]

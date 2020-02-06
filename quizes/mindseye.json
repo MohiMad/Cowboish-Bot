@@ -1,0 +1,26 @@
+[
+	{
+		"Question": "**Question:**\nHow many seconds does it take for the mind's eye to use her cane again?\nPlease answer in **SECONDS**",
+		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Difficulty": "Meeeh Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
+    },
+    {
+		"Question": "**Retype the sentence:**\n`The mindseye is blind but wears glasses`",
+		"Answer": ["The mindseye is blind but wears glasses", "the mindseye is blind but wears glasses"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\nThe Mind's eye is hard to _ _ _ _ as",
+		"Answer": ["play", "Play", "kite", "Kite"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
+    },
+    {
+		"Question": "**Guess the name**\nGuess the skin's name in the image",
+		"Answer": ["golden cake", "Golden cake", "Golden Cake"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767441465212957/XzsrKD5PmR90M4U7dv40p6Ch0d76NHO8P8v85b9ftGDbz0AAAAASUVORK5CYII.png"
+    }
+]

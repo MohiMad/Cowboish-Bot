@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["joker", "Joker", "king", "King"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674665345268842496/qDE8plBl2noAAAAASUVORK5CYII.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\n`_ _ _ _ _ _ face hit me with his long popsicle`",
+		"Answer": ["smiley", "Smiley"],
+		"Difficulty": "Maybe easy",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674666078642634757/AmKgAsbWq5EAAAAAElFTkSuQmCC.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\n`Clowny hit me with a modified drill so i _ _ _ _ out to death :'C`",
+		"Answer": ["bled", "Bled"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674666078642634757/AmKgAsbWq5EAAAAAElFTkSuQmCC.png"
+	}
+	
+]

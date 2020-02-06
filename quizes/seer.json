@@ -1,0 +1,20 @@
+[
+	{
+		"Question": "**Question:**\nHow many owls does the seer spawn with?",
+		"Answer": ["one", "1", "One", "one owl", "One owl"],
+		"Difficulty": "Ez",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673883174157287436/2Q.png"
+    },
+    {
+		"Question": "**Repeat da sentence:**\nType `The Seer is bald` in the chat to get yo dice",
+		"Answer": ["The Seer is bald", "the Seer is bald"],
+		"Difficulty": "medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673882584476024873/wFZiDsYlaNYYQAAAABJRU5ErkJggg.png?width=452&height=451"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of this skin?",
+		"Answer": ["Night owl", "night owl", "Night Owl"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673882804471463946/C2509bD98icOuyQzRyDat92SibMv5M9wlShN0TAXRpzwAAAABJRU5ErkJggg.png"
+    }
+]

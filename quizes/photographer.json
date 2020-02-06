@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Continue the sentence:**\n`In fake world, you should _ _ _ rescuers once and chair decoders`",
+		"Answer": ["hit", "Hit"],
+		"Difficulty": "Ezz",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674684623569158194/9k.png"
+    },
+    {
+		"Question": "**Retype it:**\nType `Photoboi makes my game crash`",
+		"Answer": ["Photoboi makes my game crash", "photoboi makes my game crash"],
+		"Difficulty": "Eaaasssssssy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674684623569158194/9k.png"
+    },
+    {
+		"Question": "**Game mode:**\nThe game just started, type `photo` to take a photo before the survivors hide!",
+		"Answer": ["photo", "Photo"],
+		"Difficulty": "ez lol",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674684623569158194/9k.png"
+	}
+	
+]

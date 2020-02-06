@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Retype da sentence:**\nType `We need to build a wall`",
+		"Answer": ["We need to build a wall", "we need to build a wall"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674850906491060234/9k.png"
+    },
+    {
+		"Question": "**Continue the sentence:**\n`As a Madeyes, you need to get on the _ _ _ _ _ _ _ early game to hit survivors with fences `",
+		"Answer": ["console", "Console"],
+		"Difficulty": "Hard",
+		"Attachment": ""
+    },
+    {
+		"Question": "**Question:**\nWhat's the name of the skin in the image?",
+		"Answer": ["enraged", "Enraged"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674852635278311454/wHTLvPxNPXYxwAAAABJRU5ErkJggg.png"
+	}
+	
+]

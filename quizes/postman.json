@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Unscramble da word:**\nThe word `oggoD` is scrambled, unscramble it to win!",
+		"Answer": ["doggo", "Doggo"],
+		"Difficulty": "Hard",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
+    },
+    {
+		"Question": "**Retype the sentence:**\nType `The postman's doggo is cute`",
+		"Answer": ["The postman's doggo is cute", "the postman's doggo is cute"],
+		"Difficulty": "Easy",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\nThe hunter _ _ _ my dog :C",
+		"Answer": ["Hit", "hit"],
+		"Difficulty": "Hard",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
+	}
+	
+]

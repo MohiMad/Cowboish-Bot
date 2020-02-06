@@ -1,0 +1,20 @@
+[
+	{
+		"Question": "**Question:**\nHow many seconds does the gardener's sheild last for?\n**Answer in seconds!**",
+		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673540633348014131/wWTDaJdKMQ5gAAAABJRU5ErkJggg.png"
+    },
+    {
+		"Question": "**Question:**\nHow many seconds is the chair dismantling cooldown?",
+		"Answer": ["10", "ten", "TEN", "10 seconds", "ten seconds"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673541259045896238/9k.png"
+    },
+    {
+		"Question": "**Fill in the missing word:**\n`Before the buff, you had to use _ _ _ _ _ _ _ _ to repair a broken chair`",
+		"Answer": ["abnormal", "Abnormal"],
+		"Difficulty": "Hard",
+		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYz2JGMnf6hMZrwuv2FFQ3NsgP9vj8IWN9iOuKpM919kxCXiow"
+    }
+]

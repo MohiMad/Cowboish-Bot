@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nHow long does it take for bane to use his hook after using it?\n(Cooldown in seconds plz)",
+		"Answer": ["10", "ten", "Ten"],
+		"Difficulty": "Ez",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
+    },
+    {
+		"Question": "**Countinue da sentence:**\n`Bane's _ _ _ _ hitbox is broken lol`",
+		"Answer": ["hook", "Hook"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
+    },
+    {
+		"Question": "**Retype it:**\nType `Bane used to be a bad hunter`",
+		"Answer": ["Bane used to be a bad hunter", "bane used to be a bad hunter"],
+		"Difficulty": "Easy",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
+	}
+	
+]

@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nHow many perfumes does the Perfumer spawn with?",
+		"Answer": ["Three", "three", "3"],
+		"Difficulty": "Ez",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\n`The _ _ _ _ _ _ hit me so i perfumed back`",
+		"Answer": ["hunter", "Hunter", "hunta"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
+    },
+    {
+		"Question": "**Question:**\nHow long does a perfume last for?",
+		"Answer": ["6", "6 seconds", "six", "Six"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
+    }
+
+]

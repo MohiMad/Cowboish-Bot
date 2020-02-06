@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nWhat kind of drink do you drink to get back to full health?",
+		"Answer": ["strong devolin", "Strong Devolin"],
+		"Difficulty": "As hard as ma d :v",
+		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
+    },
+    {
+		"Question": "**Repeat da sentence:**\nType `Want a drink?`",
+		"Answer": ["Want a drink?", "want a drink?"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
+    },
+    {
+		"Question": "**Unscramble:**\nThe word below is scrambled, unscramble it!\n`yTspi`",
+		"Answer": ["Tipsy", "tipsy"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
+	}
+	
+]

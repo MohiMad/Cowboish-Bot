@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Unscramble it:**\nThe word `lleB` is scrambled, unscramble it to win!",
+		"Answer": ["bell", "Bell"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674636713515155476/9k.png"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["Divine", "divine"],
+		"Difficulty": "Hard as ma d",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674637325934002186/r9c3C2lITXQAAAAASUVORK5CYII.png"
+    },
+    {
+		"Question": "**Repeat the sentence:**\nType `White wu chang's range is op`",
+		"Answer": ["White wu chang's range is op", "White wu changs range is op"],
+		"Difficulty": "Brruh ezz",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674638667200987166/images.png"
+	}
+	
+]

@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Fill in the missing word:**\n`Soulweava is as _ _ _ _ as a nascar`",
+		"Answer": ["fast", "Fast"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674673201573396480/9k.png"
+    },
+    {
+		"Question": "**Match mode:**\nYou're mid in a chase and the target is walking in the open, quickly type `spit` to throw a web at the survivor",
+		"Answer": ["spit", "Spit"],
+		"Difficulty": "Easy",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674674561714749471/maxresdefault.png"
+    },
+    {
+		"Question": "**Question:**\nHow long does the web speed boost last for?\nAnswer in seconds",
+		"Answer": ["3", "three", "three seconds"],
+		"Difficulty": "Haha medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674674561714749471/maxresdefault.png"
+	}
+	
+]

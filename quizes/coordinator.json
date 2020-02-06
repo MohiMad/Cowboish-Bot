@@ -1,0 +1,23 @@
+[
+	{
+		"Question": "**Question:**\nHow many seconds does the flare gun stun last for?",
+		"Answer": ["Five", "five", "5", "5 seconds", "five seconds", "Five seconds", "4.5", "4,5", "4"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673549453239779360/D8ZkbTvP5zgrAAAAAElFTkSuQmCC.png"
+	},
+	{
+		"Question": "**Question:**\nWhat's the coordinator's real name",
+		"Answer": ["martha", "Martha"],
+		"Difficulty": "Easy",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673550821459361841/q8r9THTIxF1BxHgAAAABJRU5ErkJggg.png"
+
+	},
+	{
+	
+		"Question": "**Reaction test:**\nYou just rescued your teammate, quickly type `shoot` to shoot the hunter!",
+		"Answer": ["shoot", "Shoot"],
+		"Difficulty": "Eazy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673550659806691354/9k.png"
+
+    }
+]

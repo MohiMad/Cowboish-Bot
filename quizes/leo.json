@@ -1,0 +1,33 @@
+[
+	{
+		"Question": "**Question:**\nWho is Leo's daughter?",
+		"Answer": ["emma", "Emma", "Gardener", "gardener", "emma woods"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633255059849256/Z.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\n`You can throw snowballs in Leo's _ _ _ _ _ _ map`",
+		"Answer": ["memory", "Memory"],
+		"Difficulty": "Hard",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633408642547732/2Q.png"
+    },
+    {
+		"Question": "**Repeat da word:**\nType `Leo's camping is op`",
+		"Answer": ["Leo's camping is op", "Leos camping is op"],
+		"Difficulty": "Easy huh",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
+    },
+    {
+		"Question": "**Unscramble it:**\nThe word `Pmhanto` is scrambled, unscramble it to win!",
+		"Answer": ["Phantom", "phantom"],
+		"Difficulty": "Hard kinda :v",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674634059405590606/Z.png"
+    },
+    {
+		"Question": "**Question:**\nWhat's Leo's real name?\nOof i accidentally said the name :v",
+		"Answer": ["leo", "Leo"],
+		"Difficulty": "Non existent :v",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
+	}
+	
+]

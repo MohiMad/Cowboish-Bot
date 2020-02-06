@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Retype the sentence:**\nType `Ripper has too many skins`",
+		"Answer": ["Ripper has too many skins", "ripper has too many skins"],
+		"Difficulty": "Hard af xD",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674669851926724627/Z.png"
+    },
+    {
+		"Question": "**Question:**\nWhat's the name if the skin in the image?",
+		"Answer": ["Svengali", "svengali"],
+		"Difficulty": "Hard",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674667326968430602/9k.png"
+    },
+    {
+		"Question": "**Countinue the sentence:**\n`Ripper's _ _ _ blade has no attack recovery`",
+		"Answer": ["fog", "Fog"],
+		"Difficulty": "Ez",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674669851926724627/Z.png"
+	}
+	
+]

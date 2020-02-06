@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nHow many balls does the Acrobat spawn with?\nAnswer with a **NUMBER**",
+		"Answer": ["three", "Three", "3", "three balls"],
+		"Difficulty": "Eazy beazy lemon squeazy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673886051277864960/ddcuwfe-8786ae9e-a656-49f5-b1d9-b768cbec6e68.png?width=450&height=450"
+    },
+    {
+		"Question": "**Repeat da sentence:**\nType `The Acrobat has three balls`",
+		"Answer": ["The Acrobat has three balls", "the acrobat has three balls"],
+		"Difficulty": "Ez",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673886051277864960/ddcuwfe-8786ae9e-a656-49f5-b1d9-b768cbec6e68.png?width=450&height=450"
+    },
+    {
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["Mr.swifts", "Mr.Swifts"],
+		"Difficulty": "Hard as ma d :v",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673886270908530699/Ec4AyL0fOaQAAAAASUVORK5CYII.png"
+	}
+	
+]

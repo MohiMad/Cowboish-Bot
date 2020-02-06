@@ -1,0 +1,27 @@
+[
+	{
+		"Question": "**Question:**\nHow long does a watch last for?",
+		"Answer": ["20", "20 seconds", "twenty"],
+		"Difficulty": "Medium",
+		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
+    },
+    {
+		"Question": "**Question:**\nHow many watches does the 1st officer have?",
+		"Answer": ["two", "Two", "2"],
+		"Difficulty": "Easy",
+		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
+    },
+    {
+		"Question": "**Repeat da sentence:**\nType `I had to use my watch to rescue`",
+		"Answer": ["I had to use my watch to rescue", "i had to use my watch to rescue"],
+		"Difficulty": "Easy",
+		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["captin hook", "Captin Hook", "Captin hook"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
+	}
+	
+]

@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Repeat the sentence:**\nType `The enchantress is annoying`",
+		"Answer": ["The enchantress is annoying", "the enchantress is annoying"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
+    },
+    {
+		"Question": "**Unscramble the word:**\nThe word `lluSk` is scrambled, unscramble it to win!",
+		"Answer": ["Skull", "skull"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
+    },
+    {
+		"Question": "**Fill in the missing word:**\n`I stunned the _ _ _ _ _ _ with 3 stacks`",
+		"Answer": ["hunter", "Hunter"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
+	}
+	
+]

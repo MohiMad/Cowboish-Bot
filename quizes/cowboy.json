@@ -1,0 +1,23 @@
+[
+	{
+		"Question": "**Question:**\nHow many ballon saves does a lasso last for?",
+		"Answer": ["3", "Three", "three"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/emojis/649130677253439508.png?v=1"
+	},
+	{
+		"Question": "**Question:**\nWhat's the Cowboy's real name?",
+		"Answer": ["Kevin", "kevin"],
+		"Difficulty": "Easy",
+		"Attachment": "https://cdn.discordapp.com/emojis/649130677253439508.png?v=1"
+
+	},
+	{
+	
+		"Question": "**Question:**\nWhat's the Cowboy's surname?",
+		"Answer": ["alonso", "Alonso", "Ayuso", "ayuso"],
+		"Difficulty": "Eazy",
+		"Attachment": "https://cdn.discordapp.com/emojis/649130677253439508.png?v=1"
+
+    }
+]

@@ -1,0 +1,24 @@
+[
+	{
+
+		"Question": "**Question:**\nWhat's the Lawyer's main item?",
+		"Answer": ["Map", "map", "The map", "the map"],
+		"Difficulty": "HAAAARD :v",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673095433366536232/9k.png"
+	},
+	{
+
+		"Question": "**Question:**\nDoes the Lawyer have a S skin?",
+		"Answer": ["NO", "no", "No"],
+		"Difficulty": "HAAAARD :v",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673096009186017280/images.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["Mr. Bunny", "Bunny", "mr. bunny", "mr. Bunny", "bunny"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673096967563509770/A9LlDzSNm4ksAAAAAElFTkSuQmCC.png"
+    }
+    
+]

@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nWhat's the feaster's main ability/item?",
+		"Answer": ["tentacles", "Tentacles", "calamari"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674854528994115594/H189rzQW2aI3AAAAAElFTkSuQmCC.png"
+    },
+    {
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["chef", "Chef"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674853794533605376/8PNyEbm0q4nAAAAAElFTkSuQmCC.png"
+    },
+    {
+		"Question": "**Retype the sentence:**\nType `Feaster is the laziest hunter`",
+		"Answer": ["Feaster is the laziest hunter", "feaster is the laziest hunter"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674854528994115594/H189rzQW2aI3AAAAAElFTkSuQmCC.png"
+	}
+	
+]

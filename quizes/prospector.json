@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nhow long does it take for the Prospector to generatea new magnet?",
+		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165552889069568/9k.png"
+    },
+    {
+		"Question": "**Retype the sentence:**\nType `The prospector is attractive!`",
+		"Answer": ["The prospector is attractive!", "the prospector is attractive!"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165552889069568/9k.png"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["Mr.mole", "mole", "mr.mole", "Mr.Mole"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165351449362432/ZAqEMnx6KLJHrgRPLzpoT5P7rMWV7IRwnFAAAAAElFTkSuQmCC.png"
+	}
+	
+]

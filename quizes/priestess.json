@@ -1,0 +1,20 @@
+[
+	{
+		"Question": "**Question:**\nHow long does it take to gain one portal\nPlease answer in seconds!",
+		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
+    },
+    {
+		"Question": "**Retype the sentence:**\n``Priestess is a cockroach``",
+		"Answer": ["Priestess is a cockroach", "priestess is a cockroach"],
+		"Difficulty": "Lmao medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
+    },
+    {
+		"Question": "**Type quickly:**\nThe hunter just chaired yo teammate, quickly type `portal` to spawn a portal on the chair",
+		"Answer": ["portal", "Portal"],
+		"Difficulty": "Eazy?",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
+    }
+]

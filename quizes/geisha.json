@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nWhats the name of the skin in the image?",
+		"Answer": ["bride", "Bride"],
+		"Difficulty": "Hard",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677233574477885/2Q.png"
+    },
+    {
+		"Question": "**Continue the sentence:**\n`Geisha's _ _ _-box is wack`",
+		"Answer": ["hit", "Hit"],
+		"Difficulty": "Ez",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677763227254813/2Q.png"
+    },
+    {
+		"Question": "**Unscramble it:**\nThe word `shaD` is scrambled, unscramble it to win",
+		"Answer": ["dash", "Dash"],
+		"Difficulty": "Mediummmm",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677763227254813/2Q.png"
+	}
+	
+]

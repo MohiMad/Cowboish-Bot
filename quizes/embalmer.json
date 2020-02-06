@@ -1,0 +1,20 @@
+[
+	{
+		"Question": "**Question:**\nHow many coffins does the Embalmer spawn with?",
+		"Answer": ["one", "1", "One", "one coffin", "One coffin"],
+		"Difficulty": "Ez",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884816457990156/9k.png"
+    },
+    {
+		"Question": "**Repeat da sentence:**\nType `The Embalmer made me bleed out`",
+		"Answer": ["The Embalmer made me bleed out", "the embalmer made me bleed out"],
+		"Difficulty": "medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884816457990156/9k.png"
+    },
+    {
+		"Question": "**Guess the name:**\nThe word is scrambled, unscramble it!\n`scortEix`",
+		"Answer": ["exorcist", "Exorcist"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884480767000607/BdoGBBI13EsnAAAAAElFTkSuQmCC.png"
+    }
+]

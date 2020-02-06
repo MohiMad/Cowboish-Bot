@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nHow many items are obtainable via a chest?",
+		"Answer": ["12", "twelve", "Twelve"],
+		"Difficulty": "Hard",
+		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+	},
+	{
+
+		"Question": "**Question:**\nIs the Lucky Guy actually lucky?",
+		"Answer": ["yes", "no", "Yes", "No"],
+		"Difficulty": "Too Easy",
+		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+	},
+	{
+		"Question": "**Question:**\nWhat's the thing the Lucky guy loves?\n\nPsst The answer is *chests*",
+		"Answer": ["chests", "chest", "Chest", "Chests"],
+		"Difficulty": "Lmao way too Easy",
+		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+    }
+]

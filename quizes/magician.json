@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nHow many magic wands does the Magician spawn with?",
+		"Answer": ["Two", "two", "2"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935510091071488/Z.png"
+    },
+    {
+		"Question": "**Repeat the sentence:**\nType `Don't get terror shocked!`",
+		"Answer": ["Dont get terror shocked!", "dont get terror shocked!", "Don't get terror shocked!", "don't get terror shocked!"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935510091071488/Z.png"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["Merlin", "merlin"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935270088802314/5k1AObvBdQvdLXzv8rvaMg37t1oVmwriAoAAAAASUVORK5CYII.png"
+	}
+	
+]

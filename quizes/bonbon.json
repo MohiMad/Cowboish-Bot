@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Continue da sentence:**\n`Bonbon's main ability is throwing _ _ _ _ _`",
+		"Answer": ["bombs", "Bombs", "bomb"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675008248809652254/5f9834c6fe80ea5c83442899324e35ced60c979c.png?width=564&height=564"
+    },
+    {
+		"Question": "**Type it:**\nType `Noot noot`",
+		"Answer": ["Noot noot", "noot noot"],
+		"Difficulty": "Hard lol",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675007978923098115/hqdefault.png"
+    },
+    {
+		"Question": "**Fill in the missing word:**\n`Bonbon's camping is _ _`",
+		"Answer": ["op", "OP", "Op"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675008248809652254/5f9834c6fe80ea5c83442899324e35ced60c979c.png?width=564&height=564"
+	}
+	
+]

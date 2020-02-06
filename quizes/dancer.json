@@ -1,0 +1,20 @@
+[
+	{
+		"Question": "**Question:**\nThe the female dancer spawn, which music box is equipped first?\n**Fast box** or **Slow box**",
+		"Answer": ["Fast box", "fast box", "fast", "Fast", "red", "Red"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673879868529836032/Z.png"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of this skin?",
+		"Answer": ["Animal tamer", "animal tamer", "tamer", "Tamer"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673880275104825377/LykKHc8AcvtTAAAAAElFTkSuQmCC.png"
+    },
+    {
+		"Question": "**Question:**\nYou just placed a blue box at the pallet and the hunter is destroying it! Quickly type `stun` to stun the hunter with a pallet!",
+		"Answer": ["Stun", "stun"],
+		"Difficulty": "Medium",
+		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673879868529836032/Z.png"
+    }
+]

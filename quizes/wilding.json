@@ -1,0 +1,21 @@
+[
+	{
+		"Question": "**Question:**\nWhat does the wilding ride on?",
+		"Answer": ["boar", "Boar", "a boar", "A boar"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674325232927899651/Z.png"
+    },
+    {
+		"Question": "**Question:**\nWhat's the Wilding's real name?",
+		"Answer": ["Murro", "murro"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674325232927899651/Z.png"
+    },
+    {
+		"Question": "**Unscramble the word:**\nThe word `oarB` is scrambled, unscramble it to win!",
+		"Answer": ["boar", "Boar", "a boar", "A boar"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674325232927899651/Z.png"
+	}
+	
+]
