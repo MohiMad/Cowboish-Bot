@@ -1,14 +1,15 @@
 const { RichEmbed } = require('discord.js');
-const got = require ('got');
+const got = require('got');
 
 module.exports = {
-    name: 'idv', 
+    name: 'idv',
     description: "sends a random idv post",
-    execute(message, args, MohiMoo){
+    execute(message, args) {
+
 
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
 
-            const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+        const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
         got(random).then(response => {
 
@@ -28,41 +29,49 @@ module.exports = {
 
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
-            
+
 
             const embeed = new RichEmbed()
-            .setTitle(`${memeTitle}`)
-            .setURL(`${memeUrl}`)
-            .setDescription(`${joke}`)
-            .setColor("RANDOM")
-            .setFooter(`Provided by r/IdentityV | 👍 ${memeUpvotes} | 💬 ${memeNumComments}`);
+                .setTitle(`${memeTitle}`)
+                .setURL(`${memeUrl}`)
+                .setDescription(`${joke}`)
+                .setColor("RANDOM")
+                .setFooter(`Provided by r/IdentityV | 👍 ${memeUpvotes} | 💬 ${memeNumComments}`);
 
-            if(memeImage.endsWith(".jpg")){
-                embeed.setImage(`${memeImage}`)
-                message.channel.send(embeed);
-
+            if (joke.length > 2048) {
+                return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
 
             }
-            else if(memeImage.endsWith(".png")){
+            else if (memeImage.endsWith(".jpg")) {
                 embeed.setImage(`${memeImage}`)
                 message.channel.send(embeed);
-
-
             }
-            else if(memeImage.endsWith(".gif")){
+            else if (memeImage.endsWith(".png")) {
                 embeed.setImage(`${memeImage}`)
                 message.channel.send(embeed);
-
-
+            }
+            else if (memeImage.endsWith(".gif")) {
+                embeed.setImage(`${memeImage}`)
+                message.channel.send(embeed);
             }
             else {
                 message.channel.send(embeed);
             }
 
-
-            
-               
+        }).catch(err => {
+            if (err.message === "Response code 429 (Too Many Requests)") {
+                return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
+            }
+            else if (err.message === "RichEmbed descriptions may not exceed 2048 characters.") {
+                return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
+            }
+            else {
+                console.log(err)
+                message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
+            }
         })
-    
-        }
+
+
+
+    }
 }

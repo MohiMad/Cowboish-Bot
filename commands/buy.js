@@ -13,6 +13,7 @@ module.exports = {
             const buyEmbed = new RichEmbed()
                 .setTimestamp()
                 .setColor("GREEN")
+			    .setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1")
                 .setAuthor(`${message.author.username} successfully bought...`, message.author.avatarURL);
 
             //____________buy embed is here_______________

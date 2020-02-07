@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 const cooldown = new Set();
-const { newLP } = require("../functions.js");
+const { newLP, coolEmbed } = require("../functions.js");
 
 module.exports = {
     name: 'roll',
@@ -134,8 +134,8 @@ module.exports = {
 
             else if (cooldown.has(message.author.id)) {
                 if (message.deletable) message.delete();
-                message.channel.send(coolEmbed).then(m => m.delete(20000));
 
+                coolEmbed(message, "Ooof im tired", "To keep spamming away, there is a cooldown for this command set to **3** seconds\nWait until it ends and try to execute this command again :D")
             }
 
             else if (LP.Dices === 0) {
@@ -430,7 +430,7 @@ module.exports = {
             setTimeout(() => {
                 cooldown.delete(message.author.id)
 
-            }, 10000);
+            }, 3000);
 
 
         });

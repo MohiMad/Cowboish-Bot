@@ -93,7 +93,6 @@ bot.on("guildCreate", guild => {
         else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
 
     });
-    //if bot deleted it will let me know (NOT WORKING)
 
 
 });
@@ -110,7 +109,7 @@ bot.on('ready', () => {
         `🥳 celebrating ${bot.guilds.size} servers 🎉`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >help",
-        `milestone ${bot.guilds.size}/100 💕`,
+        `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
     ];
 
