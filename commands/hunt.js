@@ -23,7 +23,7 @@ module.exports = {
             if (message.deletable) message.delete();
             coolEmbed(message, "Ooof the cooldown is still on!", "The cooldown for the `hunt` command is set to **60** seconds\nPlease wait 60 seconds")
         }
-        else if (["hell ember", "leo"].includes(args[1].toLowerCase())) {
+        else if (["hellember", "leo", "HellEmber"].includes(args[1].toLowerCase())) {
 
             let leoFile = require("../quizes/leo.json");
 
