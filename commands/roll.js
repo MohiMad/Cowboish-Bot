@@ -26,7 +26,7 @@ module.exports = {
 
         let dice2Chance4 = "You walked 2 steps in your logicpath and got **20** clues <:clue:655384523735040000>";
 
-        let dice2Chance5 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000> use them wisely!\nto open the COAII essence, do ``open cao``";
+        let dice2Chance5 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000> use them wisely!\nto open the COAIII essence, do ``open coa``";
 
         let dice2Chance6 = "Congrats! here is your **1** <:ess2:655840643847028751> use it wisely\nTo open the essence you just got, do `>open s9-2`";
 
@@ -98,7 +98,7 @@ module.exports = {
 
         let dice3Chance3 = "Oh look, you got **10** clues <:clue:655384523735040000> and **50** <:inspirations:655840409674711060>";
 
-        let dice3Chance4 = "**20** <:clue:655384523735040000> & **1** <:ess3:655840571616919586> are now yours\nTo open the COAII essence do ``open coa`` ";
+        let dice3Chance4 = "**20** <:clue:655384523735040000> & **1** <:ess3:655840571616919586> are now yours\nTo open the COAIII essence do ``open coa`` ";
 
         var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3, dice3Chance4];
         var fact3 = Math.floor(Math.random() * facts3.length);
