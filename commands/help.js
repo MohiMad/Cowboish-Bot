@@ -95,6 +95,8 @@ module.exports = {
 
             __*>buy*__ ➜ Buy Survivors, Hunters or essences
 
+            __*>leaderboard*__ ➜ check the top 5 players for this category 
+
             `)
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
 

@@ -53,8 +53,7 @@ module.exports = {
 
             const LPEmbed = new RichEmbed()
                 .setAuthor(`${LPuser.username}'s Identity V info`, message.author.avatarURL)
-                .setDescription(stripIndents` 🆔 | *Ingame ID* ➜ **${ID}**
-                    **>ID <InGameID>** to change your ID
+                .setDescription(stripIndents`🆔 | *Ingame ID* ➜ **${ID}**
 
                     <:LP:675763680863977513> | *LogicPath steps* ➜ **${LP.logic}**
                     <:dice:655384578499936257> | *Dices* ➜ **${LP.Dices}**
