@@ -45,7 +45,7 @@ module.exports = {
             message.channel.send(noLPEmbed);
 
         } else {
-            let ID = "`>ID <IngameIDhere>`" || LP.ID;
+            let ID = LP.ID || "`>ID <IngameIDhere>";
 
             if (ID === "0") {
                 ID = "`>ID <IngameIDhere>`";
@@ -53,22 +53,23 @@ module.exports = {
 
             const LPEmbed = new RichEmbed()
                 .setAuthor(`${LPuser.username}'s Identity V info`, message.author.avatarURL)
-                .setDescription(stripIndents` 🆔 | *Ingame ID ➜ ${ID}*
+                .setDescription(stripIndents` 🆔 | *Ingame ID* ➜ **${ID}**
                     **>ID <InGameID>** to change your ID
 
-                    🚶 | *LogicPath steps* ➜ **${LP.logic}**
+                    <:LP:675763680863977513> | *LogicPath steps* ➜ **${LP.logic}**
                     <:dice:655384578499936257> | *Dices* ➜ **${LP.Dices}**
                     <:clue:655384523735040000> | *Clues* ➜ **${LP.Clues}**
                     <:inspirations:655840409674711060> | *Inspirations* ➜ **${LP.Inspirations}**
                     <:frags:655840344725913600> | *Fragments* ➜ **${LP.frags}**
+                    <:echoes:655840505225281536> | *Echoes* ➜ **${LP.Echoes}**
 
                     **Essences**
                     <:ess1:655840713904488469> | Essence *s9-1* ➜ **${LP.Ess1}**
                     <:ess3:655840571616919586> | COAII Essence ➜ **${LP.Ess2}**
                     <:ess2:655840643847028751> | Essence *s9-2* ➜ **${LP.Ess3}**`)
                 .addField("Skins", stripIndents`
-                    S: **${LP.S}**
-                    A: **${LP.A}**
+                    S skins: **${LP.S}**
+                    A skins: **${LP.A}**
 
                     Essences opened: **${LP.S + LP.A + LP.B + LP.C + LP.D}**
                     `, true)

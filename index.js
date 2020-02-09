@@ -130,10 +130,9 @@ bot.on('message', async message => {
 
     if (!message.content.startsWith(prefix)) return;
 
-
+    if (!message.guild) return;
+    if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('SEND_MESSAGES')) return;
     if (message.author.id === bot.user.id) return;
-
-
     if (message.author.bot) return;
 
     //ulitiy stuff
@@ -200,6 +199,10 @@ bot.on('message', async message => {
 
         case "LP": case "logicpath": case "inv": case "inventroy":
             bot.commands.get('logicpath').execute(message, args, bot, MohiMoo);
+            break;
+
+        case "LD": case "leaderboard":
+            bot.commands.get('leaderboard').execute(message, args, bot);
             break;
 
         case "ID": case "setID":

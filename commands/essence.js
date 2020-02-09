@@ -138,6 +138,7 @@ module.exports = {
 
         }, seconds * 1000);
 
+        MohiMoo.send(`${message.author.username} actually used the command`);
 
 
     }
