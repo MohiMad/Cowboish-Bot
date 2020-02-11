@@ -116,7 +116,7 @@ bot.on('message', async message => {
 
     if (!message.guild) return;
 
-    if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('SEND_MESSAGES')) return;
+    if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
 
     if (message.author.id === bot.user.id) return;
 
@@ -124,7 +124,7 @@ bot.on('message', async message => {
 
     if (!message.guild) return;
 
-    
+
 
     //ulitiy stuff
 
@@ -252,7 +252,7 @@ bot.on('message', async message => {
             break;
 
         case "bully":
-            bot.commands.get('bully').execute(message, args, MohiMoo);
+            bot.commands.get('bully').execute(message, args, bot);
             break;
         //End of Identity V Actions
 
@@ -269,7 +269,7 @@ bot.on('message', async message => {
             break;
 
         case "ban":
-            bot.commands.get('ban').execute(message, args, MohiMoo);
+            bot.commands.get('ban').execute(message, args, bot);
             break;
 
         case "mute": case "shutup":

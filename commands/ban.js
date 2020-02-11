@@ -5,7 +5,7 @@ const { findMember, ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'ban',
     description: "bans a player",
-    execute: async (message, args, MohiMoo) => {
+    execute: async (message, args, bot) => {
 
         const member = await findMember(message, args[1]);
 
@@ -19,7 +19,7 @@ module.exports = {
         if (!args[1]) {
             ErrorMsg(bot, message, "Please mention a member or provide their ID\nUsage: `>ban <@Tagmember>`");
         }
-        if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('BAN_MEMBERS')){
+        if (!message.guild.me.hasPermission("BAN_MEMBERS")) {
             return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **BAN_MEMBERS**")
 
         }

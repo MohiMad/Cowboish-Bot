@@ -10,9 +10,9 @@ module.exports = {
 
         }
 
-        else if (!args[1]) return message.reply('How many messeges do u want me to sweep?').then(m => m.delete(5000));
+        else if (!args[1]) return ErrorMsg(bot, message, 'How many messeges do u want me to sweep?');
 
-        if (args[1] > 100) return message.reply("I can't delete more than 100 mesaages dum dum").then(m => m.delete(5000));
+        if (args[1] > 100) return ErrorMsg(bot, message, "I can't delete more than 100 mesaages dum dum")
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.reply("You can't delete messages....").then(m => m.delete(5000));
