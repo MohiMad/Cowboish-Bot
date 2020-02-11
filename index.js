@@ -201,11 +201,11 @@ bot.on('message', async message => {
             break;
 
         case "quick": case "play":
-            bot.commands.get('quick').execute(message, args, MohiMoo);
+            bot.commands.get('quick').execute(message, args, bot);
             break;
 
         case "hunter": case "hunt":
-            bot.commands.get('hunt').execute(message, args, MohiMoo);
+            bot.commands.get('hunt').execute(message, args, bot);
             break;
 
         case "dailyreward": case "daily":

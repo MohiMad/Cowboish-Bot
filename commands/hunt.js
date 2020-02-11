@@ -7,7 +7,7 @@ const { quiz, ErrorMsg, coolEmbed, newLP } = require("../functions.js");
 module.exports = {
     name: 'hunt',
     description: "play a match as a hunter",
-    execute: async (message, args) => {
+    execute: async (message, args, bot) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -16,7 +16,7 @@ module.exports = {
         }
 
         else if (!args[1]) {
-            return ErrorMsg(this.bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `>hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `>shop`\nKeep in mind that you always can play as:\n**HellEmber**");
+            return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `>hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `>shop`\nKeep in mind that you always can play as:\n**HellEmber**");
         }
 
         else if (cooldown.has(message.author.id)) {

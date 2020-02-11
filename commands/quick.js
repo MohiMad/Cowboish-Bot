@@ -6,7 +6,7 @@ let cooldown = new Set();
 module.exports = {
     name: 'quick',
     description: "play a quick match",
-    execute: async (message, args) => {
+    execute: async (message, args, bot) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
