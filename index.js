@@ -6,22 +6,6 @@ const fs = require('fs');
 const DBL = require("dblapi.js");
 
 const { stripIndents } = require("common-tags");
-//___________________________________
-
-
-//_____________Divine discord login____________
-
-//________________________________
-
-const dbl = new DBL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY", { webhookPort: 5000, webhookAuth: 'mmkdmkmmkdmk' });
-
-dbl.webhook.on('ready', hook => {
-    console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
-});
-
-dbl.webhook.on('vote', vote => {
-    console.log(`User with ID ${vote.user} just voted!`);
-});
 
 
 //_______________MONGOOSE STUFF____________________
@@ -131,9 +115,16 @@ bot.on('message', async message => {
     if (!message.content.startsWith(prefix)) return;
 
     if (!message.guild) return;
+
     if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('SEND_MESSAGES')) return;
+
     if (message.author.id === bot.user.id) return;
+
     if (message.author.bot) return;
+
+    if (!message.guild) return;
+
+    
 
     //ulitiy stuff
 
@@ -237,7 +228,7 @@ bot.on('message', async message => {
         //Identity V Actions 
 
         case "blink":
-            bot.commands.get('blink').execute(message, args, MohiMoo);
+            bot.commands.get('blink').execute(message, args, bot);
             break;
 
         case "stun":
@@ -270,7 +261,7 @@ bot.on('message', async message => {
         //Moderation Commands starts here
 
         case "clear": case "purge": case "delete":
-            bot.commands.get('clear').execute(message, args, MohiMoo);
+            bot.commands.get('clear').execute(message, args, bot);
             break;
 
         case "kick":
@@ -282,7 +273,7 @@ bot.on('message', async message => {
             break;
 
         case "mute": case "shutup":
-            bot.commands.get('mute').execute(message, args, MohiMoo);
+            bot.commands.get('mute').execute(message, args, bot);
             break;
 
         //End of moderation commands

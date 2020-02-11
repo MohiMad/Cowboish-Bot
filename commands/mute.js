@@ -3,12 +3,23 @@ const ms = require('ms');
 module.exports = {
   name: 'mute',
   description: "mute!",
-  execute: async (message, args, MohiMoo) => {
+  execute: async (message, args, bot) => {
 
+
+    if (!message.member.hasPermission("MANAGE_ROLES", false, true, true)) {
+      ErrorMsg(bot, message, "You don't have the needed permissions to use this command");
+    }
+    if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('MANAGE_ROLES')){
+      return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE_ROLES**")
+
+  }
 
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+
     if (!tomute) return message.reply("Couldn't find user! make sure that you tagged them right after the command example >mute <member> s/h/d");
+
     if (tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Oof looks like i can't mute them... how op");
+
     let muterole = message.guild.roles.find(muterole => muterole.name === "😶Taped Mouth😶");
 
     if (!muterole) {

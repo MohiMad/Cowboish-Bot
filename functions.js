@@ -4,14 +4,14 @@ const { stripIndents } = require('common-tags');
 
 module.exports = {
 
-	coolEmbed : (message, Title, Description) => {
+	coolEmbed: (message, Title, Description) => {
 		const coolEmbed = new RichEmbed()
 			.setTitle(Title)
 			.setColor("RED")
 			.setDescription(Description)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
 			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
-            message.channel.send(coolEmbed).then(m => m.delete(30000));
+		message.channel.send(coolEmbed).then(m => m.delete(30000));
 
 	},
 
@@ -59,7 +59,7 @@ module.exports = {
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
+			.setFooter("Cowboish bot", bot.user.displayAvatarURL);
 		message.channel.send(errEmbed);
 	},
 
@@ -80,7 +80,7 @@ module.exports = {
 		const filter = m => m.author.id === message.author.id;
 
 		const LP = await logicPath.findOne({ UserID: message.author.id });
-		
+
 		const quizEmbed = new RichEmbed()
 			.setTitle("Answer the question below to get a dice <:dice:655384578499936257>")
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
@@ -99,12 +99,12 @@ module.exports = {
 			message.channel.awaitMessages(filter, { max: 1, time: 60000 }).then(collected => {
 				let respondAuth = collected.first();
 
-				if (answer.includes(collected.first().content.toLowerCase())){
+				if (answer.includes(collected.first().content.toLowerCase())) {
 					message.channel.send(`**${message.author.username}** got the right answer and got a dice <:dice:655384578499936257>`);
 
 					LP.Dices = LP.Dices + 1;
 					LP.save().catch(err => console.log(err));
-					
+
 				}
 				else {
 					message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!");
@@ -118,76 +118,76 @@ module.exports = {
 
 	},
 	newLP: (message) => {
-        const newLP = new logicPath({
-            UserID: message.author.id,
-            logic: 0,
-            Dices: 15,
-            Clues: 0,
-            Ess1: 5,
-            Ess2: 5,
-            Ess3: 5,
-            Inspirations: 0,
-            frags: 0,
-            S: 0,
-            A: 0,
-            B: 0,
-            C: 0,
-            D: 0,
-            Echoes: 0,
+		const newLP = new logicPath({
+			UserID: message.author.id,
+			logic: 0,
+			Dices: 15,
+			Clues: 0,
+			Ess1: 5,
+			Ess2: 5,
+			Ess3: 5,
+			Inspirations: 0,
+			frags: 0,
+			S: 0,
+			A: 0,
+			B: 0,
+			C: 0,
+			D: 0,
+			Echoes: 0,
 
-            ID: 0,
+			ID: 0,
 
-            Survivors: {
-                Cowboy: false,
-                Mercenary: false,
-                Coordinator: false,
-                Priestess: false,
-                Mechanic: false,
-                Mindseye: false,
-                Prefumer: false,
-                Dancer: false,
-                Seer: false,
-                Embalmer: false,
-                Acrobat: false,
-                Officer: false,
-                Barmaid: false,
-                Magician: false,
-                Explorer: false,
-                Forward: false,
-                Prospector: false,
-                Enchantress: false,
-                Wilding: false,
-                Postman: false,
-                NewSurv: false,
-                AnotherSurv: false,
-            },
+			Survivors: {
+				Cowboy: false,
+				Mercenary: false,
+				Coordinator: false,
+				Priestess: false,
+				Mechanic: false,
+				Mindseye: false,
+				Prefumer: false,
+				Dancer: false,
+				Seer: false,
+				Embalmer: false,
+				Acrobat: false,
+				Officer: false,
+				Barmaid: false,
+				Magician: false,
+				Explorer: false,
+				Forward: false,
+				Prospector: false,
+				Enchantress: false,
+				Wilding: false,
+				Postman: false,
+				NewSurv: false,
+				AnotherSurv: false,
+			},
 
-            Hunters: {
+			Hunters: {
 
-                WuChang: false,
-                AxeBoi: false,
-                Lizard: false,
-                Clown: false,
-                GameKeeper: false,
-                Ripper: false,
-                SoulWeaver: false,
-                Geisha: false,
-                PhotoGrapher: false,
-                MadEyes: false,
-                Feaster: false,
-                DreamWitch: false,
-                BloodyQueen: false,
-                Pingu: false,
-                Sister: false,
-                NewHunta: false,
-                AnotherHunta: false
+				WuChang: false,
+				AxeBoi: false,
+				Lizard: false,
+				Clown: false,
+				GameKeeper: false,
+				Ripper: false,
+				SoulWeaver: false,
+				Geisha: false,
+				PhotoGrapher: false,
+				MadEyes: false,
+				Feaster: false,
+				DreamWitch: false,
+				BloodyQueen: false,
+				Pingu: false,
+				Sister: false,
+				NewHunta: false,
+				AnotherHunta: false
 
-            },
-            Opened: []
+			},
+			Opened: []
 
-        })
-        newLP.save().catch(err => console.log(err))
-            .then(message.reply("It seems like you didn't have any idv account, a new one just got created for you!\nPlease try to run the command again :)"))
+		})
+		newLP.save().catch(err => console.log(err))
+			.then(message.reply("It seems like you didn't have any idv account, a new one just got created for you!\nPlease try to run the command again :)"))
 
 	}
 

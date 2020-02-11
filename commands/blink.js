@@ -4,8 +4,9 @@ const { ErrorMsg, newLP } = require("../functions.js");
 module.exports = {
     name: 'blink',
     description: "blink yo azz",
-    execute(message, args, MohiMoo) {
-        if (!args[1]) return ErrorMsg(this.bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
+    execute(message, args, bot) {
+
+        if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
 
 
         let persona = message.mentions.users.first()

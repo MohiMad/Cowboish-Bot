@@ -7,34 +7,32 @@ module.exports = {
     description: "bans a player",
     execute: async (message, args, MohiMoo) => {
 
-
-
         const member = await findMember(message, args[1]);
 
         const reason = args.slice(2).join(" ") || "No Reason";
 
 
-        const errEmbed = new RichEmbed()
-            .setAuthor("Oops, an error has occured!", message.author.AvatarURL)
-            .setColor("RED")
-            .setTimestamp();
-
 
         if (!message.member.hasPermission("BAN_MEMBERS", false, true, true)) {
-            ErrorMsg(this.bot, message, "You don't have the needed permissions to use this command");
+            ErrorMsg(bot, message, "You don't have the needed permissions to use this command");
         }
         if (!args[1]) {
-            ErrorMsg(this.bot, message, "Please mention a member or provide their ID\nUsage: `>ban <@Tagmember>`");
+            ErrorMsg(bot, message, "Please mention a member or provide their ID\nUsage: `>ban <@Tagmember>`");
         }
+        if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('BAN_MEMBERS')){
+            return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **BAN_MEMBERS**")
 
+        }
+            
+    
         else if (!member) {
-            ErrorMsg(this.bot, message, "Couldn't find that member!");
+            ErrorMsg(bot, message, "Couldn't find that member!");
 
 
         }
 
         else if (!member.bannable) {
-            ErrorMsg(this.bot, message, "I'm sorry i can't ban that member, how op :O");
+            ErrorMsg(bot, message, "I'm sorry i can't ban that member, how op :O");
         }
         else {
 
