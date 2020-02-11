@@ -71,11 +71,12 @@ module.exports = {
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         if (!LP){ newLP(message) }
+
         else if (LP.Ess1 === null) {
             MohiMoo.send(`User with the name ${message.author.username}/${message.author.id} has the Essence s9-1 set to null smh`);
         }
 
-        if (!args[1]) {
+        else if (!args[1]) {
 
             const noargsEmbed = new RichEmbed()
                 .setTitle("Please provide one of the essences ID after the command")
