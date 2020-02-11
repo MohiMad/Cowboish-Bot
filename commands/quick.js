@@ -16,7 +16,7 @@ module.exports = {
         }
 
         else if (!args[1]) {
-            return ErrorMsg(this.bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `>quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `>shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+            return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `>quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `>shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
         }
 
         else if (cooldown.has(message.author.id)) {

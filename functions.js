@@ -59,7 +59,7 @@ module.exports = {
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", bot.user.displayAvatarURL);
+			.setFooter("Cowboish bot", message.author.displayAvatarURL);
 		message.channel.send(errEmbed);
 	},
 
