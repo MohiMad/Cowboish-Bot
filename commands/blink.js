@@ -27,7 +27,7 @@ module.exports = {
 
             imagaNumber = Math.floor(Math.random() * (nuber - 1 + 1)) + 1;
 
-            var facts = ["Oof " + persona.username + " got their ass blinked by " + person];
+            var facts = ["Oof " + persona.user.username + " got their ass blinked by " + person];
 
             var fact = Math.floor(Math.random() * facts.length);
 
@@ -36,7 +36,7 @@ module.exports = {
                 .attachFiles(["./blink/" + 'blink' + imagaNumber + ".gif"])
                 .setImage('attachment://blink' + imagaNumber + '.gif')
                 .setColor("RANDOM")
-                .setFooter(`That poor poor ${persona.username} :C`, persona.user.displayAvatarURL);
+                .setFooter(`That poor poor ${persona.user.username} :C`, persona.user.displayAvatarURL);
 
 
             message.channel.send(lassoembed);
