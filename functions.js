@@ -55,7 +55,7 @@ module.exports = {
 
 	ErrorMsg: (bot, message, error) => {
 		const errEmbed = new RichEmbed()
-			.setTitle("<:nae:671454247505625110> Oof! dats an error >:/")
+			.setTitle("<:nae:671454247505625110> Oof dats an error >:/")
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)

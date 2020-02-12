@@ -4,7 +4,7 @@ const { ErrorMsg, findMember } = require("../functions.js");
 module.exports = {
     name: 'lasso',
     description: "lassos you",
-    execute: async (message, args, bot, MohiMoo) => {
+    execute: async (message, args, bot) => {
 
         let persona = await findMember(message, args[1]);
 
@@ -37,7 +37,6 @@ module.exports = {
                 .attachFiles(["./lassos/" + 'lasso' + imagaNumber + ".gif"])
                 .setImage('attachment://lasso' + imagaNumber + '.gif')
                 .setColor("RANDOM")
-                .setFooter(`Want your replay to pop up here? submit it to ${MohiMoo.tag}`, persona.user.displayAvatarURL);
 
 
 

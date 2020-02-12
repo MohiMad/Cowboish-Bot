@@ -232,27 +232,27 @@ bot.on('message', async message => {
             break;
 
         case "stun":
-            bot.commands.get('stun').execute(message, args, MohiMoo);
+            bot.commands.get('stun').execute(message, args, bot);
             break;
 
         case "crash":
-            bot.commands.get('crash').execute(message, args, bot, MohiMoo);
+            bot.commands.get('crash').execute(message, args, bot);
             break;
 
         case "terrorshock": case "tc":
-            bot.commands.get('terrorshock').execute(message, args, MohiMoo);
+            bot.commands.get('terrorshock').execute(message, args);
             break;
 
         case "lasso": case "yoink":
-            bot.commands.get('lasso').execute(message, args, bot, MohiMoo);
+            bot.commands.get('lasso').execute(message, args, bot);
             break;
 
         case "shoot": case "flaregun":
-            bot.commands.get('shoot').execute(message, args, MohiMoo);
+            bot.commands.get('shoot').execute(message, args, bot);
             break;
 
         case "bully":
-            bot.commands.get('bully').execute(message, args, bot, MohiMoo);
+            bot.commands.get('bully').execute(message, args, bot);
             break;
         //End of Identity V Actions
 
