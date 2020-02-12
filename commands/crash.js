@@ -4,7 +4,7 @@ const { ErrorMsg, findMember } = require("../functions.js");
 module.exports = {
     name: 'crash',
     description: "crash you",
-    execute(message, args, bot, MohiMoo) {
+    execute: async (message, args, bot, MohiMoo) => {
 
 
         const persona = await findMember(message, args[1]);

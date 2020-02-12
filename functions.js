@@ -55,11 +55,11 @@ module.exports = {
 
 	ErrorMsg: (bot, message, error) => {
 		const errEmbed = new RichEmbed()
-			.setTitle("<:nae:671454247505625110> Wrong usage! >:/")
+			.setTitle("<:nae:671454247505625110> Oof! dats an error >:/")
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", message.author.displayAvatarURL);
+			.setFooter("Cowboish bot", "https://cdn.discordapp.com/avatars/632291800585076761/d2199b698688927128515d64e327169a.png?size=256");
 		message.channel.send(errEmbed);
 	},
 
