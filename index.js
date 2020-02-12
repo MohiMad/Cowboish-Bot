@@ -244,7 +244,7 @@ bot.on('message', async message => {
             break;
 
         case "lasso": case "yoink":
-            bot.commands.get('lasso').execute(message, args, MohiMoo);
+            bot.commands.get('lasso').execute(message, args, bot, MohiMoo);
             break;
 
         case "shoot": case "flaregun":
