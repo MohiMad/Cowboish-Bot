@@ -252,7 +252,7 @@ bot.on('message', async message => {
             break;
 
         case "bully":
-            bot.commands.get('bully').execute(message, args, bot);
+            bot.commands.get('bully').execute(message, args, bot, MohiMoo);
             break;
         //End of Identity V Actions
 
