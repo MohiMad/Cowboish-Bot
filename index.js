@@ -236,7 +236,7 @@ bot.on('message', async message => {
             break;
 
         case "crash":
-            bot.commands.get('crash').execute(message, args, MohiMoo);
+            bot.commands.get('crash').execute(message, args, bot, MohiMoo);
             break;
 
         case "terrorshock": case "tc":

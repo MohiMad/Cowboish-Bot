@@ -8,7 +8,7 @@ module.exports = {
         let persona = await findMember(message, args[1]);
 
         if (!args[1]) {
-            return ErrorMsg(bot, message, "Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(").then(m => m.delete(10000));
+            return ErrorMsg(bot, message, "Who do you want to bully? Mention them right after the command | example: >bully @Cowboish Bot . oh no... plz don't bully me :(")
         }
         else if (!persona) {
             ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `>blink <MentionHere>`")
