@@ -11,13 +11,7 @@ module.exports = {
 
         let person = message.author.username
 
-        nuber = 6;
 
-        imagaNumber = Math.floor(Math.random() * (nuber - 1 + 1)) + 1;
-
-        var facts = ["Oof " + persona.username + " got their ass blinked by " + person];
-
-        var fact = Math.floor(Math.random() * facts.length);
 
         if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
 
@@ -29,10 +23,18 @@ module.exports = {
 
         } else {
 
+            nuber = 6;
+
+            imagaNumber = Math.floor(Math.random() * (nuber - 1 + 1)) + 1;
+
+            var facts = ["Oof " + persona.username + " got their ass blinked by " + person];
+
+            var fact = Math.floor(Math.random() * facts.length);
+
             const lassoembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles(["./gifs/blink/" + 'blink' + imagaNumber + ".gif"])
-                .setImage('attachment://gifs/blink' + imagaNumber + '.gif')
+                .attachFiles(["./blink/" + 'blink' + imagaNumber + ".gif"])
+                .setImage('attachment://blink' + imagaNumber + '.gif')
                 .setColor("RANDOM")
                 .setFooter(`That poor poor ${persona.username} :C`, persona.user.displayAvatarURL);
 
