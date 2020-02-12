@@ -1,15 +1,13 @@
 const { RichEmbed } = require('discord.js');
-const { ErrorMsg } = require("../functions.js");
+const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
     name: 'blink',
     description: "blink yo azz",
-    execute(message, args, bot) {
-
-        if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
+    execute: async (message, args, bot) => {
 
 
-        let persona = message.mentions.users.first()
+        let persona = await findMember(message, args[1]);
 
         let person = message.author.username
 
@@ -21,16 +19,26 @@ module.exports = {
 
         var fact = Math.floor(Math.random() * facts.length);
 
-        const lassoembed = new RichEmbed()
-            .setAuthor((facts[fact]), message.author.avatarURL)
-            .attachFiles(["./blink/" + 'blink' + imagaNumber + ".gif"])
-            .setImage('attachment://blink' + imagaNumber + '.gif')
-            .setColor("RANDOM");
+        if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D').then(m => m.delete(10000));
 
-        if (message.mentions.users.first().id === message.author.id)
+        else if (!persona) {
+            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `>blink <MentionHere>`")
+        }
+        else if (persona.id === message.author.id) {
             return message.channel.send("Nah don't waste the blink on yourself, **" + message.author.username + "**");
 
-        else message.channel.send(lassoembed);
+        } else {
+
+            const lassoembed = new RichEmbed()
+                .setAuthor((facts[fact]), message.author.avatarURL)
+                .attachFiles(["./gifs/blink/" + 'blink' + imagaNumber + ".gif"])
+                .setImage('attachment://gifs/blink' + imagaNumber + '.gif')
+                .setColor("RANDOM")
+                .setFooter(`That poor poor ${persona.username} :C`, persona.user.displayAvatarURL);
+
+
+            message.channel.send(lassoembed);
+        }
 
 
 
