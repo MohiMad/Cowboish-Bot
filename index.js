@@ -3,7 +3,8 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json")
 const fs = require('fs');
-const DBL = require("dblapi.js");
+
+const MohiMoo = bot.users.get("478527909250990090");
 
 const { stripIndents } = require("common-tags");
 
@@ -16,7 +17,14 @@ mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
-//-----------------------------------------------------//
+//______________________DDBL webhook_____________//
+const DBL = require("dblapi.js");
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
+
+dbl.webhook.on('error', e => {
+    console.log(`Oops! ${e}`);
+  });
+
 
 //Command handler HERE 
 bot.commands = new Discord.Collection();
@@ -54,11 +62,21 @@ bot.on("guildCreate", guild => {
     }
     const welcomeEmbed = new Discord.RichEmbed()
         .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
-            stripIndents`My cowboish birthday 🎉🎊 **14/10/2019**
+            stripIndents`
+        Cowboish bot is the first working Identity V discord bot and is **MohiMoo**'s first project :D
+
+        🎉 | My cowboish birthday 🎊 **14/10/2019**
+
         👍 | Do *>help* and i will be there for help :)
+
         🔧 | My prefix is **>** remember using it before any command of my commands
+
         🙂 | Now im in **${bot.guilds.size}**, servers and growing <3
-        ❔  | **Errors** or **suggestions**? do *>suggest*/*>issue*`)
+
+        ❔  | **Errors** or **suggestions**? do *>suggest*/*>issue*
+        
+        💠 | For more info contact: **${MohiMoo.tag}**
+        `)
         .addBlankField()
         .addField("💗 | Support me",
             stripIndents`
@@ -101,12 +119,14 @@ bot.on('ready', () => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         bot.user.setActivity(activities_list[index]);
     }, 100000);//sets the activity each 120 s
+
+    setInterval(() => {
+        dbl.postStats(bot.guilds.size, bot.shards.Id, bot.shards.total);
+    }, 1800000);
 })
 
 
 bot.on('message', async message => {
-
-    const MohiMoo = bot.users.get("478527909250990090");
 
     let prefix = ">";
 

@@ -4,12 +4,15 @@ const got = require('got');
 module.exports = {
     name: 'idv',
     description: "sends a random idv post",
-    execute(message, args) {
+    execute(message, args, MohiMoo) {
+
 
 
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+
+        try {
 
         got(random).then(response => {
 
@@ -58,7 +61,8 @@ module.exports = {
                 message.channel.send(embeed);
             }
 
-        }).catch(err => {
+        })
+        } catch(err) {
             if (err.message === "Response code 429 (Too Many Requests)") {
                 return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
             }
@@ -67,9 +71,11 @@ module.exports = {
             }
             else {
                 console.log(err)
+                MohiMoo.send("```" + err + "```");
                 message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
             }
-        })
+        }
+        
 
 
 

@@ -10,7 +10,7 @@ module.exports = {
         let persona = await findMember(message, args[1]);
 
         if (!args[1]) {
-            return ErrorMsg(bot, message, "Who do you want to shut the pallet on? Mention them right after the command | example: >stun @Cowboish Bot.").then(m => m.delete(10000));
+            return ErrorMsg(bot, message, "Who do you want to shut the pallet on? Mention them right after the command | example: >stun @Cowboish Bot.")
 
         }
         else if (!persona) {

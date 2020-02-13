@@ -11,33 +11,35 @@ module.exports = {
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
 
-        got(random).then(response => {
+        try {
+            got(random).then(response => {
 
-            let content = JSON.parse(response.body);
+                let content = JSON.parse(response.body);
 
-            let permalink = content[0].data.children[0].data.permalink;
+                let permalink = content[0].data.children[0].data.permalink;
 
-            let memeUrl = `https://reddit.com${permalink}`;
+                let memeUrl = `https://reddit.com${permalink}`;
 
-            let memeImage = content[0].data.children[0].data.url;
+                let memeImage = content[0].data.children[0].data.url;
 
-            let memeTitle = content[0].data.children[0].data.title;
+                let memeTitle = content[0].data.children[0].data.title;
 
-            let memeUpvotes = content[0].data.children[0].data.ups;
+                let memeUpvotes = content[0].data.children[0].data.ups;
 
-            let memeNumComments = content[0].data.children[0].data.num_comments;
+                let memeNumComments = content[0].data.children[0].data.num_comments;
 
 
-            const embeed = new RichEmbed()
-                .setTitle(`${memeTitle}`)
-                .setURL(`${memeUrl}`)
-                .setColor("RANDOM")
-                .setImage(memeImage)
-                .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
+                const embeed = new RichEmbed()
+                    .setTitle(`${memeTitle}`)
+                    .setURL(`${memeUrl}`)
+                    .setColor("RANDOM")
+                    .setImage(memeImage)
+                    .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
 
-            message.channel.send(embeed);
+                message.channel.send(embeed);
 
-        }).catch(err => {
+            })
+        } catch (err) {
             if (err.message === "Response code 429 (Too Many Requests)") {
                 return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
             }
@@ -45,11 +47,11 @@ module.exports = {
                 return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
             }
             else {
-                console.log(err)
+                console.log(err);
+                MohiMoo.send("```" + err + "```");
                 message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
             }
-        })
+        }
 
-
-}
+    }
 }

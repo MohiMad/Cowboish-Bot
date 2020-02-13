@@ -8,19 +8,19 @@ module.exports = {
 
 
 const betterEmbed = new RichEmbed()
-    .setThumbnail(bot.displayAvatarURL)
-    .setColor(bot.displayHexColor === '#000000' ? '#ffffff' : bot.displayHexColor)
+    .setThumbnail(bot.user.displayAvatarURL)
+    .setColor(bot.user.displayHexColor === '#000000' ? '#ffffff' : bot.displayHexColor)
 
     .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", 
     stripIndents`👇 <@632291800585076761> information 👇
-    Cowboish bot is my first projects to code using *discord.js*
+    Cowboish bot is MohiMoo's first project coded using *JavaScript*
 
     ⚙️ Bot's prefix : **>**
     - *Use this prefix before any of my commands ;D*
 
     📌 Do __*>help*__ to recieve help >:D
 
-    <:cowboy:649130677253439508> Creator: ${MohiMoo.username}
+    <:cowboy:649130677253439508> Creator: **${MohiMoo.tag}**
 
     🎉 My birthday : 🎂 **14/10/2019**
     
