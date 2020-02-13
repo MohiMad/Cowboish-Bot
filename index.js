@@ -4,8 +4,6 @@ const bot = new Discord.Client();
 const config = require("./config.json")
 const fs = require('fs');
 
-const MohiMoo = bot.users.get("478527909250990090");
-
 const { stripIndents } = require("common-tags");
 
 
@@ -20,10 +18,6 @@ mongoose.connect(uri, {
 //______________________DDBL webhook_____________//
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
-
-
-
-
 
 //Command handler HERE 
 bot.commands = new Discord.Collection();
@@ -59,6 +53,8 @@ bot.on("guildCreate", guild => {
             break channelLoop;
         }
     }
+    const Mohi = bot.users.get("478527909250990090");
+
     const welcomeEmbed = new Discord.RichEmbed()
         .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
             stripIndents`
@@ -74,7 +70,7 @@ bot.on("guildCreate", guild => {
 
         ❔  | **Errors** or **suggestions**? do *>suggest*/*>issue*
         
-        💠 | For more info contact: **${MohiMoo.tag}**
+        💠 | For more info contact: **${Mohi.tag}**
         `)
         .addBlankField()
         .addField("💗 | Support me",
@@ -126,6 +122,8 @@ bot.on('ready', () => {
 
 
 bot.on('message', async message => {
+
+    const MohiMoo = bot.users.get("478527909250990090");
 
     let prefix = ">";
 
