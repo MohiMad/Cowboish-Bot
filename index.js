@@ -116,7 +116,7 @@ bot.on('ready', () => {
     }, 100000);//sets the activity each 120 s
 
     setInterval(() => {
-        dbl.postStats(bot.guilds.size, bot.shards.Id, bot.shards.total);
+        dbl.postStats(bot.guilds.size);
     }, 1800000);
 })
 
