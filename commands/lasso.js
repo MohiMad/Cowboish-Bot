@@ -21,7 +21,7 @@ module.exports = {
         }
         else {
 
-            nuber = 9;
+            nuber = 10;
 
             imagaNumber = Math.floor(Math.random() * (nuber - 1 + 1)) + 1;
 
