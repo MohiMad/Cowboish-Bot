@@ -21,9 +21,8 @@ mongoose.connect(uri, {
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
-dbl.webhook.on('error', e => {
-    console.log(`Oops! ${e}`);
-  });
+
+
 
 
 //Command handler HERE 
