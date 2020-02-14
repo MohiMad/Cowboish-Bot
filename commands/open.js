@@ -2,7 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 const { stripIndents } = require("common-tags");
 
-const { newLP } = require("../functions.js");
+const { newLP, guildAdd } = require("../functions.js");
 
 
 const logicPath = require("../models/logicpath.js");
@@ -387,6 +387,9 @@ module.exports = {
             }
 
             message.channel.send(s9Embed);
+
+            guildAdd(message);
+
 
         }//s9-2 essence bracket
     }catch(err){

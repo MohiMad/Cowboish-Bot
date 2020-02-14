@@ -682,6 +682,9 @@ module.exports = {
                     message.reply("this item doesn't exist in the shop! make sure that you typed it correctly!");
                 }
 
+                guildAdd(message);
+
+
             })//LP 
 
         

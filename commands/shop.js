@@ -281,6 +281,8 @@ module.exports = {
         else {
             message.reply("what are you dooooiing! this list doesn't exist");
         }
+        guildAdd(message);
+
 
 
     }

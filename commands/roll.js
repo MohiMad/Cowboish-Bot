@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 const cooldown = new Set();
-const { newLP, coolEmbed } = require("../functions.js");
+const { newLP, coolEmbed, guildAdd } = require("../functions.js");
 
 module.exports = {
     name: 'roll',
@@ -430,6 +430,8 @@ module.exports = {
 
 
         });
+        guildAdd(message);
+
 
 
     }

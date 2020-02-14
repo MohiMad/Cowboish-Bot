@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 const logicPath = require("../models/logicpath.js");
-const { quiz, ErrorMsg, coolEmbed, newLP } = require("../functions.js");
+const { quiz, ErrorMsg, coolEmbed, newLP, guildAdd } = require("../functions.js");
 
 let cooldown = new Set();
 module.exports = {
@@ -355,6 +355,7 @@ module.exports = {
         }, 60000);
 
 
+        guildAdd(message);
 
 
     }

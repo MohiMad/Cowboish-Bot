@@ -19,7 +19,10 @@ module.exports = {
 
 	const LP_User = await logicPath.findOne({ UserID: message.author.id });
 
-	if(!LP_User.guildsID.includes(message.guild.id)){
+	if(!LP_User){
+		return;
+	}
+	else if(!LP_User.guildsID.includes(message.guild.id)){
 
 		LP_User.guildsID = [...LP_User.guildsID, message.guild.id];
 
