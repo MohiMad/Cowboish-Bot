@@ -4,8 +4,8 @@ const LPSchema = mongoose.Schema({
         
     UserID: String,
 
-    Updated: Boolean,
-
+    guildsID: Array,
+    
     logic: Number,
 
     Dices: Number,
