@@ -15,13 +15,15 @@ module.exports = {
 
 	},
 
-	guildAdd: async (message, LP) => {
+	guildAdd: async (message) => {
 
-	if(!LP.guildsID.includes(message.guild.id)){
+	const LP_User = await logicPath.findOne({ UserID: message.author.id });
 
-	LP.guildsID = [...LP.guildsID, message.guild.id];
+	if(!LP_User.guildsID.includes(message.guild.id)){
 
-	LP.save().catch(err => console.log(err));
+		LP_User.guildsID = [...LP_User.guildsID, message.guild.id];
+
+		LP_User.save().catch(err => console.log(err));
 	}
 	
 	},

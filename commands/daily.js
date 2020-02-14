@@ -60,7 +60,7 @@ module.exports = {
 
             }, 86400000);
 
-            guildAdd(message, LP);
+            guildAdd(message);
 
         })
 
