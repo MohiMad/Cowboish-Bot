@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 let cooldown = new Set();
-const { newLP } = require("../functions.js");
+const { newLP, guildAdd } = require("../functions.js");
 
 
 module.exports = {
@@ -60,8 +60,12 @@ module.exports = {
 
             }, 86400000);
 
+            guildAdd(message, LP);
+
         })
 
+
+        
 
 
 

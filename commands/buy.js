@@ -1,5 +1,5 @@
 const logicPath = require("../models/logicpath.js");
-const { ErrorMsg, newLP } = require("../functions.js");
+const { ErrorMsg, newLP, guildAdd } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 

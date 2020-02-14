@@ -15,6 +15,17 @@ module.exports = {
 
 	},
 
+	guildAdd: async (message, LP) => {
+
+	if(!LP_User.guildsID.includes(message.guild.id)){
+
+	LP.guildsID = [...LP.guildsID, message.guild.id];
+
+	LP.save().catch(err => console.log(err));
+	}
+	
+	},
+
 	getMember: function (message, toFind = '') {
 		toFind = toFind.toLowerCase();
 
@@ -120,6 +131,7 @@ module.exports = {
 	newLP: (message) => {
 		const newLP = new logicPath({
 			UserID: message.author.id,
+			guildsID: [message.guild.id],
 			logic: 0,
 			Dices: 15,
 			Clues: 0,

@@ -60,19 +60,21 @@ module.exports = {
 
                 }, 30000);
 
+            }).catch(err => {
+                if (err.message === "Response code 429 (Too Many Requests)") {
+                    return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
+                }
+                else if (err.message === "RichEmbed descriptions may not exceed 2048 characters.") {
+                    return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
+                }
+                else {
+                    MohiMoo.send("```" + err + "```")
+                    message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
+                }
             })
         } catch (err) {
-            if (err.message === "Response code 429 (Too Many Requests)") {
-                return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
-            }
-            else if (err.message === "RichEmbed descriptions may not exceed 2048 characters.") {
-                return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
-            }
-            else {
-                console.log(err)
-                MohiMoo.send("```" + err + "```")
-                message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
-            }
+            console.log(err)
+
         }
 
 
