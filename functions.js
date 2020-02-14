@@ -17,7 +17,7 @@ module.exports = {
 
 	guildAdd: async (message, LP) => {
 
-	if(!LP_User.guildsID.includes(message.guild.id)){
+	if(!LP.guildsID.includes(message.guild.id)){
 
 	LP.guildsID = [...LP.guildsID, message.guild.id];
 
