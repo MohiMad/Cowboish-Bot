@@ -8,23 +8,29 @@ module.exports = {
     description: "Leaderboard for logicpath commands",
     execute: async (message, args, bot) => {
 
-        logicPath.find({})
-            .sort([
-                ["logic", "descending"]
-            ]).exec((err, res) => {
-                if (err) console.log(err);
 
-                let n1 = bot.users.get(res[1].UserID) || "Not found";
-                let n2 = bot.users.get(res[2].UserID) || "Not found";
-                let n3 = bot.users.get(res[3].UserID) || "Not found";
-                let n4 = bot.users.get(res[4].UserID) || "Not found";
-                let n5 = bot.users.get(res[5].UserID) || "Not found";
+        if (!args[1]) {
+            const guild_cmd = "`>LD guild` | `>leaderboard server`"
 
-                const LD_Embed = new RichEmbed()
-                    .setAuthor("Cowboish bot LP LeaderBoard!", message.author.displayAvatarURL)
-                    .setDescription(stripIndents`
+            logicPath.find({})
+                .sort([
+                    ["logic", "descending"]
+                ]).exec((err, res) => {
+                    if (err) console.log(err);
+
+                    let n1 = bot.users.get(res[1].UserID) || "Not found";
+                    let n2 = bot.users.get(res[2].UserID) || "Not found";
+                    let n3 = bot.users.get(res[3].UserID) || "Not found";
+                    let n4 = bot.users.get(res[4].UserID) || "Not found";
+                    let n5 = bot.users.get(res[5].UserID) || "Not found";
+
+                    const LD_Embed = new RichEmbed()
+                        .setAuthor("Cowboish bot LP LeaderBoard!", message.author.displayAvatarURL)
+                        .setDescription(stripIndents`
                     Here is the top 5 list of Cowboish bot **Logicpath** commands based on how many steps they've walked in their logicpath
                     There will be a weekly rewards for top 5 players of the week!
+
+                    **NOTE!!**: If you want to check this guild's leaderboard, do **${guild_cmd}**
 
                     <:uno:676017997420167187>) **${n1.username}** - *Rewards* = **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
 
@@ -66,13 +72,118 @@ module.exports = {
                         S ➜ **${res[5].S}**
 
                     `)
-                    .setColor("0xebe305")
-                    .setFooter(`Top 5 players out of ${res.length} results`, bot.user.displayAvatarURL);
+                        .setColor("0xebe305")
+                        .setFooter(`Top 5 players out of ${res.length} results`, bot.user.displayAvatarURL);
 
-                message.channel.send(LD_Embed)
+                    message.channel.send(LD_Embed)
 
 
-    })
+                })
+        } else if (["guild", "Guild", "server", "Server"].includes(args[1])) {
+            logicPath.find({ guildsID: message.guild.id })
+                .sort([
+                    ["logic", "descending"]
+                ]).exec((err, res) => {
+                    if (err) console.log(err);
 
-}
+                    const LD_Embed = new RichEmbed()
+                        .setAuthor("LogicPath LeaderBoard", bot.user.displayAvatarURL);
+
+                    if (res.length === 0) {
+                        LD_Embed.setColor("RED");
+                        LD_Embed.setDescription("No data were found!\nIt seems like no one in this guild has any data saved on my database :')\n\nWanna start playing? do `>help logicpath` for more info");
+                    }
+                    else if (res.length < 5) {
+                        LD_Embed.setColor("GREEN");
+                        for (i = 0; i < res.length; i++) {
+
+                            let I_D = res[i].ID || "`Not set`";
+
+                            if (I_D === "0") {
+                                I_D = "`Not set`";
+                            } else {
+                                I_D = res[i].ID;
+                            }
+
+                            let member = bot.users.get(res[i].UserID) || "Not found";
+
+                            if (member == "Not found") {
+                                LD_Embed.addField(`▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔`, stripIndents`
+                            〘**${i + 1}**〙 **${member}**
+
+                            🆔 | *Ingame ID* ➜ **${I_D}**
+                            <:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**
+                            <:clue:655384523735040000> | *Clues* ➜ **${res[i].Clues}**
+                            Essences opened: **${res[i].S + res[i].A + res[i].B + res[i].C + res[i].D}**
+                            `);
+                            }
+                            else {
+                                LD_Embed.addField(`▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔`,
+                                    stripIndents`
+                            〘**${i + 1}**〙 **${member.tag}**
+
+                            🆔 | *Ingame ID* ➜ **${I_D}**
+                            <:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**
+                            <:clue:655384523735040000> | *Clues* ➜ **${res[i].Clues}**
+                            Essences opened: **${res[i].S + res[i].A + res[i].B + res[i].C + res[i].D}**
+                            `);
+                            }
+                            LD_Embed.setFooter(`Top users on this guild out of ${res.length} results`);
+
+                        }
+
+                    }
+                    else {
+                        LD_Embed.setColor("GREEN");
+                        for (i = 0; i < 5; i++) {
+
+                            let ID = res[i].ID || "`Not set`";
+
+                            if (ID === "0") {
+                                ID = "`Not set`";
+                            } else {
+                                ID = res[i].ID;
+                            }
+
+                            let member = bot.users.get(res[i].UserID) || "Not found";
+
+                            if (member === "Not found") {
+                                LD_Embed.addField(`▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔`, stripIndents`
+                            〘**${i + 1}**〙 **${member}**
+                            
+                            🆔 | *Ingame ID* ➜ **${ID}**
+                            <:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**
+                            <:clue:655384523735040000> | *Clues* ➜ **${res[i].Clues}**
+                            Essences opened: **${res[i].S + res[i].A + res[i].B + res[i].C + res[i].D}**
+                            `);
+                            }
+                            else {
+                                LD_Embed.addField(stripIndents`
+                            
+                            ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔`,
+                                    stripIndents`
+                            〘**${i + 1}**〙 **${member.tag}**
+                            🆔 | *Ingame ID* ➜ **${ID}**
+                            <:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**
+                            <:clue:655384523735040000> | *Clues* ➜ **${res[i].Clues}**
+                            Essences opened: **${res[i].S + res[i].A + res[i].B + res[i].C + res[i].D}**
+                            `);
+
+                            }
+                            LD_Embed.setFooter(`Top 5 users out of ${res.length} results`);
+
+
+                        }
+
+
+                    }
+                    message.channel.send(LD_Embed);
+
+
+                })
+
+        }
+
+
+    }
 }

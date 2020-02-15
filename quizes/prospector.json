@@ -13,7 +13,7 @@
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
-		"Answer": ["Mr.mole", "mole", "mr.mole", "Mr.Mole"],
+		"Answer": ["Mr.mole", "mole", "mr.mole", "Mr.Mole", "mr mole"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165351449362432/ZAqEMnx6KLJHrgRPLzpoT5P7rMWV7IRwnFAAAAAElFTkSuQmCC.png"
 	}

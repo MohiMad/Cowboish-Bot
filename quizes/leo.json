@@ -13,7 +13,7 @@
     },
     {
 		"Question": "**Repeat da word:**\nType `Leo's camping is op`",
-		"Answer": ["Leo's camping is op", "Leos camping is op"],
+		"Answer": ["leo's camping is op", "Leos camping is op", "Leo's camping is op"],
 		"Difficulty": "Easy huh",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
     },

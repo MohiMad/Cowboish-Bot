@@ -18,5 +18,26 @@
 		"Answer": ["Brown", "brown"],
 		"Difficulty": "Medium",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673094739607814144/e9ec085e296702e40aebb5964f1b17c8.png"
+	},
+	{
+
+		"Question": "**Fill in the missing word:**\n`Doctor is op _ _ _ _ _ _ _ photoboi`",
+		"Answer": ["Against", "against"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678217887990677514/doctor_by_koyrenku_dchxrb2-fullview.png?width=476&height=565"
+	},
+	{
+
+		"Question": "**Unscramble it:**\nThe word `rSginey` is scrambled, unscramble it to win!",
+		"Answer": ["syringe", "Syringe"],
+		"Difficulty": "HAAAARD",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678217887990677514/doctor_by_koyrenku_dchxrb2-fullview.png?width=476&height=565"
+	},
+	{
+
+		"Question": "**Type it:**\nYou got hit in fake world by photoboi, quickly type `heal` to heal up",
+		"Answer": ["Heal", "heal"],
+		"Difficulty": "Ez",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678217887990677514/doctor_by_koyrenku_dchxrb2-fullview.png?width=476&height=565"
     }
 ]

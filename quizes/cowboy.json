@@ -9,7 +9,7 @@
 		"Question": "**Question:**\nWhat's the Cowboy's real name?",
 		"Answer": ["Kevin", "kevin"],
 		"Difficulty": "Easy",
-		"Attachment": "https://cdn.discordapp.com/emojis/649130677253439508.png?v=1"
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678219078514769950/1582ade441aaf66b154909348841.png?width=465&height=564"
 
 	},
 	{
@@ -19,5 +19,22 @@
 		"Difficulty": "Eazy",
 		"Attachment": "https://cdn.discordapp.com/emojis/649130677253439508.png?v=1"
 
-    }
+	},
+	{
+	
+		"Question": "**Quickly type:**\nThe hunter just hit yo teammate, quickly type `lasso` to one tap him",
+		"Answer": ["lasso", "Lasso"],
+		"Difficulty": "Eazy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678219801595871282/36600351-cowboy-with-lasso-on-a-stick-horse.png?width=564&height=564"
+
+	},
+	{
+	
+		"Question": "**Unscramble it:**\nThe word `ssoLa` is scrambled, unscramble it to win",
+		"Answer": ["lasso", "Lasso"],
+		"Difficulty": "HARD",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678219801595871282/36600351-cowboy-with-lasso-on-a-stick-horse.png?width=564&height=564"
+
+	}
+	
 ]

@@ -115,7 +115,7 @@ module.exports = {
 			message.channel.awaitMessages(filter, { max: 1, time: 60000 }).then(collected => {
 				let respondAuth = collected.first();
 
-				if (answer.includes(collected.first().content.toLowerCase())) {
+				if (answer.includes(collected.first().content.toLowerCase())){
 					message.channel.send(`**${message.author.username}** got the right answer and got a dice <:dice:655384578499936257>`);
 
 					LP.Dices = LP.Dices + 1;
