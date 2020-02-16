@@ -19,6 +19,38 @@ mongoose.connect(uri, {
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
+const express = require('express');
+const http = require('http');
+const app = express();
+const server = http.createServer(app);
+
+const dbl_webhook = new DBL(
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY", {
+    webhookAuth: 'mmkdmkmmkdmk',
+    webhookPort: 5000,
+    webhookServer: server
+}, bot);
+
+dbl_webhook.webhook.on('ready', hook => {
+    console.log(`Webhook running with path ${hook.path}`);
+});
+dbl_webhook.webhook.on('vote', vote => {
+    console.log(`User with ID ${vote.user} just voted!`);
+});
+dbl_webhook.webhook.on('ready', hook => {
+    console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
+});
+dbl_webhook.webhook.on('error', e => {
+    console.log(`Oops! ${e}`);
+});
+
+app.get('/', (req, res) => {
+    res.sendStatus(5000)
+});
+
+server.listen(5000, () => {
+    console.log('Listening');
+});
 //Command handler HERE 
 bot.commands = new Discord.Collection();
 
