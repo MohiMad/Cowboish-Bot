@@ -37,7 +37,6 @@ const dbl_webhook = new DBL(
 }, bot);
 
 app.get('/', (req, res) => {
-    res.sendStatus(200);
     res.send("Hello?");
 });
 
