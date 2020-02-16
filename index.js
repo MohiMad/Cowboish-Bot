@@ -31,9 +31,12 @@ const dbl_webhook = new DBL(
     webhookServer: server
 }, bot);
 
-dbl_webhook.webhook.on('ready', hook => {
-    console.log(`Webhook running with path ${hook.path}`);
+app.get('/', (req, res) => {
+    res.sendStatus(5000)
 });
+
+server.listen(5000);
+
 dbl_webhook.webhook.on('vote', vote => {
     console.log(`User with ID ${vote.user} just voted!`);
 });
@@ -44,13 +47,7 @@ dbl_webhook.webhook.on('error', e => {
     console.log(`Oops! ${e}`);
 });
 
-app.get('/', (req, res) => {
-    res.sendStatus(5000)
-});
 
-server.listen(5000, () => {
-    console.log('Listening');
-});
 //Command handler HERE 
 bot.commands = new Discord.Collection();
 
