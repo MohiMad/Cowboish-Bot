@@ -31,7 +31,7 @@ const serva = server.listen(process.env.PORT);
 
 const dbl_webhook = new DBL(
     dbl_token, {
-    webhookAuth: 'Mohamad2004',
+    webhookAuth: 'mmkdmkmmkdmk',
     webhookPort: process.env.PORT,
     webhookServer: serva
 }, bot);
