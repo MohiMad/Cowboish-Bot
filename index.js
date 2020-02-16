@@ -16,9 +16,9 @@ mongoose.connect(uri, {
     useUnifiedTopology: true
 });
 //______________________DDBL webhook_____________//
-const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
 
+const DBL = require("dblapi.js");
 const express = require('express');
 const http = require('http');
 const app = express();
@@ -35,8 +35,8 @@ const dbl_webhook = new DBL(
 
 app.get('/', (req, res) => {
     res.sendStatus(200);
+    res.send("Hello?");
 });
-
 
 dbl_webhook.webhook.on('vote', vote => {
     console.log(`User with ID ${vote.user} just voted!`);
