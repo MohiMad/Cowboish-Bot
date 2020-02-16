@@ -18,7 +18,9 @@ mongoose.connect(uri, {
 //______________________DDBL webhook_____________//
 const DBL = require("dblapi.js");
 
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY', bot);
+let dbl_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTgxODcyMzY4fQ.7I91WB4XYQQRErjn7tPusb78E4klqeObpFxIMxCr9EM";
+
+const dbl = new DBL(dbl_token, bot);
 
 const express = require('express');
 const http = require('http');
@@ -28,8 +30,8 @@ const server = http.createServer(app);
 const serva = server.listen(process.env.PORT);
 
 const dbl_webhook = new DBL(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY", {
-    webhookAuth: 'mmkdmkmmkdmk',
+    dbl_token, {
+    webhookAuth: 'Mohamad2004',
     webhookPort: process.env.PORT,
     webhookServer: serva
 }, bot);
