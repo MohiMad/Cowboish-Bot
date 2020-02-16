@@ -35,7 +35,7 @@ module.exports = {
             .setTitle('<:wilding:648981862429097994> Identity V actions <:wilding:648981862429097994>')
             .setColor("RANDOM")
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .addField('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock`', 'Remember to use my prefix > before the commands ;D');
+            .addField('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | hug', 'Remember to use my prefix > before the commands ;D');
 
         if (args[1] === 'actions')
             message.channel.send(fuEmbed);

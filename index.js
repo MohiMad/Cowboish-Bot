@@ -10,44 +10,9 @@ const { stripIndents } = require("common-tags");
 //_______________MONGOOSE STUFF____________________
 const mongoose = require("mongoose");
 
-let uri = "mongodb+srv://MohiMoo:mmkdmkmmkdmk@minicowboi-yk7bw.mongodb.net/welcome?retryWrites=true&w=majority"
-mongoose.connect(uri, {
+mongoose.connect(config.mongoose_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
-//______________________DDBL webhook_____________//
-const DBL = require("dblapi.js");
-
-let dbl_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTgxODcyMzY4fQ.7I91WB4XYQQRErjn7tPusb78E4klqeObpFxIMxCr9EM";
-
-const dbl = new DBL(dbl_token, bot);
-
-const express = require('express');
-const http = require('http');
-const app = express();
-const server = http.createServer(app);
-
-const serva = server.listen(process.env.PORT);
-
-const dbl_webhook = new DBL(
-    dbl_token, {
-    webhookAuth: 'mmkdmkmmkdmk',
-    webhookPort: process.env.PORT,
-    webhookServer: serva
-}, bot);
-
-app.get('/', (req, res) => {
-    res.send("Hello?");
-});
- 
-dbl_webhook.webhook.on('vote', vote => {
-    console.log(`User with ID ${vote.user} just voted!`);
-});
-dbl_webhook.webhook.on('ready', hook => {
-    console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
-});
-dbl_webhook.webhook.on('error', e => {
-    console.log(`Oops! ${e}`);
 });
 
 
@@ -146,6 +111,11 @@ bot.on('ready', () => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         bot.user.setActivity(activities_list[index]);
     }, 100000);//sets the activity each 120 s
+
+
+    const DBL = require("dblapi.js");
+
+    const dbl = new DBL(config.dbl_token, bot);
 
     setInterval(() => {
         dbl.postStats(bot.guilds.size);
@@ -303,6 +273,9 @@ bot.on('message', async message => {
         case "bully":
             bot.commands.get('bully').execute(message, args, bot);
             break;
+        case "hug":
+            bot.commands.get('hug').execute(message, args, bot);
+        break;
         //End of Identity V Actions
 
 
