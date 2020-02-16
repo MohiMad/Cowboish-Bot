@@ -39,7 +39,7 @@ const dbl_webhook = new DBL(
 app.get('/', (req, res) => {
     res.send("Hello?");
 });
-
+ 
 dbl_webhook.webhook.on('vote', vote => {
     console.log(`User with ID ${vote.user} just voted!`);
 });
