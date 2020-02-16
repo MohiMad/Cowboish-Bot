@@ -26,8 +26,8 @@ module.exports = {
             .setTitle('😁 Help is here :D 😁')
             .setColor("RANDOM")
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .addField('`identify` | `roll` | `roll20` | `essence` | `randomize` | `idv`', 'Remember to use my prefix > before the commands ;D')
-            .setFooter('YeeeeHawww :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+            .setDescription('`identify` | `roll` | `roll20` | `essence` | `randomize` | `idv`')
+            .setFooter('Remember to use my prefix > before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
         if (args[1] === 'idv')
             message.channel.send(funEmbed);
 
@@ -35,7 +35,8 @@ module.exports = {
             .setTitle('<:wilding:648981862429097994> Identity V actions <:wilding:648981862429097994>')
             .setColor("RANDOM")
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .addField('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | hug', 'Remember to use my prefix > before the commands ;D');
+            .setFooter('Remember to use my prefix > before the commands ;D')
+            .setDescription('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | hug');
 
         if (args[1] === 'actions')
             message.channel.send(fuEmbed);
@@ -44,7 +45,7 @@ module.exports = {
             .setTitle('🔧So u need sum help huh?🔧')
             .setColor("RANDOM")
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .addField('`kick` | `ban` | `clear` | `mute`', 'Remember to use my prefix > before the commands ;D')
+            .setDescription('`kick` | `ban` | `clear` | `mute` \n\nRemember to use my prefix ``>`` before the commands ;D')
             .setFooter('A wild Cowboii :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'moderation')
@@ -65,7 +66,7 @@ module.exports = {
             .setColor("RANDOM")
             .setTitle("🤣 Don't move i'm coming :v", true)
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .addField('🤣 Fun commands 🤣', '`meme` | `joke` | `say`')
+            .setDescription('`meme` | `joke` | `say`')
             .setFooter('Remember to use my prefix > and before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'fun')

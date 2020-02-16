@@ -42,8 +42,7 @@ module.exports = {
 
             const bullyembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles([hugs[hug]])
-                .setImage('attachment://' + hugs[hug])
+                .setImage((hugs[hug]))
                 .setColor("RANDOM")
 
 
