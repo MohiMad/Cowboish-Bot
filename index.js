@@ -29,12 +29,12 @@ const serva = server.listen(5000);
 const dbl_webhook = new DBL(
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc0NjAyNTIxfQ.0FNoMoV2BBfO7EdAcKkIDsX_N6CsHsjabC1kbzmbBNY", {
     webhookAuth: 'mmkdmkmmkdmk',
-    webhookPort: 5000,
+    webhookPort: process.env.PORT,
     webhookServer: serva
 }, bot);
 
 app.get('/', (req, res) => {
-    res.sendStatus(5000)
+    res.sendStatus(200);
 });
 
 
