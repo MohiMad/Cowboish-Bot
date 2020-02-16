@@ -30,7 +30,7 @@ module.exports = {
                 
             ]
 
-            let hug = Math.floor(Math.random() * (facts - 1 + 1)) + 1;
+            let hug = Math.floor(Math.random() * hugs.length);
 
             var facts = [
                 `Aww ${message.author.username} hugs ${persona.user.username} :3`,
