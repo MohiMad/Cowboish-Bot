@@ -15,8 +15,6 @@ mongoose.connect(config.mongoose_uri, {
     useUnifiedTopology: true
 });
 
-//_______________________________________________
-
 //_________________Discord bot list (2)__________
 
 const { post } = require('snekfetch')
@@ -33,12 +31,9 @@ const updateBotList = async () => {
     return (reply)
 }
 
-const responseFromAPI = await updateBotList()
-
-//_______________________________________________
 
 
-//Command handler HERE 
+//________________Command handler HERE___________
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
@@ -113,7 +108,7 @@ bot.on("guildCreate", guild => {
 
 });
 
-bot.on('ready', () => {
+bot.on('ready', async () => {
     console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
     console.log(`___________________________________________`);
     console.log(`Now let's lasso sum peeps >:D`);
@@ -142,6 +137,9 @@ bot.on('ready', () => {
     setInterval(() => {
         dbl.postStats(bot.guilds.size);
     }, 1800000);
+
+    const responseFromAPI = await updateBotList()
+
 })
 
 
