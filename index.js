@@ -150,10 +150,8 @@ bot.on('ready', async () => {
             Authorization: config.arcane_token
         },
         body: {
-            server_count: bot.guilds.size,
-            member_count: bot.users.size
-        },
-        json: true
+            server_count: bot.guilds.size,        },
+        json: false
     })
 
 
