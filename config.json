@@ -1,5 +1,6 @@
 {
     "token": "NjMyMjkxODAwNTg1MDc2NzYx.XfS9TQ.u7aRrW5JwhhA6TBHjKcWTxParnA",
     "dbl_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjI5MTgwMDU4NTA3Njc2MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTgxODcyMzY4fQ.7I91WB4XYQQRErjn7tPusb78E4klqeObpFxIMxCr9EM",
-    "mongoose_uri": "mongodb+srv://MohiMoo:mmkdmkmmkdmk@minicowboi-yk7bw.mongodb.net/welcome?retryWrites=true&w=majority"
+    "mongoose_uri": "mongodb+srv://MohiMoo:mmkdmkmmkdmk@minicowboi-yk7bw.mongodb.net/welcome?retryWrites=true&w=majority",
+    "dblToken_2": " bef1024eaf407a72ef178124b0a1f8dbc0634b9a25199fd7ac781568a9b62fbc"
   }

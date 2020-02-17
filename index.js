@@ -15,6 +15,28 @@ mongoose.connect(config.mongoose_uri, {
     useUnifiedTopology: true
 });
 
+//_______________________________________________
+
+//_________________Discord bot list (2)__________
+
+const { post } = require('snekfetch')
+const updateBotList = async () => {
+    console.log('Updating DBL stats')
+
+    const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
+        .set("Authorization", `Bot ${config.dblToken_2}`)
+        .send({
+            guilds: bot.guilds.size,
+            users: bot.users.size,
+        })
+
+    return (reply)
+}
+
+const responseFromAPI = await updateBotList()
+
+//_______________________________________________
+
 
 //Command handler HERE 
 bot.commands = new Discord.Collection();
