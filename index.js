@@ -19,7 +19,6 @@ mongoose.connect(config.mongoose_uri, {
 
 const { post } = require('snekfetch')
 const updateBotList = async () => {
-    console.log('Updating DBL stats')
 
     const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
         .set("Authorization", `Bot ${config.dblToken_2}`)
@@ -30,8 +29,9 @@ const updateBotList = async () => {
 
     return (reply)
 }
-
-
+//__________Divine discord bot list ____________________
+const { ddblAPI } = require('ddblapi.js');
+const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
 
 //________________Command handler HERE___________
 bot.commands = new Discord.Collection();
@@ -139,6 +139,10 @@ bot.on('ready', async () => {
     }, 1800000);
 
     const responseFromAPI = await updateBotList()
+
+    ddbl.postStats(bot.guilds.size)
+    .catch(err => console.log(err));
+
 
 })
 
