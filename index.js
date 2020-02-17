@@ -3,6 +3,8 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json")
 const fs = require('fs');
+const got = require("got");
+
 
 const { stripIndents } = require("common-tags");
 
@@ -142,6 +144,17 @@ bot.on('ready', async () => {
 
     ddbl.postStats(bot.guilds.size)
     .catch(err => console.log(err));
+
+    got.post("https://arcane-botcenter.xyz/api/632291800585076761/stats", {
+        headers: {
+            Authorization: config.arcane_token
+        },
+        body: {
+            server_count: bot.guilds.size,
+            member_count: bot.users.size
+        },
+        json: true
+    }).then(data => console.log(data.statusCode)).catch(err => console.error(err.statusCode))
 
 
 })
