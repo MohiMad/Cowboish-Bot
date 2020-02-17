@@ -154,7 +154,7 @@ bot.on('ready', async () => {
             member_count: bot.users.size
         },
         json: true
-    }).then(data => console.log(data.statusCode)).catch(err => console.error(err.statusCode))
+    })
 
 
 })
@@ -202,6 +202,10 @@ bot.on('message', async message => {
         case "essence": case "ess": case "e":
             bot.commands.get('essence').execute(message, args, MohiMoo);
             break;
+
+        case "text": case "chat": case "ingamechat":
+            bot.commands.get('chat').execute(message, args, bot);
+        break;
 
 
 
