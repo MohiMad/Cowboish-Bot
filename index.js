@@ -156,6 +156,15 @@ bot.on('ready', async () => {
     json: true
 }).then(data => console.log(data.statusCode)).catch(err => console.error(err.statusCode))
 
+const BOATS = require('boats.js');
+
+const Boats = new BOATS(config.boatsToken);
+ 
+Boats.postStats(bot.guilds.size, "632291800585076761")
+.catch((err) => {
+    console.error(err);
+});
+
 })
 
 
