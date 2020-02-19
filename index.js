@@ -213,12 +213,14 @@ bot.on('message', async message => {
 
         case "text": case "chat": case "ingamechat":
             bot.commands.get('chat').execute(message, args, bot);
-        break;
-
-
+            break;
 
         case "randomize": case "random": case "pick":
             bot.commands.get('random').execute(message, args, MohiMoo);
+            break;
+        
+        case "chair":
+            bot.commands.get('chair').execute(message, args, bot);
             break;
 
         //End Of identity V commands

@@ -18,7 +18,7 @@ module.exports = {
         const canvas = Canvas.createCanvas(1137, 640);
         const ctx = canvas.getContext('2d');
         // Since the image takes time to load, you should await it
-        const background = await Canvas.loadImage('./chat.jpg');
+        const background = await Canvas.loadImage('./pics/chat.jpg');
         // This uses the canvas dimensions to stretch the image onto the entire canvas
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
         // Use helpful Attachment class structure to process the file for you
