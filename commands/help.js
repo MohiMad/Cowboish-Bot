@@ -36,7 +36,7 @@ module.exports = {
             .setColor("RANDOM")
             .setURL('https://rkanjo2.wixsite.com/cowboishbot')
             .setFooter('Remember to use my prefix > before the commands ;D')
-            .setDescription('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | hug');
+            .setDescription('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | `hug` | `chair`');
 
         if (args[1] === 'actions')
             message.channel.send(fuEmbed);
