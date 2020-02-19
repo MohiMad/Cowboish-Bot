@@ -5,6 +5,8 @@ const config = require("./config.json")
 const fs = require('fs');
 const got = require("got");
 
+const snekfetch = require('snekfetch');
+
 
 const { stripIndents } = require("common-tags");
 
@@ -165,11 +167,10 @@ Boats.postStats(bot.guilds.size, "632291800585076761")
     console.error(err);
 });
 
-const { Client } = require('bbl-api');
-const bbl = new Client(config.bblToken);
-
-await bbl.postServers(bot.guilds.size);
- 
+snekfetch.post(`https://bladebotlist.xyz/api/public/bot/stats`)
+    .set('Authorization', config.bblToken)
+    .send({ server_count: bot.guilds.size, 
+    }).catch((e) => console.error(e));
 
 })
 
