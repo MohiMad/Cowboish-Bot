@@ -145,32 +145,33 @@ bot.on('ready', async () => {
     const responseFromAPI = await updateBotList()
 
     ddbl.postStats(bot.guilds.size)
-    .catch(err => console.log(err));
+        .catch(err => console.log(err));
 
     got.post("https://arcane-botcenter.xyz/api/632291800585076761/stats", {
-    headers: {
-        Authorization: config.arcane_token
-    },
-    body: {
-        server_count: bot.guilds.size,
-        member_count: bot.users.size
-    },
-    json: true
-}).catch(err => console.error(err.statusCode))
+        headers: {
+            Authorization: config.arcane_token
+        },
+        body: {
+            server_count: bot.guilds.size,
+            member_count: bot.users.size
+        },
+        json: true
+    }).catch(err => console.error(err.statusCode))
 
-const BOATS = require('boats.js');
+    const BOATS = require('boats.js');
 
-const Boats = new BOATS(config.boatsToken);
- 
-Boats.postStats(bot.guilds.size, "632291800585076761")
-.catch((err) => {
-    console.error(err);
-});
+    const Boats = new BOATS(config.boatsToken);
 
-snekfetch.post(`https://bladebotlist.xyz/api/public/bot/stats`)
-    .set('Authorization', config.bblToken)
-    .send({ server_count: bot.guilds.size, 
-    }).catch((e) => console.error(e));
+    Boats.postStats(bot.guilds.size, "632291800585076761")
+        .catch((err) => {
+            console.error(err);
+        });
+
+    snekfetch.post(`https://bladebotlist.xyz/api/public/bot/stats`)
+        .set('Authorization', config.bblToken)
+        .send({
+            server_count: bot.guilds.size,
+        }).catch((e) => console.error(e));
 
 })
 
@@ -218,16 +219,8 @@ bot.on('message', async message => {
             bot.commands.get('essence').execute(message, args, MohiMoo);
             break;
 
-        case "text": case "chat": case "ingamechat":
-            bot.commands.get('chat').execute(message, args, bot);
-            break;
-
         case "randomize": case "random": case "pick":
             bot.commands.get('random').execute(message, args, MohiMoo);
-            break;
-        
-        case "chair":
-            bot.commands.get('chair').execute(message, args, bot);
             break;
 
         //End Of identity V commands
@@ -255,6 +248,20 @@ bot.on('message', async message => {
             break;
 
         //End Of Fun commands
+
+        //____Image manipulation____
+
+        case "slap":
+            bot.commands.get('slap').execute(message, args, bot);
+            break;
+
+        case "text": case "chat": case "ingamechat":
+            bot.commands.get('chat').execute(message, args, bot);
+            break;
+
+        case "chair":
+            bot.commands.get('chair').execute(message, args, bot);
+            break;
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
@@ -331,9 +338,10 @@ bot.on('message', async message => {
         case "bully":
             bot.commands.get('bully').execute(message, args, bot);
             break;
+
         case "hug":
             bot.commands.get('hug').execute(message, args, bot);
-        break;
+            break;
         //End of Identity V Actions
 
 

@@ -26,7 +26,7 @@ const betterEmbed = new RichEmbed()
     
     `, true)
     .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", stripIndents`**For more information**
-    [Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)
+    [Cowboish website](https://mohimad.github.io/CowboishBot/)
     [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
     [Cowboish Server](https://discordapp.com/invite/YWcSukS)`)
     .attachFiles(["./emoji" + ".png"])

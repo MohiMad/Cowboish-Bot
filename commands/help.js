@@ -11,22 +11,23 @@ module.exports = {
         const helpEmbed = new RichEmbed()
             .setColor("RANDOM")
             .setTitle('Did someone say help?')
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .addField('<:idvtroll:651464392243675156> IdentityV <:idvtroll:651464392243675156>', '``>help idv``', true)
-            .addField('😁 Idv Actions 😁', '``>help actions``', true)
-            .addField('🔧 Moderation 🔧', '``>help moderation``', true)
-            .addField('⚙ Config ⚙', '``>help config``', true)
-            .addField('🤣 Fun 🤣', '``>help fun``', true)
-            .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469> ', '``>help logicpath``', true)
-            .addField("For more info ", "[Cowboish website](https://rkanjo2.wixsite.com/cowboishbot)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
+            .setURL('https://mohimad.github.io/CowboishBot/')
+            .addField('<:idvtroll:651464392243675156> IdentityV <:idvtroll:651464392243675156>', '``>help idv``')
+            .addField('😁 Idv Actions 😁', '``>help actions``')
+            .addField('🔧 Moderation 🔧', '``>help moderation``')
+            .addField('⚙ Config ⚙', '``>help config``')
+            .addField('🤣 Fun 🤣', '``>help fun``')
+            .addField('📷 Images 📷', '``>help images``')
+            .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469> ', '``>help logicpath``')
+            .addField("For more info ", "[Cowboish website](https://mohimad.github.io/CowboishBot/)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter('Remember to use my prefix > and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
         if (!args[1]) return message.channel.send(helpEmbed);
 
         const funEmbed = new RichEmbed()
             .setTitle('😁 Help is here :D 😁')
             .setColor("RANDOM")
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
-            .setDescription('`identify` | `roll` | `roll20` | `essence` | `randomize` | `idv` | `ingamechat`')
+            .setURL('https://mohimad.github.io/CowboishBot/')
+            .setDescription('`identify` | `roll` | `roll20` | `essence` | `randomize` | `idv`')
             .setFooter('Remember to use my prefix > before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
         if (args[1] === 'idv')
             message.channel.send(funEmbed);
@@ -34,9 +35,9 @@ module.exports = {
         const fuEmbed = new RichEmbed()
             .setTitle('<:wilding:648981862429097994> Identity V actions <:wilding:648981862429097994>')
             .setColor("RANDOM")
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+            .setURL('https://mohimad.github.io/CowboishBot/')
             .setFooter('Remember to use my prefix > before the commands ;D')
-            .setDescription('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | `hug` | `chair`');
+            .setDescription('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | `hug`');
 
         if (args[1] === 'actions')
             message.channel.send(fuEmbed);
@@ -44,7 +45,7 @@ module.exports = {
         const modEmbed = new RichEmbed()
             .setTitle('🔧So u need sum help huh?🔧')
             .setColor("RANDOM")
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+            .setURL('https://mohimad.github.io/CowboishBot/')
             .setDescription('`kick` | `ban` | `clear` | `mute` \n\nRemember to use my prefix ``>`` before the commands ;D')
             .setFooter('A wild Cowboii :v', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
@@ -54,7 +55,7 @@ module.exports = {
         const genEmbed = new RichEmbed()
             .setTitle('⚙ Help is here :D ⚙', true)
             .setColor("RANDOM")
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+            .setURL('https://mohimad.github.io/CowboishBot/')
             .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `userinfo` | `suggest` | `setup`')
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
@@ -65,7 +66,7 @@ module.exports = {
         const helpmbed = new RichEmbed()
             .setColor("RANDOM")
             .setTitle("🤣 Don't move i'm coming :v", true)
-            .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+            .setURL('https://mohimad.github.io/CowboishBot/')
             .setDescription('`meme` | `joke` | `say`')
             .setFooter('Remember to use my prefix > and before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
@@ -103,6 +104,14 @@ module.exports = {
 
         if (args[1] === "logicpath") {
             message.channel.send(testEmbed);
+        }
+
+        const imageEmbed = new RichEmbed()
+            .setColor("RANDOM")
+            .setDescription("Image manipulation commands!\nSome commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair`")
+
+        if(["image", "images"].includes(args[1].toLowerCase())){
+            message.channel.send(imageEmbed);
         }
 
 

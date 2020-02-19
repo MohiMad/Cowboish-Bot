@@ -35,9 +35,11 @@ module.exports = {
                 // Move the image downwards vertically and constrain its height to 200, so it's a square
                 ctx.drawImage(avatar, 547, 500, 109, 109);
 
+                
             }
 
         }
+        
         const attachment = new Discord.Attachment(canvas.toBuffer(), 'getChairedbich.gif');
 
         message.channel.send(`<:rocketchair:679651828157513741> HAH get chaired **${chaired.user.username}**!`, attachment)
