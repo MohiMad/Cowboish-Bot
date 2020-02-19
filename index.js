@@ -154,7 +154,7 @@ bot.on('ready', async () => {
         member_count: bot.users.size
     },
     json: true
-}).then(data => console.log(data.statusCode)).catch(err => console.error(err.statusCode))
+}).catch(err => console.error(err.statusCode))
 
 const BOATS = require('boats.js');
 
@@ -164,6 +164,12 @@ Boats.postStats(bot.guilds.size, "632291800585076761")
 .catch((err) => {
     console.error(err);
 });
+
+const { Client } = require('bbl-api');
+const bbl = new Client(config.bblToken);
+
+await bbl.postServers(bot.guilds.size);
+ 
 
 })
 

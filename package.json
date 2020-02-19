@@ -22,7 +22,8 @@
     "ddblapi.js": "^1.0.0",
     "express": "^4.17.1",
     "canvas": "^2.6.1",
-    "boats.js": "^2.4.0"
+    "boats.js": "^2.4.0",
+    "bbl-api": "^0.0.9"
 
   },
   "devDependencies": {},

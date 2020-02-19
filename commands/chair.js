@@ -1,5 +1,5 @@
 const Canvas = require('canvas');
-const { findMember } = require("../functions.js");
+const { findMember, ErrorMsg } = require("../functions.js");
 const Discord = require("discord.js");
 module.exports = {
     name: 'chair',
@@ -8,6 +8,9 @@ module.exports = {
 
         const chaired = await findMember(message, args[1]) || message.author;
 
+        if(!chaired){
+            ErrorMsg(bot, message, "Couldn't find that member, please provide their ID, userTag or mention them after the command!\n\nUsage: `>chair <mentionHERE>`")
+        }else{
         const canvas = Canvas.createCanvas(1200, 900);
         const ctx = canvas.getContext('2d');
         // Since the image takes time to load, you should await it
@@ -28,7 +31,7 @@ module.exports = {
 
         const attachment = new Discord.Attachment(canvas.toBuffer(), 'getChairedbich.gif');
 
-        message.channel.send(`🖼️ HAH get chaired **${chaired.user.username}**`, attachment)
-        
+        message.channel.send(`<:rocketchair:679651828157513741> HAH get chaired **${chaired.user.username}**!`, attachment)
+        }
     }
 }
