@@ -28,7 +28,7 @@ module.exports = {
         }
         else {
             if (!chaired) {
-                ErrorMsg(bot, message, "Couldn't find that member!\nplease provide their id/tag or mention them after the command!")
+                return ErrorMsg(bot, message, "Couldn't find that member!\nplease provide their id/tag or mention them after the command!");
             }
             else {
                 const avatar = await Canvas.loadImage(chaired.user.displayAvatarURL);
