@@ -79,7 +79,7 @@ module.exports = {
                 //buy essences ends here
 
                 //begining of survivors
-                else if (["Cowboy", "Kevin", "Kevin", "cowboy"].includes(args[1])) {
+                else if (["Cowboy", "Kevin", "Kevin", "cowboy"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -97,7 +97,7 @@ module.exports = {
                     }
                 }
 
-                else if (["mercenary", "Mercenary"].includes(args[1])) {
+                else if (["mercenary", "Mercenary"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3048) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3048 - LP.Clues}** more!`);
                     }
@@ -115,7 +115,7 @@ module.exports = {
                     }
                 }
 
-                else if (["coordinator", "Coordinator", "coord"].includes(args[1])) {
+                else if (["coordinator", "Coordinator", "coord"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -132,7 +132,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Priestess", "priestess"].includes(args[1])) {
+                else if (["Priestess", "priestess"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -149,7 +149,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Mechanic", "mec", "mechanic"].includes(args[1])) {
+                else if (["Mechanic", "mec", "mechanic"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -166,7 +166,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Mindseye", "mindseye"].includes(args[1])) {
+                else if (["Mindseye", "mindseye"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -183,7 +183,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["perfumer", "Perfumer"].includes(args[1])) {
+                else if (["perfumer", "Perfumer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -200,7 +200,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["dancer", "Dancer", "femaledancer"].includes(args[1])) {
+                else if (["dancer", "Dancer", "femaledancer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -217,7 +217,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Seer", "seer"].includes(args[1])) {
+                else if (["Seer", "seer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -234,7 +234,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Embalmer", "embalmer"].includes(args[1])) {
+                else if (["Embalmer", "embalmer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -251,7 +251,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Acrobat", "acrobat"].includes(args[1])) {
+                else if (["Acrobat", "acrobat"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -268,7 +268,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Offucer", "officer", "1stofficer"].includes(args[1])) {
+                else if (["Offucer", "officer", "1stofficer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -285,7 +285,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Barmaid", "barmaid"].includes(args[1])) {
+                else if (["Barmaid", "barmaid"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -302,7 +302,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Magician", "magician"].includes(args[1])) {
+                else if (["Magician", "magician"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 1988) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${1988 - LP.Clues}** more!`);
                     }
@@ -319,7 +319,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Explorer", "explorer"].includes(args[1])) {
+                else if (["Explorer", "explorer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 1468) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${1468 - LP.Clues}** more!`);
                     }
@@ -336,7 +336,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Forward", "forward"].includes(args[1])) {
+                else if (["Forward", "forward"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -353,7 +353,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Prospector", "prospector"].includes(args[1])) {
+                else if (["Prospector", "prospector"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -370,7 +370,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Enchantress", "enchantress"].includes(args[1])) {
+                else if (["Enchantress", "enchantress"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -387,7 +387,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Wilding", "wilding"].includes(args[1])) {
+                else if (["Wilding", "wilding"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -404,7 +404,7 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
                 }
-                else if (["Postman", "postman"].includes(args[1])) {
+                else if (["Postman", "postman"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
@@ -424,7 +424,7 @@ module.exports = {
 
                 //hunters begins here
 
-                else if (["WuChang", "wuchang", "Wuchang"].includes(args[1])) {
+                else if (["WuChang", "wuchang", "Wuchang"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -442,7 +442,7 @@ module.exports = {
                     }
 
                 }
-                else if (["Axeboy", "axeboy", "AxeBoy"].includes(args[1])) {
+                else if (["Axeboy", "axeboy", "AxeBoy"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -460,7 +460,7 @@ module.exports = {
                     }
 
                 }
-                else if (["Lizard", "Luchino", "lizard"].includes(args[1])) {
+                else if (["Lizard", "Luchino", "lizard"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -478,7 +478,7 @@ module.exports = {
                     }
 
                 }
-                else if (["joker", "clown", "smileyface"].includes(args[1])) {
+                else if (["joker", "clown", "smileyface"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 1888) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${1888 - LP.Clues}** more!`);
                     }
@@ -496,7 +496,7 @@ module.exports = {
                     }
 
                 }
-                else if (["gamekeeper", "bane", "Gamekeeper"].includes(args[1])) {
+                else if (["gamekeeper", "bane", "Gamekeeper"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 3988) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3988 - LP.Clues}** more!`);
                     }
@@ -514,7 +514,7 @@ module.exports = {
                     }
 
                 }
-                else if (["Ripper", "ripper"].includes(args[1])) {
+                else if (["Ripper", "ripper"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -532,7 +532,7 @@ module.exports = {
                     }
 
                 }
-                else if (["soulweaver", "spider", "SoulWeaver"].includes(args[1])) {
+                else if (["soulweaver", "spider", "SoulWeaver"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -550,7 +550,7 @@ module.exports = {
                     }
 
                 }
-                else if (["geisha", "Geisha"].includes(args[1])) {
+                else if (["geisha", "Geisha"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -568,7 +568,7 @@ module.exports = {
                     }
 
                 }
-                else if (["PhotoGrapher", "photoboi", "photographer"].includes(args[1])) {
+                else if (["PhotoGrapher", "photoboi", "photographer"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -586,7 +586,7 @@ module.exports = {
                     }
 
                 }
-                else if (["MadEyes", "madeyes"].includes(args[1])) {
+                else if (["MadEyes", "madeyes"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -604,7 +604,7 @@ module.exports = {
                     }
 
                 }
-                else if (["Feaster", "feaster"].includes(args[1])) {
+                else if (["Feaster", "feaster"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -622,7 +622,7 @@ module.exports = {
                     }
 
                 }
-                else if (["DW"], "dreamwitch", "Dreamwitch".includes(args[1])) {
+                else if (["DW"], "dreamwitch", "Dreamwitch".includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -640,7 +640,7 @@ module.exports = {
                     }
 
                 }
-                else if (["bonbon", "pingu", "no.26", "No.26"].includes(args[1])) {
+                else if (["bonbon", "pingu", "no.26", "No.26"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -658,7 +658,7 @@ module.exports = {
                     }
 
                 }
-                else if (["Ann", "sister", "nun"].includes(args[1])) {
+                else if (["Ann", "sister", "nun"].includes(args[1]).toLowerCase()) {
                     if (LP.Clues < 4508) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                     }
@@ -670,6 +670,24 @@ module.exports = {
                         LP.Hunters.Sister = true;
 
                         buyEmbed.setDescription("Hello sister, you just bought sister :v it doesn't make sense but whatever");
+                        message.channel.send(buyEmbed);
+
+                        LP.save().catch(err => console.log(err));
+                    }
+
+                }
+                else if (["queen", "bloodyqueen", "bq"].includes(args[1]).toLowerCase()) {
+                    if (LP.Clues < 4508) {
+                        message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
+                    }
+                    else if (LP.Hunters.BloodyQueen === true) {
+                        message.reply("Hey! You have already bought BloodyQueen, why buy her again :v");
+                    }
+                    else {
+                        LP.Clues = LP.Clues - 4508;
+                        LP.Hunters.BloodyQueen = true;
+
+                        buyEmbed.setDescription("Congrats! you bought bloodyqueen r u happy now?");
                         message.channel.send(buyEmbed);
 
                         LP.save().catch(err => console.log(err));
