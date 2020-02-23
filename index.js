@@ -190,7 +190,6 @@ bot.on('message', async message => {
 
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
-    let args = message.content.substring(prefix.length).split(" ");
 
     let prefix;
 
@@ -207,6 +206,8 @@ bot.on('message', async message => {
     else {
         prefix = guild_0.prefix
     }
+
+    let args = message.content.substring(prefix.length).split(" ");
 
     if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
 
