@@ -5,6 +5,9 @@ const config = require("./config.json")
 const fs = require('fs');
 const got = require("got");
 
+const Guild = require("./models/guild");
+
+
 const snekfetch = require('snekfetch');
 
 
@@ -73,6 +76,8 @@ bot.on("guildCreate", guild => {
     }
     const Mohi = bot.users.get("478527909250990090");
 
+    let maprefix = "`setcowboishprefix`";
+
     const welcomeEmbed = new Discord.RichEmbed()
         .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
             stripIndents`
@@ -81,6 +86,8 @@ bot.on("guildCreate", guild => {
         🎉 | My cowboish birthday 🎊 **14/10/2019**
 
         👍 | Do *>help* and i will be there for help :)
+
+        ❓ | Wanna change my prefix? use the command ${maprefix}, yes this command has no prefix
 
         🔧 | My prefix is **>** remember using it before any command of my commands
 
@@ -122,7 +129,8 @@ bot.on('ready', async () => {
 
     const activities_list = [
         `🥳 celebrating ${bot.guilds.size} servers 🎉`,
-        `Identity V in ${bot.guilds.size} servers 💕`,
+        `@Cowboish bot for help :3`
+            `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >help",
         `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
@@ -180,7 +188,32 @@ bot.on('message', async message => {
 
     const MohiMoo = bot.users.get("478527909250990090");
 
-    let prefix = ">";
+    const guild_0 = await Guild.findOne({ guildID: message.guild.id });
+
+    if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
+
+
+    let prefix;
+
+    if (!guild_0) {
+        prefix = ">"
+    }
+    else if (guild_0.prefix === null) {
+        prefix = ">"
+    }
+    else if (guild_0.prefix.length < 1) {
+        prefix = ">"
+
+    }
+    else {
+        prefix = guild_0.prefix
+    }
+
+    if (message.content.startsWith("setcowboishprefix")) {
+        bot.commands.get('setcowboishprefix').execute(message, args, bot);
+    }
+
+    if (message.isMentioned(bot.user)) return message.channel.send(`Heeey ${message.author}!\nMy prefix in this server is set to **${prefix}**\nFor more information do **${prefix}help**`)
 
     let args = message.content.substring(prefix.length).split(" ");
 
@@ -188,14 +221,9 @@ bot.on('message', async message => {
 
     if (!message.guild) return;
 
-    if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
-
     if (message.author.id === bot.user.id) return;
 
     if (message.author.bot) return;
-
-    if (!message.guild) return;
-
 
 
     //ulitiy stuff
@@ -261,6 +289,10 @@ bot.on('message', async message => {
 
         case "chair":
             bot.commands.get('chair').execute(message, args, bot);
+            break;
+
+        case "chosendeath": case "deth": case "death":
+            bot.commands.get('death').execute(message, args, bot);
             break;
 
         //IDENTITY V LOGICPATH COMMANDS
@@ -402,6 +434,10 @@ bot.on('message', async message => {
             bot.commands.get('setup').execute(message, args, MohiMoo, bot);
             break;
 
+        case "setcowboishprefix": case "setcowboishbotprefix":
+            bot.commands.get('setcowboishprefix').execute(message, args, MohiMoo, bot);
+        break;
+
 
     }
     //End of config commands
@@ -411,8 +447,6 @@ bot.on('message', async message => {
 });//___________end of message event_________
 
 bot.on('guildMemberAdd', async member => {
-
-    const Guild = require("./models/guild");
 
     const guild = await Guild.findOne({ guildID: member.guild.id });
 
@@ -449,21 +483,20 @@ bot.on('guildMemberAdd', async member => {
 
 bot.on('guildMemberLeave', async member => {
 
-    const Guild = require("./models/guild");
 
-    const guild = await Guild.findOne({ guildID: member.guild.id });
+    const guild2 = await Guild.findOne({ guildID: member.guild.id });
 
-    if (!guild) return;
+    if (!guild2) return;
 
-    else if ((guild.leave.enabled) === false) return;
+    else if ((guild2.leave.enabled) === false) return;
 
-    else if (!guild.leave.message || guild.leave.message.length < 1) return;
+    else if (!guild2.leave.message || guild2.leave.message.length < 1) return;
 
-    else if ((!guild.leave.message) === null) return;
+    else if ((!guild2.leave.message) === null) return;
 
-    else if ((guild.leave.channel) === null) return;
+    else if ((guild2.leave.channel) === null) return;
 
-    const leaveMessage = guild.leave.message
+    const leaveMessage = guild2.leave.message
         .replace("memberCount", member.guild.memberCount)
         .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
         .replace("serverName", member.guild.name)
@@ -471,7 +504,7 @@ bot.on('guildMemberLeave', async member => {
         .replace("userMention", member.user.toString())
         .replace("userTag", member.user.tag);
 
-    const leaveChannel = member.guild.channels.get(guild.leave.channel);
+    const leaveChannel = member.guild.channels.get(guild2.leave.channel);
 
     if (leaveChannel === null) return;
 

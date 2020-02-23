@@ -20,6 +20,7 @@ module.exports = {
             .addField('📷 Images 📷', '``>help images``', true)
             .addField("🛠 Utility 🛠", "``>help utility``", true)
             .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469> ', '``>help logicpath``', true)
+            .addField("❓ Errors/suggestions ❓", "`>suggest`", true)
             .addField("For more info ", "[Cowboish website](https://mohimad.github.io/CowboishBot/)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter('Remember to use my prefix > and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
         if (!args[1]) return message.channel.send(helpEmbed);
@@ -57,7 +58,7 @@ module.exports = {
             .setTitle('⚙ Help is here :D ⚙', true)
             .setColor("RANDOM")
             .setURL('https://mohimad.github.io/CowboishBot/')
-            .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`')
+            .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'config')
@@ -109,7 +110,8 @@ module.exports = {
 
         const imageEmbed = new RichEmbed()
             .setColor("RANDOM")
-            .setDescription("Image manipulation commands!\nSome commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair`")
+            .setTitle("Image manipulation commands!")
+            .setDescription("Some commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair` | `chosendeath`")
 
         if (["image", "images"].includes(args[1].toLowerCase())) {
             message.channel.send(imageEmbed);
