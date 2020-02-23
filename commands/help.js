@@ -16,10 +16,10 @@ module.exports = {
             .addField('😁 Idv Actions 😁', '``>help actions``', true)
             .addField('🔧 Moderation 🔧', '``>help moderation``', true)
             .addField('⚙ Config ⚙', '``>help config``', true)
-            .addField('🤣 Fun 🤣', '``>help fun``')
-            .addField('📷 Images 📷', '``>help images``')
-            .addField("🛠 Utility 🛠", `>help utility`)
-            .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469> ', '``>help logicpath``')
+            .addField('🤣 Fun 🤣', '``>help fun``', true)
+            .addField('📷 Images 📷', '``>help images``', true)
+            .addField("🛠 Utility 🛠", "``>help utility``", true)
+            .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469> ', '``>help logicpath``', true)
             .addField("For more info ", "[Cowboish website](https://mohimad.github.io/CowboishBot/)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter('Remember to use my prefix > and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
         if (!args[1]) return message.channel.send(helpEmbed);
