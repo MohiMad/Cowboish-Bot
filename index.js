@@ -129,8 +129,8 @@ bot.on('ready', async () => {
 
     const activities_list = [
         `🥳 celebrating ${bot.guilds.size} servers 🎉`,
-        `@Cowboish bot for help :3`
-            `Identity V in ${bot.guilds.size} servers 💕`,
+        `@Cowboish bot for help :3`,
+        `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >help",
         `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
