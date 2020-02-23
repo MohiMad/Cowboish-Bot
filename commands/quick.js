@@ -60,7 +60,7 @@ module.exports = {
             quiz(message, gardeneritem.Question, gardeneritem.Answer, gardeneritem.Attachment, gardeneritem.Difficulty, "Gardena :v").then(cooldown.add(message.author.id));
 
         }
-        else if (["theif", "Theif", "kreacher", "Kreacher"].includes(args[1].toLowerCase())) {
+        else if (["theif", "Theif", "kreacher", "Kreacher", "thief"].includes(args[1].toLowerCase())) {
 
             let theiffile = require("../quizes/theif.json");
 

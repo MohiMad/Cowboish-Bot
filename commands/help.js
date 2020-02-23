@@ -12,12 +12,13 @@ module.exports = {
             .setColor("RANDOM")
             .setTitle('Did someone say help?')
             .setURL('https://mohimad.github.io/CowboishBot/')
-            .addField('<:idvtroll:651464392243675156> IdentityV <:idvtroll:651464392243675156>', '``>help idv``')
-            .addField('😁 Idv Actions 😁', '``>help actions``')
-            .addField('🔧 Moderation 🔧', '``>help moderation``')
-            .addField('⚙ Config ⚙', '``>help config``')
+            .addField('<:idvtroll:651464392243675156> IdentityV <:idvtroll:651464392243675156>', '``>help idv``', true)
+            .addField('😁 Idv Actions 😁', '``>help actions``', true)
+            .addField('🔧 Moderation 🔧', '``>help moderation``', true)
+            .addField('⚙ Config ⚙', '``>help config``', true)
             .addField('🤣 Fun 🤣', '``>help fun``')
             .addField('📷 Images 📷', '``>help images``')
+            .addField("🛠 Utility 🛠", `>help utility`)
             .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469> ', '``>help logicpath``')
             .addField("For more info ", "[Cowboish website](https://mohimad.github.io/CowboishBot/)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter('Remember to use my prefix > and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
@@ -56,7 +57,7 @@ module.exports = {
             .setTitle('⚙ Help is here :D ⚙', true)
             .setColor("RANDOM")
             .setURL('https://mohimad.github.io/CowboishBot/')
-            .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `userinfo` | `suggest` | `setup`')
+            .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`')
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
         if (args[1] === 'config')
@@ -110,8 +111,18 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription("Image manipulation commands!\nSome commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair`")
 
-        if(["image", "images"].includes(args[1].toLowerCase())){
+        if (["image", "images"].includes(args[1].toLowerCase())) {
             message.channel.send(imageEmbed);
+        }
+
+        if (["ultity", "utility".includes(args[1].toLowerCase())]) {
+            const ultity_Embed = new RichEmbed()
+                .setColor("RANDOM")
+                .setTitle("Cowboish Utility commands :D")
+                .setDescription("`setup` | `userinfo` | `serverinfo` | `setup`")
+                .setFooter("Don't forget to use my prefix before the commands :3");
+
+            message.channel.send(ultity_Embed)
         }
 
 
