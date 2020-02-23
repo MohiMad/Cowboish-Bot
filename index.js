@@ -190,8 +190,7 @@ bot.on('message', async message => {
 
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
-    if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
-
+    let args = message.content.substring(prefix.length).split(" ");
 
     let prefix;
 
@@ -209,15 +208,7 @@ bot.on('message', async message => {
         prefix = guild_0.prefix
     }
 
-    if (message.content.startsWith("setcowboishprefix")) {
-        bot.commands.get('setcowboishprefix').execute(message, args, bot);
-    }
-
-    if (message.isMentioned(bot.user)) return message.channel.send(`Heeey ${message.author}!\nMy prefix in this server is set to **${prefix}**\nFor more information do **${prefix}help**`)
-
-    let args = message.content.substring(prefix.length).split(" ");
-
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
 
     if (!message.guild) return;
 
@@ -225,8 +216,13 @@ bot.on('message', async message => {
 
     if (message.author.bot) return;
 
+    if (message.content.startsWith("setcowboishprefix")) {
+        bot.commands.get('setcowboishprefix').execute(message, args, bot);
+    }
 
-    //ulitiy stuff
+    if (message.isMentioned(bot.user)) return message.channel.send(`Heeey ${message.author}!\nMy prefix in this server is set to **${prefix}**\nFor more information do **${prefix}help**`)
+
+    if (!message.content.startsWith(prefix)) return;
 
     switch (args[0]) {
 

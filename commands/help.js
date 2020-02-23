@@ -58,11 +58,12 @@ module.exports = {
             .setTitle('⚙ Help is here :D ⚙', true)
             .setColor("RANDOM")
             .setURL('https://mohimad.github.io/CowboishBot/')
-            .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
+            .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
-        if (args[1] === 'config')
+        if (args[1] === 'config'){
             message.channel.send(genEmbed);
+        }
 
 
         const helpmbed = new RichEmbed()
@@ -117,7 +118,7 @@ module.exports = {
             message.channel.send(imageEmbed);
         }
 
-        if (["ultity", "utility".includes(args[1].toLowerCase())]) {
+        if (["ultity", "utility"].includes(args[1].toLowerCase())) {
             const ultity_Embed = new RichEmbed()
                 .setColor("RANDOM")
                 .setTitle("Cowboish Utility commands :D")

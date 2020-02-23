@@ -28,7 +28,7 @@ module.exports = {
         ctx.font = '75px sans-serif';
         ctx.fillStyle = '#000000';
 
-        ctx.fillText(sayMessage, 50, 80, 1520);
+        ctx.fillText(sayMessage, 50, 80);
 
 
 
