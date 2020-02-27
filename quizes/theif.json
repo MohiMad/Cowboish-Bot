@@ -1,7 +1,7 @@
 [
 	{
-		"Question": "**Retype the sentence:**\n`Theif is a big troll`",
-		"Answer": ["Theif is a big troll"],
+		"Question": "**Retype the sentence:**\n`Thief is a big troll`",
+		"Answer": ["Theif is a big troll", "thief is a big troll", "Thief is a big troll", "troll", "thief"],
 		"Difficulty": "Umm eazy?",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673459634299994112/jMjYQRWYxLAmibMKfW8l9CoWEQhBwcCAazOmAYIs3qLPiKSFfwkwpne2CKqECFE3tV39GGYNgCpZh0VMyDGDGihncvgFg18BdXtJ.png"
 	},
