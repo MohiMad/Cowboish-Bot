@@ -59,21 +59,6 @@ module.exports = async (bot) => {
         Glenn.updateStats(bot.guilds.size);
     }, 15 * 60000) // Sends stats every 15 minutes
 
-    try {
-        got.post("https://arcane-botcenter.xyz/api/632291800585076761/stats", {
-            headers: {
-                Authorization: config.arcane_token
-            },
-            body: {
-                server_count: bot.guilds.size,
-                member_count: bot.users.size
-            },
-            json: false
-        }).catch(err => console.log(err))
-    } catch (err) {
-        console.log("Hit an arcane error: " + err);
-    }
-
     const Boats = new BOATS(config.boatsToken);
 
     Boats.postStats(bot.guilds.size, "632291800585076761")
