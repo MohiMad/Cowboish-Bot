@@ -8,7 +8,7 @@ const { newLP, guildAdd } = require("../functions.js");
 module.exports = {
     name: 'shop',
     description: "shop list for ya",
-    execute: async (message, args) => {
+    execute: async (message, args, bot) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -44,7 +44,7 @@ module.exports = {
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
-        if (["essence", "ess", "essences"].includes(args[1].toLowerCase())) {
+        if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {
             message.channel.send(EssEmbed);
 
         }
@@ -164,9 +164,9 @@ module.exports = {
             else {
                 roleEmbed.addField("<:perfumer:648850313411035136> Perfumer", "Perfumer - Price __*3568*__ <:clue:655384523735040000>", true);
             }
-            if(LP.Survivors.NewSurv === true){
+            if (LP.Survivors.NewSurv === true) {
                 roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "~~GraveKeeper - Price __*3568*__~~", true)
-            }else{
+            } else {
                 roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "GraveKeeper - Price __*3568*__ <:clue:655384523735040000>", true)
             }
 
@@ -176,7 +176,7 @@ module.exports = {
 
         }//survivor bracket
 
-        else if ((args[1]) === "hunter") {
+        else if (["hunter", "hunters"].includes(args[1].toLowerCase())) {
             const huntaEmbed = new RichEmbed()
                 .setTitle("Cowboish Hunter shop!")
                 .setColor("RANDOM")
