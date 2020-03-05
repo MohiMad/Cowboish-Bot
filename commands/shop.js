@@ -21,7 +21,7 @@ module.exports = {
             .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
             .setColor("RANDOM")
             .setDescription("Here is a list of the lists available in the shop! do `>shop <listID>`")
-            .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", stripIndents` 
+            .addField("▔ ▔ ▔ ▔ ▔", stripIndents` 
         <:ess1:655840713904488469> | **Essences shop!** ─ ID ➜  __*essence*__
         Too unlucky to get essences? well buy some...
 
@@ -37,18 +37,14 @@ module.exports = {
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `>buy <itemID>`")
             .setColor("RANDOM")
-            .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", stripIndents`
+            .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
         <:ess1:655840713904488469> | **Essence s10-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-1*__
         <:ess3:655840571616919586> | **Essence s10-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-2*__
         <:ess2:655840643847028751>  | **Essence s10-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
-        if (!args[1]) {
-            message.channel.send(shopEmbed);
-        }
-
-        else if (["essence", "ess"].includes(args[1].toLowerCase())) {
+        if (["essence", "ess", "essences"].includes(args[1].toLowerCase())) {
             message.channel.send(EssEmbed);
 
         }
@@ -284,7 +280,7 @@ module.exports = {
         }//if hunter bracket
 
         else {
-            message.reply("what are you dooooiing! this list doesn't exist");
+            message.channel.send(shopEmbed);
         }
         guildAdd(message);
 

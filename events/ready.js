@@ -4,7 +4,6 @@ const snekfetch = require('snekfetch');
 const { post } = require('snekfetch');
 const DBL = require("dblapi.js");
 const { ddblAPI } = require('ddblapi.js');
-const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
 const BOATS = require('boats.js');
 const schedule = require('node-schedule');
 const { rewards } = require("../functions.js");
@@ -13,6 +12,9 @@ const GBL = require('gblapi.js');
 
 
 module.exports = async (bot) => {
+
+    const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
+
 
     var time = new Date();
     var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
@@ -67,7 +69,7 @@ module.exports = async (bot) => {
                 member_count: bot.users.size
             },
             json: true
-        }).catch(err => console.error(err.statusCode))
+        }).catch(err => console.error(err))
     } catch (err) {
         console.log("Hit an arcane error: " + err);
     }
@@ -91,7 +93,6 @@ module.exports = async (bot) => {
         console.log("Hit an bbl error:" + err)
     }
 
-    try {
         const updateBotList = async () => {
 
             const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
@@ -103,8 +104,7 @@ module.exports = async (bot) => {
 
             return (reply)
         }
-    } catch (err) {
-        console.log("Hit an error in dbl2" + err);
-    }
+
+    let botUPDATE = await updateBotList()
 
 };
