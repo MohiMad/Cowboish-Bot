@@ -1,21 +1,35 @@
 [
 	{
-		"Question": "**Retype the sentence:**\n`Theif is a big troll`",
-		"Answer": ["Theif is a big troll", "theif is a big troll", "theif", "troll", "big troll"],
+		"Question": "**Retype the sentence:**\n`Thief is a big troll`",
+		"Answer": [
+			"Theif is a big troll",
+			"thief is a big troll",
+			"Thief is a big troll",
+			"troll",
+			"thief"
+		],
 		"Difficulty": "Umm eazy?",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673459634299994112/jMjYQRWYxLAmibMKfW8l9CoWEQhBwcCAazOmAYIs3qLPiKSFfwkwpne2CKqECFE3tV39GGYNgCpZh0VMyDGDGihncvgFg18BdXtJ.png"
 	},
 	{
 		"Question": "**Fill in the missing word**:\n`As a Theif main, you need to master the _ _ _ _ walk`",
-		"Answer": ["moon", "Moon", "Backward", "backward"],
+		"Answer": [
+			"moon",
+			"Moon",
+			"Backward",
+			"backward"
+		],
 		"Difficulty": "Medium",
 		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKFnEDKT9GMMHHmoWc99RwLaAUtWUfgtPLoK5h1-Pxk7bJH0IG"
 	},
 	{
 		"Question": "**The word is scrambled... type the correct word**\n`lashfghitl`",
-		"Answer": ["FLASHLIGHT", "Flashlight", "flashlight"],
+		"Answer": [
+			"FLASHLIGHT",
+			"Flashlight",
+			"flashlight"
+		],
 		"Difficulty": "Extreme",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673459320771313674/809e0445114aba10f7a6960176ed986d.png?width=450&height=450"
 	}
-
 ]
