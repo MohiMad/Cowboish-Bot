@@ -6,7 +6,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'buy',
     description: "buy some stuff",
-    execute(message, args, MohiMoo) {
+    execute(message, args, bot) {
 
 
 
@@ -29,7 +29,7 @@ module.exports = {
                 if (!LP) { newLP(message) }
 
                 if (!args[1]) {
-                    message.reply("Are you messing with me? please provide what you want to buy after the command!\nexample `>buy coa`");
+                    ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `>buy <ItemHERE>`\n\nDunno what to buy? do `>shop` to check what you can buy")
                 }
                 //buy essences here
                 else if (["s10-2", "s102"].includes(args[1].toLowerCase()) || args[1] === "2") {

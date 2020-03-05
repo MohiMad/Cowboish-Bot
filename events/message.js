@@ -151,7 +151,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "buy":
-            bot.commands.get('buy').execute(message, args, MohiMoo);
+            bot.commands.get('buy').execute(message, args, bot);
             break;
 
 
