@@ -44,7 +44,10 @@ module.exports = {
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
-        if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {
+        if(!args[1]){
+            return message.channel.send(shopEmbed)
+        }
+        else if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {
             message.channel.send(EssEmbed);
 
         }
