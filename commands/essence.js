@@ -122,7 +122,7 @@ module.exports = {
             .then(cooldown.add(message.author.id));
 
         }
-        else if(["cao", "coa", "coaiii"].includes(args[1].toLowerCase())){
+        else if(args[1] === "cao"){
             message.channel.send(coa_Embed)
             .then(cooldown.add(message.author.id));
         }
@@ -130,7 +130,6 @@ module.exports = {
 
         else {
             ErrorMsg(bot, message, "Ooops looks like you chose an invalid essence name or didn't provide one!\nThe current available essences are:\n`s8-1` - `s8-2` - `p5-1` - `p5-2` - `s9-1` - `s9-2` - `coa`\nPlease type one of those essence's name down below in the next **20** seconds\n\nOr you can just do: `>essence <essenceName>`")
-            message.reply("Oops looks like you chose an invalid essence name, essences available are ``s8-1``, ``s8-2``, ``p5-1``, ``p5-2``, ``s9-1`` please type one of them down bleow");
 
             message.channel.awaitMessages(filter, {
                 max: 1,
