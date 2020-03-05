@@ -43,7 +43,6 @@ module.exports = async (bot) => {
         dbl.postStats(bot.guilds.size);
     }, 1800000);
 
-    const responseFromAPI = await updateBotList()
 
     ddbl.postStats(bot.guilds.size)
         .catch(err => console.log(err));
