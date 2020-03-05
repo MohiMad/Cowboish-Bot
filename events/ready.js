@@ -59,6 +59,20 @@ module.exports = async (bot) => {
         Glenn.updateStats(bot.guilds.size);
     }, 15 * 60000) // Sends stats every 15 minutes
 
+    try {
+        got.post("https://arcane-botcenter.xyz/api/632291800585076761/stats", {
+            headers: {
+                Authorization: config.arcane_token
+            },
+            body: {
+                server_count: bot.guilds.size,
+                member_count: bot.users.size
+            },
+            json: false
+        }).catch(err => console.log(err))
+    } catch (err) {
+        console.log("Hit an arcane error: " + err);
+    }
 
     const Boats = new BOATS(config.boatsToken);
 
@@ -67,17 +81,6 @@ module.exports = async (bot) => {
             console.log(err);
         });
 
-
-    try {
-        snekfetch.post(`https://bladebotlist.xyz/api/public/bot/stats`)
-            .set('Authorization', config.bblToken)
-            .send({
-                server_count: bot.guilds.size,
-            }).catch((e) => console.log(e));
-
-    } catch (err) {
-        console.log("Hit an bbl error:" + err)
-    }
 
         const updateBotList = async () => {
 
