@@ -5,11 +5,11 @@ module.exports = async (bot, message) => {
 
     const MohiMoo = bot.users.get("478527909250990090");
 
+    if (message.channel.type === 'dm') return;
+
     if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
 
     if (!message.guild) return;
-
-    if (message.channel.type === 'dm') return;
 
 
 
@@ -119,7 +119,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "open":
-            bot.commands.get('open').execute(message, args, MohiMoo);
+            bot.commands.get('open').execute(message, args, bot);
             break;
 
         case "lp": case "logicpath": case "inv": case "inventroy":
