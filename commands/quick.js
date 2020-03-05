@@ -349,6 +349,21 @@ module.exports = {
             }
 
         }
+        else if (["gravedigger", "gravekeeper"].includes(args[1].toLowerCase())) {
+
+            if (LP.Survivors.NewSurv === false) {
+                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+            }
+            else {
+                let gravefile = require("../quizes/gravedigger.json");
+
+                let graveitem = gravefile[Math.floor(Math.random() * gravefile.length)];
+
+                quiz(message, graveitem.Question, graveitem.Answer, graveitem.Attachment, graveitem.Difficulty, "Grave keepa").then(cooldown.add(message.author.id));
+            }
+
+        }
+
         setTimeout(() => {
             cooldown.delete(message.author.id)
 

@@ -1,0 +1,111 @@
+const got = require("got");
+const config = require("../config.json");
+const snekfetch = require('snekfetch');
+const { post } = require('snekfetch');
+const DBL = require("dblapi.js");
+const { ddblAPI } = require('ddblapi.js');
+const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
+const BOATS = require('boats.js');
+const schedule = require('node-schedule');
+const { rewards } = require("../functions.js");
+const GBL = require('gblapi.js');
+
+
+
+module.exports = async (bot) => {
+
+    var time = new Date();
+    var timestamp = '[' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ']';
+
+    console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
+    console.log(`___________________________________________`);
+    console.log(`Now let's lasso sum peeps >:D`);
+    console.log(`___________________________________________`);
+
+
+    const activities_list = [
+        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
+        `@Cowboish bot for help :3`,
+        `Identity V in ${bot.guilds.size} servers 💕`,
+        "Welcome to Identit | >help",
+        `milestone ${bot.guilds.size}/250 💕`,
+        `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
+    ];
+
+    setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+        bot.user.setActivity(activities_list[index]);
+    }, 100000);//sets the activity each 120 s
+
+    const dbl = new DBL(config.dbl_token, bot);
+
+    setInterval(() => {
+        dbl.postStats(bot.guilds.size);
+    }, 1800000);
+
+    const responseFromAPI = await updateBotList()
+
+    ddbl.postStats(bot.guilds.size)
+        .catch(err => console.log(err));
+
+    schedule.scheduleJob("* * 12 * 1", function () {
+        await rewards(bot)
+    });
+
+    const Glenn = new GBL(bot.user.id, config.glenToken);
+
+    setInterval(() => {
+        Glenn.updateStats(bot.guilds.size);
+    }, 15 * 60000) // Sends stats every 15 minutes
+
+    try {
+        got.post("https://arcane-botcenter.xyz/api/632291800585076761/stats", {
+            headers: {
+                Authorization: config.arcane_token
+            },
+            body: {
+                server_count: bot.guilds.size,
+                member_count: bot.users.size
+            },
+            json: true
+        }).catch(err => console.error(err.statusCode))
+    } catch (err) {
+        console.log("Hit an arcane error: " + err);
+    }
+
+    const Boats = new BOATS(config.boatsToken);
+
+    Boats.postStats(bot.guilds.size, "632291800585076761")
+        .catch((err) => {
+            console.error(err);
+        });
+
+
+    try {
+        snekfetch.post(`https://bladebotlist.xyz/api/public/bot/stats`)
+            .set('Authorization', config.bblToken)
+            .send({
+                server_count: bot.guilds.size,
+            }).catch((e) => console.error(e));
+
+    } catch (err) {
+        console.log("Hit an bbl error:" + err)
+    }
+
+    try {
+        const updateBotList = async () => {
+
+            const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
+                .set("Authorization", `Bot ${config.dblToken_2}`)
+                .send({
+                    guilds: bot.guilds.size,
+                    users: bot.users.size,
+                })
+
+            return (reply)
+        }
+    } catch (err) {
+        console.log("Hit an error in dbl2" + err);
+    }
+
+};

@@ -4,6 +4,84 @@ const { stripIndents } = require('common-tags');
 
 module.exports = {
 
+	rewards: (bot) => {
+
+		logicPath.find({})
+			.sort([
+				["logic", "descending"]
+			]).exec((err, res) => {
+				if (err) console.log(err);
+
+				//the ID of Rewards channel on Cowboish server
+				let reChannel = bot.channels.get('676502025499836416');
+
+				let n1 = bot.users.get(res[0].UserID) || "Not found";
+				let n2 = bot.users.get(res[1].UserID) || "Not found";
+				let n3 = bot.users.get(res[2].UserID) || "Not found";
+				let n4 = bot.users.get(res[3].UserID) || "Not found";
+				let n5 = bot.users.get(res[4].UserID) || "Not found";
+
+				reChannel.send(stripIndents`
+				**Yaaaay it's the end of the week!**
+				《<:uno:676017997420167187>》 **${n1.username}** gets **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
+					With **${res[0].logic}**<:LP:675763680863977513> logicpath steps!
+
+				〘<:dos:676019548016738304>〙 **${n2.username}** gets **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
+					With **${res[1].logic}**<:LP:675763680863977513> logicpath steps!
+
+				〘<:tres:676019592757248001>〙 **${n3.username}** gets **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
+					With **${res[2].logic}**<:LP:675763680863977513> logicpath steps!
+
+				〘4〙 **${n4.username}** gets **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
+					With **${res[3].logic}**<:LP:675763680863977513> logicpath steps!
+
+				〘5〙 **${n5.username}** gets **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
+					With **${res[1].logic}**<:LP:675763680863977513> logicpath steps!
+				`);
+
+				res[0].Echoes = res[0].Echoes + 50;
+				res[0].Ess1 = res[0].Ess1 + 3;
+				res[0].Ess2 = res[0].Ess2 + 3;
+				res[0].Ess3 = res[0].Ess3 + 3;
+				res[0].Clues = res[0].Clues + 500;
+				res[0].save().catch(err => console.log(err));
+				//Top 1 rewards!
+
+				res[1].Echoes = res[1].Echoes + 40;
+				res[1].Ess1 = res[1].Ess1 + 2;
+				res[1].Ess2 = res[1].Ess2 + 2;
+				res[1].Ess3 = res[1].Ess3 + 2;
+				res[1].Clues = res[1].Clues + 400;
+				res[1].save().catch(err => console.log(err));
+				//Top 2 rewards
+
+				res[2].Echoes = res[2].Echoes + 30;
+				res[2].Ess1 = res[2].Ess1 + 2;
+				res[2].Ess2 = res[2].Ess2 + 2;
+				res[2].Ess3 = res[2].Ess3 + 2;
+				res[2].Clues = res[2].Clues + 300;
+				res[2].save().catch(err => console.log(err));
+				//Top 3 rewards!
+
+				res[3].Echoes = res[3].Echoes + 20;
+				res[3].Ess1 = res[3].Ess1 + 1;
+				res[3].Ess2 = res[3].Ess2 + 1;
+				res[3].Ess3 = res[3].Ess3 + 1;
+				res[3].Clues = res[3].Clues + 200;
+				res[3].save().catch(err => console.log(err));
+				//Top 4 rewards
+
+				res[4].Echoes = res[4].Echoes + 20;
+				res[4].Ess1 = res[4].Ess1 + 1;
+				res[4].Ess2 = res[4].Ess2 + 1;
+				res[4].Ess3 = res[4].Ess3 + 1;
+				res[4].Clues = res[4].Clues + 200;
+				res[4].save().catch(err => console.log(err));
+
+			})
+
+	},
+
 	coolEmbed: (message, Title, Description) => {
 		const coolEmbed = new RichEmbed()
 			.setTitle(Title)
@@ -17,18 +95,18 @@ module.exports = {
 
 	guildAdd: async (message) => {
 
-	const LP_User = await logicPath.findOne({ UserID: message.author.id });
+		const LP_User = await logicPath.findOne({ UserID: message.author.id });
 
-	if(!LP_User){
-		return;
-	}
-	else if(!LP_User.guildsID.includes(message.guild.id)){
+		if (!LP_User) {
+			return;
+		}
+		else if (!LP_User.guildsID.includes(message.guild.id)) {
 
-		LP_User.guildsID = [...LP_User.guildsID, message.guild.id];
+			LP_User.guildsID = [...LP_User.guildsID, message.guild.id];
 
-		LP_User.save().catch(err => console.log(err));
-	}
-	
+			LP_User.save().catch(err => console.log(err));
+		}
+
 	},
 
 	getMember: function (message, toFind = '') {
@@ -115,7 +193,7 @@ module.exports = {
 			message.channel.awaitMessages(filter, { max: 1, time: 60000 }).then(collected => {
 				let respondAuth = collected.first();
 
-				if (answer.includes(collected.first().content.toLowerCase())){
+				if (answer.includes(collected.first().content.toLowerCase())) {
 					message.channel.send(`**${message.author.username}** got the right answer and got a dice <:dice:655384578499936257>`);
 
 					LP.Dices = LP.Dices + 1;

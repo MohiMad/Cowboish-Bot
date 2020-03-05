@@ -32,7 +32,7 @@ module.exports = {
                     message.reply("Are you messing with me? please provide what you want to buy after the command!\nexample `>buy coa`");
                 }
                 //buy essences here
-                else if ((args[1]) === "coa") {
+                else if (["s10-2", "s102"].includes(args[1].toLowerCase()) || args[1] === "2") {
                     if (LP.Inspirations < 96) {
                         message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 
@@ -47,7 +47,7 @@ module.exports = {
                     }
                 }
 
-                else if ((args[1]) === "s9-1") {
+                else if (["s10", "s10-1"].includes(args[1].toLowerCase()) || args[1] === "1") {
                     if (LP.Inspirations < 96) {
                         message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more`)
 
@@ -62,7 +62,7 @@ module.exports = {
                     }
                 }
 
-                else if ((args[1]) === "s9-2") {
+                else if (["s10-3", "s103"].includes(args[1].toLowerCase()) || args[1] === "3") {
                     if (LP.Inspirations < 96) {
                         message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 
@@ -399,6 +399,23 @@ module.exports = {
                         LP.Survivors.Wilding = true;
 
                         buyEmbed.setDescription("Yaaaay! you wasted your Clues on the Wilding");
+                        message.channel.send(buyEmbed);
+
+                        LP.save().catch(err => console.log(err));
+                    }
+                }
+                else if (["gravekeeper", "gravedigger"].includes(args[1].toLowerCase())) {
+                    if (LP.Clues < 3568) {
+                        message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
+                    }
+                    else if (LP.Survivors.NewSurv === true) {
+                        message.reply("you own the Wilding already!");
+                    }
+                    else {
+                        LP.Clues = LP.Clues - 3568;
+                        LP.Survivors.NewSurv = true;
+
+                        buyEmbed.setDescription("There ya go!\nYou now own the Gravedigger :3");
                         message.channel.send(buyEmbed);
 
                         LP.save().catch(err => console.log(err));

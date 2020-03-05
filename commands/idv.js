@@ -4,81 +4,88 @@ const got = require('got');
 module.exports = {
     name: 'idv',
     description: "sends a random idv post",
-    execute(message, args, MohiMoo) {
-
+    execute: async(message, args) => {
 
 
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
-        try {
-
-            got(random).then(response => {
-
-                let content = JSON.parse(response.body);
-
-                let permalink = content[0].data.children[0].data.permalink;
-
-                let memeUrl = `https://reddit.com${permalink}`;
-
-                var joke = content[0].data.children[0].data.selftext;
-
-                let memeImage = content[0].data.children[0].data.url;
-
-                let memeTitle = content[0].data.children[0].data.title;
-
-                let memeUpvotes = content[0].data.children[0].data.ups;
-
-                let memeNumComments = content[0].data.children[0].data.num_comments;
+        await got(random).then(response => {
 
 
+            let content = JSON.parse(response.body);
 
-                const embeed = new RichEmbed()
-                    .setTitle(`${memeTitle}`)
-                    .setURL(`${memeUrl}`)
-                    .setDescription(`${joke}`)
-                    .setColor("RANDOM")
-                    .setFooter(`Provided by r/IdentityV | 👍 ${memeUpvotes} | 💬 ${memeNumComments}`);
+            let permalink = content[0].data.children[0].data.permalink;
 
-                if (joke.length > 2048) {
-                    return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
+            let memeUrl = `https://reddit.com${permalink}`;
 
-                }
-                else if (memeImage.endsWith(".jpg")) {
-                    embeed.setImage(`${memeImage}`)
-                    message.channel.send(embeed);
-                }
-                else if (memeImage.endsWith(".png")) {
-                    embeed.setImage(`${memeImage}`)
-                    message.channel.send(embeed);
-                }
-                else if (memeImage.endsWith(".gif")) {
-                    embeed.setImage(`${memeImage}`)
-                    message.channel.send(embeed);
-                }
-                else {
-                    message.channel.send(embeed);
-                }
+            var joke = content[0].data.children[0].data.selftext;
 
-            }).catch(err => {
-                if (err.message === "Response code 429 (Too Many Requests)") {
-                    return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
-                }
-                else if (err.message === "RichEmbed descriptions may not exceed 2048 characters.") {
-                    return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
-                }
-                else {
-                    MohiMoo.send("```" + err + "```");
-                    message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
-                }
+            let memeImage = content[0].data.children[0].data.url;
 
-            })
-        } catch (err) {
-            console.log(err);
+            let memeTitle = content[0].data.children[0].data.title;
 
-        }
+            let memeUpvotes = content[0].data.children[0].data.ups;
 
+            let memeNumComments = content[0].data.children[0].data.num_comments;
+
+            let author = content[0].data.children[0].data.author;
+            let flair =  content[0].data.children[0].data.author_flair_text
+
+            if(memeTitle.length > 256){
+                memeTitle = "Title too long!";
+            }else{ 
+                memeTitle = content[0].data.children[0].data.title;
+            }
+            if (joke.length > 2048) {
+
+                joke = `The post was too long! click [HERE](${memeUrl}) to see it`
+            }
+
+            if(flair === null){
+                flair = ` `
+            }else{
+                flair = "➤ " + flair
+            }
+
+
+            const embeed = new RichEmbed()
+                .setTitle(`${memeTitle}`)
+                .setURL(`${memeUrl}`)
+                .setAuthor(`${author}  ` +  flair, "https://b.thumbs.redditmedia.com/12jRRi7K2pjkF8ZeQefY7Shgyy0d4N2GdcpjkM4pkeM.png")
+                .setDescription(`${joke}`)
+                .setColor("RANDOM")
+                .setFooter(`Provided by r/IdentityV 👍 ${memeUpvotes} | 💬 ${memeNumComments}`);
+
+            if (memeImage.endsWith(".jpg")) {
+                embeed.setImage(`${memeImage}`)
+            }
+            else if (memeImage.endsWith(".png")) {
+                embeed.setImage(`${memeImage}`)
+            }
+            else if (memeImage.endsWith(".gif")) {
+                embeed.setImage(`${memeImage}`)
+            }
+            else if(joke.length > 1){
+                embeed.setDescription(`${joke}`)
+            }
+            else {
+                embeed.setDescription(`No text or image? it's probably a video... click [HERE](${memeUrl}) to watch it!`)
+            }
+
+            message.channel.send(embeed);
+
+
+        }).catch(err => {
+            if (err.message === "Response code 429 (Too Many Requests)") {
+                return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
+            }
+            else {
+                console.log(err)
+                message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
+            }
+        })
 
 
 

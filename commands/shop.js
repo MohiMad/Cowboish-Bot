@@ -24,8 +24,10 @@ module.exports = {
             .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", stripIndents` 
         <:ess1:655840713904488469> | **Essences shop!** ─ ID ➜  __*essence*__
         Too unlucky to get essences? well buy some...
+
         <:luckyguy:649120786312855563> | **Survivors list!** ─ ID ➜  __*survivor*__
         I swear to god if you buy Enchantress...
+
         <:uwuchang:659147931592687616> | **Hunters List!** ─ ID ➜ __*hunter*__
         Nothing to say here tbh... `)
             .setFooter("Cowboish shop list ─ page 1 of 1");
@@ -36,9 +38,9 @@ module.exports = {
             .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `>buy <itemID>`")
             .setColor("RANDOM")
             .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", stripIndents`
-        <:ess1:655840713904488469> | **essence s9-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s9-1*__
-        <:ess3:655840571616919586> | **COA III essence** - Price : *96* <:inspirations:655840409674711060> - ID: __*coa*__
-        <:ess2:655840643847028751>  | **Essence s9-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s9-2*__
+        <:ess1:655840713904488469> | **Essence s10-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-1*__
+        <:ess3:655840571616919586> | **Essence s10-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-2*__
+        <:ess2:655840643847028751>  | **Essence s10-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
@@ -46,20 +48,18 @@ module.exports = {
             message.channel.send(shopEmbed);
         }
 
-        else if ((args[1]) === "essence") {
+        else if (["essence", "ess"].includes(args[1].toLowerCase())) {
             message.channel.send(EssEmbed);
 
         }
 
-        else if ((args[1]) === "survivor") {
+        else if (["survivor", "surv", "survivors"].includes(args[1].toLowerCase())) {
 
             const roleEmbed = new RichEmbed()
                 .setTitle("Survivors shop list!")
                 .setDescription("To buy the survivor you want, do `>buy <survivorName>`\n")
                 .setFooter("Remember to type the survivor's name without spacing or capitalization")
                 .setColor("RANDOM");
-
-
 
             if (LP.Survivors.Officer === true) {
                 roleEmbed.addField("⏰ 1st Officer", "~~1st Officer - Price __*3568*__~~", true);
@@ -167,6 +167,11 @@ module.exports = {
             }
             else {
                 roleEmbed.addField("<:perfumer:648850313411035136> Perfumer", "Perfumer - Price __*3568*__ <:clue:655384523735040000>", true);
+            }
+            if(LP.Survivors.NewSurv === true){
+                roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "~~GraveKeeper - Price __*3568*__~~", true)
+            }else{
+                roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "GraveKeeper - Price __*3568*__ <:clue:655384523735040000>", true)
             }
 
 

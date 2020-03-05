@@ -1,6 +1,8 @@
 const { RichEmbed } = require('discord.js');
 const { ErrorMsg } = require("../functions.js");
 
+const { stripIndents }= require("common-tags");
+
 module.exports = {
     name: 'suggest',
     description: "sends a suggestion to mohimoo",
@@ -10,10 +12,15 @@ module.exports = {
 
         const sayMessage = args.slice(1).join(" ");
 
-
         const suggestEmbed = new RichEmbed()
-            .setAuthor(message.author.username + " suggestes the following...", message.author.avatarURL)
-            .setDescription(sayMessage)
+            .setAuthor(message.author.username + " has a suggestion!", message.author.avatarURL)
+            .setDescription(stripIndents`
+            🆔 **ID**: *${message.author.id}*
+            📎 **User Tag**: *${message.author.tag}*
+
+            💭 **Suggestion**:
+            ${sayMessage}
+            `)
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
             .setColor("RANDOM");
