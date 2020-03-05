@@ -133,7 +133,7 @@ module.exports = {
 
             message.channel.awaitMessages(filter, {
                 max: 1,
-                time: 20000
+                time: 60000
             }).then(collected => {
 
                 let ess = collected.first();
