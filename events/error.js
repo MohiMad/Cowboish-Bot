@@ -1,6 +1,8 @@
 module.exports = (bot, err) => {
 
-    bot.users.get("478527909250990090").send(`` + err.name + ":" + err.stack + ``);
+    let Mohi = bot.users.get("478527909250990090");
+
+    Mohi.send(`` + err.name + ":" + err.stack + ``);
     
     console.log(err);
     
