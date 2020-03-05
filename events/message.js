@@ -42,7 +42,7 @@ module.exports = async (bot, message) => {
         bot.commands.get('setcowboishprefix').execute(message, args, bot);
     }
 
-    if (message.isMentioned(bot.user)) return message.channel.send(`Heeey **${message.author}**!\nMy prefix in this server is set to **${prefix}**\nFor more information do **${prefix}help**`)
+    if (message.content.startsWith(bot.user)) return message.channel.send(`Heeey **${message.author}**!\nMy prefix in this server is set to **${prefix}**\nFor more information do **${prefix}help**`)
 
     if (!message.content.startsWith(prefix)) return;
 
