@@ -2,19 +2,19 @@ const Guild = require("../models/guild.js");
 
 module.exports = async (bot, member) => {
 
-    const guild2 = await Guild.findOne({ guildID: member.guild.id });
+    const guild = await Guild.findOne({ guildID: member.guild.id });
 
-    if (!guild2) return;
+    if (!guild) return;
 
-    else if ((guild2.leave.enabled) === false) return;
+    if ((guild.leave.enabled) === false) return;
 
-    else if (!guild2.leave.message || guild2.leave.message.length < 1) return;
+    if (!guild.leave.message || guild.leave.message.length < 1) return;
 
-    else if ((!guild2.leave.message) === null) return;
+    if (!guild.leave.message) return;
 
-    else if ((guild2.leave.channel) === null) return;
+    if ((guild.leave.channel) === null) return;
 
-    const leaveMessage = guild2.leave.message
+    const leaveMessage = guild.leave.message
         .replace("memberCount", member.guild.memberCount)
         .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
         .replace("serverName", member.guild.name)
@@ -22,9 +22,16 @@ module.exports = async (bot, member) => {
         .replace("userMention", member.user.toString())
         .replace("userTag", member.user.tag);
 
-    const leaveChannel = member.guild.channels.get(guild2.leave.channel);
+    const leaveChannel = member.guild.channels.get(guild.leave.channel);
 
-    if (leaveChannel === null) return;
+    if (!leaveChannel) {
+        return;
 
-    leaveChannel.send(leaveMessage);
+    } else {
+
+        leaveChannel.send(leaveMessage)
+        .catch(() => void null);
+
+
+    }
 };
