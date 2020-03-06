@@ -13,11 +13,37 @@ module.exports = {
     description: "opens an sessenc ofr yga ",
     execute: async (message, args, bot) => {
 
+        var s10_cmd = "`s10-1` or `1`";
+        var s10_2_cmd = "`s10-2` or `2`";
+        var s10_3_cmd = "`s10-3` or `3`";
+        var exmple = "`>open 1` to open a `s10-1` <:ess1:655840713904488469> essence";
+
+        const noargsEmbed = new RichEmbed()
+            .setTitle("Please provide one of the essences ID after the command")
+            .setColor("RANDOM")
+            .setDescription(
+                stripIndents`The current season's Essences are..
+
+                        <:ess1:655840713904488469> | **Essences s10-1** ─ ID ➜ ${s10_cmd}
+
+                        <:Ess1:655840571616919586> | **Essence s10-2** (__Unvailable__) ─ ID ➜ ${s10_2_cmd}
+
+                        <:ess2:655840643847028751> | **Essence s10-3** (__Unvailable__) ─ ID ➜ ${s10_3_cmd}
+
+                        Example: ${exmple}
+                `)
+
         try {
 
             const LP = await logicPath.findOne({ UserID: message.author.id });
 
             if (!LP) { newLP(message) }
+
+            else if (!args[1]) {
+
+                message.channel.send(noargsEmbed);
+
+            }
 
             else if (["s10-1", "s101"].includes(args[1].toLowerCase()) || args[1] === "1") {
 
@@ -184,34 +210,15 @@ module.exports = {
                 message.channel.send(s9Embed);
 
             }
-            
+
             else {
-
-                var s10_cmd = "`s10-1` or `1`";
-                var s10_2_cmd = "`s10-2` or `2`";
-                var s10_3_cmd = "`s10-3` or `3`";
-                var exmple = "`>open 1` to open a `s10-1` <:ess1:655840713904488469> essence";
-
-                const noargsEmbed = new RichEmbed()
-                    .setTitle("Please provide one of the essences ID after the command")
-                    .setColor("RANDOM")
-                    .setDescription(
-                        stripIndents`The current season's Essences are..
-                        <:ess1:655840713904488469> | **Essences s10-1** ─ ID ➜ ${s10_cmd}
-
-                        <:Ess1:655840571616919586> | **Essence s10-2** (__Unvailable__) ─ ID ➜ ${s10_2_cmd}
-
-                        <:ess2:655840643847028751> | **Essence s10-3** (__Unvailable__) ─ ID ➜ ${s10_3_cmd}
-
-                        Example: ${exmple}
-                `)
 
                 message.channel.send(noargsEmbed);
             }
 
             guildAdd(message);
 
-        
+
         } catch (err) {
             console.log(err);
             MohiMoo.send("````" + err + "````");

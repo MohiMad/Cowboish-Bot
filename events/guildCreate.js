@@ -1,9 +1,11 @@
+const Discord = require("discord.js");
+
 module.exports = (bot, guild) => {
 
     const create = bot.channels.get('651476936379596830');
 
     if (!create) return;
-    else create.send(`👏 Just joined a new server named 👉 (**${guild.name}**)\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
+    else create.send(`👏 Just joined a new server named 👉 **${guild.name}**\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
     //Sends a message to my server if bot joins a new server (NOT WORKING)
 
     //Channel loop so bot sends a message to the server it joined

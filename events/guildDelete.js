@@ -4,7 +4,7 @@ module.exports = (bot, guild) => {
 
         if (!logs) return;
 
-        else logs.send(`I have been removed from: (**${guild.name}**) :'C`);
+        else logs.send(`I have been removed from: **${guild.name}** :'C`);
         
 
 };
