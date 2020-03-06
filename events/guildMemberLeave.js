@@ -6,13 +6,14 @@ module.exports = async (bot, member) => {
 
     if (!guild) return;
 
-    if ((guild.leave.enabled) === false) return;
+    if (!guild) return;
+
+    if (guild.leave.enabled === false) return;
 
     if (!guild.leave.message || guild.leave.message.length < 1) return;
 
-    if (!guild.leave.message) return;
+    if (guild.leave.channel === null) return;
 
-    if ((guild.leave.channel) === null) return;
 
     const leaveMessage = guild.leave.message
         .replace("memberCount", member.guild.memberCount)
@@ -30,7 +31,7 @@ module.exports = async (bot, member) => {
     } else {
 
         leaveChannel.send(leaveMessage)
-        .catch(() => void null);
+            .catch(() => void null);
 
 
     }
