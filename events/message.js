@@ -262,7 +262,7 @@ module.exports = async (bot, message) => {
             bot.emit("guildCreate", message.guild);
             break;
 
-        case "delete":
+        case "leave":
             if (message.author.id !== MohiMoo.id) return;
             bot.emit("guildDelete", message.guild);
             break;
