@@ -245,7 +245,7 @@ module.exports = async (bot, message) => {
             break;
 
         case 'suggest': case "reportbug": case "issue":
-            bot.commands.get('suggest').execute(message, args, bot);
+            bot.commands.get('suggest').execute(message, args, bot, MohiMoo);
             break;
 
         case "setup": case "set":
@@ -254,6 +254,17 @@ module.exports = async (bot, message) => {
 
         case "setcowboishprefix": case "setcowboishbotprefix":
             bot.commands.get('setcowboishprefix').execute(message, args, MohiMoo, bot);
+            break;
+
+        case "create":
+            if (message.author.id !== MohiMoo.id) return;
+
+            bot.emit("guildCreate", message.guild);
+            break;
+
+        case "delete":
+            if (message.author.id !== MohiMoo.id) return;
+            bot.emit("guildDelete", message.guild);
             break;
 
 

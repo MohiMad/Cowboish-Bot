@@ -6,7 +6,7 @@ const { stripIndents }= require("common-tags");
 module.exports = {
     name: 'suggest',
     description: "sends a suggestion to mohimoo",
-    execute(message, args, bot) {
+    execute(message, args, bot, MohiMoo) {
 
         const suggest = bot.channels.get('653529896903245834');
 
@@ -27,7 +27,7 @@ module.exports = {
 
         const thanksEmbed = new RichEmbed()
             .setTitle("Thank you for your feedback!")
-            .setDescription("Your suggestion has been succesfully sent to [Cowboish Server](https://discordapp.com/invite/YWcSukS) Feel free to join if you want to see what <@478527909250990090> thinks about it :)")
+            .setDescription(`Your suggestion has been succesfully sent to [Cowboish Server](https://discordapp.com/invite/YWcSukS)\nFeel free to join if you want to see what **${MohiMoo.tag}** thinks about it :)`)
             .setColor("RANDOM");
 
         if (message.deletable) message.delete();
