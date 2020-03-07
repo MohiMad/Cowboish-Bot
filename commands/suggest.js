@@ -15,7 +15,7 @@ module.exports = {
         const suggestEmbed = new RichEmbed()
             .setAuthor(message.author.username + " has a suggestion!", message.author.avatarURL)
             .setDescription(stripIndents`
-            🆔 **ID**: *${message.author.id}*
+            🆔: *${message.author.id}*
             📎 **User Tag**: *${message.author.tag}*
 
             💭 **Suggestion**:
