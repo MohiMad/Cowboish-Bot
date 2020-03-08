@@ -21,15 +21,15 @@ module.exports = async (bot) => {
 
     console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
     console.log(`___________________________________________`);
-    console.log(`Now let's lasso sum peeps >:D`);
+    console.log(`Now let's yeet sum peeps >:D`);
     console.log(`___________________________________________`);
 
 
     const activities_list = [
         `🥳 celebrating ${bot.guilds.size} servers 🎉`,
-        `@Cowboish bot for help :3`,
+        `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
-        "Welcome to Identit | >help",
+        "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
     ];

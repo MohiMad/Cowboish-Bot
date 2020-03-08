@@ -252,21 +252,13 @@ module.exports = async (bot, message) => {
             bot.commands.get('setup').execute(message, args, MohiMoo, bot);
             break;
 
+        case "invite": case "cowboishinvite":
+            bot.commands.get('invite').execute(message, args, bot);
+        break;
+
         case "setcowboishprefix": case "setcowboishbotprefix":
             bot.commands.get('setcowboishprefix').execute(message, args, MohiMoo, bot);
             break;
-
-        case "create":
-            if (message.author.id !== MohiMoo.id) return;
-
-            bot.emit("guildCreate", message.guild);
-            break;
-
-        case "leave":
-            if (message.author.id !== MohiMoo.id) return;
-            bot.emit("guildDelete", message.guild);
-            break;
-
 
     }
     //End of config commands
