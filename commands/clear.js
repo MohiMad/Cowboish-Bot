@@ -31,10 +31,11 @@ module.exports = {
                     .setColor("#000000")
                     .setAuthor(`Clear case!`, message.author.displayAvatarURL)
                     .setTimestamp()
-                    .setDescription(`**Cleared Messages:** ${messages.size}\n
+                    .setDescription(`
+            **Cleared Messages:** ${messages.size}\n
             **Cleared in :**${message.channel}\n
             **Cleared by:** ${message.author}\n
-            **Reason:** ${reason.length > 0 ? reason.join(" ") : "No Reason"}`);
+            **Reason:** ${reason ? reason : "No Reason"}`);
 
                 message.channel.send(clearEmbed);
             } catch (err) {

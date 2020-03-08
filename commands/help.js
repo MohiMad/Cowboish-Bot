@@ -61,7 +61,7 @@ module.exports = {
             .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
             .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
-        if (args[1] === 'config'){
+        if (args[1] === 'config') {
             message.channel.send(genEmbed);
         }
 
@@ -79,30 +79,7 @@ module.exports = {
         const testEmbed = new RichEmbed()
             .setTitle("Identity V logicpath commands!")
             .setColor("RANDOM")
-            .setDescription(stripIndents`
-            In this category you get to play matches and roll dices to be able to open the season's current essences :D
-
-            **LogicPath commands!**
-
-            __*>daily*__ ➜ Get your daily reward, **24** hours cooldown
-
-            __*>hunt*__ ➜ Hunt as the Hunter to get some dices
-
-            __*>quick*__ ➜ Play a quick match as a survivor to get dices
-
-            __*>roll*__ ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)
-
-            __*>open*__ ➜ Open the season's current essences (<:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)
-
-            __*>logicpath*__ ➜ Check your logicpath status
-
-            __*>shop*__ ➜ A list of stuff you can buy (Survivors, Hunters and essences)
-
-            __*>buy*__ ➜ Buy Survivors, Hunters or essences
-
-            __*>leaderboard*__ ➜ check the top 5 players for this category 
-
-            `)
+            .setDescription("In this category you get to play matches and roll dices to be able to open the season's current essences :D\n\n**LogicPath commands!**\n`>daily` ➜ Get your daily reward, **24** hours cooldown\n\n`>hunt` ➜ Answer the quiz of the chosen hunter to get a dice\n\n`>quick` ➜ Play a quick match as a survivor to get dices\n\n`>roll` ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`>open` ➜ Open the season's current essences (<:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`>logicpath` ➜ Check your logicpath status\n\n`>shop` ➜ A list of stuff you can buy (Survivors, Hunters and essences)\n\n`>buy` ➜ Buy Survivors, Hunters or essences\n\n`>leaderboard` ➜ check the top 5 players for this category")
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
 
         if (args[1] === "logicpath") {
