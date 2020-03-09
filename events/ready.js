@@ -49,7 +49,7 @@ module.exports = async (bot) => {
     ddbl.postStats(bot.guilds.size)
         .catch(err => console.log(err));
 
-    schedule.scheduleJob("* * 12 * 1", async function () {
+    schedule.scheduleJob("* * 12 * * 1", async function () {
         await rewards(bot)
     });
 
