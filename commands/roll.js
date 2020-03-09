@@ -54,7 +54,7 @@ module.exports = {
 
         let dice1Chance4 = "You were **1** step away from getting **1**<:ess1:655840713904488469> and now you have it! do ``open s10-1`` to open it.";
 
-        let dice1Chance5 = "One <:ess1:655840713904488469> is now in your pocket... wait is it?\nTo open the coa essence do ``open coa``";
+        let dice1Chance5 = "One <:ess1:655840713904488469> is now in your pocket... wait is it?";
 
         var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5];
 

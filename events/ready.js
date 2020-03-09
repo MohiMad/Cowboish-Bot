@@ -49,8 +49,8 @@ module.exports = async (bot) => {
     ddbl.postStats(bot.guilds.size)
         .catch(err => console.log(err));
 
-    schedule.scheduleJob("* * 12 * * 1", async function () {
-        await rewards(bot)
+    schedule.scheduleJob("* 1 12 * * 1", async function () {
+        rewards(bot)
     });
 
     const Glenn = new GBL(bot.user.id, config.glenToken);
