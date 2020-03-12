@@ -28,6 +28,12 @@
 		"Answer": ["leo", "Leo"],
 		"Difficulty": "Non existent :v",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
+	},
+	{
+		"Question": "**Guess the skin's name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["aladdin", "Aladdin"],
+		"Difficulty": "Hard tbh",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687698608396566798/AhoFpTOrYt8TAAAAAElFTkSuQmCC.png?width=546&height=565"
 	}
 	
 ]

@@ -35,6 +35,14 @@
 		"Difficulty": "HARD",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678219801595871282/36600351-cowboy-with-lasso-on-a-stick-horse.png?width=564&height=564"
 
+	},
+	{
+	
+		"Question": "**Free dice cuz im kind:**\nType `yeehaw` to get the dice :3",
+		"Answer": ["yeehaw", "Yeehaw"],
+		"Difficulty": "lel ez",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687696571441479721/free.png?width=846&height=564"
+
 	}
 	
 ]

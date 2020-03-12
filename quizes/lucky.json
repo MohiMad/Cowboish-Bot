@@ -17,5 +17,29 @@
 		"Answer": ["chests", "chest", "Chest", "Chests"],
 		"Difficulty": "Lmao way too Easy",
 		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+	},
+	{
+		"Question": "**Unscramble it:**\nThe word `uckL` is scrambled... Unscramble it to win!",
+		"Answer": ["Luck", "luck"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565"
+	},
+	{
+		"Question": "**OwO what's yo wish?:**\nWish a dice by typing `dice` below :3\nHope your wish becomes true :D",
+		"Answer": ["Dice", "dice"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565"
+	},
+	{
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["Maid", "maid", "maid outfit"],
+		"Difficulty": "You can't fail this one :/",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687700970997940234/tumblr_pqhb3ks2wI1ua6aql_540.png?width=317&height=564"
+	},
+	{
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?\nThe real challenge is to actually spell the name lol",
+		"Answer": ["Souichi", "souichi"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687701450411081790/8Dr149G6pFufwAAAAASUVORK5CYII.png?width=599&height=565"
     }
 ]

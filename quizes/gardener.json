@@ -1,7 +1,7 @@
 [
 	{
-		"Question": "**Question:**\nHow many seconds does the gardener's sheild last for?\n**Answer in seconds!**",
-		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Question": "**Question:**\nHow many seconds does the gardener's shield last for?\n**Answer in seconds!**",
+		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty", "50", "fifty"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673540633348014131/wWTDaJdKMQ5gAAAABJRU5ErkJggg.png"
     },
@@ -16,5 +16,24 @@
 		"Answer": ["abnormal", "Abnormal"],
 		"Difficulty": "Hard",
 		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYz2JGMnf6hMZrwuv2FFQ3NsgP9vj8IWN9iOuKpM919kxCXiow"
-    }
+	},
+	{
+		"Question": "**Hmmm what's the name?:**\nGuess the name of the skin in the image",
+		"Answer": ["ghost girl", "ghost", "girl"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687693375700467777/254px-Ghost_girl_gardener.png"
+	},
+	{
+		"Question": "**Question:**\nWhat's the gardener's surname?",
+		"Answer": ["woods", "emma woods"],
+		"Difficulty": "Kinda easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687694823569883171/woods-sunrise-i28667.png"
+	},
+	{
+		"Question": "**Unscramble it:**\nThe word `Tbxoool` is scrambled! unscramble it to win!",
+		"Answer": ["toolbox", "Toolbox"],
+		"Difficulty": "Kinda easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687694823569883171/woods-sunrise-i28667.png"
+	}
+	
 ]

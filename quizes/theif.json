@@ -29,7 +29,19 @@
 			"Flashlight",
 			"flashlight"
 		],
-		"Difficulty": "Extreme",
+		"Difficulty": "MEH ez",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673459320771313674/809e0445114aba10f7a6960176ed986d.png?width=450&height=450"
+	},
+	{
+		"Question": "**Guess da name**\nWhat's the name of the skin in the image?",
+		"Answer": ["lion dance", "lion", "dance"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687702178881863680/6CPxfqYOC4x7MClYAAAAASUVORK5CYII.png"
+	},
+	{
+		"Question": "**Guess da name**\nWhat's the name of the skin in the image?",
+		"Answer": ["painter", "Painter"],
+		"Difficulty": "EASY",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687702448214769671/9sczAAWHUwAAAABJRU5ErkJggg.png"
 	}
 ]

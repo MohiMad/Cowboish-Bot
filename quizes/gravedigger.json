@@ -1,10 +1,9 @@
 [
 	{
-		"Question": "**Question:**\n",
-		"Answer": ["blood bath", "Blood bath"],
-		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675005659908931604/xfNkHjqYDTw4wAAAAASUVORK5CYII.png?width=1002&height=564"
-    }
-    
+		"Question": "**Question:**\nHow many shovels does the gravekeeper spawn with?",
+		"Answer": ["2", "two", "Two"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687697005782237215/150px-Diamond_Shovel_JE3_BE2.png"
+	}
 	
 ]
