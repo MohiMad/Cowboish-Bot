@@ -16,6 +16,12 @@
 		"Answer": ["Hit", "hit"],
 		"Difficulty": "Hard",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
+	},
+	{
+		"Question": "**Question:**\nWhat kind of dog does Postman own?",
+		"Answer": ["Pitbull", "pitbull"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687987284456374311/image0.png?width=515&height=564"
 	}
 	
 ]
