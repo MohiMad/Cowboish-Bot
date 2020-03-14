@@ -16,6 +16,25 @@
 		"Answer": ["Wail", "wail", "lost boy", "lost boi"],
 		"Difficulty": "Hard",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674639745535442945/Z.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`tree`, `fire`, `axe`, `plant`, `apple`)",
+		"Answer": ["apple"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688083968481951840/tumblr_pxk9014qnR1xffleoo1_500.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`plant`, `grizzly`, `tree`, `fire`, `axe`)",
+		"Answer": ["grizzly"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688083968481951840/tumblr_pxk9014qnR1xffleoo1_500.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`plant`, `tree`, `pickaxe`, `fire`, `axe`)",
+		"Answer": ["pickaxe"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688083968481951840/tumblr_pxk9014qnR1xffleoo1_500.png"
 	}
+	
 	
 ]

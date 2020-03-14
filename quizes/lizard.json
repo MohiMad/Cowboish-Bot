@@ -28,6 +28,12 @@
 		"Answer": ["luchinos camp is op", "Luchino's camp is op"],
 		"Difficulty": "Medium",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["Crystalline", "crystalline"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688302051926736904/image0.png"
 	}
 	
 ]

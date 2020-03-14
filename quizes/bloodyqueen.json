@@ -16,6 +16,30 @@
 		"Answer": ["Can't believe i got terrorshocked smh", "cant believe i got terrorshocked smh", "smh", "believe", "terrorshocked", "got"],		
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675005241510461461/e0f04e0e0592fb6494bd1150db6bfd55.png?width=797&height=565"
+	},
+	{
+		"Question": "**Unsramble it:**\nUnscramble the letters! (`imrorr`)",
+		"Answer": ["mirror", "Mirror"],		
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688301749760819240/image0.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`mirror`, `dovlin`, `blood`, `queen`)",
+		"Answer": ["dovlin"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688304608615202876/ddeyjtm-da7aee30-f74e-4f53-814b-d75ca54f9725.png?width=434&height=565"
+	},
+	{
+		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`mirror`, `blood`, `queen`, `reptile`)",
+		"Answer": ["reptile"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688304608615202876/ddeyjtm-da7aee30-f74e-4f53-814b-d75ca54f9725.png?width=434&height=565"
+	},
+	{
+		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`portal`, `mirror`, `blood`, `queen`)",
+		"Answer": ["portal"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688304608615202876/ddeyjtm-da7aee30-f74e-4f53-814b-d75ca54f9725.png?width=434&height=565"
 	}
 	
 ]

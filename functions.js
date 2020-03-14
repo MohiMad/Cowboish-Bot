@@ -191,10 +191,17 @@ module.exports = {
 		message.channel.send(quizEmbed).then(
 
 			message.channel.awaitMessages(filter, { max: 1, time: 60000 }).then(collected => {
-				let respondAuth = collected.first();
 
 				if (answer.includes(collected.first().content.toLowerCase())) {
-					message.channel.send(`**${message.author.username}** got the right answer and got a dice <:dice:655384578499936257>`);
+					let wins = [
+						`**${message.author.username}** got the right answer and got a dice <:dice:655384578499936257>`,
+						`Here is your dice <:dice:655384578499936257> **${message.author.username}**!`,
+						`**${message.author.username}** answered correctly! Here, take this dice <:dice:655384578499936257>`
+					];
+
+					let win = Math.floor(Math.random() * wins.length)
+
+					message.channel.send(wins[win]);
 
 					LP.Dices = LP.Dices + 1;
 					LP.save().catch(err => console.log(err));

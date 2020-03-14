@@ -16,6 +16,24 @@
 		"Answer": ["op", "OP", "Op"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675008248809652254/5f9834c6fe80ea5c83442899324e35ced60c979c.png?width=564&height=564"
+	},
+	{
+		"Question": "**Unscramble da word:**\nThe word `ombo` is scrambled, unscramble it to win!",
+		"Answer": ["bomb", "Bomb"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688416682389143612/maxresdefault.png?width=1002&height=564"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["march hare", "march", "hare"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688416682389143612/maxresdefault.png?width=1002&height=564"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with Bonbon\n(`bomb`, `penguin`, `tea`)",
+		"Answer": ["tea", "Tea"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688417786074104041/cpNuKavL_400x400.png"
 	}
 	
 ]

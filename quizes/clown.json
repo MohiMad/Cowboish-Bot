@@ -16,6 +16,18 @@
 		"Answer": ["bled", "Bled"],
 		"Difficulty": "Medium",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674666078642634757/AmKgAsbWq5EAAAAAElFTkSuQmCC.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`dash`, `drill`, `rocket`, `boar`, `clown`)",
+		"Answer": ["boar"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688433421151895667/d96426f46d0c3e8baa482a831131390f.png?width=564&height=564"
+	},
+	{
+		"Question": "**Unscramble da word:**\nThe word `shaD` is scrambled, unscramble it to win!",
+		"Answer": ["dash", "Dash"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688434380884148448/tumblr_phopn7VG5l1s2xjjm_540.png"
 	}
 	
 ]

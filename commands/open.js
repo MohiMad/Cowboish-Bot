@@ -119,7 +119,7 @@ module.exports = {
 
 
                 }
-                else if (["s10-21.jpg", "s10-22.jpg", "s10-23.jpg", "s10-24.jpg", "s10-25.jpg", "s10-26.jpg", "s10-27.jpg", "s10-28.jpg", "s10-29.jpg", "s10-30.jpg", "s10-32.jpg", "s10-31.jpg", "s10-33.jpg", "s10-34.jpg", "s10-35.jpg", "s10-36.jpg", "s10-38.jpg"].includes(item)) {
+                else if (["s10-21.jpg", "s10-22.jpg", "s10-23.jpg", "s10-24.jpg", "s10-25.jpg", "s10-26.jpg", "s10-27.jpg", "s10-28.jpg", "s10-29.jpg", "s10-30.jpg", "s10-32.jpg", "s10-33.jpg", "s10-34.jpg", "s10-35.jpg", "s10-36.jpg", "s10-38.jpg"].includes(item)) {
                     s9Embed.setColor("0x1BE926");
                     s9Embed.setAuthor(`💚 Here is yo C skin, ${message.author.username}! 💚`, message.author.avatarURL);
                     s9Embed.setFooter(":))");
@@ -162,7 +162,7 @@ module.exports = {
 
 
                 }
-                else if (["s10-10.jpg", "s10-11.jpg", "s10-12.jpg", "s10-13.jpg"].includes(item)) {
+                else if (["s10-10.jpg", "s10-11.jpg", "s10-12.jpg", "s10-13.jpg", "s10-31.jpg"].includes(item)) {
 
                     s9Embed.setColor("0x2e65b8");
                     s9Embed.setAuthor(`💙 And that's a standbymotion for ${message.author.username}! 💙`, message.author.avatarURL);

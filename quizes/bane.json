@@ -1,7 +1,7 @@
 [
 	{
 		"Question": "**Question:**\nHow long does it take for bane to use his hook after using it?\n(Cooldown in seconds plz)",
-		"Answer": ["10", "ten", "Ten"],
+		"Answer": ["14", "ten", "Ten", "15"],
 		"Difficulty": "Ez",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
     },
@@ -13,9 +13,27 @@
     },
     {
 		"Question": "**Retype it:**\nType `Bane used to be a bad hunter`",
-		"Answer": ["Bane used to be a bad hunter", "bane used to be a bad hunter"],
+		"Answer": ["Bane used to be a bad hunter", "bane used to be a bad hunter", "bane", "hunter", "bad"],
 		"Difficulty": "Easy",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
+	},
+	{
+		"Question": "**Hmm which word?:**\nFind the odd word that doesn't fit with Bane\n(`hook`, `dear`, `deer`)",
+		"Answer": ["dear"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688085844212318215/tumblr_pqic3poryA1w9bqh2_540.png"
+	},
+	{
+		"Question": "**Hmm which word?:**\nFind the odd word that doesn't fit with Bane\n(`lasso`, `hook`, `deer`)",
+		"Answer": ["lasso"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688085844212318215/tumblr_pqic3poryA1w9bqh2_540.png"
+	},
+	{
+		"Question": "**Sramble??:**\nThe word `egameekerp`",
+		"Answer": ["gamekeeper"],
+		"Difficulty": "HARD",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688086602093953104/801e7448c6f0f2bd691691d3b0cdae98e35585e8r1-994-640v2_uhq.png?width=876&height=565"
 	}
 	
 ]
