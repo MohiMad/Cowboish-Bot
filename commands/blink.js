@@ -22,7 +22,7 @@ module.exports = {
             return message.channel.send("Nah don't waste the blink on yourself, **" + message.author.username + "**");
 
         }
-        else if(bot.guild.me.hasPermission("ATTACH_FILES")){
+        else if(message.guild.me.hasPermission("ATTACH_FILES")){
             return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
         } else {
