@@ -20,11 +20,7 @@ module.exports = {
         // Draw a rectangle with the dimensions of the entire canvas
         ctx.strokeRect(1, 1, canvas.width, canvas.height);
 
-        if (message.guild.me.hasPermission("ATTACH_FILES")) {
-            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-        }
-        else if (!args[1]) {
+if (!args[1]) {
             const authAvatar = await Canvas.loadImage(message.author.displayAvatarURL);
             ctx.drawImage(authAvatar, 547, 500, 109, 109);
 

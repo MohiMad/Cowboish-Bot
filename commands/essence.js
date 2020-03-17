@@ -90,11 +90,6 @@ module.exports = {
             if (message.deletable) message.delete();
             message.channel.send(coolEmbed).then(m => m.delete(20000));
         }
-        else if (message.guild.me.hasPermission("ATTACH_FILES")) {
-            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-        }
-
         else if ((args[1]) === ('p5-1')) {
             message.channel.send(p5Embed)
                 .then(cooldown.add(message.author.id));

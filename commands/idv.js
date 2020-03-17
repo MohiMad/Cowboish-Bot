@@ -7,12 +7,6 @@ module.exports = {
     execute: async (message, args) => {
 
 
-        if (message.guild.me.hasPermission("ATTACH_FILES")) {
-            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-        }
-
-
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];

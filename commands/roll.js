@@ -7,10 +7,6 @@ module.exports = {
     description: "rolls a 4 sided dice",
     execute(message, args, bot) {
 
-        if (message.guild.me.hasPermission("ATTACH_FILES")) {
-            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-        }
 
         //------------------Some value here
 

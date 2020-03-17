@@ -13,11 +13,6 @@ module.exports = {
     description: "opens an sessenc ofr yga ",
     execute: async (message, args, bot) => {
 
-        if (message.guild.me.hasPermission("ATTACH_FILES")) {
-            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-        }
-
         var s10_cmd = "`s10-1` or `1`";
         var s10_2_cmd = "`s10-2` or `2`";
         var s10_3_cmd = "`s10-3` or `3`";

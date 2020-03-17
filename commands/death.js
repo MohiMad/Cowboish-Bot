@@ -9,12 +9,7 @@ module.exports = {
 
         const sayMessage = args.slice(1).join(" ");
 
-        if (message.guild.me.hasPermission("ATTACH_FILES")) {
-            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-        }
-
-        else if (!args[1]) {
+        if (!args[1]) {
             ErrorMsg(bot, message, "Can't create a meme with empty text!\nPlease provide something to put in the meme's text!\n\n**Right usage:** `>chosendeath <message Goes HERE>`")
         }
         else if (sayMessage.length > 170) {
