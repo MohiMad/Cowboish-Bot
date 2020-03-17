@@ -16,8 +16,11 @@ module.exports = {
 
         const slapper = await Canvas.loadImage(message.author.displayAvatarURL);
 
+        if (message.guild.me.hasPermission("ATTACH_FILES")) {
+            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
-        if (!args[1]) {
+        }
+        else if (!args[1]) {
             ctx.drawImage(slapper, 40, 85, 246, 227);
 
             const botSlaps = await Canvas.loadImage(bot.user.displayAvatarURL);

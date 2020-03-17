@@ -1,10 +1,16 @@
 const { RichEmbed } = require('discord.js');
 const got = require('got');
-
+const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'idv',
     description: "sends a random idv post",
-    execute: async(message, args) => {
+    execute: async (message, args) => {
+
+
+        if (message.guild.me.hasPermission("ATTACH_FILES")) {
+            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+
+        }
 
 
         const subReddits = ["https://www.reddit.com/r/IdentityV/random/.json"];
@@ -31,11 +37,11 @@ module.exports = {
             let memeNumComments = content[0].data.children[0].data.num_comments;
 
             let author = content[0].data.children[0].data.author;
-            let flair =  content[0].data.children[0].data.author_flair_text
+            let flair = content[0].data.children[0].data.author_flair_text
 
-            if(memeTitle.length > 256){
+            if (memeTitle.length > 256) {
                 memeTitle = "Title too long!";
-            }else{ 
+            } else {
                 memeTitle = content[0].data.children[0].data.title;
             }
             if (joke.length > 2048) {
@@ -43,9 +49,9 @@ module.exports = {
                 joke = `The post was too long! click [HERE](${memeUrl}) to see it`
             }
 
-            if(flair === null){
+            if (flair === null) {
                 flair = ` `
-            }else{
+            } else {
                 flair = "➤ " + flair
             }
 
@@ -53,7 +59,7 @@ module.exports = {
             const embeed = new RichEmbed()
                 .setTitle(`${memeTitle}`)
                 .setURL(`${memeUrl}`)
-                .setAuthor(`${author}  ` +  flair, "https://b.thumbs.redditmedia.com/12jRRi7K2pjkF8ZeQefY7Shgyy0d4N2GdcpjkM4pkeM.png")
+                .setAuthor(`${author}  ` + flair, "https://b.thumbs.redditmedia.com/12jRRi7K2pjkF8ZeQefY7Shgyy0d4N2GdcpjkM4pkeM.png")
                 .setDescription(`${joke}`)
                 .setColor("RANDOM")
                 .setFooter(`Provided by r/IdentityV 👍 ${memeUpvotes} | 💬 ${memeNumComments}`);
@@ -67,7 +73,7 @@ module.exports = {
             else if (memeImage.endsWith(".gif")) {
                 embeed.setImage(`${memeImage}`)
             }
-            else if(joke.length > 1){
+            else if (joke.length > 1) {
                 embeed.setDescription(`${joke}`)
             }
             else {

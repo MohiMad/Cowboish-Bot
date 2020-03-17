@@ -25,19 +25,25 @@ module.exports = async (bot) => {
     console.log(`___________________________________________`);
 
 
-    const activities_list = [
-        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
+    /*
         `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
+    */
+    const activities_list = [
+        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
+        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
+        `>wish to wish Mohi a happy bday :3 🎉`,
+        `celebrating Mohi's birthday 🥳 | >wish to wish him a happy bday :3`,
+        
     ];
 
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         bot.user.setActivity(activities_list[index]);
-    }, 100000);//sets the activity each 120 s
+    }, 100000);//sets the activity each 100 s
 
     const dbl = new DBL(config.dbl_token, bot);
 
@@ -50,7 +56,11 @@ module.exports = async (bot) => {
         .catch(err => console.log(err));
 
     schedule.scheduleJob("1 12 * * 1", async function () {
-        rewards(bot)
+        let set = new Set();
+
+        if(set.has(bot.user.id)) return;
+
+        rewards(bot).then(set.add(bot.user.id));
     });
 
     const Glenn = new GBL(bot.user.id, config.glenToken);

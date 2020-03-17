@@ -9,7 +9,12 @@ module.exports = {
 
         const persona = await findMember(message, args[1]);
 
-        if (!args[1]) {
+        if (message.guild.me.hasPermission("ATTACH_FILES")) {
+            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+
+        }
+
+        else if (!args[1]) {
             return ErrorMsg(bot, message, "Who do you want to hug? you can't hug air :v")
 
         }
@@ -27,7 +32,7 @@ module.exports = {
                 "https://media.giphy.com/media/MXRUzzaVTXACQ251JU/giphy.gif",
                 "https://media.giphy.com/media/hpFTl6sn0OdpXZNKxM/giphy.gif",
                 "https://media.giphy.com/media/iGpvkIsdAw7K2MxEsr/giphy.gif",
-                
+
             ]
 
             let hug = Math.floor(Math.random() * hugs.length);

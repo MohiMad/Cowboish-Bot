@@ -7,8 +7,12 @@ module.exports = {
     execute: async (message, args, bot) => {
 
         const sayMessage = args.slice(1).join(" ");
+        
+        if (message.guild.me.hasPermission("ATTACH_FILES")) {
+            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
-        if(!args[1]){
+        }
+        else if(!args[1]){
             ErrorMsg(bot, message, "Can send an empty message!\nPlease provide something to send to the ingame chat!\n\n**Rich usgage:** `>chat <message Goes HERE>`")
         }
         else if(sayMessage.length > 50){

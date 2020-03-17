@@ -1,6 +1,8 @@
 const { RichEmbed } = require('discord.js');
 const got = require('got');
 
+const { ErrorMsg } = require("../functions.js");
+
 module.exports = {
     name: 'meme',
     description: "sends a random meme",
@@ -10,6 +12,10 @@ module.exports = {
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
+        if (message.guild.me.hasPermission("ATTACH_FILES")) {
+            return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+
+        }
 
         try {
             got(random).then(response => {

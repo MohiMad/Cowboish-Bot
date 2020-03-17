@@ -48,6 +48,25 @@ module.exports = async (bot, message) => {
 
     switch (args[0].toLowerCase()) {
 
+        case "wish":
+            bot.commands.get('awish').execute(message, args, bot, MohiMoo);
+            break;
+
+            function bday(message) {
+                numbe = 100;
+
+                imagNumbe = Math.floor(Math.random() * (numbe - 1 + 1)) + 1;
+
+                let bdaySet = new Set();
+
+                if (imagNumbe < 20) {
+                    if (bdaySet.has(message.guild.id)) return;
+                    else {
+                        message.channel.send("YEEHAAAW it's **Mohi**'s birthday!\nAnd because of that, he made a special command for this day only!\nDo `>wish <letterHere>` to send him a bday letter and to recieve some rewards! :D\n\n**THIS MESSAGE WON'T POP UP AGAIN** Thank you for using Cowboish bot <3").then(bdaySet.add(message.guild.id))
+                    }
+                }
+            }
+
         //Identity V commands Starts Here!
         case "roll20": case "r20":
             bot.commands.get('roll20').execute(message, args, MohiMoo);
@@ -116,42 +135,52 @@ module.exports = async (bot, message) => {
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
             bot.commands.get('roll').execute(message, args, MohiMoo);
+            bday(message)
             break;
 
         case "open":
             bot.commands.get('open').execute(message, args, bot);
+            bday(message)
             break;
 
         case "lp": case "logicpath": case "inv": case "inventroy":
             bot.commands.get('logicpath').execute(message, args, bot, MohiMoo);
+            bday(message)
             break;
 
         case "ld": case "leaderboard":
             bot.commands.get('leaderboard').execute(message, args, bot);
+            bday(message)
             break;
 
         case "id": case "setid":
             bot.commands.get('id').execute(message, args, bot, MohiMoo);
+            bday(message)
             break;
 
         case "quick": case "play":
             bot.commands.get('quick').execute(message, args, bot);
+            bday(message)
             break;
 
         case "hunter": case "hunt":
             bot.commands.get('hunt').execute(message, args, bot);
+            bday(message)
             break;
 
         case "dailyreward": case "daily":
             bot.commands.get('daily').execute(message, args, MohiMoo);
+            bday(message)
             break;
 
         case "shop":
             bot.commands.get('shop').execute(message, args, bot);
+            bday(message)
             break;
 
         case "buy":
             bot.commands.get('buy').execute(message, args, bot);
+            bday(message)
             break;
 
 
@@ -254,7 +283,7 @@ module.exports = async (bot, message) => {
 
         case "invite": case "cowboishinvite":
             bot.commands.get('invite').execute(message, args, bot);
-        break;
+            break;
 
         case "setcowboishprefix": case "setcowboishbotprefix":
             bot.commands.get('setcowboishprefix').execute(message, args, MohiMoo, bot);
