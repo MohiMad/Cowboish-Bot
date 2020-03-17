@@ -134,7 +134,7 @@ module.exports = async (bot, message) => {
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
-            bot.commands.get('roll').execute(message, args, MohiMoo);
+            bot.commands.get('roll').execute(message, args, bot);
             bday(message)
             break;
 
@@ -203,7 +203,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "terrorshock": case "tc":
-            bot.commands.get('terrorshock').execute(message, args);
+            bot.commands.get('terrorshock').execute(message, args, bot);
             break;
 
         case "lasso": case "yoink":
