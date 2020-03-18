@@ -139,70 +139,89 @@ module.exports = async (bot, message) => {
             bot.commands.get('roll').execute(message, args, bot);
 
             if (bdaySet.has(message.author.id)) return;
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "open":
             bot.commands.get('open').execute(message, args, bot);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "lp": case "logicpath": case "inv": case "inventroy":
             bot.commands.get('logicpath').execute(message, args, bot, MohiMoo);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "ld": case "leaderboard":
             bot.commands.get('leaderboard').execute(message, args, bot);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "id": case "setid":
             bot.commands.get('id').execute(message, args, bot, MohiMoo);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "quick": case "play":
             bot.commands.get('quick').execute(message, args, bot);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
             break;
 
         case "hunter": case "hunt":
             bot.commands.get('hunt').execute(message, args, bot);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "dailyreward": case "daily":
             bot.commands.get('daily').execute(message, args, MohiMoo);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "shop":
             bot.commands.get('shop').execute(message, args, bot);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
         case "buy":
             bot.commands.get('buy').execute(message, args, bot);
             if (bdaySet.has(message.author.id)) return;
 
-            bday(message).then(bdaySet.add(message.author.id))
+            bday(message)
+            bdaySet.add(message.author.id)
+
             break;
 
 
