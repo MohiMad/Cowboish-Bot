@@ -62,7 +62,7 @@ module.exports = async (bot, message) => {
 
 
                 if (imagNumbe < 20) {
-                    message.channel.send("YEEHAAAW it's **Mohi**'s birthday!\nAnd because of that, he made a special command for this day only!\nDo `>wish <letterHere>` to send him a bday letter and to recieve some rewards! :D\n\n**Thank you for using Cowboish bot** <3")
+                    message.channel.send("YeeeHaaaaw cowbois :D\n")
 
                 }
             }
