@@ -5,6 +5,9 @@ module.exports = async (bot, message) => {
 
     const MohiMoo = bot.users.get("478527909250990090");
 
+    let bdaySet = new Set();
+
+
     if (message.channel.type === 'dm') return;
 
     if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
@@ -52,8 +55,6 @@ module.exports = async (bot, message) => {
             bot.commands.get('awish').execute(message, args, bot, MohiMoo);
             break;
 
-            let bdaySet = new Set();
-
             function bday(message) {
                 numbe = 100;
 
@@ -65,6 +66,7 @@ module.exports = async (bot, message) => {
 
                 }
             }
+
 
         //Identity V commands Starts Here!
         case "roll20": case "r20":
