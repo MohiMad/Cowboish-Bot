@@ -52,18 +52,17 @@ module.exports = async (bot, message) => {
             bot.commands.get('awish').execute(message, args, bot, MohiMoo);
             break;
 
+            let bdaySet = new Set();
+
             function bday(message) {
                 numbe = 100;
 
                 imagNumbe = Math.floor(Math.random() * (numbe - 1 + 1)) + 1;
 
-                let bdaySet = new Set();
 
                 if (imagNumbe < 20) {
-                    if (bdaySet.has(message.guild.id)) return;
-                    else {
-                        message.channel.send("YEEHAAAW it's **Mohi**'s birthday!\nAnd because of that, he made a special command for this day only!\nDo `>wish <letterHere>` to send him a bday letter and to recieve some rewards! :D\n\n**THIS MESSAGE WON'T POP UP AGAIN** Thank you for using Cowboish bot <3").then(bdaySet.add(message.guild.id))
-                    }
+                    message.channel.send("YEEHAAAW it's **Mohi**'s birthday!\nAnd because of that, he made a special command for this day only!\nDo `>wish <letterHere>` to send him a bday letter and to recieve some rewards! :D\n\n**Thank you for using Cowboish bot** <3")
+
                 }
             }
 
@@ -132,55 +131,76 @@ module.exports = async (bot, message) => {
             bot.commands.get('death').execute(message, args, bot);
             break;
 
+
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
             bot.commands.get('roll').execute(message, args, bot);
-            bday(message)
+
+            if (bdaySet.has(message.author.id)) return;
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "open":
             bot.commands.get('open').execute(message, args, bot);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "lp": case "logicpath": case "inv": case "inventroy":
             bot.commands.get('logicpath').execute(message, args, bot, MohiMoo);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "ld": case "leaderboard":
             bot.commands.get('leaderboard').execute(message, args, bot);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "id": case "setid":
             bot.commands.get('id').execute(message, args, bot, MohiMoo);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "quick": case "play":
             bot.commands.get('quick').execute(message, args, bot);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "hunter": case "hunt":
             bot.commands.get('hunt').execute(message, args, bot);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "dailyreward": case "daily":
             bot.commands.get('daily').execute(message, args, MohiMoo);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "shop":
             bot.commands.get('shop').execute(message, args, bot);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
         case "buy":
             bot.commands.get('buy').execute(message, args, bot);
-            bday(message)
+            if (bdaySet.has(message.author.id)) return;
+
+            bday(message).then(bdaySet.add(message.author.id))
             break;
 
 
