@@ -148,8 +148,18 @@ module.exports = {
 	},
 
 	ErrorMsg: (bot, message, error) => {
+
+		let errMsgs = [
+			"<:nae:671454247505625110> Oof dats an error >:/",
+			"<:nae:671454247505625110> Oops, something went wrong...",
+			"<:nae:671454247505625110> ERROR",
+			"<:nae:671454247505625110> E R R O R"
+		]
+
+		let errMsg = Math.floor(Math.random() * errMsgs.length);
+
 		const errEmbed = new RichEmbed()
-			.setTitle("<:nae:671454247505625110> Oof dats an error >:/")
+			.setTitle(errMsgs[errMsg])
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
@@ -199,7 +209,7 @@ module.exports = {
 						`**${message.author.username}** answered correctly! Here, take this dice <:dice:655384578499936257>`
 					];
 
-					let win = Math.floor(Math.random() * wins.length)
+					let win = Math.floor(Math.random() * wins.length);
 
 					message.channel.send(wins[win]);
 

@@ -9,9 +9,11 @@ module.exports = {
 
         let persona = await findMember(message, args[1]);
 
-        let person = message.author.username
+        let person = message.author.username;
 
-         if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D');
+        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+
+        else if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to blink? Mention them right after the command | example: >blink @Cowboish Bot. heh try to blink me >:D');
 
         else if (!persona) {
             ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `>blink <MentionHere>`")

@@ -8,8 +8,10 @@ module.exports = {
 
 
         let persona = await findMember(message, args[1]);
+        
+        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
-        if (!args[1]) {
+        else if (!args[1]) {
             return ErrorMsg(bot, message, "Who do you want to shoot? Mention them right after the command | example: >shoot @Cowboish Bot. Btw plz don't do that to me :(")
 
         }

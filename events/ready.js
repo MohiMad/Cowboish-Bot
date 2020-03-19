@@ -24,19 +24,14 @@ module.exports = async (bot) => {
     console.log(`Now let's yeet sum peeps >:D`);
     console.log(`___________________________________________`);
 
-
-    /*
+    const activities_list = [
+        `and yoinking around >:v`,
+        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
         `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
-    */
-    const activities_list = [
-        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
-        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
-        `>wish to wish Mohi a happy bday :3 🎉`,
-        `celebrating Mohi's birthday 🥳 | >wish to wish him a happy bday :3`,
         
     ];
 

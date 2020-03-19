@@ -37,7 +37,9 @@ module.exports = {
 
             const LP = await logicPath.findOne({ UserID: message.author.id });
 
-            if (!LP) { newLP(message) }
+            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+
+            else if (!LP) { newLP(message) }
 
             else if (!args[1]) {
 
