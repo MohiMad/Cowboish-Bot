@@ -1,11 +1,11 @@
-const mongoose = require ("mongoose");
+const mongoose = require("mongoose");
 
 const LPSchema = mongoose.Schema({
-        
+
     UserID: String,
 
     guildsID: Array,
-    
+
     logic: Number,
 
     Dices: Number,
@@ -16,7 +16,7 @@ const LPSchema = mongoose.Schema({
 
     Ess2: Number,
 
-    Ess3:Number,
+    Ess3: Number,
 
     Inspirations: Number,
 
@@ -82,9 +82,11 @@ const LPSchema = mongoose.Schema({
         AnotherHunta: Boolean
 
     },
-    Opened: Array
+    Opened: Array,
+    region: String,
+    bio: String
 
 
 });
 
-    module.exports = mongoose.model("logicPath", LPSchema);
+module.exports = mongoose.model("logicPath", LPSchema);

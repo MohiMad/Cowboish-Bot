@@ -295,7 +295,9 @@ module.exports = {
 				AnotherHunta: false
 
 			},
-			Opened: []
+			Opened: [],
+			region: "0",
+			bio: "0"
 
 		})
 		newLP.save().catch(err => console.log(err))
