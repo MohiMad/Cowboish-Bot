@@ -25,18 +25,27 @@ module.exports = {
         }
         else {
 
-            nube = 6;
-
-            imagaNumbe = Math.floor(Math.random() * (nube - 1 + 1)) + 1;
+            
 
             var facts = ['Oof ' + message.author.username + ' stunned ' + persona.user.username + ' with a pallet :C'
-                , message.author.username + ' shut the pallet in front of ' + persona.user.username + "'s face xd"];
+                , message.author.username + ' shut the pallet down in front of ' + persona.user.username + "'s face"];
+
             var fact = Math.floor(Math.random() * facts.length);
+
+            let gifs = [
+                "https://media.giphy.com/media/kZimQCtfhr6KAWxtKY/giphy.gif",
+                "https://media.giphy.com/media/Kebl8fwR139CLl1eqM/giphy.gif",
+                "https://media.giphy.com/media/hTaWusjGRpo20ocdHk/giphy.gif",
+                "https://media.giphy.com/media/fTmk1jxRn2XIsKIf3C/giphy.gif",
+                "https://media.giphy.com/media/j6GLwbymLmyUsOSoRM/giphy.gif",
+                "https://media.giphy.com/media/TfXO3qsu2El2L6FdDP/giphy.gif"
+            ];
+
+            let gif = Math.floor(Math.random() * gifs.length);
 
             const bullyembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles(["./stuns/" + 'stun' + imagaNumbe + ".gif"])
-                .setImage('attachment://stun' + imagaNumbe + '.gif')
+                .setImage(gifs[gif])
                 .setColor("RANDOM");
 
 

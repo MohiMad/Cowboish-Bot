@@ -20,9 +20,7 @@ module.exports = {
 
         } else {
 
-            nube = 8;
-
-            imagaNumbe = Math.floor(Math.random() * (nube - 1 + 1)) + 1;
+            
 
             var facts = [
                 'Oof ' + persona.user.username + ' is getting bullied by ' + message.author.username,
@@ -32,10 +30,21 @@ module.exports = {
 
             var fact = Math.floor(Math.random() * facts.length);
 
+            bullies = [
+                "https://media.giphy.com/media/VI3JhvSjNbGrrj2D8r/giphy.gif",
+                "https://media.giphy.com/media/fVyJPV8fILb69tulwG/giphy.gif",
+                "https://media.giphy.com/media/VgTGeLnEpppAKOMjWS/giphy.gif",
+                "https://media.giphy.com/media/ZZTwBZifNdTxqiQcJ5/giphy.gif",
+                "https://media.giphy.com/media/Ketwl53yVpflR6wNeD/giphy.gif",
+                "https://media.giphy.com/media/dX3T6yjJHWktn7JXJ5/giphy.gif"
+
+            ];
+
+            bully = Math.floor(Math.random() * bullies.length);
+
             const bullyembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles(["./bully/" + 'bully' + imagaNumbe + ".gif"])
-                .setImage('attachment://bully' + imagaNumbe + '.gif')
+                .setImage(bullies[bully])
                 .setColor("RANDOM")
 
             message.channel.send(bullyembed);

@@ -32,7 +32,7 @@ module.exports = async (bot) => {
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/250 💕`,
         `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
-        
+
     ];
 
     setInterval(() => {
@@ -53,9 +53,15 @@ module.exports = async (bot) => {
     schedule.scheduleJob("1 12 * * 1", async function () {
         let set = new Set();
 
-        if(set.has(bot.user.id)) return;
+        if (set.has(bot.user.id)) return;
 
-        rewards(bot).then(set.add(bot.user.id));
+        else {
+
+            rewards(bot);
+
+            set.add(bot.user.id);
+
+        }
     });
 
     const Glenn = new GBL(bot.user.id, config.glenToken);
@@ -72,17 +78,17 @@ module.exports = async (bot) => {
         });
 
 
-        const updateBotList = async () => {
+    const updateBotList = async () => {
 
-            const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
-                .set("Authorization", `Bot ${config.dblToken_2}`)
-                .send({
-                    guilds: bot.guilds.size,
-                    users: bot.users.size,
-                })
+        const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
+            .set("Authorization", `Bot ${config.dblToken_2}`)
+            .send({
+                guilds: bot.guilds.size,
+                users: bot.users.size,
+            })
 
-            return (reply)
-        }
+        return (reply)
+    }
 
     let botUPDATE = await updateBotList()
 

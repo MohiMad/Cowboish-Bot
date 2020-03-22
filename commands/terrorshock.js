@@ -31,15 +31,27 @@ module.exports = {
 
             var facts = [
                 'Oof ' + message.author.username + ' got ' + persona.user.username + ' terrorshocked :C',
-                persona.user.username + " got terrorshocked by " + message.author.username + "R.I.P",
-                "Oh daaang " + persona.user.username + " got terrorshocked by " + message.author.username + " that's hurts :("
+                persona.user.username + " got terrorshocked by " + message.author.username,
+                "Oh daaang " + persona.user.username + " got terrorshocked by " + message.author.username + ", that's hurts :("
             ];
             var fact = Math.floor(Math.random() * facts.length);
 
+            let gifs = [
+                "https://media.giphy.com/media/QC1qkRoP4he8LSTHiI/giphy.gif",
+                "https://media.giphy.com/media/iFCDucgxIIZq23D6sG/giphy.gif",
+                "https://media.giphy.com/media/cOQJujA64jVBkafOq2/giphy.gif",
+                "https://media.giphy.com/media/KH8QLADr9qs0WVlOWa/giphy.gif",
+                "https://media.giphy.com/media/iGGTa8sDxbcPGzt72r/giphy.gif",
+                "https://media.giphy.com/media/RgtsXVT3DWDrK9QxQ9/giphy.gif",
+                "https://media.giphy.com/media/Q9AfGunQCw8qNcB8Np/giphy.gif",
+                "https://media.giphy.com/media/KGMmuXvQf9hPS8PlSu/giphy.gif"
+            ];
+
+            let gif = Math.floor(Math.random() * gifs.length);
+
             const bullyembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles(["./tc/" + 'tc' + imagaNumbe + ".gif"])
-                .setImage('attachment://tc' + imagaNumbe + '.gif')
+                .setImage(gifs[gif])
                 .setColor("RANDOM");
 
 

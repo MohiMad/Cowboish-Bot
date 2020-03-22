@@ -22,9 +22,17 @@ module.exports = {
             message.channel.send(`Oof sorry, **${message.author.username}** but that's not possible :/`);
         } else {
 
-            nube = 10;
+            let gifs = [
+                "https://media.giphy.com/media/cmliyaAqUAegHYZNsu/giphy.gif",
+                "https://media.giphy.com/media/cPMYOVEICHOUErSzeI/giphy.gif",
+                "https://media.giphy.com/media/YQNH4LDr4xgv4DkjXj/giphy.gif",
+                "https://media.giphy.com/media/UWhGyW7QtJjxYUisIJ/giphy.gif",
+                "https://media.giphy.com/media/l3Zgg9bXR8m0Emihog/giphy.gif",
+                "https://media.giphy.com/media/Q60hBMy11VSghidaeI/giphy.gif",
+                "https://media.giphy.com/media/U5ViGRkUXWzpPzKebW/giphy.gif"
+            ];
 
-            imagaNumbe = Math.floor(Math.random() * (nube - 1 + 1)) + 1;
+            let gif = Math.floor(Math.random() * gifs.length);
 
             var facts = [
                 'Boom! ' + message.author.username + ' landed on ' + persona.user.username,
@@ -33,8 +41,7 @@ module.exports = {
 
             const bullyembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles(["./crashs/" + 'crash' + imagaNumbe + ".gif"])
-                .setImage('attachment://crash' + imagaNumbe + '.gif')
+                .setImage(gifs[gif])
                 .setColor("RANDOM")
 
 

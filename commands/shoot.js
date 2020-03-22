@@ -23,21 +23,30 @@ module.exports = {
             message.channel.send("Why would ** " + message.author.username + '** shoot themself 🤔🤔');
         } else {
 
-            nuber = 7;
-
-            imagaNumber = Math.floor(Math.random() * (nuber - 1 + 1)) + 1;
 
             var facts = [
-                'oof ' + message.author.username + ' shot ' + persona.user.username + ' that looks like it hurts!',
-                message.author.username + ' shot ' + persona.user.username + ' BOOM HEADSHOT!',
-                persona.user.username + ' got shot by ' + message.author.username + ' shouldve brought excitement.'];
+                'oof ' + message.author.username + ' shot ' + persona.user.username + ', that looks like it hurts!',
+                message.author.username + ' shot ' + persona.user.username + ' in the face',
+                persona.user.username + ' got shot by ' + message.author.username
+            ];
 
             var fact = Math.floor(Math.random() * facts.length);
 
+            let gifs = [
+                "https://media.giphy.com/media/cmCHwTpo5BcpAWPsqM/giphy.gif",
+                "https://media.giphy.com/media/j0Fhyx3xgFQ6IgDZLS/giphy.gif",
+                "https://media.giphy.com/media/WpTmaEmDC4Z4VAJZp3/giphy.gif",
+                "https://media.giphy.com/media/mBFxHLVMKUnfLx0U6A/giphy.gif",
+                "https://media.giphy.com/media/WV9ZYinl8gE50ZhYRP/giphy.gif",
+                "https://media.giphy.com/media/jRe4j9FZs6WEpy3ItN/giphy.gif",
+                "https://media.giphy.com/media/dZFyAYep8LRsU0TEfd/giphy.gif"
+            ];
+
+            let gif = Math.floor(Math.random() * gifs.length);
+
             const lassoembed = new RichEmbed()
                 .setAuthor((facts[fact]), message.author.avatarURL)
-                .attachFiles(["./flaregun/" + 'flaregun' + imagaNumber + ".gif"])
-                .setImage('attachment://flaregun' + imagaNumber + '.gif')
+                .setImage(gifs[gif])
                 .setColor("RANDOM");
                 
 
