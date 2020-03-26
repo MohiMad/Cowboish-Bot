@@ -114,7 +114,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "open": case "essence": case "ess": case "e":
-            bot.commands.get('open').execute(message, args, bot);
+            bot.commands.get('open').execute(message, args, bot, MohiMoo);
 
             break;
 
