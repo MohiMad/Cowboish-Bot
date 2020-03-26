@@ -9,6 +9,7 @@ const schedule = require('node-schedule');
 const { rewards } = require("../functions.js");
 const GBL = require('gblapi.js');
 
+const Mutes = require("../models/mutes");
 
 
 module.exports = async (bot) => {
@@ -90,6 +91,45 @@ module.exports = async (bot) => {
         return (reply)
     }
 
-    let botUPDATE = await updateBotList()
+    let botUPDATE = await updateBotList();
+
+    setInterval(async () => {
+
+        const mutes = await Mutes.find({});
+
+        for (const mute of mutes) {
+            if (mute.created + mute.muteTime <= Date.now()) {
+
+                const guild = bot.guilds.get(mute.guildID);
+
+                if (!guild) return;
+
+                const member = guild.members.get(mute.userID);
+
+                if (!member) return;
+
+                let muteRole = guild.roles.find((x) => x.name === "muted");
+
+                
+
+                if (!muteRole) muteRole = guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
+
+                if (!member.roles.has(muteRole.id)) return;
+
+                member.removeRole(muteRole);
+
+                const logChannel = guild.channels.get(mute.channelID);
+
+                if (!logChannel) return;
+
+                logChannel.send(`Unmuted ${member.user}!`);
+
+                Mutes.deleteOne({ userID: member.user.id, guildID: guild.id }, err => {
+                    if (err) console.log(err);
+                });
+            }
+        }
+    }, 10000);
+
 
 };

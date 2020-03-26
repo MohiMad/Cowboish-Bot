@@ -1,59 +1,62 @@
-const ms = require('ms');
+const ms = require("ms");
+
+const { ErrorMsg, findMember, findRole } = require("../functions");
+
+const { RichEmbed } = require("discord.js");
+
+const Mutes = require("../models/mutes.js");
 
 module.exports = {
   name: 'mute',
-  description: "mute!",
+  description: "Mute...",
   execute: async (message, args, bot) => {
 
+    if (!message.member.hasPermission("MANAGE_ROLES", false, true, true)) return ErrorMsg(bot, message, "Not enough permissions!\nOnly members with the permission: **MANAGE_ROLES** can execute this command!");
 
-    if (!message.member.hasPermission("MANAGE_ROLES", false, true, true)) {
-      ErrorMsg(bot, message, "You don't have the needed permissions to use this command");
-    }
-    if (message.guild && !message.channel.permissionsFor(message.guild.me).missing('MANAGE_ROLES')){
-      return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE_ROLES**")
+    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **MANAGE_ROLES** to true");
 
-  }
+    if (!args[1]) return ErrorMsg(bot, message, "No member provided!\nPlease provide me a member to mute!\n\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
 
-    let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    const member = await findMember(message, args[1]);
 
-    if (!tomute) return message.reply("Couldn't find user! make sure that you tagged them right after the command example >mute <member> s/h/d");
+    if (!member) return ErrorMsg(bot, message, "Couldn't find that member!");
 
-    if (tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Oof looks like i can't mute them... how op");
+    const muteRole = findRole(message, "muted") || await message.guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
 
-    let muterole = message.guild.roles.find(muterole => muterole.name === "😶Taped Mouth😶");
+    const reason = args.slice(3).join(" ");
 
-    if (!muterole) {
-      try {
-        muterole = await message.guild.createRole({
-          name: "😶Taped Mouth😶",
-          color: "#000000",
-          permissions: []
-        })
-        message.guild.channels.forEach(async (channel, id) => {
-          await channel.overwritePermissions(muterole, {
-            SEND_MESSAGES: false,
-            ADD_REACTIONS: false
-          });
-        });
-      } catch (e) {
-        console.log(e.stack);
-      }
-    }
+    message.guild.channels.forEach((channel) => {
+      channel.overwritePermissions(muteRole, {
+        SEND_MESSAGES: false,
+        SPEAK: false,
+      });
+    });
 
-    let mutetime = args[2];
-    if (!mutetime) return message.reply("You didn't specify a time! example >mute <membertag> s/h/d");
+    const muteTime = ms(args[2]);
 
-    await (tomute.addRole(muterole.id));
-    message.reply(`Rip <@${tomute.id}> has been muted for ${ms(ms(mutetime))}`);
+    if (!muteTime) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
 
-    setTimeout(function () {
-      tomute.removeRole(muterole.id);
-      message.channel.send(`<@${tomute.id}> has been unmuted!`);
-    }, ms(mutetime));
+    if (isNaN(muteTime)) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
 
+    if (muteTime > 2592000000000) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
 
+    const mute = new Mutes({
+      guildID: message.guild.id,
+      userID: member.user.id,
+      channelID: message.channel.id,
+      created: Date.now(),
+      muteTime: muteTime || 999999999999999999999999999999999,
+    });
 
+    mute.save().catch(e => console.log(e));
 
+    member.addRole(muteRole);
 
+    const muteEmbed = new RichEmbed()
+      .setColor("#000000")
+      .setAuthor(`Mute case!`, member.user.displayAvatarURL)
+      .setDescription(`**Muted By:** ${message.author.tag}\n**Muted User:** ${member.user.tag}\n**Mute Time:** ${args[2]}\n **Reason:** ${reason ? reason : "No reason provided!"}`);
+
+    message.channel.send(muteEmbed);
   }
 }

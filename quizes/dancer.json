@@ -16,5 +16,17 @@
 		"Answer": ["Stun", "stun"],
 		"Difficulty": "Medium",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673879868529836032/Z.png"
-    }
+	},
+	{
+		"Question": "**Fill in the missing word:**\n`The Female dancer spawns with _ _ _ _ _ music boxes`",
+		"Answer": ["three", "3"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692746386327863296/307325644148203.png?width=423&height=563"
+	},
+	{
+		"Question": "**Unscramble da word:**\nThe word `suMci` is scrambled, unscramble it to win!",
+		"Answer": ["music"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692746681283903548/female_dancer_identity_v_by_srisa_dd3f0lv-fullview.png?width=797&height=564"
+	}
 ]

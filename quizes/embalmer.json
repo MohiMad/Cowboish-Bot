@@ -16,5 +16,17 @@
 		"Answer": ["exorcist", "Exorcist"],
 		"Difficulty": "Extreme",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884480767000607/BdoGBBI13EsnAAAAAElFTkSuQmCC.png"
-    }
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["exorcist"],
+		"Difficulty": "HARD",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692748026917421167/fx02sXy607ZwAAAAAElFTkSuQmCC.png"
+	},
+	{
+		"Question": "**Fill in the missing word:**\n`The embalmer gains _ _ _ coffin after getting rescued`",
+		"Answer": ["one", "1"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692751079976206406/ba1e4632d456c68218f81115cb528f5d78f48889r1-1970-1700v2_uhq.png?width=654&height=564"
+	}
 ]

@@ -16,6 +16,18 @@
 		"Answer": ["terrorshock"],
 		"Difficulty": "Ez",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674860317041229837/7e9130f26fac4d8da26c5e19706e14e7484cbc26r1-1500-1539v2_hq.png?width=549&height=564"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["serpent"],
+		"Difficulty": "HARD",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692747145970712607/A02IsYeWKGZzAAAAAElFTkSuQmCC.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`follower`, `leech`, `pickaxe`, `car`)",
+		"Answer": ["car"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692747597701447761/7e9130f26fac4d8da26c5e19706e14e7484cbc26r1-1500-1539v2_uhq.png?width=549&height=563"
 	}
 	
 ]

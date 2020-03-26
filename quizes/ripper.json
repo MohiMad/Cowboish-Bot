@@ -6,7 +6,7 @@
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674669851926724627/Z.png"
     },
     {
-		"Question": "**Question:**\nWhat's the name if the skin in the image?",
+		"Question": "**Question:**\nWhat's the name of the skin in the image?",
 		"Answer": ["Svengali", "svengali"],
 		"Difficulty": "Hard",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674667326968430602/9k.png"
@@ -16,6 +16,18 @@
 		"Answer": ["fog", "Fog"],
 		"Difficulty": "Ez",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674669851926724627/Z.png"
+	},
+	{
+		"Question": "**Unscramble da word:**\nThe word `ogf` is scrambled, unscramble it to win!",
+		"Answer": ["fog"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692774056478375986/3d58319543d001590f603b99f446e51a.png"
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`fog`, `blade`, `pallet`, `tall`)",
+		"Answer": ["pallet"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692774567919484982/d53f35924a80a5885ef42ed8ce08e54f49e89858r1-1448-2048v2_uhq.png?width=399&height=564"
 	}
 	
 ]

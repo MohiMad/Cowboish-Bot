@@ -59,10 +59,6 @@ module.exports = async (bot, message) => {
             bot.commands.get('winrate').execute(message, args, MohiMoo);
             break;
 
-        case "essence": case "ess": case "e":
-            bot.commands.get('essence').execute(message, args, bot);
-            break;
-
         case "randomize": case "random": case "pick":
             bot.commands.get('random').execute(message, args, MohiMoo);
             break;
@@ -117,7 +113,7 @@ module.exports = async (bot, message) => {
             bot.commands.get('roll').execute(message, args, bot);
             break;
 
-        case "open":
+        case "open": case "essence": case "ess": case "e":
             bot.commands.get('open').execute(message, args, bot);
 
             break;

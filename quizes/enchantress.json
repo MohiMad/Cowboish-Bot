@@ -1,7 +1,7 @@
 [
 	{
 		"Question": "**Repeat the sentence:**\nType `The enchantress is annoying`",
-		"Answer": ["The enchantress is annoying", "the enchantress is annoying"],
+		"Answer": ["The enchantress is annoying", "the enchantress is annoying", "enchantress", "annoying"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
     },
@@ -17,5 +17,6 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
 	}
+	
 	
 ]

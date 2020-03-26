@@ -19,5 +19,17 @@
 		"Difficulty": "Eazy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673550659806691354/9k.png"
 
-    }
+	},
+	{
+		"Question": "**Fill in the missing word:**\n`Martha's main item is a flare _ _ _`",
+		"Answer": ["gun"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692745565209100288/98da7d01b92693019601c72dde177f73.png?width=608&height=564"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["nostalgia"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692745787431452742/images.png"
+	}
 ]

@@ -29,7 +29,7 @@ module.exports = {
 
         let dice2Chance5 = "You get **1** <:ess1:655840713904488469> and **10** <:clue:655384523735040000> use them wisely!";
 
-        let dice2Chance6 = "Congrats! here is your **1** <:ess1:655840713904488469> use it wisely";
+        let dice2Chance6 = "Congrats! here is your **1** <:ess2:655840643847028751> use it wisely";
 
 
 
@@ -55,7 +55,7 @@ module.exports = {
 
         let dice1Chance4 = "You were **1** step away from getting **1**<:ess1:655840713904488469> and now you have it! do ``open s10-1`` to open it.";
 
-        let dice1Chance5 = "One <:ess1:655840713904488469> is now in your pocket... wait is it?";
+        let dice1Chance5 = "One <:ess2:655840643847028751> is now in your pocket... wait is it?";
 
         var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5];
 
@@ -71,11 +71,11 @@ module.exports = {
 
         let dice4Chance1 = "The detective in your logicpath walked **4** steps, you get no essences but **40** clues <:clue:655384523735040000> were added to your inventory";
 
-        let dice4Chance2 = "Noice! you get **1**<:ess1:655840713904488469>, **20** clues <:clue:655384523735040000> and **60**<:inspirations:655840409674711060>";
+        let dice4Chance2 = "Noice! you get **1**<:ess2:655840643847028751>, **20** clues <:clue:655384523735040000> and **60**<:inspirations:655840409674711060>";
 
         let dice4Chance3 = "You walked **4** steps in your logicpath and got 40 clues <:clue:655384523735040000> and **1** <:ess1:655840713904488469>";
 
-        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess1Ess1:655840571616919586> - Two birds with one stone :/\nToo bad you can't open the <:ess1Ess1:655840571616919586> essence :v\nBut hey! you can open the <:ess1:655840713904488469> essence by doing `>open s10-1`";
+        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess2:655840643847028751> - Two birds with one stone :/\nToo bad you can't open the <:ess1Ess1:655840571616919586> essence :v\nBut hey! you can open the <:ess1:655840713904488469> essence by doing `>open s10-1`";
 
         let dice4Chance5 = "Here ya go! you get **1** <:ess1:655840713904488469> and **20** <:clue:655384523735040000>\nTo open the essence you just got, do `>open s10-1`";
 
@@ -86,7 +86,7 @@ module.exports = {
 
         //Dice embed no 4
         const diceEmbed4 = new RichEmbed()
-            .setTitle(`**${message.author.username}** rolled a dice <:dice:655384578499936257> and got a ` + "**4** , lucky you!")
+            .setTitle(`**${message.author.username}** rolled a dice <:dice:655384578499936257> and got a ` + "**4**, lucky you!")
             .setDescription(facts4[fact4])
             .attachFiles(["./dice/" + rollattach])
             .setThumbnail('attachment://' + rollattach)
@@ -95,7 +95,7 @@ module.exports = {
 
         let dice3Chance1 = 'You walked 3 steps in your logicpath and got 30 clues <:clue:655384523735040000>';
 
-        let dice3Chance2 = "Eyy! you got **20** clues <:clue:655384523735040000> and **1** <:ess1:655840713904488469>";
+        let dice3Chance2 = "Eyy! you got **20** clues <:clue:655384523735040000> and **1** <:ess2:655840643847028751>";
 
         let dice3Chance3 = "Oh look, you got **10** clues <:clue:655384523735040000> and **50** <:inspirations:655840409674711060>";
 
@@ -216,7 +216,7 @@ module.exports = {
 
                 LP.Dices = LP.Dices - 1;
 
-                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
 
                 LP.save().catch(err => console.log(err));
 
@@ -294,7 +294,7 @@ module.exports = {
 
                 LP.logic = LP.logic + 2;
                 LP.Dices = LP.Dices - 1;
-                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
 
                 LP.save().catch(err => console.log(err));
 
@@ -323,7 +323,7 @@ module.exports = {
                 LP.Clues = LP.Clues + 20;
                 LP.Dices = LP.Dices - 1;
 
-                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
                 LP.logic = LP.logic + 3;
 
                 LP.save().catch(err => console.log(err));
@@ -372,7 +372,7 @@ module.exports = {
                     .then(cooldown.add(message.author.id));
 
 
-                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
                 LP.Inspirations = LP.Inspirations + 60;
                 LP.Dices = LP.Dices - 1;
 
@@ -403,7 +403,7 @@ module.exports = {
                 LP.Dices = LP.Dices - 1;
 
                 LP.Ess1 = LP.Ess1 + 1;
-                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
 
                 LP.logic = LP.logic + 4;
 
