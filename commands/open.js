@@ -228,7 +228,7 @@ module.exports = {
                 }
                 else if (ess2Item === "ess2-1.jpg") {
                     ess2Embed.setColor("0xfcba03");
-                    ess2Embed.setAuthor(`💛 ${message.author.username} got prisioner's S skin 💛`, message.author.avatarURL);
+                    ess2Embed.setAuthor(`💛 ${message.author.username} got prisoner's S skin 💛`, message.author.avatarURL);
                     ess2Embed.setFooter("What if... you get it ingame?");
 
                     if (LP.Opened.includes(ess2Item)) {

@@ -104,7 +104,7 @@ module.exports = {
 
             ctx.fillStyle = '#000000';
 
-            ctx.fillText(LPuser.tag, 160, 35);
+            ctx.fillText(LPuser.username, 160, 35);
 
             ctx.font = '14px Arial';
             ctx.fillStyle = '#000000';

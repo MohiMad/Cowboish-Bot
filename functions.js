@@ -36,7 +36,7 @@ module.exports = {
 					With **${res[3].logic}**<:LP:675763680863977513> logicpath steps!
 
 				〘5〙 **${n5.username}** gets **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
-					With **${res[1].logic}**<:LP:675763680863977513> logicpath steps!
+					With **${res[4].logic}**<:LP:675763680863977513> logicpath steps!
 				`);
 
 				res[0].Echoes = res[0].Echoes + 50;
