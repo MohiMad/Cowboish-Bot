@@ -84,7 +84,15 @@ const LPSchema = mongoose.Schema({
     },
     Opened: Array,
     region: String,
-    bio: String
+    bio: String,
+    frames: {
+        frame1: Boolean,
+        frame2: Boolean,
+        frame3: Boolean,
+        frame4: Boolean,
+        frame5: Boolean,
+        equipped: String
+    }
 
 
 });

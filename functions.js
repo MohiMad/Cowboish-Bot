@@ -297,7 +297,15 @@ module.exports = {
 			},
 			Opened: [],
 			region: "0",
-			bio: "0"
+			bio: "0",
+			frames: {
+				frame1: false,
+				frame2: false,
+				frame3: false,
+				frame4: false,
+				frame5: false,
+				equipped: "0"
+			}
 
 		})
 		newLP.save().catch(err => console.log(err))

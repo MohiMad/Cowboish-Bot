@@ -18,6 +18,8 @@ module.exports = {
 
             //____________buy embed is here_______________
 
+            
+
             logicPath.findOne({
                 UserID: message.author.id
 
@@ -25,10 +27,42 @@ module.exports = {
 
                 if (err) console.log(err);
 
+                function frame (message, frame, price, framePath){
+                    if(framePath === true){
+                        return ErrorMsg(bot, message, "You already own this frame, why would you buy it twice?\nAre you trying to equip it instead of another one?\nIf so then `>equip` is the command you're looking for...");
+                    } else if(LP.frags < price){
+                        return ErrorMsg(bot, message, "Poor you can't afford that!\nYou need " + `**${price - LP.frags}**<:frags:655840344725913600> more...`)
+                    }else {
+
+                    let frameEmbed = new RichEmbed()
+                        .setAuthor("Successful purchase!", message.author.displayAvatarURL)
+                        .setDescription(`You successfully bought ${frame} and paid ${price}<:frags:655840344725913600>\nIt's now equipped and can be seen if you do` + "`>logicpath`\n\nTo change your frame to another one, do `>equip <FrameID>`")
+                        .attachFiles([`./pics/${frame}.png`])
+                        .setThumbnail("attachment://" + frame + ".png");
+
+                        if(frame === "frame1") LP.frames.frame1 = true;
+                        if(frame === "frame2") LP.frames.frame2 = true;
+                        if(frame === "frame3") LP.frames.frame3 = true;
+                        if(frame === "frame4") LP.frames.frame4 = true;
+                        if(frame === "frame5") LP.frames.frame5 = true;
+
+
+
+
+                        LP.frames.equipped = frame;
+                        LP.frags = LP.frags - price;
+
+                        LP.save().catch(e => console.log(e));
+
+                        message.channel.send(frameEmbed);
+                    }
+
+                }
+
 
                 if (!LP) { newLP(message) }
 
-                if (!args[1]) {
+                else if (!args[1]) {
                     ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `>buy <ItemHERE>`\n\nDunno what to buy? do `>shop` to check what you can buy")
                 }
                 //buy essences here
@@ -710,6 +744,26 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                     }
 
+                }//Frames begins HERE
+                else if(["frame1", "detective"].includes(args[1].toLowerCase())){
+                    return frame (message, "frame1", 888, LP.frames.frame1);
+                    
+                }
+                else if(["frame2", "valentine"].includes(args[1].toLowerCase())){
+                    return frame (message, "frame2", 888, LP.frames.frame2);
+                    
+                }
+                else if(["frame3", "allstar"].includes(args[1].toLowerCase())){
+                    return frame (message, "frame3", 888, LP.frames.frame3);
+                    
+                }
+                else if(["frame4", "tree"].includes(args[1].toLowerCase())){
+                    return frame (message, "frame4", 888, LP.frames.frame4);
+                    
+                }
+                else if(["frame5"].includes(args[1].toLowerCase())){
+                    return frame (message, "frame5", 8888, LP.frames.frame5);
+                    
                 }
 
 

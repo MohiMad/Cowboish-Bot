@@ -28,8 +28,12 @@ module.exports = {
         <:luckyguy:649120786312855563> | **Survivors list!** ─ ID ➜  __*survivor*__
         I swear to god if you buy Enchantress...
 
-        <:uwuchang:659147931592687616> | **Hunters List!** ─ ID ➜ __*hunter*__
-        Nothing to say here tbh... `)
+        <:uwuchang:659147931592687616> | **Hunters list!** ─ ID ➜ __*hunter*__
+        Nothing to say here tbh... 
+        
+        <:frame5:693526158830075955> | **Portrait-frames list!** - ID ➜ __*frame*__
+        Make your __>logicpath__ look more colorful :D
+        `)
             .setFooter("Cowboish shop list ─ page 1 of 1");
 
         //___________Essence embed here_______________
@@ -44,7 +48,7 @@ module.exports = {
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
-        if(!args[1]){
+        if (!args[1]) {
             return message.channel.send(shopEmbed)
         }
         else if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {
@@ -281,6 +285,66 @@ module.exports = {
 
 
         }//if hunter bracket
+
+        if (["frame", "frames"].includes(args[1].toLowerCase())) {
+
+            let description = ":";
+
+            if (LP.frames.frame1 === true) {
+                description = description + " <:frame1:693410346005954580>";
+
+            }
+            if (LP.frames.frame2 === true) {
+                description = description + " <:frame2:693410403283370045>";
+
+            }
+            if (LP.frames.frame3 === true) {
+                description = description + " <:frame3:693410506643472385>";
+
+            }
+            if (LP.frames.frame4 === true) {
+                description = description + " <:frame4:693526158830075955>";
+
+            }
+            if (LP.frames.frame5 === true) {
+                description = description + " <:frame5:693526250647715892>";
+
+            }
+
+            let equipped;
+
+            if (LP.frames.equipped === "frame1") {
+                equipped = "<:frame1:693410346005954580>";
+            }
+            else if (LP.frames.equipped === "frame2") {
+                equipped = "<:frame2:693410403283370045>";
+            }
+            else if (LP.frames.equipped === "frame3") {
+                equipped = "<:frame3:693410506643472385>";
+            }
+            else if (LP.frames.equipped === "frame4") {
+                equipped = "<:frame4:693526250647715892>";
+            }
+            else if (LP.frames.equipped === "frame5") {
+                equipped = "<:frame5:693526158830075955>";
+            }
+            else {
+                equipped = "None!";
+            }
+
+
+
+
+            let framEmbed = new Discord.RichEmbed()
+                .setAuthor("Portrait-frame shop!", bot.user.displayAvatarURL)
+                .setColor("0xeb34c9")
+                .setDescription("To buy the frame of your choice, do `>buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`")
+                .setTimestamp();
+
+            message.channel.send(framEmbed);
+
+
+        }
 
         else {
             message.channel.send(shopEmbed);

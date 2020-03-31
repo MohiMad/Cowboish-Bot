@@ -165,6 +165,11 @@ module.exports = async (bot, message) => {
 
             break;
 
+        case "equip":
+            bot.commands.get('equip').execute(message, args, bot);
+    
+            break;
+
 
 
         //END OF LOGICPATH
@@ -174,6 +179,10 @@ module.exports = async (bot, message) => {
 
         case "blink":
             bot.commands.get('blink').execute(message, args, bot);
+            break;
+
+        case "struggle":
+            bot.commands.get('struggle').execute(message, args, bot);
             break;
 
         case "stun":

@@ -100,6 +100,38 @@ module.exports = {
 
             ctx.strokeRect(32, 26, 108, 113);
 
+            if (LP.frames.equipped === "frame1") {
+
+                let frame1 = await Canvas.loadImage("./pics/frame1.png");
+
+                ctx.drawImage(frame1, 15, 11, 150, 147);
+
+            } else if (LP.frames.equipped === "frame2") {
+
+                let frame2 = await Canvas.loadImage("./pics/frame2.png");
+
+                ctx.drawImage(frame2, 13, 9, 150, 147);
+
+            } else if (LP.frames.equipped === "frame3") {
+
+                let frame3 = await Canvas.loadImage("./pics/frame3.png");
+
+                ctx.drawImage(frame3, 10, 4, 157, 154);
+
+            } else if (LP.frames.equipped === "frame4") {
+
+                let frame4 = await Canvas.loadImage("./pics/frame4.png");
+
+                ctx.drawImage(frame4, 10, 4, 157, 154);
+
+            } else if (LP.frames.equipped === "frame5") {
+
+                let frame5 = await Canvas.loadImage("./pics/frame5.png");
+
+                ctx.drawImage(frame5, 10, 4, 157, 162);
+
+            }
+
             ctx.font = 'bold 16px Arial';
 
             ctx.fillStyle = '#000000';

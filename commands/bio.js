@@ -16,7 +16,7 @@ module.exports = {
         }
         else if (!args[1]) {
             if (LP.bio !== "0") {
-                return message.channel.send(`Hey **${message.author.username}**!\nYour biography is set to: ${bio}`);
+                return message.channel.send(`Hey **${message.author.username}**!\nYour biography is set to: ${LP.bio}`);
             }
             return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide something to set as your biography!")
         }

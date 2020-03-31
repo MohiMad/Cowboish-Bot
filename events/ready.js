@@ -27,12 +27,12 @@ module.exports = async (bot) => {
 
     const activities_list = [
         `and yoinking around >:v`,
-        `🥳 celebrating ${bot.guilds.size} servers 🎉`,
+        `and yoinking around >:v`,
         `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
-        `milestone ${bot.guilds.size}/250 💕`,
-        `${bot.guilds.size} guilds | ${bot.users.size} users 💕`
+        `milestone ${bot.guilds.size}/500`,
+        `${bot.guilds.size} guilds | ${bot.users.size} users`
 
     ];
 
