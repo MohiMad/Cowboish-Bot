@@ -335,7 +335,7 @@ module.exports = {
 
 
 
-            let framEmbed = new Discord.RichEmbed()
+            let framEmbed = new RichEmbed()
                 .setAuthor("Portrait-frame shop!", bot.user.displayAvatarURL)
                 .setColor("0xeb34c9")
                 .setDescription("To buy the frame of your choice, do `>buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`")
