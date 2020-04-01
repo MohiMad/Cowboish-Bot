@@ -130,6 +130,12 @@ module.exports = {
 
                 ctx.drawImage(frame5, 10, 4, 157, 162);
 
+            } else {
+
+                let frame6 = await Canvas.loadImage("./pics/frame6.png");
+
+                ctx.drawImage(frame6, 10, 4, 157, 162);
+
             }
 
             ctx.font = 'bold 16px Arial';
