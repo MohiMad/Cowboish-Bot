@@ -304,6 +304,7 @@ module.exports = {
 				frame3: false,
 				frame4: false,
 				frame5: false,
+				frame6: false,
 				equipped: "0"
 			}
 

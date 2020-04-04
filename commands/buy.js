@@ -45,6 +45,7 @@ module.exports = {
                         if(frame === "frame3") LP.frames.frame3 = true;
                         if(frame === "frame4") LP.frames.frame4 = true;
                         if(frame === "frame5") LP.frames.frame5 = true;
+                        if(frame === "frame6") LP.frames.frame6 = true;
 
 
 
@@ -763,6 +764,10 @@ module.exports = {
                 }
                 else if(["frame5"].includes(args[1].toLowerCase())){
                     return frame (message, "frame5", 8888, LP.frames.frame5);
+                    
+                }
+                else if(["frame6"].includes(args[1].toLowerCase())){
+                    return frame (message, "frame6", 888, LP.frames.frame6);
                     
                 }
 

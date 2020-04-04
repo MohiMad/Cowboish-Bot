@@ -29,6 +29,8 @@ module.exports = {
                 "https://media.giphy.com/media/MXRUzzaVTXACQ251JU/giphy.gif",
                 "https://media.giphy.com/media/hpFTl6sn0OdpXZNKxM/giphy.gif",
                 "https://media.giphy.com/media/iGpvkIsdAw7K2MxEsr/giphy.gif",
+                "https://media.giphy.com/media/kGRI4KATznkZ8rF9N7/giphy.gif",
+                "https://media.giphy.com/media/jsHq6vUwe6To8itjGQ/giphy.gif"
 
             ]
 

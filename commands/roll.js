@@ -75,7 +75,7 @@ module.exports = {
 
         let dice4Chance3 = "You walked **4** steps in your logicpath and got 40 clues <:clue:655384523735040000> and **1** <:ess1:655840713904488469>";
 
-        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess2:655840643847028751> - Two birds with one stone :/\nToo bad you can't open the <:ess1Ess1:655840571616919586> essence :v\nBut hey! you can open the <:ess1:655840713904488469> essence by doing `>open s10-1`";
+        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess2:655840643847028751> - Two birds with one stone :/\nYou can open the <:ess1:655840713904488469> essence by doing `>open s10-1`";
 
         let dice4Chance5 = "Here ya go! you get **1** <:ess1:655840713904488469> and **20** <:clue:655384523735040000>\nTo open the essence you just got, do `>open s10-1`";
 

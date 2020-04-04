@@ -91,6 +91,7 @@ const LPSchema = mongoose.Schema({
         frame3: Boolean,
         frame4: Boolean,
         frame5: Boolean,
+        frame6: Boolean,
         equipped: String
     }
 

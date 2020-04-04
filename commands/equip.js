@@ -56,6 +56,10 @@ module.exports = {
                 description = description + " <:frame5:693526250647715892>";
 
             }
+            if (LP.frames.frame6 === true) {
+                description = description + " <:frame6:694820135306919977>";
+
+            }
 
             let equipped;
 
@@ -73,6 +77,9 @@ module.exports = {
             }
             else if (LP.frames.equipped === "frame5") {
                 equipped = "<:frame5:693526158830075955>";
+            }
+            else if (LP.frames.equipped === "frame6") {
+                equipped = "<:frame6:694820135306919977>";
             }
             else {
                 equipped = "None!";
@@ -103,7 +110,11 @@ module.exports = {
         }
         else if (["frame5"].includes(args[1].toLowerCase())) {
             return frame(message, "frame5", LP.frames.frame5);
-        } else if (["none", "no"].includes(args[1].toLowerCase())) {
+        }
+        else if (["frame6"].includes(args[1].toLowerCase())) {
+            return frame(message, "frame6", LP.frames.frame6);
+        }
+         else if (["none", "no"].includes(args[1].toLowerCase())) {
             LP.frames.equipped = "0";
             LP.save().catch(e => console.log(e));
             return message.reply("Unequipped your portraitframe!");

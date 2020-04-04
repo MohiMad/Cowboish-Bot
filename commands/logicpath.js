@@ -5,7 +5,9 @@ const Canvas = require('canvas');
 
 const Discord = require("discord.js");
 
-const { findMember, newLP, ErrorMsg } = require("../functions.js");
+let cooldown = new Set();
+
+const { findMember, newLP, ErrorMsg, coolEmbed } = require("../functions.js");
 
 module.exports = {
     name: 'logicpath',
@@ -79,6 +81,9 @@ module.exports = {
             message.channel.send("We turn it into an embed because no info were found :c", noLPEmbed);
 
 
+        } else if (cooldown.has(message.author.id)) {
+            return coolEmbed(message, "Oops, the cooldown is still on!", "You know it takes a while to generate and edit images, that's why there is a **10** seconds cooldown on this command!");
+
         } else {
 
 
@@ -130,7 +135,7 @@ module.exports = {
 
                 ctx.drawImage(frame5, 10, 4, 157, 162);
 
-            } else {
+            } else if (LP.frames.equipped === "frame6") {
 
                 let frame6 = await Canvas.loadImage("./pics/frame6.png");
 
@@ -323,9 +328,19 @@ module.exports = {
             const attachment = new Discord.Attachment(canvas.toBuffer(), 'LP.png');
 
             message.channel.send(attachment)
+            cooldown.add(message.author.id);
+
+
+            setTimeout(() => {
+                cooldown.delete(message.author.id)
+
+            }, 10000);
+
 
 
         }
+
+
 
     }
 }
