@@ -27,7 +27,6 @@ module.exports = async (bot) => {
 
     const activities_list = [
         `and yoinking around >:v`,
-        `and yoinking around >:v`,
         `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",

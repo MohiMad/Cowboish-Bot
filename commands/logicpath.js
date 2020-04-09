@@ -7,7 +7,7 @@ const Discord = require("discord.js");
 
 let cooldown = new Set();
 
-const { findMember, newLP, ErrorMsg, coolEmbed } = require("../functions.js");
+const { ErrorMsg, coolEmbed } = require("../functions.js");
 
 module.exports = {
     name: 'logicpath',
