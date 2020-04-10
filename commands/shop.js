@@ -49,7 +49,7 @@ module.exports = {
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
         if (!args[1]) {
-            return message.channel.send(shopEmbed)
+            return message.channel.send(shopEmbed);
         }
         else if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {
             message.channel.send(EssEmbed);
@@ -286,7 +286,7 @@ module.exports = {
 
         }//if hunter bracket
 
-        if (["frame", "frames"].includes(args[1].toLowerCase())) {
+        else if (["frame", "frames"].includes(args[1].toLowerCase())) {
 
             let description = ":";
 

@@ -64,7 +64,7 @@ module.exports = async (bot) => {
         }
     });
 
-    const Glenn = new GBL(bot.user.id, config.glenToken);
+    const Glenn = new GBL(bot.user.id, config.glenToken, false);
 
     setInterval(() => {
         Glenn.updateStats(bot.guilds.size);

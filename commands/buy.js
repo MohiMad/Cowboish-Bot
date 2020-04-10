@@ -324,12 +324,12 @@ module.exports = {
                     if (LP.Clues < 3568) {
                         message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
                     }
-                    else if (LP.Survivors.Officer === true) {
+                    else if (LP.Survivors.Barmaid === true) {
                         message.reply("you own the Barmaid already!");
                     }
                     else {
                         LP.Clues = LP.Clues - 3568;
-                        LP.Survivors.Officer = true;
+                        LP.Survivors.Barmaid = true;
 
                         buyEmbed.setDescription("Want a drink?\nYou bought the Barmaid");
                         message.channel.send(buyEmbed);
