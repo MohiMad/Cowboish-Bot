@@ -35,12 +35,11 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have enough fragment(s) you have **" + LP.frags + "** fragment(s)!");
 
             } else {
-                LP.frags = LP.frags - args[2];
+                LP.frags = LP.frags - Number(args[2]);
 
-                giftedLP.frags = giftedLP.frags + args[2];
+                giftedLP.frags = giftedLP.frags + Number(args[2]);
 
-                LP.save().catch(e => console.log(e));
-                giftedLP.save().catch(e => console.log(e));
+                [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
@@ -62,12 +61,12 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have enough fragment(s) you have **" + LP.Inspirations + "** fragment(s)!");
 
             } else {
-                LP.Inspirations = LP.Inspirations - args[2];
+                LP.Inspirations = LP.Inspirations - Number(args[2]);
 
-                giftedLP.Inspirations = giftedLP.Inspirations + args[2];
+                giftedLP.Inspirations = giftedLP.Inspirations + Number(args[2]);
 
-                LP.save().catch(e => console.log(e));
-                giftedLP.save().catch(e => console.log(e));
+                [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
+
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
@@ -88,12 +87,12 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have enough clue(s) you have **" + LP.Clues + "** clue(s)!");
 
             } else {
-                LP.Clues = LP.Clues - args[2];
+                giftedLP.Clues = giftedLP.Clues + Number(args[2]);
 
-                giftedLP.Clues = giftedLP.Clues + args[2];
+                LP.Clues = LP.Clues - Number(args[2]);
 
-                LP.save().catch(e => console.log(e));
-                giftedLP.save().catch(e => console.log(e));
+                [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
+
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
@@ -115,12 +114,12 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have enough s10-1 essence(s) you have **" + LP.Ess1 + "** s10-1 essence(s)!");
 
             } else {
-                LP.Ess1 = LP.Ess1 - args[2];
+                LP.Ess1 = LP.Ess1 - Number(args[2]);
 
-                giftedLP.Ess1 = giftedLP.Ess1 + args[2];
+                giftedLP.Ess1 = giftedLP.Ess1 + Number(args[2]);
 
-                LP.save().catch(e => console.log(e));
-                giftedLP.save().catch(e => console.log(e));
+                [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
+
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
@@ -141,12 +140,12 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have enough s10-2 essence(s) you have **" + LP.Ess2 + "** s10-2 essence(s)!");
 
             } else {
-                LP.Ess2 = LP.Ess2 - args[2];
+                LP.Ess2 = LP.Ess2 - Number(args[2]);
 
-                giftedLP.Ess2 = giftedLP.Ess2 + args[2];
+                giftedLP.Ess2 = giftedLP.Ess2 + Number(args[2]);
 
-                LP.save().catch(e => console.log(e));
-                giftedLP.save().catch(e => console.log(e));
+                [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
+
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
@@ -167,12 +166,11 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have enough s10-3 essence(s) you have **" + LP.Ess3 + "** s10-3 essence(s)!");
 
             } else {
-                LP.Ess3 = LP.Ess3 - args[2];
+                LP.Ess3 = LP.Ess3 - Number(args[2]);
 
-                giftedLP.Ess3 = giftedLP.Ess3 + args[2];
+                giftedLP.Ess3 = giftedLP.Ess3 + Number(args[2]);
 
-                LP.save().catch(e => console.log(e));
-                giftedLP.save().catch(e => console.log(e));
+                [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
