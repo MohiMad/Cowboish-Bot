@@ -72,6 +72,8 @@ module.exports = {
                         LP.frags = LP.frags + 2000;
                     }
                     else {
+                        ess2Embed.setDescription('Because you got thier S skin, you get the Gravekeeper as well UwU <:gravekeepa:683222933782790164>\nThat means you can play as him by doing `>quick gravekeeper`');
+                        LP.Survivors.NewSurv = true;
                         LP.S = LP.S + 1;
                         LP.Opened = [...LP.Opened, item];
                     }
@@ -236,6 +238,8 @@ module.exports = {
                         LP.frags = LP.frags + 2000;
                     }
                     else {
+                        ess2Embed.setDescription('Because you got thier S skin, you get the "Prisoner" as well UwU <:prisoner:699693556176126063>\nThat means you can play as him by doing `>quick prisoner`');
+                        LP.Survivors.AnotherSurv = true;
                         LP.Opened = [...LP.Opened, ess2Item];
                         LP.S = LP.S + 1;
 

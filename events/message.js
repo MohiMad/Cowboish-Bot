@@ -107,6 +107,10 @@ module.exports = async (bot, message) => {
             bot.commands.get('death').execute(message, args, bot);
             break;
 
+        case "siptea": case "sip": case "sippingtea":
+            bot.commands.get('death').execute(message, args, bot);
+            break;
+
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
@@ -168,6 +172,11 @@ module.exports = async (bot, message) => {
         case "equip":
             bot.commands.get('equip').execute(message, args, bot);
     
+            break;
+
+        case "gift":
+            bot.commands.get('gift').execute(message, args, bot);
+        
             break;
 
 

@@ -1,0 +1,20 @@
+[
+	{
+        "Question": "**Which word?:**\nType the odd word that doesn't fit with the character\n(`zap`, `decoder`, `pallet`, `stun`)",
+        "Answer": ["pallet"],
+        "Difficulty": "Medium",
+        "Attachment": "https://www.shorturl.at/pyFP6"
+    },
+    {
+        "Question": "**Repeat da sentence:**\nType `Prisoner is better than mechanic`",
+        "Answer": ["Prisoner is better than mechanic", "prisoner is better than mechanic", "better", "mechanic", "prisoner"],
+        "Difficulty": "Easy",
+        "Attachment": "https://www.shorturl.at/einBD"
+    },
+    {
+        "Question": "**Fill in the missing word:**\n`Luca used to be a world-renowned _ _ _ _ _ _ _ _`",
+        "Answer": ["Inventor", "inventor"],
+        "Difficulty": "Easy",
+        "Attachment": "https://www.shorturl.at/adqKN"
+    }
+]

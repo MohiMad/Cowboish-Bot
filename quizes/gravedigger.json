@@ -4,6 +4,18 @@
 		"Answer": ["2", "two", "Two"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687697005782237215/150px-Diamond_Shovel_JE3_BE2.png"
+	},
+	{
+		"Question": "**Unscramble da word:**\nThe word `shvloe` is scrambled, unscramble it to win!",
+		"Answer": ["shovel"],
+		"Difficulty": "Hard",
+		"Attachment": "https://www.shorturl.at/pyMS6"
+	},
+	{
+		"Question": "**Fill in the missing word:**\n`Gravekeeper is a _ _ _ _ _ _ _`\nChoose between `rescuer`, `kiter`, `decoder`",
+		"Answer": ["rescuer"],
+		"Difficulty": "Hard",
+		"Attachment": "https://www.shorturl.at/lEUW1"
 	}
 	
 ]

@@ -13,6 +13,19 @@ module.exports = {
 
         if (!LP) return newLP(message);
 
+        function freeToUse(message, fram) {
+
+            let freeToUseEmbed = new RichEmbed()
+                .setTitle("Your frame is now equipped!")
+                .setColor("BLUE")
+                .setDescription("Wanna see how it looks like? go ahead and do `>logicpath`")
+                .attachFiles([`./pics/${fram}.png`])
+                .setThumbnail("attachment://" + fram + ".png");
+
+            message.channel.send(freeToUseEmbed);
+
+        }
+
 
         function frame(message, frames, eFrame) {
             if (eFrame === false) {
@@ -114,11 +127,18 @@ module.exports = {
         else if (["frame6"].includes(args[1].toLowerCase())) {
             return frame(message, "frame6", LP.frames.frame6);
         }
-         else if (["none", "no"].includes(args[1].toLowerCase())) {
+        else if (["frame7"].includes(args[1].toLowerCase())) {
+            LP.frames.equipped = "frame7";
+            LP.save().catch(e => console.log(e));
+
+            freeToUse(message, "frame7");
+
+        }
+        else if (["none", "no"].includes(args[1].toLowerCase())) {
             LP.frames.equipped = "0";
             LP.save().catch(e => console.log(e));
             return message.reply("Unequipped your portraitframe!");
-        
+
         }
 
 

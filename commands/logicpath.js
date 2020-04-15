@@ -141,6 +141,10 @@ module.exports = {
 
                 ctx.drawImage(frame6, 10, 4, 157, 162);
 
+            } else if (LP.frames.equipped === "frame7") {
+                let frame7 = await Canvas.loadImage("./pics/frame7.png");
+
+                ctx.drawImage(frame7, 9, 4, 165, 162);
             }
 
             ctx.font = 'bold 16px Arial';

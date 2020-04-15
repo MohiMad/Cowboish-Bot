@@ -64,6 +64,7 @@ module.exports = async (bot) => {
         }
     });
 
+    /**/
     const Glenn = new GBL(bot.user.id, config.glenToken, false);
 
     setInterval(() => {
