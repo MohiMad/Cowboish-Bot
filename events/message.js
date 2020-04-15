@@ -108,7 +108,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "siptea": case "sip": case "sippingtea":
-            bot.commands.get('death').execute(message, args, bot);
+            bot.commands.get('siptea').execute(message, args, bot);
             break;
 
 
