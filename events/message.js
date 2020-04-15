@@ -11,10 +11,7 @@ module.exports = async (bot, message) => {
 
     if (!message.guild) return;
 
-
-
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
-
 
     let prefix;
 
