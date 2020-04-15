@@ -179,7 +179,7 @@ module.exports = {
             if (LP.Survivors.AnotherSurv === true) {
                 roleEmbed.addField("<:prisoner:699693556176126063> Prisoner", "~~Prisoner - Price __*3568*__~~", true)
             } else {
-                roleEmbed.addField("<:prisoner:699693556176126063> GraveKeeper", "GraveKeeper - Price __*3568*__ <:clue:655384523735040000>", true)
+                roleEmbed.addField("<:prisoner:699693556176126063> Prisoner", "Prisoner - Price __*3568*__ <:clue:655384523735040000>", true)
             }
 
 
