@@ -175,7 +175,8 @@ module.exports = async (bot, message) => {
             break;
 
         case "gift":
-            bot.commands.get('gift').execute(message, args, bot);
+            message.reply(`this command is still under development :v`);
+            //bot.commands.get('gift').execute(message, args, bot);
         
             break;
 

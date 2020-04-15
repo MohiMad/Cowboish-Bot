@@ -64,12 +64,13 @@ module.exports = async (bot) => {
         }
     });
 
-    /**/
+    /*
     const Glenn = new GBL(bot.user.id, config.glenToken, false);
 
     setInterval(() => {
         Glenn.updateStats(bot.guilds.size);
     }, 15 * 60000) // Sends stats every 15 minutes
+    */
 
     const Boats = new BOATS(config.boatsToken);
 
@@ -77,6 +78,7 @@ module.exports = async (bot) => {
         .catch((err) => {
             console.log(err);
         });
+        
 
 
     const updateBotList = async () => {
