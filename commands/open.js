@@ -72,8 +72,10 @@ module.exports = {
                         LP.frags = LP.frags + 2000;
                     }
                     else {
-                        s9Embed.setDescription('Because you got thier S skin, you get the Gravekeeper as well UwU <:gravekeepa:683222933782790164>\nThat means you can play as him by doing `>quick gravekeeper`');
-                        LP.Survivors.NewSurv = true;
+                        if (LP.Survivors.NewSurv === false) {
+                            s9Embed.setDescription('Because you got thier S skin, you get the Gravekeeper as well UwU <:gravekeepa:683222933782790164>\nThat means you can play as him by doing `>quick gravekeeper`');
+                            LP.Survivors.NewSurv = true;
+                        }
                         LP.S = LP.S + 1;
                         LP.Opened = [...LP.Opened, item];
                     }
@@ -238,8 +240,11 @@ module.exports = {
                         LP.frags = LP.frags + 2000;
                     }
                     else {
-                        ess2Embed.setDescription('Because you got thier S skin, you get the "Prisoner" as well UwU <:prisoner:699693556176126063>\nThat means you can play as him by doing `>quick prisoner`');
-                        LP.Survivors.AnotherSurv = true;
+                        if (LP.Survivors.AnotherSurv === false) {
+
+                            ess2Embed.setDescription('Because you got thier S skin, you get the "Prisoner" as well UwU <:prisoner:699693556176126063>\nThat means you can play as him by doing `>quick prisoner`');
+                            LP.Survivors.AnotherSurv = true;
+                        }
                         LP.Opened = [...LP.Opened, ess2Item];
                         LP.S = LP.S + 1;
 
@@ -287,7 +292,7 @@ module.exports = {
 
                         LP.Opened = [...LP.Opened, ess2Item];
                     }
-                    
+
                     LP.B = LP.B + 1;
 
                     LP.Ess2 = LP.Ess2 - 1;
