@@ -1,5 +1,5 @@
 const logicPath = require("../models/logicpath.js");
-const { ErrorMsg, newLP, guildAdd } = require("../functions.js");
+const { ErrorMsg, newLP } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 
@@ -60,7 +60,6 @@ module.exports = {
         else {
             message.reply("the ID given must contain **numbers** only and is **6, 7 or 8** numbers long!");
         }
-        guildAdd(message);
 
 
     }

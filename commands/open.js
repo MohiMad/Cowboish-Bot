@@ -2,7 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 const { stripIndents } = require("common-tags");
 
-const { newLP, guildAdd, ErrorMsg } = require("../functions.js");
+const { newLP, ErrorMsg } = require("../functions.js");
 
 
 const logicPath = require("../models/logicpath.js");
@@ -67,15 +67,21 @@ module.exports = {
                     s9Embed.setAuthor(`💛 Congrats ${message.author.username}! you got gravekeeper's S skin 💛`, message.author.avatarURL);
                     s9Embed.setFooter("You probably wish to have that ingame :'D");
 
+
+
                     if (LP.Opened.includes(item)) {
-                        s9Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
-                        LP.frags = LP.frags + 2000;
-                    }
-                    else {
+
                         if (LP.Survivors.NewSurv === false) {
                             s9Embed.setDescription('Because you got thier S skin, you get the Gravekeeper as well UwU <:gravekeepa:683222933782790164>\nThat means you can play as him by doing `>quick gravekeeper`');
                             LP.Survivors.NewSurv = true;
+                        } else {
+                            s9Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
+                            LP.frags = LP.frags + 2000;
                         }
+                    }
+                    else {
+                        s9Embed.setDescription('Because you got thier S skin, you get the Gravekeeper as well UwU <:gravekeepa:683222933782790164>\nThat means you can play as him by doing `>quick gravekeeper`');
+                        LP.Survivors.NewSurv = true;
                         LP.S = LP.S + 1;
                         LP.Opened = [...LP.Opened, item];
                     }
@@ -236,15 +242,19 @@ module.exports = {
                     ess2Embed.setFooter("What if... you get it ingame?");
 
                     if (LP.Opened.includes(ess2Item)) {
-                        ess2Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
-                        LP.frags = LP.frags + 2000;
-                    }
-                    else {
                         if (LP.Survivors.AnotherSurv === false) {
 
                             ess2Embed.setDescription('Because you got thier S skin, you get the "Prisoner" as well UwU <:prisoner:699693556176126063>\nThat means you can play as him by doing `>quick prisoner`');
                             LP.Survivors.AnotherSurv = true;
+                        } else {
+                            ess2Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
+                            LP.frags = LP.frags + 2000;
                         }
+                    }
+                    else {
+                        ess2Embed.setDescription('Because you got thier S skin, you get the "Prisoner" as well UwU <:prisoner:699693556176126063>\nThat means you can play as him by doing `>quick prisoner`');
+                        LP.Survivors.AnotherSurv = true;
+
                         LP.Opened = [...LP.Opened, ess2Item];
                         LP.S = LP.S + 1;
 
@@ -427,7 +437,6 @@ module.exports = {
                 message.channel.send(noargsEmbed);
             }
 
-            guildAdd(message);
 
 
         } catch (err) {

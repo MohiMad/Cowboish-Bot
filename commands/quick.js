@@ -363,6 +363,20 @@ module.exports = {
             }
 
         }
+        else if (["prisoner", '"prisoner"'].includes(args[1].toLowerCase())) {
+
+            if (LP.Survivors.AnotherSurv === false) {
+                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+            }
+            else {
+                let prisonerFile = require("../quizes/prisoner.json");
+
+                let prisonerItem = prisonerFile[Math.floor(Math.random() * prisonerFile.length)];
+
+                quiz(message, prisonerFile.Question, prisonerFile.Answer, prisonerFile.Attachment, prisonerFile.Difficulty, "Enchantress 2.0 AKA Prisoner").then(cooldown.add(message.author.id));
+            }
+
+        }
 
         setTimeout(() => {
             cooldown.delete(message.author.id)

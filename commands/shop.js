@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
 const { RichEmbed } = require('discord.js');
-const { newLP, guildAdd } = require("../functions.js");
+const { newLP } = require("../functions.js");
 
 
 module.exports = {
@@ -361,7 +361,7 @@ module.exports = {
         else {
             message.channel.send(shopEmbed);
         }
-        guildAdd(message);
+        
 
 
 

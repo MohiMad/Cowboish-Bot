@@ -1,5 +1,5 @@
 const logicPath = require("../models/logicpath.js");
-const { ErrorMsg, newLP, guildAdd } = require("../functions.js");
+const { ErrorMsg, newLP } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 
@@ -791,8 +791,6 @@ module.exports = {
             else {
                 message.reply("this item doesn't exist in the shop! make sure that you typed it correctly!");
             }
-
-            guildAdd(message);
 
 
         })//LP 
