@@ -28,7 +28,7 @@ module.exports = {
 
                         <:Ess1:655840571616919586> | **Essence s10-2** ─ ID ➜ ${s10_2_cmd}
 
-                        <:ess2:655840643847028751> | **Essence s10-3** (__Unavailable__) ─ ID ➜ ${s10_3_cmd}
+                        <:ess2:655840643847028751> | **Essence s10-3** ─ ID ➜ ${s10_3_cmd}
 
                         Example: ${exmple}
                 `)
