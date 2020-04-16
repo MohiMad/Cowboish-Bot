@@ -6,8 +6,8 @@
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
     },
     {
-		"Question": "**Retype the sentence:**\nType `The postman's doggo is cute`",
-		"Answer": ["The postman's doggo is cute", "the postman's doggo is cute"],
+		"Question": "**Retype the sentence:**\nType `The postman doggo is cute`",
+		"Answer": ["The postman doggo is cute", "the postman doggo is cute", "doggo", "postman", "cute"],
 		"Difficulty": "Easy",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
     },

@@ -7,7 +7,7 @@
     },
     {
 		"Question": "**Retype the sentence:**\nType `The prospector is attractive!`",
-		"Answer": ["The prospector is attractive!", "the prospector is attractive!"],
+		"Answer": ["The prospector is attractive!", "the prospector is attractive!", "prospector", "attractive"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165552889069568/9k.png"
     },

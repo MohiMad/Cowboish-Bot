@@ -12,8 +12,8 @@
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633408642547732/2Q.png"
     },
     {
-		"Question": "**Repeat da word:**\nType `Leo's camping is op`",
-		"Answer": ["leo's camping is op", "Leos camping is op", "Leo's camping is op"],
+		"Question": "**Repeat da word:**\nType `leo is an op camper`",
+		"Answer": ["leo is an op camper", "leo", "is", "op", "an", "camper"],
 		"Difficulty": "Easy huh",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
     },

@@ -7,7 +7,7 @@
     },
     {
 		"Question": "**Repeat da sentence:**\nType `Luchino needs a buff`",
-		"Answer": ["Luchino needs a buff", "luchino needs a buff"],
+		"Answer": ["Luchino needs a buff", "luchino needs a buff", "luchino", "needs", "buff"],
 		"Difficulty": "Ez",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
     },
@@ -24,8 +24,8 @@
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
     },
     {
-		"Question": "**Retype the sentence:**\nType `Luchino's camp is op`",
-		"Answer": ["luchinos camp is op", "Luchino's camp is op"],
+		"Question": "**Retype the sentence:**\nType `Luchino is an op camper`",
+		"Answer": ["Luchino is an op camper", "luchino is an op camper", "luchino", "op", "camper"],
 		"Difficulty": "Medium",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
 	},

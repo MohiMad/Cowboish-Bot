@@ -7,7 +7,7 @@
     },
     {
 		"Question": "**Retype the sentence:**\n`The mindseye is blind but wears glasses`",
-		"Answer": ["The mindseye is blind but wears glasses", "the mindseye is blind but wears glasses"],
+		"Answer": ["The mindseye is blind but wears glasses", "the mindseye is blind but wears glasses", "blind", "mindseye", "wears", "glasses"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
     },

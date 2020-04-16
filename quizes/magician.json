@@ -6,8 +6,8 @@
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935510091071488/Z.png"
     },
     {
-		"Question": "**Repeat the sentence:**\nType `Don't get terror shocked!`",
-		"Answer": ["Dont get terror shocked!", "dont get terror shocked!", "Don't get terror shocked!", "don't get terror shocked!"],
+		"Question": "**Repeat the sentence:**\nType `Dont get terror shocked!`",
+		"Answer": ["Dont get terror shocked!", "dont get terror shocked!", "Don't get terror shocked!", "don't get terror shocked!", "dont", "get", "terror", "shocked"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935510091071488/Z.png"
     },
