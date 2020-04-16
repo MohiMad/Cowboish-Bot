@@ -406,7 +406,7 @@ module.exports = {
                 else if (["ess2-14.jpg", "ess2-15.jpg", "ess2-16.jpg", "ess2-17.jpg", "ess2-18.jpg", "ess2-19.jpg", "ess2-20.jpg", "ess2-21.jpg"].includes(ess2Item)) {
 
                     ess2Embed.setColor("0xffffff");
-                    ess2Embed.setAuthor(`🖤 That's a portrait frame for ${message.author.username}! 🖤`, message.author.avatarURL);
+                    ess2Embed.setAuthor(`🖤 That's a portrait for ${message.author.username}! 🖤`, message.author.avatarURL);
 
                     if (LP.Opened.includes(ess2Item)) {
                         ess2Embed.setDescription("You have this item already! here, take these **36** <:frags:655840344725913600> instead!");
@@ -428,6 +428,197 @@ module.exports = {
                 }
 
                 message.channel.send(ess2Embed);
+
+            } else if (["s10-3", "s103"].includes(args[1].toLowerCase()) || args[1] === "3") {
+
+                let ess3_number = Math.floor(Math.random() * (51 - 1 + 1)) + 1;
+
+                let ess3Item = "ess3-" + ess3_number;
+
+                const ess3Embed = new RichEmbed()
+                    .attachFiles(["./essences/s10-3/" + ess3Item + ".jpg"])
+                    .setImage('attachment://' + ess3Item + ".jpg");
+
+                if (LP.Ess3 === 0) {
+                    return ErrorMsg(bot, message, "You don't have any <:ess3:655840571616919586> `s10-3` essences!\nTry rolling some dices or buy some from the shop!");
+
+                }
+                else if (ess3Item === "ess3-1") {
+                    ess3Embed.setColor("0xfcba03");
+                    ess3Embed.setAuthor(`💛 ${message.author.username} got prisoner's S skin 💛`, message.author.avatarURL);
+                    ess3Embed.setFooter("What if... you get it ingame?");
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
+                            LP.frags = LP.frags + 2000;
+                    } else {
+                        LP.Opened = [...LP.Opened, ess3Item];
+                        LP.S = LP.S + 1;
+                    }
+                    LP.Ess3 = LP.Ess3 - 1;
+                    LP.save().catch(err => console.log(err));
+
+                }
+                //A skin values
+                else if (["ess3-2", "ess3-3"].includes(ess3Item)) {
+                    ess3Embed.setColor("0xbb2af5");
+                    ess3Embed.setAuthor(`💜 ${message.author.username} gets an A skin 💜`, message.author.avatarURL);
+                    ess3Embed.setFooter('Which one did you get? :3');
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You already got that skin before! here, take these **1000** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 1000;
+                    }
+                    else {
+                        LP.Opened = [...LP.Opened, ess3Item];
+                        LP.A = LP.A + 1;
+
+                    }
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+                }
+                else if (["ess3-4", "ess3-5", "ess3-6", "ess3-7", "ess3-8", "ess3-9", "ess3-10"].includes(ess3Item)) {
+                    ess3Embed.setColor("0x2e65b8");
+                    ess3Embed.setAuthor(`💙 It's a B skin, ${message.author.username}! 💙`, message.author.avatarURL);
+                    ess3Embed.setFooter("B stands for Beautiful, just like you <3");
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You already got that skin before! Here takes these **200** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 200;
+                    }
+                    else {
+
+                        LP.Opened = [...LP.Opened, ess3Item];
+                    }
+
+                    LP.B = LP.B + 1;
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+                else if (["ess3-15", "ess3-16", "ess3-17", "ess3-18", "ess3-19", "ess3-20", "ess3-21", "ess3-22", "ess3-23", "ess3-24", "ess3-25"].includes(ess3Item)) {
+                    ess3Embed.setColor("0x1BE926");
+                    ess3Embed.setAuthor(`💚 That's a C skin for ${message.author.username}! 💚`, message.author.avatarURL);
+                    ess3Embed.setFooter("Cheer up! UwU");
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You have this item already! here, take these **72** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 72;
+                    }
+                    else {
+
+                        LP.Opened = [...LP.Opened, ess3Item];
+                    }
+
+                    LP.C = LP.C + 1;
+
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+                else if (["ess3-35", "ess3-36", "ess3-37", "ess3-38", "ess3-43", "ess3-44", "ess3-45", "ess3-46", "ess3-47"].includes(ess3Item)) {
+
+                    ess3Embed.setColor("0xffffff");
+                    ess3Embed.setAuthor(`🖤 Lmao that's a graffiti for ${message.author.username} xD 🖤`, message.author.avatarURL);
+                    ess3Embed.setFooter("Look at the bright side, these graffitis are cute :3");
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You have this item already! here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                    }
+                    else {
+
+                        LP.Opened = [...LP.Opened, ess3Item];
+                    }
+
+                    LP.D = LP.D + 1;
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+                else if (["ess3-13", "ess3-14", "ess3-30", "ess3-31", "ess3-32", "ess3-33", "ess3-34"].includes(ess3Item)) {
+
+                    ess3Embed.setColor("0x2e65b8");
+                    ess3Embed.setAuthor(`🔹 That's a standbymotion for ${message.author.username}! 🔹`, message.author.avatarURL);
+                    ess3Embed.setFooter("💙💙");
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You have this item already! here, take these **72** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 72;
+                    }
+                    else {
+
+                        LP.Opened = [...LP.Opened, ess3Item];
+                    }
+
+                    LP.B = LP.B + 1;
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+                else if (["ess3-11", "ess3-12", "ess3-26", "ess3-27", "ess3-28", "ess3-29"].includes(ess3Item)) {
+
+                    ess3Embed.setColor("0x2e65b8");
+                    ess3Embed.setAuthor(`🔹 ${message.author.username}, that's an emote for ya 🔹`, message.author.avatarURL);
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You have this item already! here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                    }
+                    else {
+
+                        LP.Opened = [...LP.Opened, ess3Item];
+                    }
+
+                    LP.B = LP.B + 1;
+
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+                else if (["ess3-39", "ess3-40", "ess3-41", "ess3-48", "ess3-49", "ess3-50", "ess3-51" ].includes(ess3Item)) {
+
+                    ess3Embed.setColor("0xffffff");
+                    ess3Embed.setAuthor(`⚫ That's a portrait for ${message.author.username}! ⚫`, message.author.avatarURL);
+
+                    if (LP.Opened.includes(ess3Item)) {
+                        ess3Embed.setDescription("You have this item already! here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                    }
+                    else {
+
+                        LP.Opened = [...LP.Opened, ess3Item];
+                    }
+
+                    LP.D = LP.D + 1;
+
+
+                    LP.Ess3 = LP.Ess3 - 1;
+
+                    LP.save().catch(err => console.log(err));
+
+
+                }
+
+                message.channel.send(ess3Embed);
 
             }
 

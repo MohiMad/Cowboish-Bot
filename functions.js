@@ -163,7 +163,7 @@ module.exports = {
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", "https://cdn.discordapp.com/avatars/632291800585076761/d2199b698688927128515d64e327169a.png?size=256");
+			.setFooter("Cowboish bot", "https://images-ext-2.discordapp.net/external/dpkUSBrSk9f20kq2Aw8B521pM6BcFhJdLBsYokj1ry0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/632291800585076761/863aeefefbb365f8ddc498a1c8fecb5d.png?width=564&height=564");
 		message.channel.send(errEmbed);
 	},
 
@@ -195,7 +195,7 @@ module.exports = {
 			**Time** : 60 seconds
 			**Reward** : 1 Dice <:dice:655384578499936257>` + "\n\n" + question)
 			.setImage(Thumb)
-			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1")
+			.setFooter("Cowboish bot", "https://images-ext-2.discordapp.net/external/dpkUSBrSk9f20kq2Aw8B521pM6BcFhJdLBsYokj1ry0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/632291800585076761/863aeefefbb365f8ddc498a1c8fecb5d.png?width=564&height=564")
 			.setColor("RANDOM");
 
 		message.channel.send(quizEmbed).then(

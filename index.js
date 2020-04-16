@@ -5,7 +5,7 @@ const config = require("./config.json");
 
 const mongoose = require("mongoose");
 
-mongoose.connect(config.mongoose_uri, {
+await mongoose.connect(config.mongoose_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
