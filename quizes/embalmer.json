@@ -28,5 +28,11 @@
 		"Answer": ["one", "1"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692751079976206406/ba1e4632d456c68218f81115cb528f5d78f48889r1-1970-1700v2_uhq.png?width=654&height=564"
-	}
+	},
+	{
+		"Question": "**Question:**\nWho is Aesop’s adoptive father?",
+		"Answer": ["Jerry Carl", "jerry carl", "jerry", "carl"],
+		"Difficulty": "Ez",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700392762004209746/image0.png?width=765&height=564"
+    }
 ]

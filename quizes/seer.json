@@ -7,7 +7,7 @@
     },
     {
 		"Question": "**Repeat da sentence:**\nType `The Seer is bald` in the chat to get yo dice",
-		"Answer": ["The Seer is bald", "the Seer is bald"],
+		"Answer": ["The Seer is bald", "the Seer is bald", "seer", "bald", "the", "is"],
 		"Difficulty": "medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673882584476024873/wFZiDsYlaNYYQAAAABJRU5ErkJggg.png?width=452&height=451"
     },
@@ -16,5 +16,17 @@
 		"Answer": ["Night owl", "night owl", "Night Owl"],
 		"Difficulty": "Extreme",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673882804471463946/C2509bD98icOuyQzRyDat92SibMv5M9wlShN0TAXRpzwAAAABJRU5ErkJggg.png"
+	},
+	{
+		"Question": "**Unscramble it:**\nUn scramble the letters `lie rkalc`",
+		"Answer": ["Eli Clark", "eli clark", "eli", "clark"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700391479285383249/image0.png"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of Eli's owl?",
+		"Answer": ["Brooke Rose", "brooke rose", "brooke", "rose"],
+		"Difficulty": "Hard",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700392224407420968/istock_000023765401_small.png?width=1002&height=563"
     }
 ]
