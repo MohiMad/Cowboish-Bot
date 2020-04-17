@@ -373,7 +373,7 @@ module.exports = {
 
                 let prisonerItem = prisonerFile[Math.floor(Math.random() * prisonerFile.length)];
 
-                quiz(message, prisonerFile.Question, prisonerFile.Answer, prisonerFile.Attachment, prisonerFile.Difficulty, "Enchantress 2.0 AKA Prisoner").then(cooldown.add(message.author.id));
+                quiz(message, prisonerItem.Question, prisonerItem.Answer, prisonerItem.Attachment, prisonerItem.Difficulty, "Prisoner").then(cooldown.add(message.author.id));
             }
 
         }

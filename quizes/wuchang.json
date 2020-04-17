@@ -12,8 +12,8 @@
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674637325934002186/r9c3C2lITXQAAAAASUVORK5CYII.png"
     },
     {
-		"Question": "**Repeat the sentence:**\nType `White wu chang range is op`",
-		"Answer": ["White wu chang's range is op", "White wu changs range is op", "wu chang", "range", "op", "white"],
+		"Question": "**Repeat the sentence:**\nType `white wu chang range is op`",
+		"Answer": ["white wu chang range is op", "wu chang", "range", "op", "white"],
 		"Difficulty": "Brruh ezz",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674638667200987166/images.png"
 	},
