@@ -87,7 +87,6 @@ module.exports = {
                     }
 
                     LP.Ess1 = LP.Ess1 - 1;
-                    LP.save().catch(err => console.log(err));
 
                 }
                 //A skin values
@@ -107,7 +106,6 @@ module.exports = {
 
                     LP.Ess1 = LP.Ess1 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
                 }
                 else if (["s10-4.jpg", "s10-5.jpg", "s10-6.jpg", "s10-7.jpg", "s10-8.jpg", "s10-9.jpg"].includes(item)) {
@@ -127,7 +125,6 @@ module.exports = {
 
                     LP.Ess1 = LP.Ess1 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -148,7 +145,6 @@ module.exports = {
 
                     LP.Ess1 = LP.Ess1 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -170,7 +166,6 @@ module.exports = {
 
                     LP.Ess1 = LP.Ess1 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -192,7 +187,6 @@ module.exports = {
 
                     LP.Ess1 = LP.Ess1 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -214,10 +208,11 @@ module.exports = {
 
                     LP.Ess1 = LP.Ess1 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
+                LP.save().catch(err => console.log(err));
+
 
                 message.channel.send(s9Embed);
 
@@ -263,7 +258,6 @@ module.exports = {
 
 
                     LP.Ess2 = LP.Ess2 - 1;
-                    LP.save().catch(err => console.log(err));
 
                 }
                 //A skin values
@@ -286,7 +280,6 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
                 }
                 else if (["ess2-4.jpg", "ess2-5.jpg", "ess2-6.jpg", "ess2-7.jpg", "ess2-8.jpg", "ess2-9.jpg"].includes(ess2Item)) {
@@ -307,7 +300,6 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -330,7 +322,6 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -353,7 +344,6 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -376,7 +366,6 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -399,7 +388,6 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -422,10 +410,11 @@ module.exports = {
 
                     LP.Ess2 = LP.Ess2 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
+                LP.save().catch(err => console.log(err));
+
 
                 message.channel.send(ess2Embed);
 
@@ -450,13 +439,12 @@ module.exports = {
 
                     if (LP.Opened.includes(ess3Item)) {
                         ess3Embed.setDescription("And because you somehow got that before, you get **2000** <:frags:655840344725913600> instead!");
-                            LP.frags = LP.frags + 2000;
+                        LP.frags = LP.frags + 2000;
                     } else {
                         LP.Opened = [...LP.Opened, ess3Item];
                         LP.S = LP.S + 1;
                     }
                     LP.Ess3 = LP.Ess3 - 1;
-                    LP.save().catch(err => console.log(err));
 
                 }
                 //A skin values
@@ -477,7 +465,6 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
                 }
                 else if (["ess3-4", "ess3-5", "ess3-6", "ess3-7", "ess3-8", "ess3-9", "ess3-10"].includes(ess3Item)) {
@@ -498,7 +485,6 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -521,7 +507,6 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -544,7 +529,6 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -567,7 +551,6 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
@@ -590,11 +573,10 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
-                else if (["ess3-39", "ess3-40", "ess3-41", "ess3-48", "ess3-49", "ess3-50", "ess3-51" ].includes(ess3Item)) {
+                else if (["ess3-39", "ess3-40", "ess3-41", "ess3-48", "ess3-49", "ess3-50", "ess3-51"].includes(ess3Item)) {
 
                     ess3Embed.setColor("0xffffff");
                     ess3Embed.setAuthor(`⚫ That's a portrait for ${message.author.username}! ⚫`, message.author.avatarURL);
@@ -613,10 +595,11 @@ module.exports = {
 
                     LP.Ess3 = LP.Ess3 - 1;
 
-                    LP.save().catch(err => console.log(err));
 
 
                 }
+                LP.save().catch(err => console.log(err));
+
 
                 message.channel.send(ess3Embed);
 

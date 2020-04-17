@@ -34,7 +34,7 @@ module.exports = {
         let dice2Chance7 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000>"
 
 
-        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4, dice2Chance5, dice2Chance6];
+        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4, dice2Chance5, dice2Chance6, dice2Chance7];
 
         var fact2 = Math.floor(Math.random() * facts2.length);
         //dice2 embed
@@ -59,7 +59,7 @@ module.exports = {
         let dice1Chance5 = "One <:ess2:655840643847028751> is now in your pocket... wait is it?";
 
         let dice1Chance6 = "Yeeee soo luckyy, you get **1** <:ess3:655840571616919586>";
-        var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5];
+        var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5, dice1Chance6];
 
         var fact1 = Math.floor(Math.random() * facts1.length);
         //Dice embed 1 
@@ -83,7 +83,7 @@ module.exports = {
 
         let dice4Chance6 = "**1**<:ess3:655840571616919586> and **30**<:clue:655384523735040000> got yeeted into yo pocket :v"
 
-        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4, dice4Chance5];
+        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4, dice4Chance5, dice4Chance6];
 
         var fact4 = Math.floor(Math.random() * facts4.length);
 
@@ -107,7 +107,7 @@ module.exports = {
 
         let dice3Chance5 = "You get **10**<:clue:655384523735040000> & **1**<:ess3:655840571616919586>";
 
-        var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3, dice3Chance4];
+        var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3, dice3Chance4, dice3Chance5];
         var fact3 = Math.floor(Math.random() * facts3.length);
 
         //for dice embed 3
