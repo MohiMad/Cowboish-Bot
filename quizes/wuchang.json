@@ -19,9 +19,21 @@
 	},
 	{
 		"Question": "**Question:**\nWhat inspired Wu Chang’s A skin, “Intersection Bishounen”?",
-		"Answer": ["Junji Ito", "junji Ito"],
+		"Answer": ["Junji Ito", "junji ito", "junji", "ito"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687987804428566569/image0.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of Wu Chang’s limited edition skin?",
+		"Answer": ["Far East Wind", "far east wind", "far", "east", "wind"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700745655588618330/image0.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the (real) name of the character seen below?",
+		"Answer": ["fan wujiu", "fan", "wujiu"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700746001497063457/image0.png"
 	}
 	
 ]

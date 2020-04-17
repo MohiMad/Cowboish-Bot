@@ -22,6 +22,12 @@
 		"Answer": ["Claude", "claude"],
 		"Difficulty": "SUPER HARD :v",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700393696956383262/Du0pgVuV4AAsixQ.png?width=407&height=563"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin below?",
+		"Answer": ["azrael", "Azrael"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700746368670498887/image0.png?width=446&height=563"
 	}
 	
 ]
