@@ -14,7 +14,7 @@ const Mutes = require("../models/mutes");
 
 module.exports = async (bot) => {
 
-    const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
+    // const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
 
 
     var time = new Date();
@@ -47,8 +47,10 @@ module.exports = async (bot) => {
     }, 1800000);
 
 
+    /*
     ddbl.postStats(bot.guilds.size)
         .catch(err => console.log(err));
+        */
 
     schedule.scheduleJob("1 12 * * 1", async function () {
         let set = new Set();
