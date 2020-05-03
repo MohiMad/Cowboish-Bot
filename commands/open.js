@@ -438,7 +438,7 @@ module.exports = {
                 }
                 else if (ess3Item === "ess3-1") {
                     ess3Embed.setColor("0xfcba03");
-                    ess3Embed.setAuthor(`💛 ${message.author.username} got prisoner's S skin 💛`, message.author.avatarURL);
+                    ess3Embed.setAuthor(`💛 ${message.author.username} got Geisha's S skin 💛`, message.author.avatarURL);
                     ess3Embed.setFooter("What if... you get it ingame?");
 
                     if (LP.Opened.includes(ess3Item)) {

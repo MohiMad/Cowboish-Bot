@@ -43,8 +43,8 @@ module.exports = {
             .setColor("RANDOM")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
         <:ess1:655840713904488469> | **Essence s10-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-1*__
-        <:ess3:655840571616919586> | **Essence s10-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-2*__
-        <:ess2:655840643847028751>  | **Essence s10-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-3*__
+        <:ess2:655840643847028751> | **Essence s10-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-2*__
+        <:ess3:655840571616919586> | **Essence s10-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
