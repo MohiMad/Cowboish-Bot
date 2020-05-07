@@ -30,7 +30,7 @@ module.exports = async (bot) => {
         `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
-        `milestone ${bot.guilds.size}/500`,
+        `milestone ${bot.guilds.size}/1000`,
         `${bot.guilds.size} guilds | ${bot.users.size} users`
 
     ];
