@@ -28,5 +28,11 @@
 		"Answer": ["Brooke Rose", "brooke rose", "brooke", "rose"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700392224407420968/istock_000023765401_small.png?width=1002&height=563"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin below?",
+		"Answer": ["Lunar Phase", "lunar phase", "lunar", "phase"],
+		"Difficulty": "Easy",
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/707961740133924894/image0.png"
     }
 ]
