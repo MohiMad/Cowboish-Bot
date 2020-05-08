@@ -94,6 +94,12 @@ module.exports = {
             else if (LP.frames.equipped === "frame6") {
                 equipped = "<:frame6:694820135306919977>";
             }
+            else if (LP.frames.equipped === "frame7") {
+                equipped = "<:frame7:697804971227349103>";
+            }
+            else if (LP.frames.equipped === "frame8") {
+                equipped = "<:frame8:706555854513766490>";
+            }
             else {
                 equipped = "None!";
             }
@@ -132,6 +138,13 @@ module.exports = {
             LP.save().catch(e => console.log(e));
 
             freeToUse(message, "frame7");
+
+        }
+        else if (["frame8"].includes(args[1].toLowerCase())) {
+            LP.frames.equipped = "frame8";
+            LP.save().catch(e => console.log(e));
+
+            freeToUse(message, "frame8");
 
         }
         else if (["none", "no"].includes(args[1].toLowerCase())) {
