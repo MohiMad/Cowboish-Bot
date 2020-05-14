@@ -67,7 +67,7 @@ module.exports = {
                 ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `>buy <ItemHERE>`\n\nDunno what to buy? do `>shop` to check what you can buy")
             }
             //buy essences here
-            else if (["s10-2", "s102"].includes(args[1].toLowerCase()) || args[1] === "2") {
+            else if (["s11-2", "s112", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 
@@ -82,7 +82,7 @@ module.exports = {
                 }
             }
 
-            else if (["s10", "s10-1"].includes(args[1].toLowerCase()) || args[1] === "1") {
+            else if (["s111", "s11-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more`)
 
@@ -97,7 +97,7 @@ module.exports = {
                 }
             }
 
-            else if (["s10-3", "s103"].includes(args[1].toLowerCase()) || args[1] === "3") {
+            else if (["s11-3", "s113", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 
@@ -726,7 +726,7 @@ module.exports = {
                 }
 
             }
-            else if (["Ann", "sister", "nun"].includes(args[1].toLowerCase())) {
+            else if (["ann", "sister", "nun"].includes(args[1].toLowerCase())) {
                 if (LP.Clues < 4508) {
                     message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                 }
@@ -756,6 +756,23 @@ module.exports = {
                     LP.Hunters.BloodyQueen = true;
 
                     buyEmbed.setDescription("Congrats! you bought bloodyqueen r u happy now?");
+                    message.channel.send(buyEmbed);
+
+                    LP.save().catch(err => console.log(err));
+                }
+            }
+            else if (["violinist", "musician"].includes(args[1].toLowerCase())) {
+                if (LP.Clues < 4508) {
+                    message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
+                }
+                else if (LP.Hunters.NewHunta === true) {
+                    message.reply("Hey! You have already bought Violinist, why buy him again? :v");
+                }
+                else {
+                    LP.Clues = LP.Clues - 4508;
+                    LP.Hunters.NewHunta = true;
+
+                    buyEmbed.setDescription("You now own Violinist and can play as him by doing `>hunt violinist`");
                     message.channel.send(buyEmbed);
 
                     LP.save().catch(err => console.log(err));

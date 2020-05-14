@@ -49,6 +49,7 @@ module.exports = {
             } else {
                 flair = "➤ " + flair
             }
+            
 
 
             const embeed = new RichEmbed()

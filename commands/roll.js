@@ -1,494 +1,198 @@
 const { RichEmbed } = require('discord.js');
 const cooldown = new Set();
 const { newLP, coolEmbed, ErrorMsg } = require("../functions.js");
+const logicPath = require("../models/logicpath.js");
 
 module.exports = {
     name: 'roll',
     description: "rolls a 4 sided dice",
-    execute(message, args, bot) {
+    execute: async (message, args, bot) => {
 
-
-        //------------------Some value here
 
         //random dice chances
-        let numba = 4;
-        let imagNumba = Math.floor(Math.random() * (numba - 1 + 1)) + 1;
-        let rollattach = 'dice' + imagNumba + ".gif";
+        let imagNumba = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
         //ends here
 
+        let LP = await logicPath.findOne({ UserID: message.author.id });
 
-
-        //if dice result is two
-        let dice2Chance1 = 'Here! take these **20** clues <:clue:655384523735040000>';
-
-        let dice2Chance2 = "Here is your **10** clues <:clue:655384523735040000> and **1**<:ess1:655840713904488469> do ``open s10-1`` to open it!";
-
-        let dice2Chance3 = "Noice you get **20** inspirations <:inspirations:655840409674711060> and **10** clues <:clue:655384523735040000>";
-
-        let dice2Chance4 = "You walked 2 steps in your logicpath and got **20** clues <:clue:655384523735040000>";
-
-        let dice2Chance5 = "You get **1** <:ess1:655840713904488469> and **10** <:clue:655384523735040000> use them wisely!";
-
-        let dice2Chance6 = "Congrats! here is your **1** <:ess2:655840643847028751> use it wisely";
-
-        let dice2Chance7 = "You get **1** <:ess3:655840571616919586> and **10** <:clue:655384523735040000>"
-
-
-        var facts2 = [dice2Chance1, dice2Chance2, dice2Chance3, dice2Chance4, dice2Chance5, dice2Chance6, dice2Chance7];
-
-        var fact2 = Math.floor(Math.random() * facts2.length);
-        //dice2 embed
-
-        const diceEmbed = new RichEmbed()
-            .setTitle(`**${message.author.username}** rolled that dice <:dice:655384578499936257> and got a **2** `)
-            .setDescription(facts2[fact2])
-            .attachFiles(["./dice/" + rollattach])
-            .setThumbnail('attachment://' + rollattach)
-            .setColor("RANDOM");//embed2 ends here
-        //____________________________________
-
-        //facts1 here
-        let dice1Chance1 = "Rip thats only a **10** clues <:clue:655384523735040000> for you";
-
-        let dice1Chance2 = "I feel bad for you, but you get nothing :v";
-
-        let dice1Chance3 = "You walked **1** step in your logicpath and got **10** clues <:clue:655384523735040000>";
-
-        let dice1Chance4 = "You were **1** step away from getting **1**<:ess1:655840713904488469> and now you have it! do ``open s10-1`` to open it.";
-
-        let dice1Chance5 = "One <:ess2:655840643847028751> is now in your pocket... wait is it?";
-
-        let dice1Chance6 = "Yeeee soo luckyy, you get **1** <:ess3:655840571616919586>";
-        var facts1 = [dice1Chance1, dice1Chance2, dice1Chance3, dice1Chance4, dice1Chance5, dice1Chance6];
-
-        var fact1 = Math.floor(Math.random() * facts1.length);
-        //Dice embed 1 
-        const diceEmbed1 = new RichEmbed()
-            .setTitle(`**${message.author.username}** rolled a <:dice:655384578499936257> dice but they unlucky af so they get a **1** `)
-            .setDescription(facts1[fact1])
-            .attachFiles(["./dice/" + rollattach])
-            .setThumbnail('attachment://' + rollattach)
-            .setColor("RANDOM");
-        //____________________________________
-
-        let dice4Chance1 = "The detective in your logicpath walked **4** steps, you get no essences but **40** clues <:clue:655384523735040000> were added to your inventory";
-
-        let dice4Chance2 = "Noice! you get **1**<:ess2:655840643847028751>, **20** clues <:clue:655384523735040000> and **60**<:inspirations:655840409674711060>";
-
-        let dice4Chance3 = "You walked **4** steps in your logicpath and got 40 clues <:clue:655384523735040000> and **1** <:ess1:655840713904488469>";
-
-        let dice4Chance4 = "Your reward: **1** <:ess1:655840713904488469> & **1** <:ess2:655840643847028751> - Two birds with one stone :/\nYou can open the <:ess1:655840713904488469> essence by doing `>open s10-1`";
-
-        let dice4Chance5 = "Here ya go! you get **1** <:ess1:655840713904488469> and **20** <:clue:655384523735040000>\nTo open the essence you just got, do `>open s10-1`";
-
-        let dice4Chance6 = "**1**<:ess3:655840571616919586> and **30**<:clue:655384523735040000> got yeeted into yo pocket :v"
-
-        var facts4 = [dice4Chance1, dice4Chance2, dice4Chance3, dice4Chance4, dice4Chance5, dice4Chance6];
-
-        var fact4 = Math.floor(Math.random() * facts4.length);
-
-
-        //Dice embed no 4
-        const diceEmbed4 = new RichEmbed()
-            .setTitle(`**${message.author.username}** rolled a dice <:dice:655384578499936257> and got a ` + "**4**, lucky you!")
-            .setDescription(facts4[fact4])
-            .attachFiles(["./dice/" + rollattach])
-            .setThumbnail('attachment://' + rollattach)
-            .setColor("RANDOM");
-        //_____________________________________
-
-        let dice3Chance1 = 'You walked 3 steps in your logicpath and got 30 clues <:clue:655384523735040000>';
-
-        let dice3Chance2 = "Eyy! you got **20** clues <:clue:655384523735040000> and **1** <:ess2:655840643847028751>";
-
-        let dice3Chance3 = "Oh look, you got **10** clues <:clue:655384523735040000> and **50** <:inspirations:655840409674711060>";
-
-        let dice3Chance4 = "**20** <:clue:655384523735040000> & **1** <:ess1:655840713904488469> are now yours\nTo open the essence do `>open 1` ";
-
-        let dice3Chance5 = "You get **10**<:clue:655384523735040000> & **1**<:ess3:655840571616919586>";
-
-        var facts3 = [dice3Chance1, dice3Chance2, dice3Chance3, dice3Chance4, dice3Chance5];
-        var fact3 = Math.floor(Math.random() * facts3.length);
-
-        //for dice embed 3
-        const diceEmbed3 = new RichEmbed()
-            .setTitle(`Looks like **${message.author.username}** got a ` + " **3** from the dice <:dice:655384578499936257> they just rolled.")
-            .setDescription(facts3[fact3])
-            .attachFiles(["./dice/" + rollattach])
-            .setThumbnail('attachment://' + rollattach)
-            .setColor("RANDOM");
-        //_______________________________________________
-
-
-        const logicPath = require("../models/logicpath.js");
-
-        logicPath.findOne({
-            UserID: message.author.id
-
-        }, (err, LP) => {
-
-            if (err) console.log(err);
-
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-            else if (!LP) {
-                newLP(message)
-            }             //DICE 1 EVENT
-
-
-            else if (cooldown.has(message.author.id)) {
-                if (message.deletable) message.delete();
-
-                coolEmbed(message, "Ooof im tired", "To keep spamming away, there is a cooldown for this command set to **3** seconds\nWait until it ends and try to execute this command again :D")
-            }
-
-            else if (LP.Dices === 0) {
-
-                const noEmbed = new RichEmbed()
-                    .setTitle("Oops looks like you ran out of dices <:dice:655384578499936257>")
-                    .setColor("RANDOM")
-                    .setDescription("That's sad :c\nBut don't worry! you can get more dice by using `>quick`, `>daily` or `>hunt` command")
-                    .setFooter("For more info, do >help logicpath");
-
-                return message.channel.send(noEmbed);
-
-
-            }
-
-            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance1) {
-
-                message.channel.send(diceEmbed1)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 10;
-
-                LP.logic = LP.logic + 1;
-
-                LP.save().catch(err => console.log(err));
-
-
-            }
-
-            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance3) {
-                message.channel.send(diceEmbed1)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Dices = LP.Dices - 1;
-
-                LP.Clues = LP.Clues + 10;
-
-                LP.logic = LP.logic + 1;
-
-                LP.save().catch(err => console.log(err));
-
-
-            }
-            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance2) {
-                message.channel.send(diceEmbed1)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.logic = LP.logic + 1;
-                LP.Dices = LP.Dices - 1;
-
-                LP.save().catch(err => console.log(err));
-
-
-
-            }
-
-            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance4) {
-                message.channel.send(diceEmbed1)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.logic = LP.logic + 1;
-
-                LP.Dices = LP.Dices - 1;
-
-
-                LP.Ess1 = LP.Ess1 + 1;
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance5) {
-                message.channel.send(diceEmbed1)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.logic = LP.logic + 1;
-
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess2 = LP.Ess2 + 1;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === 'dice1.gif' && (facts1[fact1]) === dice1Chance6) {
-                message.channel.send(diceEmbed1)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.logic = LP.logic + 1;
-
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess3 = LP.Ess3 + 1;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            //Dice 2 event
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance1) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.logic = LP.logic + 2;
-
-                LP.Clues = LP.Clues + 20;
-                LP.Dices = LP.Dices - 1;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance2) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.logic = LP.logic + 2;
-
-                LP.Clues = LP.Clues + 10;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess1 = LP.Ess1 + 1;
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance3) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-
-
-                LP.logic = LP.logic + 2;
-                LP.Clues = LP.Clues + 10;
-                LP.Inspirations = LP.Inspirations + 20;
-                LP.Dices = LP.Dices - 1;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance4) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 20;
-                LP.logic = LP.logic + 2;
-                LP.Dices = LP.Dices - 1;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance5) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 10;
-                LP.logic = LP.logic + 2;
-                LP.Dices = LP.Dices - 1;
-                LP.Ess1 = LP.Ess1 + 1;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance6) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-                LP.logic = LP.logic + 2;
-                LP.Dices = LP.Dices - 1;
-                LP.Ess2 = LP.Ess2 + 1;
-                LP.Clues = LP.Clues + 10;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            else if (rollattach === "dice2.gif" && (facts2[fact2]) === dice2Chance7) {
-                message.channel.send(diceEmbed)
-                    .then(cooldown.add(message.author.id));
-
-                LP.logic = LP.logic + 2;
-                LP.Dices = LP.Dices - 1;
-                LP.Ess3 = LP.Ess3 + 1;
-                LP.Clues = LP.Clues + 10;
-
-                LP.save().catch(err => console.log(err));
-
-            }
-            //dice 3 here
-            else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance1) {
-                message.channel.send(diceEmbed3)
-                    .then(cooldown.add(message.author.id));
-
-
-
-                LP.Clues = LP.Clues + 30;
-                LP.Dices = LP.Dices - 1;
-
-                LP.logic = LP.logic + 3;
-
-                LP.save().catch(err => console.log(err));
-            }
-
-            else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance2) {
-                message.channel.send(diceEmbed3)
-                    .then(cooldown.add(message.author.id));
-
-
-
-                LP.Clues = LP.Clues + 20;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess2 = LP.Ess2 + 1;
-                LP.logic = LP.logic + 3;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance3) {
-                message.channel.send(diceEmbed3)
-                    .then(cooldown.add(message.author.id));
-
-
-
-                LP.Clues = LP.Clues + 30;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Inspirations = LP.Inspirations + 50;
-                LP.logic = LP.logic + 3;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance4) {
-                message.channel.send(diceEmbed3)
-                    .then(cooldown.add(message.author.id));
-
-                LP.Clues = LP.Clues + 20;
-                LP.Dices = LP.Dices - 1;
-                LP.logic = LP.logic + 3;
-                LP.Ess1 = LP.Ess1 + 1;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice3.gif" && (facts3[fact3]) === dice3Chance5) {
-                message.channel.send(diceEmbed3)
-                    .then(cooldown.add(message.author.id));
-
-                LP.Clues = LP.Clues + 10;
-                LP.Dices = LP.Dices - 1;
-                LP.logic = LP.logic + 3;
-                LP.Ess3 = LP.Ess3 + 1;
-
-                LP.save().catch(err => console.log(err));
-            }
-            //dice 4 here
-
-            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance1) {
-                message.channel.send(diceEmbed4)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 40;
-                LP.Dices = LP.Dices - 1;
-
-                LP.logic = LP.logic + 4;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance2) {
-                message.channel.send(diceEmbed4)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Ess2 = LP.Ess2 + 1;
-                LP.Inspirations = LP.Inspirations + 60;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Clues = LP.Clues + 20;
-                LP.logic = LP.logic + 4;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance3) {
-                message.channel.send(diceEmbed4)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 40;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess1 = LP.Ess1 + 1;
-                LP.logic = LP.logic + 4;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance4) {
-                message.channel.send(diceEmbed4)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 10;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess1 = LP.Ess1 + 1;
-                LP.Ess2 = LP.Ess2 + 1;
-
-                LP.logic = LP.logic + 4;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance5) {
-                message.channel.send(diceEmbed4)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 20;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess1 = LP.Ess1 + 1;
-
-                LP.logic = LP.logic + 4;
-
-                LP.save().catch(err => console.log(err));
-            }
-            else if (rollattach === "dice4.gif" && (facts4[fact4]) === dice4Chance6) {
-                message.channel.send(diceEmbed4)
-                    .then(cooldown.add(message.author.id));
-
-
-                LP.Clues = LP.Clues + 30;
-                LP.Dices = LP.Dices - 1;
-
-                LP.Ess3 = LP.Ess3 + 1;
-
-                LP.logic = LP.logic + 4;
-
-                LP.save().catch(err => console.log(err));
-            }
+        async function diceLoad(message, loot) {
+            let m = await message.channel.send("<:dice:655384578499936257> **Rolling the dice**");
 
             setTimeout(() => {
-                cooldown.delete(message.author.id)
+                m.edit("<:dice:655384578499936257> **Rolling the dice.**");
+
+            }, 500);
+
+            setTimeout(() => {
+                m.edit("<:dice:655384578499936257> **Rolling the dice..**");
+
+            }, 1000);
+
+            setTimeout(() => {
+                m.edit("<:dice:655384578499936257> **Rolling the dice...**");
+
+            }, 1500);
+
+            setTimeout(() => {
+                m.edit("<:dice:655384578499936257> **Dice results:**\n**" + loot + "**");
+
+            }, 2000);
+
+        }
+
+
+
+        if (!LP) {
+            newLP(message);
+        }
+        else if (cooldown.has(message.author.id)) {
+            if (message.deletable) message.delete();
+
+            return coolEmbed(message, "Ooof im tired", "To keep spamming away, there is a cooldown for this command and it's set to **3** seconds\nWait until it ends and try to execute this command again :D");
+        }
+
+        else if (LP.Dices === 0) {
+
+            const noEmbed = new RichEmbed()
+                .setTitle("Oops looks like you ran out of dices <:dice:655384578499936257>")
+                .setColor("RANDOM")
+                .setDescription("**You don't have any Dices left**\nBut don't worry! You can get more dice by doing `>quick`, `>daily` or `>hunt`")
+                .setFooter("For more info, do >help logicpath");
+
+            return message.channel.send(noEmbed);
+
+        }
+        else {
+
+            let diceChances =
+                [
+                    //We begin with 1 dice chances
+
+                    "10 <:clue:655384523735040000>", //1
+                    "20 <:inspirations:655840409674711060>", //2
+                    "1 <:ess1:655840713904488469>", //3
+                    "Nothing", //4
+
+                    //We go dice 2 results
+
+                    "20 <:clue:655384523735040000>", //5
+                    "10 <:clue:655384523735040000>, and 1 <:ess1:655840713904488469>", //6
+                    "1 <:ess1:655840713904488469>, and 1 <:ess2:655840643847028751>", //7
+                    "20 <:clue:655384523735040000>", //8
+                    "50 <:inspirations:655840409674711060>, and 30 <:clue:655384523735040000>", //9
+
+                    //We go dice 3 chances
+
+                    "30 <:clue:655384523735040000>, and 1 <:ess1:655840713904488469>", //10
+                    "10 <:clue:655384523735040000>, and 20 <:inspirations:655840409674711060>", //11
+                    "30 <:clue:655384523735040000>", //12
+                    "10 <:clue:655384523735040000>, 1 <:ess1:655840713904488469>, and 1 <:ess2:655840643847028751>", //13
+
+                    //Dice 4 chances now??
+
+                    "40 <:clue:655384523735040000>", //14
+                    "20 <:clue:655384523735040000>, 1 <:ess1:655840713904488469>, and 60 <:inspirations:655840409674711060>", //15
+                    "20 <:clue:655384523735040000>, and 1 <:ess1:655840713904488469>" //16
+
+                ];
+
+            diceChance = Math.floor(Math.random() * diceChances.length);
+
+
+            cooldown.add(message.author.id);
+
+
+            if (diceChance === 0) {
+                LP.Clues = LP.Clues + 1;
+            }
+            if (diceChance === 1) {
+                LP.Inspirations = LP.Inspirations + 20;
+            }
+            if (diceChance === 2) {
+                LP.Ess1 = LP.Ess1 + 1;
+            }
+            if (diceChance === 3) {
+                LP.Clues = LP.Clues + 1;
+            }
+
+            //Here ends dice 1
+
+            if (diceChance === 4) {
+                LP.Clues = LP.Clues + 20;
+            }
+            if (diceChance === 5) {
+                LP.Clues = LP.Clues + 10;
+                LP.Ess1 = LP.Ess1 + 1;
+            }
+            if (diceChance === 6) {
+                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
+            }
+            if (diceChance === 7) {
+                LP.Clues = LP.Clues + 20;
+            }
+            if (diceChance === 8) {
+                LP.Clues = LP.Clues + 30;
+                LP.Inspirations = LP.Inspirations + 50;
+            }
+
+            //Dice 2 ends here 
+
+            if (diceChance === 9) {
+                LP.Clues = LP.Clues + 30;
+                LP.Ess1 = LP.Ess1 + 1;
+            }
+            if (diceChance === 10) {
+                LP.Clues = LP.Clues + 10;
+                LP.Inspirations = LP.Inspirations + 20;
+            }
+            if (diceChance === 11) {
+                LP.Clues = LP.Clues + 30;
+            }
+            if (diceChance === 12) {
+                LP.Clues = LP.Clues + 10;
+                LP.Ess1 = LP.Ess1 + 1;
+                LP.Ess2 = LP.Ess2 + 1;
+            }
+
+            //Dice 3 ends 
+
+            if (diceChance === 13) {
+                LP.Clues = LP.Clues + 40;
+            }
+            if (diceChance === 14) {
+                LP.Clues = LP.Clues + 20;
+                LP.Ess1 = LP.Ess1 + 1;
+                LP.Inspirations = LP.Inspirations + 60;
+            }
+            if (diceChance === 15) {
+                LP.Clues = LP.Clues + 20;
+                LP.Ess1 = LP.Ess1 + 1;
+            }
+
+            //end of dices 4            
+
+            diceLoad(message, diceChances[diceChance]);
+
+            cooldown.add(message.author.id);
+
+
+            LP.Dices = LP.Dices - 1;
+
+            LP.logic = LP.logic + imagNumba;
+
+
+            LP.save().catch(e => console.log(e));
+
+            setTimeout(() => {
+                cooldown.delete(message.author.id);
 
             }, 3000);
 
+        }
 
-        });
+
+
 
 
 

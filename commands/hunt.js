@@ -210,6 +210,17 @@ module.exports = {
 
                 quiz(message, WU_item.Question, WU_item.Answer, WU_item.Attachment, WU_item.Difficulty, "Wuu chaguussss").then(cooldown.add(message.author.id));
             }
+        } else if (["violinist", "musician"].includes(args[1].toLowerCase())) {
+            if (LP.Hunters.NewHunta === false) {
+                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+
+            } else {
+                let vio_File = require("../quizes/violinist.json");
+
+                let vio_item = vio_File[Math.floor(Math.random() * vio_File.length)];
+
+                quiz(message, vio_item.Question, vio_item.Answer, vio_item.Attachment, vio_item.Difficulty, "Violinist").then(cooldown.add(message.author.id));
+            }
         }
 
 

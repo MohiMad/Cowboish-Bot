@@ -104,14 +104,14 @@ module.exports = {
 
             }
         }
-        else if (["ess1", "s10-1", "1"].includes(args[3].toLowerCase())) {
+        else if (["ess1", "s11-1", "1"].includes(args[3].toLowerCase())) {
 
             if (isNaN(args[2]) === true) {
-                return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `>gift`" + ` ${message.author}` + "` 10 s10-1`");
+                return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `>gift`" + ` ${message.author}` + "` 10 s11-1`");
 
             }
             else if (LP.Ess1 < args[2]) {
-                return ErrorMsg(bot, message, "You don't have enough s10-1 essence(s) you have **" + LP.Ess1 + "** s10-1 essence(s)!");
+                return ErrorMsg(bot, message, "You don't have enough s11-1 essence(s) you have **" + LP.Ess1 + "** s11-1 essence(s)!");
 
             } else {
                 LP.Ess1 = LP.Ess1 - Number(args[2]);
@@ -131,13 +131,13 @@ module.exports = {
 
             }
         }
-        else if (["ess2", "s10-2", "2"].includes(args[3].toLowerCase())) {
+        else if (["ess2", "s11-2", "2"].includes(args[3].toLowerCase())) {
             if (isNaN(args[2]) === true) {
-                return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `>gift`" + ` ${message.author}` + "` 10 s10-2`");
+                return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `>gift`" + ` ${message.author}` + "` 10 s11-2`");
 
             }
             else if (LP.Ess2 < args[2]) {
-                return ErrorMsg(bot, message, "You don't have enough s10-2 essence(s) you have **" + LP.Ess2 + "** s10-2 essence(s)!");
+                return ErrorMsg(bot, message, "You don't have enough s11-2 essence(s) you have **" + LP.Ess2 + "** s11-2 essence(s)!");
 
             } else {
                 LP.Ess2 = LP.Ess2 - Number(args[2]);
@@ -157,13 +157,13 @@ module.exports = {
 
             }
         }
-        else if (["ess3", "s10-3", "3"].includes(args[3].toLowerCase())) {
+        else if (["ess3", "s11-3", "3"].includes(args[3].toLowerCase())) {
             if (isNaN(args[2]) === true) {
-                return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `>gift`" + ` ${message.author}` + "` 10 s10-3`");
+                return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `>gift`" + ` ${message.author}` + "` 10 s11-3`");
 
             }
             else if (LP.Ess3 < args[2]) {
-                return ErrorMsg(bot, message, "You don't have enough s10-3 essence(s) you have **" + LP.Ess3 + "** s10-3 essence(s)!");
+                return ErrorMsg(bot, message, "You don't have enough s11-3 essence(s) you have **" + LP.Ess3 + "** s11-3 essence(s)!");
 
             } else {
                 LP.Ess3 = LP.Ess3 - Number(args[2]);
@@ -182,7 +182,7 @@ module.exports = {
 
             }
         } else {
-            return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\nHere is a list of giftable items\n\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n<:ess1:655840713904488469> | Shortcuts: `ess1`, `s10-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s10-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s10-3`, `3`\nExample: `>gift`" + ` ${message.author}` + "` 10 fragments`");
+            return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\nHere is a list of giftable items\n\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n<:ess1:655840713904488469> | Shortcuts: `ess1`, `s11-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s11-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s11-3`, `3`\nExample: `>gift`" + ` ${message.author}` + "` 10 fragments`");
         }
 
 

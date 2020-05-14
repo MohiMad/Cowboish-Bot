@@ -42,9 +42,9 @@ module.exports = {
             .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `>buy <itemID>`")
             .setColor("RANDOM")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
-        <:ess1:655840713904488469> | **Essence s10-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-1*__
-        <:ess2:655840643847028751> | **Essence s10-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-2*__
-        <:ess3:655840571616919586> | **Essence s10-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s10-3*__
+        <:ess1:655840713904488469> | **Essence s11-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-1*__
+        <:ess2:655840643847028751> | **Essence s11-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-2*__
+        <:ess3:655840571616919586> | **Essence s11-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
@@ -280,10 +280,16 @@ module.exports = {
                 huntaEmbed.addField("💣 No.26", "~~No.26 - Price __*4508*__~~");
             }
             if (LP.Hunters.Sister === false) {
-                huntaEmbed.addField("👩 Sister", "Sister - Price __*4508*__ <:clue:655384523735040000>");
+                huntaEmbed.addField("👩 Ann", "Ann - Price __*4508*__ <:clue:655384523735040000>");
             }
             else {
-                huntaEmbed.addField("👩 Sister", "~~Sister - Price __*4508*__~~");
+                huntaEmbed.addField("👩 Ann", "~~Ann - Price __*4508*__~~");
+            }
+            if (LP.Hunters.NewHunta === false) {
+                huntaEmbed.addField("🎻 Violinist", "Violinist - Price __*4508*__ <:clue:655384523735040000>");
+            }
+            else {
+                huntaEmbed.addField("🎻 Violinist", "~~Violinist - Price __*4508*__~~");
             }
 
             message.channel.send(huntaEmbed);

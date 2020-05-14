@@ -29,6 +29,10 @@ module.exports = {
 
                 let memeUrl = `https://reddit.com${permalink}`;
 
+                if (title.length > 256) {
+                    title = "Joke title too long!";
+
+                }
 
                 const jokeEmbed = new RichEmbed()
                     .setTitle(title)
