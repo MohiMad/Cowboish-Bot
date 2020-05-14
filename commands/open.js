@@ -112,7 +112,7 @@ module.exports = {
 
 
                 }
-                else if (["ess-4", "ess-5", "ess-6", "ess-7", "ess-8", "ess-9"].includes(item)) {
+                else if (["ess1-4", "ess1-5", "ess1-6", "ess1-7", "ess1-8", "ess1-9"].includes(item)) {
                     s9Embed.setColor("0x2e65b8");
                     s9Embed.setAuthor(`💙 Yaay! A B skin for ${message.author.username}! 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
                     s9Embed.setFooter("So adorable! Just like you >.<");
@@ -132,7 +132,7 @@ module.exports = {
 
 
                 }
-                else if (["ess-21", "ess-22", "ess-23", "ess-24", "ess-25", "ess-26", "ess-27", "ess-28", "ess-29", "ess-30", "ess-30", "ess-31"].includes(item)) {
+                else if (["ess1-21", "ess1-22", "ess1-23", "ess1-24", "ess1-25", "ess1-26", "ess1-27", "ess1-28", "ess1-29", "ess1-30", "ess1-30", "ess1-31"].includes(item)) {
                     s9Embed.setColor("0x1BE926");
                     s9Embed.setAuthor(`💚 You get a C skin, ${message.author.username}! 💚`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
                     s9Embed.setFooter(":))");
@@ -150,7 +150,7 @@ module.exports = {
                     LP.Ess1 = LP.Ess1 - 1;
 
                 }
-                else if (["ess-37", "ess-38", "ess-39", "ess-40", "ess-41", "ess-42", "ess-43", "ess-44", "ess-45", "ess-46", "ess-47"].includes(item)) {
+                else if (["ess1-37", "ess1-38", "ess1-39", "ess1-40", "ess1-41", "ess1-42", "ess1-43", "ess1-44", "ess1-45", "ess1-46", "ess1-47"].includes(item)) {
 
                     s9Embed.setColor("0xffffff");
                     s9Embed.setAuthor(`🖤 Poor ${message.author.username}, they got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
@@ -171,7 +171,7 @@ module.exports = {
 
 
                 }
-                else if (["ess-11", "ess-12", "ess-13", "ess-32", "ess-33", "ess-34", "ess-35", "ess-36"].includes(item)) {
+                else if (["ess1-11", "ess1-12", "ess1-13", "ess1-32", "ess1-33", "ess1-34", "ess1-35", "ess1-36"].includes(item)) {
 
                     s9Embed.setColor("0x2e65b8");
                     s9Embed.setAuthor(`💙 That's a standbymotion for ${message.author.username}! 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
@@ -192,7 +192,7 @@ module.exports = {
 
 
                 }
-                else if (["ess-10", "ess-17", "ess-18", "ess-19", "ess-20"].includes(item)) {
+                else if (["ess1-10", "ess1-17", "ess1-18", "ess1-19", "ess1-20"].includes(item)) {
 
                     s9Embed.setColor("0x2e65b8");
                     s9Embed.setAuthor(`💙 You get an emote, ${message.author.username} 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
@@ -212,7 +212,7 @@ module.exports = {
 
 
 
-                } else if (["ess-10", "ess-17", "ess-18", "ess-19", "ess-20"].includes(item)) {
+                } else if (["ess1-14","ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51"].includes(item)) {
 
                     s9Embed.setColor("0xffffff");
                     s9Embed.setAuthor(`🖤 You get a portrait, ${message.author.username} 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
