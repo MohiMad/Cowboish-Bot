@@ -59,7 +59,7 @@ module.exports = {
 
                 const s9Embed = new RichEmbed()
                     .attachFiles(["./essences/s11-1/" + item + ".jpg"])
-                    .setImage('attachment://' + item);
+                    .setImage('attachment://' + item + ".jpg");
 
 
                 if (LP.Ess1 === 0) {
