@@ -93,7 +93,8 @@ const LPSchema = mongoose.Schema({
         frame5: Boolean,
         frame6: Boolean,
         equipped: String
-    }
+    },
+    dangan: Number
 
 
 });

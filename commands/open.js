@@ -19,6 +19,8 @@ module.exports = {
         var exmple = "`>open 1` to open a `s11-1` <:ess1:655840713904488469> essence";
         var stats_cmd = "`>open stats <essenceID>`"
 
+        var dangan_cmsd = "`danganronpa` or `dangan`";
+
         const noargsEmbed = new RichEmbed()
             .setTitle("Please provide one of the essences ID after the command")
             .setColor("RANDOM")
@@ -27,9 +29,13 @@ module.exports = {
 
                         <:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ ${s10_cmd}
 
-                        <:Ess1:655840571616919586> | **Essence s11-2** ─ ID ➜ ${s10_2_cmd}
+                        <:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ ${s10_2_cmd}
 
-                        <:ess2:655840643847028751> | **Essence s11-3** ─ ID ➜ ${s10_3_cmd}
+                        <:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ ${s10_3_cmd}
+
+                        **〘 TIME LIMITED! 〙**
+
+                        <:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ ${dangan_cmsd}
 
                         Example: ${exmple}
 
@@ -212,7 +218,7 @@ module.exports = {
 
 
 
-                } else if (["ess1-14","ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51"].includes(item)) {
+                } else if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51"].includes(item)) {
 
                     s9Embed.setColor("0xffffff");
                     s9Embed.setAuthor(`🖤 You get a portrait, ${message.author.username} 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
@@ -238,8 +244,135 @@ module.exports = {
 
                 message.channel.send(s9Embed);
 
+            } else if (["danganronpa", "dangan"].includes(args[1].toLowerCase())) {
+
+                let rNyumber = Math.floor(Math.random() * (35 - 1 + 1)) + 1;
+
+                let danganItem = "dangan-" + rNyumber;
+
+                const danganEmbed = new RichEmbed()
+                    .attachFiles(["./essences/danganronpa/" + danganItem + ".jpg"])
+                    .setImage('attachment://' + danganItem + ".jpg");
+
+
+                if (LP.dangan === 0) {
+                    return ErrorMsg(bot, message, "You don't have any <:danganronpa_ess:715502686891540520> `danganronpa` essences!\nTry rolling some dices or buy some from the shop!")
+
+                }
+                else if (danganItem === "dangan-1") {
+                    danganEmbed.setColor("0xfcba03");
+                    danganEmbed.setAuthor(`💛 ${message.author.username} gets Monokuma 💛`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    danganEmbed.setFooter("Sooo cute i caaaan't >u<");
+
+                    LP.S = LP.S + 1;
+                    LP.Opened = [...LP.Opened, danganItem];
+
+
+                    LP.dangan = LP.dangan - 1;
+
+                }
+                //A skin values
+                else if (["dangan-2", "dangan-3", "dangan-4"].includes(danganItem)) {
+                    danganEmbed.setColor("0xbb2af5");
+                    danganEmbed.setAuthor(`💜 ${message.author.username} gets an A skin 💜`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    danganEmbed.setFooter("Imagine me transfering that to your real Identity V acc :3");
+
+                    if (LP.Opened.includes(danganItem)) {
+                        danganEmbed.setDescription("You already got that skin before! Here, take these **1000** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 1000;
+                    }
+                    else {
+                        LP.A = LP.A + 1;
+                        LP.Opened = [...LP.Opened, danganItem];
+                    }
+
+                    LP.dangan = LP.dangan - 1;
+
+                } else if (["dangan-14", "dangan-15", "dangan-16", "dangan-17", "dangan-18", "dangan-19", ""].includes(danganItem)) {
+
+                    danganEmbed.setColor("0xffffff");
+                    danganEmbed.setAuthor(`🖤 ${message.author.username} got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    danganEmbed.setFooter("Poor you :'D");
+
+                    if (LP.Opened.includes(danganItem)) {
+                        danganEmbed.setDescription("You have this item already! Here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                    }
+                    else {
+                        LP.D = LP.D + 1;
+
+                        LP.Opened = [...LP.Opened, danganItem];
+                    }
+
+                    LP.dangan = LP.dangan - 1;
+
+
+
+                }
+                else if (["dangan-5", "dangan-6", "dangan-7", "dangan-8"].includes(danganItem)) {
+
+                    danganEmbed.setColor("0x2e65b8");
+                    danganEmbed.setAuthor(`💙 Yee a standbymotion for ${message.author.username}! 💙`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    danganEmbed.setFooter(".-.");
+
+                    if (LP.Opened.includes(danganItem)) {
+                        danganEmbed.setDescription("You have this item already! here, take these **72** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 72;
+                    }
+                    else {
+                        LP.B = LP.B + 1;
+
+                        LP.Opened = [...LP.Opened, danganItem];
+                    }
+
+                    LP.dangan = LP.dangan - 1;
+
+                }
+                else if (["dangan-9", "dangan-10", "dangan-11", "dangan-12", "dangan-13"].includes(danganItem)) {
+
+                    danganEmbed.setColor("0x2e65b8");
+                    danganEmbed.setAuthor(`💙 You get an emote, ${message.author.username} 💙`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    danganEmbed.setFooter("Cute >.<");
+
+                    if (LP.Opened.includes(danganItem)) {
+                        danganEmbed.setDescription("You have this item already! Here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                    }
+                    else {
+                        LP.B = LP.B + 1;
+
+                        LP.Opened = [...LP.Opened, danganItem];
+                    }
+
+                    LP.dangan = LP.dangan - 1;
+
+
+
+                } else if (["dangan-20", "dangan-21", "dangan-22", "dangan-23", "dangan-24", "dangan-25", "dangan-26", "dangan-27", "dangan-28", "dangan-29", "dangan-30", "dangan-31", "dangan-32", "dangan-33", "dangan-34", "dangan-35"].includes(danganItem)) {
+
+                    danganEmbed.setColor("0xffffff");
+                    danganEmbed.setAuthor(`🖤 You get a portrait, ${message.author.username} 🖤`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    danganEmbed.setFooter("._.");
+
+                    if (LP.Opened.includes(danganItem)) {
+                        danganEmbed.setDescription("You have this item already! Here, take these **36** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 36;
+                    }
+                    else {
+                        LP.D = LP.D + 1;
+
+                        LP.Opened = [...LP.Opened, danganItem];
+                    }
+
+                    LP.dangan = LP.dangan - 1;
+
+                }
+                LP.save().catch(err => console.log(err));
+
+                message.channel.send(danganEmbed);
+
             } else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
-                if (!args[2]) return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `>open stats s11-1`");
+                if (!args[2]) return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n<:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ " + dangan_cmsd + "\n\nExample: `>open stats s11-1`");
 
 
                 let e = "▔ ▔ ▔ ▔ ▔ ";
@@ -251,11 +384,11 @@ module.exports = {
                 function itemCheck(itemName, LP, path) {
                     if (LP.Opened.includes(path)) {
                         x = x + 1;
-                        e = e + `\n✅ 》${itemName}`;
+                        e = e + `\n✅ | ${itemName}`;
                     }
 
                     else {
-                        e = e + `\n❌ 》${itemName}`;
+                        e = e + `\n❌ | ${itemName}`;
                     }
                 }
 
@@ -320,6 +453,50 @@ module.exports = {
                     message.channel.send(embed);
 
 
+                } else if (["dangan", "danganronpa"].includes(args[2].toLowerCase())) {
+
+                    itemCheck("[Costume] Guard 26 - Monokuma", LP, "dangan-1");
+                    itemCheck("[Costume] Barmaid - Enoshima Junko", LP, "dangan-2");
+                    itemCheck("[Costume] Coordinator - Kyoko Kirigiri", LP, "dangan-3");
+                    itemCheck("[Costume] Lucky Guy - Makoto Naegi", LP, "dangan-4");
+                    itemCheck("[Standby Motion] Barmaid - Say Hello", LP, "dangan-5");
+                    itemCheck("[Standby Motion] Lucky Guy - Say Hello", LP, "dangan-6");
+                    itemCheck("[Standby Motion] Coordinator - Pondo", LP, "dangan-7");
+                    itemCheck("[Standby Motion] Guard 26 - Sober up", LP, "dangan-8");
+                    itemCheck(`[Emote] Guard 26 - Ultimate "Dance"`, LP, "dangan-9");
+                    itemCheck(`[Emote] Guard 26 - Ultimate "Salute"`, LP, "dangan-10");
+                    itemCheck(`[Emote] Coordinator - Ultimate "Lie Down"`, LP, "dangan-11");
+                    itemCheck(`[Emote] Barmaid - Ultimate "Juggle"`, LP, "dangan-12");
+                    itemCheck(`[Emote] Lucky Guy - Ultimate "Forward"`, LP, "dangan-13");
+                    itemCheck(`[Graffiti] Hope's Peak Academy's School Insignia`, LP, "dangan-14");
+                    itemCheck(`[Graffiti] Guard 26 - Monokuma`, LP, "dangan-15");
+                    itemCheck(`[Graffiti] Barmaid - Ultimate Analytical Prowess`, LP, "dangan-16");
+                    itemCheck(`[Graffiti] Lucky Guy - Refrence Book`, LP, "dangan-17");
+                    itemCheck(`[Graffiti] Coordinator - Refrence Book`, LP, "dangan-18");
+                    itemCheck(`[Graffiti] Guard 26 - Mondo Butter`, LP, "dangan-19");
+                    itemCheck(`[Portrait] Makoto Naegi`, LP, "dangan-20");
+                    itemCheck(`[Portrait] Kyoko Kirigiri`, LP, "dangan-21");
+                    itemCheck(`[Portrait] Sayaka Maizono`, LP, "dangan-22");
+                    itemCheck(`[Portrait] Leon Kuwata`, LP, "dangan-23");
+                    itemCheck(`[Portrait] Mondo Owada`, LP, "dangan-24");
+                    itemCheck(`[Portrait] Celesta Ludenberg`, LP, "dangan-25");
+                    itemCheck(`[Portrait] Toko Fukawa`, LP, "dangan-26");
+                    itemCheck(`[Portrait] Aoi Asahina`, LP, "dangan-27");
+                    itemCheck(`[Portrait] Byakuya Togami`, LP, "dangan-28");
+                    itemCheck(`[Portrait] Hifumi Yamada`, LP, "dangan-29");
+                    itemCheck(`[Portrait] Enoshima Junko`, LP, "dangan-30");
+                    itemCheck(`[Portrait] Chihiro Fujisaki`, LP, "dangan-31");
+                    itemCheck(`[Portrait] Sakura Ogami`, LP, "dangan-32");
+                    itemCheck(`[Portrait] Kiyotaka Ishimaru`, LP, "dangan-33");
+                    itemCheck(`[Portrait] Mukuro Ikusaba`, LP, "dangan-34");
+                    itemCheck(`[Portrait] Yasuhiro Hagakure`, LP, "dangan-35");
+
+                    embed.setDescription(`${e}`)
+                    embed.setAuthor(`Danganronpa Essence items claimed!`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
+                    embed.setFooter(`Obtained ${x} items out of 35`);
+                    
+                    message.channel.send(embed);
+                    
                 } else if (["ess2", "s11-2"].includes(args[2].toLowerCase()) || args[2] === "2") {
 
                     /*embed.setDescription(`${e}`)
@@ -337,8 +514,8 @@ module.exports = {
                     */
 
                     message.channel.send("**This essence isn't out yet!**\nCan't view");
-                } else {
-                    message.channel.send(noargsEmbed);
+                }  else {
+                    return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n<:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ " + dangan_cmsd + "\n\nExample: `>open stats s11-1`");
                 }
 
             }

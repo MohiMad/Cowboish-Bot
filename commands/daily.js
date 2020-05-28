@@ -40,7 +40,7 @@ module.exports = {
                 const dailyEmbed = new RichEmbed()
                     .setTitle("🎁 Here is your daily reward 🎁")
                     .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", 
-                    "Here! take these **5**<:dice:655384578499936257>  **500**<:clue:655384523735040000>")
+                    "Here! take these **5**<:dice:655384578499936257>, **500**<:clue:655384523735040000> and **5** <:danganronpa_ess:715502686891540520>")
                     .setColor("0xffd500")
                     .setFooter("Remember to come back the next day to get your rewards again :)");
 
@@ -50,6 +50,8 @@ module.exports = {
 
                 LP.Dices = LP.Dices + 5;
                 LP.Clues = LP.Clues + 500;
+                LP.dangan = LP.dangan + 5;
+
                 LP.save().catch(err => console.log(err));
 
 

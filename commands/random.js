@@ -6,22 +6,75 @@ module.exports = {
     execute(message, args, MohiMoo) {
 
 
-        var facts = ["1st Officer:watch::alarm_clock:", "Enchantress:skull:🌩️", "Mechanic:joystick::robot:", "Wilding:boar::apple:", "Barmaid:beer::beers:", "Acrobat🤹🏻‍♀️", "Prospector:doughnut::doughnut:", "Seer:eye_in_speech_bubble::owl:", "Forward:rugby_football::muscle:", "Embalmer:coffin::coffin:", "Dancer:dancer::dancer:", "Coordinator:gun:", "Explorer:closed_book:", "Magician:tophat:", "Perfumer:butterfly:", "Priestess:milky_way::milky_way:", "Minds eye:eye_in_speech_bubble:", "Mercenary:boxing_glove::shield:", "Gardener:bamboo::tools:", "Lucky guy:four_leaf_clover:", "Doctor👩‍⚕️:syringe:", "Thief:flashlight::heavy_dollar_sign:", "Lawyer:eyeglasses::map:", "Cowboy:cowboy::cow2:"];
+        var facts = [
+            "1st Officer",
+            "Enchantress",
+            "Mechanic",
+            "Wilding",
+            "Barmaid",
+            "Acrobat",
+            "Prospector",
+            "Seer",
+            "Forward",
+            "Embalmer",
+            "Dancer",
+            "Coordinator",
+            "Explorer",
+            "Magician",
+            "Perfumer",
+            "Priestess",
+            "Minds eye",
+            "Mercenary",
+            "Gardener",
+            "Lucky guy",
+            "Doctor",
+            "Thief",
+            "Lawyer",
+            "Cowboy",
+            "Postman",
+            "Gravekeeper",
+            "Prisoner"
+        ];
 
-        var fact = Math.floor(Math.random() * facts.length);
-
-        if (!args[1]) return message.reply('What do you want to randomize? Choose between **survivor** or  **hunter**');
-
-        if (args[1] === 'survivor')
-            message.channel.send('BE THE ' + '**' + (facts[fact]) + '**');
-
-
-        var hunters = ["Geisha:chocolate_bar::kimono:", "Smiley Face:clown::rocket:", "Feaster:octopus:", "Axe Boy:fire::pick:", "Dream Witch:pick:", "Soul Weaver:spider_web::spider:", "Hell Ember:shark::fire:", "Gamekeeper:deer:", "Mad eyes:beers::beer:", "Wu chang:umbrella2::bell:", "Ripper☁️:fog:", "Evil Reptilian:frog::lizard:", "Bloody queen:rose::knife:", "No. 26:bomb::bomb:"];
+        var hunters = [
+            "Geisha",
+            "Smiley Face",
+            "Feaster",
+            "Axe Boy",
+            "Dream Witch",
+            "Soul Weaver",
+            "Hell Ember",
+            "Gamekeeper",
+            "Mad eyes",
+            "Wu chang",
+            "The Ripper",
+            "Evil Reptilian",
+            "Bloody queen",
+            "No. 26",
+            "Ann",
+            "Violinist"
+        ];
 
         var hunter = Math.floor(Math.random() * hunters.length);
 
-        if (args[1] === 'hunter')
-            message.channel.send('Go and hunt as the ' + '**' + (hunters[hunter] + '**'));
+        var fact = Math.floor(Math.random() * facts.length);
 
-}
+        if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values to randomly pick from them!\n**Example:** `>randomize cat fish dog`\n**Example respond:** I choose **dog**\nRemember to seperate the values with a space in between\n\nOr you can do `>randomize survivor` or `>randomize hunter` so i pick a random character for you!")
+
+        else if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) {
+
+            message.channel.send(`I choose **${facts[fact]}**`);
+
+        } else if (["hunter", "hunters"].includes(args[1].toLowerCase())) {
+            message.channel.send(`I choose **${hunters[hunter]}**`);
+        } else {
+            let values = args.slice(1).join(" ").split(" ").length;
+            rNumber = Math.floor(Math.random() * (values - 1 + 1)) + 1;
+
+            message.channel.send(`I choose **${args[rNumber]}**`);
+        }
+
+
+
+    }
 }

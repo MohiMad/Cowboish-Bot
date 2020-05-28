@@ -21,23 +21,39 @@ module.exports = {
 				let n4 = bot.users.get(res[3].UserID) || "Not found";
 				let n5 = bot.users.get(res[4].UserID) || "Not found";
 
-				reChannel.send(stripIndents`
-				**Yaaaay it's the end of the week!**
-				《<:uno:676017997420167187>》 **${n1.username}** gets **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
-					With **${res[0].logic}**<:LP:675763680863977513> logicpath steps!
+				let reeEmbed = new RichEmbed()
+				.setTitle("Yaaaay a new week has began!")
+				.setColor("0xf0cf07")
+				.setDescription(stripIndents`
+			《<:uno:676017997420167187>》 **${n1.username}** 
+			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
+			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
 
-				〘<:dos:676019548016738304>〙 **${n2.username}** gets **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
-					With **${res[1].logic}**<:LP:675763680863977513> logicpath steps!
+			- - - - -
+			〘<:dos:676019548016738304>〙 **${n2.username}**
+			**Logicpath Points**: **${res[1].logic}**<:LP:675763680863977513>
+			**Rewards**: **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
 
-				〘<:tres:676019592757248001>〙 **${n3.username}** gets **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
-					With **${res[2].logic}**<:LP:675763680863977513> logicpath steps!
+			- - - - -
+			〘<:tres:676019592757248001>〙 **${n3.username}**
+			**Logicpath Points** **${res[2].logic}**<:LP:675763680863977513>
+			**Rewards**: **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
 
-				〘4〙 **${n4.username}** gets **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
-					With **${res[3].logic}**<:LP:675763680863977513> logicpath steps!
+			- - - - -
+			〘4〙 **${n4.username}**
+			**Logicpath Points**: **${res[3].logic}**<:LP:675763680863977513>
+			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
 
-				〘5〙 **${n5.username}** gets **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
-					With **${res[4].logic}**<:LP:675763680863977513> logicpath steps!
-				`);
+			- - - - -
+			〘5〙 **${n5.username}**
+			**Logicpath Points**: **${res[4].logic}**<:LP:675763680863977513>
+			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
+				
+				`)
+				.setThumbnail("https://media.discordapp.net/attachments/673091096946933790/715627971960111184/B3eiYlJnbghAAAIQ6BBAuFgLEIAABCAAAQhAAAIQgAAEIhFAuCKBZVoIQAACEIAABCAAAQhAAAIIF2sAAhCAAAQgAAEIQAACEIBA.png?width=686&height=564")
+				.setTimestamp()
+
+				reChannel.send(reeEmbed);
 
 				res[0].Echoes = res[0].Echoes + 50;
 				res[0].Ess1 = res[0].Ess1 + 3;
@@ -306,7 +322,8 @@ module.exports = {
 				frame5: false,
 				frame6: false,
 				equipped: "0"
-			}
+			},
+			dangan: 10
 
 		})
 		newLP.save().catch(err => console.log(err))

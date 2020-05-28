@@ -60,6 +60,10 @@ module.exports = async (bot, message) => {
             bot.commands.get('random').execute(message, args, MohiMoo);
             break;
 
+        case "idvwiki": case "identityvwiki": case "identityvwikipedia": case "idvwikipedia":
+                bot.commands.get('random').execute(message, args, bot);
+                break;
+
         //End Of identity V commands
 
         //Fun Commands Starts Here!

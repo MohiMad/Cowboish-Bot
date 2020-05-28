@@ -332,7 +332,12 @@ module.exports = {
             if (LP.Survivors.AnotherSurv === true) SurvivorNumber++;
 
 
-            ctx.fillText(SurvivorNumber, 292, 130)
+            ctx.fillText(SurvivorNumber, 292, 130);
+
+            ctx.fillStyle = '#ef0ffd';
+
+            ctx.fillText(LP.dangan, 376, 130);
+
 
 
             const attachment = new Discord.Attachment(canvas.toBuffer(), 'LP.png');

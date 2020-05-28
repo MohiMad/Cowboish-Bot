@@ -92,7 +92,13 @@ module.exports = {
 
                     "40 <:clue:655384523735040000>", //14
                     "20 <:clue:655384523735040000>, 1 <:ess1:655840713904488469>, and 60 <:inspirations:655840409674711060>", //15
-                    "20 <:clue:655384523735040000>, and 1 <:ess1:655840713904488469>" //16
+                    "20 <:clue:655384523735040000>, and 1 <:ess1:655840713904488469>", //16,
+
+                    "1 <:danganronpa_ess:715502686891540520>",//17
+                    "1 <:danganronpa_ess:715502686891540520> + 1 <:ess1:655840713904488469>",
+                    "2 <:danganronpa_ess:715502686891540520> + 10 <:clue:655384523735040000>",
+                    "10 <:clue:655384523735040000> + 1 <:danganronpa_ess:715502686891540520>",
+                    "1 <:danganronpa_ess:715502686891540520> + 20 <:inspirations:655840409674711060>"
 
                 ];
 
@@ -168,6 +174,26 @@ module.exports = {
             if (diceChance === 15) {
                 LP.Clues = LP.Clues + 20;
                 LP.Ess1 = LP.Ess1 + 1;
+            }
+
+            if (diceChance === 16) {
+                LP.dangan = LP.dangan + 1;
+            }
+            if (diceChance === 17) {
+                LP.dangan = LP.dangan + 1;
+                LP.Ess1 = LP.Ess1 + 10;
+            }
+            if (diceChance === 18) {
+                LP.dangan = LP.dangan + 2;
+                LP.Clues = LP.Clues + 10;
+            }
+            if (diceChance === 19) {
+                LP.dangan = LP.dangan + 1;
+                LP.Clues = LP.Clues + 10;
+            }
+            if (diceChance === 19) {
+                LP.dangan = LP.dangan + 1;
+                LP.Inspirations = LP.Inspirations + 20;
             }
 
             //end of dices 4            

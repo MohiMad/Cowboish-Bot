@@ -802,6 +802,20 @@ module.exports = {
             else if (["frame6"].includes(args[1].toLowerCase())) {
                 return frame(message, "frame6", 888, LP.frames.frame6);
 
+            } else if (["danganronpa", "dangan"].includes(args[1].toLowerCase())) {
+                if (LP.Inspirations < 96) {
+                    message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
+
+                }
+                else {
+                    buyEmbed.setDescription(`You bought **1**  and paid *96* <:inspirations:655840409674711060> `);
+                    message.channel.send(buyEmbed);
+
+                    LP.Inspirations = LP.Inspirations - 96;
+                    LP.dangan = LP.dangan + 1;
+                    LP.save().catch(err => console.log(err));
+                }
+
             }
 
 
