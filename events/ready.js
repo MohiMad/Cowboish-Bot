@@ -80,10 +80,10 @@ module.exports = async (bot) => {
         .catch((err) => {
             console.log(err);
         });
-        
 
 
-    const updateBotList = async () => {
+
+    /*const updateBotList = async () => {
 
         const { body: reply } = await post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
             .set("Authorization", `Bot ${config.dblToken_2}`)
@@ -94,8 +94,11 @@ module.exports = async (bot) => {
 
         return (reply)
     }
+    
 
     let botUPDATE = await updateBotList();
+
+    */
 
     setInterval(async () => {
 
@@ -114,7 +117,7 @@ module.exports = async (bot) => {
 
                 let muteRole = guild.roles.find((x) => x.name === "muted");
 
-                
+
 
                 if (!muteRole) muteRole = guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
 
