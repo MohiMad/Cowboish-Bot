@@ -61,8 +61,8 @@ module.exports = async (bot, message) => {
             break;
 
         case "idvwiki": case "identityvwiki": case "identityvwikipedia": case "idvwikipedia":
-                bot.commands.get('random').execute(message, args, bot);
-                break;
+                bot.commands.get('idvwiki').execute(message, args, bot);
+            break;
 
         //End Of identity V commands
 

@@ -191,7 +191,7 @@ module.exports = {
                 LP.dangan = LP.dangan + 1;
                 LP.Clues = LP.Clues + 10;
             }
-            if (diceChance === 19) {
+            if (diceChance === 20) {
                 LP.dangan = LP.dangan + 1;
                 LP.Inspirations = LP.Inspirations + 20;
             }

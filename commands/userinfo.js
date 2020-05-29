@@ -18,6 +18,10 @@ module.exports = {
             .filter(r => r.id !== message.guild.id)
             .map(r => r).join(", ") || 'none';
 
+        if(roles.length > 100){
+            roles = member.roles.size
+        }
+
         // User variables
         const created = formatDate(member.user.createdAt);
 

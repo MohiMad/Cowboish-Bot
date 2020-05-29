@@ -1,10 +1,5 @@
 [
-	{
-		"Question": "**Type it:**\nType `Hello sisters`",
-		"Answer": ["Hello sisters", "hello sisters"],
-		"Difficulty": "hard af xD",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675015505488117762/maxresdefault.png?width=1002&height=564"
-    },
+	
     {
 		"Question": "**Fill in the missing word:**\n`Disciple's cat can split into _ _ _ directions `",
 		"Answer": ["two", "Two", "2"],

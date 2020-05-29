@@ -44,7 +44,8 @@ module.exports = {
                 "https://media.giphy.com/media/iGGTa8sDxbcPGzt72r/giphy.gif",
                 "https://media.giphy.com/media/RgtsXVT3DWDrK9QxQ9/giphy.gif",
                 "https://media.giphy.com/media/Q9AfGunQCw8qNcB8Np/giphy.gif",
-                "https://media.giphy.com/media/KGMmuXvQf9hPS8PlSu/giphy.gif"
+                "https://media.giphy.com/media/KGMmuXvQf9hPS8PlSu/giphy.gif",
+                "https://media.giphy.com/media/gGqpuYDk708BiQf4VQ/giphy.gif"
             ];
 
             let gif = Math.floor(Math.random() * gifs.length);
