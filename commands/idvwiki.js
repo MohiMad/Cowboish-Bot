@@ -560,7 +560,7 @@ module.exports = {
             HunterBack.on('collect', r => {
                 r.remove(message.author);
 
-                if (HunterPageI === 0) {
+                if (hunterPageI === 0) {
                     hunterPageI = HunterPages.length - 1;
                 } else {
                     hunterPageI--;
@@ -574,14 +574,14 @@ module.exports = {
 
                 r.remove(message.author);
 
-                if (HunterPageI === Pages.length - 1) {
+                if (hunterPageI === Pages.length - 1) {
                     hunterPageI = 0;
                 } else {
-                    HunterPageI++;
+                    hunterPageI++;
 
                 }
 
-                HunterMsg.edit(HunterPages[HunterPageI]);
+                HunterMsg.edit(HunterPages[hunterPageI]);
 
             });
 
