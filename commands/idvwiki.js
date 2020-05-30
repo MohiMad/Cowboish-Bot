@@ -262,7 +262,7 @@ module.exports = {
         let gamekeeper = new Discord.RichEmbed()
             .setAuthor("Bane Perez - The Gamekeeper", hunterIcon, "https://identityv.gamepedia.com/Bane_Perez")
             .setColor("RED")
-            .setDescription("Bane Perez was in charge of the forest farm and patrol cabin at Oletus Manor. He raised a black-nosed moose like a child. However, accidents always happen, and a new hunting season was coming. Bane wondered how he could hide the black-nose to ensure its safety, but he was too late. A team of fully armed poachers had already arrived.\nThe gunshots rang through the forest. When Bane arrived, he saw that the black-nose had fallen to the ground. He recognized a familiar face from the poacher's team. It was the boy that he had rescued a few years prior. However, when Bane pleaded with him, they cruelly wanted to turn him into a Minotaur. They cut off his tongue and put the head of the black-nose moose on him. They locked him up with a steel-jaw bear trap and began a massacre in the forest.\n[Read more](https://identityv.gamepedia.com/Bane_Perez)\n\n《 External traits 》\n\nSuffocation: Hitting different targets with Bane's Chain Hook will trigger different effects.\nWhen Bane is dragged forwards by his Chain Hook and lands, it will generate shockwaves that decrease Movement Speed of Survivors within a certain range by 20% for 5 seconds. Getting hit by the shockwaves again during this period will further slow down Survivors.\nWhen hit by the Chain Hook, Survivors will be marked by the scent of rotting leaves and their location will be periodically exposed 2 times within 60 seconds, and Bane's attack recovery rate will be increased when he hits the exposed Survivors.\n\n《 Abilities 》\n\nChain Hook: Bane hooks survivors and pulls them to him or hooks a wall and pulls himself towards the wall. Long press to aim more precisely.\n\nThorny Chain Hook: Survivors' Manifestation of Horror are the thorns on the Chain Hook, when Bane's Chain Hook hits a Survivor, it will deal 50% of normal attack damage.\n**Fury Hook:** Furious Bane won't let an intruder escape his Chain Hook. If the Chain Hook hits an object, Bane can cast the Chain Hook again within 7 seconds up to 2 times, until the Chain Hooks hits a Survivor or misses.")
+            .setDescription("Bane Perez was in charge of the forest farm and patrol cabin at Oletus Manor. He raised a black-nosed moose like a child. However, accidents always happen, and a new hunting season was coming. Bane wondered how he could hide the black-nose to ensure its safety, but he was too late. A team of fully armed poachers had already arrived.\nThe gunshots rang through the forest. When Bane arrived, he saw that the black-nose had fallen to the ground. He recognized a familiar face from the poacher's team. It was the boy that he had rescued a few years prior. However, when Bane pleaded with him, they cruelly wanted to turn him into a Minotaur. They cut off his tongue and put the head of the black-nose moose on him. They locked him up with a steel-jaw bear trap and began a massacre in the forest.\n[Read more](https://identityv.gamepedia.com/Bane_Perez)\n\nSuffocation: Hitting different targets with Bane's Chain Hook will trigger different effects.\nWhen Bane is dragged forwards by his Chain Hook and lands, it will generate shockwaves that decrease Movement Speed of Survivors within a certain range by 20% for 5 seconds. Getting hit by the shockwaves again during this period will further slow down Survivors.\nWhen hit by the Chain Hook, Survivors will be marked by the scent of rotting leaves and their location will be periodically exposed 2 times within 60 seconds, and Bane's attack recovery rate will be increased when he hits the exposed Survivors.\n\n《 Abilities 》\n\nChain Hook: Bane hooks survivors and pulls them to him or hooks a wall and pulls himself towards the wall. Long press to aim more precisely.\n\nThorny Chain Hook: Survivors' Manifestation of Horror are the thorns on the Chain Hook, when Bane's Chain Hook hits a Survivor, it will deal 50% of normal attack damage.\n**Fury Hook:** Furious Bane won't let an intruder escape his Chain Hook. If the Chain Hook hits an object, Bane can cast the Chain Hook again within 7 seconds up to 2 times, until the Chain Hooks hits a Survivor or misses")
             .setFooter(`The Hunters - Page 4 of 17 | Information taken from IdentityV wiki`)
             .setThumbnail("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/9/9a/Bane.png/244px-Bane.png?version=5d81fbd6505b6154928c6b6fc9e5923c");
 
@@ -420,11 +420,11 @@ module.exports = {
 
 
             let back = msg.createReactionCollector(backFilter, {
-                time: 60000
+                time: 300000
             });
 
             let forward = msg.createReactionCollector(forwardFilter, {
-                time: 60000
+                time: 300000
             });
 
             back.on('collect', r => {
@@ -518,15 +518,15 @@ module.exports = {
             let HunterPages = [
                 new Discord.RichEmbed(hellember),
                 new Discord.RichEmbed(clown),
-                new Discord.RichEmbed(gamekeeper),
                 new Discord.RichEmbed(ripper),
-                new Discord.RichEmbed(feaster),
+                new Discord.RichEmbed(gamekeeper),
                 new Discord.RichEmbed(soulweaver),
-                new Discord.RichEmbed(wuchang),
                 new Discord.RichEmbed(geisha),
+                new Discord.RichEmbed(feaster),
+                new Discord.RichEmbed(wuchang),
                 new Discord.RichEmbed(photographer),
-                new Discord.RichEmbed(dreamwitch),
                 new Discord.RichEmbed(madeyes),
+                new Discord.RichEmbed(dreamwitch),
                 new Discord.RichEmbed(axeboy),
                 new Discord.RichEmbed(lizard),
                 new Discord.RichEmbed(bloodyqueen),
@@ -550,11 +550,11 @@ module.exports = {
 
 
             let HunterBack = HunterMsg.createReactionCollector(HunterBackFilter, {
-                time: 600000
+                time: 300000
             });
 
             let HunterForward = HunterMsg.createReactionCollector(HunterForwardFilter, {
-                time: 600000
+                time: 300000
             });
 
             HunterBack.on('collect', r => {
@@ -574,7 +574,7 @@ module.exports = {
 
                 r.remove(message.author);
 
-                if (hunterPageI === Pages.length - 1) {
+                if (hunterPageI === HunterPages.length - 1) {
                     hunterPageI = 0;
                 } else {
                     hunterPageI++;
