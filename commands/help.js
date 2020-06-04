@@ -29,7 +29,7 @@ module.exports = {
             .setTitle('😁 Help is here :D 😁')
             .setColor("RANDOM")
             .setURL('https://mohimad.github.io/CowboishBot/')
-            .setDescription('`identify` | `roll` | `roll20` | `randomize` | `idv`')
+            .setDescription('`identify` | `roll` | `roll20` | `randomize` | `idv` | `idvwiki`')
             .setFooter('Remember to use my prefix > before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
         if (args[1] === 'idv')
             message.channel.send(funEmbed);
