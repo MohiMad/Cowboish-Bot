@@ -57,7 +57,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "randomize": case "random": case "pick":
-            bot.commands.get('random').execute(message, args, MohiMoo);
+            bot.commands.get('random').execute(message, args, bot);
             break;
 
         case "idvwiki": case "identityvwiki": case "identityvwikipedia": case "idvwikipedia":

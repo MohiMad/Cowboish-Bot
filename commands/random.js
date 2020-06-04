@@ -3,7 +3,7 @@ const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'random',
     description: "randomizes a surv",
-    execute(message, args, MohiMoo) {
+    execute(message, args, bot) {
 
 
         var facts = [
