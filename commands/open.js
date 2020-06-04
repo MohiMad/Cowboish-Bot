@@ -264,8 +264,16 @@ module.exports = {
                     danganEmbed.setAuthor(`💛 ${message.author.username} gets Monokuma 💛`, "https://cdn.discordapp.com/emojis/715502686891540520.png?v=1");
                     danganEmbed.setFooter("Sooo cute i caaaan't >u<");
 
-                    LP.S = LP.S + 1;
+                    if (LP.Opened.includes(danganItem)) {
+                        danganEmbed.setDescription("You already got that skin before! Here, take these **2000** <:frags:655840344725913600> instead!");
+                        LP.frags = LP.frags + 2000;
+                    }
+                    else {
+                        LP.S = LP.S + 1;
                     LP.Opened = [...LP.Opened, danganItem];
+                    }
+
+                    
 
 
                     LP.dangan = LP.dangan - 1;
