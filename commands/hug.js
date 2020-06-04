@@ -4,7 +4,7 @@ const { ErrorMsg, findMember } = require("../functions.js");
 module.exports = {
     name: 'hug',
     description: "take dis hug",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
 
         const persona = await findMember(message, args[1]);
@@ -16,7 +16,7 @@ module.exports = {
 
         }
         else if (!persona) {
-            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `>blink <MentionHere>`")
+            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "hug <MentionHere>`")
 
         }
         else if (persona.id === message.author.id) {

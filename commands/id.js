@@ -1,12 +1,12 @@
 const logicPath = require("../models/logicpath.js");
-const { ErrorMsg, newLP } = require("../functions.js");
+const { newLP } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 
 module.exports = {
     name: 'id',
     description: "id info",
-    execute: async (message, args, bot, MohiMoo) => {
+    execute: async (message, args, prefix) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -18,7 +18,7 @@ module.exports = {
                 const noArgsEmbed = new RichEmbed()
                     .setTitle("You haven't set your ingame ID yet!")
                     .setColor("RED")
-                    .setDescription("Adding your ingame ID allows your friends to quickly add you and finding your id via the `>LP <TagHere>` command\n\n• Usage: `>ID <IngameID>`\n• The ID must be **7** numbers long\n• It's an ID so it must be numbers only!");
+                    .setDescription("Adding your ingame ID allows your friends to quickly add you and finding your id via the `" + prefix + "LP <TagHere>` command\n\n• Usage: `" + prefix + "ID <IngameID>`\n• The ID must be **7** numbers long\n• It's an ID so it must be numbers only!");
 
                 message.channel.send(noArgsEmbed);
             }
@@ -26,7 +26,7 @@ module.exports = {
                 const idEmbed = new RichEmbed()
                     .setAuthor(`Hey ${message.author.username}! Your ID is set to...`)
                     .setColor("GREEN")
-                    .setDescription(`IngameID: **${LP.ID}**` + "\nYou can change your ID again by doing `>ID <ID_here>`")
+                    .setDescription(`IngameID: **${LP.ID}**` + "\nYou can change your ID again by doing `" + prefix + "ID <ID_here>`")
 
                 message.channel.send(idEmbed)
             }

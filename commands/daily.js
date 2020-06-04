@@ -39,8 +39,8 @@ module.exports = {
 
                 const dailyEmbed = new RichEmbed()
                     .setTitle("🎁 Here is your daily reward 🎁")
-                    .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔", 
-                    "Here! take these **5**<:dice:655384578499936257>, **500**<:clue:655384523735040000> and **5** <:danganronpa_ess:715502686891540520>")
+                    .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔",
+                        "Here! take these **5**<:dice:655384578499936257>, **500**<:clue:655384523735040000> and **5** <:danganronpa_ess:715502686891540520>")
                     .setColor("0xffd500")
                     .setFooter("Remember to come back the next day to get your rewards again :)");
 
@@ -67,7 +67,7 @@ module.exports = {
         })
 
 
-        
+
 
 
 

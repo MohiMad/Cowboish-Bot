@@ -12,7 +12,7 @@ const { ErrorMsg, coolEmbed } = require("../functions.js");
 module.exports = {
     name: 'logicpath',
     description: "logic info",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         let LPuser = message.author || message.mentions.users.first();
 
@@ -183,10 +183,10 @@ module.exports = {
             ctx.font = '15px sitka-display';
             ctx.fillStyle = '#ffffff';
 
-            let ID = LP.ID || ">ID [ID_HERE]";
+            let ID = LP.ID || prefix + "ID [ID_HERE]";
 
             if (ID === "0") {
-                ID = ">ID [ID_HERE]";
+                ID = prefix + "ID [ID_HERE]";
 
                 ctx.fillStyle = '#000000';
 
@@ -205,7 +205,7 @@ module.exports = {
 
             }
 
-            let region = LP.region || ">region [region]";
+            let region = LP.region || prefix + "region [region]";
 
             if (LP.region === "0") {
 
@@ -216,7 +216,7 @@ module.exports = {
 
                 ctx.fillStyle = '#ffffff';
 
-                region = ">region [region]";
+                region = prefix + "region [region]";
 
                 ctx.fillText(region, 222, 62);
 
@@ -231,13 +231,13 @@ module.exports = {
 
             ctx.font = 'italic 14px Courier';
 
-            let bio = LP.bio || ">bio [info_HERE]";
+            let bio = LP.bio || prefix + "bio [info_HERE]";
 
             if (LP.bio === "0") {
 
                 ctx.fillStyle = '#000000';
 
-                bio = "I'm a very cowboish person >:3";
+                bio = "I'm very cowboiiiiiish >:3";
 
                 ctx.fillText(bio, 200, 88, 575);
             }

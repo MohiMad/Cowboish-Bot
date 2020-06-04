@@ -61,7 +61,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "idvwiki": case "identityvwiki": case "identityvwikipedia": case "idvwikipedia":
-            bot.commands.get('idvwiki').execute(message, args, bot);
+            bot.commands.get('idvwiki').execute(message, args, bot, prefix);
             break;
 
 
@@ -98,7 +98,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "text": case "chat": case "ingamechat":
-            bot.commands.get('chat').execute(message, args, bot);
+            bot.commands.get('chat').execute(message, args, bot, prefix);
             break;
 
         case "chair":
@@ -106,7 +106,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "chosendeath": case "deth": case "death":
-            bot.commands.get('death').execute(message, args, bot);
+            bot.commands.get('death').execute(message, args, bot, prefix);
             break;
 
         case "siptea": case "sip": case "sippingtea":
@@ -130,12 +130,12 @@ module.exports = async (bot, message) => {
             break;
 
         case "ld": case "leaderboard":
-            bot.commands.get('leaderboard').execute(message, args, bot);
+            bot.commands.get('leaderboard').execute(message, args, bot, prefix);
 
             break;
 
         case "id": case "setid":
-            bot.commands.get('id').execute(message, args, bot, MohiMoo);
+            bot.commands.get('id').execute(message, args, prefix);
 
             break;
 
@@ -144,7 +144,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "hunter": case "hunt":
-            bot.commands.get('hunt').execute(message, args, bot);
+            bot.commands.get('hunt').execute(message, args, bot, prefix);
 
             break;
 
@@ -167,17 +167,17 @@ module.exports = async (bot, message) => {
             break;
 
         case "buy":
-            bot.commands.get('buy').execute(message, args, bot);
+            bot.commands.get('buy').execute(message, args, bot, prefix);
 
             break;
 
         case "equip":
-            bot.commands.get('equip').execute(message, args, bot);
+            bot.commands.get('equip').execute(message, args, bot, prefix);
 
             break;
 
         case "gift":
-            bot.commands.get('gift').execute(message, args, bot);
+            bot.commands.get('gift').execute(message, args, bot, prefix);
 
             break;
 
@@ -189,7 +189,7 @@ module.exports = async (bot, message) => {
         //Identity V Actions 
 
         case "blink":
-            bot.commands.get('blink').execute(message, args, bot);
+            bot.commands.get('blink').execute(message, args, bot, prefix);
             break;
 
         case "struggle":
@@ -217,11 +217,11 @@ module.exports = async (bot, message) => {
             break;
 
         case "bully":
-            bot.commands.get('bully').execute(message, args, bot);
+            bot.commands.get('bully').execute(message, args, bot, prefix);
             break;
 
         case "hug":
-            bot.commands.get('hug').execute(message, args, bot);
+            bot.commands.get('hug').execute(message, args, bot, prefix);
             break;
         //End of Identity V Actions
 
@@ -234,11 +234,11 @@ module.exports = async (bot, message) => {
             break;
 
         case "kick":
-            bot.commands.get('kick').execute(message, args, MohiMoo);
+            bot.commands.get('kick').execute(message, args, prefix);
             break;
 
         case "ban":
-            bot.commands.get('ban').execute(message, args, bot);
+            bot.commands.get('ban').execute(message, args, bot, prefix);
             break;
 
         case "mute": case "shutup":
@@ -251,7 +251,7 @@ module.exports = async (bot, message) => {
         //Config commands starts here
 
         case "info": case "botinfo":
-            bot.commands.get('info').execute(message, args, bot, MohiMoo);
+            bot.commands.get('info').execute(message, args, bot, MohiMoo, prefix);
             break;
 
         case "userinfo": case "usrinfo":
@@ -268,7 +268,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "help": case "commands": case "helpme":
-            bot.commands.get('help').execute(message, args, MohiMoo);
+            bot.commands.get('help').execute(message, args, prefix);
             break;
 
         case 'guilds': case "servers":

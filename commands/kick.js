@@ -4,7 +4,7 @@ const { findMember, ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'kick',
     description: "kick them trolls",
-    execute: async (message, args, MohiMoo) => {
+    execute: async (message, args, prefix) => {
         const member = await findMember(message, args[1]);
 
         const reason = args.slice(2).join(" ") || "No Reason";
@@ -21,7 +21,7 @@ module.exports = {
         }
 
         else if (!args[1]) {
-            errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `>kick <@tagMember> <reason here>`");
+            errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `" + prefix + "kick <@tagMember> <reason here>`");
             message.channel.send(errEmbed);
         }
 

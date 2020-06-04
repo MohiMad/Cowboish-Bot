@@ -6,11 +6,11 @@ const { stripIndents } = require("common-tags");
 module.exports = {
     name: 'leaderboard',
     description: "Leaderboard for logicpath commands",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
 
         if (!args[1]) {
-            const guild_cmd = "`>LD guild`"
+            const guild_cmd = "`" + prefix + "LD guild`"
 
             logicPath.find({})
                 .sort([

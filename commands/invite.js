@@ -9,8 +9,7 @@ module.exports = {
             .setColor("0xffff00")
             .setTimestamp()
             .setTitle(`Cowboish invitation link!`)
-            .setURL("https://mohimad.github.io/CowboishBot/")
-            .setDescription(`[Click on me to invite Cowboish bot :3](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=268758102)`)
+            .setDescription(`[(Recommended Invitation link)](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=268758102)\n\n[Invitation link (Adminstrator)](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=8)`)
             .setFooter("Luv ya <3", bot.user.displayAvatarURL)
 
             message.channel.send(invEmbed);

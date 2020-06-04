@@ -7,7 +7,7 @@ const { findMember, newLP, ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'equip',
     description: "Equip the frame you bought!",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         let LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -18,7 +18,7 @@ module.exports = {
             let freeToUseEmbed = new RichEmbed()
                 .setTitle("Your frame is now equipped!")
                 .setColor("BLUE")
-                .setDescription("Wanna see how it looks like? go ahead and do `>logicpath`")
+                .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
                 .attachFiles([`./pics/${fram}.png`])
                 .setThumbnail("attachment://" + fram + ".png");
 
@@ -29,13 +29,13 @@ module.exports = {
 
         function frame(message, frames, eFrame) {
             if (eFrame === false) {
-                return ErrorMsg(bot, message, "You don't have that frame!\nYou need to buy that frame to be able to equip it!\n\nTo buy the frame, do `>buy " + frames + "`\nTo check what frames exists, so `>shop frames`");
+                return ErrorMsg(bot, message, "You don't have that frame!\nYou need to buy that frame to be able to equip it!\n\nTo buy the frame, do `" + prefix+ "buy " + frames + "`\nTo check what frames exists, do `" + prefix + "shop frames`");
             }
 
             let embed = new RichEmbed()
                 .setTitle("Your frame is now equipped!")
                 .setColor("BLUE")
-                .setDescription("Wanna see how it looks like? go ahead and do `>logicpath`")
+                .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
                 .attachFiles([`./pics/${frames}.png`])
                 .setThumbnail("attachment://" + frames + ".png");
 
@@ -110,7 +110,7 @@ module.exports = {
             let framEmbed = new RichEmbed()
                 .setAuthor(message.author.tag, bot.user.displayAvatarURL)
                 .setColor("RED")
-                .setDescription("Please provide the frame's ID you want to equip!\nCorrect usage: `>equip <frameID>`\n\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\nDunno what to equip? do `>shop frames` to see what's in the shop\nWanna unequip your frame? do `>equip none`")
+                .setDescription("Please provide the frame's ID you want to equip!\nCorrect usage: `" + prefix + "equip <frameID>`\n\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\nDunno what to equip? do `" + prefix +"shop frames` to see what's in the shop\nWanna unequip your frame? do `" + prefix + "equip none`")
                 .setTimestamp();
 
             message.channel.send(framEmbed);

@@ -5,7 +5,7 @@ const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'idvwiki',
     description: "Survivor/Hunter wikipedia",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
 
         let hunterIcon = "https://gamepedia.cursecdn.com/identityv_gamepedia_en/f/fc/IconHelpLoading_hunter.png?version=048b1ceaca92d49b3189ec9889405eb0";
@@ -371,7 +371,7 @@ module.exports = {
 
 
         if (!args[1]) {
-            return ErrorMsg(bot, message, "Please provide a character name to view their information!\nOr you can do `>idvwiki survivor` or `>idvwiki hunter` to switch between survivor/hunter information quicker :)");
+            return ErrorMsg(bot, message, "Please provide a character name to view their information!\nOr you can do `" + prefix + "idvwiki survivor` or `" + prefix + "idvwiki hunter` to switch between survivor/hunter information quicker :)");
         }
 
         else if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) {
@@ -637,7 +637,7 @@ module.exports = {
             message.channel.send(violinist);
 
         } else {
-            return ErrorMsg(bot, message, "Please provide a character name to view their information!\nOr you can do `>idvwiki survivor` or `>idvwiki hunter` to switch between survivor/hunter information quicker :)");
+            return ErrorMsg(bot, message, "Please provide a character name to view their information!\nOr you can do `" + prefix + "idvwiki survivor` or `" + prefix + "idvwiki hunter` to switch between survivor/hunter information quicker :)");
 
         }
 

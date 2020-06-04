@@ -7,7 +7,7 @@ const { quiz, ErrorMsg, coolEmbed, newLP } = require("../functions.js");
 module.exports = {
     name: 'hunt',
     description: "play a match as a hunter",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -16,7 +16,7 @@ module.exports = {
         }
 
         else if (!args[1]) {
-            return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `>hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `>shop`\nKeep in mind that you always can play as:\n**HellEmber**");
+            return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**HellEmber**");
         }
 
         else if (cooldown.has(message.author.id)) {
@@ -28,12 +28,12 @@ module.exports = {
             let leoFile = require("../quizes/leo.json");
 
             let leoItem = leoFile[Math.floor(Math.random() * leoFile.length)];
-            
+
             quiz(message, leoItem.Question, leoItem.Answer, leoItem.Attachment, leoItem.Difficulty, "Hell Ember").then(cooldown.add(message.author.id));
         }
         else if (["axeboy", "axeboi"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.AxeBoi === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let axeBoyFile = require("../quizes/axeboy.json");
@@ -45,7 +45,7 @@ module.exports = {
         }
         else if (["bane", "gamekeeper"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.GameKeeper === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let GK_File = require("../quizes/bane.json");
@@ -57,7 +57,7 @@ module.exports = {
         }
         else if (["bloodyqueen", "bq", "mary", "queen"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.BloodyQueen === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let BQ_File = require("../quizes/bloodyqueen.json");
@@ -69,7 +69,7 @@ module.exports = {
         }
         else if (["bonbon", "no.26", "pingu"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Pingu === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let BonBon_File = require("../quizes/bonbon.json");
@@ -81,7 +81,7 @@ module.exports = {
         }
         else if (["clown", "smileyface", "joker"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Clown === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let clown_File = require("../quizes/clown.json");
@@ -93,7 +93,7 @@ module.exports = {
         }
         else if (["dw", "dreamwitch", "yhidra"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.DreamWitch === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let DW_File = require("../quizes/dreamwitch.json");
@@ -105,7 +105,7 @@ module.exports = {
         }
         else if (["feaster"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Feaster === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let feaster_File = require("../quizes/feaster.json");
@@ -117,7 +117,7 @@ module.exports = {
         }
         else if (["geisha", "gaysha"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Geisha === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let geisha_File = require("../quizes/geisha.json");
@@ -129,7 +129,7 @@ module.exports = {
         }
         else if (["lizard", "luchino", "lizardo"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Lizard === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let lizard_File = require("../quizes/lizard.json");
@@ -141,7 +141,7 @@ module.exports = {
         }
         else if (["madeyes", "trump", "madeye"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.MadEyes === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let madeyes_File = require("../quizes/madeyes.json");
@@ -153,7 +153,7 @@ module.exports = {
         }
         else if (["photographer", "photoboi"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.PhotoGrapher === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let PH_File = require("../quizes/photographer.json");
@@ -165,7 +165,7 @@ module.exports = {
         }
         else if (["ripper", "rippa"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Ripper === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let ripper_File = require("../quizes/ripper.json");
@@ -177,7 +177,7 @@ module.exports = {
         }
         else if (["sister", "nun", "disciple"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Sister === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let sister_File = require("../quizes/sister.json");
@@ -189,7 +189,7 @@ module.exports = {
         }
         else if (["sw", "spider", "soulweaver"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.SoulWeaver === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let SW_File = require("../quizes/soulweaver.json");
@@ -201,7 +201,7 @@ module.exports = {
         }
         else if (["wu", "wuchang", "wuchangus"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.WuChang === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let WU_File = require("../quizes/wuchang.json");
@@ -212,7 +212,7 @@ module.exports = {
             }
         } else if (["violinist", "musician"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.NewHunta === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
+                ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
             } else {
                 let vio_File = require("../quizes/violinist.json");

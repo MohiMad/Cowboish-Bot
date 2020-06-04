@@ -6,7 +6,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = {
     name: 'buy',
     description: "buy some stuff",
-    execute(message, args, bot) {
+    execute(message, args, bot, prefix) {
 
 
 
@@ -29,14 +29,14 @@ module.exports = {
 
             function frame(message, frame, price, framePath) {
                 if (framePath === true) {
-                    return ErrorMsg(bot, message, "You already own this frame, why would you buy it twice?\nAre you trying to equip it instead of another one?\nIf so then `>equip` is the command you're looking for...");
+                    return ErrorMsg(bot, message, "You already own this frame, why would you buy it twice?\nAre you trying to equip it instead of another one?\nIf so then `" + prefix + "equip` is the command you're looking for...");
                 } else if (LP.frags < price) {
                     return ErrorMsg(bot, message, "Poor you can't afford that!\nYou need " + `**${price - LP.frags}**<:frags:655840344725913600> more...`)
                 } else {
 
                     let frameEmbed = new RichEmbed()
                         .setAuthor("Successful purchase!", message.author.displayAvatarURL)
-                        .setDescription(`You successfully bought ${frame} and paid ${price}<:frags:655840344725913600>\nIt's now equipped and can be seen if you do` + "`>logicpath`\n\nTo change your frame to another one, do `>equip <FrameID>`")
+                        .setDescription(`You successfully bought ${frame} and paid ${price}<:frags:655840344725913600>\nIt's now equipped and can be seen if you do` + "`" + prefix + "logicpath`\n\nTo change your frame to another one, do `" + prefix + "equip <FrameID>`")
                         .attachFiles([`./pics/${frame}.png`])
                         .setThumbnail("attachment://" + frame + ".png");
 
@@ -64,7 +64,7 @@ module.exports = {
             if (!LP) { newLP(message) }
 
             else if (!args[1]) {
-                ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `>buy <ItemHERE>`\n\nDunno what to buy? do `>shop` to check what you can buy")
+                ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + ">shop` to check what you can buy")
             }
             //buy essences here
             else if (["s11-2", "s112", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
@@ -824,7 +824,7 @@ module.exports = {
             }
 
 
-        })//LP 
+        });//LP 
 
 
 

@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: 'chat',
     description: "Type something in english chat",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         const sayMessage = args.slice(1).join(" ");
         
@@ -12,7 +12,7 @@ module.exports = {
 
         
         else if(!args[1]){
-            ErrorMsg(bot, message, "Can send an empty message!\nPlease provide something to send to the ingame chat!\n\n**Rich usgage:** `>chat <message Goes HERE>`")
+            ErrorMsg(bot, message, "Can send an empty message!\nPlease provide something to send to the ingame chat!\n\n**Right Usage:** `" + prefix + "chat <message Goes HERE>`")
         }
         else if(sayMessage.length > 50){
             ErrorMsg(bot, message, "The message given is tooo loong, like for real\nPlease try to send something that's shorter :)")
