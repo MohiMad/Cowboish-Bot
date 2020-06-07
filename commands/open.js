@@ -11,13 +11,13 @@ const logicPath = require("../models/logicpath.js");
 module.exports = {
     name: 'open',
     description: "opens an sessenc ofr yga ",
-    execute: async (message, args, bot, MohiMoo) => {
+    execute: async (message, args, bot, MohiMoo, prefix) => {
 
         var s10_cmd = "`s11-1` or `1`";
         var s10_2_cmd = "`s11-2` or `2`";
         var s10_3_cmd = "`s11-3` or `3`";
-        var exmple = "`>open 1` to open a `s11-1` <:ess1:655840713904488469> essence";
-        var stats_cmd = "`>open stats <essenceID>`"
+        var exmple = "`" + prefix + "open 1` to open a `s11-1` <:ess1:655840713904488469> essence";
+        var stats_cmd = "`" + prefix + "open stats <essenceID>`"
 
         var dangan_cmsd = "`danganronpa` or `dangan`";
 
@@ -380,7 +380,7 @@ module.exports = {
                 message.channel.send(danganEmbed);
 
             } else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
-                if (!args[2]) return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n<:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ " + dangan_cmsd + "\n\nExample: `>open stats s11-1`");
+                if (!args[2]) return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n<:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ " + dangan_cmsd + "\n\nExample: `" + prefix + "open stats s11-1`");
 
 
                 let e = "▔ ▔ ▔ ▔ ▔ ";
@@ -523,7 +523,7 @@ module.exports = {
 
                     message.channel.send("**This essence isn't out yet!**\nCan't view");
                 }  else {
-                    return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n<:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ " + dangan_cmsd + "\n\nExample: `>open stats s11-1`");
+                    return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n<:ess2:655840643847028751> | **Essence s11-2** ─ ID ➜ " + s10_2_cmd + "\n<:ess3:655840571616919586> | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n<:danganronpa_ess:715502686891540520> | **Danganronpa Essence** - ID ➜ " + dangan_cmsd + "\n\nExample: `" + prefix + "open stats s11-1`");
                 }
 
             }

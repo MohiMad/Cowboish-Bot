@@ -6,9 +6,11 @@ let cooldown = new Set();
 module.exports = {
     name: 'quick',
     description: "play a quick match",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
+
+        let msgErr = "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**";
 
 
         if (!LP) {
@@ -16,7 +18,7 @@ module.exports = {
         }
 
         else if (!args[1]) {
-            return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `>quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `>shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+            return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
         }
 
         else if (cooldown.has(message.author.id)) {
@@ -72,7 +74,7 @@ module.exports = {
         else if (["cowboy", "Cowboy", "kevin", "Kevin"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Cowboy === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let cowboyfile = require("../quizes/cowboy.json");
@@ -86,7 +88,7 @@ module.exports = {
         else if (["Mercenary", "mercenary", "merc"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Mercenary === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let mercfile = require("../quizes/mercenary.json");
@@ -100,7 +102,7 @@ module.exports = {
         else if (["coordinator", "Coordinator", "coord"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Coordinator === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let coordfile = require("../quizes/coordinator.json");
@@ -114,7 +116,7 @@ module.exports = {
         else if (["Priestess", "priestess"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Priestess === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let priestessfile = require("../quizes/priestess.json");
@@ -128,7 +130,7 @@ module.exports = {
         else if (["Mechanic", "mec", "mechanic"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Mechanic === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let mecfile = require("../quizes/mechanic.json");
@@ -142,7 +144,7 @@ module.exports = {
         else if (["Mindseye", "mindseye", "minds", "TME"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Mindseye === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let mindsfile = require("../quizes/mindseye.json");
@@ -156,7 +158,7 @@ module.exports = {
         else if (["perfumer", "Perfumer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Prefumer === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let perfumerfile = require("../quizes/perfumer.json");
@@ -170,7 +172,7 @@ module.exports = {
         else if (["dancer", "Dancer", "femaledancer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Dancer === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let dancerfile = require("../quizes/dancer.json");
@@ -184,7 +186,7 @@ module.exports = {
         else if (["Seer", "seer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Seer === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let seerfile = require("../quizes/seer.json");
@@ -198,7 +200,7 @@ module.exports = {
         else if (["Embalmer", "embalmer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Embalmer === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let embalmerfile = require("../quizes/embalmer.json");
@@ -212,7 +214,7 @@ module.exports = {
         else if (["Acrobat", "acrobat"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Acrobat === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let acrofile = require("../quizes/acrobat.json");
@@ -226,7 +228,7 @@ module.exports = {
         else if (["Officer", "officer", "1stofficer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Officer === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let officerfile = require("../quizes/officer.json");
@@ -240,7 +242,7 @@ module.exports = {
         else if (["Barmaid", "barmaid"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Barmaid === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let barfile = require("../quizes/barmaid.json");
@@ -254,7 +256,7 @@ module.exports = {
         else if (["Magician", "magician"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Magician === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let magicianfile = require("../quizes/magician.json");
@@ -268,7 +270,7 @@ module.exports = {
         else if (["Explorer", "explorer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Explorer === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let explorerfile = require("../quizes/explorer.json");
@@ -282,7 +284,7 @@ module.exports = {
         else if (["Forward", "forward"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Forward === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let forwardfile = require("../quizes/forward.json");
@@ -296,7 +298,7 @@ module.exports = {
         else if (["Prospector", "prospector"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Prospector === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let prosfile = require("../quizes/prospector.json");
@@ -310,7 +312,7 @@ module.exports = {
         else if (["Enchantress", "enchantress"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Enchantress === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let enchantressfile = require("../quizes/enchantress.json");
@@ -324,7 +326,7 @@ module.exports = {
         else if (["Wilding", "wilding"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Wilding === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let Wildingfile = require("../quizes/wilding.json");
@@ -338,7 +340,7 @@ module.exports = {
         else if (["Postman", "postman"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Postman === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let Postmanfile = require("../quizes/postman.json");
@@ -352,7 +354,7 @@ module.exports = {
         else if (["gravedigger", "gravekeeper"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.NewSurv === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let gravefile = require("../quizes/gravedigger.json");
@@ -366,7 +368,7 @@ module.exports = {
         else if (["prisoner", '"prisoner"'].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.AnotherSurv === false) {
-                ErrorMsg(this.bot, message, "You don't own that character!\nYou need to buy that character by doing `>buy <characterName>`\nTo check the characters available do `>shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
+                ErrorMsg(this.bot, message, msgErr);
             }
             else {
                 let prisonerFile = require("../quizes/prisoner.json");

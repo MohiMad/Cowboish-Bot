@@ -6,7 +6,7 @@ const logicPath = require("../models/logicpath.js");
 module.exports = {
     name: 'roll',
     description: "rolls a 4 sided dice",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
 
         //random dice chances
@@ -56,8 +56,8 @@ module.exports = {
             const noEmbed = new RichEmbed()
                 .setTitle("Oops looks like you ran out of dices <:dice:655384578499936257>")
                 .setColor("RANDOM")
-                .setDescription("**You don't have any Dices left**\nBut don't worry! You can get more dice by doing `>quick`, `>daily` or `>hunt`")
-                .setFooter("For more info, do >help logicpath");
+                .setDescription("**You don't have any Dices left**\nBut don't worry! You can get more dice by doing `" + prefix + "quick`, `" + prefix + "daily` or `" + prefix + "hunt`")
+                .setFooter("For more info, do " + prefix + "help logicpath");
 
             return message.channel.send(noEmbed);
 

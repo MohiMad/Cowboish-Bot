@@ -4,7 +4,7 @@ const { ErrorMsg, findMember } = require("../functions.js");
 module.exports = {
     name: 'stun',
     description: "stuns you",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
 
         let persona = await findMember(message, args[1]);
@@ -12,11 +12,11 @@ module.exports = {
         if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
         else if (!args[1]) {
-            return ErrorMsg(bot, message, "Who do you want to shut the pallet on? Mention them right after the command | example: >stun @Cowboish Bot.")
+            return ErrorMsg(bot, message, "Who do you want to shut the pallet on? Mention them right after the command | example: `" + prefix + "stun @Cowboish Bot`")
 
         }
         else if (!persona) {
-            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `>blink <MentionHere>`")
+            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "stun <MentionHere>`")
 
         }
         else if (persona.id === message.author.id) {

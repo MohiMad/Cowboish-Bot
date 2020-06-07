@@ -9,13 +9,13 @@ const Mutes = require("../models/mutes.js");
 module.exports = {
   name: 'mute',
   description: "Mute...",
-  execute: async (message, args, bot) => {
+  execute: async (message, args, bot, prefix) => {
 
     if (!message.member.hasPermission("MANAGE_ROLES", false, true, true)) return ErrorMsg(bot, message, "Not enough permissions!\nOnly members with the permission: **MANAGE_ROLES** can execute this command!");
 
     if (!message.guild.me.hasPermission("MANAGE_ROLES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **MANAGE_ROLES** to true");
 
-    if (!args[1]) return ErrorMsg(bot, message, "No member provided!\nPlease provide me a member to mute!\n\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
+    if (!args[1]) return ErrorMsg(bot, message, "No member provided!\nPlease provide me a member to mute!\n\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason>`");
 
     const member = await findMember(message, args[1]);
 
@@ -34,11 +34,11 @@ module.exports = {
 
     const muteTime = ms(args[2]);
 
-    if (!muteTime) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
+    if (!muteTime) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason>`");
 
-    if (isNaN(muteTime)) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
+    if (isNaN(muteTime)) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason>`");
 
-    if (muteTime > 2592000000000) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `>mute <member> <time(s/m/d)> <reason>`");
+    if (muteTime > 2592000000000) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason>`");
 
     const mute = new Mutes({
       guildID: message.guild.id,

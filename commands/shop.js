@@ -8,7 +8,7 @@ const { newLP } = require("../functions.js");
 module.exports = {
     name: 'shop',
     description: "shop list for ya",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -20,7 +20,7 @@ module.exports = {
         const shopEmbed = new RichEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
             .setColor("RANDOM")
-            .setDescription("Here is a list of the lists available in the shop! do `>shop <listID>`")
+            .setDescription("Here is a list of the lists available in the shop! do `" + prefix + "shop <listID>`")
             .addField("▔ ▔ ▔ ▔ ▔", stripIndents` 
         <:ess1:655840713904488469> | **Essences shop!** ─ ID ➜  __*essence*__
         Too unlucky to get essences? well buy some...
@@ -39,7 +39,7 @@ module.exports = {
         //___________Essence embed here_______________
         const EssEmbed = new RichEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
-            .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `>buy <itemID>`")
+            .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `" + prefix + "buy <itemID>`")
             .setColor("RANDOM")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
         <:ess1:655840713904488469> | **Essence s11-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-1*__
@@ -60,7 +60,7 @@ module.exports = {
 
             const roleEmbed = new RichEmbed()
                 .setTitle("Survivors shop list!")
-                .setDescription("To buy the survivor you want, do `>buy <survivorName>`\n")
+                .setDescription("To buy the survivor you want, do `" + prefix + "buy <survivorName>`\n")
                 .setFooter("Remember to type the survivor's name without spacing or capitalization")
                 .setColor("RANDOM");
 
@@ -192,7 +192,7 @@ module.exports = {
             const huntaEmbed = new RichEmbed()
                 .setTitle("Cowboish Hunter shop!")
                 .setColor("RANDOM")
-                .setDescription("To buy the hunter of your choice, do `>buy <HunterName>`")
+                .setDescription("To buy the hunter of your choice, do `" + prefix + "buy <HunterName>`")
                 .setFooter("Keep in mind to type the hunter's name without spacing or capitalization!");
 
             if (LP.Hunters.WuChang === false) {
@@ -356,7 +356,7 @@ module.exports = {
             let framEmbed = new RichEmbed()
                 .setAuthor("Portrait-frame shop!", bot.user.displayAvatarURL)
                 .setColor("0xeb34c9")
-                .setDescription("To buy the frame of your choice, do `>buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`\n\n<:frame6:694820135306919977> ➜ Price __888__<:frags:655840344725913600> - ID: `frame6`\n\n**Free to use frames:**\n<:frame7:697804971227349103> | **FREE!** You can equip it directly by doing `>equip frame7`\n<:frame8:706555854513766490> | **FREE!** You can equip it directly by doing `>equip frame8`")
+                .setDescription("To buy the frame of your choice, do `" + prefix + "buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`\n\n<:frame6:694820135306919977> ➜ Price __888__<:frags:655840344725913600> - ID: `frame6`\n\n**Free to use frames:**\n<:frame7:697804971227349103> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame7`\n<:frame8:706555854513766490> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame8`")
                 .setTimestamp();
 
             message.channel.send(framEmbed);

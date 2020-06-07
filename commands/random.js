@@ -3,7 +3,7 @@ const { ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'random',
     description: "randomizes a surv",
-    execute(message, args, bot) {
+    execute(message, args, bot, prefix) {
 
 
         var facts = [
@@ -59,7 +59,7 @@ module.exports = {
 
         var fact = Math.floor(Math.random() * facts.length);
 
-        if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values to randomly pick from them!\n**Example:** `>randomize cat fish dog`\n**Example respond:** I choose **dog**\nRemember to seperate the values with a space in between\n\nOr you can do `>randomize survivor` or `>randomize hunter` so i pick a random character for you!")
+        if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values to randomly pick from them!\n**Example:** `" + prefix + "randomize cat fish dog`\n**Example respond:** I choose **dog**\nRemember to seperate the values with a space in between\n\nOr you can do `" + prefix + "randomize survivor` or `" + prefix + "randomize hunter` so i pick a random character for you!")
 
         else if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) {
 

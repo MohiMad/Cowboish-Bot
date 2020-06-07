@@ -57,7 +57,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "randomize": case "random": case "pick":
-            bot.commands.get('random').execute(message, args, bot);
+            bot.commands.get('random').execute(message, args, bot, prefix);
             break;
 
         case "idvwiki": case "identityvwiki": case "identityvwikipedia": case "idvwikipedia":
@@ -116,11 +116,11 @@ module.exports = async (bot, message) => {
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
-            bot.commands.get('roll').execute(message, args, bot);
+            bot.commands.get('roll').execute(message, args, bot, prefix);
             break;
 
         case "open": case "essence": case "ess": case "e":
-            bot.commands.get('open').execute(message, args, bot, MohiMoo);
+            bot.commands.get('open').execute(message, args, bot, MohiMoo, prefix);
 
             break;
 
@@ -140,7 +140,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "quick": case "play":
-            bot.commands.get('quick').execute(message, args, bot);
+            bot.commands.get('quick').execute(message, args, bot, prefix);
             break;
 
         case "hunter": case "hunt":
@@ -162,7 +162,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "shop":
-            bot.commands.get('shop').execute(message, args, bot);
+            bot.commands.get('shop').execute(message, args, bot, prefix);
 
             break;
 
@@ -197,15 +197,15 @@ module.exports = async (bot, message) => {
             break;
 
         case "stun":
-            bot.commands.get('stun').execute(message, args, bot);
+            bot.commands.get('stun').execute(message, args, bot, prefix);
             break;
 
         case "crash":
             bot.commands.get('crash').execute(message, args, bot);
             break;
 
-        case "terrorshock": case "tc":
-            bot.commands.get('terrorshock').execute(message, args, bot);
+        case "terrorshock": case "ts":
+            bot.commands.get('terrorshock').execute(message, args, bot, prefix);
             break;
 
         case "lasso": case "yoink":
@@ -213,7 +213,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "shoot": case "flaregun":
-            bot.commands.get('shoot').execute(message, args, bot);
+            bot.commands.get('shoot').execute(message, args, bot, prefix);
             break;
 
         case "bully":
@@ -242,7 +242,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "mute": case "shutup":
-            bot.commands.get('mute').execute(message, args, bot);
+            bot.commands.get('mute').execute(message, args, bot, prefix);
             break;
 
         //End of moderation commands
