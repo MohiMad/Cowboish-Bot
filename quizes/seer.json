@@ -6,12 +6,6 @@
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673883174157287436/2Q.png"
     },
     {
-		"Question": "**Repeat da sentence:**\nType `The Seer is bald` in the chat to get yo dice",
-		"Answer": ["The Seer is bald", "the Seer is bald", "seer", "bald", "the", "is"],
-		"Difficulty": "medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673882584476024873/wFZiDsYlaNYYQAAAABJRU5ErkJggg.png?width=452&height=451"
-    },
-    {
 		"Question": "**Guess the name:**\nWhat's the name of this skin?",
 		"Answer": ["Night owl", "night owl", "Night Owl"],
 		"Difficulty": "Extreme",

@@ -125,7 +125,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "lp": case "logicpath": case "inv": case "inventroy":
-            bot.commands.get('logicpath').execute(message, args, bot);
+            bot.commands.get('logicpath').execute(message, args, bot, prefix);
 
             break;
 
