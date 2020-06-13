@@ -245,43 +245,43 @@ module.exports = {
                     case 1:
                         LP.Clues = LP.Clues + 80;
                         LP.Inspirations = LP.Inspirations + 50;
-                        LP.ess1 = LP.ess1 + 2;
+                        LP.Ess1 = LP.Ess1 + 2;
 
                         break;
 
                     case 2:
                         LP.Clues = LP.Clues + 130;
-                        LP.ess1 = LP.ess1 + 1;
+                        LP.Ess1 = LP.Ess1 + 1;
                         LP.dangan = LP.dangan + 1;
                         LP.Inspirations = LP.Inspirations + 20;
                         break;
 
                     case 3:
                         LP.Clues = LP.Clues + 150;
-                        LP.ess1 = LP.ess1 + 2;
+                        LP.Ess1 = LP.Ess1 + 2;
                         LP.dangan = LP.dangan + 2;
                         break;
 
                     case 4:
                         LP.Clues = LP.Clues + 160;
-                        LP.ess1 = LP.ess1 + 1;
+                        LP.Ess1 = LP.Ess1 + 1;
                         break;
 
                     case 5:
                         LP.Clues = LP.Clues + 120;
-                        LP.ess1 = LP.ess1 + 2;
+                        LP.Ess1 = LP.Ess1 + 2;
                         LP.dangan = LP.dangan + 1;
                         break;
 
                     case 6:
                         LP.Clues = LP.Clues + 90;
                         LP.Inspirations = LP.Inspirations + 50;
-                        LP.ess1 = LP.ess1 + 2;
+                        LP.Ess1 = LP.Ess1 + 2;
                         break;
 
                     case 7:
                         LP.Clues = LP.Clues + 100;
-                        LP.ess1 = LP.ess1 + 1;
+                        LP.Ess1 = LP.Ess1 + 1;
                         LP.dangan = LP.dangan + 1;
                         LP.Inspirations = LP.Inspirations + 60;
                         break;
@@ -331,37 +331,37 @@ module.exports = {
                 switch (random_10_dice_number) {
                     case 0:
                         LP.Clues = LP.Clues + 200;
-                        LP.ess1 = LP.ess1 + 6;
+                        LP.Ess1 = LP.Ess1 + 6;
                         break;
 
                     case 1:
                         LP.Clues = LP.Clues + 180;
-                        LP.ess1 = LP.ess1 + 3;
+                        LP.Ess1 = LP.Ess1 + 3;
                         LP.dangan = LP.dangan + 2;
                         break;
 
                     case 2:
                         LP.Clues = LP.Clues + 210;
-                        LP.ess1 = LP.ess1 + 2;
+                        LP.Ess1 = LP.Ess1 + 2;
                         LP.dangan = LP.dangan + 2;
                         LP.Inspirations = LP.Inspirations + 50;
                         break;
 
                     case 3:
                         LP.Clues = LP.Clues + 200;
-                        LP.ess1 = LP.ess1 + 2;
+                        LP.Ess1 = LP.Ess1 + 2;
                         LP.dangan = LP.dangan + 1;
                         break;
 
                     case 4:
                         LP.Clues = LP.Clues + 320;
-                        LP.ess1 = LP.ess1 + 3;
+                        LP.Ess1 = LP.Ess1 + 3;
                         LP.Inspirations = LP.Inspirations + 80;
                         break;
 
                     case 5:
                         LP.clues = LP.clues + 60;
-                        LP.ess1 = LP.ess1 + 1;
+                        LP.Ess1 = LP.Ess1 + 1;
                         break;
                 }
 
