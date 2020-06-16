@@ -35,8 +35,8 @@ module.exports = async (bot) => {
         `milestone ${bot.guilds.size}/1000`,
         `${bot.guilds.size} guilds | ${bot.users.size} users`
         */
-       "#BLM 🖤",
-       "#Black_Lives_Matter 🖤"
+        "#BLM 🖤",
+        "#Black_Lives_Matter 🖤"
 
     ];
 
@@ -69,6 +69,12 @@ module.exports = async (bot) => {
             set.add(bot.user.id);
 
         }
+    });
+
+    schedule.scheduleJob("0 0 * * *", async function () {
+
+        bot.commands.get('giveaway').execute(bot);
+
     });
 
     /*
