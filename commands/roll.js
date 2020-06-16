@@ -160,7 +160,7 @@ module.exports = {
                 }
                 if (diceChance === 17) {
                     LP.dangan = LP.dangan + 1;
-                    LP.Ess1 = LP.Ess1 + 10;
+                    LP.Ess1 = LP.Ess1 + 1;
                 }
                 if (diceChance === 18) {
                     LP.dangan = LP.dangan + 2;
