@@ -25,7 +25,7 @@ module.exports = {
 
         ];
 
-        let randomRewardNumber = Math.floor(Math.random * rewards.length);
+        let randomRewardNumber = Math.floor(Math.random() * rewards.length);
 
         let LP = await logicPath.findOne({ UserID: randomUser.user.id });
 
@@ -69,7 +69,7 @@ module.exports = {
         let giveawayEmbed = new RichEmbed()
             .setAuthor(`${randomUser.user.tag} won today's giveaway`, randomUser.user.displayAvatarURL)
             .setThumbnail("https://cdn.discordapp.com/emojis/699667884833636352.png?v=1")
-            .setDescription(`Congrats ${randomUser.user.username}! You won today's giveaway and got:\n${rewards[randomRewardNumber]}`)
+            .setDescription(`Congrats ${randomUser.user.username}! You won today's giveaway and got:\n` + rewards[randomRewardNumber])
             .setColor("0xFFF030")
             .setTimestamp()
             .setFooter(`Oooohoo lucky ${randomUser.user.username} >:3`, bot.user.displayAvatarURL);

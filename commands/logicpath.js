@@ -145,12 +145,17 @@ module.exports = {
                 let frame7 = await Canvas.loadImage("./pics/frame7.png");
 
                 ctx.drawImage(frame7, 9, 4, 165, 162);
-                
-            } else if(LP.frames.equipped === "frame8"){
+
+            } else if (LP.frames.equipped === "frame8") {
 
                 let frame8 = await Canvas.loadImage("./pics/frame8.png");
 
                 ctx.drawImage(frame8, 9, 4, 165, 161);
+            } else if (LP.frames.equipped === "frame9") {
+
+                let frame9 = await Canvas.loadImage("./pics/frame9.png");
+
+                ctx.drawImage(frame9, 4, 1, 165, 170);
             }
 
             ctx.font = 'bold 16px Arial';

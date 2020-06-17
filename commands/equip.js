@@ -147,6 +147,13 @@ module.exports = {
             freeToUse(message, "frame8");
 
         }
+        else if (["frame9"].includes(args[1].toLowerCase())) {
+            LP.frames.equipped = "frame9";
+            LP.save().catch(e => console.log(e));
+
+            freeToUse(message, "frame9");
+
+        }
         else if (["none", "no"].includes(args[1].toLowerCase())) {
             LP.frames.equipped = "0";
             LP.save().catch(e => console.log(e));

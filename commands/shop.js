@@ -1,6 +1,8 @@
 const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
+const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, clues, frags, ess1, ess2, ess3, insp } = require("../emojis.json");
+
 const { RichEmbed } = require('discord.js');
 const { newLP } = require("../functions.js");
 
@@ -12,17 +14,13 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-
-        if (!LP) { newLP(message) }
-
-
         //___________Main shop list_________________
         const shopEmbed = new RichEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
             .setColor("RANDOM")
             .setDescription("Here is a list of the lists available in the shop! do `" + prefix + "shop <listID>`")
             .addField("▔ ▔ ▔ ▔ ▔", stripIndents` 
-        <:ess1:655840713904488469> | **Essences shop!** ─ ID ➜  __*essence*__
+        ${ess1} | **Essences shop!** ─ ID ➜  __*essence*__
         Too unlucky to get essences? well buy some...
 
         <:luckyguy:649120786312855563> | **Survivors list!** ─ ID ➜  __*survivor*__
@@ -42,13 +40,17 @@ module.exports = {
             .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `" + prefix + "buy <itemID>`")
             .setColor("RANDOM")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
-        <:ess1:655840713904488469> | **Essence s11-1** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-1*__
-        <:ess2:655840643847028751> | **Essence s11-2** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-2*__
-        <:ess3:655840571616919586> | **Essence s11-3** - Price : *96* <:inspirations:655840409674711060> - ID: __*s11-3*__
+        ${ess1} | **Essence s11-1** - Price : *96* ${insp} - ID: __*s11-1*__
+        ${ess2} | **Essence s11-2** - Price : *96* ${insp} - ID: __*s11-2*__
+        ${ess3} | **Essence s11-3** - Price : *96* ${insp} - ID: __*s11-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
-        if (!args[1]) {
+        if (!LP) {
+            newLP(message);
+
+        }
+        else if (!args[1]) {
             return message.channel.send(shopEmbed);
         }
         else if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {
@@ -280,10 +282,10 @@ module.exports = {
                 huntaEmbed.addField("💣 No.26", "~~No.26 - Price __*4508*__~~");
             }
             if (LP.Hunters.Sister === false) {
-                huntaEmbed.addField("👩 Ann", "Ann - Price __*4508*__ <:clue:655384523735040000>");
+                huntaEmbed.addField("🐈 Ann", "Ann - Price __*4508*__ <:clue:655384523735040000>");
             }
             else {
-                huntaEmbed.addField("👩 Ann", "~~Ann - Price __*4508*__~~");
+                huntaEmbed.addField("🐈 Ann", "~~Ann - Price __*4508*__~~");
             }
             if (LP.Hunters.NewHunta === false) {
                 huntaEmbed.addField("🎻 Violinist", "Violinist - Price __*4508*__ <:clue:655384523735040000>");
@@ -326,6 +328,8 @@ module.exports = {
 
             }
 
+            description = description + `${frame7} ${frame8} ${frame9}`
+
             let equipped;
 
             if (LP.frames.equipped === "frame1") {
@@ -346,17 +350,24 @@ module.exports = {
             else if (LP.frames.equipped === "frame6") {
                 equipped = "<:frame6:694820135306919977>";
             }
+            else if (LP.frames.equipped === "frame7") {
+                equipped = frame7;
+            }
+            else if (LP.frames.equipped === "frame8") {
+                equipped = frame8;
+            }
+            else if (LP.frames.equipped === "frame9") {
+                equipped = frame9;
+            }
             else {
                 equipped = "None!";
             }
 
 
-
-
             let framEmbed = new RichEmbed()
                 .setAuthor("Portrait-frame shop!", bot.user.displayAvatarURL)
                 .setColor("0xeb34c9")
-                .setDescription("To buy the frame of your choice, do `" + prefix + "buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`\n\n<:frame6:694820135306919977> ➜ Price __888__<:frags:655840344725913600> - ID: `frame6`\n\n**Free to use frames:**\n<:frame7:697804971227349103> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame7`\n<:frame8:706555854513766490> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame8`")
+                .setDescription("To buy the frame of your choice, do `" + prefix + "buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`\n\n<:frame6:694820135306919977> ➜ Price __888__<:frags:655840344725913600> - ID: `frame6`\n\n**Free to use frames:**\n<:frame7:697804971227349103> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame7`\n<:frame8:706555854513766490> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame8`\n" + frame9 + " | **FREE!** You can equip it directly by doing `" + prefix + "equip frame9`")
                 .setTimestamp();
 
             message.channel.send(framEmbed);
@@ -367,7 +378,7 @@ module.exports = {
         else {
             message.channel.send(shopEmbed);
         }
-        
+
 
 
 

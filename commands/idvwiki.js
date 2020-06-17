@@ -453,10 +453,6 @@ module.exports = {
 
             });
 
-            forward.on('end', r => {
-                r.remove(bot.user);
-                //msg.MessageReaction().remove();
-            });
 
         } else if (["lucky", "luckyguy", "lg"].includes(args[1].toLowerCase())) {
             message.channel.send(luckyguy);
