@@ -78,7 +78,7 @@ module.exports = {
 
         if (!giveawayChannel) return;
 
-        giveawayChannel.send(giveawayEmbed);
+        giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
 
     }
 

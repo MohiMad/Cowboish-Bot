@@ -64,6 +64,10 @@ module.exports = async (bot, message) => {
             bot.commands.get('idvwiki').execute(message, args, bot, prefix);
             break;
 
+        case "spawn": case "spawns": case "mapspawns":
+            bot.commands.get('spawns').execute(message, args, bot, prefix);
+        break;
+
 
         //End Of identity V commands
 

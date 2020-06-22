@@ -22,22 +22,17 @@ module.exports = async (bot) => {
 
     console.log(`${timestamp} Logged in as ${bot.user.tag}!`);
     console.log(`___________________________________________`);
-    console.log(`Now let's yeet sum peeps >:D`);
+    console.log(`Now let's yeet some damsels >:D`);
     console.log(`___________________________________________`);
 
     const activities_list = [
 
         `and yoinking around >:v`,
-        /*
         `>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/1000`,
         `${bot.guilds.size} guilds | ${bot.users.size} users`
-        */
-        "#BLM 🖤",
-        "#Black_Lives_Matter 🖤"
-
     ];
 
     setInterval(() => {
