@@ -6,6 +6,74 @@ const { clues, frags, insp, ess1, ess2, ess3, dangan } = require("./emojis.json"
 
 module.exports = {
 
+
+	pageScroller: async (message, imageArray, title) => {
+
+		let Pages = imageArray;
+
+		let pageI = 0;
+
+		let embed = new RichEmbed()
+			.setColor("RANDOM")
+			.setAuthor(title, message.author.displayAvatarURL, imageArray[pageI].replace(".jpg", ""));
+
+		embed.setFooter(`Spawn 1 of ${imageArray.length}`)
+		embed.setImage(imageArray[pageI]);
+
+
+		let msg = await message.channel.send(embed);
+
+		await msg.react('⏪');
+
+		await msg.react('⏩');
+
+		let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
+
+		let forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
+
+
+		let back = msg.createReactionCollector(backFilter, {
+			time: 300000
+		});
+
+		let forward = msg.createReactionCollector(forwardFilter, {
+			time: 300000
+		});
+
+		back.on('collect', r => {
+			r.remove(message.author);
+
+			if (pageI === 0) {
+				pageI = Pages.length - 1;
+			} else {
+				pageI--;
+			}
+
+			embed.setImage(imageArray[pageI]);
+			embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
+
+			msg.edit(embed);
+		});
+
+		forward.on('collect', r => {
+
+			r.remove(message.author);
+
+			if (pageI === Pages.length - 1) {
+
+				pageI = 0;
+			} else {
+				pageI++;
+			}
+			embed.setImage(imageArray[pageI]);
+			embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
+
+
+			msg.edit(embed);
+		});
+
+	},
+
 	rewards: (bot) => {
 
 		logicPath.find({})
@@ -24,9 +92,9 @@ module.exports = {
 				let n5 = bot.users.get(res[4].UserID) || "Not found";
 
 				let reeEmbed = new RichEmbed()
-				.setTitle("Yaaaay a new week has began!")
-				.setColor("0xf0cf07")
-				.setDescription(stripIndents`
+					.setTitle("Yaaaay a new week has began!")
+					.setColor("0xf0cf07")
+					.setDescription(stripIndents`
 			《<:uno:676017997420167187>》 **${n1.username}** 
 			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
 			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
@@ -52,8 +120,8 @@ module.exports = {
 			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
 				
 				`)
-				.setThumbnail("https://media.discordapp.net/attachments/673091096946933790/715627971960111184/B3eiYlJnbghAAAIQ6BBAuFgLEIAABCAAAQhAAAIQgAAEIhFAuCKBZVoIQAACEIAABCAAAQhAAAIIF2sAAhCAAAQgAAEIQAACEIBA.png?width=686&height=564")
-				.setTimestamp()
+					.setThumbnail("https://media.discordapp.net/attachments/673091096946933790/715627971960111184/B3eiYlJnbghAAAIQ6BBAuFgLEIAABCAAAQhAAAIQgAAEIhFAuCKBZVoIQAACEIAABCAAAQhAAAIIF2sAAhCAAAQgAAEIQAACEIBA.png?width=686&height=564")
+					.setTimestamp()
 
 				reChannel.send(reeEmbed);
 
