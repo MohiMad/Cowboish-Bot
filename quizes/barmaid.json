@@ -16,6 +16,12 @@
 		"Answer": ["Tipsy", "tipsy"],
 		"Difficulty": "Extreme",
 		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
-	}
+	},
+	{ 
+		"Question": "**Question:**\n How long does it take to heal using Barmaid's “Strong Dovlin“ drink?",
+		"Answer": ["21", "21s", "21 seconds", "twenty one", "twenty one seconds"],
+		"Difficulty": "Very hard",
+		"Attachment": "https://i.pinimg.com/564x/f2/43/e8/f243e82e06ec75d340b9cc6be55e9b90.jpg"
+    }
 	
 ]

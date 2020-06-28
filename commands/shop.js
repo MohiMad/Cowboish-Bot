@@ -67,121 +67,126 @@ module.exports = {
                 .setColor("RANDOM");
 
             if (LP.Survivors.Officer === true) {
-                roleEmbed.addField("⏰ 1st Officer", "~~1st Officer - Price __*3568*__~~", true);
+                roleEmbed.addField("⏰ 1st Officer", "~~1st Officer - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("⏰ 1st Officer", "1st Officer - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("⏰ 1st Officer", "1st Officer - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Acrobat === true) {
-                roleEmbed.addField("<:acrobat:664447949509623828> Acrobat", "~~Acrobat - Price __*3568*__~~", true);
+                roleEmbed.addField("<:acrobat:664447949509623828> Acrobat", "~~Acrobat - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:acrobat:664447949509623828> Acrobat", "Acrobat - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:acrobat:664447949509623828> Acrobat", "Acrobat - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Barmaid === true) {
-                roleEmbed.addField("<:barmaid:664448019495649291> Barmaid", "~~Barmaid - Price __*3568*__~~", true);
+                roleEmbed.addField("<:barmaid:664448019495649291> Barmaid", "~~Barmaid - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:barmaid:664448019495649291> Barmaid", "Barmaid - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:barmaid:664448019495649291> Barmaid", "Barmaid - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Postman === true) {
-                roleEmbed.addField("<:postman:648981954787672123> Postman", "~~Postman - Price __*3568*__~~", true);
+                roleEmbed.addField("<:postman:648981954787672123> Postman", "~~Postman - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:postman:648981954787672123> Postman", "Postman - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:postman:648981954787672123> Postman", "Postman - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Coordinator === true) {
-                roleEmbed.addField("<:coordinator:649121091276636180> Coordinator", "~~Coordinator - Price __*3568*__~~", true);
+                roleEmbed.addField("<:coordinator:649121091276636180> Coordinator", "~~Coordinator - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:coordinator:649121091276636180> Coordinator", "Coordinator - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:coordinator:649121091276636180> Coordinator", "Coordinator - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Dancer === true) {
-                roleEmbed.addField("<:dancer:648850426992525312> Dancer", "~~Dancer - Price __*3568*__~~", true);
+                roleEmbed.addField("<:dancer:648850426992525312> Dancer", "~~Dancer - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:dancer:648850426992525312> Dancer", "Dancer - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:dancer:648850426992525312> Dancer", "Dancer - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Embalmer === true) {
-                roleEmbed.addField("<:embalmer:648852775786119168> Embalmer", "~~Embalmer - Price __*3568*__~~", true);
+                roleEmbed.addField("<:embalmer:648852775786119168> Embalmer", "~~Embalmer - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:embalmer:648852775786119168> Embalmer", "Embalmer - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:embalmer:648852775786119168> Embalmer", "Embalmer - Price __*3568*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Enchantress === true) {
-                roleEmbed.addField("<:enchantress:648834319409872897> Enchantress", "~~Enchantress - Price __*3568*__~~", true);
+                roleEmbed.addField("<:enchantress:648834319409872897> Enchantress", "~~Enchantress - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:enchantress:648834319409872897> Enchantress", "Enchantress - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:enchantress:648834319409872897> Enchantress", "Enchantress - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Explorer === true) {
-                roleEmbed.addField("<:explorer:648850510639529986> Explorer", "~~Explorer - Price __*1468*__~~", true);
+                roleEmbed.addField("<:explorer:648850510639529986> Explorer", "~~Explorer - Price __*1468*__~~");
             } else {
-                roleEmbed.addField("<:explorer:648850510639529986> Explorer", "Explorer - Price __*1468*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:explorer:648850510639529986> Explorer", "Explorer - Price __*1468*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Forward === true) {
-                roleEmbed.addField("<:forward:648853296399908865> Forward", "~~Forward - Price __*3568*__~~", true);
+                roleEmbed.addField("<:forward:648853296399908865> Forward", "~~Forward - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:forward:648853296399908865> Forward", "Forward - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:forward:648853296399908865> Forward", "Forward - Price __*3568*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Magician === true) {
-                roleEmbed.addField("<:magician:648852040470102018> Magician", "~~Magician - Price __*1988*__~~", true);
+                roleEmbed.addField("<:magician:648852040470102018> Magician", "~~Magician - Price __*1988*__~~");
             } else {
-                roleEmbed.addField("<:magician:648852040470102018> Magician", "Magician - Price __*1988*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:magician:648852040470102018> Magician", "Magician - Price __*1988*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Mechanic === true) {
-                roleEmbed.addField("<:mechanic:649120887492182016> Mechanic", "~~Mechanic - Price __*3568*__~~", true);
+                roleEmbed.addField("<:mechanic:649120887492182016> Mechanic", "~~Mechanic - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:mechanic:649120887492182016> Mechanic", "Mechanic - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:mechanic:649120887492182016> Mechanic", "Mechanic - Price __*3568*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Mercenary === true) {
-                roleEmbed.addField("<:merc:648834272190267402> Mercenary", "~~Mercenary: Price __*3048*__~~", true);
+                roleEmbed.addField("<:merc:648834272190267402> Mercenary", "~~Mercenary: Price __*3048*__~~");
             } else {
-                roleEmbed.addField("<:merc:648834272190267402> Mercenary", "Mercenary: Price __*3048*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:merc:648834272190267402> Mercenary", "Mercenary: Price __*3048*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Mindseye === true) {
-                roleEmbed.addField("<:mindseye:648852851061293056> Mindseye", "~~Mindseye - Price __*3568*__~~", true);
+                roleEmbed.addField("<:mindseye:648852851061293056> Mindseye", "~~Mindseye - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:mindseye:648852851061293056> Mindseye", "Mindseye - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:mindseye:648852851061293056> Mindseye", "Mindseye - Price __*3568*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Cowboy === true) {
-                roleEmbed.addField("<:cowboy:649130677253439508> Cowboy", "~~Cowboy - Price __*3568*__~~", true);
+                roleEmbed.addField("<:cowboy:649130677253439508> Cowboy", "~~Cowboy - Price __*3568*__~~");
             } else {
-                roleEmbed.addField("<:cowboy:649130677253439508> Cowboy", "Cowboy - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:cowboy:649130677253439508> Cowboy", "Cowboy - Price __*3568*__ <:clue:655384523735040000>");
             }
 
             if (LP.Survivors.Wilding === true) {
-                roleEmbed.addField("<:wilding:648981862429097994> Wilding", "~~Wilding - Price __*3568*__~~", true);
+                roleEmbed.addField("<:wilding:648981862429097994> Wilding", "~~Wilding - Price __*3568*__~~");
             }
             else {
-                roleEmbed.addField("<:wilding:648981862429097994> Wilding", "Wilding - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:wilding:648981862429097994> Wilding", "Wilding - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Seer === true) {
-                roleEmbed.addField("<:seer:648851989702377473> Seer", "~~Seer - Price __*3568*__~~", true);
+                roleEmbed.addField("<:seer:648851989702377473> Seer", "~~Seer - Price __*3568*__~~");
             }
             else {
-                roleEmbed.addField("<:seer:648851989702377473> Seer", "Seer - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:seer:648851989702377473> Seer", "Seer - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Prospector === true) {
-                roleEmbed.addField("<:prospector:648834388171423744> Prospector", "~~Prospector - Price __*3568*__~~", true);
+                roleEmbed.addField("<:prospector:648834388171423744> Prospector", "~~Prospector - Price __*3568*__~~");
             }
             else {
-                roleEmbed.addField("<:prospector:648834388171423744> Prospector", "Prospector - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:prospector:648834388171423744> Prospector", "Prospector - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.Prefumer === true) {
-                roleEmbed.addField("<:perfumer:648850313411035136> Perfumer", "~~Perfumer - Price __*3568*__~~", true);
+                roleEmbed.addField("<:perfumer:648850313411035136> Perfumer", "~~Perfumer - Price __*3568*__~~");
             }
             else {
-                roleEmbed.addField("<:perfumer:648850313411035136> Perfumer", "Perfumer - Price __*3568*__ <:clue:655384523735040000>", true);
+                roleEmbed.addField("<:perfumer:648850313411035136> Perfumer", "Perfumer - Price __*3568*__ <:clue:655384523735040000>");
             }
             if (LP.Survivors.NewSurv === true) {
-                roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "~~GraveKeeper - Price __*3568*__~~", true)
+                roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "~~GraveKeeper - Price __*3568*__~~")
             } else {
-                roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "GraveKeeper - Price __*3568*__ <:clue:655384523735040000>", true)
+                roleEmbed.addField("<:gravekeepa:683222933782790164> GraveKeeper", "GraveKeeper - Price __*3568*__ <:clue:655384523735040000>")
             }
             if (LP.Survivors.AnotherSurv === true) {
-                roleEmbed.addField("<:prisoner:699693556176126063> Prisoner", "~~Prisoner - Price __*3568*__~~", true)
+                roleEmbed.addField("<:prisoner:699693556176126063> Prisoner", "~~Prisoner - Price __*3568*__~~")
             } else {
-                roleEmbed.addField("<:prisoner:699693556176126063> Prisoner", "Prisoner - Price __*3568*__ <:clue:655384523735040000>", true)
+                roleEmbed.addField("<:prisoner:699693556176126063> Prisoner", "Prisoner - Price __*3568*__ <:clue:655384523735040000>")
+            }
+            if (LP.Survivors.Priestess === true) {
+                roleEmbed.addField("<:priestess_yaay:726735570469912577> Priestess", "~~Priestess - Price __*3568*__~~")
+            } else {
+                roleEmbed.addField("<:priestess_yaay:726735570469912577> Priestess", "Priestess - Price __*3568*__ <:clue:655384523735040000>")
             }
 
 

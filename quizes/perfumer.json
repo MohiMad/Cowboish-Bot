@@ -16,6 +16,12 @@
 		"Answer": ["6", "6 seconds", "six", "Six"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
+	},
+	{
+		"Question": "**Question:**\nwhat is the Perfumer's real name?\nPlease provide the name only (Don't include surname)",
+		"Answer": ["chloe", "vera"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.pinimg.com/564x/dd/0a/ae/dd0aaebc9e8e1c8b1b0357003c357954.jpg"
     }
 
 ]
