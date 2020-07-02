@@ -89,7 +89,7 @@ module.exports = {
 
             const ctx = canvas.getContext('2d');
 
-            const background = await Canvas.loadImage('../pics/LP.png');
+            const background = await Canvas.loadImage('./pics/LP.png');
 
 
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -116,53 +116,53 @@ module.exports = {
 
             if (LP.frames.equipped === "frame1") {
 
-                let frame1 = await Canvas.loadImage("../pics/frame1.png");
+                let frame1 = await Canvas.loadImage("./pics/frame1.png");
 
                 ctx.drawImage(frame1, 15, 11, 150, 147);
 
             } else if (LP.frames.equipped === "frame2") {
 
-                let frame2 = await Canvas.loadImage("../pics/frame2.png");
+                let frame2 = await Canvas.loadImage("./pics/frame2.png");
 
                 ctx.drawImage(frame2, 13, 9, 150, 147);
 
             } else if (LP.frames.equipped === "frame3") {
 
-                let frame3 = await Canvas.loadImage("../pics/frame3.png");
+                let frame3 = await Canvas.loadImage("./pics/frame3.png");
 
                 ctx.drawImage(frame3, 10, 4, 157, 154);
 
             } else if (LP.frames.equipped === "frame4") {
 
-                let frame4 = await Canvas.loadImage("../pics/frame4.png");
+                let frame4 = await Canvas.loadImage("./pics/frame4.png");
 
                 ctx.drawImage(frame4, 10, 4, 157, 154);
 
             } else if (LP.frames.equipped === "frame5") {
 
-                let frame5 = await Canvas.loadImage("../pics/frame5.png");
+                let frame5 = await Canvas.loadImage("./pics/frame5.png");
 
                 ctx.drawImage(frame5, 10, 4, 157, 162);
 
             } else if (LP.frames.equipped === "frame6") {
 
-                let frame6 = await Canvas.loadImage("../pics/frame6.png");
+                let frame6 = await Canvas.loadImage("./pics/frame6.png");
 
                 ctx.drawImage(frame6, 10, 4, 157, 162);
 
             } else if (LP.frames.equipped === "frame7") {
-                let frame7 = await Canvas.loadImage("../pics/frame7.png");
+                let frame7 = await Canvas.loadImage("./pics/frame7.png");
 
                 ctx.drawImage(frame7, 9, 4, 165, 162);
 
             } else if (LP.frames.equipped === "frame8") {
 
-                let frame8 = await Canvas.loadImage("../pics/frame8.png");
+                let frame8 = await Canvas.loadImage("./pics/frame8.png");
 
                 ctx.drawImage(frame8, 9, 4, 165, 161);
             } else if (LP.frames.equipped === "frame9") {
 
-                let frame9 = await Canvas.loadImage("../pics/frame9.png");
+                let frame9 = await Canvas.loadImage("./pics/frame9.png");
 
                 ctx.drawImage(frame9, 4, 1, 165, 170);
             }

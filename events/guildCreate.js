@@ -6,9 +6,16 @@ module.exports = (bot, guild) => {
 
     const create = bot.channels.get('651476936379596830');
 
+    let logsMessages = [
+        `YeeHaw! Someone yeeted me into **${guild.name}** :D\nI'm now in **${bot.guilds.size}** servers U-U`,
+        `Yee I've been invited to join **${guild.name}**\nCowboish Bot is now in **${bot.guilds.size}** servers >:D`,
+        `Just joined a new server with the name **${guild.name}**\nCowboish Bot is now in **${bot.guilds.size}** servers <3`,
+        `Ouuu I've joined a new server named **${guild.name}**... lemme look around for some damsels to yeet 0-o\nCawboaish boat is now in **${bot.guilds.size}**`,
+    ];
+    let random_number = Math.floor(Math.random() * logsMessages.length);
+
     if (!create) return;
-    else create.send(`👏 Just joined a new server named 👉 **${guild.name}**\nCowboish Bot is now in **${bot.guilds.size}** servers <3`);
-    //Sends a message to my server if bot joins a new server (NOT WORKING)
+    else create.send(logsMessages[random_number]);
 
     //Channel loop so bot sends a message to the server it joined
     let channelID;
