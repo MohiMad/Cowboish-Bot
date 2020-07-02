@@ -7,7 +7,7 @@
     },
     {
 		"Question": "**Retype the sentence:**\nType `The postman doggo is cute`",
-		"Answer": ["The postman doggo is cute", "the postman doggo is cute", "doggo", "postman", "cute"],
+		"Answer": ["the postman doggo is cute", "the postman doggo is cute", "doggo", "postman", "cute"],
 		"Difficulty": "Easy",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
     },
@@ -22,6 +22,18 @@
 		"Answer": ["Pitbull", "pitbull"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687987284456374311/image0.png?width=515&height=564"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of Postman's dog",
+		"Answer": ["wick"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.pinimg.com/564x/af/e0/66/afe066176ca85e90cd37912128f4303b.jpg"
+	},
+	{
+		"Question": "**Question:**\nName the letter that gives you a small speed boost after vaulting obstacles",
+		"Answer": ["farewell", "farewell letter"],
+		"Difficulty": "hard af",
+		"Attachment": "https://i.imgur.com/StOI3Bv.jpg"
 	}
 	
 ]

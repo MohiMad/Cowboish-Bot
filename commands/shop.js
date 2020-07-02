@@ -41,7 +41,6 @@ module.exports = {
             .setColor("RANDOM")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
         ${ess1} | **Essence s11-1** - Price : *96* ${insp} - ID: __*s11-1*__
-        ${ess2} | **Essence s11-2** - Price : *96* ${insp} - ID: __*s11-2*__
         ${ess3} | **Essence s11-3** - Price : *96* ${insp} - ID: __*s11-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
@@ -187,6 +186,11 @@ module.exports = {
                 roleEmbed.addField("<:priestess_yaay:726735570469912577> Priestess", "~~Priestess - Price __*3568*__~~")
             } else {
                 roleEmbed.addField("<:priestess_yaay:726735570469912577> Priestess", "Priestess - Price __*3568*__ <:clue:655384523735040000>")
+            } 
+            if (LP.Entomologist === true) {
+                roleEmbed.addField("<:entomologist:727249332562034718> Entomologist", "~~Entomologist - Price __*3568*__~~")
+            } else {
+                roleEmbed.addField("<:entomologist:727249332562034718> Entomologist", "Entomologist - Price __*3568*__ <:clue:655384523735040000>")
             }
 
 

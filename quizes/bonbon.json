@@ -1,39 +1,39 @@
 [
 	{
 		"Question": "**Continue da sentence:**\n`Bonbon's main ability is throwing _ _ _ _ _`",
-		"Answer": ["bombs", "Bombs", "bomb"],
+		"Answer": ["bombs", "bomb"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675008248809652254/5f9834c6fe80ea5c83442899324e35ced60c979c.png?width=564&height=564"
+		"Attachment": "https://66.media.tumblr.com/bf57577e1f4d0141ab9f8b2fabc053ca/c73ffc558b18cb97-78/s640x960/6825f9b413ba7beb43e18860f0466c129398f988.png"
     },
     {
 		"Question": "**Type it:**\nType `Noot noot`",
-		"Answer": ["Noot noot", "noot noot"],
+		"Answer": ["noot noot"],
 		"Difficulty": "Hard lol",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675007978923098115/hqdefault.png"
+		"Attachment": "https://66.media.tumblr.com/f28eb9e603d18619ebdc72cedcb81734/77231ecda5c2c443-af/s640x960/5f9834c6fe80ea5c83442899324e35ced60c979c.jpg"
     },
     {
 		"Question": "**Fill in the missing word:**\n`Bonbon's camping is _ _`",
-		"Answer": ["op", "OP", "Op"],
+		"Answer": ["op"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675008248809652254/5f9834c6fe80ea5c83442899324e35ced60c979c.png?width=564&height=564"
+		"Attachment": "https://pm1.narvii.com/7601/f4ac326611c5c2c2ec654717a752df5e7111d3bar1-1836-1916v2_hq.jpg"
 	},
 	{
-		"Question": "**Unscramble da word:**\nThe word `ombo` is scrambled, unscramble it to win!",
-		"Answer": ["bomb", "Bomb"],
+		"Question": "**Unscramble da word:**\nThe word `bmbo` is scrambled, unscramble it to win!",
+		"Answer": ["bomb"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688416682389143612/maxresdefault.png?width=1002&height=564"
+		"Attachment": "https://preview.redd.it/t3z8tt2h4ns31.jpg?width=960&crop=smart&auto=webp&s=e8f71c2dc47933a02bfcf9e206a4abf441705849"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["march hare", "march", "hare"],
+		"Answer": ["march hare"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688416682389143612/maxresdefault.png?width=1002&height=564"
+		"Attachment": "https://preview.redd.it/t3z8tt2h4ns31.jpg?width=960&crop=smart&auto=webp&s=e8f71c2dc47933a02bfcf9e206a4abf441705849"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with Bonbon\n(`bomb`, `penguin`, `tea`)",
-		"Answer": ["tea", "Tea"],
+		"Answer": ["tea"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688417786074104041/cpNuKavL_400x400.png"
+		"Attachment": "https://pm1.narvii.com/7600/d6a5579e79d4d47f9a36dc678afb5b3d2cb4c5d5r1-1836-1916v2_uhq.jpg"
 	}
 	
 ]

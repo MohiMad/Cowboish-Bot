@@ -379,6 +379,20 @@ module.exports = {
             }
 
         }
+        else if (["entomologist", "entomo", "ento"].includes(args[1].toLowerCase())) {
+
+            if (LP.Entomologist === false) {
+                ErrorMsg(this.bot, message, msgErr);
+            }
+            else {
+                let EntomoFile = require("../quizes/entomologist.json");
+
+                let EntomoItem = EntomoFile[Math.floor(Math.random() * EntomoFile.length)];
+
+                quiz(message, EntomoItem.Question, EntomoItem.Answer, EntomoItem.Attachment, EntomoItem.Difficulty, "The Entomologist").then(cooldown.add(message.author.id));
+            }
+
+        }
 
         setTimeout(() => {
             cooldown.delete(message.author.id)

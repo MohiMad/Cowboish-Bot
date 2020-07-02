@@ -1,39 +1,39 @@
 [
 	{
 		"Question": "**Question:**\nHow long does it take for bane to use his hook after using it?\n(Cooldown in seconds plz)",
-		"Answer": ["14", "ten", "Ten", "15"],
-		"Difficulty": "Ez",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
+		"Answer": ["14", "14 seconds", "fourteen", "fourteen seconds"],
+		"Difficulty": "Depends on your knowledge of the character...",
+		"Attachment": "https://i.pinimg.com/564x/55/5d/50/555d50ba25c2aab5acc750c408926492.jpg"
     },
     {
 		"Question": "**Countinue da sentence:**\n`Bane's _ _ _ _ hitbox is broken lol`",
-		"Answer": ["hook", "Hook"],
+		"Answer": ["hook"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
+		"Attachment": "https://i.pinimg.com/564x/5c/e6/cc/5ce6cc6dbf5b282ed12695635903b037.jpg"
     },
-    {
-		"Question": "**Retype it:**\nType `Bane used to be a bad hunter`",
-		"Answer": ["Bane used to be a bad hunter", "bane used to be a bad hunter", "bane", "hunter", "bad"],
-		"Difficulty": "Easy",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674672002157510656/Z.png"
-	},
 	{
 		"Question": "**Hmm which word?:**\nFind the odd word that doesn't fit with Bane\n(`hook`, `dear`, `deer`)",
 		"Answer": ["dear"],
-		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688085844212318215/tumblr_pqic3poryA1w9bqh2_540.png"
+		"Difficulty": "Easy",
+		"Attachment": "https://i.pinimg.com/564x/fe/38/f8/fe38f8f1c6ded4dae94347f282b2d35a.jpg"
 	},
 	{
 		"Question": "**Hmm which word?:**\nFind the odd word that doesn't fit with Bane\n(`lasso`, `hook`, `deer`)",
 		"Answer": ["lasso"],
-		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688085844212318215/tumblr_pqic3poryA1w9bqh2_540.png"
+		"Difficulty": "Easy",
+		"Attachment": "https://i.pinimg.com/564x/fe/38/f8/fe38f8f1c6ded4dae94347f282b2d35a.jpg"
 	},
 	{
 		"Question": "**Sramble??:**\nThe word `egameekerp`",
 		"Answer": ["gamekeeper"],
-		"Difficulty": "HARD",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688086602093953104/801e7448c6f0f2bd691691d3b0cdae98e35585e8r1-994-640v2_uhq.png?width=876&height=565"
+		"Difficulty": "Easy",
+		"Attachment": "https://i.pinimg.com/564x/66/35/ed/6635edd9858f7743fc972675f587a633.jpg"
+	},
+	{
+		"Question": "**Guess the skin:**\nType the name of the skin displayed in the image",
+		"Answer": ["forest hunter"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.pinimg.com/564x/6c/cd/0c/6ccd0cd1667613ad37c9af905ef66d1b.jpg"
 	}
 	
 ]

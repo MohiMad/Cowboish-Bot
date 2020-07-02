@@ -120,7 +120,7 @@ module.exports = {
 			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
 				
 				`)
-					.setThumbnail("https://media.discordapp.net/attachments/673091096946933790/715627971960111184/B3eiYlJnbghAAAIQ6BBAuFgLEIAABCAAAQhAAAIQgAAEIhFAuCKBZVoIQAACEIAABCAAAQhAAAIIF2sAAhCAAAQgAAEIQAACEIBA.png?width=686&height=564")
+					.setThumbnail("https://i.imgur.com/VGo6rp3.png")
 					.setTimestamp()
 
 				reChannel.send(reeEmbed);
@@ -304,7 +304,7 @@ module.exports = {
 
 				}
 				else {
-					message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!");
+					message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + answer[0] + "**");
 				}
 
 			}).catch(collected => {
@@ -393,7 +393,7 @@ module.exports = {
 				frame6: false,
 				equipped: "0"
 			},
-			dangan: 10
+			Entomologist: false
 
 		})
 		newLP.save().catch(err => console.log(err))

@@ -1,0 +1,27 @@
+[
+	{
+		"Question": "**Question:**\nWhat object does the Entomologist hold with her hand?",
+		"Answer": ["net", "butterfly net", "trap", "butterfly trap"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.pinimg.com/564x/92/63/0b/92630bbf1c4991aa812ee554e7a6c85b.jpg"
+    },
+    {
+        "Question": "**Question:**\nWhat's the Entomologist's real name?",
+		"Answer": ["pliny", "pliny melly"],
+		"Difficulty": "Umph depends... Oke easy",
+		"Attachment": "https://i.pinimg.com/564x/ea/20/ef/ea20efcb3279cd770bf968b78f2dd784.jpg"
+    },
+    {
+		"Question": "**Guess the name:**\nWhat's the name of this skin?",
+		"Answer": ["sophia"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/zzkpzbO.png"
+	},
+	{
+		"Question": "**Question:**\nWhat insect does the Entomologist control?",
+		"Answer": ["bee", "b", "bees"],
+		"Difficulty": "Medium steak",
+		"Attachment": "https://i.pinimg.com/564x/92/63/0b/92630bbf1c4991aa812ee554e7a6c85b.jpg"
+		}
+	
+]

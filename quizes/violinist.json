@@ -22,5 +22,11 @@
         "Answer": ["violin"],
         "Difficulty": "Ez Pz lemon squeezy",
         "Attachment": "https://i.pinimg.com/564x/56/5c/b9/565cb9cad3b3f3a1a43abcbe44f276c0.jpg"
+    },
+    {
+        "Question": "**Question:**\nHow may **seconds** does the first skill of violinist last when on the field?",
+        "Answer": ["13", "thirteen"],
+        "Difficulty": "Easy if you read the external trait",
+        "Attachment": "https://66.media.tumblr.com/be1ca38a80d50069473e40368e87b9b0/5644c65d571bcae4-29/s1280x1920/3e2614f6fd20feb0de42c62d665fe6f68fc591c6.png"
     }
 ]

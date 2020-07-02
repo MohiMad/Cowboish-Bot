@@ -1,34 +1,40 @@
 [
 	{
 		"Question": "**Question:**\nHow many balls does the Acrobat spawn with?\nAnswer with a **NUMBER**",
-		"Answer": ["three", "Three", "3", "three balls"],
+		"Answer": ["three", "3", "three balls"],
 		"Difficulty": "Eazy beazy lemon squeazy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673886051277864960/ddcuwfe-8786ae9e-a656-49f5-b1d9-b768cbec6e68.png?width=450&height=450"
+		"Attachment": "https://i.pinimg.com/564x/44/71/86/447186804bcd64615aa1bd73d0b91ef9.jpg"
     },
     {
 		"Question": "**Repeat da sentence:**\nType `The Acrobat has three balls`",
-		"Answer": ["The Acrobat has three balls", "the acrobat has three balls", "the", "acrobat", "has", "three", "balls"],
+		"Answer": ["the acrobat has three balls"],
 		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673886051277864960/ddcuwfe-8786ae9e-a656-49f5-b1d9-b768cbec6e68.png?width=450&height=450"
+		"Attachment": "https://i.pinimg.com/564x/ef/d3/33/efd33313243e3b0eb5937683456419f7.jpg"
     },
     {
 		"Question": "**Question:**\nWhat's the name of this skin?",
-		"Answer": ["Mr.swifts", "Mr.Swifts"],
+		"Answer": ["mr.swifts", "mr swifts", "mr. swifts"],
 		"Difficulty": "Hard as ma d :v",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673886270908530699/Ec4AyL0fOaQAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.pinimg.com/564x/4a/5b/c2/4a5bc213dfa2f18b84f27de58ea28919.jpg"
 	},
 	{
 		"Question": "**Fill in the missing word:**\n`The sticky bomb slows down the hunter's movement _ _ _ _`",
-		"Answer": ["speed", "Speed"],
-		"Difficulty": "Hard as ma d :v",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678216807416332298/dcab43349add39319b4799c5ac1ef982a29e4502.png?width=505&height=564"
+		"Answer": ["speed"],
+		"Difficulty": "Nah this one is easy",
+		"Attachment": "https://i.pinimg.com/564x/9b/93/40/9b9340e35eade146301b9fc2240e1115.jpg"
 	},
 	{
 		"Question": "**Guess the name:**\nWhat's the Acrobat's real name?",
-		"Answer": ["Mike", "mike"],
-		"Difficulty": "Hard :v",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678216807416332298/dcab43349add39319b4799c5ac1ef982a29e4502.png?width=505&height=564"
-	}
+		"Answer": ["mike"],
+		"Difficulty": "Hard! Jk it's not :v",
+		"Attachment": "https://i.pinimg.com/564x/34/10/a7/3410a77344b4c597650b4b35be1da4a9.jpg"
+	},
+	{
+		"Question": "**Question:**\nHow do the Acrobat obtain another mud bomb(black ball)?",
+		"Answer": ["rescue", "by rescuing", "rescuing", "save", "saving", "by saving someone", "by rescuing someone"],
+		"Difficulty": "Medium i suppose?",
+		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt-a4wsIuV0RHBx0QkTAVTSr88_WOFUgfx9MC4ncnouZMvlfU&s"
+		}
 	
 
 	

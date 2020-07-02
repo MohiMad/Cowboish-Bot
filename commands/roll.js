@@ -56,7 +56,7 @@ module.exports = {
 
                         `20 ${clues}`, //5
                         `10 ${clues}, and 1 ${ess1}`, //6
-                        `1 ${ess1}, and 1 ${ess2}`, //7
+                        `1 ${ess1}, and 1 ${ess3}`, //7
                         `20 ${clues}`, //8
                         `50 ${insp}, and 30 ${clues}`, //9
 
@@ -65,7 +65,7 @@ module.exports = {
                         `30 ${clues}, and 1 ${ess1}`, //10
                         `10 ${clues}, and 20 ${insp}`, //11
                         `30 ${clues}`, //12
-                        `10 ${clues}, 1 ${ess1}, and 1 ${ess2}`, //13
+                        `10 ${clues}, 1 ${ess1}, and 1 ${ess3}`, //13
 
                         //Dice 4 chances now??
 
@@ -73,11 +73,11 @@ module.exports = {
                         `20 ${clues}, 1 ${ess1}, and 60 ${insp}`, //15
                         `20 ${clues}, and 1 ${ess1}`, //16,
 
-                        `1 ${dangan}`,//17
-                        `1 ${dangan} + 1 ${ess1}`,
-                        `2 ${dangan} + 10 ${clues}`,
-                        `10 ${clues} + 1 ${dangan}`,
-                        `1 ${dangan} + 20 ${insp}`
+                        `1 ${ess3}`,//17
+                        `1 ${ess3} + 1 ${ess1}`,
+                        `2 ${ess3} + 10 ${clues}`,
+                        `10 ${clues} + 1 ${ess3}`,
+                        `1 ${ess3} + 20 ${insp}`
 
                     ];
 
@@ -111,7 +111,7 @@ module.exports = {
                 }
                 if (diceChance === 6) {
                     LP.Ess1 = LP.Ess1 + 1;
-                    LP.Ess2 = LP.Ess2 + 1;
+                    LP.Ess3 = LP.Ess3 + 1;
                 }
                 if (diceChance === 7) {
                     LP.Clues = LP.Clues + 20;
@@ -137,7 +137,7 @@ module.exports = {
                 if (diceChance === 12) {
                     LP.Clues = LP.Clues + 10;
                     LP.Ess1 = LP.Ess1 + 1;
-                    LP.Ess2 = LP.Ess2 + 1;
+                    LP.Ess3 = LP.Ess3 + 1;
                 }
 
                 //Dice 3 ends 
@@ -156,22 +156,22 @@ module.exports = {
                 }
 
                 if (diceChance === 16) {
-                    LP.dangan = LP.dangan + 1;
+                    LP.Ess3 = LP.Ess3 + 1;
                 }
                 if (diceChance === 17) {
-                    LP.dangan = LP.dangan + 1;
+                    LP.Ess3 = LP.Ess3 + 1;
                     LP.Ess1 = LP.Ess1 + 1;
                 }
                 if (diceChance === 18) {
-                    LP.dangan = LP.dangan + 2;
+                    LP.Ess3 = LP.Ess3 + 2;
                     LP.Clues = LP.Clues + 10;
                 }
                 if (diceChance === 19) {
-                    LP.dangan = LP.dangan + 1;
+                    LP.Ess3 = LP.Ess3 + 1;
                     LP.Clues = LP.Clues + 10;
                 }
                 if (diceChance === 20) {
-                    LP.dangan = LP.dangan + 1;
+                    LP.Ess3 = LP.Ess3 + 1;
                     LP.Inspirations = LP.Inspirations + 20;
                 }
 
@@ -220,17 +220,17 @@ module.exports = {
 
                     `80 ${clues} + 2 ${ess1} + 50 ${insp}`, //1
 
-                    `130 ${clues} + 1 ${ess1} + 1 ${dangan} + 20 ${insp}`, //2
+                    `130 ${clues} + 1 ${ess1} + 1 ${ess3} + 20 ${insp}`, //2
 
-                    `150 ${clues} + 2 ${ess1} + 2 ${dangan}`, //3
+                    `150 ${clues} + 2 ${ess1} + 2 ${ess3}`, //3
 
                     `160 ${clues} + 1 ${ess1}`, //4
 
-                    `120 ${clues} + 2 ${ess1} + 1 ${dangan}`, //5
+                    `120 ${clues} + 2 ${ess1} + 1 ${ess3}`, //5
 
                     `90 ${clues} + 2 ${ess1} + 50 ${insp}`, //6
 
-                    `100 ${clues} + 1 ${dangan} + 1 ${ess1} + 60 ${insp}`, //7
+                    `100 ${clues} + 1 ${ess3} + 1 ${ess1} + 60 ${insp}`, //7
 
                 ];
 
@@ -252,14 +252,14 @@ module.exports = {
                     case 2:
                         LP.Clues = LP.Clues + 130;
                         LP.Ess1 = LP.Ess1 + 1;
-                        LP.dangan = LP.dangan + 1;
+                        LP.Ess3 = LP.Ess3 + 1;
                         LP.Inspirations = LP.Inspirations + 20;
                         break;
 
                     case 3:
                         LP.Clues = LP.Clues + 150;
                         LP.Ess1 = LP.Ess1 + 2;
-                        LP.dangan = LP.dangan + 2;
+                        LP.Ess3 = LP.Ess3 + 2;
                         break;
 
                     case 4:
@@ -270,7 +270,7 @@ module.exports = {
                     case 5:
                         LP.Clues = LP.Clues + 120;
                         LP.Ess1 = LP.Ess1 + 2;
-                        LP.dangan = LP.dangan + 1;
+                        LP.Ess3 = LP.Ess3 + 1;
                         break;
 
                     case 6:
@@ -282,7 +282,7 @@ module.exports = {
                     case 7:
                         LP.Clues = LP.Clues + 100;
                         LP.Ess1 = LP.Ess1 + 1;
-                        LP.dangan = LP.dangan + 1;
+                        LP.Ess3 = LP.Ess3 + 1;
                         LP.Inspirations = LP.Inspirations + 60;
                         break;
 
@@ -313,11 +313,11 @@ module.exports = {
                 let dice_10_chances = [
                     `200 ${clues} + 6 ${ess1}`, //0
 
-                    `180 ${clues} + 3 ${ess1} + 2 ${dangan}`, //1
+                    `180 ${clues} + 3 ${ess1} + 2 ${ess3}`, //1
 
-                    `210 ${clues} + 2 ${ess1} + 2 ${dangan} + 50 ${insp}`, //2
+                    `210 ${clues} + 2 ${ess1} + 2 ${ess3} + 50 ${insp}`, //2
 
-                    `300 ${clues} + 2 ${ess1} + ${dangan}`, //3
+                    `300 ${clues} + 2 ${ess1} + ${ess3}`, //3
 
                     `320 ${clues} + 3 ${ess1} + 80 ${insp}`, //4
 
@@ -337,20 +337,20 @@ module.exports = {
                     case 1:
                         LP.Clues = LP.Clues + 180;
                         LP.Ess1 = LP.Ess1 + 3;
-                        LP.dangan = LP.dangan + 2;
+                        LP.Ess3 = LP.Ess3 + 2;
                         break;
 
                     case 2:
                         LP.Clues = LP.Clues + 210;
                         LP.Ess1 = LP.Ess1 + 2;
-                        LP.dangan = LP.dangan + 2;
+                        LP.Ess3 = LP.Ess3 + 2;
                         LP.Inspirations = LP.Inspirations + 50;
                         break;
 
                     case 3:
                         LP.Clues = LP.Clues + 200;
                         LP.Ess1 = LP.Ess1 + 2;
-                        LP.dangan = LP.dangan + 1;
+                        LP.Ess3 = LP.Ess3 + 1;
                         break;
 
                     case 4:

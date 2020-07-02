@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 
 const { RichEmbed } = require('discord.js');
 
-const { clues, insp, ess1, ess2, ess3, dangan, frags } = require("../emojis.json");
+const { clues, insp, ess1, ess2, ess3, frags } = require("../emojis.json");
 
 module.exports = {
     name: 'giveaway',
@@ -15,13 +15,12 @@ module.exports = {
 
         let randomUser = giveawayRole.members.random();
 
-
         let rewards = [
             `1000 ${clues} and 5 ${ess1}`, //0
-            `500 ${clues}, 3 ${ess1}, and 3 ${dangan}`, //1
+            `500 ${clues}, 3 ${ess1}, and 3 ${ess3}`, //1
             `100 ${insp}, 1000 ${frags}, and 200 ${clues}`, //2
-            `500 ${frags}, 5 ${dangan}, and 96 ${insp}`, //3
-            `7 ${ess1}, 5 ${dangan}, and 700 ${clues}`, //4
+            `500 ${frags}, 5 ${ess3}, and 96 ${insp}`, //3
+            `7 ${ess1}, 5 ${ess3}, and 700 ${clues}`, //4
 
         ];
 
@@ -40,7 +39,7 @@ module.exports = {
             case 1:
                 LP.Clues = LP.Clues + 500;
                 LP.Ess1 = LP.Ess1 + 3;
-                LP.dangan = LP.dangan + 3;
+                LP.Ess3 = LP.Ess3 + 3;
                 break;
 
             case 2:
@@ -51,12 +50,12 @@ module.exports = {
 
             case 3:
                 LP.frags = LP.frags + 500;
-                LP.dangan = LP.dangan + 5;
+                LP.Ess3 = LP.Ess3 + 5;
                 LP.Inspirations = LP.Inspirations + 96;
                 break;
 
             case 4:
-                LP.dangan = LP.dangan + 5;
+                LP.Ess3 = LP.Ess3 + 5;
                 LP.Ess1 = LP.Ess1 + 7;
                 LP.Clues = LP.Clues + 700;
                 break;

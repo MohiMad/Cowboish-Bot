@@ -79,7 +79,7 @@ module.exports = {
         const testEmbed = new RichEmbed()
             .setTitle("Identity V logicpath commands!")
             .setColor("RANDOM")
-            .setDescription("In this category you get to play matches and roll dices to be able to open the season's current essences :D\n\n**LogicPath commands!**\n`daily` ➜ Get your daily reward, **24** hours cooldown\n\n`hunt` ➜ Answer the quiz of the chosen hunter to get a dice\n\n`quick` ➜ Play a quick match as a survivor to get dices\n\n`roll` ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`open` ➜ Open the season's current essences (<:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`logicpath` ➜ Check your logicpath status\n\n`shop` ➜ A list of stuff you can buy (Survivors, Hunters and essences)\n\n`buy` ➜ Buy Survivors, Hunters or essences\n\n`leaderboard` ➜ check the top 5 players for this category\n\n`bio` ➜ Describe who you are so it displays in the `LP` cmd\n\n`region` ➜ Set which region your in so it displays in the `LP` cmd\n\n`equip` ➜ equip/change your portrait frame to be seen in the `lp` command\n\n`gift` ➜ Gift your friends your (<:inspirations:655840409674711060>, <:frags:655840344725913600>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751> or <:ess3:655840571616919586>)")
+            .setDescription("In this category you get to play matches and roll dices to be able to open the season's current essences :D\n\n**LogicPath commands!**\n`daily` ➜ Get your daily reward, **24** hours cooldown\n\n`hunt` ➜ Answer the quiz of the chosen hunter to get a dice\n\n`quick` ➜ Play a quick match as a survivor to get dices\n\n`roll` ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`open` ➜ Open the season's current essences (<:ess1:655840713904488469>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`logicpath` ➜ Check your logicpath status\n\n`shop` ➜ A list of stuff you can buy (Survivors, Hunters and essences)\n\n`buy` ➜ Buy Survivors, Hunters or essences\n\n`leaderboard` ➜ check the top 5 players for this category\n\n`set` ➜ Set your `region`, `biography` and `ID` so they display in your `logicpath` profile\n\n`equip` ➜ equip/change your portrait frame to be seen in the `lp` command\n\n`gift` ➜ Gift your friends your (<:inspirations:655840409674711060>, <:frags:655840344725913600>, <:clue:655384523735040000>, <:ess1:655840713904488469>, <:ess2:655840643847028751> or <:ess3:655840571616919586>)")
             .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
 
         if (args[1] === "logicpath") {
@@ -99,7 +99,7 @@ module.exports = {
             const ultity_Embed = new RichEmbed()
                 .setColor("RANDOM")
                 .setTitle("Cowboish Utility commands :D")
-                .setDescription("`setup` | `userinfo` | `serverinfo` | `setup`")
+                .setDescription("`setup` | `userinfo` | `serverinfo`")
                 .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
             message.channel.send(ultity_Embed)

@@ -1,39 +1,33 @@
 [
 	{
 		"Question": "**Unscramble da word:**\nThe word `reeT` is scrambled, unscramble it or i won't give you yo dice >:/",
-		"Answer": ["tree", "Tree"],
+		"Answer": ["tree"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674639346359336970/2Q.png"
-    },
-    {
-		"Question": "**Question:**\nIs axeboy short?",
-		"Answer": ["no", "yes", "Yes", "yas", "No"],
-		"Difficulty": "Hard to choose between yes n no :v",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674639745535442945/Z.png"
+		"Attachment": "https://66.media.tumblr.com/0e6601abb8dfa93342a98bc7514dd1e8/tumblr_pxwsvua47j1xffleoo1_640.png"
     },
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
-		"Answer": ["Wail", "wail", "lost boy", "lost boi"],
+		"Answer": ["wail", "lost boy", "lost boi"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674639745535442945/Z.png"
+		"Attachment": "https://66.media.tumblr.com/0e6601abb8dfa93342a98bc7514dd1e8/tumblr_pxwsvua47j1xffleoo1_640.png"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`tree`, `fire`, `axe`, `plant`, `apple`)",
 		"Answer": ["apple"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688083968481951840/tumblr_pxk9014qnR1xffleoo1_500.png"
+		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`plant`, `grizzly`, `tree`, `fire`, `axe`)",
 		"Answer": ["grizzly"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688083968481951840/tumblr_pxk9014qnR1xffleoo1_500.png"
+		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`plant`, `tree`, `pickaxe`, `fire`, `axe`)",
 		"Answer": ["pickaxe"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688083968481951840/tumblr_pxk9014qnR1xffleoo1_500.png"
+		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png"
 	}
 	
 	

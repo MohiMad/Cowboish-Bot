@@ -1,7 +1,7 @@
 const { RichEmbed } = require('discord.js');
 let cooldown = new Set();
 const { newLP } = require("../functions.js");
-
+const { ess2, ess1, ess3, clues, dice } = require("../emojis.json");
 
 module.exports = {
     name: 'daily',
@@ -12,9 +12,6 @@ module.exports = {
             .setTitle("Take it easy on me dude!")
             .setColor("0xe80000")
             .setDescription("It's a DAILY reward so you have to wait 24 hours until you can get your reward again..");
-
-
-
 
         const logicPath = require("../models/logicpath.js");
 
@@ -38,9 +35,9 @@ module.exports = {
             else {
 
                 const dailyEmbed = new RichEmbed()
-                    .setTitle("🎁 Here is your daily reward 🎁")
-                    .addField("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔",
-                        "Here! take these **5**<:dice:655384578499936257>, **500**<:clue:655384523735040000> and **5** <:danganronpa_ess:715502686891540520>")
+                    .setTitle("🎁 Daily reward given! 🎁")
+                    .setThumbnail("https://i.imgur.com/VGo6rp3.png")
+                    .setDescription(`I've yeeted **10** ${dice}, **500** ${clues} and **10** ${ess3} into your account ;D`)
                     .setColor("0xffd500")
                     .setFooter("Remember to come back the next day to get your rewards again :)");
 
@@ -48,9 +45,9 @@ module.exports = {
                 message.channel.send(dailyEmbed)
                     .then(cooldown.add(message.author.id));
 
-                LP.Dices = LP.Dices + 5;
+                LP.Dices = LP.Dices + 10;
                 LP.Clues = LP.Clues + 500;
-                LP.dangan = LP.dangan + 5;
+                LP.Ess3 = LP.Ess3 + 10;
 
                 LP.save().catch(err => console.log(err));
 

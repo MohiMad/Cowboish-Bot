@@ -39,7 +39,7 @@ module.exports = {
             var facts = [
                 `Aww ${message.author.username} hugs ${persona.user.username} :3`,
                 `${message.author.username} gives ${persona.user.username} a big hug`,
-                `${persona.user.username} is being hugged by ${message.author.username}, cute!`
+                `${message.author.username} squeezes ${persona.user.username} >:3`,
 
             ];
             var fact = Math.floor(Math.random() * facts.length);

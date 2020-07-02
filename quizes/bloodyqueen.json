@@ -1,45 +1,39 @@
 [
 	{
 		"Question": "**Question:**\nWhat's the name of this skin?",
-		"Answer": ["blood bath", "Blood bath", "blood", "bath"],
+		"Answer": ["blood bath"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675005659908931604/xfNkHjqYDTw4wAAAAASUVORK5CYII.png?width=1002&height=564"
+		"Attachment": "https://i.pinimg.com/564x/75/b5/a8/75b5a8217c794ddbeeda60f15288ea45.jpg"
     },
     {
 		"Question": "**Continue the sentence:**\n`Bloody _ _ _ _ _ is the queen of terrorshocks!`",
-		"Answer": ["queen", "Queen"],
+		"Answer": ["queen"],
 		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675005241510461461/e0f04e0e0592fb6494bd1150db6bfd55.png?width=797&height=565"
+		"Attachment": "https://i.pinimg.com/564x/44/38/9f/44389ffee4109042993b8a7f77f28157.jpg"
     },
-    {
-		"Question": "**Retype da sentence:**\nType `Cant believe i got terrorshocked smh`",
-		"Answer": ["Can't believe i got terrorshocked smh", "cant believe i got terrorshocked smh", "smh", "believe", "terrorshocked", "got"],		
-		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675005241510461461/e0f04e0e0592fb6494bd1150db6bfd55.png?width=797&height=565"
-	},
 	{
 		"Question": "**Unsramble it:**\nUnscramble the letters! (`imrorr`)",
-		"Answer": ["mirror", "Mirror"],		
+		"Answer": ["mirror"],		
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688301749760819240/image0.png"
+		"Attachment": "https://i.pinimg.com/564x/13/bc/2f/13bc2fd9afd4414219d301cc1c1e2f28.jpg"
 	},
 	{
 		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`mirror`, `dovlin`, `blood`, `queen`)",
 		"Answer": ["dovlin"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688304608615202876/ddeyjtm-da7aee30-f74e-4f53-814b-d75ca54f9725.png?width=434&height=565"
+		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
 	},
 	{
 		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`mirror`, `blood`, `queen`, `reptile`)",
 		"Answer": ["reptile"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688304608615202876/ddeyjtm-da7aee30-f74e-4f53-814b-d75ca54f9725.png?width=434&height=565"
+		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
 	},
 	{
 		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`portal`, `mirror`, `blood`, `queen`)",
 		"Answer": ["portal"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688304608615202876/ddeyjtm-da7aee30-f74e-4f53-814b-d75ca54f9725.png?width=434&height=565"
+		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
 	}
 	
 ]

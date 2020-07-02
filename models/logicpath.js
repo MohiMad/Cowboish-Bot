@@ -94,7 +94,7 @@ const LPSchema = mongoose.Schema({
         frame6: Boolean,
         equipped: String
     },
-    dangan: Number
+    Entomologist: Boolean
 
 
 });

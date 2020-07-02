@@ -138,11 +138,6 @@ module.exports = async (bot, message) => {
 
             break;
 
-        case "id": case "setid":
-            bot.commands.get('id').execute(message, args, prefix);
-
-            break;
-
         case "quick": case "play":
             bot.commands.get('quick').execute(message, args, bot, prefix);
             break;
@@ -152,12 +147,8 @@ module.exports = async (bot, message) => {
 
             break;
 
-        case "bio": case "biography":
-            bot.commands.get('bio').execute(message, args, bot);
-            break;
-
-        case "region":
-            bot.commands.get('region').execute(message, args, bot);
+        case "set":
+            bot.commands.get('set').execute(message, args, bot, prefix);
             break;
 
         case "dailyreward": case "daily":
@@ -283,7 +274,7 @@ module.exports = async (bot, message) => {
             bot.commands.get('suggest').execute(message, args, bot, MohiMoo);
             break;
 
-        case "setup": case "set":
+        case "setup":
             bot.commands.get('setup').execute(message, args, MohiMoo, bot);
             break;
 

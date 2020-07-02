@@ -1,27 +1,39 @@
 [
 	{
 		"Question": "**Question:**\nWhat kind of drink do you drink to get back to full health?",
-		"Answer": ["strong devolin", "dovlin", "strong dovlin"],
+		"Answer": ["strong dovlin", "dovlin"],
 		"Difficulty": "As hard as ma d :v",
-		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
+		"Attachment": "https://i.pinimg.com/564x/7d/95/f4/7d95f478766cc9751a49712f3838dda6.jpg"
     },
     {
 		"Question": "**Repeat da sentence:**\nType `Want a drink?`",
-		"Answer": ["Want a drink?", "want a drink?"],
+		"Answer": ["want a drink?"],
 		"Difficulty": "Easy",
-		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
+		"Attachment": "https://i.pinimg.com/564x/f2/43/e8/f243e82e06ec75d340b9cc6be55e9b90.jpg"
     },
     {
 		"Question": "**Unscramble:**\nThe word below is scrambled, unscramble it!\n`yTspi`",
-		"Answer": ["Tipsy", "tipsy"],
+		"Answer": ["tipsy"],
 		"Difficulty": "Extreme",
-		"Attachment": "https://i.redd.it/asyhe1lg1wr31.jpg"
+		"Attachment": "https://i.pinimg.com/564x/42/9f/89/429f8959fff894bc903aefcc9026d85d.jpg"
 	},
 	{ 
 		"Question": "**Question:**\n How long does it take to heal using Barmaid's “Strong Dovlin“ drink?",
 		"Answer": ["21", "21s", "21 seconds", "twenty one", "twenty one seconds"],
 		"Difficulty": "Very hard",
 		"Attachment": "https://i.pinimg.com/564x/f2/43/e8/f243e82e06ec75d340b9cc6be55e9b90.jpg"
-    }
+	},
+	{
+		"Question": "**Question:**\nAt the start of the match, how many drinks does barmaid have?",
+		"Answer": ["1", "one"],
+		"Difficulty": "Easy tbh",
+		"Attachment": "https://i.pinimg.com/564x/5a/80/7f/5a807f0aeeada747d105fc76e015b720.jpg"
+	},
+	{
+		"Question": "**Minigame:**\nThe Mercenary is injured... quickly type `serve` to give them a drink so they go back to full health!",
+		"Answer": ["serve"],
+		"Difficulty": "Nonexistent",
+		"Attachment": "https://i.pinimg.com/564x/2f/e0/e3/2fe0e324e8f4d205aff735090763e946.jpg"
+	}
 	
 ]

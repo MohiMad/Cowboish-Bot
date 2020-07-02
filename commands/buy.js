@@ -3,6 +3,7 @@ const { ErrorMsg, newLP } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 
+
 module.exports = {
     name: 'buy',
     description: "buy some stuff",
@@ -17,7 +18,6 @@ module.exports = {
             .setAuthor(`${message.author.username} successfully bought...`, message.author.avatarURL);
 
         //____________buy embed is here_______________
-
 
 
         logicPath.findOne({
@@ -46,9 +46,6 @@ module.exports = {
                     if (frame === "frame4") LP.frames.frame4 = true;
                     if (frame === "frame5") LP.frames.frame5 = true;
                     if (frame === "frame6") LP.frames.frame6 = true;
-
-
-
 
                     LP.frames.equipped = frame;
                     LP.frags = LP.frags - price;
@@ -484,6 +481,22 @@ module.exports = {
                     LP.Survivors.AnotherSurv = true;
 
                     buyEmbed.setDescription('You bought zappy stunny man, the "prisoner" idk why the two "" exists but wtvr :)');
+                    message.channel.send(buyEmbed);
+
+                    LP.save().catch(err => console.log(err));
+                }
+            } else if (["entomo", "entomologist", "melly"].includes(args[1].toLowerCase())) {
+                if (LP.Clues < 3568) {
+                    message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${3568 - LP.Clues}** more!`);
+                }
+                else if (LP.Entomologist === true) {
+                    message.reply("You already own the Entomologist");
+                }
+                else {
+                    LP.Clues = LP.Clues - 3568;
+                    LP.Entomologist = true;
+
+                    buyEmbed.setDescription("Yee you bought the Entomologist...");
                     message.channel.send(buyEmbed);
 
                     LP.save().catch(err => console.log(err));
