@@ -1,7 +1,7 @@
 [
 	{
 		"Question": "**Question:**\nHow many seconds does it take for the mind's eye to use her cane again?\nPlease answer in **SECONDS**",
-		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Answer": [ "50", "50 seconds", "fifty seconds", "fifty"],
 		"Difficulty": "Meeeh Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
     },
