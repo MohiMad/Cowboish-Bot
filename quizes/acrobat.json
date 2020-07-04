@@ -13,9 +13,15 @@
     },
     {
 		"Question": "**Question:**\nWhat's the name of this skin?",
-		"Answer": ["mr.swifts", "mr swifts", "mr. swifts"],
+		"Answer": ["cocoa bean"],
 		"Difficulty": "Hard as ma d :v",
 		"Attachment": "https://i.pinimg.com/564x/4a/5b/c2/4a5bc213dfa2f18b84f27de58ea28919.jpg"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["mr.swifts", "mr swifts", "mr. swifts"],
+		"Difficulty": "Hard as ma d :v",
+		"Attachment": "https://66.media.tumblr.com/5a842fba3c6ed306a8516076adba8c0b/tumblr_pui7ifsZRq1xasriuo2_640.png"
 	},
 	{
 		"Question": "**Fill in the missing word:**\n`The sticky bomb slows down the hunter's movement _ _ _ _`",
