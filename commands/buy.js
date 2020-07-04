@@ -3,6 +3,7 @@ const { ErrorMsg, newLP } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
 
+const { ess1, ess2, ess3 } = require("../emojis.json");
 
 module.exports = {
     name: 'buy',
@@ -65,18 +66,22 @@ module.exports = {
             }
             //buy essences here
             else if (["s11-2", "s112", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
+                /*
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 
                 }
                 else {
-                    buyEmbed.setDescription(`You bought **1** <:ess3:655840571616919586> and paid *96* <:inspirations:655840409674711060> `);
+                    buyEmbed.setDescription(`You bought **1** ${ess2} and paid *96* <:inspirations:655840409674711060> `);
                     message.channel.send(buyEmbed);
 
                     LP.Inspirations = LP.Inspirations - 96;
                     LP.Ess2 = LP.Ess2 + 1;
                     LP.save().catch(err => console.log(err));
-                }
+                }*/
+
+                message.channel.send(`**${message.author.username}** this essence is not obtainable this season...`);
+
             }
 
             else if (["s111", "s11-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
@@ -100,7 +105,7 @@ module.exports = {
 
                 }
                 else {
-                    buyEmbed.setDescription(`You bought **1** <:ess2:655840643847028751> and paid *96* <:inspirations:655840409674711060> `);
+                    buyEmbed.setDescription(`You bought **1** ${ess3} and paid *96* <:inspirations:655840409674711060> `);
                     message.channel.send(buyEmbed);
 
                     LP.Inspirations = LP.Inspirations - 96;
@@ -815,7 +820,7 @@ module.exports = {
             else if (["frame6"].includes(args[1].toLowerCase())) {
                 return frame(message, "frame6", 888, LP.frames.frame6);
 
-            } 
+            }
 
 
             else {
