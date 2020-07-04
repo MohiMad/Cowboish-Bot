@@ -512,6 +512,8 @@ module.exports = {
                     embed.setAuthor(`s11-3 items claimed!`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
                     embed.setFooter(`Obtained ${x} items out of 50`);
 
+                    message.channel.send(embed);
+
                 } else {
                     return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n" + ess3 + " | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s11-1`");
                 }
