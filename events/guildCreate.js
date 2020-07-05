@@ -10,7 +10,7 @@ module.exports = (bot, guild) => {
         `YeeHaw! Someone yeeted me into **${guild.name}** :D\nI'm now in **${bot.guilds.size}** servers U-U`,
         `Yee I've been invited to join **${guild.name}**\nCowboish Bot is now in **${bot.guilds.size}** servers >:D`,
         `Just joined a new server with the name **${guild.name}**\nCowboish Bot is now in **${bot.guilds.size}** servers <3`,
-        `Ouuu I've joined a new server named **${guild.name}**... lemme look around for some damsels to yeet 0-o\nCawboaish boat is now in **${bot.guilds.size}**`,
+        `Ouuu I've joined a new server named **${guild.name}**... lemme look around for some damsels to yeet 0-o\nCawboaish boat is now in **${bot.guilds.size}** servers`,
     ];
     let random_number = Math.floor(Math.random() * logsMessages.length);
 

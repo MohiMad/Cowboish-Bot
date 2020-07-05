@@ -3,25 +3,31 @@
 		"Question": "**Question:**\nWhats the name of the skin in the image?",
 		"Answer": ["bride", "Bride"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677233574477885/2Q.png"
+		"Attachment": "https://i.pinimg.com/564x/21/73/d3/2173d3935d9ac1ca45c228682eee5602.jpg"
     },
     {
 		"Question": "**Continue the sentence:**\n`Geisha's _ _ _-box is wack`",
 		"Answer": ["hit", "Hit"],
 		"Difficulty": "Ez",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677763227254813/2Q.png"
+		"Attachment": "https://i.pinimg.com/564x/39/37/9e/39379e902cbff219c727316afd607b14.jpg"
     },
     {
 		"Question": "**Unscramble it:**\nThe word `shaD` is scrambled, unscramble it to win",
 		"Answer": ["dash", "Dash"],
 		"Difficulty": "Mediummmm",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677763227254813/2Q.png"
+		"Attachment": "https://i.pinimg.com/564x/15/86/ef/1586ef4fc99fa7dc63054d9984c411b0.jpg"
 	},
 	{
 		"Question": "**Unscramble it:**\nWhat's the Geisha's real name?",
 		"Answer": ["Michiko", "michiko"],
 		"Difficulty": "Mediummmm",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674677763227254813/2Q.png"
-	}
+		"Attachment": "https://i.pinimg.com/564x/4d/95/ed/4d95ed910aec331454ab55918151d0ad.jpg"
+	},
+	{
+		"Question": "**Retype the sentence:**\nGeisha's hitbox is weird",
+		"Answer": ["geisha's hitbox is weird"],
+		"Difficulty": "medium rare",
+		"Attachment": "https://i.pinimg.com/564x/d1/6f/a2/d16fa245e4ea9fe0124b6f9d18cf8727.jpg"
+		}
 	
 ]

@@ -2,7 +2,7 @@ const { RichEmbed } = require("discord.js");
 const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
-const { clues, frags, insp, ess1, ess2, ess3, dangan } = require("./emojis.json");
+const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
 
 module.exports = {
 
@@ -172,7 +172,7 @@ module.exports = {
 		const coolEmbed = new RichEmbed()
 			.setTitle(Title)
 			.setColor("RED")
-			.setDescription(Description + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2}, ${ess3} and ${dangan})`)
+			.setDescription(Description + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
 			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
 		message.channel.send(coolEmbed).then(m => m.delete(30000));
