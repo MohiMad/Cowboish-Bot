@@ -7,13 +7,13 @@
     },
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
-		"Answer": ["Bull power", "bull power", "Bull Power"],
+		"Answer": ["bull power"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673949800831385601/wFNKQIkfKYWAAAAABJRU5ErkJggg.png"
     },
     {
 		"Question": "**Retype the sentence:**\nType `This forward is toxic`",
-		"Answer": ["This forward is toxic"],
+		"Answer": ["this forward is toxic"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673950329687113728/Z.png"
 	}
