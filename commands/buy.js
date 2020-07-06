@@ -708,7 +708,7 @@ module.exports = {
                 }
 
             }
-            else if (["DW"], "dreamwitch", "Dreamwitch".includes(args[1].toLowerCase())) {
+            else if (["dw", "dreamwitch"].includes(args[1].toLowerCase())) {
                 if (LP.Clues < 4508) {
                     message.reply(`you don't have enough Clues <:clue:655384523735040000>, you need **${4508 - LP.Clues}** more!`);
                 }
