@@ -3,19 +3,26 @@
 		"Question": "**Type quickly:**\nThe hunter just picked up yo teammate, quickly type `stun` to stun them!",
 		"Answer": ["stun", "Stun"],
 		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673950329687113728/Z.png"
+		"Attachment": "https://i.pinimg.com/564x/d7/96/68/d7966817c4d54853a6ca8a446cac9b3b.jpg"
     },
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
 		"Answer": ["bull power"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673949800831385601/wFNKQIkfKYWAAAAABJRU5ErkJggg.png"
+		"Attachment": "https://i.imgur.com/5mZIeKf.png"
     },
     {
 		"Question": "**Retype the sentence:**\nType `This forward is toxic`",
 		"Answer": ["this forward is toxic"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673950329687113728/Z.png"
-	}
+		"Attachment": "https://i.pinimg.com/564x/ce/c5/27/cec527e0e77b5ef8213aae5779ff226f.jpg"
+	},
+	{
+		"Question": "**Question:**\nHow many seconds can the Forward can dash with his rugby?",
+		"Answer": ["6", "6 seconds", "six seconds", "six"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.pinimg.com/564x/4e/6d/0c/4e6d0c752e1747f862cf52db0bbfb69f.jpg"
+    }
+
 	
 ]
