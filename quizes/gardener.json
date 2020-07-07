@@ -1,7 +1,7 @@
 [
 	{
 		"Question": "**Question:**\nHow many seconds does the gardener's shield last for?\n**Answer in seconds!**",
-		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty", "50", "fifty"],
+		"Answer": ["50", "fifty", "50 seconds", "fifty seconds"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673540633348014131/wWTDaJdKMQ5gAAAABJRU5ErkJggg.png"
     },
