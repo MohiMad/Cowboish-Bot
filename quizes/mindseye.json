@@ -7,20 +7,26 @@
     },
     {
 		"Question": "**Retype the sentence:**\n`The mindseye is blind but wears glasses`",
-		"Answer": ["The mindseye is blind but wears glasses", "the mindseye is blind but wears glasses", "blind", "mindseye", "wears", "glasses"],
+		"Answer": ["the mindseye is blind but wears glasses", "blind", "mindseye", "wears", "glasses"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
     },
     {
 		"Question": "**Countinue the sentence:**\nThe Mind's eye is hard to _ _ _ _ as",
-		"Answer": ["play", "Play", "kite", "Kite"],
+		"Answer": ["play", "kite"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767214712881163/images.png"
     },
     {
 		"Question": "**Guess the name**\nGuess the skin's name in the image",
-		"Answer": ["golden cake", "Golden cake", "Golden Cake"],
+		"Answer": ["golden cake"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673767441465212957/XzsrKD5PmR90M4U7dv40p6Ch0d76NHO8P8v85b9ftGDbz0AAAAASUVORK5CYII.png"
-    }
+	},
+	{
+		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`dark`, `cane`, `sunglasses`, `echo`, `fragile`)",
+		"Answer": ["sunglasses"],
+		"Difficulty": "Harder than John Cena's punches",
+		"Attachment": "https://i.pinimg.com/564x/b8/54/b6/b854b68826b70c47b0942780698c7c8d.jpg"
+	}
 ]

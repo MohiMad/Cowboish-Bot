@@ -6,8 +6,8 @@
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673607059434110976/images.png"
     },
     {
-		"Question": "**Countinue the sentence:**\nThe mechanic can spawn _ _ _ dolls per match!",
-		"Answer": ["two", "Two"],
+		"Question": "**Countinue the sentence:**\n`The mechanic can spawn _ _ _ dolls per match!`",
+		"Answer": ["two", "2", "dos"],
 		"Difficulty": "medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673607059434110976/images.png"
     },

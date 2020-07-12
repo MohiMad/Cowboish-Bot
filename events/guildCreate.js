@@ -39,7 +39,7 @@ module.exports = (bot, guild) => {
     const welcomeEmbed = new Discord.RichEmbed()
         .addField('🤗💗 Thank you for inviting me to the party 💗🤗',
             stripIndents`
-        Cowboish bot is the first working Identity V discord bot and is **MohiMoo**'s first project :D
+        Cowboish bot is the first working Identity V discord bot and is **Mohi**'s first project :D
 
         🎉 | My cowboish birthday 🎊 **14/10/2019**
 
@@ -56,7 +56,8 @@ module.exports = (bot, guild) => {
         💠 | For more info contact: **${Mohi.tag}**
         `)
         .addBlankField()
-        .addField("💗 | Support me",
+        .setColor("0xffd900")
+        .addField("💗 | Support Me",
             stripIndents`
         [Cowboish website](https://mohimad.github.io/CowboishBot/) | [Invite me to servers around](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=268758102) | [Cowboish Server](https://discordapp.com/invite/YWcSukS)`);
 

@@ -24,13 +24,9 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription(
                 stripIndents`The current season's Essences are..
-
                         ${ess1} | **Essences s11-1** ─ ID ➜ ${s10_cmd}
-
                         ${ess3} | **Essence s11-3** ─ ID ➜ ${s10_3_cmd}
-
                         Example: ${exmple}
-
                         To check what items you have obtained from a specific essence, do
                         ${stats_cmd}
                 `)
@@ -193,13 +189,38 @@ module.exports = {
 
                     s9Embed.setColor("0xffffff");
                     s9Embed.setAuthor(`🖤 You get a portrait, ${author} 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                    s9Embed.setFooter("Maybe i should add portraits to >logicpath 🤷‍♂️");
 
                     if (LP.Opened.includes(item)) {
                         s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
                         LP.frags = LP.frags + 36;
                     }
                     else {
+                        let ess1_portrait_message = "0";
+
+                        if (item === "ess1-14") {
+                            ess1_portrait_message = "Black and White Explorer";
+
+                        } else if (item === "ess1-15") {
+                            ess1_portrait_message = "Black and White Magician";
+
+                        } else if (item === "ess1-16") {
+                            ess1_portrait_message = "Black and White Gardener";
+
+                        } else if (item === "ess1-48") {
+                            ess1_portrait_message = "Colorful Memory GameKeeper";
+
+                        } else if (item === "ess1-49") {
+                            ess1_portrait_message = "Colorful Memory Coordinator";
+
+                        } else if (item === "ess1-50") {
+                            ess1_portrait_message = "Colorful Memory Geisha";
+                        }
+                        else if (item === "ess1-51") {
+                            ess1_portrait_message = "Colorful Memory Lawyer";
+                        }
+
+                        s9Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess1_portrait_message + "`\nBy equipping the portrait, it will be visable in the `" + prefix + "logicpath` command");
+
                         LP.D = LP.D + 1;
 
                         LP.Opened = [...LP.Opened, item];
@@ -362,6 +383,33 @@ module.exports = {
                         LP.frags = LP.frags + 36;
                     }
                     else {
+
+                        let ess3_portrait_message = "0";
+
+                        if (ess3Item === "ess3-38") {
+                            ess3_portrait_message = "Black and White Lucky Guy";
+
+                        } else if (ess3Item === "ess3-39") {
+                            ess3_portrait_message = "Black and White Coordinator";
+
+                        } else if (ess3Item === "ess3-40") {
+                            ess3_portrait_message = "Black and White Priestess";
+
+                        } else if (ess3Item === "ess3-46") {
+                            ess3_portrait_message = "Colorful Memory Magician";
+
+                        } else if (ess3Item === "ess3-47") {
+                            ess3_portrait_message = "Colorful Memory Cowboy";
+
+                        } else if (ess3Item === "ess3-48") {
+                            ess3_portrait_message = "Colorful Memory Gardener";
+                        }
+                        else if (ess3Item === "ess3-49") {
+                            ess3_portrait_message = "Colorful Memory Forward";
+                        }
+
+                        ess3Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess3_portrait_message + "`\nBy equipping the portrait, it will be visable in the `" + prefix + "logicpath` command");
+
                         LP.D = LP.D + 1;
 
                         LP.Opened = [...LP.Opened, ess3Item];
@@ -378,7 +426,6 @@ module.exports = {
 
             } else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                 if (!args[2]) return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n" + ess1 + " | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n" + ess3 + " | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s11-1`");
-
 
                 let e = "▔ ▔ ▔ ▔ ▔ ";
                 let x = 0;
@@ -502,6 +549,7 @@ module.exports = {
                     itemCheck("[Graffiti] Forward - Gray Shadow", LP, "ess3-43");
                     itemCheck("[Graffiti] Doctor - Gray Shadow", LP, "ess3-44");
                     itemCheck("[Graffiti] Gardener - Gray Shadow", LP, "ess3-45");
+
                     itemCheck("[Portrait] Colorful Memory - Magician", LP, "ess3-46");
                     itemCheck("[Portrait] Colorful Memory - Cowboy", LP, "ess3-47");
                     itemCheck("[Portrait] Colorful Memory - Gardener", LP, "ess3-48");

@@ -186,7 +186,7 @@ module.exports = {
                 roleEmbed.addField("<:priestess_yaay:726735570469912577> Priestess", "~~Priestess - Price __*3568*__~~")
             } else {
                 roleEmbed.addField("<:priestess_yaay:726735570469912577> Priestess", "Priestess - Price __*3568*__ <:clue:655384523735040000>")
-            } 
+            }
             if (LP.Entomologist === true) {
                 roleEmbed.addField("<:entomologist:727249332562034718> Entomologist", "~~Entomologist - Price __*3568*__~~")
             } else {
@@ -382,9 +382,108 @@ module.exports = {
             message.channel.send(framEmbed);
 
 
-        }
+        } else if (["portraits", "portrait"].includes(args[1].toLowerCase())) {
 
-        else {
+            let ownedPortraits = ":";
+
+            let NotOwnedPortraits = ":";
+
+
+            function checkForPortrait(itemName, portraitName) {
+                if (LP.Opened.includes(itemName)) {
+                    ownedPortraits = ownedPortraits + `\n__**${portraitName}**__`;
+                }
+            }//end of the function
+
+            function checkForNonPortrait(itemName, portraitName) {
+                if (!LP.Opened.includes(itemName)) {
+                    NotOwnedPortraits = NotOwnedPortraits + `\n__${portraitName}__`;
+                }
+            }
+            checkForPortrait("ess1-14", "Black and White Explorer");
+            checkForPortrait("ess1-15", "Black and White Magician");
+            checkForPortrait("ess1-16", "Black and White Gardener");
+            checkForPortrait("ess1-48", "Colorful Memory GameKeeper");
+            checkForPortrait("ess1-49", "Colorful Memory Coordinator");
+            checkForPortrait("ess1-50", "Colorful Memory Geisha");
+            checkForPortrait("ess1-51", "Colorful Memory Lawyer");
+            //ess 1
+
+            // _____________ don't ask why this exist____________
+            checkForPortrait("ess3-38", "Black And White Lucky Guy");
+            checkForPortrait("ess3-39", "Black And White Coordinator");
+            checkForPortrait("ess3-40", "Black And White Priestess");
+            checkForPortrait("ess3-46", "Colorful Memory Magician");
+            checkForPortrait("ess3-47", "Colorful Memory Cowboy");
+            checkForPortrait("ess3-48", "Colorful Memory Gardener");
+            checkForPortrait("ess3-49", "Colorful Memory Forward");
+            //ess 3
+
+            //Danganronpa
+            checkForPortrait("dangan-20", "Makoto Naegi");
+            checkForPortrait("dangan-21", "Kyoko Kirigiri");
+            checkForPortrait("dangan-22", "Sayaka Maizono");
+            checkForPortrait("dangan-23", "Leon Kuwata");
+            checkForPortrait("dangan-24", "Mondo Owada");
+            checkForPortrait("dangan-25", "Celestia Ludenberg");
+            checkForPortrait("dangan-26", "Toko Fukawa");
+            checkForPortrait("dangan-27", "Aoi Asahina");
+            checkForPortrait("dangan-28", "Byakuya Togami");
+            checkForPortrait("dangan-29", "Hifumi Yamada");
+            checkForPortrait("dangan-30", "Enoshima Junko");
+            checkForPortrait("dangan-31", "Chihiro Fujisaki");
+            checkForPortrait("dangan-32", "Sakura Ogami");
+            checkForPortrait("dangan-33", "Kiyotaka Ishimaru");
+            checkForPortrait("dangan-34", "Mukuro Ikusaba");
+            checkForPortrait("dangan-35", "Yasuhiro Hagakure");
+
+
+            checkForNonPortrait("ess1-14", "Black and White Explorer");
+            checkForNonPortrait("ess1-15", "Black and White Magician");
+            checkForNonPortrait("ess1-16", "Black and White Gardener");
+            checkForNonPortrait("ess1-48", "Colorful Memory GameKeeper");
+            checkForNonPortrait("ess1-49", "Colorful Memory Coordinator");
+            checkForNonPortrait("ess1-50", "Colorful Memory Geisha");
+            checkForNonPortrait("ess1-51", "Colorful Memory Lawyer");
+            //ess 1
+
+            // _____________ don't ask why this exist____________
+            checkForNonPortrait("ess3-38", "Black And White Lucky Guy");
+            checkForNonPortrait("ess3-39", "Black And White Coordinator");
+            checkForNonPortrait("ess3-40", "Black And White Priestess");
+            checkForNonPortrait("ess3-46", "Colorful Memory Magician");
+            checkForNonPortrait("ess3-47", "Colorful Memory Cowboy");
+            checkForNonPortrait("ess3-48", "Colorful Memory Gardener");
+            checkForNonPortrait("ess3-49", "Colorful Memory Forward");
+            //ess 3
+
+            //Danganronpa
+            checkForNonPortrait("dangan-20", "Makoto Naegi");
+            checkForNonPortrait("dangan-21", "Kyoko Kirigiri");
+            checkForNonPortrait("dangan-22", "Sayaka Maizono");
+            checkForNonPortrait("dangan-23", "Leon Kuwata");
+            checkForNonPortrait("dangan-24", "Mondo Owada");
+            checkForNonPortrait("dangan-25", "Celestia Ludenberg");
+            checkForNonPortrait("dangan-26", "Toko Fukawa");
+            checkForNonPortrait("dangan-27", "Aoi Asahina");
+            checkForNonPortrait("dangan-28", "Byakuya Togami");
+            checkForNonPortrait("dangan-29", "Hifumi Yamada");
+            checkForNonPortrait("dangan-30", "Enoshima Junko");
+            checkForNonPortrait("dangan-31", "Chihiro Fujisaki");
+            checkForNonPortrait("dangan-32", "Sakura Ogami");
+            checkForNonPortrait("dangan-33", "Kiyotaka Ishimaru");
+            checkForNonPortrait("dangan-34", "Mukuro Ikusaba");
+            checkForNonPortrait("dangan-35", "Yasuhiro Hagakure");
+
+            let ownedPortraitEmbed = new RichEmbed()
+                .setAuthor("Cowboish Portrait Shop >:3", "https://i.imgur.com/NGzUkth.png")
+                .setColor("0x6714f7")
+                .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", bot.user.displayAvatarURL)
+                .setDescription("An equipped Portrait will display in `" + prefix + "logicpath` instead of your actual profile-picture\nTo equip the portrait of your choice, do `" + prefix + "equip portrait <portrait name>`\n\nDunno what portraits you have? Here are they" + ownedPortraits + "\n\n**Here are the portraits you don't own**" + NotOwnedPortraits + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`");
+
+            message.channel.send(ownedPortraitEmbed);
+
+        } else {
             message.channel.send(shopEmbed);
         }
 

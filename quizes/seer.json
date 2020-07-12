@@ -28,5 +28,11 @@
 		"Answer": ["Lunar Phase", "lunar phase", "lunar", "phase"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/707961740133924894/image0.png"
-    }
+	},
+	{
+		"Question": "**Retype the sentence:**\nEli is an op stalker",
+		"Answer": ["eli is an op stalker"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.pinimg.com/564x/c0/62/8a/c0628ace15b5d23b6417b81d0f92c52f.jpg"
+	}
 ]

@@ -1,3 +1,4 @@
+
 const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
@@ -89,30 +90,171 @@ module.exports = {
 
             const ctx = canvas.getContext('2d');
 
-            const background = await Canvas.loadImage('./pics/LP.png');
+            if (LP.Portrait != "0") {
+                if (LP.Portrait === "colorful_memory_forward") {
+                    const colorful_memory_forward = await Canvas.loadImage("https://i.imgur.com/hTQNDEr.png");
 
+                    ctx.drawImage(colorful_memory_forward, 14, 13, 140, 140);
+                }
+                if (LP.Portrait === "colorful_memory_geisha") {
+                    const colorful_memory_geisha = await Canvas.loadImage("https://i.imgur.com/yeKjyts.png");
 
-            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(colorful_memory_geisha, 3, 1, 160, 160);
+                }
+                if (LP.Portrait === "colorful_memory_gamekeeper") {
+                    const colorful_memory_gamekeeper = await Canvas.loadImage("https://i.imgur.com/h4T2Ccs.png");
 
-            ctx.strokeStyle = '#cec6af';
+                    ctx.drawImage(colorful_memory_gamekeeper, 3, 1, 160, 160);
+                }
+                if (LP.Portrait === "colorful_memory_lawyer") {
+                    const colorful_memory_lawyer = await Canvas.loadImage("https://i.imgur.com/YAZ1O3R.png");
 
-            ctx.strokeRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(colorful_memory_lawyer, 12, 6, 150, 150);
+                }
+                if (LP.Portrait === "colorful_memory_coordinator") {
+                    const colorful_memory_coordinator = await Canvas.loadImage("https://i.imgur.com/OJLkBJc.png");
 
-            /*if (LP.Portrait != "0") {
-                if(LP.Portrait === "portrait1"){
-                const portrait1 = await Canvas.loadImage("https://i.imgur.com/XJnNOFo.png");
+                    ctx.drawImage(colorful_memory_coordinator, 9, 1, 160, 160);
+                }
+                if (LP.Portrait === "colorful_memory_magician") {
+                    const colorful_memory_magician = await Canvas.loadImage("https://i.imgur.com/l2qy9S5.png");
 
-                ctx.drawImage(portrait1, 20, 14, 137, 137);
+                    ctx.drawImage(colorful_memory_magician, 9, 1, 160, 160);
+                }
+                if (LP.Portrait === "colorful_memory_cowboy") {
+                    const colorful_memory_cowboy = await Canvas.loadImage("https://i.imgur.com/NGzUkth.png");
+
+                    ctx.drawImage(colorful_memory_cowboy, 9, 1, 155, 155);
+                }
+                if (LP.Portrait === "colorful_memory_gardener") {
+                    const colorful_memory_gardener = await Canvas.loadImage("https://i.imgur.com/DLc9pZ9.png");
+
+                    ctx.drawImage(colorful_memory_gardener, 7, 2, 157, 157);
+                }
+                if (LP.Portrait === "chihiro_fujisaki") {
+                    const chihiro_fujisaki = await Canvas.loadImage("https://i.imgur.com/0baTSbV.png");
+
+                    ctx.drawImage(chihiro_fujisaki, 6, -1, 160, 160);
+                }
+                if (LP.Portrait === "sakura_ogami") {
+                    const sakura_ogami = await Canvas.loadImage("https://i.imgur.com/Izz5ClC.png");
+
+                    ctx.drawImage(sakura_ogami, 2, -1, 160, 160);
+                }
+                if (LP.Portrait === "yasuhiro_hagakure") {
+                    const yasuhiro_hagakure = await Canvas.loadImage("https://i.imgur.com/CuaqAYa.png");
+
+                    ctx.drawImage(yasuhiro_hagakure, 3.5, 0, 160, 160);
+                }
+                if (LP.Portrait === "celestia_ludenberg") {
+                    const celestia_ludenberg = await Canvas.loadImage("https://i.imgur.com/jG3Tjg2.png");
+
+                    ctx.drawImage(celestia_ludenberg, 5, -1, 160, 160);
+                }
+                if (LP.Portrait === "kyoko_kirigiri") {
+                    const kyoko_kirigiri = await Canvas.loadImage("https://i.imgur.com/MogqrFr.png");
+
+                    ctx.drawImage(kyoko_kirigiri, 1, -3, 170, 170);
+                }
+                if (LP.Portrait === "mondo_owada") {
+                    const mondo_owada = await Canvas.loadImage("https://i.imgur.com/AM0yZ4O.png");
+
+                    ctx.drawImage(mondo_owada, 4, -3, 160, 160);
+                }
+                if (LP.Portrait === "byakuya_togami") {
+                    const byakuya_togami = await Canvas.loadImage("https://i.imgur.com/c7thNQY.png");
+
+                    ctx.drawImage(byakuya_togami, 4, -3, 160, 160);
+                }
+                if (LP.Portrait === "makoto_naegi") {
+                    const makoto_naegi = await Canvas.loadImage("https://i.imgur.com/zMWoxXV.png");
+
+                    ctx.drawImage(makoto_naegi, 5, -1, 160, 160);
                 }
 
-            } else { */
+                if (LP.Portrait === "hifumi_yamada") {
+                    const hifumi_yamada = await Canvas.loadImage("https://i.imgur.com/57J4TlV.png");
 
-            const avatar = await Canvas.loadImage(LPuser.displayAvatarURL);
+                    ctx.drawImage(hifumi_yamada, 5, -1, 160, 160);
+                }
 
-            ctx.drawImage(avatar, 32, 26, 108, 113);
+                if (LP.Portrait === "mukuro_ikusaba") {
+                    const mukuro_ikusaba = await Canvas.loadImage("https://i.imgur.com/8P5SLl1.png");
 
+                    ctx.drawImage(mukuro_ikusaba, 4, 0, 160, 160);
+                }
+                if (LP.Portrait === "kiyotaka_ishimaru") {
+                    const kiyotaka_ishimaru = await Canvas.loadImage("https://i.imgur.com/iNqPCr1.png");
 
-            ctx.strokeRect(32, 26, 108, 113);
+                    ctx.drawImage(kiyotaka_ishimaru, 5, -1, 160, 160);
+                }
+
+                if (LP.Portrait === "enoshima_junko") {
+                    const enoshima_junko = await Canvas.loadImage("https://i.imgur.com/Rgd09om.png");
+
+                    ctx.drawImage(enoshima_junko, 7, 1, 155, 155);
+                }
+
+                if (LP.Portrait === "aoi_asahina") {
+                    const aoi_asahina = await Canvas.loadImage("https://i.imgur.com/pNfqRds.png");
+
+                    ctx.drawImage(aoi_asahina, 7, 1, 157, 157);
+                }
+                if (LP.Portrait === "leon_kuwata") {
+                    const leon_kuwata = await Canvas.loadImage("https://i.imgur.com/aFwjS8m.png");
+
+                    ctx.drawImage(leon_kuwata, 7, 0, 157, 157);
+                }
+
+                if (LP.Portrait === "sayaka_maizono") {
+                    const sayaka_maizono = await Canvas.loadImage("https://i.imgur.com/G72TEzB.png");
+
+                    ctx.drawImage(sayaka_maizono, 7, 2, 157, 157);
+                }
+                if (LP.Portrait === "toko_fukawa") {
+                    const toko_fukawa = await Canvas.loadImage("https://i.imgur.com/sd5bfEF.png");
+
+                    ctx.drawImage(toko_fukawa, 3.5, -1, 158, 158);
+                }
+
+                if (LP.Portrait === "BnW_magician") {
+                    const BnW_magician = await Canvas.loadImage("https://i.imgur.com/eqNDXyd.png");
+
+                    ctx.drawImage(BnW_magician, 3, -1, 165, 165);
+                }
+                if (LP.Portrait === "BnW_explorer") {
+                    const BnW_explorer = await Canvas.loadImage("https://i.imgur.com/LITUs77.png");
+
+                    ctx.drawImage(BnW_explorer, 3, -1, 165, 165);
+                }
+                if (LP.Portrait === "BnW_gardener") {
+                    const BnW_gardener = await Canvas.loadImage("https://i.imgur.com/JYWV8vm.png");
+
+                    ctx.drawImage(BnW_gardener, 3, -1, 165, 165);
+                }
+                if (LP.Portrait === "BnW_priestess") {
+                    const BnW_priestess = await Canvas.loadImage("https://i.imgur.com/v3jGMNc.png");
+
+                    ctx.drawImage(BnW_priestess, 6, 3, 155, 155);
+                }
+                if (LP.Portrait === "BnW_luckyguy") {
+                    const BnW_luckyguy = await Canvas.loadImage("https://i.imgur.com/GxlS2nq.png");
+
+                    ctx.drawImage(BnW_luckyguy, 6, 3, 155, 155);
+                }
+                if (LP.Portrait === "BnW_coordinator") {
+                    const BnW_coordinator = await Canvas.loadImage("https://i.imgur.com/g2aLYd8.png");
+
+                    ctx.drawImage(BnW_coordinator, 6, 3, 155, 155);
+                }
+            } else {
+                const avatar = await Canvas.loadImage(LPuser.displayAvatarURL);
+                ctx.drawImage(avatar, 32, 26, 108, 113);
+            }
+
+            const background = await Canvas.loadImage('./pics/LP.png');
+
+            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
             if (LP.frames.equipped === "frame1") {
 
@@ -166,6 +308,7 @@ module.exports = {
 
                 ctx.drawImage(frame9, 4, 1, 165, 170);
             }
+
 
             ctx.font = 'bold 16px Arial';
 
@@ -359,8 +502,5 @@ module.exports = {
 
             }, 10000);
         }
-
-
-
     }
 }

@@ -16,6 +16,12 @@
 		"Answer": ["Merlin", "merlin"],
 		"Difficulty": "Medium",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935270088802314/5k1AObvBdQvdLXzv8rvaMg37t1oVmwriAoAAAAASUVORK5CYII.png"
+	},
+	{
+		"Question": "**Repeat da sentence:**\nType `now you see me now you dont`",
+		"Answer": ["now you see me now you dont", "now you see me now you don't"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/wm5JB3f.png"
 	}
 	
 ]
