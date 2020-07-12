@@ -393,7 +393,8 @@ module.exports = {
 				frame6: false,
 				equipped: "0"
 			},
-			Entomologist: false
+			Entomologist: false,
+			Portrait: "0"
 
 		})
 		newLP.save().catch(err => console.log(err))

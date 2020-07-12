@@ -249,6 +249,7 @@ module.exports = {
                 }
             } else {
                 const avatar = await Canvas.loadImage(LPuser.displayAvatarURL);
+                
                 ctx.drawImage(avatar, 32, 26, 108, 113);
             }
 

@@ -347,6 +347,10 @@ module.exports = {
 
                 } else if (["none", "unequip", "no", "default", "pfp", "profilepicture", "profilepic"]) {
 
+                    LP.Portrait = "0";
+                    LP.save().catch(e => console.log(e));
+
+                    return message.reply("**Your portrait has been set to your profile-picture!**");
                 } else {
                     ErrorMsg(bot, message, "**Ooops, looks like you provided a nonexistent portrait...**\nAre you sure it exists? Make sure you typed it correctly...\n\nTo check what portraits you actually own, do `" + prefix + "shop portrait` or `" + prefix + "equip portrait`\n\n**Example of Usage:**`" + prefix + "equip portrait colorful memory forward`\n\nWanna set your portrait back to your profile-picture? do `" + prefix + "equip portrait default`")
                 }
