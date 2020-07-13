@@ -116,7 +116,7 @@ module.exports = {
                 let framEmbed = new RichEmbed()
                     .setAuthor(bot.user.username, bot.user.displayAvatarURL)
                     .setColor("RED")
-                    .setDescription("Please provide the frame's ID you want to equip!\nCorrect usage: `" + prefix + "equip frame <frameID>`\n\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\nDunno what to equip? do `" + prefix + "shop frames` to see what's in the shop\nWanna unequip your frame? do `" + prefix + "equip none`")
+                    .setDescription("Please provide the frame's ID you want to equip!\nCorrect usage: `" + prefix + "equip frame <frameID>`\n\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\nDunno what to equip? do `" + prefix + "shop frames` to see what's in the shop\nWanna unequip your frame? do `" + prefix + "equip frame none`")
                     .setFooter(message.author.tag, message.author.displayAvatarURL)
                     .setTimestamp();
 

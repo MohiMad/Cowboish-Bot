@@ -34,6 +34,12 @@
 		"Answer": ["portal"],
 		"Difficulty": "Easy",
 		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
+	},
+	{
+		"Question": "**Question**\nHow long is her mirror cooldown at the beginning of the game? (Answer in seconds)",
+		"Answer": ["8 seconds", "8", "eight", "eight seconds"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.pinimg.com/564x/66/84/b1/6684b1d926d9dba8e1c91d7a472aec53.jpg"
 	}
 	
 ]

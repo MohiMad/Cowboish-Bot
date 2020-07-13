@@ -34,5 +34,11 @@
 		"Answer": ["Jerry Carl", "jerry carl", "jerry", "carl"],
 		"Difficulty": "Ez",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700392762004209746/image0.png?width=765&height=564"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["yusuke", "yusuke kitagawa"],
+		"Difficulty": "HARD",
+		"Attachment": "https://i.imgur.com/jk1AOJa.png"
     }
 ]

@@ -22,6 +22,12 @@
 		"Answer": ["now you see me now you dont", "now you see me now you don't"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/wm5JB3f.png"
+	},
+	{
+		"Question": "**Question:**\nHow Long Does Magician Stay Invisible for? (Please answer in seconds)",
+		"Answer": ["2 seconds", "2", "two", "two seconds"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.pinimg.com/564x/55/fe/86/55fe86df04b229b6d1a7c41a38f2c7be.jpg"
 	}
 	
 ]
