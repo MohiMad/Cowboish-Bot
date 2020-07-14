@@ -16,6 +16,13 @@
 		"Answer": ["rescuer"],
 		"Difficulty": "Hard",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700207379832373258/a3463d7139f3d300554822c5c256987d.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin shown bellow?",
+		"Answer": ["train conductor"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/CdFOFaC.png"
 	}
+	
 	
 ]

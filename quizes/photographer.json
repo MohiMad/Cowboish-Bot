@@ -28,6 +28,12 @@
 		"Answer": ["azrael", "Azrael"],
 		"Difficulty": "Easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700746368670498887/image0.png?width=446&height=563"
+	},
+	{
+		"Question": "**Question:**\n",
+		"Answer": ["cutlass or saber", "sword", "saber", "cutlass"],
+		"Difficulty": "HARD",
+		"Attachment": "https://i.imgur.com/F3vgBV3.png"
 	}
 	
 ]

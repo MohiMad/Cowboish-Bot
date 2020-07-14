@@ -94,7 +94,7 @@ module.exports = {
 
             message.channel.send(logicpathEmbed);
 
-        } if (["image", "images"].includes(args[1].toLowerCase())) {
+        } else if (["image", "images"].includes(args[1].toLowerCase())) {
             const imageEmbed = new RichEmbed()
                 .setColor("RANDOM")
                 .setTitle("Image manipulation commands!")
@@ -103,14 +103,14 @@ module.exports = {
             message.channel.send(imageEmbed);
         }
 
-        if (["ultity", "utility"].includes(args[1].toLowerCase())) {
+        else if (["ultity", "utility"].includes(args[1].toLowerCase())) {
             const ultity_Embed = new RichEmbed()
                 .setColor("RANDOM")
                 .setTitle("Cowboish Utility commands :D")
                 .setDescription("`setup` | `userinfo` | `serverinfo`")
                 .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
-            message.channel.send(ultity_Embed)
+            message.channel.send(ultity_Embed);
         } else {
             message.channel.send(helpEmbed);
         }

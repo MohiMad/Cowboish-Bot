@@ -34,6 +34,18 @@
 		"Answer": ["toolbox", "Toolbox"],
 		"Difficulty": "Kinda easy",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687694823569883171/woods-sunrise-i28667.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin displayed in the image?",
+		"Answer": ["cowgirl"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/nhyFrhG.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin displayed in the image?",
+		"Answer": ["lady truth"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/6X7JjYY.png"
 	}
 	
 ]
