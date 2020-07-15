@@ -11,8 +11,6 @@ module.exports = async (bot, message) => {
 
     if (!message.guild) return;
 
-    if (message.author.id !== "478527909250990090") return message.reply("The bot is currently under maintenance... please stand by...");
-
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
     let prefix;
