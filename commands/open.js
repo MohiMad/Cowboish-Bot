@@ -87,7 +87,194 @@ module.exports = {
 
             else if (["s11-1", "s111", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
 
-                if (["10", "ten"].includes(args[2].toLowerCase())) {
+                if (!args[2]) {
+                    let Rnumber = Math.floor(Math.random() * (51 - 1 + 1)) + 1;
+
+                    let item = "ess1-" + Rnumber;
+
+                    const s9Embed = new RichEmbed()
+                        .attachFiles(["./essences/s11-1/" + item + ".jpg"])
+                        .setImage('attachment://' + item + ".jpg");
+
+
+                    if (LP.Ess1 === 0) {
+                        return ErrorMsg(bot, message, "You don't have any " + ess1 + " `s11-1` essences!\nTry rolling some dices or buy some from the shop!")
+
+                    }
+                    else if (item === "ess1-1") {
+                        s9Embed.setColor("0xfcba03");
+                        s9Embed.setAuthor(`💛 Congrats ${author}! You get Violinist's S skin 💛`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter("You probably wish to have that ingame :'))");
+
+                        if (LP.Opened.includes(item)) {
+
+                            if (LP.Hunters.NewHunta === false) {
+                                s9Embed.setDescription('Because you got thier S skin, you get the Violinist as well UwU\nThat means you can play as him by doing `>hunt violinist`');
+                                LP.Hunters.NewHunta = true;
+                            } else {
+                                s9Embed.setDescription(`And because you somehow got that before, you get **2000** ${frags} instead!`);
+                                LP.frags = LP.frags + 2000;
+                            }
+                        }
+                        else {
+                            s9Embed.setDescription('Because you got thier S skin, you get the Violinist as well UwU\nThat means you can play as him by doing `>hunt violinist`');
+                            LP.Hunters.NewHunta = true;
+                            LP.S = LP.S + 1;
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+                    }
+                    //A skin values
+                    else if (["ess1-2", "ess1-3"].includes(item)) {
+                        s9Embed.setColor("0xbb2af5");
+                        s9Embed.setAuthor(`💜 ${author} gets an A skin 💜`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter("You're lucky if it's Luchino's :3");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You already got that skin before! Here, take these **1000** ${frags} instead!`);
+                            LP.frags = LP.frags + 1000;
+                        }
+                        else {
+                            LP.A = LP.A + 1;
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+
+                    }
+                    else if (["ess1-4", "ess1-5", "ess1-6", "ess1-7", "ess1-8", "ess1-9"].includes(item)) {
+                        s9Embed.setColor("0x2e65b8");
+                        s9Embed.setAuthor(`💙 Yaay! A B skin for ${author}! 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter("So adorable! Just like you >.<");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You already got that skin before! Here, take these **200** ${frags} instead!`);
+                            LP.frags = LP.frags + 200;
+                        }
+                        else {
+                            LP.B = LP.B + 1;
+
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+
+
+                    }
+                    else if (["ess1-21", "ess1-22", "ess1-23", "ess1-24", "ess1-25", "ess1-26", "ess1-27", "ess1-28", "ess1-29", "ess1-30", "ess1-30", "ess1-31"].includes(item)) {
+                        s9Embed.setColor("0x1BE926");
+                        s9Embed.setAuthor(`💚 You get a C skin, ${author}! 💚`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter(":))");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You have this item already! Here, take these **72** ${frags} instead!`);
+                            LP.frags = LP.frags + 72;
+                        }
+                        else {
+                            LP.C = LP.C + 1;
+
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+                    }
+                    else if (["ess1-37", "ess1-38", "ess1-39", "ess1-40", "ess1-41", "ess1-42", "ess1-43", "ess1-44", "ess1-45", "ess1-46", "ess1-47"].includes(item)) {
+
+                        s9Embed.setColor("0xffffff");
+                        s9Embed.setAuthor(`🖤 Poor ${author}, they got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter(":'D");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
+                            LP.frags = LP.frags + 36;
+                        }
+                        else {
+                            LP.D = LP.D + 1;
+
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+                    }
+                    else if (["ess1-11", "ess1-12", "ess1-13", "ess1-32", "ess1-33", "ess1-34", "ess1-35", "ess1-36"].includes(item)) {
+
+                        s9Embed.setColor("0x2e65b8");
+                        s9Embed.setAuthor(`💙 That's a standbymotion for ${author}! 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter("Please stand by :v");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You have this item already! here, take these **72** ${frags} instead!`);
+                            LP.frags = LP.frags + 72;
+                        }
+                        else {
+                            LP.B = LP.B + 1;
+
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+                    }
+                    else if (["ess1-10", "ess1-17", "ess1-18", "ess1-19", "ess1-20"].includes(item)) {
+
+                        s9Embed.setColor("0x2e65b8");
+                        s9Embed.setAuthor(`💙 You get an emote, ${author} 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+                        s9Embed.setFooter("Please don't emote while kiting >:v");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
+                            LP.frags = LP.frags + 36;
+                        }
+                        else {
+                            LP.B = LP.B + 1;
+
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+
+                    } else if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51"].includes(item)) {
+
+                        s9Embed.setColor("0xffffff");
+                        s9Embed.setAuthor(`🖤 You get a portrait, ${author} 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
+
+                        if (LP.Opened.includes(item)) {
+                            s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
+                            LP.frags = LP.frags + 36;
+                        }
+                        else {
+                            let ess1_portrait_message = "0";
+
+                            if (item === "ess1-14") {
+                                ess1_portrait_message = "Black and White Explorer";
+
+                            } else if (item === "ess1-15") {
+                                ess1_portrait_message = "Black and White Magician";
+
+                            } else if (item === "ess1-16") {
+                                ess1_portrait_message = "Black and White Gardener";
+
+                            } else if (item === "ess1-48") {
+                                ess1_portrait_message = "Colorful Memory GameKeeper";
+
+                            } else if (item === "ess1-49") {
+                                ess1_portrait_message = "Colorful Memory Coordinator";
+
+                            } else if (item === "ess1-50") {
+                                ess1_portrait_message = "Colorful Memory Geisha";
+                            }
+                            else if (item === "ess1-51") {
+                                ess1_portrait_message = "Colorful Memory Lawyer";
+                            }
+
+                            s9Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess1_portrait_message + "`\nBy equipping the portrait, it will be visable in the `" + prefix + "logicpath` command");
+
+                            LP.D = LP.D + 1;
+
+                            LP.Opened = [...LP.Opened, item];
+                        }
+
+                    }
+
+                    LP.Ess1 = LP.Ess1 - 1;
+
+                    LP.save().catch(err => console.log(err));
+                    message.channel.send(s9Embed);
+                }
+                else if (["10", "ten"].includes(args[2].toLowerCase())) {
                     if (LP.Ess1 < 10) return message.channel.send(`**You have less than 10 s11-1 essences, ${message.author.username}**`);
 
                     let itemArray = [
@@ -392,198 +579,200 @@ module.exports = {
                     }, 2000 * 10);
 
                 } else {
+                    message.channel.send(noargsEmbed);
+                }
+            }
+            else if (["s11-3", "s113", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
 
-                    let Rnumber = Math.floor(Math.random() * (51 - 1 + 1)) + 1;
+                if (!args[2]) {
+                    let random_number = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
 
-                    let item = "ess1-" + Rnumber;
+                    let ess3Item = "ess3-" + random_number;
 
-                    const s9Embed = new RichEmbed()
-                        .attachFiles(["./essences/s11-1/" + item + ".jpg"])
-                        .setImage('attachment://' + item + ".jpg");
+                    const ess3Embed = new RichEmbed()
+                        .attachFiles(["./essences/s11-3/" + ess3Item + ".jpg"])
+                        .setImage('attachment://' + ess3Item + ".jpg");
 
 
-                    if (LP.Ess1 === 0) {
-                        return ErrorMsg(bot, message, "You don't have any " + ess1 + " `s11-1` essences!\nTry rolling some dices or buy some from the shop!")
+                    if (LP.Ess3 === 0) {
+                        return ErrorMsg(bot, message, "You don't have any `s11-3` essences!\nTry rolling some dices or buy some from the shop!")
 
                     }
-                    else if (item === "ess1-1") {
-                        s9Embed.setColor("0xfcba03");
-                        s9Embed.setAuthor(`💛 Congrats ${author}! You get Violinist's S skin 💛`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter("You probably wish to have that ingame :'))");
+                    else if (ess3Item === "ess3-1") {
+                        ess3Embed.setColor("0xfcba03");
+                        ess3Embed.setAuthor(`💛 ${author} got Entomologist's S skin 💛`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("(/◕ヮ◕)/");
 
-                        if (LP.Opened.includes(item)) {
+                        if (LP.Opened.includes(ess3Item)) {
 
-                            if (LP.Hunters.NewHunta === false) {
-                                s9Embed.setDescription('Because you got thier S skin, you get the Violinist as well UwU\nThat means you can play as him by doing `>hunt violinist`');
-                                LP.Hunters.NewHunta = true;
+                            if (LP.Entomologist === false) {
+                                ess3Embed.setDescription('Because you got thier S skin, you get the Entomologist as well U-U\nThat means you can play as her by doing `' + prefix + 'quick entomologist`');
+                                LP.Entomologist = true;
                             } else {
-                                s9Embed.setDescription(`And because you somehow got that before, you get **2000** ${frags} instead!`);
+                                ess3Embed.setDescription(`And because you somehow got that before, you get **2000** ${frags} instead!`);
                                 LP.frags = LP.frags + 2000;
                             }
                         }
                         else {
-                            s9Embed.setDescription('Because you got thier S skin, you get the Violinist as well UwU\nThat means you can play as him by doing `>hunt violinist`');
-                            LP.Hunters.NewHunta = true;
+                            ess3Embed.setDescription('Because you got thier S skin, you get the Entomologist as well U-U\nThat means you can play as her by doing `' + prefix + 'quick entomologist`');
+                            LP.Entomologist = true;
                             LP.S = LP.S + 1;
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
                     }
                     //A skin values
-                    else if (["ess1-2", "ess1-3"].includes(item)) {
-                        s9Embed.setColor("0xbb2af5");
-                        s9Embed.setAuthor(`💜 ${author} gets an A skin 💜`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter("You're lucky if it's Luchino's :3");
+                    else if (["ess3-2", "ess3-3"].includes(ess3Item)) {
+                        ess3Embed.setColor("0xbb2af5");
+                        ess3Embed.setAuthor(`💜 Ouu ${author} got an A skin 💜`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("Hehe (＾ｖ＾)");
 
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You already got that skin before! Here, take these **1000** ${frags} instead!`);
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You already got that skin before! Here, take these **1000** ${frags} instead!`);
                             LP.frags = LP.frags + 1000;
                         }
                         else {
                             LP.A = LP.A + 1;
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
-
                     }
-                    else if (["ess1-4", "ess1-5", "ess1-6", "ess1-7", "ess1-8", "ess1-9"].includes(item)) {
-                        s9Embed.setColor("0x2e65b8");
-                        s9Embed.setAuthor(`💙 Yaay! A B skin for ${author}! 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter("So adorable! Just like you >.<");
+                    else if (["ess3-4", "ess3-5", "ess3-6", "ess3-7", "ess3-8", "ess3-9"].includes(ess3Item)) {
+                        ess3Embed.setColor("0x2e65b8");
+                        ess3Embed.setAuthor(`💙 Yaay! A B skin for ${author}! 💙`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("(´･ω･`)");
 
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You already got that skin before! Here, take these **200** ${frags} instead!`);
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You already got that skin before! Here, take these **200** ${frags} instead!`);
                             LP.frags = LP.frags + 200;
                         }
                         else {
                             LP.B = LP.B + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
-
-
-
                     }
-                    else if (["ess1-21", "ess1-22", "ess1-23", "ess1-24", "ess1-25", "ess1-26", "ess1-27", "ess1-28", "ess1-29", "ess1-30", "ess1-30", "ess1-31"].includes(item)) {
-                        s9Embed.setColor("0x1BE926");
-                        s9Embed.setAuthor(`💚 You get a C skin, ${author}! 💚`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter(":))");
+                    else if (["ess3-14", "ess3-15", "ess3-16", "ess3-17", "ess3-18", "ess3-19", "ess3-20", "ess3-21", "ess3-22", "ess3-23", "ess3-24"].includes(ess3Item)) {
+                        ess3Embed.setColor("0x1BE926");
+                        ess3Embed.setAuthor(`💚 ${author} gets a C skin :D 💚`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("(@ _ @)");
 
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You have this item already! Here, take these **72** ${frags} instead!`);
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You have this Item already! Here, take these **72** ${frags} instead!`);
                             LP.frags = LP.frags + 72;
                         }
                         else {
                             LP.C = LP.C + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
                     }
-                    else if (["ess1-37", "ess1-38", "ess1-39", "ess1-40", "ess1-41", "ess1-42", "ess1-43", "ess1-44", "ess1-45", "ess1-46", "ess1-47"].includes(item)) {
+                    else if (["ess3-34", "ess3-35", "ess3-36", "ess3-37", "ess3-41", "ess3-42", "ess3-43", "ess3-44", "ess3-45"].includes(ess3Item)) {
 
-                        s9Embed.setColor("0xffffff");
-                        s9Embed.setAuthor(`🖤 Poor ${author}, they got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter(":'D");
+                        ess3Embed.setColor("0xffffff");
+                        ess3Embed.setAuthor(`🖤 LMAO ${author} got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("Your luck, not mine ヽ(´ー｀)┌");
 
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
-                            LP.frags = LP.frags + 36;
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You have this graffiti already! Here, take these **6** ${frags} instead!`);
+                            LP.frags = LP.frags + 6;
                         }
                         else {
                             LP.D = LP.D + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
                     }
-                    else if (["ess1-11", "ess1-12", "ess1-13", "ess1-32", "ess1-33", "ess1-34", "ess1-35", "ess1-36"].includes(item)) {
+                    else if (["ess3-10", "ess3-11", "ess3-12", "ess3-13", "ess3-29", "ess3-30", "ess3-31", "ess3-32", "ess3-33"].includes(ess3Item)) {
 
-                        s9Embed.setColor("0x2e65b8");
-                        s9Embed.setAuthor(`💙 That's a standbymotion for ${author}! 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter("Please stand by :v");
+                        ess3Embed.setColor("0x2e65b8");
+                        ess3Embed.setAuthor(`💙 ${author} gets a standby motion 💙`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("(＾ｖ＾)");
 
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You have this item already! here, take these **72** ${frags} instead!`);
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You have this standby motion already! Here, take these **72** ${frags} instead!`);
                             LP.frags = LP.frags + 72;
                         }
                         else {
                             LP.B = LP.B + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
+
+
                     }
-                    else if (["ess1-10", "ess1-17", "ess1-18", "ess1-19", "ess1-20"].includes(item)) {
+                    else if (["ess3-25", "ess3-26", "ess3-27", "ess3-28"].includes(ess3Item)) {
 
-                        s9Embed.setColor("0x2e65b8");
-                        s9Embed.setAuthor(`💙 You get an emote, ${author} 💙`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-                        s9Embed.setFooter("Please don't emote while kiting >:v");
+                        ess3Embed.setColor("0x2e65b8");
+                        ess3Embed.setAuthor(`💙 You get an emote, ${author} 💙`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("Heh! You better not emote at the exit gate ._.");
 
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You have this emote already! Here, take these **36** ${frags} instead!`);
                             LP.frags = LP.frags + 36;
                         }
                         else {
                             LP.B = LP.B + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
+                    } else if (["ess3-38", "ess3-39", "ess3-40", "ess3-46", "ess3-47", "ess3-48", "ess3-49"].includes(ess3Item)) {
 
-                    } else if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51"].includes(item)) {
+                        ess3Embed.setColor("0xffffff");
+                        ess3Embed.setAuthor(`🖤 You get a portrait, ${author} 🖤`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
+                        ess3Embed.setFooter("Yeeeee you can finally equip portraits ^-^");
 
-                        s9Embed.setColor("0xffffff");
-                        s9Embed.setAuthor(`🖤 You get a portrait, ${author} 🖤`, "https://cdn.discordapp.com/emojis/655840713904488469.png?v=1");
-
-                        if (LP.Opened.includes(item)) {
-                            s9Embed.setDescription(`You have this item already! Here, take these **36** ${frags} instead!`);
+                        if (LP.Opened.includes(ess3Item)) {
+                            ess3Embed.setDescription(`You have this portrait already! Here, take these **36** ${frags} instead!`);
                             LP.frags = LP.frags + 36;
                         }
                         else {
-                            let ess1_portrait_message = "0";
 
-                            if (item === "ess1-14") {
-                                ess1_portrait_message = "Black and White Explorer";
+                            let ess3_portrait_message = "0";
 
-                            } else if (item === "ess1-15") {
-                                ess1_portrait_message = "Black and White Magician";
+                            if (ess3Item === "ess3-38") {
+                                ess3_portrait_message = "Black and White Lucky Guy";
 
-                            } else if (item === "ess1-16") {
-                                ess1_portrait_message = "Black and White Gardener";
+                            } else if (ess3Item === "ess3-39") {
+                                ess3_portrait_message = "Black and White Coordinator";
 
-                            } else if (item === "ess1-48") {
-                                ess1_portrait_message = "Colorful Memory GameKeeper";
+                            } else if (ess3Item === "ess3-40") {
+                                ess3_portrait_message = "Black and White Priestess";
 
-                            } else if (item === "ess1-49") {
-                                ess1_portrait_message = "Colorful Memory Coordinator";
+                            } else if (ess3Item === "ess3-46") {
+                                ess3_portrait_message = "Colorful Memory Magician";
 
-                            } else if (item === "ess1-50") {
-                                ess1_portrait_message = "Colorful Memory Geisha";
+                            } else if (ess3Item === "ess3-47") {
+                                ess3_portrait_message = "Colorful Memory Cowboy";
+
+                            } else if (ess3Item === "ess3-48") {
+                                ess3_portrait_message = "Colorful Memory Gardener";
                             }
-                            else if (item === "ess1-51") {
-                                ess1_portrait_message = "Colorful Memory Lawyer";
+                            else if (ess3Item === "ess3-49") {
+                                ess3_portrait_message = "Colorful Memory Forward";
                             }
 
-                            s9Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess1_portrait_message + "`\nBy equipping the portrait, it will be visable in the `" + prefix + "logicpath` command");
+                            ess3Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess3_portrait_message + "`\nBy equipping the portrait, it will be visable in the `" + prefix + "logicpath` command");
 
                             LP.D = LP.D + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, ess3Item];
                         }
 
                     }
 
-                    LP.Ess1 = LP.Ess1 - 1;
+                    LP.Ess3 = LP.Ess3 - 1;
 
                     LP.save().catch(err => console.log(err));
-                    message.channel.send(s9Embed);
+
+                    message.channel.send(ess3Embed);
 
                 }
-            }
-            else if (["s11-3", "s113", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
-
-                if (["10", "ten"].includes(args[2].toLowerCase())) {
+                else if (["10", "ten"].includes(args[2].toLowerCase())) {
 
                     let ess3Array = [
                         "[Costume] Entomologist - Sophia",
@@ -878,193 +1067,7 @@ module.exports = {
                     }, 2000 * 10);
 
                 } else {
-
-                    let random_number = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
-
-                    let ess3Item = "ess3-" + random_number;
-
-                    const ess3Embed = new RichEmbed()
-                        .attachFiles(["./essences/s11-3/" + ess3Item + ".jpg"])
-                        .setImage('attachment://' + ess3Item + ".jpg");
-
-
-                    if (LP.Ess3 === 0) {
-                        return ErrorMsg(bot, message, "You don't have any `s11-3` essences!\nTry rolling some dices or buy some from the shop!")
-
-                    }
-                    else if (ess3Item === "ess3-1") {
-                        ess3Embed.setColor("0xfcba03");
-                        ess3Embed.setAuthor(`💛 ${author} got Entomologist's S skin 💛`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("(/◕ヮ◕)/");
-
-                        if (LP.Opened.includes(ess3Item)) {
-
-                            if (LP.Entomologist === false) {
-                                ess3Embed.setDescription('Because you got thier S skin, you get the Entomologist as well U-U\nThat means you can play as her by doing `' + prefix + 'quick entomologist`');
-                                LP.Entomologist = true;
-                            } else {
-                                ess3Embed.setDescription(`And because you somehow got that before, you get **2000** ${frags} instead!`);
-                                LP.frags = LP.frags + 2000;
-                            }
-                        }
-                        else {
-                            ess3Embed.setDescription('Because you got thier S skin, you get the Entomologist as well U-U\nThat means you can play as her by doing `' + prefix + 'quick entomologist`');
-                            LP.Entomologist = true;
-                            LP.S = LP.S + 1;
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-                    }
-                    //A skin values
-                    else if (["ess3-2", "ess3-3"].includes(ess3Item)) {
-                        ess3Embed.setColor("0xbb2af5");
-                        ess3Embed.setAuthor(`💜 Ouu ${author} got an A skin 💜`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("Hehe (＾ｖ＾)");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You already got that skin before! Here, take these **1000** ${frags} instead!`);
-                            LP.frags = LP.frags + 1000;
-                        }
-                        else {
-                            LP.A = LP.A + 1;
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-                    }
-                    else if (["ess3-4", "ess3-5", "ess3-6", "ess3-7", "ess3-8", "ess3-9"].includes(ess3Item)) {
-                        ess3Embed.setColor("0x2e65b8");
-                        ess3Embed.setAuthor(`💙 Yaay! A B skin for ${author}! 💙`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("(´･ω･`)");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You already got that skin before! Here, take these **200** ${frags} instead!`);
-                            LP.frags = LP.frags + 200;
-                        }
-                        else {
-                            LP.B = LP.B + 1;
-
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-                    }
-                    else if (["ess3-14", "ess3-15", "ess3-16", "ess3-17", "ess3-18", "ess3-19", "ess3-20", "ess3-21", "ess3-22", "ess3-23", "ess3-24"].includes(ess3Item)) {
-                        ess3Embed.setColor("0x1BE926");
-                        ess3Embed.setAuthor(`💚 ${author} gets a C skin :D 💚`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("(@ _ @)");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You have this Item already! Here, take these **72** ${frags} instead!`);
-                            LP.frags = LP.frags + 72;
-                        }
-                        else {
-                            LP.C = LP.C + 1;
-
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-                    }
-                    else if (["ess3-34", "ess3-35", "ess3-36", "ess3-37", "ess3-41", "ess3-42", "ess3-43", "ess3-44", "ess3-45"].includes(ess3Item)) {
-
-                        ess3Embed.setColor("0xffffff");
-                        ess3Embed.setAuthor(`🖤 LMAO ${author} got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("Your luck, not mine ヽ(´ー｀)┌");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You have this graffiti already! Here, take these **6** ${frags} instead!`);
-                            LP.frags = LP.frags + 6;
-                        }
-                        else {
-                            LP.D = LP.D + 1;
-
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-                    }
-                    else if (["ess3-10", "ess3-11", "ess3-12", "ess3-13", "ess3-29", "ess3-30", "ess3-31", "ess3-32", "ess3-33"].includes(ess3Item)) {
-
-                        ess3Embed.setColor("0x2e65b8");
-                        ess3Embed.setAuthor(`💙 ${author} gets a standby motion 💙`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("(＾ｖ＾)");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You have this standby motion already! Here, take these **72** ${frags} instead!`);
-                            LP.frags = LP.frags + 72;
-                        }
-                        else {
-                            LP.B = LP.B + 1;
-
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-
-
-                    }
-                    else if (["ess3-25", "ess3-26", "ess3-27", "ess3-28"].includes(ess3Item)) {
-
-                        ess3Embed.setColor("0x2e65b8");
-                        ess3Embed.setAuthor(`💙 You get an emote, ${author} 💙`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("Heh! You better not emote at the exit gate ._.");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You have this emote already! Here, take these **36** ${frags} instead!`);
-                            LP.frags = LP.frags + 36;
-                        }
-                        else {
-                            LP.B = LP.B + 1;
-
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-                    } else if (["ess3-38", "ess3-39", "ess3-40", "ess3-46", "ess3-47", "ess3-48", "ess3-49"].includes(ess3Item)) {
-
-                        ess3Embed.setColor("0xffffff");
-                        ess3Embed.setAuthor(`🖤 You get a portrait, ${author} 🖤`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
-                        ess3Embed.setFooter("Yeeeee you can finally equip portraits ^-^");
-
-                        if (LP.Opened.includes(ess3Item)) {
-                            ess3Embed.setDescription(`You have this portrait already! Here, take these **36** ${frags} instead!`);
-                            LP.frags = LP.frags + 36;
-                        }
-                        else {
-
-                            let ess3_portrait_message = "0";
-
-                            if (ess3Item === "ess3-38") {
-                                ess3_portrait_message = "Black and White Lucky Guy";
-
-                            } else if (ess3Item === "ess3-39") {
-                                ess3_portrait_message = "Black and White Coordinator";
-
-                            } else if (ess3Item === "ess3-40") {
-                                ess3_portrait_message = "Black and White Priestess";
-
-                            } else if (ess3Item === "ess3-46") {
-                                ess3_portrait_message = "Colorful Memory Magician";
-
-                            } else if (ess3Item === "ess3-47") {
-                                ess3_portrait_message = "Colorful Memory Cowboy";
-
-                            } else if (ess3Item === "ess3-48") {
-                                ess3_portrait_message = "Colorful Memory Gardener";
-                            }
-                            else if (ess3Item === "ess3-49") {
-                                ess3_portrait_message = "Colorful Memory Forward";
-                            }
-
-                            ess3Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess3_portrait_message + "`\nBy equipping the portrait, it will be visable in the `" + prefix + "logicpath` command");
-
-                            LP.D = LP.D + 1;
-
-                            LP.Opened = [...LP.Opened, ess3Item];
-                        }
-
-                    }
-
-                    LP.Ess3 = LP.Ess3 - 1;
-
-                    LP.save().catch(err => console.log(err));
-
-                    message.channel.send(ess3Embed);
-
+                    message.channel.send(noargsEmbed);
                 }
 
             } else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
