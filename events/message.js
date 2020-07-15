@@ -11,6 +11,8 @@ module.exports = async (bot, message) => {
 
     if (!message.guild) return;
 
+    if (message.author.id !== "478527909250990090") return message.reply("The bot is currently under maintenance... please stand by...");
+
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
     let prefix;
@@ -66,7 +68,7 @@ module.exports = async (bot, message) => {
 
         case "spawn": case "spawns": case "mapspawns":
             bot.commands.get('spawns').execute(message, args, bot, prefix);
-        break;
+            break;
 
 
         //End Of identity V commands

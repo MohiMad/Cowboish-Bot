@@ -53,20 +53,21 @@ module.exports = {
 
         let fragments = 0;
 
-        function checkForItem(variable) {
+        function checkForItem(variable, essence) {
 
-            if (LP.Opened.includes("ess1-" + variable)) {
+            if (LP.Opened.includes(essence + "-" + variable)) {
                 if (variable === 0) fragments = fragments + 2000;
                 else if ([1, 2].includes(variable)) fragments = fragments + 1000;
                 else if ([4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(variable)) fragments = fragments + 200;
                 else fragments = fragments + 36;
             } else {
-                LP.Opened = [...LP.Opened, `ess1-${variable}`];
+
+                LP.Opened = [...LP.Opened, `${essence}-${variable}`];
 
                 if (variable === 0) LP.S = LP.S + 1;
                 else if ([1, 2].includes(variable)) LP.A = LP.A = 1;
                 else if ([4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(variable)) LP.B = LP.B + 1;
-                else if ([4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(variable)) LP.C = LP.C + 1;
+                else if ([21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36].includes(variable)) LP.C = LP.C + 1;
                 else LP.D = LP.D + 1;
             }
 
@@ -423,7 +424,7 @@ module.exports = {
                     let description = `\n1️⃣ **${itemArray[itemNumber1]}**`;
 
                     changeColor(itemNumber1);
-                    checkForItem(itemNumber1);
+                    checkForItem(itemNumber1, "ess1");
 
 
                     let Ess1TenEmbed = new RichEmbed()
@@ -442,7 +443,7 @@ module.exports = {
 
                         description = description + "\n\n2️⃣ **" + itemArray[itemNumber2] + "**";
                         changeColor(itemNumber2);
-                        checkForItem(itemNumber2);
+                        checkForItem(itemNumber2, "ess1");
 
                         Ess1TenEmbed.setColor(color);
 
@@ -456,7 +457,7 @@ module.exports = {
 
                         description = description + "\n\n3️⃣ **" + itemArray[itemNumber3] + "**";
                         changeColor(itemNumber3);
-                        checkForItem(itemNumber3);
+                        checkForItem(itemNumber3, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -472,7 +473,7 @@ module.exports = {
 
                         description = description + "\n\n4️⃣ **" + itemArray[itemNumber4] + "**";
                         changeColor(itemNumber4);
-                        checkForItem(itemNumber4);
+                        checkForItem(itemNumber4, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -487,7 +488,7 @@ module.exports = {
 
                         description = description + "\n\n5️⃣ **" + itemArray[itemNumber5] + "**";
                         changeColor(itemNumber5);
-                        checkForItem(itemNumber5);
+                        checkForItem(itemNumber5, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -501,7 +502,7 @@ module.exports = {
 
                         description = description + "\n\n6️⃣ **" + itemArray[itemNumber6] + "**";
                         changeColor(itemNumber6);
-                        checkForItem(itemNumber6);
+                        checkForItem(itemNumber6, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -516,7 +517,7 @@ module.exports = {
 
                         description = description + "\n\n7️⃣ **" + itemArray[itemNumber7] + "**";
                         changeColor(itemNumber7);
-                        checkForItem(itemNumber7);
+                        checkForItem(itemNumber7, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -530,7 +531,7 @@ module.exports = {
 
                         description = description + "\n\n8️⃣ **" + itemArray[itemNumber8] + "**";
                         changeColor(itemNumber8);
-                        checkForItem(itemNumber8);
+                        checkForItem(itemNumber8, "ess1");
 
                         Ess1TenEmbed.setColor(color);
                         Ess1TenEmbed.setImage(attachmentLinks[itemNumber8])
@@ -544,7 +545,7 @@ module.exports = {
 
                         description = description + "\n\n9️⃣ **" + itemArray[itemNumber9] + "**";
                         changeColor(itemNumber9);
-                        checkForItem(itemNumber9);
+                        checkForItem(itemNumber9, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -559,7 +560,7 @@ module.exports = {
 
                         description = description + "\n\n🔟 **" + itemArray[itemNumber10] + "**";
                         changeColor(itemNumber10);
-                        checkForItem(itemNumber10);
+                        checkForItem(itemNumber10, "ess1");
 
 
                         Ess1TenEmbed.setColor(color);
@@ -577,6 +578,12 @@ module.exports = {
 
                         await msg.edit(Ess1TenEmbed);
                     }, 2000 * 10);
+
+
+                    LP.frags = LP.frags + fragments;
+                    LP.Ess1 = LP.Ess1 - 10;
+
+                    LP.save().catch(err => console.log(err));
 
                 } else {
                     message.channel.send(noargsEmbed);
@@ -668,7 +675,7 @@ module.exports = {
                         }
 
                     }
-                    else if (["ess3-34", "ess3-35", "ess3-36", "ess3-37", "ess3-41", "ess3-42", "ess3-43", "ess3-44", "ess3-45"].includes(ess3Item)) {
+                    else if (["ess3-34", "ess3-35", "ess3-36", "ess3-37", "ess3-41", "ess3-42", "ess3-43", "ess3-44", "ess3-45", "ess3-50"].includes(ess3Item)) {
 
                         ess3Embed.setColor("0xffffff");
                         ess3Embed.setAuthor(`🖤 LMAO ${author} got a graffiti 🖤`, "https://cdn.discordapp.com/emojis/655840571616919586.png?v=1");
@@ -911,7 +918,7 @@ module.exports = {
                     let Ess3Description = `\n1️⃣ **${ess3Array[ess3ItemNumber1]}**`;
 
                     changeColor(ess3ItemNumber1);
-                    checkForItem(ess3ItemNumber1);
+                    checkForItem(ess3ItemNumber1, "ess3");
 
 
                     let Ess3TenEmbed = new RichEmbed()
@@ -930,7 +937,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n2️⃣ **" + ess3Array[ess3ItemNumber2] + "**";
                         changeColor(ess3ItemNumber2);
-                        checkForItem(ess3ItemNumber2);
+                        checkForItem(ess3ItemNumber2, "ess3");
 
                         Ess3TenEmbed.setColor(color);
 
@@ -944,7 +951,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n3️⃣ **" + ess3Array[ess3ItemNumber3] + "**";
                         changeColor(ess3ItemNumber3);
-                        checkForItem(ess3ItemNumber3);
+                        checkForItem(ess3ItemNumber3, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -960,7 +967,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n4️⃣ **" + ess3Array[ess3ItemNumber4] + "**";
                         changeColor(ess3ItemNumber4);
-                        checkForItem(ess3ItemNumber4);
+                        checkForItem(ess3ItemNumber4, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -975,7 +982,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n5️⃣ **" + ess3Array[ess3ItemNumber5] + "**";
                         changeColor(ess3ItemNumber5);
-                        checkForItem(ess3ItemNumber5);
+                        checkForItem(ess3ItemNumber5, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -989,7 +996,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n6️⃣ **" + ess3Array[ess3ItemNumber6] + "**";
                         changeColor(ess3ItemNumber6);
-                        checkForItem(ess3ItemNumber6);
+                        checkForItem(ess3ItemNumber6, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -1004,7 +1011,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n7️⃣ **" + ess3Array[ess3ItemNumber7] + "**";
                         changeColor(ess3ItemNumber7);
-                        checkForItem(ess3ItemNumber7);
+                        checkForItem(ess3ItemNumber7, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -1018,7 +1025,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n8️⃣ **" + ess3Array[ess3ItemNumber8] + "**";
                         changeColor(ess3ItemNumber8);
-                        checkForItem(ess3ItemNumber8);
+                        checkForItem(ess3ItemNumber8, "ess3");
 
                         Ess3TenEmbed.setColor(color);
                         Ess3TenEmbed.setImage(ess3Attachment[ess3ItemNumber8])
@@ -1032,7 +1039,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n9️⃣ **" + ess3Array[ess3ItemNumber9] + "**";
                         changeColor(ess3ItemNumber9);
-                        checkForItem(ess3ItemNumber9);
+                        checkForItem(ess3ItemNumber9, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -1047,7 +1054,7 @@ module.exports = {
 
                         Ess3Description = Ess3Description + "\n\n🔟 **" + ess3Array[ess3ItemNumber10] + "**";
                         changeColor(ess3ItemNumber10);
-                        checkForItem(ess3ItemNumber10);
+                        checkForItem(ess3ItemNumber10, "ess3");
 
 
                         Ess3TenEmbed.setColor(color);
@@ -1064,7 +1071,13 @@ module.exports = {
                         Ess3TenEmbed.setDescription(Ess3Description);
 
                         await msg.edit(Ess3TenEmbed);
+
                     }, 2000 * 10);
+
+                    LP.frags = LP.frags + fragments;
+                    LP.Ess3 = LP.Ess3 - 10;
+
+                    LP.save().catch(err => console.log(err));
 
                 } else {
                     message.channel.send(noargsEmbed);
