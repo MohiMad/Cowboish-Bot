@@ -576,14 +576,15 @@ module.exports = {
 
                         Ess1TenEmbed.setDescription(description);
 
+                        LP.frags = LP.frags + fragments;
+                        LP.Ess1 = LP.Ess1 - 10;
+
+                        LP.save().catch(err => console.log(err));
                         await msg.edit(Ess1TenEmbed);
                     }, 2000 * 10);
 
 
-                    LP.frags = LP.frags + fragments;
-                    LP.Ess1 = LP.Ess1 - 10;
 
-                    LP.save().catch(err => console.log(err));
 
                 } else {
                     message.channel.send(noargsEmbed);
@@ -780,6 +781,8 @@ module.exports = {
 
                 }
                 else if (["10", "ten"].includes(args[2].toLowerCase())) {
+
+                    if (LP.Ess3 < 10) return message.channel.send(`**You have less than 10 essences, ${message.author.username}**`);
 
                     let ess3Array = [
                         "[Costume] Entomologist - Sophia",
@@ -1070,14 +1073,16 @@ module.exports = {
 
                         Ess3TenEmbed.setDescription(Ess3Description);
 
+                        LP.frags = LP.frags + fragments;
+                        LP.Ess3 = LP.Ess3 - 10;
+
+                        LP.save().catch(err => console.log(err));
+
                         await msg.edit(Ess3TenEmbed);
 
                     }, 2000 * 10);
 
-                    LP.frags = LP.frags + fragments;
-                    LP.Ess3 = LP.Ess3 - 10;
 
-                    LP.save().catch(err => console.log(err));
 
                 } else {
                     message.channel.send(noargsEmbed);
