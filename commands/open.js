@@ -55,7 +55,7 @@ module.exports = {
 
         function checkForItem(variable, essence) {
 
-            if (LP.Opened.includes(essence + "-" + variable)) {
+            if (LP.Opened.includes(essence + "-" + variable++)) {
                 if (variable === 0) fragments = fragments + 2000;
                 else if ([1, 2].includes(variable)) fragments = fragments + 1000;
                 else if ([4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(variable)) fragments = fragments + 200;
@@ -293,9 +293,9 @@ module.exports = {
                         "[Costume] Explorer - Spiritless Conductor",
 
                         "[Emote] Barmaid - Dance",
-                        "[Stanby Motion] Perfumer - Snooze",
-                        "[Stanby Motion] Acrobat - Stand",
-                        "[Stanby Motion] Evil Reptilian - Snooze",
+                        "[Standby Motion] Perfumer - Snooze",
+                        "[Standby Motion] Acrobat - Stand",
+                        "[Standby Motion] Evil Reptilian - Snooze",
 
                         "[Portrait] Black-and-White - Explorer",
                         "[Portrait] Black-and-White - Magician",
@@ -795,10 +795,10 @@ module.exports = {
                         '[Costume] Photographer - "Ambassador"',
                         "[Costume] Postman - Sheriff",
                         '[Costume] "Theif" - Signalman',
-                        "[Stanby Motion] Guard 26 - Snooze",
-                        "[Stanby Motion] Acrobat - Ready",
-                        "[Stanby Motion] Perfumer - Ready",
-                        "[Stanby Motion] Postman - Ready",
+                        "[Standby Motion] Guard 26 - Snooze",
+                        "[Standby Motion] Acrobat - Ready",
+                        "[Standby Motion] Perfumer - Ready",
+                        "[Standby Motion] Postman - Ready",
                         "[Costume] Lucky Guy - Plain Gray",
                         "[Costume] Gardener - Violet",
                         "[Costume] Mechanic - Focus White",
@@ -1120,9 +1120,9 @@ module.exports = {
                     itemCheck("[Costume] Dream Witch - Heart Wave", LP, "ess1-8");
                     itemCheck("[Costume] Explorer - Spiritless Conductor", LP, "ess1-9");
                     itemCheck("[Emote] Barmaid - Dance", LP, "ess1-10");
-                    itemCheck("[Stanby Motion] Perfumer - Snooze", LP, "ess1-11");
-                    itemCheck("[Stanby Motion] Acrobat - Stand", LP, "ess1-12");
-                    itemCheck("[Stanby Motion] Evil Reptilian - Snooze", LP, "ess1-13");
+                    itemCheck("[Standby Motion] Perfumer - Snooze", LP, "ess1-11");
+                    itemCheck("[Standby Motion] Acrobat - Stand", LP, "ess1-12");
+                    itemCheck("[Standby Motion] Evil Reptilian - Snooze", LP, "ess1-13");
                     itemCheck("[Portrait] Black-and-White - Explorer", LP, "ess1-14");
                     itemCheck("[Portrait] Black-and-White - Magician", LP, "ess1-15");
                     itemCheck("[Portrait] Black-and-White - Gardener", LP, "ess1-16");
@@ -1178,10 +1178,10 @@ module.exports = {
                     itemCheck('[Costume] Photographer - "Ambassador"', LP, "ess3-7");
                     itemCheck("[Costume] Postman - Sheriff", LP, "ess3-8");
                     itemCheck('[Costume] "Theif" - Signalman', LP, "ess3-9");
-                    itemCheck("[Stanby Motion] Guard 26 - Snooze", LP, "ess3-10");
-                    itemCheck("[Stanby Motion] Acrobat - Ready", LP, "ess3-11");
-                    itemCheck("[Stanby Motion] Perfumer - Ready", LP, "ess3-12");
-                    itemCheck("[Stanby Motion] Postman - Ready", LP, "ess3-13");
+                    itemCheck("[Standby Motion] Guard 26 - Snooze", LP, "ess3-10");
+                    itemCheck("[Standby Motion] Acrobat - Ready", LP, "ess3-11");
+                    itemCheck("[Standby Motion] Perfumer - Ready", LP, "ess3-12");
+                    itemCheck("[Standby Motion] Postman - Ready", LP, "ess3-13");
                     itemCheck("[Costume] Lucky Guy - Plain Gray", LP, "ess3-14");
                     itemCheck("[Costume] Gardener - Violet", LP, "ess3-15");
                     itemCheck("[Costume] Mechanic - Focus White", LP, "ess3-16");
