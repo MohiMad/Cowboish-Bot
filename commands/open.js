@@ -61,7 +61,7 @@ module.exports = {
                 else if ([4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(variable)) fragments = fragments + 200;
                 else fragments = fragments + 36;
             } else {
-                LP.Opened = [...LP.Opened, `${essence}-${variable}`];
+                LP.Opened = [...LP.Opened, `${essence}-${variable++}`];
 
                 if (variable === 0) LP.S = LP.S + 1;
                 else if ([1, 2].includes(variable)) LP.A = LP.A = 1;
