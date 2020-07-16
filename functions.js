@@ -271,6 +271,22 @@ module.exports = {
 
 		const LP = await logicPath.findOne({ UserID: message.author.id });
 
+		let diceChances = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3];
+
+		let dice = diceChances[Math.floor(Math.random() * diceChances.length)];
+
+		let reward;
+		if (LP.ThreeMatches != 0) {
+			reward = dice * 2 + `<:dice:655384578499936257> (Doubled reward... **${LP.ThreeMatches} left**)`;
+
+			dice = dice * 2;
+			LP.ThreeMatches = LP.ThreeMatches - 1;
+
+			LP.save().catch(e => console.log(e));
+		} else {
+			reward = dice;
+		}
+
 		const quizEmbed = new RichEmbed()
 			.setTitle("Answer the question below to get a dice <:dice:655384578499936257>")
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
@@ -278,40 +294,43 @@ module.exports = {
 			.setDescription(stripIndents`
 			**Question about** : ${char}
 			**Difficulty** : ${Difficulty}
-			**Time** : 60 seconds
-			**Reward** : 1 Dice <:dice:655384578499936257>` + "\n\n" + question)
+			**Time** : 60 Seconds
+			**Reward** : ${reward}` + "\n\n" + question)
 			.setImage(Thumb)
 			.setFooter("Cowboish bot", "https://images-ext-2.discordapp.net/external/dpkUSBrSk9f20kq2Aw8B521pM6BcFhJdLBsYokj1ry0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/632291800585076761/863aeefefbb365f8ddc498a1c8fecb5d.png?width=564&height=564")
 			.setColor("RANDOM");
 
-		message.channel.send(quizEmbed).then(
+		message.channel.send(quizEmbed);
 
-			message.channel.awaitMessages(filter, { max: 1, time: 60000 }).then(collected => {
+		message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(collected => {
 
-				if (answer.includes(collected.first().content.toLowerCase())) {
-					let wins = [
-						`**${message.author.username}** got the right answer and got a dice <:dice:655384578499936257>`,
-						`Here is your dice <:dice:655384578499936257> **${message.author.username}**!`,
-						`**${message.author.username}** answered correctly! Here, take this dice <:dice:655384578499936257>`
-					];
+			if (answer.includes(collected.first().content.toLowerCase())) {
 
-					let win = Math.floor(Math.random() * wins.length);
+				let wins = [
+					`**${message.author.username}** got the right answer and got **${dice}** dice(s) <:dice:655384578499936257>`,
+					`Here is your **${dice}** dices(s) <:dice:655384578499936257>, **${message.author.username}**!`,
+					`**${message.author.username}** answered correctly! Here is your **${dice}** dice(s) <:dice:655384578499936257>`
+				];
 
-					message.channel.send(wins[win]);
+				let win = Math.floor(Math.random() * wins.length);
 
-					LP.Dices = LP.Dices + 1;
-					LP.save().catch(err => console.log(err));
+				message.channel.send(wins[win]);
 
+				if (LP.ThreeMatches != 0) {
+					LP.Dices = LP.Dices + dice;
+				} else {
+					LP.Dices = LP.Dices + dice;
 				}
-				else {
-					message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + answer[0] + "**");
-				}
+				LP.save().catch(err => console.log(err));
 
-			}).catch(collected => {
-				message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
-			})
-		)
+			}
+			else {
+				message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + answer[0] + "**");
+			}
 
+		}).catch(collected => {
+			message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
+		});
 
 	},
 	newLP: (message) => {
@@ -394,7 +413,8 @@ module.exports = {
 				equipped: "0"
 			},
 			Entomologist: false,
-			Portrait: "0"
+			Portrait: "0",
+			ThreeMatches: 3
 
 		})
 		newLP.save().catch(err => console.log(err))

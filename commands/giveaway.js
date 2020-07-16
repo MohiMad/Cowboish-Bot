@@ -79,6 +79,19 @@ module.exports = {
 
         giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
 
+        try {
+
+            await logicPath.updateMany({}, {
+                $set:
+                {
+                    ThreeMatches: 3
+                }
+            });
+
+        } catch (err) {
+            console.log(err);
+        }
+
     }
 
 }

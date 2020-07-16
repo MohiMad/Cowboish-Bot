@@ -55,13 +55,14 @@ module.exports = {
 
         function checkForItem(variable, essence) {
 
-            if (LP.Opened.includes(essence + "-" + variable++)) {
+            if (LP.Opened.includes(`${essence}-${variable + 1}`)) {
                 if (variable === 0) fragments = fragments + 2000;
                 else if ([1, 2].includes(variable)) fragments = fragments + 1000;
                 else if ([4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(variable)) fragments = fragments + 200;
+                else if ([16, 17, 18, 19]) fragments = fragments + 72;
                 else fragments = fragments + 36;
             } else {
-                LP.Opened = [...LP.Opened, `${essence}-${variable++}`];
+                LP.Opened = [...LP.Opened, `${essence}-${variable + 1}`];
 
                 if (variable === 0) LP.S = LP.S + 1;
                 else if ([1, 2].includes(variable)) LP.A = LP.A = 1;
@@ -583,9 +584,6 @@ module.exports = {
                         LP.save().catch(err => console.log(err));
                         await msg.edit(Ess1TenEmbed);
                     }, 2000 * 10);
-
-
-
 
                 } else {
                     message.channel.send(noargsEmbed);
@@ -1231,15 +1229,9 @@ module.exports = {
                     return ErrorMsg(bot, message, "Please provide one of the essence's ID\nThe current season's Essences are...\n<:ess1:655840713904488469> | **Essences s11-1** ─ ID ➜ " + s10_cmd + "\n" + ess3 + " | **Essence s11-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s11-1`");
                 }
 
-            }
-
-
-            else {
-
+            } else {
                 message.channel.send(noargsEmbed);
             }
-
-
 
         } catch (err) {
             console.log(err);

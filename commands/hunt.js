@@ -23,7 +23,7 @@ module.exports = {
             if (message.deletable) message.delete();
             coolEmbed(message, "Ooof the cooldown is still on!", "The cooldown for the `hunt` command is set to **60** seconds\nPlease wait 60 seconds")
         }
-        else if (["hellember", "leo", "HellEmber"].includes(args[1].toLowerCase())) {
+        else if (["hellember", "leo"].includes(args[1].toLowerCase())) {
 
             let leoFile = require("../quizes/leo.json");
 
@@ -31,7 +31,7 @@ module.exports = {
 
             quiz(message, leoItem.Question, leoItem.Answer, leoItem.Attachment, leoItem.Difficulty, "Hell Ember").then(cooldown.add(message.author.id));
         }
-        else if (["axeboy", "axeboi"].includes(args[1].toLowerCase())) {
+        else if (["axeboy", "axeboi", "robbie"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.AxeBoi === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -43,7 +43,7 @@ module.exports = {
                 quiz(message, axeBoyItem.Question, axeBoyItem.Answer, axeBoyItem.Attachment, axeBoyItem.Difficulty, "Axe booaaai").then(cooldown.add(message.author.id));
             }
         }
-        else if (["bane", "gamekeeper"].includes(args[1].toLowerCase())) {
+        else if (["bane", "gamekeeper", "gk"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.GameKeeper === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -67,7 +67,7 @@ module.exports = {
                 quiz(message, BQ_Item.Question, BQ_Item.Answer, BQ_Item.Attachment, BQ_Item.Difficulty, "Queen Mary").then(cooldown.add(message.author.id));
             }
         }
-        else if (["bonbon", "no.26", "pingu"].includes(args[1].toLowerCase())) {
+        else if (["bonbon", "no.26", "pingu", "guard", "guard26"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Pingu === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -103,7 +103,7 @@ module.exports = {
                 quiz(message, DW_Item.Question, DW_Item.Answer, DW_Item.Attachment, DW_Item.Difficulty, "DW aka dreambich :/").then(cooldown.add(message.author.id));
             }
         }
-        else if (["feaster"].includes(args[1].toLowerCase())) {
+        else if (["feaster", "hastur"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Feaster === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -115,7 +115,7 @@ module.exports = {
                 quiz(message, feaster_Item.Question, feaster_Item.Answer, feaster_Item.Attachment, feaster_Item.Difficulty, "Lazy calamari king").then(cooldown.add(message.author.id));
             }
         }
-        else if (["geisha", "gaysha"].includes(args[1].toLowerCase())) {
+        else if (["geisha", "gaysha", "michiko"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Geisha === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -127,7 +127,7 @@ module.exports = {
                 quiz(message, geisha_item.Question, geisha_item.Answer, geisha_item.Attachment, geisha_item.Difficulty, "Gaysha").then(cooldown.add(message.author.id));
             }
         }
-        else if (["lizard", "luchino", "lizardo"].includes(args[1].toLowerCase())) {
+        else if (["lizard", "luchino", "lizardo", "evilreptilian", "reptilian"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Lizard === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -139,7 +139,7 @@ module.exports = {
                 quiz(message, lizard_item.Question, lizard_item.Answer, lizard_item.Attachment, lizard_item.Difficulty, "Lizardo jumpy man").then(cooldown.add(message.author.id));
             }
         }
-        else if (["madeyes", "trump", "madeye"].includes(args[1].toLowerCase())) {
+        else if (["madeyes", "trump", "madeye", "burke"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.MadEyes === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -151,7 +151,7 @@ module.exports = {
                 quiz(message, madeyes_item.Question, madeyes_item.Answer, madeyes_item.Attachment, madeyes_item.Difficulty, "Trump's right hand, aka Madeyes").then(cooldown.add(message.author.id));
             }
         }
-        else if (["photographer", "photoboi"].includes(args[1].toLowerCase())) {
+        else if (["photographer", "photoboi", "joseph"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.PhotoGrapher === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -163,7 +163,7 @@ module.exports = {
                 quiz(message, PH_item.Question, PH_item.Answer, PH_item.Attachment, PH_item.Difficulty, "Lazy photoboaai").then(cooldown.add(message.author.id));
             }
         }
-        else if (["ripper", "rippa"].includes(args[1].toLowerCase())) {
+        else if (["ripper", "rippa", "jack"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Ripper === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -175,7 +175,7 @@ module.exports = {
                 quiz(message, ripper_item.Question, ripper_item.Answer, ripper_item.Attachment, ripper_item.Difficulty, "Rippa").then(cooldown.add(message.author.id));
             }
         }
-        else if (["sister", "nun", "disciple"].includes(args[1].toLowerCase())) {
+        else if (["sister", "nun", "disciple", "ann"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.Sister === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -187,7 +187,7 @@ module.exports = {
                 quiz(message, sister_item.Question, sister_item.Answer, sister_item.Attachment, sister_item.Difficulty, "Da nun").then(cooldown.add(message.author.id));
             }
         }
-        else if (["sw", "spider", "soulweaver"].includes(args[1].toLowerCase())) {
+        else if (["sw", "spider", "soulweaver", "violetta"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.SoulWeaver === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -199,7 +199,7 @@ module.exports = {
                 quiz(message, SW_item.Question, SW_item.Answer, SW_item.Attachment, SW_item.Difficulty, "Nascar").then(cooldown.add(message.author.id));
             }
         }
-        else if (["wu", "wuchang", "wuchangus"].includes(args[1].toLowerCase())) {
+        else if (["wu", "wuchang", "wuchangus", "blackandwhite"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.WuChang === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 
@@ -210,7 +210,7 @@ module.exports = {
 
                 quiz(message, WU_item.Question, WU_item.Answer, WU_item.Attachment, WU_item.Difficulty, "Wuu chaguussss").then(cooldown.add(message.author.id));
             }
-        } else if (["violinist", "musician"].includes(args[1].toLowerCase())) {
+        } else if (["violinist", "musician", "antonio"].includes(args[1].toLowerCase())) {
             if (LP.Hunters.NewHunta === false) {
                 ErrorMsg(bot, message, "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop hunter`\nBut hey :) you can always play as:\n`hellember`/`leo`");
 

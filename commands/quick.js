@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 const logicPath = require("../models/logicpath.js");
-const { quiz, ErrorMsg, coolEmbed, newLP, guildAdd } = require("../functions.js");
+const { quiz, ErrorMsg, coolEmbed, newLP } = require("../functions.js");
 
 let cooldown = new Set();
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
 
 
         if (!LP) {
-            newLP(message)
+            newLP(message);
         }
 
         else if (!args[1]) {
@@ -26,7 +26,7 @@ module.exports = {
             coolEmbed(message, "Ooof the cooldown is still on!", "The cooldown for the `quick` command is set to **60** seconds\nPlease wait 60 seconds")
         }
 
-        else if (["lawyer", "Lawyer", "freddy", "Freddy"].includes(args[1].toLowerCase())) {
+        else if (["lawyer", "freddy"].includes(args[1].toLowerCase())) {
 
 
             let lawyerfile = require("../quizes/lawyer.json");
@@ -35,7 +35,7 @@ module.exports = {
 
             quiz(message, lawyeritem.Question, lawyeritem.Answer, lawyeritem.Attachment, lawyeritem.Difficulty, "Lawyer").then(cooldown.add(message.author.id));
         }
-        else if (["doctor", "doc", "Doctor", "emily"].includes(args[1].toLowerCase())) {
+        else if (["doctor", "doc", "emily"].includes(args[1].toLowerCase())) {
 
             let docfile = require("../quizes/doctor.json");
 
@@ -44,7 +44,7 @@ module.exports = {
             quiz(message, docitem.Question, docitem.Answer, docitem.Attachment, docitem.Difficulty, "Doctor").then(cooldown.add(message.author.id));
 
         }
-        else if (["luckyguy", "lucky", "LG", "Luckyguy", "LuckyGuy"].includes(args[1].toLowerCase())) {
+        else if (["luckyguy", "lucky", "lg"].includes(args[1].toLowerCase())) {
 
             let luckfile = require("../quizes/lucky.json");
 
@@ -53,7 +53,7 @@ module.exports = {
             quiz(message, luckitem.Question, luckitem.Answer, luckitem.Attachment, luckitem.Difficulty, "Lucky guy").then(cooldown.add(message.author.id));
 
         }
-        else if (["gardener", "Gardener"].includes(args[1].toLowerCase())) {
+        else if (["gardener", "emma"].includes(args[1].toLowerCase())) {
 
             let gardenerfile = require("../quizes/gardener.json");
 
@@ -62,7 +62,7 @@ module.exports = {
             quiz(message, gardeneritem.Question, gardeneritem.Answer, gardeneritem.Attachment, gardeneritem.Difficulty, "Gardena :v").then(cooldown.add(message.author.id));
 
         }
-        else if (["theif", "Theif", "kreacher", "Kreacher", "thief"].includes(args[1].toLowerCase())) {
+        else if (["theif", "kreacher", "thief"].includes(args[1].toLowerCase())) {
 
             let theiffile = require("../quizes/theif.json");
 
@@ -71,7 +71,7 @@ module.exports = {
             quiz(message, theifitem.Question, theifitem.Answer, theifitem.Attachment, theifitem.Difficulty, "Theif").then(cooldown.add(message.author.id));
 
         }
-        else if (["cowboy", "Cowboy", "kevin", "Kevin"].includes(args[1].toLowerCase())) {
+        else if (["cowboy", "kevin"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Cowboy === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -85,7 +85,7 @@ module.exports = {
             }
 
         }
-        else if (["Mercenary", "mercenary", "merc"].includes(args[1].toLowerCase())) {
+        else if (["naib", "mercenary", "merc"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Mercenary === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -99,7 +99,7 @@ module.exports = {
             }
 
         }
-        else if (["coordinator", "Coordinator", "coord"].includes(args[1].toLowerCase())) {
+        else if (["coordinator", "coord", "martha"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Coordinator === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -113,7 +113,7 @@ module.exports = {
             }
 
         }
-        else if (["Priestess", "priestess"].includes(args[1].toLowerCase())) {
+        else if (["fiona", "priestess"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Priestess === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -127,7 +127,7 @@ module.exports = {
             }
 
         }
-        else if (["Mechanic", "mec", "mechanic"].includes(args[1].toLowerCase())) {
+        else if (["tracy", "mec", "mechanic"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Mechanic === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -141,7 +141,7 @@ module.exports = {
             }
 
         }
-        else if (["Mindseye", "mindseye", "minds", "TME"].includes(args[1].toLowerCase())) {
+        else if (["helena", "mindseye", "minds", "tme"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Mindseye === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -155,7 +155,7 @@ module.exports = {
             }
 
         }
-        else if (["perfumer", "Perfumer"].includes(args[1].toLowerCase())) {
+        else if (["perfumer", "vera"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Prefumer === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -169,7 +169,7 @@ module.exports = {
             }
 
         }
-        else if (["dancer", "Dancer", "femaledancer"].includes(args[1].toLowerCase())) {
+        else if (["dancer", "margaretha", "femaledancer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Dancer === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -183,7 +183,7 @@ module.exports = {
             }
 
         }
-        else if (["Seer", "seer"].includes(args[1].toLowerCase())) {
+        else if (["eli", "seer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Seer === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -197,7 +197,7 @@ module.exports = {
             }
 
         }
-        else if (["Embalmer", "embalmer"].includes(args[1].toLowerCase())) {
+        else if (["aesop", "embalmer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Embalmer === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -211,7 +211,7 @@ module.exports = {
             }
 
         }
-        else if (["Acrobat", "acrobat"].includes(args[1].toLowerCase())) {
+        else if (["mike", "acrobat"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Acrobat === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -225,7 +225,7 @@ module.exports = {
             }
 
         }
-        else if (["Officer", "officer", "1stofficer"].includes(args[1].toLowerCase())) {
+        else if (["firstofficer", "officer", "1stofficer", "jose"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Officer === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -239,7 +239,7 @@ module.exports = {
             }
 
         }
-        else if (["Barmaid", "barmaid"].includes(args[1].toLowerCase())) {
+        else if (["demi", "barmaid"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Barmaid === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -253,7 +253,7 @@ module.exports = {
             }
 
         }
-        else if (["Magician", "magician"].includes(args[1].toLowerCase())) {
+        else if (["servais", "magician"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Magician === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -267,7 +267,7 @@ module.exports = {
             }
 
         }
-        else if (["Explorer", "explorer"].includes(args[1].toLowerCase())) {
+        else if (["kurt", "explorer"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Explorer === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -281,7 +281,7 @@ module.exports = {
             }
 
         }
-        else if (["Forward", "forward"].includes(args[1].toLowerCase())) {
+        else if (["william", "forward"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Forward === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -295,7 +295,7 @@ module.exports = {
             }
 
         }
-        else if (["Prospector", "prospector"].includes(args[1].toLowerCase())) {
+        else if (["norton", "prospector"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Prospector === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -309,7 +309,7 @@ module.exports = {
             }
 
         }
-        else if (["Enchantress", "enchantress"].includes(args[1].toLowerCase())) {
+        else if (["patricia", "enchantress"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Enchantress === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -323,7 +323,7 @@ module.exports = {
             }
 
         }
-        else if (["Wilding", "wilding"].includes(args[1].toLowerCase())) {
+        else if (["wildling", "wilding", "murro"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Wilding === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -337,7 +337,7 @@ module.exports = {
             }
 
         }
-        else if (["Postman", "postman"].includes(args[1].toLowerCase())) {
+        else if (["victor", "postman"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.Postman === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -351,7 +351,7 @@ module.exports = {
             }
 
         }
-        else if (["gravedigger", "gravekeeper"].includes(args[1].toLowerCase())) {
+        else if (["gravedigger", "gravekeeper", "gk", "andrew"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.NewSurv === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -365,7 +365,7 @@ module.exports = {
             }
 
         }
-        else if (["prisoner", '"prisoner"'].includes(args[1].toLowerCase())) {
+        else if (["prisoner", '"prisoner"', "luca"].includes(args[1].toLowerCase())) {
 
             if (LP.Survivors.AnotherSurv === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -379,7 +379,7 @@ module.exports = {
             }
 
         }
-        else if (["entomologist", "entomo", "ento"].includes(args[1].toLowerCase())) {
+        else if (["entomologist", "entomo", "ento", "melly"].includes(args[1].toLowerCase())) {
 
             if (LP.Entomologist === false) {
                 ErrorMsg(this.bot, message, msgErr);
@@ -395,13 +395,9 @@ module.exports = {
         }
 
         setTimeout(() => {
-            cooldown.delete(message.author.id)
+            cooldown.delete(message.author.id);
 
         }, 60000);
-
-
-        guildAdd(message);
-
 
     }
 }
