@@ -139,14 +139,12 @@ module.exports = async (bot, message) => {
             break;
 
         case "quick": case "play":
-            if (message.author.id != MohiMoo.id) return message.reply("this command is currently under maintenance");
 
-            else bot.commands.get('quick').execute(message, args, bot, prefix);
+            bot.commands.get('quick').execute(message, args, bot, prefix);
             break;
 
         case "hunter": case "hunt":
-            if (message.author.id != MohiMoo.id) return message.reply("this command is currently under maintenance");
-            else bot.commands.get('hunt').execute(message, args, bot, prefix);
+            bot.commands.get('hunt').execute(message, args, bot, prefix);
 
             break;
 

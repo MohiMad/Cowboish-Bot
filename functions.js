@@ -284,7 +284,7 @@ module.exports = {
 
 			LP.save().catch(e => console.log(e));
 		} else {
-			reward = dice;
+			reward = dice + " <:dice:655384578499936257>";
 		}
 
 		const quizEmbed = new RichEmbed()
