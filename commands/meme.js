@@ -20,7 +20,7 @@ module.exports = {
 
 
             try {
-                got(random).then(response => {
+                got(random).then(async (response) => {
 
                     let content = JSON.parse(response.body);
 

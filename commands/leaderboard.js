@@ -18,7 +18,7 @@ module.exports = {
                 logicPath.find({})
                     .sort([
                         ["logic", "descending"]
-                    ]).exec((err, res) => {
+                    ]).exec(async (err, res) => {
                         if (err) console.log(err);
 
                         let n1 = bot.users.get(res[0].UserID) || "Not found";

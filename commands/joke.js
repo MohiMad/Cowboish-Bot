@@ -13,7 +13,7 @@ module.exports = {
         if (!cooldownCheck) {
 
             try {
-                got('https://www.reddit.com/r/jokes/random/.json').then(response => {
+                got('https://www.reddit.com/r/jokes/random/.json').then(async (response) => {
 
                     let content = JSON.parse(response.body);
 

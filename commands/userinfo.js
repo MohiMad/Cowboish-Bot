@@ -20,7 +20,7 @@ module.exports = {
             .map(r => r).join(", ") || 'none';
 
         if (roles.length > 100) {
-            roles = `${member.roles.size} roles`;
+            roles = `Many...`;
         }
 
         // User variables
