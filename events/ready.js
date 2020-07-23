@@ -59,39 +59,6 @@ module.exports = async (bot) => {
 
     });
 
-    /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
-
-    Glenn.updateStats(bot.guilds.size).catch(e => console.log(e));
-*/
-
-    const dbl = new DBL(config.dbl_token, bot);
-
-    dbl.postStats(bot.guilds.size).catch(e => console.log(e));
-
-
-    const Boats = new BOATS(config.boatsToken);
-
-    Boats.postStats(bot.guilds.size, "632291800585076761")
-        .catch((err) => {
-            console.log(err);
-        });
-
-
-
-    const updateBotList = async () => {
-
-        const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
-            .set("Authorization", `Bot ${config.dblToken_2}`)
-            .send({
-                guilds: bot.guilds.size,
-                users: bot.users.size,
-            })
-
-        return (reply);
-    }
-
-    let botUPDATE = await updateBotList();
-
     setInterval(async () => {
 
         let cooldownCheck = await Cooldown.find({});
@@ -147,6 +114,42 @@ module.exports = async (bot) => {
             }
         }
     }, 10000);
+
+    /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
+
+    Glenn.updateStats(bot.guilds.size).catch(e => console.log(e));
+*/
+
+    const dbl = new DBL(config.dbl_token, bot);
+
+    dbl.postStats(bot.guilds.size).catch(e => console.log(e));
+
+
+    const Boats = new BOATS(config.boatsToken);
+
+    Boats.postStats(bot.guilds.size, "632291800585076761")
+        .catch((err) => {
+            console.log(err);
+        });
+
+
+
+    /*const updateBotList = async () => {
+
+        const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
+            .set("Authorization", `Bot ${config.dblToken_2}`)
+            .send({
+                guilds: bot.guilds.size,
+                users: bot.users.size,
+            })
+
+        return (reply);
+    }
+
+    let botUPDATE = await updateBotList();
+    */
+
+
 
 
 };
