@@ -536,7 +536,7 @@ module.exports = {
             } else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                 if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** (__Unavailable__) ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** (__Unavailable__) ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
 
-                let e;
+                let e = "s12-1 items:";
                 let x = 0;
 
                 let embed = new RichEmbed()

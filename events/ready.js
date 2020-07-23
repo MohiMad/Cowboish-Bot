@@ -5,7 +5,7 @@ const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 const schedule = require('node-schedule');
 const { rewards } = require("../functions.js");
-const GBL = require('gblapi.js');
+//const GBL = require('gblapi.js');
 
 const Mutes = require("../models/mutes");
 const Cooldown = require("../models/cooldown.js");
@@ -59,10 +59,10 @@ module.exports = async (bot) => {
 
     });
 
-    const Glenn = new GBL(bot.user.id, config.glenToken, false);
+    /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
 
     Glenn.updateStats(bot.guilds.size).catch(e => console.log(e));
-
+*/
 
     const dbl = new DBL(config.dbl_token, bot);
 

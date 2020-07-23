@@ -1,10 +1,13 @@
 const { RichEmbed } = require("discord.js");
 const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
-
 const Cooldown = require("./models/cooldown.js");
+const humanizeDuration = require("humanize-duration");
 
 const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
+
+
+
 
 module.exports = {
 
