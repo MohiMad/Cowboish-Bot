@@ -321,7 +321,7 @@ module.exports = {
                 ctx.font = '14px Arial';
                 ctx.fillStyle = '#000000';
 
-                ctx.fillText(LP.Ess1, 72, 275);
+                ctx.fillText(LP.Ess1, 73, 270);
 
                 ctx.fillText(LP.Ess2, 189, 267);
 
