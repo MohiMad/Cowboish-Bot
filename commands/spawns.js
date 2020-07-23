@@ -11,8 +11,10 @@ module.exports = {
 
         let dungeonNames = ["dungeon", "hatch", "dungeons", "hatches"];
 
+        var msg = "**Too few arguments were given...**\nPlease provide me what map you want to check the spawns for... \n**Optional**: You can also provide what spawns you want to check for after providing the map name...\n\n**Map Names/Arguments (2nd):**\n\n**The Red Chruch** ➜ `redchurch`\n**Sacred Heart Hospital** ➜ `hospital`\n**Arms Factory** ➜ `factory`\n**Leo's Memory** ➜ `memory`\n**Moonlit River Park** ➜ `moonlit`\n**Lakeside Village** ➜ `lakeside`\n**Eversleeping Town** ➜ `eversleeping`\n**White Sand Street Asylum** ➜ `asylum`\n\n**Spawn Arguments (3rd):**\n\n**Cipher Machines** ➜ `cipher`\n**Survivors/Hunter** ➜ `players`\n**Dungeon Location** ➜ `dungeon` Duuuh on this one xD\n\n**Examples:**\n`" + prefix + "spawns <mapName> <spawnType(optional)>`\n`" + prefix + "spawns redchurch ciphermachines`";
+
         if (!args[1]) {
-            return ErrorMsg(bot, message, "**Too few arguments were given...**\nPlease provide me what map you want to check the spawns for... \n**Optional**: You can also provide what spawns you want to check for after providing the map name...\n\n**Map Names/Arguments (2nd):**\n\n**The Red Chruch** ➜ `redchurch`\n**Sacred Heart Hospital** ➜ `hospital`\n**Arms Factory** ➜ `factory`\n**Moonlit River Park** ➜ `moonlit`\n**Lakeside Village** ➜ `lakeside`\n**Eversleeping Town** ➜ `eversleeping`\n**White Sand Street Asylum** ➜ `asylum`\n\n**Spawn Arguments (3rd):**\n\n**Cipher Machines** ➜ `cipher`\n**Survivors/Hunter** ➜ `players`\n**Dungeon Location** ➜ `dungeon` Duuuh on this one xD\n\n**Examples:**\n`" + prefix + "spawns <mapName> <spawnType(optional)>`\n`" + prefix + "spawns redchurch ciphermachines`");
+            return ErrorMsg(bot, message, msg);
 
         } else if (["theredchurch", "church", "redchruch"].includes(args[1].toLowerCase())) {
             if (!args[2]) {
@@ -110,6 +112,8 @@ module.exports = {
             } else {
                 pageScroller(message, ["https://i.imgur.com/nIbTQPv.jpg", "https://i.imgur.com/O2NqU8S.jpg", "https://i.imgur.com/FLHqzDo.jpg", "https://i.imgur.com/1VL3Cvg.jpg", "https://i.imgur.com/A4cRX8l.jpg", "https://i.imgur.com/yd08ixc.jpg", "https://i.imgur.com/TsQfxYu.jpg", "https://i.imgur.com/2NNA5Fh.jpg", "https://i.imgur.com/uZM3dyA.jpg", "https://i.imgur.com/rg5TYRg.jpg", "https://i.imgur.com/nIbTQPv.jpg", "https://i.imgur.com/O2NqU8S.jpg", "https://i.imgur.com/FLHqzDo.jpg", "https://i.imgur.com/1VL3Cvg.jpg", "https://i.imgur.com/A4cRX8l.jpg", "https://i.imgur.com/yd08ixc.jpg", "https://i.imgur.com/TsQfxYu.jpg", "https://i.imgur.com/2NNA5Fh.jpg", "https://i.imgur.com/uZM3dyA.jpg", "https://i.imgur.com/rg5TYRg.jpg"], "White Sand Street Asylum's Cipher/Players/Dungeon Spawn Locations");
             }
+        } else {
+            return ErrorMsg(bot, message, msg);
         }
 
     }

@@ -1,5 +1,5 @@
 const { RichEmbed } = require('discord.js');
-const { ErrorMsg, findMember } = require("../functions.js");
+const { ErrorMsg } = require("../functions.js");
 
 module.exports = {
     name: 'struggle',

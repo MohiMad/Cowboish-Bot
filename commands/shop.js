@@ -30,7 +30,11 @@ module.exports = {
         Nothing to say here tbh... 
         
         <:frame5:693526158830075955> | **Portrait-frames list!** - ID ➜ __*frame*__
-        Make your __>logicpath__ look more colorful :D
+        Make your __${prefix}logicpath__ look more colorful :D
+
+        <:koboi_portrait:734343902592630874> | **Portraits list!** - ID ➜ __*portrait*__
+        Change your portrait to the one you prefer to be shown in __${prefix}logicpath__
+
         `)
             .setFooter("Cowboish shop list ─ page 1 of 1");
 
@@ -40,8 +44,9 @@ module.exports = {
             .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `" + prefix + "buy <itemID>`")
             .setColor("RANDOM")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
-        ${ess1} | **Essence s11-1** - Price : *96* ${insp} - ID: __*s11-1*__
-        ${ess3} | **Essence s11-3** - Price : *96* ${insp} - ID: __*s11-3*__
+        ${ess1} | **Essence s12-1** - Price : *96* ${insp} - ID: __*s12-1*__
+        ${ess2} | **Essence s12-2** (__Unavailable__) - Price : *96* ${insp} - ID: __*s12-3*__
+        ${ess3} | **Essence s12-3** (__Unavailable__) - Price : *96* ${insp} - ID: __*s12-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
@@ -219,10 +224,10 @@ module.exports = {
                 huntaEmbed.addField("<:axeboi:664443613622698005> Axe boi", "~~Axe boi - Price __*4508*__~~");
             }
             if (LP.Hunters.Lizard === false) {
-                huntaEmbed.addField("🦎 Lizard", "Lizard - Price __*4508*__ <:clue:655384523735040000>");
+                huntaEmbed.addField("<:depressed_lizzyboi:731913416096088117> Lizard", "Lizard - Price __*4508*__ <:clue:655384523735040000>");
             }
             else {
-                huntaEmbed.addField("🦎 Lizard", "~~Lizard - Price __*4508*__~~");
+                huntaEmbed.addField("<:depressed_lizzyboi:731913416096088117> Lizard", "~~Lizard - Price __*4508*__~~");
             }
             if (LP.Hunters.Clown === false) {
                 huntaEmbed.addField("<:dishdashy:664448163750608896> Clown", "Clown - Price __*1888*__ <:clue:655384523735040000>");

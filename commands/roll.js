@@ -22,11 +22,6 @@ module.exports = {
         if (!LP) {
             newLP(message);
         }
-        else if (cooldown.has(message.author.id)) {
-            if (message.deletable) message.delete();
-
-            return coolEmbed(message, "Ooof im tired", "To keep spamming away, there is a cooldown for this command and it's set to **5** seconds\nWait until it ends and try to execute this command again :D");
-        }
 
         else if (LP.Dices === 0) {
 
@@ -82,10 +77,6 @@ module.exports = {
                     ];
 
                 diceChance = Math.floor(Math.random() * diceChances.length);
-
-
-                cooldown.add(message.author.id);
-
 
                 if (diceChance === 0) {
                     LP.Clues = LP.Clues + 1;
@@ -179,21 +170,12 @@ module.exports = {
 
                 diceLoad(message, diceChances[diceChance]);
 
-                cooldown.add(message.author.id);
-
-
                 LP.Dices = LP.Dices - 1;
 
                 LP.logic = LP.logic + imagNumba;
 
 
                 LP.save().catch(e => console.log(e));
-
-                setTimeout(() => {
-                    cooldown.delete(message.author.id);
-
-                }, 5000);
-
             }
 
             else if (["5", "five"].includes(args[1].toLowerCase())) {

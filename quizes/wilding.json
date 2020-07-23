@@ -22,6 +22,12 @@
 		"Answer": ["10", "ten", "10s", "10 seconds", "ten seconds"],
 		"Difficulty": "Hard",
 		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2zeZV4rlxLdseSCW-Q4s5_ucuBzU0nkak_evelzeZrfN7AKk&s"
+	},
+	{
+		"Question": "**Fill in the missing word:**\n`Wildling movement speed is _ _ _ _ _ than other survivors`",
+		"Answer": ["slower", "lower"],
+		"Difficulty": "Medium rare",
+		"Attachment": "https://i.imgur.com/P0JvNUP.png"
 	}
 	
 ]

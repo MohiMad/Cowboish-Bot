@@ -27,10 +27,6 @@ module.exports = async (bot, member) => {
         return;
 
     } else {
-
-        leaveChannel.send(leaveMessage)
-            .catch(() => void null);
-
-
+        leaveChannel.send(leaveMessage).catch(() => void null);
     }
 };

@@ -2,6 +2,8 @@ const { RichEmbed } = require("discord.js");
 const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
+const Cooldown = require("./models/cooldown.js");
+
 const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
 
 module.exports = {
@@ -168,17 +170,6 @@ module.exports = {
 
 	},
 
-	coolEmbed: (message, Title, Description) => {
-		const coolEmbed = new RichEmbed()
-			.setTitle(Title)
-			.setColor("RED")
-			.setDescription(Description + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`)
-			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
-		message.channel.send(coolEmbed).then(m => m.delete(30000));
-
-	},
-
 	guildAdd: async (message) => {
 
 		const LP_User = await logicPath.findOne({ UserID: message.author.id });
@@ -333,7 +324,7 @@ module.exports = {
 		});
 
 	},
-	newLP: (message) => {
+	newLP: async (message) => {
 		const newLP = new logicPath({
 			UserID: message.author.id,
 			guildsID: [message.guild.id],
@@ -417,10 +408,53 @@ module.exports = {
 			ThreeMatches: 3
 
 		})
-		newLP.save().catch(err => console.log(err))
+		await newLP.save().catch(err => console.log(err))
 			.then(message.reply("It seems like you didn't have any idv account, a new one just got created for you!\nPlease try to run the command again :)"))
 
+	},
+	addCooldown: async (message, cooldownTime, command) => {
+
+		const newCooldown = new Cooldown({
+			command: command,
+			userID: message.author.id,
+			timeRemaining: Date.now() + cooldownTime,
+			dateNow: Date.now()
+		});
+
+		await newCooldown.save().catch(err => console.log(err));
+
+
+	},
+	findCooldown: async (message, command) => {
+		const cooldownChecker = Cooldown.findOne({ userID: message.author.id, command: command });
+
+		return cooldownChecker;
+	},
+	coolEmbed: (message, Title, Description, remainingTime, units) => {
+
+		const timeLeft = new Date(remainingTime);
+
+		const Remaining = humanizeDuration(timeLeft - Date.now(), { units: units, round: true });
+
+		if (message.deletable) message.delete();
+
+		let des = Description.replace("REMAINING", Remaining);
+
+		if (message.guild.id !== "636241255994490900") {
+			des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`
+		}
+
+		const coolEmbed = new RichEmbed()
+			.setTitle(Title)
+			.setColor("RED")
+			.setDescription(des)
+			.setAuthor(message.author.username, message.author.displayAvatarURL)
+			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
+		message.channel.send(coolEmbed).then(m => m.delete(30000));
+
 	}
+
+
 
 
 };

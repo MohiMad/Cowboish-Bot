@@ -8,8 +8,6 @@ module.exports = {
 
         const toClear = args[1];
 
-
-
         if (!message.channel.permissionsFor(message.guild.me).missing('MANAGE_MESSAGES')) {
             return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE_MESSAGES**")
 

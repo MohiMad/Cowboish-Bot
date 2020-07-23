@@ -65,8 +65,8 @@ module.exports = {
                 ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + ">shop` to check what you can buy")
             }
             //buy essences here
-            else if (["s11-2", "s112", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
-                /*
+            else if (["s12-2", "s122", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
+
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 
@@ -78,19 +78,17 @@ module.exports = {
                     LP.Inspirations = LP.Inspirations - 96;
                     LP.Ess2 = LP.Ess2 + 1;
                     LP.save().catch(err => console.log(err));
-                }*/
-
-                message.channel.send(`**${message.author.username}** this essence is not obtainable this season...`);
+                }
 
             }
 
-            else if (["s111", "s11-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
+            else if (["s211", "s12-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more`)
 
                 }
                 else {
-                    buyEmbed.setDescription(`You bought **1** <:ess1:655840713904488469> and paid *96* <:inspirations:655840409674711060> `);
+                    buyEmbed.setDescription(`You bought **1** <:s121:735775380266549319> and paid *96* <:inspirations:655840409674711060> `);
                     message.channel.send(buyEmbed);
 
                     LP.Inspirations = LP.Inspirations - 96;
@@ -99,7 +97,7 @@ module.exports = {
                 }
             }
 
-            else if (["s11-3", "s113", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
+            else if (["s12-3", "s123", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
                 if (LP.Inspirations < 96) {
                     message.reply(`sorry friend! but you don't have enough inspirations to buy that, you need **${96 - LP.Inspirations}** <:inspirations:655840409674711060> more!`)
 

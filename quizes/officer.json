@@ -19,7 +19,7 @@
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
-		"Answer": ["captin hook", "Captin Hook", "Captin hook"],
+		"Answer": ["Captain Hook", "captain hook", "captin hook"],
 		"Difficulty": "Extreme",
 		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
 	}

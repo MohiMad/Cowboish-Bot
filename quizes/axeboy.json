@@ -28,7 +28,13 @@
 		"Answer": ["pickaxe"],
 		"Difficulty": "Hard",
 		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png"
-	}
+	},
+	{
+		"Question": "**Question:**\nWhat is the maximum amount of Peaceful Pines can be present in a match at a time?",
+		"Answer": ["6", "six", "six trees", "6 trees"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/xR6paec.png"
+		}
 	
 	
 ]

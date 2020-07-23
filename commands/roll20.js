@@ -16,9 +16,7 @@ module.exports = {
             const rollEmbed = new RichEmbed()
                 .setTitle('You rolled a 20 sided dice and got...')
                 .setDescription((facts[fact]))
-                .attachFiles(["./dice/" + "dice20.gif"])
-                .setImage('attachment://dice20.gif')
-                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
+                .setImage("https://media.giphy.com/media/Y1ejXrUbBCnEhCyTAI/giphy.gif")
                 .setColor("RANDOM")
                 .setFooter('Cowboish bot');
 

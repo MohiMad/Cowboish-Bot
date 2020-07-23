@@ -24,14 +24,12 @@ module.exports = {
             const wiEmbed = new RichEmbed()
                 .setAuthor(message.author.username + "'s winrate is " + (facts[fact]) + '%', message.author.avatarURL)
                 .setColor('0x1AA9EE')
-                .setURL('https://rkanjo2.wixsite.com/cowboishbot');
 
             if (!args[1]) return message.channel.sendEmbed(wiEmbed)
 
             const winEmbed = new RichEmbed()
                 .setAuthor(persona.username + "'s winrate is " + (facts[fact]) + '%', message.author.avatarURL)
                 .setColor("RANDOM")
-                .setURL('https://rkanjo2.wixsite.com/cowboishbot')
 
             message.channel.send(winEmbed);
 

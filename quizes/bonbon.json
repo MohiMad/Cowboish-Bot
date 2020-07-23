@@ -34,6 +34,12 @@
 		"Answer": ["tea"],
 		"Difficulty": "Medium",
 		"Attachment": "https://pm1.narvii.com/7600/d6a5579e79d4d47f9a36dc678afb5b3d2cb4c5d5r1-1836-1916v2_uhq.jpg"
-	}
+	},
+	{
+		"Question": "**Question:**\nWho created Guard 26?",
+		"Answer": ["burke", "madeye", "mad eye", "the madeyes", "madeyes", "the madeye", "the mad eye"],
+		"Difficulty": "Easy",
+		"Attachment": "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/e35/72075089_561646697917547_2302896676133816488_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_ohc=byNhdMQkRcIAX9n3rzC&oh=2a4b013a658b9e0874aade18821d73c1&oe=5F3D88C4"
+		}
 	
 ]

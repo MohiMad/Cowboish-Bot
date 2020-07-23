@@ -1,5 +1,5 @@
 const Canvas = require('canvas');
-const { ErrorMsg } = require("../functions.js");
+const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 const Discord = require("discord.js");
 
 module.exports = {
@@ -7,36 +7,45 @@ module.exports = {
     description: "Generate 'chosen death' meme",
     execute: async (message, args, bot, prefix) => {
 
-        const sayMessage = args.slice(1).join(" ");
-        
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+        const cooldownCheck = await findCooldown(message, "death");
 
-        else if (!args[1]) {
-            ErrorMsg(bot, message, "Can't create a meme with empty text!\nPlease provide something to put in the meme's text!\n\n**Right usage:** `" + prefix + "chosendeath <message Goes HERE>`")
-        }
-        else if (sayMessage.length > 170) {
-            ErrorMsg(bot, message, "The text given is tooo loong, like for real\nPlease try to send something that is shorter :)");
-        }
-        else {
+        if (!cooldownCheck) {
 
-            const canvas = Canvas.createCanvas(1600, 1347);
-            const ctx = canvas.getContext('2d');
-            // Since the image takes time to load, you should await it
-            const background = await Canvas.loadImage('./pics/death.jpg');
-            // This uses the canvas dimensions to stretch the image onto the entire canvas
-            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-            // Use helpful Attachment class structure to process the file for you
+            const sayMessage = args.slice(1).join(" ");
 
-            ctx.font = '75px sans-serif';
-            ctx.fillStyle = '#000000';
+            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
-            ctx.fillText(sayMessage, 50, 80);
+            else if (!args[1]) {
+                ErrorMsg(bot, message, "Can't create a meme with empty text!\nPlease provide something to put in the meme's text!\n\n**Right usage:** `" + prefix + "chosendeath <message Goes HERE>`")
+            }
+            else if (sayMessage.length > 170) {
+                ErrorMsg(bot, message, "The text given is tooo loong, like for real\nPlease try to send something that is shorter :)");
+            }
+            else {
+
+                const canvas = Canvas.createCanvas(1600, 1347);
+                const ctx = canvas.getContext('2d');
+                // Since the image takes time to load, you should await it
+                const background = await Canvas.loadImage('./pics/death.jpg');
+                // This uses the canvas dimensions to stretch the image onto the entire canvas
+                ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+                // Use helpful Attachment class structure to process the file for you
+
+                ctx.font = '75px sans-serif';
+                ctx.fillStyle = '#000000';
+
+                ctx.fillText(sayMessage, 50, 80);
 
 
 
-            const attachment = new Discord.Attachment(canvas.toBuffer(), 'deth.png');
+                const attachment = new Discord.Attachment(canvas.toBuffer(), 'deth.png');
 
-            message.channel.send(attachment)
+                message.channel.send(attachment);
+                await addCooldown(message, 10000, "death");
+            }
+
+        } else {
+            coolEmbed(message, "You're abusing this command .-.", "The cooldown on this command is literally set to **10** seconds... can't you wait that long? 0-o\nPlease wait **REMAINING** before attempting to use this command again... :))", cooldownCheck.timeRemaining, ["s"]);
         }
     }
 }

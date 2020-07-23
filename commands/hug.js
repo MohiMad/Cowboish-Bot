@@ -26,11 +26,9 @@ module.exports = {
             let hugs = [
                 "https://media.giphy.com/media/WO5lHiF8TlyuAIzGvB/giphy.gif",
                 "https://media.giphy.com/media/jRBH1BrIqdLPdW8eo1/giphy.gif",
-                "https://media.giphy.com/media/MXRUzzaVTXACQ251JU/giphy.gif",
                 "https://media.giphy.com/media/hpFTl6sn0OdpXZNKxM/giphy.gif",
                 "https://media.giphy.com/media/iGpvkIsdAw7K2MxEsr/giphy.gif",
-                "https://media.giphy.com/media/kGRI4KATznkZ8rF9N7/giphy.gif",
-                "https://media.giphy.com/media/jsHq6vUwe6To8itjGQ/giphy.gif"
+                "https://media.giphy.com/media/eJ96BIs6ABNa4ellhk/giphy.gif" //lady bella's
 
             ]
 
@@ -48,8 +46,6 @@ module.exports = {
                 .setAuthor((facts[fact]), message.author.avatarURL)
                 .setImage((hugs[hug]))
                 .setColor("RANDOM")
-
-
 
             message.channel.send(bullyembed);
 

@@ -8,11 +8,9 @@ module.exports = {
 
 
 const betterEmbed = new RichEmbed()
-    .setThumbnail(bot.user.displayAvatarURL)
     .setColor("0xFFE700")
-    .addField("▔ ▔ ▔ ▔ ▔", 
-    stripIndents`👇 <@632291800585076761> information 👇
-    Cowboish bot is MohiMoo's first project coded using *JavaScript*
+    .setDescription( stripIndents`👇 <@632291800585076761> information 👇
+    Cowboish bot is Mohi's first project coded using *JavaScript*
 
     ⚙️ Bot's prefix : **${prefix}**
     - *Use this prefix before any of my commands ;D*
@@ -28,8 +26,7 @@ const betterEmbed = new RichEmbed()
     [Cowboish website](https://mohimad.github.io/CowboishBot/)
     [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
     [Cowboish Server](https://discordapp.com/invite/YWcSukS)`)
-    .attachFiles(["./emoji" + ".png"])
-    .setThumbnail('attachment://emoji' + '.png')
+    .setThumbnail(bot.user.displayAvatarURL)
     .setTimestamp();
 
     message.channel.send(betterEmbed);

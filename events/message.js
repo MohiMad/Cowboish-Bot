@@ -1,6 +1,5 @@
 const Guild = require("../models/guild.js");
 
-
 module.exports = async (bot, message) => {
 
     const MohiMoo = bot.users.get("478527909250990090");
@@ -16,17 +15,17 @@ module.exports = async (bot, message) => {
     let prefix;
 
     if (!guild_0) {
-        prefix = ">"
+        prefix = ">";
     }
     else if (guild_0.prefix === null) {
-        prefix = ">"
+        prefix = ">";
     }
     else if (guild_0.prefix.length < 1) {
-        prefix = ">"
+        prefix = ">";
 
     }
     else {
-        prefix = guild_0.prefix
+        prefix = guild_0.prefix;
     }
 
     let args = message.content.substring(prefix.length).split(" ");
@@ -34,6 +33,8 @@ module.exports = async (bot, message) => {
     if (message.author.id === bot.user.id) return;
 
     if (message.author.bot) return;
+
+    if (message.author.id !== MohiMoo.id) return;
 
     if (message.content.startsWith("setcowboishprefix")) {
         bot.commands.get('setcowboishprefix').execute(message, args, bot);
@@ -153,7 +154,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "dailyreward": case "daily":
-            bot.commands.get('daily').execute(message, args, MohiMoo);
+            bot.commands.get('daily').execute(message);
 
             break;
 

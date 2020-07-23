@@ -47,5 +47,17 @@
 		"Answer": ["60%", "60", "sixty percent", "sixty percent faster"],
 		"Difficulty": "It’s hard...jk it’s easy",
 		"Attachment": "https://i.imgur.com/Oqg9Il5.png"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["moon face"],
+		"Difficulty": "VERY hard",
+		"Attachment": "https://i.imgur.com/sii7nyW.png"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["foreign athenian"],
+		"Difficulty": "VERY hard",
+		"Attachment": "https://i.imgur.com/KI4Yqmp.png"
 	}
 ]

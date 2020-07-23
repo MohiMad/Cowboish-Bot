@@ -1,72 +1,56 @@
 const { RichEmbed } = require('discord.js');
-let cooldown = new Set();
-const { newLP } = require("../functions.js");
+const { newLP, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 const { ess2, ess1, ess3, clues, dice } = require("../emojis.json");
+const logicPath = require("../models/logicpath.js");
 
 module.exports = {
     name: 'daily',
     description: "daily rewards",
-    execute(message, args, MohiMoo) {
+    execute: async (message) => {
 
-        const coolEmbed = new RichEmbed()
-            .setTitle("Take it easy on me dude!")
-            .setColor("0xe80000")
-            .setDescription("It's a DAILY reward so you have to wait 24 hours until you can get your reward again..");
+        const cooldownCheck = await findCooldown(message, "daily");
 
-        const logicPath = require("../models/logicpath.js");
+        if (!cooldownCheck) {
 
-        logicPath.findOne({
-            UserID: message.author.id
+            await logicPath.findOne({
+                UserID: message.author.id
 
-        }, (err, LP) => {
+            }, (err, LP) => {
 
-            if (err) console.log(err);
+                if (err) console.log(err);
 
+                if (!LP) {
+                    await newLP(message);
+                }
 
-            if (!LP) { newLP(message) }
+                else {
 
-            else if (cooldown.has(message.author.id)) {
-                if (message.deletable) message.delete();
-
-                message.channel.send(coolEmbed).then(m => m.delete(20000));
-
-
-            }
-            else {
-
-                const dailyEmbed = new RichEmbed()
-                    .setTitle("🎁 Daily reward given! 🎁")
-                    .setThumbnail("https://i.imgur.com/VGo6rp3.png")
-                    .setDescription(`I've yeeted **10** ${dice}, **500** ${clues} and **10** ${ess3} into your account ;D`)
-                    .setColor("0xffd500")
-                    .setFooter("Remember to come back the next day to get your rewards again :)");
+                    const dailyEmbed = new RichEmbed()
+                        .setTitle("🎁 Daily reward given! 🎁")
+                        .setThumbnail("https://i.imgur.com/VGo6rp3.png")
+                        .setDescription(`I've yeeted **10** ${dice}, **500** ${clues} and **10** ${ess1} into your account ;D`)
+                        .setColor("0xffd500")
+                        .setFooter("Remember to come back the next day to get your rewards again :)");
 
 
-                message.channel.send(dailyEmbed)
-                    .then(cooldown.add(message.author.id));
+                    await addCooldown(message, 86400000, "daily");
 
-                LP.Dices = LP.Dices + 10;
-                LP.Clues = LP.Clues + 500;
-                LP.Ess3 = LP.Ess3 + 10;
+                    LP.Dices = LP.Dices + 10;
+                    LP.Clues = LP.Clues + 500;
+                    LP.Ess1 = LP.Ess1 + 10;
 
-                LP.save().catch(err => console.log(err));
+                    LP.save().catch(err => console.log(err));
 
+                    message.channel.send(dailyEmbed);
 
+                }
 
-            }
-
-            setTimeout(() => {
-                cooldown.delete(message.author.id)
-
-            }, 86400000);
+            });
 
 
-        })
-
-
-
-
-
+        } else {
+            coolEmbed(message, "The cooldwon isn't over yet ma friend .-.", "Since it's a daily reward, the cooldown is set to **24** hours...\nYou have to wait **REMAINING** until you can obtain your daily-rewards once again :)", cooldownCheck.timeRemaining, ["h", "m", "s"]);
+        }
 
 
     }

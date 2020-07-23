@@ -1,6 +1,7 @@
 const { RichEmbed } = require('discord.js');
 const got = require('got');
 const { ErrorMsg } = require("../functions.js");
+
 module.exports = {
     name: 'idv',
     description: "sends a random idv post",
