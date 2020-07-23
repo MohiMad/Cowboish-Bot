@@ -45,8 +45,8 @@ module.exports = {
 			time: 300000
 		});
 
-		back.on('collect', r => {
-			r.remove(message.author);
+		back.on('collect', async r => {
+			await r.remove(message.author);
 
 			if (pageI === 0) {
 				pageI = Pages.length - 1;
@@ -57,12 +57,12 @@ module.exports = {
 			embed.setImage(imageArray[pageI]);
 			embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
 
-			msg.edit(embed);
+			await msg.edit(embed);
 		});
 
-		forward.on('collect', r => {
+		forward.on('collect', async r => {
 
-			r.remove(message.author);
+			await r.remove(message.author);
 
 			if (pageI === Pages.length - 1) {
 
@@ -74,8 +74,29 @@ module.exports = {
 			embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
 
 
-			msg.edit(embed);
+			await msg.edit(embed);
 		});
+
+		let endFilter = (reaction, user) => reaction.emoji.name === '✖️' & user.id === message.author.id;
+
+		let end = msg.createReactionCollector(endFilter, {
+			time: 300000
+		});
+
+		end.on('collect', async r => {
+
+			await r.remove(message.author);
+
+			await end.stop();
+			await forward.stop();
+			await back.stop();
+
+			message.channel.send(`**${message.author.username}, Ended...**`);
+
+		});
+
+
+
 
 	},
 

@@ -482,7 +482,6 @@ module.exports = {
 
             let forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
 
-            let endFilter = (reaction, user) => reaction.emoji.name === '✖️' & user.id === message.author.id;
 
 
             let back = msg.createReactionCollector(backFilter, {
@@ -493,10 +492,7 @@ module.exports = {
                 time: 300000
             });
 
-            let end = msg.createReactionCollector(endFilter, {
-                time: 300000
-            });
-
+            
             back.on('collect', async r => {
                 await r.remove(message.author);
 
@@ -521,6 +517,12 @@ module.exports = {
                 }
                 await msg.edit(Pages[pageI]);
 
+            });
+
+            let endFilter = (reaction, user) => reaction.emoji.name === '✖️' & user.id === message.author.id;
+
+            let end = msg.createReactionCollector(endFilter, {
+                time: 300000
             });
 
             end.on('collect', async r => {

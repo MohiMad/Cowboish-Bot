@@ -34,8 +34,6 @@ module.exports = async (bot, message) => {
 
     if (message.author.bot) return;
 
-    if (message.author.id !== MohiMoo.id) return;
-
     if (message.content.startsWith("setcowboishprefix")) {
         bot.commands.get('setcowboishprefix').execute(message, args, bot);
     }
