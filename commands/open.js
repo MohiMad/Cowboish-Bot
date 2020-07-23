@@ -265,7 +265,7 @@ module.exports = {
                                 ess1_portrait_message = "Colorful Memory Lawyer";
                             }
 
-                            s9Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip " + ess1_portrait_message + "`\nBy equipping the portrait, it will be visable in the \n`" + prefix + "logicpath` command");
+                            s9Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip portrait " + ess1_portrait_message + "`\nBy equipping the portrait, it will be visable in the \n`" + prefix + "logicpath` command");
 
                             LP.D = LP.D + 1;
 

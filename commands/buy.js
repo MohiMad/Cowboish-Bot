@@ -246,7 +246,7 @@ module.exports = {
                     LP.Clues = LP.Clues - 3568;
                     LP.Survivors.Dancer = true;
 
-                    buyEmbed.setDescription("Time to dance?\nThe Perfumer is now yours!");
+                    buyEmbed.setDescription("Time to dance?\nThe Female Dancer is now yours!");
                     message.channel.send(buyEmbed);
 
                     LP.save().catch(err => console.log(err));

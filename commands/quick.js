@@ -14,15 +14,11 @@ module.exports = {
 
         if (!cooldownCheck) {
 
-            if (!LP) {
-                await newLP(message);
-            }
+            if (!LP) return await newLP(message);
 
-            else if (!args[1]) {
-                return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
-            }
+            if (!args[1]) return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
 
-            else if (["lawyer", "freddy"].includes(args[1].toLowerCase())) {
+            if (["lawyer", "freddy"].includes(args[1].toLowerCase())) {
 
 
                 let lawyerfile = require("../quizes/lawyer.json");

@@ -12,14 +12,11 @@ module.exports = {
 
         if (!cooldownCheck) {
 
-            if (!LP) {
-                newLP(message);
-            }
+            if (!LP) return await newLP(message);
 
-            else if (!args[1]) {
-                return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**HellEmber**");
-            }
-            else if (["hellember", "leo"].includes(args[1].toLowerCase())) {
+            if (!args[1]) return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**HellEmber**");
+
+            if (["hellember", "leo"].includes(args[1].toLowerCase())) {
 
                 let leoFile = require("../quizes/leo.json");
 
@@ -221,7 +218,7 @@ module.exports = {
             addCooldown(message, 60000, "hunt");
 
         } else {
-            coolEmbed(message, "You can hunt just yet :(", "Please wait **REMAINING** before you can use the `hunt` command again...", cooldownCheck.timeRemaining, ["m", "s"]);
+            coolEmbed(message, "You can't hunt just yet :(", "Please wait **REMAINING** before you can use the `hunt` command again...", cooldownCheck.timeRemaining, ["m", "s"]);
 
         }
 
