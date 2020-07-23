@@ -15,7 +15,7 @@ module.exports = {
             await logicPath.findOne({
                 UserID: message.author.id
 
-            }, (err, LP) => {
+            }, async (err, LP) => {
 
                 if (err) console.log(err);
 
