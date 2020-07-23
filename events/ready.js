@@ -2,7 +2,6 @@ const got = require("got");
 const config = require("../config.json");
 const snekfetch = require('snekfetch');
 const DBL = require("dblapi.js");
-const { ddblAPI } = require('ddblapi.js');
 const BOATS = require('boats.js');
 const schedule = require('node-schedule');
 const { rewards } = require("../functions.js");
@@ -64,11 +63,6 @@ module.exports = async (bot) => {
 
     Glenn.updateStats(bot.guilds.size).catch(e => console.log(e));
 
-
-    const ddbl = new ddblAPI('632291800585076761', config.ddblToken);
-
-    ddbl.postStats(bot.guilds.size)
-        .catch(err => console.log(err));
 
     const dbl = new DBL(config.dbl_token, bot);
 
