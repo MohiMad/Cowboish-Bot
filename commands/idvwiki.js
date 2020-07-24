@@ -475,7 +475,7 @@ module.exports = {
 
             await msg.react('⏩');
 
-            await msg.react('✖️');
+            await msg.react('❌');
 
 
             let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
@@ -519,7 +519,7 @@ module.exports = {
 
             });
 
-            let endFilter = (reaction, user) => reaction.emoji.name === '✖️' & user.id === message.author.id;
+            let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
 
             let end = msg.createReactionCollector(endFilter, {
                 time: 300000
