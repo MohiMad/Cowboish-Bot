@@ -39,5 +39,12 @@
 		"Answer": ["Heal", "heal"],
 		"Difficulty": "Ez",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/678217887990677514/doctor_by_koyrenku_dchxrb2-fullview.png?width=476&height=565"
-    }
+	},
+	{
+		"Question": "**Question:**\nCan the Doctor heal 0,5 damage?",
+		"Answer": ["yes", "yah", "yea", "yeah", "sure", "of course"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.imgur.com/WW9H0yL.png",
+		"Artist": "@8rkooo - Twitter"
+	}
 ]

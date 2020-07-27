@@ -40,5 +40,18 @@
 		"Answer": ["yusuke", "yusuke kitagawa"],
 		"Difficulty": "HARD",
 		"Attachment": "https://i.imgur.com/jk1AOJa.png"
-    }
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["trickster", ""],
+		"Difficulty": "HARD",
+		"Attachment": "https://i.imgur.com/vqYMGhO.png"
+	},
+	{
+		"Question": "**Type the odd word that doesn't fit with Embalmer or I won't give you yourr dice(s) >:0**\n(`coffin`, `claydoll`, `anxiety`, `alone`, `friendly`)",
+		"Answer": ["friendly"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/vQDDfoC.png",
+		"Artist": "@YOLO_Embalmer - Twitter"
+	}
 ]

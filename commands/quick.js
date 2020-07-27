@@ -1,5 +1,5 @@
 const logicPath = require("../models/logicpath.js");
-const { quiz, ErrorMsg, newLP, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
+const { quiz, ErrorMsg, coolEmbed, newLP, addCooldown, findCooldown } = require("../functions.js");
 
 module.exports = {
     name: 'quick',
@@ -10,22 +10,23 @@ module.exports = {
 
         let msgErr = "You don't own that character!\nYou need to buy that character by doing `" + prefix + "buy <characterName>`\nTo check the characters available do `" + prefix + "shop survivor`\nBut hey :) you can always play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**";
 
-        const cooldownCheck = await findCooldown(message, "quick");
+
+        const cooldownCheck = await findCooldown(message, "test");
 
         if (!cooldownCheck) {
 
-            if (!LP) return await newLP(message);
+            if (!LP) return newLP(message);
 
             if (!args[1]) return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "quick <survivorName>`\nNOTE: You need to own the survivor you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**Gardener**\n**LuckyGuy**\n**Doctor**\n**Thief**\n**Lawyer**");
 
             if (["lawyer", "freddy"].includes(args[1].toLowerCase())) {
 
-
                 let lawyerfile = require("../quizes/lawyer.json");
 
                 let lawyeritem = lawyerfile[Math.floor(Math.random() * lawyerfile.length)];
 
-                quiz(message, lawyeritem.Question, lawyeritem.Answer, lawyeritem.Attachment, lawyeritem.Difficulty, "Lawyer");
+                await quiz(message, lawyeritem.Question, lawyeritem.Answer, lawyeritem.Attachment, lawyeritem.Difficulty, "Lawyer", lawyeritem.Artist);
+                await addCooldown(message, 60 * 1000, "test");
             }
             else if (["doctor", "doc", "emily"].includes(args[1].toLowerCase())) {
 
@@ -33,7 +34,8 @@ module.exports = {
 
                 let docitem = docfile[Math.floor(Math.random() * docfile.length)];
 
-                quiz(message, docitem.Question, docitem.Answer, docitem.Attachment, docitem.Difficulty, "Doctor");
+                await quiz(message, docitem.Question, docitem.Answer, docitem.Attachment, docitem.Difficulty, "Doctor", docitem.Artist);
+                await addCooldown(message, 60 * 1000, "test");
 
             }
             else if (["luckyguy", "lucky", "lg"].includes(args[1].toLowerCase())) {
@@ -42,7 +44,8 @@ module.exports = {
 
                 let luckitem = luckfile[Math.floor(Math.random() * luckfile.length)];
 
-                quiz(message, luckitem.Question, luckitem.Answer, luckitem.Attachment, luckitem.Difficulty, "Lucky guy");
+                await quiz(message, luckitem.Question, luckitem.Answer, luckitem.Attachment, luckitem.Difficulty, "Lucky guy", luckitem.Artist);
+                await addCooldown(message, 60 * 1000, "test");
 
             }
             else if (["gardener", "emma"].includes(args[1].toLowerCase())) {
@@ -51,7 +54,8 @@ module.exports = {
 
                 let gardeneritem = gardenerfile[Math.floor(Math.random() * gardenerfile.length)];
 
-                quiz(message, gardeneritem.Question, gardeneritem.Answer, gardeneritem.Attachment, gardeneritem.Difficulty, "Gardena :v");
+                await quiz(message, gardeneritem.Question, gardeneritem.Answer, gardeneritem.Attachment, gardeneritem.Difficulty, "Gardena :v", gardeneritem.Artist);
+                await addCooldown(message, 60 * 1000, "test");
 
             }
             else if (["theif", "kreacher", "thief"].includes(args[1].toLowerCase())) {
@@ -60,7 +64,8 @@ module.exports = {
 
                 let theifitem = theiffile[Math.floor(Math.random() * theiffile.length)];
 
-                quiz(message, theifitem.Question, theifitem.Answer, theifitem.Attachment, theifitem.Difficulty, "Theif");
+                await quiz(message, theifitem.Question, theifitem.Answer, theifitem.Attachment, theifitem.Difficulty, "Theif", theifitem.Artist);
+                await addCooldown(message, 60 * 1000, "test");
 
             }
             else if (["cowboy", "kevin"].includes(args[1].toLowerCase())) {
@@ -73,7 +78,9 @@ module.exports = {
 
                     let cowboyitem = cowboyfile[Math.floor(Math.random() * cowboyfile.length)];
 
-                    quiz(message, cowboyitem.Question, cowboyitem.Answer, cowboyitem.Attachment, cowboyitem.Difficulty, "Cowboy");
+                    await quiz(message, cowboyitem.Question, cowboyitem.Answer, cowboyitem.Attachment, cowboyitem.Difficulty, "Cowboy", cowboyitem.Artist);
+
+                    await addCooldown(message, 60 * 1000, "test");
                 }
 
             }
@@ -87,7 +94,9 @@ module.exports = {
 
                     let mercitem = mercfile[Math.floor(Math.random() * mercfile.length)];
 
-                    quiz(message, mercitem.Question, mercitem.Answer, mercitem.Attachment, mercitem.Difficulty, "Naibu");
+                    await quiz(message, mercitem.Question, mercitem.Answer, mercitem.Attachment, mercitem.Difficulty, "Naibu", mercitem.Artist);
+
+                    await addCooldown(message, 60 * 1000, "test");
                 }
 
             }
@@ -101,7 +110,9 @@ module.exports = {
 
                     let coorditem = coordfile[Math.floor(Math.random() * coordfile.length)];
 
-                    quiz(message, coorditem.Question, coorditem.Answer, coorditem.Attachment, coorditem.Difficulty, "Coordinator");
+                    await quiz(message, coorditem.Question, coorditem.Answer, coorditem.Attachment, coorditem.Difficulty, "Coordinator", coorditem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -115,7 +126,9 @@ module.exports = {
 
                     let priestessitem = priestessfile[Math.floor(Math.random() * priestessfile.length)];
 
-                    quiz(message, priestessitem.Question, priestessitem.Answer, priestessitem.Attachment, priestessitem.Difficulty, "Priestess");
+                    await quiz(message, priestessitem.Question, priestessitem.Answer, priestessitem.Attachment, priestessitem.Difficulty, "Priestess", priestessitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -129,7 +142,9 @@ module.exports = {
 
                     let mecitem = mecfile[Math.floor(Math.random() * mecfile.length)];
 
-                    quiz(message, mecitem.Question, mecitem.Answer, mecitem.Attachment, mecitem.Difficulty, "Mechanic");
+                    await quiz(message, mecitem.Question, mecitem.Answer, mecitem.Attachment, mecitem.Difficulty, "Mechanic", mecitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -143,7 +158,9 @@ module.exports = {
 
                     let mindsitem = mindsfile[Math.floor(Math.random() * mindsfile.length)];
 
-                    quiz(message, mindsitem.Question, mindsitem.Answer, mindsitem.Attachment, mindsitem.Difficulty, "Mindseye");
+                    await quiz(message, mindsitem.Question, mindsitem.Answer, mindsitem.Attachment, mindsitem.Difficulty, "Mindseye", mindsitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -157,7 +174,9 @@ module.exports = {
 
                     let perfumeritem = perfumerfile[Math.floor(Math.random() * perfumerfile.length)];
 
-                    quiz(message, perfumeritem.Question, perfumeritem.Answer, perfumeritem.Attachment, perfumeritem.Difficulty, "Perfumer");
+                    await quiz(message, perfumeritem.Question, perfumeritem.Answer, perfumeritem.Attachment, perfumeritem.Difficulty, "Perfumer", perfumeritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -171,7 +190,9 @@ module.exports = {
 
                     let danceritem = dancerfile[Math.floor(Math.random() * dancerfile.length)];
 
-                    quiz(message, danceritem.Question, danceritem.Answer, danceritem.Attachment, danceritem.Difficulty, "Female dancer");
+                    await quiz(message, danceritem.Question, danceritem.Answer, danceritem.Attachment, danceritem.Difficulty, "Female dancer", danceritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -185,7 +206,9 @@ module.exports = {
 
                     let seeritem = seerfile[Math.floor(Math.random() * seerfile.length)];
 
-                    quiz(message, seeritem.Question, seeritem.Answer, seeritem.Attachment, seeritem.Difficulty, "Seer");
+                    await quiz(message, seeritem.Question, seeritem.Answer, seeritem.Attachment, seeritem.Difficulty, "Seer", seeritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -199,7 +222,9 @@ module.exports = {
 
                     let embalmeritem = embalmerfile[Math.floor(Math.random() * embalmerfile.length)];
 
-                    quiz(message, embalmeritem.Question, embalmeritem.Answer, embalmeritem.Attachment, embalmeritem.Difficulty, "Embalmer");
+                    await quiz(message, embalmeritem.Question, embalmeritem.Answer, embalmeritem.Attachment, embalmeritem.Difficulty, "Embalmer", embalmeritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -213,7 +238,9 @@ module.exports = {
 
                     let acroitem = acrofile[Math.floor(Math.random() * acrofile.length)];
 
-                    quiz(message, acroitem.Question, acroitem.Answer, acroitem.Attachment, acroitem.Difficulty, "Acrobat");
+                    await quiz(message, acroitem.Question, acroitem.Answer, acroitem.Attachment, acroitem.Difficulty, "Acrobat", acroitem.Artist, acroitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -227,7 +254,9 @@ module.exports = {
 
                     let officeritem = officerfile[Math.floor(Math.random() * officerfile.length)];
 
-                    quiz(message, officeritem.Question, officeritem.Answer, officeritem.Attachment, officeritem.Difficulty, "1st Offica :v");
+                    await quiz(message, officeritem.Question, officeritem.Answer, officeritem.Attachment, officeritem.Difficulty, "1st Offica :v", officeritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -241,7 +270,9 @@ module.exports = {
 
                     let baritem = barfile[Math.floor(Math.random() * barfile.length)];
 
-                    quiz(message, baritem.Question, baritem.Answer, baritem.Attachment, baritem.Difficulty, "Barmaid");
+                    await quiz(message, baritem.Question, baritem.Answer, baritem.Attachment, baritem.Difficulty, "Barmaid".baritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -255,7 +286,9 @@ module.exports = {
 
                     let magicianitem = magicianfile[Math.floor(Math.random() * magicianfile.length)];
 
-                    quiz(message, magicianitem.Question, magicianitem.Answer, magicianitem.Attachment, magicianitem.Difficulty, "Magician");
+                    await quiz(message, magicianitem.Question, magicianitem.Answer, magicianitem.Attachment, magicianitem.Difficulty, "Magician", magicianitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -269,7 +302,9 @@ module.exports = {
 
                     let exploreritem = explorerfile[Math.floor(Math.random() * explorerfile.length)];
 
-                    quiz(message, exploreritem.Question, exploreritem.Answer, exploreritem.Attachment, exploreritem.Difficulty, "Explorer");
+                    await quiz(message, exploreritem.Question, exploreritem.Answer, exploreritem.Attachment, exploreritem.Difficulty, "Explorer", exploreritem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -283,7 +318,9 @@ module.exports = {
 
                     let forwarditem = forwardfile[Math.floor(Math.random() * forwardfile.length)];
 
-                    quiz(message, forwarditem.Question, forwarditem.Answer, forwarditem.Attachment, forwarditem.Difficulty, "Forward");
+                    await quiz(message, forwarditem.Question, forwarditem.Answer, forwarditem.Attachment, forwarditem.Difficulty, "Forward", forwarditem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -297,7 +334,9 @@ module.exports = {
 
                     let prositem = prosfile[Math.floor(Math.random() * prosfile.length)];
 
-                    quiz(message, prositem.Question, prositem.Answer, prositem.Attachment, prositem.Difficulty, "Prospector");
+                    await quiz(message, prositem.Question, prositem.Answer, prositem.Attachment, prositem.Difficulty, "Prospector", prositem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -311,7 +350,9 @@ module.exports = {
 
                     let enchantressitem = enchantressfile[Math.floor(Math.random() * enchantressfile.length)];
 
-                    quiz(message, enchantressitem.Question, enchantressitem.Answer, enchantressitem.Attachment, enchantressitem.Difficulty, "Enchantress");
+                    await quiz(message, enchantressitem.Question, enchantressitem.Answer, enchantressitem.Attachment, enchantressitem.Difficulty, "Enchantress", enchantressitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -325,7 +366,9 @@ module.exports = {
 
                     let Wildingitem = Wildingfile[Math.floor(Math.random() * Wildingfile.length)];
 
-                    quiz(message, Wildingitem.Question, Wildingitem.Answer, Wildingitem.Attachment, Wildingitem.Difficulty, "Wilding");
+                    await quiz(message, Wildingitem.Question, Wildingitem.Answer, Wildingitem.Attachment, Wildingitem.Difficulty, "Wilding", Wildingitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -339,7 +382,9 @@ module.exports = {
 
                     let Postmanitem = Postmanfile[Math.floor(Math.random() * Postmanfile.length)];
 
-                    quiz(message, Postmanitem.Question, Postmanitem.Answer, Postmanitem.Attachment, Postmanitem.Difficulty, "Postman");
+                    await quiz(message, Postmanitem.Question, Postmanitem.Answer, Postmanitem.Attachment, Postmanitem.Difficulty, "Postman", Postmanitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -353,7 +398,9 @@ module.exports = {
 
                     let graveitem = gravefile[Math.floor(Math.random() * gravefile.length)];
 
-                    quiz(message, graveitem.Question, graveitem.Answer, graveitem.Attachment, graveitem.Difficulty, "Grave keepa");
+                    await quiz(message, graveitem.Question, graveitem.Answer, graveitem.Attachment, graveitem.Difficulty, "Grave keepa", graveitem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -367,7 +414,9 @@ module.exports = {
 
                     let prisonerItem = prisonerFile[Math.floor(Math.random() * prisonerFile.length)];
 
-                    quiz(message, prisonerItem.Question, prisonerItem.Answer, prisonerItem.Attachment, prisonerItem.Difficulty, "Prisoner");
+                    await quiz(message, prisonerItem.Question, prisonerItem.Answer, prisonerItem.Attachment, prisonerItem.Difficulty, "Prisoner", prisonerItem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
                 }
 
             }
@@ -381,16 +430,17 @@ module.exports = {
 
                     let EntomoItem = EntomoFile[Math.floor(Math.random() * EntomoFile.length)];
 
-                    quiz(message, EntomoItem.Question, EntomoItem.Answer, EntomoItem.Attachment, EntomoItem.Difficulty, "The Entomologist");
-                }
 
+                    await quiz(message, EntomoItem.Question, EntomoItem.Answer, EntomoItem.Attachment, EntomoItem.Difficulty, "The Entomologist", EntomoItem.Artist);
+                    await addCooldown(message, 60 * 1000, "test");
+
+                }
+            } else {
+                message.channel.send(`Make sure you spelled the name of the **survivor** correctly, **${message.author.username}**!`);
             }
 
-            await addCooldown(message, 60 * 1000, "quick");
-            //adding the cooldown at the end so the !args doesn't reach this
-
         } else {
-            coolEmbed(message, "The cooldown is still on...", "Please wait **REMAINING** before you can play a match again...", cooldownCheck.timeRemaining, ["s"]);
+            coolEmbed(message, "The cooldown is still on...", "Please wait **REMAINING** before you can play a match again...", cooldownCheck.timeRemaining, ["m", "s"]);
         }
 
     }

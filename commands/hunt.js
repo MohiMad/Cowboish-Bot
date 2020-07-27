@@ -12,7 +12,7 @@ module.exports = {
 
         if (!cooldownCheck) {
 
-            if (!LP) return await newLP(message);
+            if (!LP) return newLP(message);
 
             if (!args[1]) return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**HellEmber**");
 
@@ -22,7 +22,9 @@ module.exports = {
 
                 let leoItem = leoFile[Math.floor(Math.random() * leoFile.length)];
 
-                quiz(message, leoItem.Question, leoItem.Answer, leoItem.Attachment, leoItem.Difficulty, "Hell Ember");
+                await quiz(message, leoItem.Question, leoItem.Answer, leoItem.Attachment, leoItem.Difficulty, "Hell Ember", leoItem.Artist);
+                await addCooldown(message, 60000, "hunt");
+
             }
             else if (["axeboy", "axeboi", "robbie"].includes(args[1].toLowerCase())) {
                 if (LP.Hunters.AxeBoi === false) {
@@ -33,7 +35,9 @@ module.exports = {
 
                     let axeBoyItem = axeBoyFile[Math.floor(Math.random() * axeBoyFile.length)];
 
-                    quiz(message, axeBoyItem.Question, axeBoyItem.Answer, axeBoyItem.Attachment, axeBoyItem.Difficulty, "Axe booaaai");
+                    await quiz(message, axeBoyItem.Question, axeBoyItem.Answer, axeBoyItem.Attachment, axeBoyItem.Difficulty, "Axe booaaai", axeBoyItem.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["bane", "gamekeeper", "gk"].includes(args[1].toLowerCase())) {
@@ -45,7 +49,9 @@ module.exports = {
 
                     let GK_Item = GK_File[Math.floor(Math.random() * GK_File.length)];
 
-                    quiz(message, GK_Item.Question, GK_Item.Answer, GK_Item.Attachment, GK_Item.Difficulty, "Game keepa");
+                    await quiz(message, GK_Item.Question, GK_Item.Answer, GK_Item.Attachment, GK_Item.Difficulty, "Game keepa", GK_Item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["bloodyqueen", "bq", "mary", "queen"].includes(args[1].toLowerCase())) {
@@ -57,7 +63,9 @@ module.exports = {
 
                     let BQ_Item = BQ_File[Math.floor(Math.random() * BQ_File.length)];
 
-                    quiz(message, BQ_Item.Question, BQ_Item.Answer, BQ_Item.Attachment, BQ_Item.Difficulty, "Queen Mary");
+                    await quiz(message, BQ_Item.Question, BQ_Item.Answer, BQ_Item.Attachment, BQ_Item.Difficulty, "Queen Mary", BQ_Item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["bonbon", "no.26", "pingu", "guard", "guard26"].includes(args[1].toLowerCase())) {
@@ -69,7 +77,9 @@ module.exports = {
 
                     let BonBon_Item = BonBon_File[Math.floor(Math.random() * BonBon_File.length)];
 
-                    quiz(message, BonBon_Item.Question, BonBon_Item.Answer, BonBon_Item.Attachment, BonBon_Item.Difficulty, "Pinguuuu :D");
+                    await quiz(message, BonBon_Item.Question, BonBon_Item.Answer, BonBon_Item.Attachment, BonBon_Item.Difficulty, "Pinguuuu :D", BonBon_Item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["clown", "smileyface", "joker"].includes(args[1].toLowerCase())) {
@@ -81,7 +91,9 @@ module.exports = {
 
                     let clown_Item = clown_File[Math.floor(Math.random() * clown_File.length)];
 
-                    quiz(message, clown_Item.Question, clown_Item.Answer, clown_Item.Attachment, clown_Item.Difficulty, "Dish dashy");
+                    await quiz(message, clown_Item.Question, clown_Item.Answer, clown_Item.Attachment, clown_Item.Difficulty, "Dish dashy boi", clown_Item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["dw", "dreamwitch", "yhidra"].includes(args[1].toLowerCase())) {
@@ -93,7 +105,9 @@ module.exports = {
 
                     let DW_Item = DW_File[Math.floor(Math.random() * DW_File.length)];
 
-                    quiz(message, DW_Item.Question, DW_Item.Answer, DW_Item.Attachment, DW_Item.Difficulty, "DW aka dreambich :/");
+                    await quiz(message, DW_Item.Question, DW_Item.Answer, DW_Item.Attachment, DW_Item.Difficulty, "DW aka dreambich :/", DW_Item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["feaster", "hastur"].includes(args[1].toLowerCase())) {
@@ -105,7 +119,9 @@ module.exports = {
 
                     let feaster_Item = feaster_File[Math.floor(Math.random() * feaster_File.length)];
 
-                    quiz(message, feaster_Item.Question, feaster_Item.Answer, feaster_Item.Attachment, feaster_Item.Difficulty, "Lazy calamari king");
+                    await quiz(message, feaster_Item.Question, feaster_Item.Answer, feaster_Item.Attachment, feaster_Item.Difficulty, "Lazy calamari king", feaster_Item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["geisha", "gaysha", "michiko"].includes(args[1].toLowerCase())) {
@@ -117,7 +133,9 @@ module.exports = {
 
                     let geisha_item = geisha_File[Math.floor(Math.random() * geisha_File.length)];
 
-                    quiz(message, geisha_item.Question, geisha_item.Answer, geisha_item.Attachment, geisha_item.Difficulty, "Gaysha");
+                    await quiz(message, geisha_item.Question, geisha_item.Answer, geisha_item.Attachment, geisha_item.Difficulty, "Gaysha", geisha_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["lizard", "luchino", "lizardo", "evilreptilian", "reptilian"].includes(args[1].toLowerCase())) {
@@ -129,7 +147,9 @@ module.exports = {
 
                     let lizard_item = lizard_File[Math.floor(Math.random() * lizard_File.length)];
 
-                    quiz(message, lizard_item.Question, lizard_item.Answer, lizard_item.Attachment, lizard_item.Difficulty, "Lizardo jumpy man");
+                    await quiz(message, lizard_item.Question, lizard_item.Answer, lizard_item.Attachment, lizard_item.Difficulty, "Lizardo jumpy man", lizard_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["madeyes", "trump", "madeye", "burke"].includes(args[1].toLowerCase())) {
@@ -141,7 +161,9 @@ module.exports = {
 
                     let madeyes_item = madeyes_File[Math.floor(Math.random() * madeyes_File.length)];
 
-                    quiz(message, madeyes_item.Question, madeyes_item.Answer, madeyes_item.Attachment, madeyes_item.Difficulty, "Trump's right hand, aka Madeyes");
+                    await quiz(message, madeyes_item.Question, madeyes_item.Answer, madeyes_item.Attachment, madeyes_item.Difficulty, "Trump's right hand, aka Madeyes", madeyes_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["photographer", "photoboi", "joseph"].includes(args[1].toLowerCase())) {
@@ -153,7 +175,9 @@ module.exports = {
 
                     let PH_item = PH_File[Math.floor(Math.random() * PH_File.length)];
 
-                    quiz(message, PH_item.Question, PH_item.Answer, PH_item.Attachment, PH_item.Difficulty, "Lazy photoboaai");
+                    await quiz(message, PH_item.Question, PH_item.Answer, PH_item.Attachment, PH_item.Difficulty, "Lazy photoboaai", PH_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["ripper", "rippa", "jack"].includes(args[1].toLowerCase())) {
@@ -165,7 +189,9 @@ module.exports = {
 
                     let ripper_item = ripper_File[Math.floor(Math.random() * ripper_File.length)];
 
-                    quiz(message, ripper_item.Question, ripper_item.Answer, ripper_item.Attachment, ripper_item.Difficulty, "Rippa");
+                    await quiz(message, ripper_item.Question, ripper_item.Answer, ripper_item.Attachment, ripper_item.Difficulty, "Rippa", ripper_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["sister", "nun", "disciple", "ann"].includes(args[1].toLowerCase())) {
@@ -177,7 +203,9 @@ module.exports = {
 
                     let sister_item = sister_File[Math.floor(Math.random() * sister_File.length)];
 
-                    quiz(message, sister_item.Question, sister_item.Answer, sister_item.Attachment, sister_item.Difficulty, "Da nun");
+                    await quiz(message, sister_item.Question, sister_item.Answer, sister_item.Attachment, sister_item.Difficulty, "Da nun", sister_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["sw", "spider", "soulweaver", "violetta"].includes(args[1].toLowerCase())) {
@@ -189,7 +217,9 @@ module.exports = {
 
                     let SW_item = SW_File[Math.floor(Math.random() * SW_File.length)];
 
-                    quiz(message, SW_item.Question, SW_item.Answer, SW_item.Attachment, SW_item.Difficulty, "Nascar");
+                    await quiz(message, SW_item.Question, SW_item.Answer, SW_item.Attachment, SW_item.Difficulty, "Nascar", SW_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             }
             else if (["wu", "wuchang", "wuchangus", "blackandwhite"].includes(args[1].toLowerCase())) {
@@ -201,7 +231,9 @@ module.exports = {
 
                     let WU_item = WU_File[Math.floor(Math.random() * WU_File.length)];
 
-                    quiz(message, WU_item.Question, WU_item.Answer, WU_item.Attachment, WU_item.Difficulty, "Wuu chaguussss");
+                    await quiz(message, WU_item.Question, WU_item.Answer, WU_item.Attachment, WU_item.Difficulty, "Wuu chaguussss", WU_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
             } else if (["violinist", "musician", "antonio"].includes(args[1].toLowerCase())) {
                 if (LP.Hunters.NewHunta === false) {
@@ -212,10 +244,13 @@ module.exports = {
 
                     let vio_item = vio_File[Math.floor(Math.random() * vio_File.length)];
 
-                    quiz(message, vio_item.Question, vio_item.Answer, vio_item.Attachment, vio_item.Difficulty, "Violinist");
+                    await quiz(message, vio_item.Question, vio_item.Answer, vio_item.Attachment, vio_item.Difficulty, "Violinist", vio_item.Artist);
+                    await addCooldown(message, 60000, "hunt");
+
                 }
+            } else {
+                message.channel.send(`Make sure you spelled the name of the **hunter** correctly, **${message.author.username}**!`);
             }
-            addCooldown(message, 60000, "hunt");
 
         } else {
             coolEmbed(message, "You can't hunt just yet :(", "Please wait **REMAINING** before you can use the `hunt` command again...", cooldownCheck.timeRemaining, ["m", "s"]);

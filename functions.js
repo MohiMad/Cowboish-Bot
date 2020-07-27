@@ -283,7 +283,7 @@ module.exports = {
 		return channel;
 	},
 
-	quiz: async (message, question, answer, Thumb, Difficulty, char) => {
+	quiz: async (message, question, answer, Thumb, Difficulty, char, artist) => {
 
 		const filter = m => m.author.id === message.author.id;
 
@@ -305,18 +305,20 @@ module.exports = {
 			reward = dice + " <:dice:655384578499936257>";
 		}
 
+		if (artist === null || artist === undefined) artist = "Cowboish Bot"
+
 		const quizEmbed = new RichEmbed()
 			.setTitle("Answer the question below to get a dice <:dice:655384578499936257>")
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setTimestamp()
 			.setDescription(stripIndents`
 			**Question about** : ${char}
 			**Difficulty** : ${Difficulty}
 			**Time** : 60 Seconds
 			**Reward** : ${reward}` + "\n\n" + question)
 			.setImage(Thumb)
-			.setFooter("Cowboish bot", "https://images-ext-2.discordapp.net/external/dpkUSBrSk9f20kq2Aw8B521pM6BcFhJdLBsYokj1ry0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/632291800585076761/863aeefefbb365f8ddc498a1c8fecb5d.png?width=564&height=564")
+			.setFooter(artist, message.author.displayAvatarURL)
 			.setColor("RANDOM");
+
 
 		message.channel.send(quizEmbed);
 

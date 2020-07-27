@@ -236,40 +236,51 @@ module.exports = {
                         s9Embed.setAuthor(`🖤 You get a portrait, ${author} 🖤`, "https://i.imgur.com/0SglSpn.png");
                         s9Embed.setFooter("Cheer up! At least they have an actual usage now :'D");
 
-                        if (LP.Opened.includes(item)) {
+
+                        let ess1_portrait_message = "0";
+
+                        let oldPortraitItem = "0";
+
+                        if (item === "s12-1-13") {
+                            ess1_portrait_message = "Black and White Explorer";
+                            oldPortraitItem = "ess1-14";
+
+                        } else if (item === "s12-1-14") {
+                            ess1_portrait_message = "Black and White Magician";
+                            oldPortraitItem = "ess1-15";
+
+                        } else if (item === "s12-1-15") {
+                            ess1_portrait_message = "Black and White Gardener";
+                            oldPortraitItem = "ess1-16";
+
+                        } else if (item === "s12-1-47") {
+                            ess1_portrait_message = "Colorful Memory GameKeeper";
+                            oldPortraitItem = "ess1-48";
+
+                        } else if (item === "s12-1-48") {
+                            ess1_portrait_message = "Colorful Memory Coordinator";
+                            oldPortraitItem = "ess1-49";
+
+                        } else if (item === "s12-1-49") {
+                            oldPortraitItem = "ess1-50";
+
+                            ess1_portrait_message = "Colorful Memory Geisha";
+                        }
+                        else if (item === "s12-1-50") {
+                            oldPortraitItem = "ess1-51";
+
+                            ess1_portrait_message = "Colorful Memory Lawyer";
+                        }
+                        if (LP.Opened.includes(oldPortraitItem)) {
                             s9Embed.setDescription(`You have this portrait already! Here, take these **36** ${frags} instead!`);
                             LP.frags = LP.frags + 36;
                         }
                         else {
-                            let ess1_portrait_message = "0";
-
-                            if (item === "s12-1-13") {
-                                ess1_portrait_message = "Black and White Explorer";
-
-                            } else if (item === "s12-1-14") {
-                                ess1_portrait_message = "Black and White Magician";
-
-                            } else if (item === "s12-1-15") {
-                                ess1_portrait_message = "Black and White Gardener";
-
-                            } else if (item === "s12-1-47") {
-                                ess1_portrait_message = "Colorful Memory GameKeeper";
-
-                            } else if (item === "s12-1-48") {
-                                ess1_portrait_message = "Colorful Memory Coordinator";
-
-                            } else if (item === "s12-1-49") {
-                                ess1_portrait_message = "Colorful Memory Geisha";
-                            }
-                            else if (item === "s12-1-50") {
-                                ess1_portrait_message = "Colorful Memory Lawyer";
-                            }
-
                             s9Embed.setDescription("Yaaay! You got a new portrait, you can equip it by doing\n`" + prefix + "equip portrait " + ess1_portrait_message + "`\nBy equipping the portrait, it will be visable in the \n`" + prefix + "logicpath` command");
 
                             LP.D = LP.D + 1;
 
-                            LP.Opened = [...LP.Opened, item];
+                            LP.Opened = [...LP.Opened, oldPortraitItem];
                         }
 
                     }
@@ -567,9 +578,9 @@ module.exports = {
                     itemCheck("[Emote] Wu Chang - Threaten", LP, "s12-1-11");
                     itemCheck("[Standby Motion] Axe boy - Demonstrate", LP, "s12-1-12");
 
-                    itemCheck("[Portrait] Black-and-White - Explorer", LP, "s12-1-13");
-                    itemCheck("[Portrait] Black-and-White - Magician", LP, "s12-1-14");
-                    itemCheck("[Portrait] Black-and-White - Gardener", LP, "s12-1-15");
+                    itemCheck("[Portrait] Black-and-White - Explorer", LP, "ess1-14");
+                    itemCheck("[Portrait] Black-and-White - Magician", LP, "ess1-15");
+                    itemCheck("[Portrait] Black-and-White - Gardener", LP, "ess1-16");
 
                     itemCheck("[Emote] Magician - Cheer", LP, "s12-1-16");
                     itemCheck("[Emote] Explorer - Cheer", LP, "s12-1-17");
@@ -606,10 +617,10 @@ module.exports = {
                     itemCheck("[Graffiti] Dancer - Gray Shadow", LP, "s12-1-44");
                     itemCheck("[Graffiti] Lucky Guy - Gray Shadow", LP, "s12-1-45");
                     itemCheck("[Graffiti] Priestess - Grayed", LP, "s12-1-46");
-                    itemCheck("[Portrait] Colorful Memory - GameKeeper", LP, "s12-1-47");
-                    itemCheck("[Portrait] Colorful Memory - Coordinator", LP, "s12-1-48");
-                    itemCheck("[Portrait] Colorful Memory - Geisha", LP, "s12-1-49");
-                    itemCheck("[Portrait] Colorful Memory - Lawyer", LP, "s12-1-50");
+                    itemCheck("[Portrait] Colorful Memory - GameKeeper", LP, "ess1-48");
+                    itemCheck("[Portrait] Colorful Memory - Coordinator", LP, "ess1-49");
+                    itemCheck("[Portrait] Colorful Memory - Geisha", LP, "ess1-50");
+                    itemCheck("[Portrait] Colorful Memory - Lawyer", LP, "ess1-51");
 
                     embed.setDescription(`${e}`)
                     embed.setAuthor(`s12-1 items claimed!`, "https://i.imgur.com/0SglSpn.png");

@@ -16,5 +16,12 @@
 		"Answer": ["portal", "Portal"],
 		"Difficulty": "Eazy?",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
-    }
+	},
+	{
+		"Question": "**Fill in the missing field:**\n`Priestess is a  _ _ _ _ _ _ _ _ _`",
+		"Answer": ["cockroach"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/4TP1TUL.png",
+		"Artist": "@rosashi - Deviant Art"
+	}
 ]
