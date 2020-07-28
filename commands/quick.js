@@ -270,7 +270,7 @@ module.exports = {
 
                     let baritem = barfile[Math.floor(Math.random() * barfile.length)];
 
-                    await quiz(message, baritem.Question, baritem.Answer, baritem.Attachment, baritem.Difficulty, "Barmaid".baritem.Artist);
+                    await quiz(message, baritem.Question, baritem.Answer, baritem.Attachment, baritem.Difficulty, "Barmaid", baritem.Artist);
                     await addCooldown(message, 60 * 1000, "test");
 
                 }
