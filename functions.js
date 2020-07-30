@@ -322,7 +322,7 @@ module.exports = {
 
 		message.channel.send(quizEmbed);
 
-		message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(collected => {
+		message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(async collected => {
 
 			if (answer.includes(collected.first().content.toLowerCase())) {
 
