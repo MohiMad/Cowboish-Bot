@@ -131,6 +131,8 @@ module.exports = {
         async function buyPortrait(PortraitName, path, price, link) {
             if (LP.frags < price) return message.channel.send(`**${message.author.username}**, you don't haven't enough fragments... You need **${price - LP.frags}**${frags} more!`);
 
+            if(LP.Opened.includes(path)) return message.channel.send(`**${message.author.username}** You have bought this portrait already... Why buy it again? ;-;`);
+            
             const portraitEmbed = new RichEmbed()
                 .setAuthor(`${message.author.username} bought ${PortraitName}`, message.author.avatarURL)
                 .setTimestamp()
