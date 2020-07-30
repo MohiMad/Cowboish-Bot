@@ -3,31 +3,40 @@
 		"Question": "**Question:**\nWhat does the wilding ride on?",
 		"Answer": ["boar", "Boar", "a boar", "A boar"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674325232927899651/Z.png"
+		"Attachment": "https://i.imgur.com/9K0GBJw.png"
     },
     {
 		"Question": "**Question:**\nWhat's the Wilding's real name?",
 		"Answer": ["Murro", "murro"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674325232927899651/Z.png"
+		"Attachment": "https://i.imgur.com/z3OwgDz.png"
     },
     {
 		"Question": "**Unscramble the word:**\nThe word `oarB` is scrambled, unscramble it to win!",
 		"Answer": ["boar", "Boar", "a boar", "A boar"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674325232927899651/Z.png"
+		"Attachment": "https://i.imgur.com/jmaDEFE.png",
+		"Artist": "vinduster on tumgir"
 	},
 	{
 		"Question": "**Question:**\nHow long does the boar's disturb listen/Tunnitus ability last for?\n**(Please answer in seconds)**",
 		"Answer": ["10", "ten", "10s", "10 seconds", "ten seconds"],
 		"Difficulty": "Hard",
-		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2zeZV4rlxLdseSCW-Q4s5_ucuBzU0nkak_evelzeZrfN7AKk&s"
+		"Attachment": "https://media.giphy.com/media/MDxDuqeZh3nIYwwdBx/giphy.gif"
 	},
 	{
 		"Question": "**Fill in the missing word:**\n`Wildling movement speed is _ _ _ _ _ than other survivors`",
 		"Answer": ["slower", "lower"],
 		"Difficulty": "Medium rare",
-		"Attachment": "https://i.imgur.com/P0JvNUP.png"
+		"Attachment": "https://i.imgur.com/P0JvNUP.png",
+		"Artist": "@kadibetu on Twitter"
+	},
+	{
+		"Question": "**Find the word that doesn't belong to the Wildling.:**\n(`Apple`, `Electronics`, `Boar`, `Nature`)",
+		"Answer": ["electronics"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.redd.it/qlua1c1wdqi41.jpg",
+		"Artist": "u/cryVanilla on Reddit"
 	}
 	
 ]

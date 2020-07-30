@@ -1,27 +1,41 @@
 [
 	{
 		"Question": "**Question:**\nhow long does it take for the Prospector to generate a new magnet?",
-		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Answer": ["60", "60 seconds", "sixty seconds", "sixty"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165552889069568/9k.png"
-    },
-    {
-		"Question": "**Retype the sentence:**\nType `The prospector is attractive!`",
-		"Answer": ["The prospector is attractive!", "the prospector is attractive!", "prospector", "attractive"],
-		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165552889069568/9k.png"
+		"Attachment": "https://i.imgur.com/1Y87SVD.png"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
 		"Answer": ["Mr.mole", "mole", "mr.mole", "Mr.Mole", "mr mole"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674165351449362432/ZAqEMnx6KLJHrgRPLzpoT5P7rMWV7IRwnFAAAAAElFTkSuQmCC.png"
+		"Attachment": "https://i.imgur.com/dCXp25e.png"
 	},
 	{
 		"Question": "**Retype the sentence:**\nTime to deliver donuts to the hunters",
 		"Answer": ["time to deliver donuts to the hunters"],
 		"Difficulty": "Medium",
-		"Attachment": "https://66.media.tumblr.com/dba716365e1641e590bc8bdef3835fc9/afb449666935ae06-10/s1280x1920/00ea0606c6fac10e94c37fd7c7b204f46ad11a02.png"
+		"Attachment": "https://i.imgur.com/07u5l7i.png"
+	},
+	{
+		"Question": "**Question:**\nWhat did Norton use to kill the miners?",
+		"Answer": ["dynamites", "dynamite"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/EIg-V2IUwAAl-MQ?format=jpg&name=large",
+		"Artist": "@irrttg on Twitter"
+	},
+	{
+		"Question": "**Question:**\nCan The Prospector's magnets attract/repel survivors?",
+		"Answer": ["yes", " yep", " yeah", "yh", "yee", "y"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/EI1giVdUUAExs1F?format=jpg&name=large",
+		"Artist": "@415him4_ on Twitter"
+	},
+	{
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["patchwork", "patch work"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/kjPcXFM.png"
 	}
 
 	

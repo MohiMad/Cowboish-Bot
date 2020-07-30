@@ -3,24 +3,40 @@
 		"Question": "**Question:**\nHow many elbowpads does Naib spawn with?",
 		"Answer": ["4", "four", "Four"],
 		"Difficulty": "Ez",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673544182362538014/2Q.png"
+		"Attachment": "https://i.imgur.com/J4kc823.png"
     },
     {
 		"Question": "**Complete the sentence:**\nAll Merc mains need to have _ _ _ _ turner in their persona build ",
 		"Answer": ["tide turner", "Tide", "tide"],
 		"Difficulty": "Lmao medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673544799625805834/9k.png"
+		"Attachment": "https://i.imgur.com/pyFqim1.png"
     },
     {
 		"Question": "**Question:**\nIs Naib bald?",
 		"Answer": ["Yes", "no", "yes", "yas", "No"],
 		"Difficulty": "Hard lol",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673545433087344670/byc1xfrextz21.png?width=491&height=450"
+		"Attachment": "https://i.imgur.com/gQJY5Dn.png",
+		"Artist": "u/OddAcacia - Reddit"
 	},
 	{
 		"Question": "**Question:**\nWhat is mercenary favorite melee weapon? (Mentioned in his deduction >:3)",
 		"Answer": ["machetes", "machete"],
 		"Difficulty": "Impossible but possible",
-		"Attachment": "https://cdnb.artstation.com/p/assets/images/images/020/704/491/large/pk-aukusti-son-marked.jpg?1568834883"
+		"Attachment": "https://cdnb.artstation.com/p/assets/images/images/020/704/491/large/pk-aukusti-son-marked.jpg?1568834883",
+		"Artist": "PK Aukusti - Artstation"
+	},
+	{
+		"Question": "**Question:**\nHow many elbow pads does Mercenary have in Black Jack mode?",
+		"Answer": ["1", "1 elbow pad", "one"],
+		"Difficulty": "Hehe depends on how much you play bj",
+		"Attachment": "https://pbs.twimg.com/media/Ed6b08rWkAAnnri?format=png&name=large",
+		"Artist": "@LeunKon on Twitter"
+	},
+	{
+		"Question": "**Question:**\nDoes an injured Mercenary get down immediately in the hunter hits with detention?",
+		"Answer": ["yep", "yes", "yeah", "yea", "yh", "y"],
+		"Difficulty": "Hmm medium?",
+		"Attachment": "https://pbs.twimg.com/media/EdF3tn3XkAUO1sP?format=jpg&name=medium",
+		"Artist": "@Nashuuki on Twitter"
 	}
 ]

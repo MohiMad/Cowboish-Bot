@@ -30,13 +30,13 @@ module.exports = {
                     let num = collected.first();
 
                     if (num.content === '1') {
-                        message.channel.send(`Succesfully set **${message.author.username}**'s region to ` + "`NA/EU`");
+                        message.channel.send(`Successfully set **${message.author.username}**'s region to ` + "`NA/EU`");
 
                         LP.region = "NA/EU";
                         LP.save().catch(e => console.log(e));
                     }
                     else if (num.content === "2") {
-                        message.channel.send(`Succesfully set **${message.author.username}**'s region to ` + "`Asia`");
+                        message.channel.send(`Successfully set **${message.author.username}**'s region to ` + "`Asia`");
 
                         LP.region = "Asia";
                         LP.save().catch(e => console.log(e));
@@ -54,14 +54,14 @@ module.exports = {
 
             }
             else if (["na/eu", "na", "eu"].includes(args[2].toLowerCase())) {
-                message.channel.send(`Succesfully set **${message.author.username}**'s region to ` + "`NA/EU`");
+                message.channel.send(`Successfully set **${message.author.username}**'s region to ` + "`NA/EU`");
 
                 LP.region = "NA/EU";
                 LP.save().catch(e => console.log(e));
 
             }
             else if (["asia", "china"].includes(args[2].toLowerCase())) {
-                message.channel.send(`Succesfully set **${message.author.username}**'s region to ` + "`Asia`");
+                message.channel.send(`Successfully set **${message.author.username}**'s region to ` + "`Asia`");
 
                 LP.region = "Asia";
                 LP.save().catch(e => console.log(e));
@@ -101,21 +101,21 @@ module.exports = {
                 LP.ID = args[2];
                 LP.save().catch(err => console.log(err));
 
-                message.channel.send("Succesfully set your ID to **" + args[2] + "**");
+                message.channel.send("Successfully set your ID to **" + args[2] + "**");
 
             }
             else if (args[2].length === 7) {
                 LP.ID = args[2];
                 LP.save().catch(err => console.log(err));
 
-                message.channel.send("Succesfully set your ID to **" + args[2] + "**");
+                message.channel.send("Successfully set your ID to **" + args[2] + "**");
 
             }
             else if (args[2].length === 8) {
                 LP.ID = args[2];
                 LP.save().catch(err => console.log(err));
 
-                message.channel.send("Succesfully set your ID to **" + args[2] + "**");
+                message.channel.send("Successfully set your ID to **" + args[2] + "**");
 
             }
             else {
@@ -140,7 +140,7 @@ module.exports = {
 
                 LP.save().catch(e => console.log(e));
 
-                message.reply(`Succesfully set your biography to: ${args.slice(2).join(" ")}`);
+                message.reply(`Successfully set your biography to: ${args.slice(2).join(" ")}`);
 
             }
 

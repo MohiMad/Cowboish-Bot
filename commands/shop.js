@@ -1,7 +1,7 @@
 const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
-const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, clues, frags, ess1, ess2, ess3, insp } = require("../emojis.json");
+const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10, clues, frags, ess1, ess2, ess3, insp } = require("../emojis.json");
 
 const { RichEmbed } = require('discord.js');
 const { newLP } = require("../functions.js");
@@ -342,7 +342,7 @@ module.exports = {
 
             }
 
-            description = description + `${frame7} ${frame8} ${frame9}`
+            description = description + `${frame7} ${frame8} ${frame9} ${frame10}`
 
             let equipped;
 
@@ -373,6 +373,9 @@ module.exports = {
             else if (LP.frames.equipped === "frame9") {
                 equipped = frame9;
             }
+            else if (LP.frames.equipped === "frame10") {
+                equipped = frame10;
+            }
             else {
                 equipped = "None!";
             }
@@ -381,7 +384,7 @@ module.exports = {
             let framEmbed = new RichEmbed()
                 .setAuthor("Portrait-frame shop!", bot.user.displayAvatarURL)
                 .setColor("0xeb34c9")
-                .setDescription("To buy the frame of your choice, do `" + prefix + "buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __8888__<:frags:655840344725913600> - ID: `frame5`\n\n<:frame6:694820135306919977> ➜ Price __888__<:frags:655840344725913600> - ID: `frame6`\n\n**Free to use frames:**\n<:frame7:697804971227349103> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame7`\n<:frame8:706555854513766490> | **FREE!** You can equip it directly by doing `" + prefix + "equip frame8`\n" + frame9 + " | **FREE!** You can equip it directly by doing `" + prefix + "equip frame9`")
+                .setDescription("To buy the frame of your choice, do `" + prefix + "buy <frameID>`\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\n**Frames available in shop**:\n<:frame1:693410346005954580> ➜ Price __2888__<:frags:655840344725913600> - ID: `frame1` or `detective`\n\n<:frame2:693410403283370045> ➜ Price __2888__<:frags:655840344725913600> - ID: `frame2` or `valentine`\n\n<:frame3:693410506643472385> ➜ Price __2888__<:frags:655840344725913600> - ID: `frame3` or `allstar`\n\n<:frame4:693526250647715892> ➜ Price __2888__<:frags:655840344725913600> - ID: `frame4` or `tree`\n\n<:frame5:693526158830075955> ➜ Price __28888__<:frags:655840344725913600> - ID: `frame5`\n\n<:frame6:694820135306919977> ➜ Price __2888__<:frags:655840344725913600> - ID: `frame6`\n\n**Free to use frames:**\nYou can equip them directly :D\n<:frame7:697804971227349103> | **FREE!** `" + prefix + "equip frame frame7`\n<:frame8:706555854513766490> | **FREE!** `" + prefix + "equip frame frame8`\n" + frame9 + " | **FREE!** `" + prefix + "equip frame frame9`\n" + frame10 + " | **FREE!** `" + prefix + "equip frame frame10`")
                 .setTimestamp();
 
             message.channel.send(framEmbed);
@@ -405,6 +408,7 @@ module.exports = {
                     NotOwnedPortraits = NotOwnedPortraits + `\n__${portraitName}__`;
                 }
             }
+
             checkForPortrait("ess1-14", "Black and White Explorer");
             checkForPortrait("ess1-15", "Black and White Magician");
             checkForPortrait("ess1-16", "Black and White Gardener");
@@ -481,18 +485,17 @@ module.exports = {
             checkForNonPortrait("dangan-35", "Yasuhiro Hagakure");
 
             let ownedPortraitEmbed = new RichEmbed()
-                .setAuthor("Cowboish Portrait Shop >:3", "https://i.imgur.com/NGzUkth.png")
+                .setAuthor("Cowboish Portrait Shop >:3", bot.user.displayAvatarURL)
                 .setColor("0x6714f7")
-                .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", bot.user.displayAvatarURL)
-                .setDescription("An equipped Portrait will display in `" + prefix + "logicpath` instead of your actual profile-picture\nTo equip the portrait of your choice, do `" + prefix + "equip portrait <portrait name>`\n\nDunno what portraits you have? Here are they" + ownedPortraits + "\n\n**Here are the portraits you don't own**" + NotOwnedPortraits + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`");
+                .setThumbnail("https://i.imgur.com/NGzUkth.png")
+                .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", message.author.displayAvatarURL)
+                .setDescription("An equipped Portrait will display in `" + prefix + "logicpath` instead of your actual profile-picture\nTo equip the portrait of your choice, do `" + prefix + "equip portrait <portrait name>`\n\nDunno what portraits you have? Here are they" + ownedPortraits + "\n\n**Here are the portraits you don't own**" + NotOwnedPortraits + "\n\n**《 Purchasable Portraits 》**\nTo buy one of these portraits, do `" + prefix + "buy <portrait name>`\n\n🦎 | __**Long Jump Luchino**__ ➜ Price __1888__ " + frags + "\n📧 | __**Marathon Runner Victor**__ ➜ Price __1888__ " + frags + "\n⚔️ | __**Sword fighting Joseph**__ ➜ Price __1888__ " + frags + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`");
 
             message.channel.send(ownedPortraitEmbed);
 
         } else {
             message.channel.send(shopEmbed);
         }
-
-
 
 
     }

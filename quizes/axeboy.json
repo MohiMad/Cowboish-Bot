@@ -4,21 +4,21 @@
 		"Answer": ["tree"],
 		"Difficulty": "Medium",
 		"Attachment": "https://66.media.tumblr.com/0e6601abb8dfa93342a98bc7514dd1e8/tumblr_pxwsvua47j1xffleoo1_640.png",
-		"Artist": "@わさび無料 - Tumblr"
+		"Artist": "@わさび無料 on Tumblr"
     },
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
 		"Answer": ["wail", "lost boy", "lost boi"],
 		"Difficulty": "Hard",
 		"Attachment": "https://66.media.tumblr.com/0e6601abb8dfa93342a98bc7514dd1e8/tumblr_pxwsvua47j1xffleoo1_640.png",
-		"Artist": "@わさび無料 - Tumblr"
+		"Artist": "@わさび無料 on Tumblr"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`tree`, `fire`, `axe`, `plant`, `apple`)",
 		"Answer": ["apple"],
 		"Difficulty": "Hard",
 		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png",
-		"Artist": "@わさび無料 - Tumblr"
+		"Artist": "@わさび無料 on Tumblr"
 
 	},
 	{
@@ -26,21 +26,28 @@
 		"Answer": ["grizzly"],
 		"Difficulty": "Hard",
 		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png",
-		"Artist": "@わさび無料 - Tumblr"
+		"Artist": "@わさび無料 on Tumblr"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with axeboy\n(`plant`, `tree`, `pickaxe`, `fire`, `axe`)",
 		"Answer": ["pickaxe"],
 		"Difficulty": "Hard",
 		"Attachment": "https://66.media.tumblr.com/dc0dd723053bbc47fec5b4979198fbb8/tumblr_pxk9014qnR1xffleoo1_640.png",
-		"Artist": "@わさび無料 - Tumblr"
+		"Artist": "@わさび無料 on Tumblr"
 	},
 	{
 		"Question": "**Question:**\nWhat is the maximum amount of Peaceful Pines can be present in a match at a time?",
 		"Answer": ["6", "six", "six trees", "6 trees"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/xR6paec.png"
-		}
+	},
+	{
+		"Question": "**Question:**\nCan Axeboy's trees block flaregun shots?",
+		"Answer": ["yes", "yep", "yea", "yeah", "of course"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/D-J8vOdU4AAkqQ7?format=jpg&name=900x900",
+		"Artist": "@kuro_k1212 on Twitter"
+	}
 	
 	
 ]

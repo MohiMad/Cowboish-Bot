@@ -1,33 +1,40 @@
 [
 	{
 		"Question": "**Fill in the missing word:**\n`Soulweava is as _ _ _ _ as a nascar`",
-		"Answer": ["fast", "Fast"],
+		"Answer": ["fast"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674673201573396480/9k.png"
+		"Attachment": "https://i.imgur.com/gmmJ66W.png"
     },
     {
 		"Question": "**Match mode:**\nYou're mid in a chase and the target is walking in the open, quickly type `spit` to throw a web at the survivor",
 		"Answer": ["spit", "Spit"],
 		"Difficulty": "Easy",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674674561714749471/maxresdefault.png"
+		"Attachment": "https://i.imgur.com/WpqTNcr.png"
     },
     {
 		"Question": "**Question:**\nHow long does the web speed boost last for?\nAnswer in seconds",
-		"Answer": ["3", "three", "three seconds"],
+		"Answer": ["3", "three", "three seconds", "3s", "3 seconds"],
 		"Difficulty": "Haha medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674674561714749471/maxresdefault.png"
+		"Attachment": "https://pm1.narvii.com/7020/29ffbdef172db68a7400cb76885e5d3116027b2dr1-960-960v2_hq.jpg",
+		"Artist": "Gion! on Amino"
 	},
 	{
-		"Question": "**Question:**\nWhat is the name of this skin ?",
+		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["golden candle"],
 		"Difficulty": "idk i think easy :v",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/717998892117131295/4Lxk7AAAAAElFTkSuQmCC.png"
+		"Attachment": "https://i.imgur.com/2YAeOyZ.png"
 	},
 	{
 		"Question": "**Repeat da sentence:**\nType `my spider senses are tingling`",
 		"Answer": ["my spider senses are tingling"],
 		"Difficulty": "Ez",
-		"Attachment": "https://i.imgur.com/eUj97R3.png"
-		}
-	
+		"Attachment": "https://i.imgur.com/3s5KQBA.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is Soul Weaver's real name?",
+		"Answer": ["violetta"],
+		"Difficulty": "Eaaasy",
+		"Attachment": "https://pbs.twimg.com/media/EMDFt5SWoAI3F7-?format=jpg&name=large",
+		"Artist": "@8bit_Drag on Twitter"
+	}
 ]

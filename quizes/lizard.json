@@ -3,37 +3,42 @@
 		"Question": "**Question:**\nHow much energy does it take for a single jump?",
 		"Answer": ["20", "twenty", "Twenty"],
 		"Difficulty": "HAAAARD",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
+		"Attachment": "https://pbs.twimg.com/media/EdTKpijUwAAGxNm?format=jpg&name=small",
+		"Artist": "@C07911967 - Twitter"
     },
     {
 		"Question": "**Repeat da sentence:**\nType `Luchino needs a buff`",
 		"Answer": ["Luchino needs a buff", "luchino needs a buff", "luchino", "needs", "buff"],
 		"Difficulty": "Ez",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
+		"Attachment": "https://pbs.twimg.com/media/EdTKpilVAAAaIvL?format=jpg&name=small",
+		"Artist": "@C07911967 - Twitter"
     },
     {
 		"Question": "**Question:**\nHow many S skins does Luchino have?",
 		"Answer": ["1", "one", "One"],
 		"Difficulty": "Ez",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
+		"Attachment": "https://pbs.twimg.com/media/EclDgAqUEAAP1dI?format=jpg&name=medium"
     },
     {
 		"Question": "**Unscramble it:**\nThe word `Cshar` is scrambled, unscramble it to win!",
 		"Answer": ["Crash", "crash"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
+		"Attachment": "https://i.imgur.com/NG5Foz4.jpg",
+		"Artist": "@messy_juls - Picuki"
     },
     {
 		"Question": "**Retype the sentence:**\nType `Luchino is an op camper`",
 		"Answer": ["Luchino is an op camper", "luchino is an op camper", "luchino", "op", "camper"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674648424393736245/images.png"
+		"Attachment": "https://media.giphy.com/media/UWhGyW7QtJjxYUisIJ/giphy.gif"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["Crystalline", "crystalline"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688302051926736904/image0.png"
+		"Attachment": "https://pbs.twimg.com/media/ELERY0sW4AAwOuM?format=jpg&name=900x900",
+		"Artist": "@Hanh_R_A - Twitter"
+
 	}
 	
 ]

@@ -39,7 +39,6 @@ module.exports = {
                 try {
                     const LP_1 = await logicPath.findOne({ UserID: LPuser.id });
 
-
                     if (!LP_1) {
                         LPuser = message.author;
                     }
@@ -248,6 +247,22 @@ module.exports = {
 
                         ctx.drawImage(BnW_coordinator, 6, 3, 155, 155);
                     }
+
+                    if (LP.Portrait === "long_jump_luchino") {
+                        const long_jump_luchino = await Canvas.loadImage("https://i.imgur.com/2NeJXqy.png");
+
+                        ctx.drawImage(long_jump_luchino, 25, 15, 135, 135);
+                    }
+                    if (LP.Portrait === "marathon_runner_victor") {
+                        const marathon_runner_victor = await Canvas.loadImage("https://i.imgur.com/KzxmHgx.png");
+
+                        ctx.drawImage(marathon_runner_victor, 30, 25, 115, 115);
+                    }
+                    if (LP.Portrait === "sword_fighting") {
+                        const sword_fighting = await Canvas.loadImage("https://i.imgur.com/mRE6j40.png");
+
+                        ctx.drawImage(sword_fighting, 25, 15, 135, 135);
+                    }
                 } else {
                     const avatar = await Canvas.loadImage(LPuser.displayAvatarURL);
 
@@ -309,6 +324,11 @@ module.exports = {
                     let frame9 = await Canvas.loadImage("./pics/frame9.png");
 
                     ctx.drawImage(frame9, 4, 1, 165, 170);
+                } else if (LP.frames.equipped === "frame10") {
+
+                    let frame10 = await Canvas.loadImage("./pics/frame10.png");
+
+                    ctx.drawImage(frame10, 4, 1, 165, 170);
                 }
 
 
@@ -321,7 +341,7 @@ module.exports = {
                 ctx.font = '14px Arial';
                 ctx.fillStyle = '#000000';
 
-                ctx.fillText(LP.Ess1, 73, 270);
+                ctx.fillText(LP.Ess1, 70, 270);
 
                 ctx.fillText(LP.Ess2, 189, 267);
 
@@ -331,13 +351,13 @@ module.exports = {
 
                 ctx.fillText(LP.Inspirations, 407, 343);
 
-                ctx.fillText(LP.frags, 400, 418);
+                ctx.fillText(LP.frags, 400, 410);
 
-                ctx.font = 'bold 20px sitka-display';
+                ctx.font = 'bold 23px sitka-display';
 
-                ctx.fillText(LP.A, 87, 393);
+                ctx.fillText(LP.S, 90, 405);
 
-                ctx.fillText(LP.S, 247, 390);
+                ctx.fillText(LP.A, 246, 405);
 
                 ctx.font = '15px sitka-display';
                 ctx.fillStyle = '#ffffff';
@@ -423,85 +443,57 @@ module.exports = {
 
                 ctx.fillText(LP.Clues, 500, 410, 570);
 
-                ctx.fillStyle = '#d73232';
                 let HunterNumber = 1;
 
-                if (LP.Hunters.WuChang === true) HunterNumber = HunterNumber + 1;
+                [LP.Hunters.WuChang, LP.Hunters.AxeBoi, LP.Hunters.Lizard].forEach(x => { if (x === true) HunterNumber++; });
+                [LP.Hunters.Clown, LP.Hunters.GameKeeper, LP.Hunters.Ripper].forEach(x => { if (x === true) HunterNumber++; });
+                [LP.Hunters.SoulWeaver, LP.Hunters.Geisha, LP.Hunters.PhotoGrapher].forEach(x => { if (x === true) HunterNumber++; });
+                [LP.Hunters.MadEyes, LP.Hunters.Feaster, LP.Hunters.DreamWitch].forEach(x => { if (x === true) HunterNumber++; });
+                [LP.Hunters.BloodyQueen, LP.Hunters.Pingu, LP.Hunters.Sister].forEach(x => { if (x === true) HunterNumber++; });
+                [LP.Hunters.NewHunta, LP.Hunters.AnotherHunta].forEach(x => { if (x === true) HunterNumber++; });
 
-                if (LP.Hunters.AxeBoi === true) HunterNumber = HunterNumber + 1;
+                ctx.fillStyle = '#d73232';
+                ctx.fillText(HunterNumber, 206, 130);
 
-                if (LP.Hunters.Lizard === true) HunterNumber = HunterNumber + 1;
+                let portraitAmount = 0;
+                ["ess1-14", "ess1-15", "ess1-16"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["ess1-48", "ess1-49", "ess1-50"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["ess1-51", "ess3-38", "ess3-39"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["ess3-40", "ess3-46", "ess3-47"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["ess3-48", "ess3-49", "dangan-20"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["dangan-21", "dangan-22", "dangan-23"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["dangan-24", "dangan-25", "dangan-26"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["dangan-27", "dangan-28", "dangan-29"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["dangan-30", "dangan-31", "dangan-32"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["dangan-33", "dangan-34", "dangan-35"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                ["sword_fighting", "marathon_runner_victor", "long_jump_luchino"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
 
-                if (LP.Hunters.Clown === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.GameKeeper === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.Ripper === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.SoulWeaver === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.Geisha === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.PhotoGrapher === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.MadEyes === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.Feaster === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.DreamWitch === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.BloodyQueen === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.Pingu === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.Sister === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.NewHunta === true) HunterNumber = HunterNumber + 1;
-
-                if (LP.Hunters.AnotherHunta === true) HunterNumber = HunterNumber + 1;
-
-                ctx.fillText(HunterNumber, 206, 130)
-
-
-                ctx.fillStyle = '#0a8fd0';
+                ctx.fillStyle = '#000000';
+                ctx.fillText(portraitAmount, 390, 130);
 
                 let SurvivorNumber = 5;
 
-                if (LP.Survivors.Cowboy === true) SurvivorNumber++;
-                if (LP.Survivors.Mercenary === true) SurvivorNumber++;
-                if (LP.Survivors.Coordinator === true) SurvivorNumber++;
-                if (LP.Survivors.Priestess === true) SurvivorNumber++;
-                if (LP.Survivors.Mechanic === true) SurvivorNumber++;
-                if (LP.Survivors.Mindseye === true) SurvivorNumber++;
-                if (LP.Survivors.Prefumer === true) SurvivorNumber++;
-                if (LP.Survivors.Dancer === true) SurvivorNumber++;
-                if (LP.Survivors.Seer === true) SurvivorNumber++;
-                if (LP.Survivors.Embalmer === true) SurvivorNumber++;
-                if (LP.Survivors.Acrobat === true) SurvivorNumber++;
-                if (LP.Survivors.Officer === true) SurvivorNumber++;
-                if (LP.Survivors.Barmaid === true) SurvivorNumber++;
-                if (LP.Survivors.Magician === true) SurvivorNumber++;
-                if (LP.Survivors.Explorer === true) SurvivorNumber++;
-                if (LP.Survivors.Forward === true) SurvivorNumber++;
-                if (LP.Survivors.Prospector === true) SurvivorNumber++;
-                if (LP.Survivors.Enchantress === true) SurvivorNumber++;
-                if (LP.Survivors.Wilding === true) SurvivorNumber++;
-                if (LP.Survivors.Postman === true) SurvivorNumber++;
-                if (LP.Survivors.NewSurv === true) SurvivorNumber++;
-                if (LP.Survivors.AnotherSurv === true) SurvivorNumber++;
+                [LP.Survivors.Cowboy, LP.Survivors.Mercenary, LP.Survivors.Coordinator].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.Priestess, LP.Survivors.Mechanic, LP.Survivors.Mindseye].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.Prefumer, LP.Survivors.Dancer, LP.Survivors.Seer].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.Embalmer, LP.Survivors.Acrobat, LP.Survivors.Officer].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.Barmaid, LP.Survivors.Magician, LP.Survivors.Explorer].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.Forward, LP.Survivors.Prospector, LP.Survivors.Enchantress].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.Wilding, LP.Survivors.Postman, LP.Survivors.NewSurv].forEach(x => { if (x === true) SurvivorNumber++; });
+                [LP.Survivors.AnotherSurv, LP.Entomologist].forEach(x => { if (x === true) SurvivorNumber++; });
 
-
+                ctx.fillStyle = '#0a8fd0';
                 ctx.fillText(SurvivorNumber, 292, 130);
 
                 const attachment = new Discord.Attachment(canvas.toBuffer(), 'LP.png');
 
                 message.channel.send(attachment);
 
-                await addCooldown(message, 10000, "logicpath");
+                await addCooldown(message, 30000, "logicpath");
 
             }
         } else {
-            return coolEmbed(message, "Oops, the cooldown is still on!", "You know, it takes a while to generate and edit images, that's why there is a **10** seconds cooldown on this command!\nPlease wait **REMAINING** before running this command once again :3", cooldownCheck.timeRemaining, ["s"]);
+            return coolEmbed(message, "Oops, the cooldown is still on!", "You know, it takes a while to generate and edit images, that's why there is a **30** seconds cooldown on this command!\nPlease wait **REMAINING** before running this command once again :3", cooldownCheck.timeRemaining, ["s"]);
 
         }
 

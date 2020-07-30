@@ -3,44 +3,49 @@
 		"Question": "**Question:**\nHow many items are obtainable via a chest?",
 		"Answer": ["12", "twelve", "Twelve"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+		"Attachment": "https://media.giphy.com/media/UQgfx5inY3mzYOmq8L/giphy.gif",
+		"Artist": "MercenaryBean - Amino"
 	},
 	{
 
 		"Question": "**Question:**\nIs the Lucky Guy actually lucky?",
 		"Answer": ["yes", "no", "Yes", "No"],
 		"Difficulty": "Too Easy",
-		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+		"Attachment": "https://media.giphy.com/media/UQgfx5inY3mzYOmq8L/giphy.gif",
+		"Artist": "MercenaryBean - Amino"
 	},
 	{
 		"Question": "**Question:**\nWhat's the thing the Lucky guy loves?\n\nPsst The answer is *chests*",
 		"Answer": ["chests", "chest", "Chest", "Chests"],
 		"Difficulty": "Lmao way too Easy",
-		"Attachment": "https://cdn.discordapp.com/emojis/649120786312855563.png?v=1"
+		"Attachment": "https://media.giphy.com/media/UQgfx5inY3mzYOmq8L/giphy.gif",
+		"Artist": "MercenaryBean - Amino"
 	},
 	{
 		"Question": "**Unscramble it:**\nThe word `uckL` is scrambled... Unscramble it to win!",
 		"Answer": ["Luck", "luck"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565"
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565",
+		"Artist": "jendino - Devinart"
 	},
 	{
 		"Question": "**OwO what's yo wish?:**\nWish a dice by typing `dice` below :3\nHope your wish becomes true :D",
 		"Answer": ["Dice", "dice"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565"
+		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565",
+		"Artist": "jendino - Devinart"
 	},
 	{
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
 		"Answer": ["maid", "maid outfit"],
 		"Difficulty": "You can't fail this one :/",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687700970997940234/tumblr_pqhb3ks2wI1ua6aql_540.png?width=317&height=564"
+		"Attachment": "https://i.imgur.com/zK5NTH2.png"
 	},
 	{
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?\nThe real challenge is to actually spell the name lol",
 		"Answer": ["Souichi", "souichi"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687701450411081790/8Dr149G6pFufwAAAAASUVORK5CYII.png?width=599&height=565"
+		"Attachment": "https://i.imgur.com/BtjxKsp.png"
 	},
 	{
 		"Question": "**Question:**\nHow fast does the Lucky Guy open chests compared to other survivors? (Answer in percentage)",

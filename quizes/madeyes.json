@@ -1,21 +1,36 @@
 [
-	{
-		"Question": "**Retype da sentence:**\nType `We need to build a wall`",
-		"Answer": ["We need to build a wall", "we need to build a wall"],
-		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674850906491060234/9k.png"
-    },
+	
     {
-		"Question": "**Continue the sentence:**\n`As a Madeyes, you need to get on the _ _ _ _ _ _ _ early game to hit survivors with fences `",
-		"Answer": ["console", "Console"],
+		"Question": "**Continue the sentence:**\n`As a Madeyes, you need to get on the _ _ _ _ _ _ _ early game to hit survivors with fences`",
+		"Answer": ["console", "the console"],
 		"Difficulty": "Hard",
-		"Attachment": ""
+		"Attachment": "https://i.imgur.com/kzlwoF2.png"
     },
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
 		"Answer": ["enraged", "Enraged"],
 		"Difficulty": "Extreme",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674852635278311454/wHTLvPxNPXYxwAAAABJRU5ErkJggg.png"
+		"Attachment": "https://i.imgur.com/raHqTOD.png"
+	},
+	{
+		"Question": "**Question:**\nHow many walls does it take to knock a survivor down?",
+		"Answer": ["4", "4 walls", "four walls", "four"],
+		"Difficulty": "Eaaaasy",
+		"Attachment": "https://pm1.narvii.com/7287/0cbe13a949f081183c1356365021b7adabbe5b9er1-1519-2048v2_hq.jpg",
+		"Artist": "@Majaz on Amino"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of the skin in the image?",
+		"Answer": ["confined dean"],
+		"Difficulty": "Extreme",
+		"Attachment": "https://i.imgur.com/uK3OVNV.png"
+	},
+	{
+		"Question": "**Question:**\nCan consoles be used by other hunters in 2v8?",
+		"Answer": ["no", "nah"],
+		"Difficulty": "Easy",
+		"Attachment": "https://pbs.twimg.com/media/EdrSxlfUYAIiUgs?format=jpg&name=large",
+		"Artist": "@ShiSeptiana on Twitter"
 	}
 	
 ]

@@ -300,7 +300,7 @@ module.exports = {
 			dice = dice * 2;
 			LP.ThreeMatches = LP.ThreeMatches - 1;
 
-			LP.save().catch(e => console.log(e));
+			await LP.save().catch(e => console.log(e));
 		} else {
 			reward = dice + " <:dice:655384578499936257>";
 		}
@@ -341,7 +341,7 @@ module.exports = {
 				} else {
 					LP.Dices = LP.Dices + dice;
 				}
-				LP.save().catch(err => console.log(err));
+				await LP.save().catch(err => console.log(err));
 
 			}
 			else {

@@ -3,20 +3,34 @@
 		"Question": "**Repeat the sentence:**\nType `The enchantress is annoying`",
 		"Answer": ["The enchantress is annoying", "the enchantress is annoying", "enchantress", "annoying"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
+		"Attachment": "https://i.imgur.com/7pmrM5e.png"
     },
     {
 		"Question": "**Unscramble the word:**\nThe word `lluSk` is scrambled, unscramble it to win!",
-		"Answer": ["Skull", "skull"],
+		"Answer": ["skull"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
+		"Attachment": "https://i.imgur.com/kAMelHO.png"
     },
     {
 		"Question": "**Fill in the missing word:**\n`I stunned the _ _ _ _ _ _ with 3 stacks`",
 		"Answer": ["hunter", "Hunter"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/674168610687549441/Z.png"
-	}
+		"Attachment": "https://i.imgur.com/lwYwusA.jpg"
+	},
+	{
+		"Question": "**Find the odd that doesn't fit with the Enchantress:**\n(`Ship`, `Curse`, `Puppets`, `Mother`)",
+		"Answer": ["puppets"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/1mQB8YX.png",
+		"Artist": "Neon707 on DeviantArt"
+	},
+	{
+		"Question": "**Unscramble the word:**\nThe word `dseuCr` is scrambled, unscramble it to win!",
+		"Answer": ["cursed"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/jYmWvHb.png",
+		"Artist": "@BodiTran on Twitter"
+    }
 	
 	
 ]

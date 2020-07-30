@@ -3,37 +3,32 @@
 		"Question": "**Question:**\nHow many seconds does the gardener's shield last for?\n**Answer in seconds!**",
 		"Answer": ["50", "fifty", "50 seconds", "fifty seconds"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673540633348014131/wWTDaJdKMQ5gAAAABJRU5ErkJggg.png"
+		"Attachment": "https://i.imgur.com/t98FBbL.png"
     },
     {
 		"Question": "**Question:**\nHow many seconds is the chair dismantling cooldown?",
 		"Answer": ["10", "ten", "TEN", "10 seconds", "ten seconds"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673541259045896238/9k.png"
+		"Attachment": "https://i.imgur.com/NdIOZJj.png"
     },
-    {
-		"Question": "**Fill in the missing word:**\n`Before the buff, you had to use _ _ _ _ _ _ _ _ to repair a broken chair`",
-		"Answer": ["abnormal", "Abnormal"],
-		"Difficulty": "Hard",
-		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYz2JGMnf6hMZrwuv2FFQ3NsgP9vj8IWN9iOuKpM919kxCXiow"
-	},
+    
 	{
 		"Question": "**Hmmm what's the name?:**\nGuess the name of the skin in the image",
 		"Answer": ["ghost girl", "ghost", "girl"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687693375700467777/254px-Ghost_girl_gardener.png"
+		"Attachment": "https://i.imgur.com/MieUjvL.png"
 	},
 	{
 		"Question": "**Question:**\nWhat's the gardener's surname?",
 		"Answer": ["woods", "emma woods"],
 		"Difficulty": "Kinda easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687694823569883171/woods-sunrise-i28667.png"
+		"Attachment": "https://i.imgur.com/bDeAFc5.png"
 	},
 	{
 		"Question": "**Unscramble it:**\nThe word `Tbxoool` is scrambled! unscramble it to win!",
 		"Answer": ["toolbox", "Toolbox"],
 		"Difficulty": "Kinda easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687694823569883171/woods-sunrise-i28667.png"
+		"Attachment": "https://i.imgur.com/bDeAFc5.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of the skin displayed in the image?",
@@ -46,6 +41,13 @@
 		"Answer": ["lady truth"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/6X7JjYY.png"
+	},
+	{
+		"Question": "**Question:**\nWhat debuff does a chair get when gardner dismantles it?",
+		"Answer": ["10% longer chair time", "-10% launch speed", "10% slower launch speed", "10% more chair time"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/mDu8m9A.png",
+		"Artist": "@Thortyyyy on Twitter"
 	}
 	
 ]

@@ -3,25 +3,40 @@
 		"Question": "**Question:**\nHow long does it take to gain one portal\nPlease answer in seconds!",
 		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/vIH8n9k.png"
     },
     {
 		"Question": "**Retype the sentence:**\n``Priestess is a cockroach``",
 		"Answer": ["Priestess is a cockroach", "priestess is a cockroach", "priestess", "cockroach"],
 		"Difficulty": "Lmao medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/9mM2OFW.png"
     },
     {
 		"Question": "**Type quickly:**\nThe hunter just chaired yo teammate, quickly type `portal` to spawn a portal on the chair",
 		"Answer": ["portal", "Portal"],
 		"Difficulty": "Eazy?",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673600579754262548/mL63qaEeNEapYn4MLUb6rVpqTQBqXM5iQjDM8e7mBOL0Yd4Vh6kcfOxlN99v8HywKLScY51NAAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/ePFFYE0.png"
 	},
 	{
 		"Question": "**Fill in the missing field:**\n`Priestess is a  _ _ _ _ _ _ _ _ _`",
 		"Answer": ["cockroach"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/4TP1TUL.png",
-		"Artist": "@rosashi - Deviant Art"
+		"Artist": "@rosashi on Deviant Art"
+	},
+	{
+		"Question": "**Question:**\nHow long is the blue long portal cooldown? (Answer in **seconds**)",
+		"Answer": ["150 seconds", "150", "150s", "150seconds"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/yTH9jnn.png",
+		"Artist": "@n0niiiiii on Twitter"
+	},
+	{
+		"Question": "**Unscramble the word:**\nThe word `ltaorP` is scrambled... Unscramble it to win!",
+		"Answer": ["portal"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/EWFTzbsUwAEvlLG?format=jpg&name=large",
+		"Artist": "@clockworkcynicc on Twitter"
 	}
+
 ]

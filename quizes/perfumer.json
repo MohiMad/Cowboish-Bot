@@ -22,6 +22,20 @@
 		"Answer": ["chloe", "vera"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.pinimg.com/564x/dd/0a/ae/dd0aaebc9e8e1c8b1b0357003c357954.jpg"
+	},
+	{
+		"Question": "**Question:**\nHow long does the Euphoria last for before expiring?\n(Answer in **seconds**)",
+		"Answer": ["6", "6 seconds", "six", "six seconds"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/EXmW9BeWAAE-xmS?format=jpg&name=900x900",
+		"Artist": "@OhHHH35110223 on Twitter"
+	},
+	{
+		"Question": "**Unscramble the word:**\n`elohC`",
+		"Answer": ["6", "6 seconds", "six", "six seconds"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/EU_P2mDUMAE5NK-?format=jpg&name=large",
+		"Artist": "@Armilewmt on Twitter"
     }
 
 ]

@@ -3,17 +3,17 @@
 		"Question": "**Question:**\nHow long does a watch last for?",
 		"Answer": ["20", "20 seconds", "twenty"],
 		"Difficulty": "Medium",
-		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
+		"Attachment": "https://media.giphy.com/media/gHhdUUXrM36aR6Wvgd/giphy.gif"
     },
     {
 		"Question": "**Question:**\nHow many watches does the 1st officer have?",
 		"Answer": ["two", "Two", "2"],
 		"Difficulty": "Easy",
-		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
+		"Attachment": "https://i.imgur.com/u3Tz7hO.png"
     },
     {
 		"Question": "**Repeat da sentence:**\nType `I had to use my watch to rescue`",
-		"Answer": ["I had to use my watch to rescue", "i had to use my watch to rescue", "use", "watch", "rescue"],
+		"Answer": ["i had to use my watch to rescue"],
 		"Difficulty": "Easy",
 		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
     },
@@ -22,6 +22,13 @@
 		"Answer": ["Captain Hook", "captain hook", "captin hook"],
 		"Difficulty": "Extreme",
 		"Attachment": "https://66.media.tumblr.com/c69ee9976fe7e47b26a914d0361f9dd5/2ee8a7633061f9ad-bc/s640x960/9a883d6f6ec7b21ea839ead485f409a0f144479a.jpg"
-	}
+	},
+	{
+		"Question": "**Question:**\nCan you get terrorshocked when hit while using the pocket watch?",
+		"Answer": ["no", "nu"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/mZ7oBE8.png",
+		"Artist": "MADPanda66 on DeviantArt"
+    }
 	
 ]

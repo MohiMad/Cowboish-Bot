@@ -4,7 +4,7 @@ const { RichEmbed } = require("discord.js");
 
 const { findMember, newLP, ErrorMsg } = require("../functions.js");
 
-const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9 } = require("../emojis.json");
+const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10 } = require("../emojis.json");
 
 module.exports = {
     name: 'equip',
@@ -47,7 +47,7 @@ module.exports = {
             message.channel.send(embed);
         }
         if (!args[1]) {
-            return ErrorMsg(bot, message, "**Missing Arguments!**\nPlease provide me what you want to equip after the command...\nAre you trying to equip a **frame** or a **portrait**?\n\nTo equip a specific *portrait-frame*, do `" + prefix + "equip frame <frameID>`\n\nAre you trying to equip a *portrait*? Do `" + prefix + "equip portrait <name of the portrait>`\n\nTo check what frames exist, do `" + prefix + "shop frames`\nTo check what portraits you have, do `" + prefix + "shop portraits`");
+            return ErrorMsg(bot, message, "**Missing Arguments!**\nPlease provide me what you want to equip after the command...\nAre you trying to equip a **frame** or a **portrait**?\n\nTo equip a specific *portrait-frame*, do `" + prefix + "equip frame <frameID>`\nAre you trying to equip a *portrait*? Do `" + prefix + "equip portrait <portrait name>`\n\nTo check what frames exist, do `" + prefix + "shop frames`\nTo check what portraits you have, do `" + prefix + "shop portraits`");
         } else {
 
             if (["frame", "portrait-frame", "frames", "portrait-frames"].includes(args[1].toLowerCase())) {
@@ -78,7 +78,7 @@ module.exports = {
                     description = description + " " + frame6;
 
                 }
-                description = description + ` ${frame7} ${frame8} ${frame9}`
+                description = description + ` ${frame7} ${frame8} ${frame9} ${frame10}`
 
                 let equipped;
 
@@ -109,13 +109,16 @@ module.exports = {
                 else if (LP.frames.equipped === "frame9") {
                     equipped = frame9;
                 }
+                else if (LP.frames.equipped === "frame10") {
+                    equipped = frame10;
+                }
                 else {
                     equipped = "None!";
                 }
 
                 let framEmbed = new RichEmbed()
                     .setAuthor(bot.user.username, bot.user.displayAvatarURL)
-                    .setColor("RED")
+                    .setColor("RANDOM")
                     .setDescription("Please provide the frame's ID you want to equip!\nCorrect usage: `" + prefix + "equip frame <frameID>`\n\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\nDunno what to equip? do `" + prefix + "shop frames` to see what's in the shop\nWanna unequip your frame? do `" + prefix + "equip frame none`")
                     .setFooter(message.author.tag, message.author.displayAvatarURL)
                     .setTimestamp();
@@ -163,6 +166,13 @@ module.exports = {
                     freeToUse(message, "frame9");
 
                 }
+                else if (["frame10", "10"].includes(args[2].toLowerCase())) {
+                    LP.frames.equipped = "frame10";
+                    LP.save().catch(e => console.log(e));
+
+                    freeToUse(message, "frame10");
+
+                }
                 else if (["none", "no", "unequip"].includes(args[2].toLowerCase())) {
                     LP.frames.equipped = "0";
                     LP.save().catch(e => console.log(e));
@@ -195,6 +205,23 @@ module.exports = {
                         message.channel.send(setPortraitEmbed);
                     }
 
+                }
+
+                async function paidPortraits(stringName, link) {
+                    if (!LP.Opened.includes(stringName)) return ErrorMsg(bot, message, "**You don't own this portrait!**\nYou need to buy it from the shop by doing `" + prefix + "buy " + portraitString.toLowerCase() + "`");
+
+                    LP.Portrait = stringName;
+                    await LP.save().catch(e => console.log(e));
+
+                    let PaidPortraitEmbed = new RichEmbed()
+                        .setTitle("Succesfully changed your portrait!")
+                        .setAuthor(message.author.tag, message.author.displayAvatarURL)
+                        .setThumbnail(link)
+                        .setColor("0x952cdb")
+                        .setDescription("Your portrait has been set to:\n**" + portraitString + "**\n\nWanna see how it looks like? Do `" + prefix + "logicpath`")
+                        .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+
+                    message.channel.send(PaidPortraitEmbed);
                 }
 
                 if (!args[2]) {
@@ -345,6 +372,15 @@ module.exports = {
                 } else if (["yasuhiro hagakure", "yasuhiro"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("yasuhiro_hagakure", "dangan-35", "https://i.imgur.com/CuaqAYa.png");
 
+                } else if (["long jump luchino", "longjumpluchino", "long jump", "longjumpluchino"].includes(portraitString.toLowerCase())) {
+                    paidPortraits("long_jump_luchino", "https://i.imgur.com/2NeJXqy.png");
+
+                } else if (["marathon runner victor", "marathon runner", "marathon victor", "marathonrunnervictor"].includes(portraitString.toLowerCase())) {
+                    paidPortraits("marathon_runner_victor", "https://i.imgur.com/KzxmHgx.png");
+
+                } else if (["sword fighting joseph", "sword fighting", "sword fight", "swordfightingjoseph"].includes(portraitString.toLowerCase())) {
+                    paidPortraits("sword_fighting", "https://i.imgur.com/mRE6j40.png");
+
                 } else if (["none", "unequip", "no", "default", "pfp", "profilepicture", "profilepic"]) {
 
                     LP.Portrait = "0";
@@ -355,6 +391,8 @@ module.exports = {
                     ErrorMsg(bot, message, "**Ooops, looks like you provided a nonexistent portrait...**\nAre you sure it exists? Make sure you typed it correctly...\n\nTo check what portraits you actually own, do `" + prefix + "shop portrait` or `" + prefix + "equip portrait`\n\n**Example of Usage:**`" + prefix + "equip portrait colorful memory forward`\n\nWanna set your portrait back to your profile-picture? do `" + prefix + "equip portrait default`")
                 }
 
+            } else {
+                return ErrorMsg(bot, message, "**Seems like you messed up with your first arguments**\nTo equip a specific *portrait-frame*, do `" + prefix + "equip frame <frameID>`\nAre you trying to equip a *portrait*? Do `" + prefix + "equip portrait <portrait name>`\n\nTo check what frames exist, do `" + prefix + "shop frames`\nTo check what portraits you have, do `" + prefix + "shop portraits`")
             }
 
 

@@ -2,15 +2,34 @@
 	
     {
 		"Question": "**Fill in the missing word:**\n`Disciple's cat can split into _ _ _ directions `",
-		"Answer": ["two", "Two", "2"],
+		"Answer": ["two", "2"],
 		"Difficulty": "HAAAARD",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675016239164162078/maxresdefault.png?width=1002&height=564"
+		"Attachment": "https://i.imgur.com/5N7XKOr.png"
     },
     {
 		"Question": "**Question:**\nWhat's Disciple's main item/pet?",
-		"Answer": ["cat", "Cat", "CAT"],
+		"Answer": ["cat"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/675016239164162078/maxresdefault.png?width=1002&height=564"
+		"Attachment": "https://i.imgur.com/i2KWfMo.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is Ann's name In the chinese website?",
+		"Answer": ["joan"],
+		"Difficulty": "HARD AF",
+		"Attachment": "https://i.redd.it/zixdr0eqosi41.jpg",
+		"Artist": "u/LeaAnalyss on Reddit"
+	},
+	{
+		"Question": "**Question:**\nHow long does the cat stun survivors? (Answer in **seconds**)",
+		"Answer": ["2", "two", "2s", "two seconds", "2 seconds"],
+		"Difficulty": "Medium",
+		"Attachment": "https://media.giphy.com/media/QVt8khDSo60gIAel0P/giphy.gif"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["white truffle"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/UuMUqTD.png"
 	}
 	
 ]

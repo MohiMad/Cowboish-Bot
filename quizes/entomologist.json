@@ -3,13 +3,15 @@
 		"Question": "**Question:**\nWhat object does the Entomologist hold with her hand?",
 		"Answer": ["net", "butterfly net", "trap", "butterfly trap"],
 		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/92/63/0b/92630bbf1c4991aa812ee554e7a6c85b.jpg"
+		"Attachment": "https://i.pinimg.com/564x/92/63/0b/92630bbf1c4991aa812ee554e7a6c85b.jpg",
+		"Artist": "@mirshroom on Twitter"
     },
     {
         "Question": "**Question:**\nWhat's the Entomologist's real name?",
 		"Answer": ["melly"],
 		"Difficulty": "Umph depends... Oke easy",
-		"Attachment": "https://i.pinimg.com/564x/ea/20/ef/ea20efcb3279cd770bf968b78f2dd784.jpg"
+		"Attachment": "https://i.pinimg.com/564x/ea/20/ef/ea20efcb3279cd770bf968b78f2dd784.jpg",
+		"Artist": "@vivi_idv on Twitter"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of this skin?",
@@ -21,7 +23,15 @@
 		"Question": "**Question:**\nWhat insect does the Entomologist control?",
 		"Answer": ["bee", "b", "bees"],
 		"Difficulty": "Medium steak",
-		"Attachment": "https://i.pinimg.com/564x/92/63/0b/92630bbf1c4991aa812ee554e7a6c85b.jpg"
-		}
+		"Attachment": "https://i.pinimg.com/564x/92/63/0b/92630bbf1c4991aa812ee554e7a6c85b.jpg",
+		"Artist": "@mirshroom on Twitter"
+	},
+	{
+		"Question": "**Which one of these words doesn't belong to The Entomologist?**\n(`Honey`, `Bees`, `Net`, `Men`, `Butterfly`)",
+		"Answer": ["men"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/wAU5fD5.png",
+		"Artist": "@Makai K on Weibo"
+	}
 	
 ]

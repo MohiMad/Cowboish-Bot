@@ -3,19 +3,35 @@
 		"Question": "**Repeat the sentence:**\nType `Tiny explorer`",
 		"Answer": ["Tiny explorer", "tiny explorer"],
 		"Difficulty": "Easy",
-		"Attachment": "https://i.redd.it/j5xoj8jqh6e41.png"
+		"Attachment": "https://i.redd.it/j5xoj8jqh6e41.png",
+		"Artist": "u/DullestBlack on Reddit"
     },
     {
 		"Question": "**Unscramble the word:**\nThe word `gaB` is scrambled, unscramble it!",
 		"Answer": ["Bag", "bag"],
 		"Difficulty": "Medium",
-		"Attachment": "https://i.redd.it/j5xoj8jqh6e41.png"
+		"Attachment": "https://i.imgur.com/HkHCCrY.png"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of this skin?",
 		"Answer": ["Inventor", "inventor"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673943622755942400/2Q.png"
+		"Attachment": "https://media.giphy.com/media/jPGdwfzZRJ6noHGaiE/giphy.gif"
+	},
+	{
+		"Question": "**Question:**\nHow many password-pages can the Explorer collect per match?",
+		"Answer": ["3 pages", "3", "three"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/FKZQUNY.png",
+		"Artist": "@Thortyyyy on Twitter"
+	},
+	{
+		"Question": "**Question:**\nCan Explorer be seen by peepers while shrunk?",
+		"Answer": ["no", "nu"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.imgur.com/fkscX8V.png",
+		"Artist": "@azaziel_kun on Twitter"
 	}
+
 	
 ]

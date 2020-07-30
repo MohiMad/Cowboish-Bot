@@ -4,6 +4,8 @@ const { RichEmbed } = require("discord.js");
 
 const { findMember, newLP, ErrorMsg } = require("../functions.js");
 
+const { ess1, ess2, ess3, insp, frags, clues } = require("../emojis.json");
+
 module.exports = {
     name: 'gift',
     description: "Gift yo friends yo items :D",
@@ -49,7 +51,7 @@ module.exports = {
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}<:frags:655840344725913600>`)
+                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${frags}`)
                     .setColor("0xC718EA")
                     .setThumbnail("https://i.imgur.com/s3YZNDR.png")
                     .setFooter(`${gifted.user.username} is happy now :)`, gifted.user.displayAvatarURL);
@@ -65,7 +67,7 @@ module.exports = {
 
             }
             else if (LP.Inspirations < args[2]) {
-                return ErrorMsg(bot, message, "You don't have enough inspirations(s) you have **" + LP.Inspirations + "** fragment(s)!");
+                return ErrorMsg(bot, message, "You don't have enough inspirations(s) you have **" + LP.Inspirations + "** inspirations(s)!");
 
             } else {
                 LP.Inspirations = LP.Inspirations - Number(args[2]);
@@ -77,7 +79,7 @@ module.exports = {
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}<:inspirations:655840409674711060>`)
+                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${insp}`)
                     .setColor("0xE1EB15")
                     .setThumbnail("https://i.imgur.com/WCeWjEz.png")
                     .setFooter(`${message.author.username} made ${gifted.user.username} glad :3`, gifted.user.displayAvatarURL);
@@ -104,7 +106,7 @@ module.exports = {
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}<:clue:655384523735040000>`)
+                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${clues}`)
                     .setColor("0xE5EC56")
                     .setThumbnail("https://i.imgur.com/dBx5Kux.png")
                     .setFooter(`${message.author.username} made ${gifted.user.username} glad :3`, gifted.user.displayAvatarURL);
@@ -132,7 +134,7 @@ module.exports = {
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}<:s121:735775380266549319>`)
+                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${ess1}`)
                     .setColor("0x1994F4")
                     .setThumbnail("https://i.imgur.com/0SglSpn.png")
                     .setFooter(`${gifted.user.username} is happy now :)`, gifted.user.displayAvatarURL);
@@ -159,7 +161,7 @@ module.exports = {
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}<:ess2:655840643847028751>`)
+                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${ess2}`)
                     .setColor("0xEA0CD6")
                     .setThumbnail("https://i.imgur.com/JGu6jXE.png")
                     .setFooter(`That was kind of you, ${message.author.username}`, gifted.user.displayAvatarURL);
@@ -185,7 +187,7 @@ module.exports = {
 
                 let giftedEmbed = new RichEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}<:ess3:655840571616919586>`)
+                    .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${ess3}`)
                     .setColor("0xEA600C")
                     .setThumbnail("https://i.imgur.com/QQxyNKu.png")
                     .setFooter(`That was kind of you, ${message.author.username}`, gifted.user.displayAvatarURL);
@@ -194,7 +196,7 @@ module.exports = {
 
             }
         } else {
-            return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\nHere is a list of giftable items\n\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n<:ess1:655840713904488469> | Shortcuts: `ess1`, `s12-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s12-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s12-3`, `3`\nExample: `" + prefix + "gift`" + ` ${message.author}` + "` 10 fragments`");
+            return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\nHere is a list of giftable items\n\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n" + ess1 +" | Shortcuts: `ess1`, `s12-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s12-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s12-3`, `3`\nExample: `" + prefix + "gift`" + ` ${message.author}` + "` 10 fragments`");
         }
 
     }

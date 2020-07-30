@@ -7,7 +7,7 @@
     },
     {
         "Question": "**Repeat da sentence:**\nType `Prisoner is better than mechanic`",
-        "Answer": ["Prisoner is better than mechanic", "prisoner is better than mechanic", "better", "mechanic", "prisoner"],
+        "Answer": ["prisoner is better than mechanic"],
         "Difficulty": "Easy",
         "Attachment": "https://media.discordapp.net/attachments/673091096946933790/700206920186724374/ESuz7KMVAAAITmQ.png?width=564&height=564"
     },
@@ -16,5 +16,20 @@
         "Answer": ["Inventor", "inventor"],
         "Difficulty": "Easy",
         "Attachment": "https://media.discordapp.net/attachments/673091096946933790/700206283869126728/9498f91eb4814ce2244e0b8d4d43f6b45baab23e.png?width=491&height=564"
+    },
+    {
+        "Question": "**Question:**\nHow long is The Prisoner's shock/stun cooldown?",
+        "Answer": ["45 seconds", "45", "45s", "45seconds"],
+        "Difficulty": "Hard",
+        "Attachment": "https://pbs.twimg.com/media/ETlm0N9XYAAl-XQ?format=jpg&name=4096x4096",
+        "Artist": "@Lihitans__art on Twitter"
+    },
+    {
+        "Question": "**Unscramble the word:**\nUnscramble the word `yictricEle` to win!",
+        "Answer": ["electricity"],
+        "Difficulty": "Hard",
+        "Attachment": "https://pbs.twimg.com/media/EYzBlRgVcAAFJ-j?format=jpg&name=large",
+        "Artist": "@merancoru on Twitter"
     }
+
 ]
