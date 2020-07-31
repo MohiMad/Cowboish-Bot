@@ -3,37 +3,39 @@
 		"Question": "**Unscramble da word:**\nThe word `oggoD` is scrambled, unscramble it to win!",
 		"Answer": ["doggo", "Doggo"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
+		"Attachment": "https://pbs.twimg.com/media/EYk8ei-U0AAV9FJ?format=jpg&name=medium"
     },
     {
-		"Question": "**Retype the sentence:**\nType `The postman doggo is cute`",
-		"Answer": ["the postman doggo is cute", "the postman doggo is cute", "doggo", "postman", "cute"],
-		"Difficulty": "Easy",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
-    },
-    {
-		"Question": "**Countinue the sentence:**\nThe hunter _ _ _ my dog :C",
-		"Answer": ["Hit", "hit"],
+		"Question": "**What's the name of the skin in the image?**",
+		"Answer": ["the embrace", "embrace"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674216680531951616/2Q.png"
-	},
+		"Attachment": "https://i.imgur.com/OD2tPPz.png"
+    },
 	{
 		"Question": "**Question:**\nWhat kind of dog does Postman own?",
-		"Answer": ["Pitbull", "pitbull"],
+		"Answer": ["Pitbull", "pitbull", "pit bull"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687987284456374311/image0.png?width=515&height=564"
+		"Attachment": "https://64.media.tumblr.com/eb212ca3b63a9b739c1ea749e0dca50e/6cbdda91b670f036-f4/s1280x1920/8fdc38336975c4fdcb8237b7cf550c69430f877f.jpg",
+		"Artist": "@jonnadine1 on Tumblr"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of Postman's dog",
 		"Answer": ["wick"],
 		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/af/e0/66/afe066176ca85e90cd37912128f4303b.jpg"
+		"Attachment": "https://i.imgur.com/cHE3bSX.png"
 	},
 	{
 		"Question": "**Question:**\nName the letter that gives you a small speed boost after vaulting obstacles",
 		"Answer": ["farewell", "farewell letter"],
 		"Difficulty": "hard af",
-		"Attachment": "https://i.imgur.com/StOI3Bv.jpg"
-	}
+		"Attachment": "https://i.imgur.com/StOI3Bv.jpg",
+		"Artist": "@SealedMail on Twitter"
+	},
+	{
+		"Question": "**What's the name of the skin in the image?**",
+		"Answer": ["keyboard"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/EBnYQPw.png"
+    }
 	
 ]

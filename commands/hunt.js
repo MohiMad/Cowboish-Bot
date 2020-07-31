@@ -14,7 +14,7 @@ module.exports = {
 
             if (!LP) return newLP(message);
 
-            if (!args[1]) return ErrorMsg(bot, message, "Which survivor do you want to play as?\nThe usage of this command should be: `" + prefix + "hunt <hunterName>`\nNOTE: You need to own the hunter you want to play as and that's by bying them from the `" + prefix + "shop`\nKeep in mind that you always can play as:\n**HellEmber**");
+            if (!args[1]) return ErrorMsg(bot, message, "Which hunter do you want to play as?\nThe usage of this command should be: `" + prefix + "hunt <hunterName>`\n\n**Note**: You need to own the hunter you want to play as, and that's by bying them from the `" + prefix + "shop hunter`\n\nKeep in mind that you always can play as:\n**HellEmber**");
 
             if (["hellember", "leo"].includes(args[1].toLowerCase())) {
 

@@ -81,24 +81,24 @@ module.exports = {
             if (charName === "Gravekeeper") LP.Survivors.NewSurv = true;
             if (charName === "Postman") LP.Survivors.Postman = true;
             if (charName === "Prisoner") LP.Survivors.AnotherSurv = true;
-            if (charName === "Entomologist") LP.Survivors.Entomologist = true;
+            if (charName === "Entomologist") LP.Entomologist = true;
 
-            if (charName === "Wu chang") LP.Survivors.WuChang = true;
-            if (charName === "Axe Boy") LP.Survivors.AxeBoi = true;
-            if (charName === "Luchino") LP.Survivors.Lizard = true;
-            if (charName === "Joker") LP.Survivors.Clown = true;
-            if (charName === "Gamekeeper") LP.Survivors.GameKeeper = true;
-            if (charName === "Ripper") LP.Survivors.Ripper = true;
-            if (charName === "Soul Weaver") LP.Survivors.SoulWeaver = true;
-            if (charName === "Geisha") LP.Survivors.Geisha = true;
-            if (charName === "Joseph") LP.Survivors.PhotoGrapher = true;
-            if (charName === "Madeyes") LP.Survivors.MadEyes = true;
-            if (charName === "Feaster") LP.Survivors.Feaster = true;
-            if (charName === "Dreamwitch") LP.Survivors.DreamWitch = true;
-            if (charName === "Bonbon") LP.Survivors.Pingu = true;
-            if (charName === "Ann") LP.Survivors.Sister = true;
-            if (charName === "Bloody Queen") LP.Survivors.BloodyQueen = true;
-            if (charName === "Violinist") LP.Survivors.NewHunta = true;
+            if (charName === "Wu chang") LP.Hunters.WuChang = true;
+            if (charName === "Axe Boy") LP.Hunters.AxeBoi = true;
+            if (charName === "Luchino") LP.Hunters.Lizard = true;
+            if (charName === "Joker") LP.Hunters.Clown = true;
+            if (charName === "Gamekeeper") LP.Hunters.GameKeeper = true;
+            if (charName === "Ripper") LP.Hunters.Ripper = true;
+            if (charName === "Soul Weaver") LP.Hunters.SoulWeaver = true;
+            if (charName === "Geisha") LP.Hunters.Geisha = true;
+            if (charName === "Joseph") LP.Hunters.PhotoGrapher = true;
+            if (charName === "Madeyes") LP.Hunters.MadEyes = true;
+            if (charName === "Feaster") LP.Hunters.Feaster = true;
+            if (charName === "Dreamwitch") LP.Hunters.DreamWitch = true;
+            if (charName === "Bonbon") LP.Hunters.Pingu = true;
+            if (charName === "Ann") LP.Hunters.Sister = true;
+            if (charName === "Bloody Queen") LP.Hunters.BloodyQueen = true;
+            if (charName === "Violinist") LP.Hunters.NewHunta = true;
 
             LP.Clues = LP.Clues - price;
             await LP.save().catch(e => console.log(e));
@@ -131,8 +131,8 @@ module.exports = {
         async function buyPortrait(PortraitName, path, price, link) {
             if (LP.frags < price) return message.channel.send(`**${message.author.username}**, you don't haven't enough fragments... You need **${price - LP.frags}**${frags} more!`);
 
-            if(LP.Opened.includes(path)) return message.channel.send(`**${message.author.username}** You have bought this portrait already... Why buy it again? ;-;`);
-            
+            if (LP.Opened.includes(path)) return message.channel.send(`**${message.author.username}** You have bought this portrait already... Why buy it again? ;-;`);
+
             const portraitEmbed = new RichEmbed()
                 .setAuthor(`${message.author.username} bought ${PortraitName}`, message.author.avatarURL)
                 .setTimestamp()
