@@ -84,7 +84,7 @@ module.exports = {
             if (charName === "Entomologist") LP.Entomologist = true;
 
             if (charName === "Wu chang") LP.Hunters.WuChang = true;
-            if (charName === "Axe Boy") LP.Hunters.AxeBoi = true;
+            if (charName === "Axeboy") LP.Hunters.AxeBoi = true;
             if (charName === "Luchino") LP.Hunters.Lizard = true;
             if (charName === "Joker") LP.Hunters.Clown = true;
             if (charName === "Gamekeeper") LP.Hunters.GameKeeper = true;
@@ -220,7 +220,7 @@ module.exports = {
         //hunters begins here
         else if (["uwuchang", "wuchang", "wuchangus", "wu"].includes(args[1].toLowerCase())) await buyIt("Wu chang", LP.Hunters.WuChang, 4508, "I got black i got white whatchu want? >:3\nYou bought Wuchang and play as him by doing `" + prefix + "hunt wu`", "https://vignette.wikia.nocookie.net/id5/images/1/1e/Wu_Chang%3B_smoother.png/revision/latest?cb=20181212105054");
 
-        else if (["axeboi", "axeboy", "robbie"].includes(args[1].toLowerCase())) await buyIt("Axe boy", LP.Hunters.AxeBoi, 4508, "Isn't that a potatobag on his head?\nYaay you bought the missing child- whao wait what?", "https://i.imgur.com/Z9GJMfx.png");
+        else if (["axeboi", "axeboy", "robbie"].includes(args[1].toLowerCase())) await buyIt("Axeboy", LP.Hunters.AxeBoi, 4508, "Isn't that a potatobag on his head?\nYaay you bought the missing child- whao wait what?", "https://i.imgur.com/Z9GJMfx.png");
 
         else if (["evilreptilian", "luchino", "lizard", "lunchino", "lizzyboi", "reptilian"].includes(args[1].toLowerCase())) await buyIt("Luchino", LP.Hunters.Lizard, 4508, "Yaaay you bought lizzboi :3\nNow do `" + prefix + "hunt lizard` to play as him", "https://i.imgur.com/hwgCwb2.png");
 

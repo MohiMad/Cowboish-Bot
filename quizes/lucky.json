@@ -55,7 +55,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat's the name of this skin?",
-		"Answer": ["moon face"],
+		"Answer": ["moon face", "moonface"],
 		"Difficulty": "VERY hard",
 		"Attachment": "https://i.imgur.com/sii7nyW.png"
 	},

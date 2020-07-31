@@ -9,25 +9,36 @@
 		"Question": "**Continue the sentence:**\n`Geisha's _ _ _-box is wack`",
 		"Answer": ["hit", "Hit"],
 		"Difficulty": "Ez",
-		"Attachment": "https://i.pinimg.com/564x/39/37/9e/39379e902cbff219c727316afd607b14.jpg"
+		"Attachment": "https://pbs.twimg.com/media/EJkQhv-UUAAVW3l?format=jpg&name=small",
+		"Artist": "@fuwafuwawa0107 - Twitter"
     },
     {
 		"Question": "**Unscramble it:**\nThe word `shaD` is scrambled, unscramble it to win",
-		"Answer": ["dash", "Dash"],
+		"Answer": ["dash"],
 		"Difficulty": "Mediummmm",
-		"Attachment": "https://i.pinimg.com/564x/15/86/ef/1586ef4fc99fa7dc63054d9984c411b0.jpg"
+		"Attachment": "https://i.pinimg.com/564x/15/86/ef/1586ef4fc99fa7dc63054d9984c411b0.jpg",
+		"Artist": "@panik124 on Deviantart"
 	},
 	{
 		"Question": "**Unscramble it:**\nWhat's the Geisha's real name?",
-		"Answer": ["Michiko", "michiko"],
+		"Answer": ["michiko"],
 		"Difficulty": "Mediummmm",
-		"Attachment": "https://i.pinimg.com/564x/4d/95/ed/4d95ed910aec331454ab55918151d0ad.jpg"
+		"Attachment": "https://i.imgur.com/fPaoNMg.png",
+		"Artist": "@shirasiyuki on Deviantart"
 	},
 	{
 		"Question": "**Retype the sentence:**\nGeisha's hitbox is weird",
 		"Answer": ["geisha's hitbox is weird"],
 		"Difficulty": "Medium rare",
-		"Attachment": "https://i.pinimg.com/564x/d1/6f/a2/d16fa245e4ea9fe0124b6f9d18cf8727.jpg"
-		}
+		"Attachment": "https://i.pinimg.com/564x/d1/6f/a2/d16fa245e4ea9fe0124b6f9d18cf8727.jpg",
+		"Artist": "@Hanh_R_A - Twitter"
+	},
+	{
+		"Question": "**Question:**\n How long is geishas dash cooldown??",
+		"Answer": ["8","eight"],
+		"Difficulty": "Easy Peasy",
+		"Attachment": "https://pbs.twimg.com/media/ERCaFjIU0AAFncB?format=jpg&name=large",
+		"Artist": "@VnamiN on Twitter"
+	}
 	
 ]
