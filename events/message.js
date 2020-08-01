@@ -48,22 +48,7 @@ module.exports = async (bot, message) => {
 
     if (!message.content.startsWith(prefix)) return;
 
-    let number = Math.floor(Math.random() * 10);
 
-    if (number === 1 || number === 2) {
-        const LP = await logicpath.findOne({ UserID: message.author.id });
-
-        if (!LP) return;
-
-        if (LP.Opened.includes("1kcowboish")) return;
-
-        let celebEmbed = new RichEmbed()
-            .setImage("https://i.imgur.com/Yq0XDuU.png")
-            .setColor("RANDOM")
-            .setTitle("Cowboish bot 1k servers celebration :D");
-
-        message.channel.send(celebEmbed);
-    }
 
     switch (args[0].toLowerCase()) {
 
@@ -314,7 +299,22 @@ module.exports = async (bot, message) => {
     }
     //End of config commands
 
+    let number = Math.floor(Math.random() * 10);
 
+    if (number === 1 || number === 2) {
+        const LP = await logicpath.findOne({ UserID: message.author.id });
+
+        if (!LP) return;
+
+        if (LP.Opened.includes("1kcowboish")) return;
+
+        let celebEmbed = new RichEmbed()
+            .setImage("https://i.imgur.com/Yq0XDuU.png")
+            .setColor("RANDOM")
+            .setTitle("Cowboish bot 1k servers celebration :D");
+
+        message.channel.send(celebEmbed);
+    }
 
 
 };
