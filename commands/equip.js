@@ -4,7 +4,7 @@ const { RichEmbed } = require("discord.js");
 
 const { findMember, newLP, ErrorMsg } = require("../functions.js");
 
-const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10 } = require("../emojis.json");
+const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10, cowboish_frame } = require("../emojis.json");
 
 module.exports = {
     name: 'equip',
@@ -78,6 +78,10 @@ module.exports = {
                     description = description + " " + frame6;
 
                 }
+                if (LP.Opened.includes("1kcowboish")) {
+                    description = description + " " + cowboish_frame;
+
+                }
                 description = description + ` ${frame7} ${frame8} ${frame9} ${frame10}`
 
                 let equipped;
@@ -111,6 +115,9 @@ module.exports = {
                 }
                 else if (LP.frames.equipped === "frame10") {
                     equipped = frame10;
+                }
+                else if (LP.frames.equipped === "1kcowboish") {
+                    equipped = cowboish_frame;
                 }
                 else {
                     equipped = "None!";
@@ -171,6 +178,15 @@ module.exports = {
                     LP.save().catch(e => console.log(e));
 
                     freeToUse(message, "frame10");
+
+                }
+                else if (["cowboish", "1kcowboish"].includes(args[2].toLowerCase())) {
+                    if (!LP.Opened.includes("1kcowboish")) return message.channel.send(`**You can't equip this frame...**`);
+
+                    LP.frames.equipped = "1kcowboish";
+                    LP.save().catch(e => console.log(e));
+
+                    freeToUse(message, "cowboish");
 
                 }
                 else if (["none", "no", "unequip"].includes(args[2].toLowerCase())) {

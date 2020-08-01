@@ -25,14 +25,14 @@
 		"Question": "**Unscramble it:**\nThe word `uckL` is scrambled... Unscramble it to win!",
 		"Answer": ["Luck", "luck"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565",
+		"Attachment": "https://i.imgur.com/hKrgkXG.png",
 		"Artist": "jendino - Devinart"
 	},
 	{
 		"Question": "**OwO what's yo wish?:**\nWish a dice by typing `dice` below :3\nHope your wish becomes true :D",
 		"Answer": ["Dice", "dice"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687699491154821185/identity_v___fan_art___lucky_guy_normal_skin_by_jendino_ddb8x1m-fullview.png?width=452&height=565",
+		"Attachment": "https://i.imgur.com/hKrgkXG.png",
 		"Artist": "jendino - Devinart"
 	},
 	{
@@ -71,5 +71,19 @@
 		"Difficulty": "Super Hard",
 		"Attachment": "https://i.imgur.com/iHgK0dl.png",
 		"Artist": "u/kanekookie11 - Reddit"
+	},
+	{
+		"Question": "**Question:**\nWhat is the most common item a Lucky Guy wishes for?",
+		"Answer": ["flare gun", "gun", "flaregun"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/PousbMP.png",
+		"Artist": "Tama on Tumblr"
+	},
+	{
+		"Question": "**Unscramble it:**\nThe word `nerateV` is scrambled... Unscramble it!",
+		"Answer": ["veteran"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/msxTgfx.png",
+		"Artist": "@Thortyyyy on Twitter"
 	}
 ]

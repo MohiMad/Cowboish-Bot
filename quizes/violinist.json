@@ -3,30 +3,35 @@
         "Question": "**Question:**\nWhat is the name of this skin?",
         "Answer": ["inferno sonata"],
         "Difficulty": "Hard",
-        "Attachment": "https://media.discordapp.net/attachments/673091096946933790/710473423083536404/wU3I4Z8REPqeAAAAABJRU5ErkJggg.png"
+        "Attachment": "https://i.imgur.com/HDQaZ0B.png"
     },
     {
         "Question": "**Question:**\nWhat is Violinist's real name?",
         "Answer": ["antonio"],
         "Difficulty": "Hard",
-        "Attachment": "https://media.discordapp.net/attachments/673091096946933790/710473787564621935/e137d43fc45e7987f871435a50c16ee1.png?width=486&height=564"
+        "Attachment": "https://pbs.twimg.com/media/EWX8FjYXgAYMuNf?format=jpg&name=4096x4096",
+        "Artist": "@mishroom on Twitter"
+
     },
     {
         "Question": "**Question:**\nHow many demon strings can he make with his last presence skill?",
         "Answer": ["10", "ten", "10"],
         "Difficulty": "Hard",
-        "Attachment": "https://i.pinimg.com/564x/05/f2/61/05f2616fa177e5e837d5991d66dcf1e4.jpg"
+        "Attachment": "https://pbs.twimg.com/media/EWXbc0CWkAABJHw?format=jpg&name=4096x4096",
+        "Artist": "@mishroom on Twitter"
     },
     {
         "Question": "**Question:**\nWhat instrument does he use to play music?",
         "Answer": ["violin"],
         "Difficulty": "Ez Pz lemon squeezy",
-        "Attachment": "https://i.pinimg.com/564x/56/5c/b9/565cb9cad3b3f3a1a43abcbe44f276c0.jpg"
+        "Attachment": "https://pbs.twimg.com/media/EWa1laTVAAAV8fZ?format=jpg&name=medium",
+        "Artist": "@higeyaasu on Twitter"
     },
     {
         "Question": "**Question:**\nHow may **seconds** does the first skill of violinist last when on the field?",
         "Answer": ["13", "thirteen"],
         "Difficulty": "Easy if you read the external trait",
-        "Attachment": "https://66.media.tumblr.com/be1ca38a80d50069473e40368e87b9b0/5644c65d571bcae4-29/s1280x1920/3e2614f6fd20feb0de42c62d665fe6f68fc591c6.png"
+        "Attachment": "https://66.media.tumblr.com/be1ca38a80d50069473e40368e87b9b0/5644c65d571bcae4-29/s1280x1920/3e2614f6fd20feb0de42c62d665fe6f68fc591c6.png",
+        "Artist": "@popanimals on Tumblr"
     }
 ]

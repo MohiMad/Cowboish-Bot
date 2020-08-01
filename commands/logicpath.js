@@ -329,6 +329,11 @@ module.exports = {
                     let frame10 = await Canvas.loadImage("./pics/frame10.png");
 
                     ctx.drawImage(frame10, 4, 1, 165, 170);
+                } else if (LP.frames.equipped === "1kcowboish") {
+
+                    let cowboish = await Canvas.loadImage("./pics/cowboish.png");
+
+                    ctx.drawImage(cowboish, 4, -7, 185, 185);
                 }
 
 

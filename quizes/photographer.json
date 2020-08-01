@@ -31,6 +31,18 @@
 		"Answer": ["cutlass or saber", "sword", "saber", "cutlass"],
 		"Difficulty": "HARD",
 		"Attachment": "https://i.imgur.com/5U3i8QF.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin below?",
+		"Answer": ["iris"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.imgur.com/eYTi3Ls.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of the skin below?",
+		"Answer": ["moonlight gentleman"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.imgur.com/QsHNUNb.png"
 	}
 	
 ]

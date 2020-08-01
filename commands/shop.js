@@ -1,7 +1,7 @@
 const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 
-const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10, clues, frags, ess1, ess2, ess3, insp } = require("../emojis.json");
+const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10, cowboish_frame, clues, frags, ess1, ess2, ess3, insp } = require("../emojis.json");
 
 const { RichEmbed } = require('discord.js');
 const { newLP } = require("../functions.js");
@@ -341,28 +341,32 @@ module.exports = {
                 description = description + " <:frame6:694820135306919977>";
 
             }
+            if (LP.Opened.includes("1kcowboish")) {
+                description = description + cowboish_frame;
+
+            }
 
             description = description + `${frame7} ${frame8} ${frame9} ${frame10}`
 
             let equipped;
 
             if (LP.frames.equipped === "frame1") {
-                equipped = "<:frame1:693410346005954580>";
+                equipped = frame1;
             }
             else if (LP.frames.equipped === "frame2") {
-                equipped = "<:frame2:693410403283370045>";
+                equipped = frame2;
             }
             else if (LP.frames.equipped === "frame3") {
-                equipped = "<:frame3:693410506643472385>";
+                equipped = frame3;
             }
             else if (LP.frames.equipped === "frame4") {
-                equipped = "<:frame4:693526250647715892>";
+                equipped = frame4;
             }
             else if (LP.frames.equipped === "frame5") {
-                equipped = "<:frame5:693526158830075955>";
+                equipped = frame5;
             }
             else if (LP.frames.equipped === "frame6") {
-                equipped = "<:frame6:694820135306919977>";
+                equipped = frame6;
             }
             else if (LP.frames.equipped === "frame7") {
                 equipped = frame7;
@@ -375,6 +379,9 @@ module.exports = {
             }
             else if (LP.frames.equipped === "frame10") {
                 equipped = frame10;
+            }
+            else if (LP.frames.equipped === "1kcowboish") {
+                equipped = cowboish_frame;
             }
             else {
                 equipped = "None!";
