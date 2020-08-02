@@ -28,7 +28,7 @@
 	},
 	{
 		"Question": "**Retype the sentence:**\nGeisha's hitbox is weird",
-		"Answer": ["geisha's hitbox is weird"],
+		"Answer": ["geisha's hitbox is weird", "geisha’s hitbox is weird", "geisha‘s hitbox is weird"],
 		"Difficulty": "Medium rare",
 		"Attachment": "https://i.pinimg.com/564x/d1/6f/a2/d16fa245e4ea9fe0124b6f9d18cf8727.jpg",
 		"Artist": "@Hanh_R_A - Twitter"
