@@ -281,7 +281,7 @@ module.exports = async (bot, message) => {
             break;
 
         case 'suggest': case "reportbug": case "issue":
-            bot.commands.get('suggest').execute(message, args, bot, MohiMoo);
+            bot.commands.get('suggest').execute(message, bot, MohiMoo);
             break;
 
         case "setup":

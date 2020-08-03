@@ -41,6 +41,30 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/TY3U1nY.png",
 		"Artist": "@GODCAT - Pinterest"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["tame"],
+		"Difficulty": "Tricky",
+		"Attachment": "https://i.imgur.com/bZcXvpg.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["tame"],
+		"Difficulty": "Tricky",
+		"Attachment": "https://i.imgur.com/bZcXvpg.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["king arthur"],
+		"Difficulty": "Hard?",
+		"Attachment": "https://i.imgur.com/bcKVrqJ.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["golden sea monster"],
+		"Difficulty": "Hard?",
+		"Attachment": "https://i.imgur.com/0viJzXB.png"
 	}
 	
 ]

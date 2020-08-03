@@ -19,19 +19,21 @@ module.exports = {
 
         if (!args[1] || !args[2] || !args[3]) return ErrorMsg(bot, message, "**Too few arguments**\nPlease provide someone to gift, how much you want to gift and what you want to gift.\nLol did i get you confused?\nHere is the correct usage: `" + prefix + "gift <@tagSomeone> <amount(NUMBER)> <item>`\n\nGiftable items are: `inspirations`, `fragments`, `clues`, `ess1`, `ess2`, `ess3`");
 
+        if (args[2].includes("-")) return message.channel.send(`**${message.author.username}** can't gift a negative number >:/`);
+
+        if (!gifted) return ErrorMsg(bot, message, "Couldn't find that user!\nPlease make sure that you mention them right after the command execution!\nExample: `" + prefix + "gift`" + ` ${message.author} ` + "`10 fragments`");
+
         if (gifted.user.id === bot.user.id) return message.reply("I don't want your gift... Keep it for yourself -v-");
 
         if (gifted.user.bot) return message.reply(`Are you for real?\nare you trying to gift a bot??! Why? .-.`);
 
         if (gifted.id === message.author.id) return message.reply("Are you serious??\n**Y-you wanna gift yourself??!**\nSorry friend but that's not how life works :/");
 
-        if (!gifted) return ErrorMsg(bot, message, "Couldn't find that user!\nPlease make sure that you mention them right after the command execution!\nExample: `" + prefix + "gift`" + ` ${message.author} ` + "`10 fragments`");
 
         let giftedLP = await logicPath.findOne({ UserID: gifted.id });
 
         if (!giftedLP) return ErrorMsg(bot, message, "This user doesn't have any data saved!\nPlease ask them to execute one of the commands below so i can create an account for em :)\n\n`quick`, `hunt`, `roll` or other `" + prefix + "help logicpath` commands");
 
-        if (args[2].includes("-")) return message.channel.send(`**${message.author.username}** can't gift a negative number >:/`);
 
         if (["frag", "frags", "fragments", "fragment"].includes(args[3].toLowerCase())) {
 
@@ -196,7 +198,7 @@ module.exports = {
 
             }
         } else {
-            return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\nHere is a list of giftable items\n\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n" + ess1 +" | Shortcuts: `ess1`, `s12-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s12-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s12-3`, `3`\nExample: `" + prefix + "gift`" + ` ${message.author}` + "` 10 fragments`");
+            return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\nHere is a list of giftable items\n\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n" + ess1 + " | Shortcuts: `ess1`, `s12-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s12-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s12-3`, `3`\nExample: `" + prefix + "gift`" + ` ${message.author}` + "` 10 fragments`");
         }
 
     }

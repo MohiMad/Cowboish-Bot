@@ -37,6 +37,18 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://pbs.twimg.com/media/EWFTzbsUwAEvlLG?format=jpg&name=large",
 		"Artist": "@clockworkcynicc on Twitter"
-	}
+	},
+	{
+		"Question": "**Question:**\nWhat is the Priestess's name?",
+		"Answer": ["fiona"],
+		"Difficulty": "Its hard...JK its easy",
+		"Attachment": "https://i.imgur.com/Lo5NSqk.png"
+	},
+	{
+		"Question": "**What's the name of the skin in the image?**",
+		"Answer": ["morgan the fairy"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/MdKzoxP.png"
+    }
 
 ]
