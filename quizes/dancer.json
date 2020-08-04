@@ -34,5 +34,12 @@
 		"Answer": ["affect"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.pinimg.com/564x/85/2e/a0/852ea07467eafeb4d7156859561a0416.jpg"
-		}
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["kim"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/DuOLZ7I.png"
+	}
+
 ]

@@ -24,7 +24,7 @@
 		"Attachment": "https://i.pinimg.com/564x/f2/43/e8/f243e82e06ec75d340b9cc6be55e9b90.jpg"
 	},
 	{
-		"Question": "**Question:**\nAt the start of the match, how many drinks does barmaid have?",
+		"Question": "**Question:**\nAt the beginning of the match, how many **drinkable** drinks does the barmaid have?",
 		"Answer": ["1", "one"],
 		"Difficulty": "Easy tbh",
 		"Attachment": "https://i.pinimg.com/564x/5a/80/7f/5a807f0aeeada747d105fc76e015b720.jpg"

@@ -35,11 +35,10 @@ module.exports = {
             let gifs = [
                 "https://media.giphy.com/media/kZimQCtfhr6KAWxtKY/giphy.gif",
                 "https://media.giphy.com/media/Kebl8fwR139CLl1eqM/giphy.gif",
-                "https://media.giphy.com/media/hTaWusjGRpo20ocdHk/giphy.gif",
                 "https://media.giphy.com/media/fTmk1jxRn2XIsKIf3C/giphy.gif",
-                "https://media.giphy.com/media/j6GLwbymLmyUsOSoRM/giphy.gif",
-                "https://media.giphy.com/media/TfXO3qsu2El2L6FdDP/giphy.gif",
-                "https://media.giphy.com/media/W6X01hvGL5jWdjHRfh/giphy.gif"
+                "https://media.giphy.com/media/W6X01hvGL5jWdjHRfh/giphy.gif",
+                "https://media.giphy.com/media/W2Ky2hBaPh7dOo8q4F/giphy.gif",
+                "https://media.giphy.com/media/iFURGcpqoWtHG1FKxE/giphy.gif"
             ];
 
             let gif = Math.floor(Math.random() * gifs.length);

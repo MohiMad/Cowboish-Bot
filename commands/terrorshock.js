@@ -16,7 +16,7 @@ module.exports = {
 
         }
         else if (!persona) {
-            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "terrorshcok <MentionHere>`")
+            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "terrorshock <MentionHere>`")
 
         }
         else if (persona.id === message.author.id) {
@@ -38,14 +38,11 @@ module.exports = {
 
             let gifs = [
                 "https://media.giphy.com/media/QC1qkRoP4he8LSTHiI/giphy.gif",
-                "https://media.giphy.com/media/iFCDucgxIIZq23D6sG/giphy.gif",
-                "https://media.giphy.com/media/cOQJujA64jVBkafOq2/giphy.gif",
-                "https://media.giphy.com/media/KH8QLADr9qs0WVlOWa/giphy.gif",
-                "https://media.giphy.com/media/iGGTa8sDxbcPGzt72r/giphy.gif",
-                "https://media.giphy.com/media/RgtsXVT3DWDrK9QxQ9/giphy.gif",
-                "https://media.giphy.com/media/Q9AfGunQCw8qNcB8Np/giphy.gif",
-                "https://media.giphy.com/media/KGMmuXvQf9hPS8PlSu/giphy.gif",
-                "https://media.giphy.com/media/gGqpuYDk708BiQf4VQ/giphy.gif"
+                "https://media.giphy.com/media/THmbomy7gCPo7sI0Jx/giphy.gif",
+                "https://media.giphy.com/media/jQVkx1KobkMbDSHJvv/giphy.gif",
+                "https://media.giphy.com/media/WOMxVv5u7g4QACyZ01/giphy.gif",
+                "https://media.giphy.com/media/kxlmBgEsLgFFbcZhDY/giphy.gif",
+                "https://media.giphy.com/media/daDBdw4UfZ3JVoAO78/giphy.gif"
             ];
 
             let gif = Math.floor(Math.random() * gifs.length);

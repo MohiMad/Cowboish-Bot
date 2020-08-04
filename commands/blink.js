@@ -12,16 +12,17 @@ module.exports = {
         let person = message.author.username;
 
         let blinks = [
+            "https://media.giphy.com/media/YOpwZ3jr5K6NNR2Zvo/giphy.gif",
+            "https://media.giphy.com/media/RGRPnKttJ8qvlW49bI/giphy.gif",
             "https://media.giphy.com/media/WqLmLFHyxCaNamvv95/giphy.gif",
             "https://media.giphy.com/media/U4LCFb2WlqvHd7VHDi/giphy.gif",
-            "https://media.giphy.com/media/jpzooO3smI5JRG0wuU/giphy.gif",
             "https://media.giphy.com/media/LM1n0ETdcqJEnrhSqD/giphy.gif",
-            "https://media.giphy.com/media/cNvyZFFMJdTAac6qR7/giphy.gif",
-            "https://media.giphy.com/media/UVAS9ONmZPFin7UBw2/giphy.gif",
             "https://media.giphy.com/media/H1YLMr6ZYNq9mUfUgH/giphy.gif",
             "https://media.giphy.com/media/S9oeNa2E63gKP4k75y/giphy.gif",
             "https://media.giphy.com/media/IbNsqcUpLKDsyZfSpx/giphy.gif",
-            "https://media.giphy.com/media/SXO8CtYraR35V5E0lk/giphy.gif"
+            "https://media.giphy.com/media/SXO8CtYraR35V5E0lk/giphy.gif",
+            "https://media.giphy.com/media/jnoDjfkhShvhplArpk/giphy.gif",
+            "https://media.giphy.com/media/ghOIJSu55J73TjL6xk/giphy.gif"
 
         ];
 

@@ -26,11 +26,7 @@ module.exports = {
             let gifs = [
                 "https://media.giphy.com/media/iihJY3okuMaWJM2VJz/giphy.gif",
                 "https://media.giphy.com/media/USxllv8yO2lKlVX2kn/giphy.gif",
-                "https://media.giphy.com/media/j1n2Ip5KDBn4KOFoYd/giphy.gif",
                 "https://media.giphy.com/media/XI7P3VBc0ZswzZJXNT/giphy.gif",
-                "https://media.giphy.com/media/Qy8eT1raTGRVkFvVfd/giphy.gif",
-                "https://media.giphy.com/media/ZENiBRWDNIY0FzF7Gv/giphy.gif",
-                "https://media.giphy.com/media/KCeHCT4bLZavsZnSWL/giphy.gif",
                 "https://media.giphy.com/media/l4S1iNUgNehVLqai4o/giphy.gif",
                 "https://media.giphy.com/media/ieyTuLktoejkR6cWEE/giphy.gif",
                 "https://media.giphy.com/media/YP8BNZWtWa77wKU1Sp/giphy.gif"

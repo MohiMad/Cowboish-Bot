@@ -36,7 +36,9 @@ module.exports = {
                 "https://media.giphy.com/media/VgTGeLnEpppAKOMjWS/giphy.gif",
                 "https://media.giphy.com/media/ZZTwBZifNdTxqiQcJ5/giphy.gif",
                 "https://media.giphy.com/media/Ketwl53yVpflR6wNeD/giphy.gif",
-                "https://media.giphy.com/media/dX3T6yjJHWktn7JXJ5/giphy.gif"
+                "https://media.giphy.com/media/dX3T6yjJHWktn7JXJ5/giphy.gif",
+                "https://media.giphy.com/media/if5PYQvmb8sOr5jIMj/giphy.gif",
+                "https://media.giphy.com/media/JQGZeB4vqRiZgooE98/giphy.gif"
 
             ];
 
