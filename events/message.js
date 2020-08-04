@@ -41,11 +41,6 @@ module.exports = async (bot, message) => {
         bot.commands.get('setcowboishprefix').execute(message, args, bot);
     }
 
-    if (message.content.toLowerCase() === "startcowboishsurvey") {
-        bot.commands.get('survey').execute(message, bot, MohiMoo, prefix);
-
-    }
-
     if (!message.content.startsWith(prefix)) return;
 
 
@@ -298,23 +293,6 @@ module.exports = async (bot, message) => {
 
     }
     //End of config commands
-
-    let number = Math.floor(Math.random() * 10);
-
-    if (number === 1 || number === 2) {
-        const LP = await logicpath.findOne({ UserID: message.author.id });
-
-        if (!LP) return;
-
-        if (LP.Opened.includes("1kcowboish")) return;
-
-        let celebEmbed = new RichEmbed()
-            .setImage("https://i.imgur.com/Yq0XDuU.png")
-            .setColor("RANDOM")
-            .setTitle("Cowboish bot 1k servers celebration :D");
-
-        message.channel.send(celebEmbed);
-    }
 
 
 };
