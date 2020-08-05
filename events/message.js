@@ -1,8 +1,5 @@
 const Guild = require("../models/guild.js");
 
-const { RichEmbed } = require("discord.js");
-const logicpath = require('../models/logicpath');
-
 module.exports = async (bot, message) => {
 
     const MohiMoo = bot.users.get("478527909250990090");
@@ -143,7 +140,6 @@ module.exports = async (bot, message) => {
             break;
 
         case "quick": case "play":
-
             bot.commands.get('quick').execute(message, args, bot, prefix);
             break;
 
@@ -254,17 +250,17 @@ module.exports = async (bot, message) => {
             bot.commands.get('info').execute(message, args, bot, MohiMoo, prefix);
             break;
 
-        case "userinfo": case "usrinfo":
+        case "userinfo": case "usrinfo": case "user-info":
             bot.commands.get('userinfo').execute(message, args, MohiMoo);
             break;
 
-        case "serverinfo": case "srvrinfo":
+        case "serverinfo": case "srvrinfo": case "server-info":
             bot.commands.get('serverinfo').execute(message, args, MohiMoo);
             break;
 
         case 'ping':
-            const m = await message.channel.send("Ping?");
-            m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
+            const m = await message.channel.send("Yee?");
+            m.edit(`<:peepo_haw:699667884833636352> Haw!\nLatency is **${m.createdTimestamp - message.createdTimestamp}ms**.\nAPI Latency is **${Math.round(bot.ping)}ms**`);
             break;
 
         case "help": case "commands": case "helpme":
@@ -272,11 +268,11 @@ module.exports = async (bot, message) => {
             break;
 
         case 'guilds': case "servers":
-            message.channel.send(`Cowboish stats => **${bot.users.size}** users, in **${bot.channels.size}** channels of **${bot.guilds.size}** servers :D`)
+            message.channel.send(`Cowboish stats:\n**${bot.users.size}** Users\n**${bot.channels.size}** Channels\n**${bot.guilds.size}** Guilds :D`)
             break;
 
         case 'suggest': case "reportbug": case "issue":
-            bot.commands.get('suggest').execute(message, bot, MohiMoo);
+            bot.commands.get('suggest').execute(message, bot, args, MohiMoo);
             break;
 
         case "setup":

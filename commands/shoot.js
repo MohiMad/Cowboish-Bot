@@ -33,13 +33,7 @@ module.exports = {
             var fact = Math.floor(Math.random() * facts.length);
 
             let gifs = [
-                "https://media.giphy.com/media/cmCHwTpo5BcpAWPsqM/giphy.gif",
-                "https://media.giphy.com/media/j0Fhyx3xgFQ6IgDZLS/giphy.gif",
-                "https://media.giphy.com/media/WpTmaEmDC4Z4VAJZp3/giphy.gif",
-                "https://media.giphy.com/media/mBFxHLVMKUnfLx0U6A/giphy.gif",
-                "https://media.giphy.com/media/WV9ZYinl8gE50ZhYRP/giphy.gif",
-                "https://media.giphy.com/media/jRe4j9FZs6WEpy3ItN/giphy.gif",
-                "https://media.giphy.com/media/dZFyAYep8LRsU0TEfd/giphy.gif"
+                "https://media.giphy.com/media/Tf9YqAW7duuj5CTVYO/giphy.gif"
             ];
 
             let gif = Math.floor(Math.random() * gifs.length);

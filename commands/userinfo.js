@@ -15,13 +15,7 @@ module.exports = {
         // Member variables
         const joined = formatDate(member.joinedAt);
 
-        const roles = member.roles
-            .filter(r => r.id !== message.guild.id)
-            .map(r => r).join(", ") || 'none';
-
-        if (roles.length > 100) {
-            roles = `Many...`;
-        }
+        const roles = member.roles.size - 1;
 
         // User variables
         const created = formatDate(member.user.createdAt);
