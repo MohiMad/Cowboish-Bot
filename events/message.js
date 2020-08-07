@@ -177,8 +177,6 @@ module.exports = async (bot, message) => {
 
             break;
 
-
-
         //END OF LOGICPATH
 
 
@@ -271,9 +269,14 @@ module.exports = async (bot, message) => {
             message.channel.send(`Cowboish stats:\n**${bot.users.size}** Users\n**${bot.channels.size}** Channels\n**${bot.guilds.size}** Guilds :D`)
             break;
 
-        case 'suggest': case "reportbug": case "issue":
+        case 'suggest': case "suggestidea":
             bot.commands.get('suggest').execute(message, bot, args, MohiMoo);
             break;
+
+        case "reportbug": case "issue": case "reportissue": case "bug":
+            bot.commands.get('reportissue').execute(message, bot, args);
+
+        break;
 
         case "setup":
             bot.commands.get('setup').execute(message, args, MohiMoo, bot);

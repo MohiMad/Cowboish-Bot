@@ -3,105 +3,9 @@ const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Cooldown = require("./models/cooldown.js");
 const humanizeDuration = require("humanize-duration");
-
 const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
 
-
-
-
 module.exports = {
-
-
-	pageScroller: async (message, imageArray, title) => {
-
-		let Pages = imageArray;
-
-		let pageI = 0;
-
-		let embed = new RichEmbed()
-			.setColor("RANDOM")
-			.setAuthor(title, message.author.displayAvatarURL, imageArray[pageI].replace(".jpg", ""));
-
-		embed.setFooter(`Spawn 1 of ${imageArray.length}`)
-		embed.setImage(imageArray[pageI]);
-
-
-		let msg = await message.channel.send(embed);
-
-		await msg.react('⏪');
-
-		await msg.react('⏩');
-
-		await msg.react('❌');
-
-
-		let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
-
-		let forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
-
-
-		let back = msg.createReactionCollector(backFilter, {
-			time: 300000
-		});
-
-		let forward = msg.createReactionCollector(forwardFilter, {
-			time: 300000
-		});
-
-		back.on('collect', async r => {
-			await r.remove(message.author);
-
-			if (pageI === 0) {
-				pageI = Pages.length - 1;
-			} else {
-				pageI--;
-			}
-
-			embed.setImage(imageArray[pageI]);
-			embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
-
-			await msg.edit(embed);
-		});
-
-		forward.on('collect', async r => {
-
-			await r.remove(message.author);
-
-			if (pageI === Pages.length - 1) {
-
-				pageI = 0;
-			} else {
-				pageI++;
-			}
-			embed.setImage(imageArray[pageI]);
-			embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
-
-
-			await msg.edit(embed);
-		});
-
-		let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
-
-		let end = msg.createReactionCollector(endFilter, {
-			time: 300000
-		});
-
-		end.on('collect', async r => {
-
-			await r.remove(message.author);
-
-			await end.stop();
-			await forward.stop();
-			await back.stop();
-
-			message.channel.send(`**${message.author.username}, Ended...**`);
-
-		});
-
-
-
-
-	},
 
 	rewards: (bot) => {
 
@@ -267,7 +171,7 @@ module.exports = {
 			.setColor("RED")
 			.setDescription(error)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", "https://images-ext-2.discordapp.net/external/dpkUSBrSk9f20kq2Aw8B521pM6BcFhJdLBsYokj1ry0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/632291800585076761/863aeefefbb365f8ddc498a1c8fecb5d.png?width=564&height=564");
+			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(errEmbed);
 	},
 
@@ -478,12 +382,9 @@ module.exports = {
 			.setColor("RED")
 			.setDescription(des)
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1");
+			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(coolEmbed).then(m => m.delete(30000));
 
 	}
-
-
-
 
 };

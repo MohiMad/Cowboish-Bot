@@ -29,6 +29,13 @@
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/mZ7oBE8.png",
 		"Artist": "MADPanda66 on DeviantArt"
-    }
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["basil"],
+		"Difficulty": "Normal",
+		"Attachment": "https://i.imgur.com/M8wQ8xi.png",
+		"Artist": "@Yumi_kito on Twitter"
+	}
 	
 ]

@@ -1,0 +1,33 @@
+[
+    {
+        "Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`chair`, `asylum`, `carve`, `rock`, `statue`)",
+        "Answer": ["chair"],
+        "Difficulty": "Think outside the box to answer",
+        "Attachment": "https://i.imgur.com/jG8RxCD.png"
+    },
+    {
+        "Question": "**Question:**\nWhat's the Sculptor's real name?",
+        "Answer": ["galatea"],
+        "Difficulty": "Pretty Easy",
+        "Attachment": "https://i.imgur.com/IylfeTe.png"
+    },
+    {
+        "Question": "**Question:**\nWhat is the name of this skin?",
+        "Answer": ["checkmate"],
+        "Difficulty": "Hard",
+        "Attachment": "https://i.imgur.com/w8AzfBT.png"
+    },
+    {
+        "Question": "**Question:**\nWhat is the maximum amount of statues can the Sculptor have?",
+        "Answer": ["3", "three"],
+        "Difficulty": "Hard",
+        "Attachment": "https://i.imgur.com/NITAHUH.png"
+    },
+    {
+        "Question": "**Question:**\nWhat is the name of Sculptor's weapon?",
+        "Answer": ["carving knife"],
+        "Difficulty": "Hard",
+        "Attachment": "https://i.imgur.com/ojeby62.png",
+        "Artist": "ilmheg on Twitter"
+    }
+]

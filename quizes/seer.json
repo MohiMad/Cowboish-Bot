@@ -34,5 +34,12 @@
 		"Answer": ["eli is an op stalker"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.pinimg.com/564x/c0/62/8a/c0628ace15b5d23b6417b81d0f92c52f.jpg"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["surveyor"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/hQyb8Zs.png",
+		"Artist": "Mishroom on Twitter"
 	}
 ]

@@ -31,6 +31,12 @@
 		"Difficulty": "Easy",
 		"Attachment": "https://pbs.twimg.com/media/EdrSxlfUYAIiUgs?format=jpg&name=large",
 		"Artist": "@ShiSeptiana on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["scrooge"],
+		"Difficulty": "Its easy...jk its hard",
+		"Attachment": "https://i.imgur.com/ZDqcLII.png"
 	}
 	
 ]

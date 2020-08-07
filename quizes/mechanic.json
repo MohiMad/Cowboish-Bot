@@ -16,5 +16,11 @@
 		"Answer": ["One", "one", "1"],
 		"Difficulty": "Hard lol",
 		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673607059434110976/images.png"
-    }
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["red riding hood"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/FqqzIN7.png"
+	}
 ]

@@ -39,6 +39,19 @@
 		"Attachment": "https://pbs.twimg.com/media/ELERY0sW4AAwOuM?format=jpg&name=900x900",
 		"Artist": "@Hanh_R_A - Twitter"
 
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["dream walker"],
+		"Difficulty": "Ez",
+		"Attachment": "https://i.imgur.com/nR922Qq.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["bone flute"],
+		"Difficulty": "Normal",
+		"Attachment": "https://i.imgur.com/rn4KWuI.png",
+		"Artist": "@hyena_prince on Instagram"
 	}
 	
 ]

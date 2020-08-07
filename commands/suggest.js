@@ -1,6 +1,7 @@
 const { RichEmbed } = require('discord.js');
 const { coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 
+const spamStopper = new Set();
 module.exports = {
     name: 'suggest',
     description: "sends a suggestion to mohimoo",
@@ -12,24 +13,31 @@ module.exports = {
         var secondQuestion = "0";
 
         let authorName = message.author.username;
-        const suggest = bot.channels.get('653529896903245834');
+        const suggest = bot.channels.get('662686240507691008');
 
         let sayMessage = args.slice(1).join(" ");
+
+        if (!suggest) return;
 
         const filter = m => m.author.id === message.author.id;
         if (!cooldownCheck) {
 
+            if (spamStopper.has(message.author)) return message.reply("**A suggestion is already ongoing!**");
 
             if (!sayMessage) {
 
                 message.channel.send('**Before starting... Just know that everything suggested will be sent to the devs...**\nAre you sure you wanna continue? Type "No" to cancel... Send anything else to continue the suggesting process...');
-
+                spamStopper.add(message.author);
                 await message.channel.awaitMessages(filter, {
                     max: 2,
                     time: 180000
                 }).then(async collected => {
 
-                    if (["no"].includes(collected.first().content.toLowerCase())) return message.channel.send(`**Canceled suggesting, ${authorName}!**`);
+                    if (["no"].includes(collected.first().content.toLowerCase())) {
+                        spamStopper.delete(message.author);
+
+                        return message.channel.send(`**Canceled suggesting, ${authorName}!**`);
+                    }
 
                     message.channel.send("**What is your suggestion?**\nPlease describe as clearly as possible...");
 
@@ -53,15 +61,7 @@ module.exports = {
                                 .setAuthor(`${message.author.username} has a suggestion!`, message.author.displayAvatarURL)
                                 .setThumbnail(message.author.displayAvatarURL)
                                 .setColor("0xF8CE14")
-                                .setDescription(`
-                        🆔: *${message.author.id}*
-                        📎 **User Tag**: *${message.author.tag}*
-
-                        💭 **Suggestion**:
-                        ${firstQuestion}
-                        
-                        ☝ **Priority level**: 
-                        ${secondQuestion}`)
+                                .setDescription(`🆔: *${message.author.id}*\n📎 **User Tag**: *${message.author.tag}*\n\n💭 **Suggestion**:\n${firstQuestion}\n\n☝ **Priority level**:\n${secondQuestion}`)
                                 .setTimestamp()
                                 .setFooter(bot.user.tag, bot.user.displayAvatarURL);
 
@@ -80,17 +80,27 @@ module.exports = {
 
                             message.channel.send(respEmbed);
                             await addCooldown(message, 5 * 60 * 1000, "suggest");
+                            spamStopper.delete(message.author);
+
+                        }).catch(collected => {
+                            spamStopper.delete(message.author);
+
+                            return message.reply(`**Time is over!** try again...`);
                         });
 
                     }).catch(collected => {
+                        spamStopper.delete(message.author);
+
                         return message.reply(`**Time is over!** try again...`);
                     });
                 }).catch(collected => {
+                    spamStopper.delete(message.author);
                     return message.reply(`**Time is over!** try again...`);
                 });
 
             } else {
                 message.channel.send('**Before starting... Just know that everything suggested will be sent to the devs...**\nAre you sure you wanna continue? Type "No" to cancel... Send anything else to continue suggesting...');
+                spamStopper.add(message.author);
 
                 await message.channel.awaitMessages(filter, {
                     max: 2,
@@ -141,9 +151,17 @@ module.exports = {
 
                         message.channel.send(respEmbed);
                         await addCooldown(message, 5 * 60 * 1000, "suggest");
+                        spamStopper.delete(message.author);
+
+                    }).catch(collected => {
+                        spamStopper.delete(message.author);
+
+                        return message.reply(`**Time is over!** try again...`);
                     });
 
                 }).catch(collected => {
+                    spamStopper.delete(message.author);
+
                     return message.reply(`**Time is over!** try again...`);
                 });
             }

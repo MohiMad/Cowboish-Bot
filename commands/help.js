@@ -19,7 +19,7 @@ module.exports = {
             .addField('📷 Images 📷', '`' + prefix + 'help images`', true)
             .addField("🛠 Utility 🛠", "`" + prefix + "help utility`", true)
             .addField('<:dice:655384578499936257>  Logicpath <:s121:735775380266549319> ', '`' + prefix + 'help logicpath`', true)
-            .addField("❓ Errors/suggestions ❓", "`" + prefix + "suggest`", true)
+            .addField("❓ Errors/suggestions ❓", "`" + prefix + "suggest`/`" + prefix + "reportissue`", true)
             .addField("For more info ", "[Cowboish Website](https://mohimad.github.io/CowboishBot/)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
@@ -68,7 +68,7 @@ module.exports = {
                 .setTitle('⚙ Help is here :D ⚙', true)
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
+                .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest` | `reportissue`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
                 .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
             message.channel.send(genEmbed);
@@ -90,7 +90,7 @@ module.exports = {
                 .setTitle("Identity V logicpath commands!")
                 .setColor("RANDOM")
                 .setDescription("In this category you get to play matches and roll dices to be able to open the season's current essences :D\n\n**LogicPath commands!**\n`daily` ➜ Get your daily reward, **24** hours cooldown\n\n`hunt` ➜ Answer the quiz of the chosen hunter to get a dice\n\n`quick` ➜ Play a quick match as a survivor to get dices\n\n`roll` ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:s121:735775380266549319>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`open` ➜ Open the season's current essences (<:s121:735775380266549319>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`logicpath` ➜ Check your logicpath status\n\n`shop` ➜ A list of stuff you can buy (Survivors, Hunters and essences)\n\n`buy` ➜ Buy Survivors, Hunters or essences\n\n`leaderboard` ➜ check the top 5 players for this category\n\n`set` ➜ Set your `region`, `biography` and `ID` so they display in your `logicpath` profile\n\n`equip` ➜ equip/change your portrait-frame/portrait to be seen in the `lp` command\n\n`gift` ➜ Gift your friends your (<:inspirations:655840409674711060>, <:frags:655840344725913600>, <:clue:655384523735040000>, <:s121:735775380266549319>, <:ess2:655840643847028751> or <:ess3:655840571616919586>)")
-                .setFooter("This category is still W.I.P so feel free to suggest anything by doing >suggest :)");
+                .setFooter("This category is still W.I.P so feel free to suggest anything by doing " + prefix + "suggest :)");
 
             message.channel.send(logicpathEmbed);
 
