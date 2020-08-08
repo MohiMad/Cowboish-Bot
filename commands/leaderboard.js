@@ -13,6 +13,7 @@ module.exports = {
         if (!cooldownCheck) {
 
             if (!args[1]) {
+                return message.reply("**This function is temporarily disabled due to late response...**");
                 const guild_cmd = "`" + prefix + "LD guild`"
 
                 logicPath.find({})
