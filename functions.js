@@ -7,12 +7,12 @@ const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
 
 module.exports = {
 
-	rewards: (bot) => {
+	rewards: async (bot) => {
 
-		logicPath.find({})
+		await logicPath.find({})
 			.sort([
 				["logic", "descending"]
-			]).exec((err, res) => {
+			]).exec(async (err, res) => {
 				if (err) console.log(err);
 
 				//the ID of Rewards channel on Cowboish server

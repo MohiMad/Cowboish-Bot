@@ -32,30 +32,37 @@ module.exports = async (bot) => {
     }, 100000);//sets the activity each 100 s
 
     schedule.scheduleJob("1 12 * * 1", async function () {
-        let set = new Set();
+        const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
 
-        if (set.has(bot.user.id)) return;
-
-        else {
-
+        if (!checkForWeeklyExecution) {
             rewards(bot);
 
-            set.add(bot.user.id);
+            const weeklySpamStopper = new Cooldown({
+                command: "weeklyrewards",
+                userID: bot.user.id,
+                timeRemaining: Date.now() + 300000,
+                dateNow: Date.now()
+            });
 
+            await weeklySpamStopper.save().catch(err => console.log(err));
         }
     });
 
     schedule.scheduleJob("0 0 * * *", async function () {
-        let givSet = new Set();
-        if (givSet.has(bot.user.id)) return;
+        const checkForExecution = await Cooldown.findOne({ userID: bot.user.id, command: "giveaway" });
 
-        bot.commands.get('giveaway').execute(bot);
-        givSet.add(bot.user.id);
+        if (!checkForExecution) {
+            await bot.commands.get('giveaway').execute(bot);
 
-        setTimeout(() => {
-            givSet.delete(bot.user.id);
+            const giveawaySpamStopper = new Cooldown({
+                command: "giveaway",
+                userID: bot.user.id,
+                timeRemaining: Date.now() + 300000,
+                dateNow: Date.now()
+            });
 
-        }, 120000)
+            await giveawaySpamStopper.save().catch(err => console.log(err));
+        }
 
     });
 

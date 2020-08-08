@@ -35,38 +35,36 @@ module.exports = async (bot, message) => {
     if (message.author.bot) return;
 
     if (message.content.startsWith("setcowboishprefix")) {
-        bot.commands.get('setcowboishprefix').execute(message, args, bot);
+        await bot.commands.get('setcowboishprefix').execute(message, args, bot);
     }
 
     if (!message.content.startsWith(prefix)) return;
-
-
 
     switch (args[0].toLowerCase()) {
 
         //Identity V commands Starts Here!
         case "roll20": case "r20":
-            bot.commands.get('roll20').execute(message, args, MohiMoo);
+            await bot.commands.get('roll20').execute(message, args, MohiMoo);
             break;
 
         case "identify": case "whois": case "stereotype":
-            bot.commands.get('identify').execute(message, args, MohiMoo);
+            await bot.commands.get('identify').execute(message, args, MohiMoo);
             break;
 
         case "winrate": case "wr":
-            bot.commands.get('winrate').execute(message, args, MohiMoo);
+            await bot.commands.get('winrate').execute(message, args, MohiMoo);
             break;
 
         case "randomize": case "random": case "pick":
-            bot.commands.get('random').execute(message, args, bot, prefix);
+            await bot.commands.get('random').execute(message, args, bot, prefix);
             break;
 
         case "idvwiki": case "identityvwiki": case "identityvwikipedia": case "idvwikipedia":
-            bot.commands.get('idvwiki').execute(message, args, bot, prefix);
+            await bot.commands.get('idvwiki').execute(message, args, bot, prefix);
             break;
 
         case "spawn": case "spawns": case "mapspawns":
-            bot.commands.get('spawns').execute(message, args, bot, prefix);
+            await bot.commands.get('spawns').execute(message, args, bot, prefix);
             break;
 
 
@@ -75,23 +73,23 @@ module.exports = async (bot, message) => {
         //Fun Commands Starts Here!
 
         case "joke": case "lemmelaugh":
-            bot.commands.get('joke').execute(message, args, MohiMoo);
+            await bot.commands.get('joke').execute(message, args, MohiMoo);
             break;
 
         case "yee":
-            bot.commands.get('yee').execute(message, args, MohiMoo);
+            await bot.commands.get('yee').execute(message, args, MohiMoo);
             break;
 
         case 'meme': case "memes":
-            bot.commands.get('meme').execute(message, args, MohiMoo);
+            await bot.commands.get('meme').execute(message, args, MohiMoo);
             break;
 
         case 'idv': case "identityv":
-            bot.commands.get('idv').execute(message, args, MohiMoo);
+            await bot.commands.get('idv').execute(message, args, MohiMoo);
             break;
 
         case 'say': case "repeat":
-            bot.commands.get('say').execute(message, args, MohiMoo);
+            await bot.commands.get('say').execute(message, args, MohiMoo);
             break;
 
         //End Of Fun commands
@@ -99,81 +97,81 @@ module.exports = async (bot, message) => {
         //____Image manipulation____
 
         case "slap":
-            bot.commands.get('slap').execute(message, args, bot);
+            await bot.commands.get('slap').execute(message, args, bot);
             break;
 
         case "text": case "chat": case "ingamechat":
-            bot.commands.get('chat').execute(message, args, bot, prefix);
+            await bot.commands.get('chat').execute(message, args, bot, prefix);
             break;
 
         case "chair":
-            bot.commands.get('chair').execute(message, args, bot);
+            await bot.commands.get('chair').execute(message, args, bot);
             break;
 
         case "chosendeath": case "deth": case "death":
-            bot.commands.get('death').execute(message, args, bot, prefix);
+            await bot.commands.get('death').execute(message, args, bot, prefix);
             break;
 
         case "siptea": case "sip": case "sippingtea":
-            bot.commands.get('siptea').execute(message, args, bot);
+            await bot.commands.get('siptea').execute(message, args, bot);
             break;
 
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
-            bot.commands.get('roll').execute(message, args, bot, prefix);
+            await bot.commands.get('roll').execute(message, args, bot, prefix);
             break;
 
         case "open": case "essence": case "ess": case "e":
-            bot.commands.get('open').execute(message, args, bot, MohiMoo, prefix);
+            await bot.commands.get('open').execute(message, args, bot, MohiMoo, prefix);
 
             break;
 
         case "lp": case "logicpath": case "inv": case "inventroy":
-            bot.commands.get('logicpath').execute(message, args, bot, prefix);
+            await bot.commands.get('logicpath').execute(message, args, bot, prefix);
 
             break;
 
         case "ld": case "leaderboard":
-            bot.commands.get('leaderboard').execute(message, args, bot, prefix);
+            await bot.commands.get('leaderboard').execute(message, args, bot, prefix);
 
             break;
 
         case "quick": case "play":
-            bot.commands.get('quick').execute(message, args, bot, prefix);
+            await bot.commands.get('quick').execute(message, args, bot, prefix);
             break;
 
         case "hunter": case "hunt":
-            bot.commands.get('hunt').execute(message, args, bot, prefix);
+            await bot.commands.get('hunt').execute(message, args, bot, prefix);
 
             break;
 
         case "set":
-            bot.commands.get('set').execute(message, args, bot, prefix);
+            await bot.commands.get('set').execute(message, args, bot, prefix);
             break;
 
         case "dailyreward": case "daily":
-            bot.commands.get('daily').execute(message);
+            await bot.commands.get('daily').execute(message);
 
             break;
 
         case "shop":
-            bot.commands.get('shop').execute(message, args, bot, prefix);
+            await bot.commands.get('shop').execute(message, args, bot, prefix);
 
             break;
 
         case "buy":
-            bot.commands.get('buy').execute(message, args, bot, prefix);
+            await bot.commands.get('buy').execute(message, args, bot, prefix);
 
             break;
 
         case "equip":
-            bot.commands.get('equip').execute(message, args, bot, prefix);
+            await bot.commands.get('equip').execute(message, args, bot, prefix);
 
             break;
 
         case "gift":
-            bot.commands.get('gift').execute(message, args, bot, prefix);
+            await bot.commands.get('gift').execute(message, args, bot, prefix);
 
             break;
 
@@ -183,39 +181,39 @@ module.exports = async (bot, message) => {
         //Identity V Actions 
 
         case "blink":
-            bot.commands.get('blink').execute(message, args, bot, prefix);
+            await bot.commands.get('blink').execute(message, args, bot, prefix);
             break;
 
         case "struggle":
-            bot.commands.get('struggle').execute(message, args, bot);
+            await bot.commands.get('struggle').execute(message, args, bot);
             break;
 
         case "stun":
-            bot.commands.get('stun').execute(message, args, bot, prefix);
+            await bot.commands.get('stun').execute(message, args, bot, prefix);
             break;
 
         case "crash":
-            bot.commands.get('crash').execute(message, args, bot);
+            await bot.commands.get('crash').execute(message, args, bot);
             break;
 
         case "terrorshock": case "ts":
-            bot.commands.get('terrorshock').execute(message, args, bot, prefix);
+            await bot.commands.get('terrorshock').execute(message, args, bot, prefix);
             break;
 
         case "lasso": case "yoink":
-            bot.commands.get('lasso').execute(message, args, bot);
+            await bot.commands.get('lasso').execute(message, args, bot);
             break;
 
         case "shoot": case "flaregun":
-            bot.commands.get('shoot').execute(message, args, bot, prefix);
+            await bot.commands.get('shoot').execute(message, args, bot, prefix);
             break;
 
         case "bully":
-            bot.commands.get('bully').execute(message, args, bot, prefix);
+            await bot.commands.get('bully').execute(message, args, bot, prefix);
             break;
 
         case "hug":
-            bot.commands.get('hug').execute(message, args, bot, prefix);
+            await bot.commands.get('hug').execute(message, args, bot, prefix);
             break;
         //End of Identity V Actions
 
@@ -224,19 +222,19 @@ module.exports = async (bot, message) => {
         //Moderation Commands starts here
 
         case "clear": case "purge": case "delete":
-            bot.commands.get('clear').execute(message, args, bot);
+            await bot.commands.get('clear').execute(message, args, bot);
             break;
 
         case "kick":
-            bot.commands.get('kick').execute(message, args, prefix);
+            await bot.commands.get('kick').execute(message, args, prefix);
             break;
 
         case "ban":
-            bot.commands.get('ban').execute(message, args, bot, prefix);
+            await bot.commands.get('ban').execute(message, args, bot, prefix);
             break;
 
         case "mute": case "shutup":
-            bot.commands.get('mute').execute(message, args, bot, prefix);
+            await bot.commands.get('mute').execute(message, args, bot, prefix);
             break;
 
         //End of moderation commands
@@ -245,15 +243,15 @@ module.exports = async (bot, message) => {
         //Config commands starts here
 
         case "info": case "botinfo":
-            bot.commands.get('info').execute(message, args, bot, MohiMoo, prefix);
+            await bot.commands.get('info').execute(message, args, bot, MohiMoo, prefix);
             break;
 
         case "userinfo": case "usrinfo": case "user-info":
-            bot.commands.get('userinfo').execute(message, args, MohiMoo);
+            await bot.commands.get('userinfo').execute(message, args, MohiMoo);
             break;
 
         case "serverinfo": case "srvrinfo": case "server-info":
-            bot.commands.get('serverinfo').execute(message, args, MohiMoo);
+            await bot.commands.get('serverinfo').execute(message, args, MohiMoo);
             break;
 
         case 'ping':
@@ -262,7 +260,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "help": case "commands": case "helpme":
-            bot.commands.get('help').execute(message, args, prefix);
+            await bot.commands.get('help').execute(message, args, prefix);
             break;
 
         case 'guilds': case "servers":
@@ -270,24 +268,24 @@ module.exports = async (bot, message) => {
             break;
 
         case 'suggest': case "suggestidea":
-            bot.commands.get('suggest').execute(message, bot, args, MohiMoo);
+            await bot.commands.get('suggest').execute(message, bot, args, MohiMoo);
             break;
 
         case "reportbug": case "issue": case "reportissue": case "bug":
-            bot.commands.get('reportissue').execute(message, bot, args);
+            await bot.commands.get('reportissue').execute(message, bot, args);
 
-        break;
+            break;
 
         case "setup":
-            bot.commands.get('setup').execute(message, args, MohiMoo, bot);
+            await bot.commands.get('setup').execute(message, args, MohiMoo, bot);
             break;
 
         case "invite": case "cowboishinvite":
-            bot.commands.get('invite').execute(message, args, bot);
+            await bot.commands.get('invite').execute(message, args, bot);
             break;
 
         case "setcowboishprefix": case "setcowboishbotprefix":
-            bot.commands.get('setcowboishprefix').execute(message, args, MohiMoo, bot);
+            await bot.commands.get('setcowboishprefix').execute(message, args, MohiMoo, bot);
             break;
 
     }
