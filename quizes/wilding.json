@@ -37,6 +37,31 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://i.redd.it/qlua1c1wdqi41.jpg",
 		"Artist": "u/cryVanilla on Reddit"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["the great hero"],
+		"Difficulty": "Ez",
+		"Attachment": "https://i.imgur.com/6cT7ACM.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["jester"],
+		"Difficulty": "Tricky",
+		"Attachment": "https://i.imgur.com/DsQBYKY.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["snow fear"],
+		"Difficulty": "VERY Hard",
+		"Attachment": "https://i.imgur.com/SwE0sjF.png"
+	},
+	{
+		"Question": "**Question:**\nWhere did Wildling grow up?",
+		"Answer": ["hullabaloo circus"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/2yMt3HT.png",
+		"Artist": "@sakanatete on Twicomi"
 	}
 	
 ]

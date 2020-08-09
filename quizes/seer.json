@@ -41,5 +41,19 @@
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/hQyb8Zs.png",
 		"Artist": "Mishroom on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of Seer's fiance?",
+		"Answer": ["gertrude"],
+		"Difficulty": "VERY Hard",
+		"Attachment": "https://i.imgur.com/MyvxZdb.png",
+		"Artist": "Art: @Mikesan1014 on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["recluse"],
+		"Difficulty": "Easy",
+		"Attachment": "https://i.imgur.com/DHE3Z1L.png",
+		"Artist": "@aedelish on Twitter"
 	}
 ]

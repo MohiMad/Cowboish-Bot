@@ -36,6 +36,13 @@
 		"Difficulty": "Normal",
 		"Attachment": "https://i.imgur.com/M8wQ8xi.png",
 		"Artist": "@Yumi_kito on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the object that brought The 1st Officer to the manor?",
+		"Answer": ["a chinese umbrella", "chinese umbrella"],
+		"Difficulty": "Hard",
+		"Attachment": "https://pbs.twimg.com/media/EdyXAWiUwAoZI9K?format=jpg&name=large",
+		"Artist": "@nkt_y on Twitter"
 	}
 	
 ]

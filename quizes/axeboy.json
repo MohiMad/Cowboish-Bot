@@ -47,7 +47,35 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://pbs.twimg.com/media/D-J8vOdU4AAkqQ7?format=jpg&name=900x900",
 		"Artist": "@kuro_k1212 on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["ivan"],
+		"Difficulty": "Ez",
+		"Attachment": "https://i.imgur.com/kOR2IDO.png",
+		"Artist": "@Tenka on Identity V Official Amino"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["forgotten boy"],
+		"Attachment": "https://i.imgur.com/1Jvs3S4.png",
+		"Difficulty": "Hard"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of Axeboys sister?",
+		"Answer": ["dolores"],
+		"Difficulty": "Hard",
+		"Attachment": "https://pbs.twimg.com/media/EerJGFcUMAAIV8z?format=jpg&name=large",
+		"Artist": "@dashijiru_MAN on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["golden touch"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/iH7QY3n.png",
+		"Artist": "@SmokyBacon on Identity V Official Amino"
 	}
+		
 	
 	
 ]
