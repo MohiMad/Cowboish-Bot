@@ -5,6 +5,7 @@ module.exports = {
     description: "repeats what you just said!",
     execute(message, args, MohiMoo) {
 
+        return message.reply(`**This command is disabled at the moment... sorry**`);
 
         const sayMessage = args.slice(1).join(" ");
 
