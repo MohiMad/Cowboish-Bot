@@ -1,4 +1,5 @@
 const Guild = require("../models/guild.js");
+const logicPath = require("../models/logicpath.js");
 
 module.exports = async (bot, message) => {
 
@@ -39,6 +40,16 @@ module.exports = async (bot, message) => {
     }
 
     if (!message.content.startsWith(prefix)) return;
+
+    async function addGuildID() {
+        let LP = await logicPath.findOne({ UserID: message.author.id });
+        if (!LP) return;
+        if (LP.guildsID.includes(message.guild.id)) return;
+        LP.guildsID = [...LP.guildsID, message.guild.id];
+        await LP.save().catch(e => console.log(e));
+    }
+
+    addGuildID();
 
     switch (args[0].toLowerCase()) {
 

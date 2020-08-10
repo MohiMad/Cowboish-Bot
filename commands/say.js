@@ -14,11 +14,10 @@ module.exports = {
             message.channel.send("Tell me what to say...");
 
         else {
-            message.channel.send(message.author.username + " says\n ``" + sayMessage + "``");
+            message.channel.send("**" + message.author.tag + "** says:\n" + sayMessage.replace("@", "@ "));
 
         }
 
-    
 
-}
+    }
 }

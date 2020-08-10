@@ -37,6 +37,13 @@
 		"Answer": ["scrooge"],
 		"Difficulty": "Its easy...jk its hard",
 		"Attachment": "https://i.imgur.com/ZDqcLII.png"
+	},
+	{
+		"Question": "**Question:**\nWhat does mad eyes hate?",
+		"Answer": ["humans"],
+		"Difficulty": "medium because yes",
+		"Attachment": "https://i.imgur.com/nmea1Ae.png",
+		"Artist": "@IdentityVJP on Twitter"
 	}
 	
 ]

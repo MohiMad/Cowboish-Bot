@@ -101,22 +101,6 @@ module.exports = {
 
 	},
 
-	guildAdd: async (message) => {
-
-		const LP_User = await logicPath.findOne({ UserID: message.author.id });
-
-		if (!LP_User) {
-			return;
-		}
-		else if (!LP_User.guildsID.includes(message.guild.id)) {
-
-			LP_User.guildsID = [...LP_User.guildsID, message.guild.id];
-
-			LP_User.save().catch(err => console.log(err));
-		}
-
-	},
-
 	getMember: function (message, toFind = '') {
 		toFind = toFind.toLowerCase();
 
@@ -185,77 +169,6 @@ module.exports = {
 		toFind = toFind.toLowerCase();
 		const channel = message.mentions.channels.first() || message.guild.channels.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.channels.find((x) => x.name.toLowerCase() === (toFind)) || message.guild.channels.get(toFind);
 		return channel;
-	},
-
-	quiz: async (message, question, answer, Thumb, Difficulty, char, artist) => {
-
-		const filter = m => m.author.id === message.author.id;
-
-		const LP = await logicPath.findOne({ UserID: message.author.id });
-
-		let diceChances = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3];
-
-		let dice = diceChances[Math.floor(Math.random() * diceChances.length)];
-
-		let reward;
-		if (LP.ThreeMatches != 0) {
-			reward = dice * 2 + `<:dice:655384578499936257> (Doubled reward... **${LP.ThreeMatches} left**)`;
-
-			dice = dice * 2;
-			LP.ThreeMatches = LP.ThreeMatches - 1;
-
-			await LP.save().catch(e => console.log(e));
-		} else {
-			reward = dice + " <:dice:655384578499936257>";
-		}
-
-		if (artist === null || artist === undefined) artist = "Cowboish Bot"
-
-		const quizEmbed = new RichEmbed()
-			.setTitle("Answer the question below to get a dice <:dice:655384578499936257>")
-			.setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setDescription(stripIndents`
-			**Question about** : ${char}
-			**Difficulty** : ${Difficulty}
-			**Time** : 60 Seconds
-			**Reward** : ${reward}` + "\n\n" + question)
-			.setImage(Thumb)
-			.setFooter(artist, message.author.displayAvatarURL)
-			.setColor("RANDOM");
-
-
-		message.channel.send(quizEmbed);
-
-		message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(async collected => {
-
-			if (answer.includes(collected.first().content.toLowerCase())) {
-
-				let wins = [
-					`**${message.author.username}** got the right answer and got **${dice}** dice(s) <:dice:655384578499936257>`,
-					`Here is your **${dice}** dices(s) <:dice:655384578499936257>, **${message.author.username}**!`,
-					`**${message.author.username}** answered correctly! Here is your **${dice}** dice(s) <:dice:655384578499936257>`
-				];
-
-				let win = Math.floor(Math.random() * wins.length);
-
-				message.channel.send(wins[win]);
-
-				if (LP.ThreeMatches != 0) {
-					LP.Dices = LP.Dices + dice;
-				} else {
-					LP.Dices = LP.Dices + dice;
-				}
-				await LP.save().catch(err => console.log(err));
-
-			}
-			else {
-				message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + answer[0] + "**");
-			}
-
-		}).catch(collected => {
-			message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
-		});
-
 	},
 	newLP: async (message) => {
 		const newLP = new logicPath({
