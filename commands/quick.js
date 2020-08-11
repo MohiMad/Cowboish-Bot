@@ -15,7 +15,7 @@ module.exports = {
 
             if (!LP) return newLP(message);
 
-            let ownedSurvivorsFiles = ["doctor", "lucky", "gardener", "lawyer", "thief"];
+            let ownedSurvivorsFiles = ["doctor", "luckyguy", "gardener", "lawyer", "thief"];
 
             let LPSurvivorvalues = [
                 LP.Survivors.Cowboy,
