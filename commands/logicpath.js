@@ -490,7 +490,7 @@ module.exports = {
                 LP.Hunters.SoulWeaver, LP.Hunters.Geisha, LP.Hunters.PhotoGrapher,
                 LP.Hunters.MadEyes, LP.Hunters.Feaster, LP.Hunters.DreamWitch,
                 LP.Hunters.BloodyQueen, LP.Hunters.Pingu, LP.Hunters.Sister,
-                LP.Hunters.NewHunta, LP.Hunters.AnotherHunta].forEach(x => { if (x === true) HunterNumber++; });
+                LP.Hunters.NewHunta, LP.Hunters.AnotherHunta, LP.Sculptor].forEach(x => { if (x === true) HunterNumber++; });
 
                 ctx.fillStyle = '#d73232';
                 ctx.fillText(HunterNumber, 206, 130);
@@ -506,7 +506,7 @@ module.exports = {
                     "dangan-27", "dangan-28", "dangan-29",
                     "dangan-30", "dangan-31", "dangan-32",
                     "dangan-33", "dangan-34", "dangan-35",
-                    "sword_fighting", "marathon_runner_victor", "long_jump_luchino"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                    "sword_fighting", "marathon_runner_victor", "long_jump_luchino", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
 
                 ctx.fillStyle = '#000000';
                 ctx.fillText(portraitAmount, 390, 130);

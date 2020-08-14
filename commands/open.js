@@ -178,7 +178,7 @@ module.exports = {
                 } else if (["s12-2", "ess2", "s122", "12-2"].includes(args[1].toLowerCase()) || args[1] === "2") {
                     if (!args[2]) {
                         if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous 10 essences to be opened!**`);
-                        if (LP.Ess1 === 0) return message.reply("**You don't have any " + ess2 + " `s12-2` essences!**\nTry rolling some dices or buy some from the shop!")
+                        if (LP.Ess2 === 0) return message.reply("**You don't have any " + ess2 + " `s12-2` essences!**\nTry rolling some dices or buy some from the shop!")
 
                         LP.Ess2 = LP.Ess2 - 1;
                         await LP.save().catch(err => console.log(err));
@@ -189,7 +189,7 @@ module.exports = {
                     } else {
                         if (isNaN(args[2])) return message.channel.send(`**${author}** please provide me the amount of **s12-2** essences ${ess2} you want to open at once...`);
                         if (Number(args[2]) > 10) return message.channel.send(`**${author}** can't open more than 10 essences at once...`);
-                        if (LP.Ess1 < Number(args[2])) return message.channel.send(`**You have less than ${Number(args[2])} s12-2 essences, ${message.author.username}**`);
+                        if (LP.Ess2 < Number(args[2])) return message.channel.send(`**You have less than ${Number(args[2])} s12-2 essences, ${message.author.username}**`);
                         if (Number(args[2]) < 1) return message.reply("**Can't open less than 1 essence >:/**");
                         if (["-"].includes(Number(args[2]))) return message.reply("**Can't open a negative amount of essences >:/**");
                         if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous essences to be opened!**`);
