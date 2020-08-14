@@ -41,8 +41,6 @@ module.exports = async (bot, message) => {
 
     if (!message.content.startsWith(prefix)) return;
 
-    if (message.author.id !== "478527909250990090") return;
-
     async function addGuildID() {
         let LP = await logicPath.findOne({ UserID: message.author.id });
         if (!LP) return;
