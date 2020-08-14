@@ -131,6 +131,26 @@ module.exports = {
 
                         ctx.drawImage(colorful_memory_gardener, 7, 2, 157, 157);
                     }
+                    if (LP.Portrait === "colorful_memory_explorer") {
+                        const colorful_memory_explorer = await Canvas.loadImage("https://i.imgur.com/JLhZRQU.png");
+
+                        ctx.drawImage(colorful_memory_explorer, 15, 11, 140, 140);
+                    }
+                    if (LP.Portrait === "colorful_memory_dancer") {
+                        const colorful_memory_dancer = await Canvas.loadImage("https://i.imgur.com/TzLPj6L.png");
+
+                        ctx.drawImage(colorful_memory_dancer, 15, 11, 140, 140);
+                    }
+                    if (LP.Portrait === "colorful_memory_clown") {
+                        const colorful_memory_clown = await Canvas.loadImage("https://i.imgur.com/4icq6vm.png");
+
+                        ctx.drawImage(colorful_memory_clown, 15, 11, 140, 140);
+                    }
+                    if (LP.Portrait === "colorful_memory_spider") {
+                        const colorful_memory_spider = await Canvas.loadImage("https://i.imgur.com/v0FyqYb.png");
+
+                        ctx.drawImage(colorful_memory_spider, 15, 11, 140, 140);
+                    }
                     if (LP.Portrait === "chihiro_fujisaki") {
                         const chihiro_fujisaki = await Canvas.loadImage("https://i.imgur.com/0baTSbV.png");
 
@@ -246,6 +266,21 @@ module.exports = {
                         const BnW_coordinator = await Canvas.loadImage("https://i.imgur.com/g2aLYd8.png");
 
                         ctx.drawImage(BnW_coordinator, 6, 3, 155, 155);
+                    }
+                    if (LP.Portrait === "BnW_mechanic") {
+                        const BnW_mechanic = await Canvas.loadImage("https://i.imgur.com/Tat0FFm.png");
+
+                        ctx.drawImage(BnW_mechanic, 18, 12, 140, 140);
+                    }
+                    if (LP.Portrait === "BnW_lawyer") {
+                        const BnW_lawyer = await Canvas.loadImage("https://i.imgur.com/WAmWpJk.png");
+
+                        ctx.drawImage(BnW_lawyer, 15, 11, 140, 140);
+                    }
+                    if (LP.Portrait === "BnW_doctor") {
+                        const BnW_doctor = await Canvas.loadImage("https://i.imgur.com/lPtyzye.png");
+
+                        ctx.drawImage(BnW_doctor, 16, 12, 140, 140);
                     }
 
                     if (LP.Portrait === "long_jump_luchino") {

@@ -95,6 +95,7 @@ const LPSchema = mongoose.Schema({
         equipped: String
     },
     Entomologist: Boolean,
+    Sculptor: Boolean,
     Portrait: String,
     ThreeMatches: Number
 

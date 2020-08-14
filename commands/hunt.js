@@ -47,7 +47,7 @@ module.exports = {
                 "dreamwitch",
                 "feaster",
                 "geisha",
-                "liard",
+                "lizard",
                 "madeyes",
                 "photographer",
                 "ripper",

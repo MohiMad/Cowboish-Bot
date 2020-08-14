@@ -13,7 +13,7 @@ module.exports = {
         var secondQuestion = "0";
 
         let authorName = message.author.username;
-        const suggest = bot.channels.get('662686240507691008');
+        const suggest = bot.channels.get('653529896903245834');
 
         let sayMessage = args.slice(1).join(" ");
 

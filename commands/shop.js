@@ -43,9 +43,10 @@ module.exports = {
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `" + prefix + "buy <itemID>`")
             .setColor("RANDOM")
+            .setThumbnail("https://i.imgur.com/BXAjWou.png")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
         ${ess1} | **Essence s12-1** - Price : *96* ${insp} - ID: __*s12-1*__
-        ${ess2} | **Essence s12-2** (__Unavailable__) - Price : *96* ${insp} - ID: __*s12-3*__
+        ${ess2} | **Essence s12-2** - Price : *96* ${insp} - ID: __*s12-3*__
         ${ess3} | **Essence s12-3** (__Unavailable__) - Price : *96* ${insp} - ID: __*s12-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
@@ -307,6 +308,12 @@ module.exports = {
             else {
                 huntaEmbed.addField("🎻 Violinist", "~~Violinist - Price __*4508*__~~");
             }
+            if (LP.Sculptor === false) {
+                huntaEmbed.addField("🗿 Sculptor", "Sculptor - Price __*4508*__ <:clue:655384523735040000>");
+            }
+            else {
+                huntaEmbed.addField("🗿 Sculptor", "~~Sculptor - Price __*4508*__~~");
+            }
 
             message.channel.send(huntaEmbed);
 
@@ -453,6 +460,15 @@ module.exports = {
             checkForPortrait("dangan-34", "Mukuro Ikusaba");
             checkForPortrait("dangan-35", "Yasuhiro Hagakure");
 
+            //s12-2 essence
+            checkForPortrait("s12-2-36", "Black and White Mechanic");
+            checkForPortrait("s12-2-37", "Black and White Lawyer");
+            checkForPortrait("s12-2-38", "Black and White Doctor");
+            checkForPortrait("s12-2-46", "Colorful Memory Explorer");
+            checkForPortrait("s12-2-47", "Colorful Memory Dancer");
+            checkForPortrait("s12-2-48", "Colorful Memory Smiley Face");
+            checkForPortrait("s12-2-49", "Colorful Memory Soul Weaver");
+
 
             checkForNonPortrait("ess1-14", "Black and White Explorer");
             checkForNonPortrait("ess1-15", "Black and White Magician");
@@ -490,6 +506,14 @@ module.exports = {
             checkForNonPortrait("dangan-33", "Kiyotaka Ishimaru");
             checkForNonPortrait("dangan-34", "Mukuro Ikusaba");
             checkForNonPortrait("dangan-35", "Yasuhiro Hagakure");
+
+            checkForNonPortrait("s12-2-36", "Black and White Mechanic");
+            checkForNonPortrait("s12-2-37", "Black and White Lawyer");
+            checkForNonPortrait("s12-2-38", "Black and White Doctor");
+            checkForNonPortrait("s12-2-46", "Colorful Memory Explorer");
+            checkForNonPortrait("s12-2-47", "Colorful Memory Dancer");
+            checkForNonPortrait("s12-2-48", "Colorful Memory Smiley Face");
+            checkForNonPortrait("s12-2-49", "Colorful Memory Soul Weaver");
 
             let ownedPortraitEmbed = new RichEmbed()
                 .setAuthor("Cowboish Portrait Shop >:3", bot.user.displayAvatarURL)

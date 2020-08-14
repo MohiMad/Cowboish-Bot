@@ -17,6 +17,7 @@ module.exports = {
 
         let dice = diceChances[Math.floor(Math.random() * diceChances.length)];
 
+
         let reward;
         if (LP.ThreeMatches != 0) {
             reward = dice * 2 + `${emoji.dice} (Doubled reward... **${LP.ThreeMatches} left**)`;
@@ -51,7 +52,7 @@ module.exports = {
 
         message.channel.send(quizEmbed);
 
-        message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(async collected => {
+        await message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(async collected => {
 
             if (charItem.Answer.includes(collected.first().content.toLowerCase())) {
 
@@ -82,9 +83,10 @@ module.exports = {
             }
 
         }).catch(e => {
-            console.log(e);
+            console.log(`Oops! Quiz error!\n${path} character\n` + e);
             message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
         });
+
 
 
 

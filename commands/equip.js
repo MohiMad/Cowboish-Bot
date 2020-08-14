@@ -287,6 +287,14 @@ module.exports = {
                     checkForPortrait("dangan-34", "Mukuro Ikusaba");
                     checkForPortrait("dangan-35", "Yasuhiro Hagakure");
 
+                    //s12-2 essence
+                    checkForPortrait("s12-2-36", "Black and White Mechanic");
+                    checkForPortrait("s12-2-37", "Black and White Lawyer");
+                    checkForPortrait("s12-2-38", "Black and White Doctor");
+                    checkForPortrait("s12-2-46", "Colorful Memory Explorer");
+                    checkForPortrait("s12-2-47", "Colorful Memory Dancer");
+                    checkForPortrait("s12-2-48", "Colorful Memory Smiley Face");
+                    checkForPortrait("s12-2-49", "Colorful Memory Soul Weaver");
 
                     let ownedPortraitEmbed = new RichEmbed()
                         .setAuthor(message.author.username, message.author.displayAvatarURL)
@@ -328,6 +336,15 @@ module.exports = {
                 } else if (["black and white gardener", "(black and white gardener)", "bnw gardener", "black-and-white gardener"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("BnW_gardener", "ess1-16", "https://i.imgur.com/JYWV8vm.png");
 
+                } else if (["black and white mechanic", "(black and white mechanic)", "bnw mechanic", "black-and-white mechanic"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("BnW_mechanic", "s12-2-36", "https://i.imgur.com/Tat0FFm.png");
+
+                } else if (["black and white lawyer", "(black and white lawyer)", "bnw lawyer", "black-and-white lawyer"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("BnW_lawyer", "s12-2-37", "https://i.imgur.com/WAmWpJk.png");
+
+                } else if (["black and white doctor", "(black and white doctor)", "bnw doctor", "black-and-white doctor"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("BnW_doctor", "s12-2-38", "https://i.imgur.com/lPtyzye.png");
+
                 } else if (["colorful memory gamekeeper", "(colorful memory gamekeeper)"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_gamekeeper", "ess1-48", "https://i.imgur.com/h4T2Ccs.png");
 
@@ -339,6 +356,18 @@ module.exports = {
 
                 } else if (["colorful memory lawyer", "(colorful memory lawyer)"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_lawyer", "ess1-51", "https://i.imgur.com/YAZ1O3R.png");
+
+                } else if (["colorful memory explorer", "(colorful memory explorer)"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_explorer", "s12-2-46", "https://i.imgur.com/JLhZRQU.png");
+
+                } else if (["colorful memory dancer", "(colorful memory dancer)"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_dancer", "s12-2-47", "https://i.imgur.com/TzLPj6L.png");
+
+                } else if (["colorful memory smiley face", "(colorful memory smiley face)"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_clown", "s12-2-48", "https://i.imgur.com/4icq6vm.png");
+
+                } else if (["colorful memory soul weaver", "(colorful memory soul weaver)"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_clown", "s12-2-49", "https://i.imgur.com/v0FyqYb.png");
 
                 } else if (["makoto naegi", "makoto"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("makoto_naegi", "dangan-20", "https://i.imgur.com/zMWoxXV.png");
