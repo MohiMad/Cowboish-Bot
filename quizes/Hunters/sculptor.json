@@ -29,5 +29,11 @@
         "Difficulty": "Hard",
         "Attachment": "https://i.imgur.com/ojeby62.png",
         "Artist": "ilmheg on Twitter"
+    },
+    {
+        "Question": "**Question:**\nHow much damage do sculptures do?",
+        "Answer": ["25% damage", "0.25", "1 quarter", "25%", "0.25 damage"],
+        "Difficulty": "Hard",
+        "Attachment": "https://i.imgur.com/CivjYZR.png"
     }
 ]

@@ -10,9 +10,7 @@ module.exports = {
 	rewards: async (bot) => {
 
 		await logicPath.find({})
-			.sort([
-				["logic", "descending"]
-			]).exec(async (err, res) => {
+			.sort({ logic: -1 }).limit(5).exec(async (err, res) => {
 				if (err) console.log(err);
 
 				//the ID of Rewards channel on Cowboish server
@@ -28,22 +26,22 @@ module.exports = {
 					.setTitle("Yaaaay a new week has began!")
 					.setColor("0xf0cf07")
 					.setDescription(stripIndents`
-			《<:uno:676017997420167187>》 **${n1.username}** 
+			《<:uno:676017997420167187>》 **${n1.tag}** 
 			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
 			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
 
 			- - - - -
-			〘<:dos:676019548016738304>〙 **${n2.username}**
+			〘<:dos:676019548016738304>〙 **${n2.tag}**
 			**Logicpath Points**: **${res[1].logic}**<:LP:675763680863977513>
 			**Rewards**: **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
 
 			- - - - -
-			〘<:tres:676019592757248001>〙 **${n3.username}**
+			〘<:tres:676019592757248001>〙 **${n3.tag}**
 			**Logicpath Points** **${res[2].logic}**<:LP:675763680863977513>
 			**Rewards**: **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
 
 			- - - - -
-			〘4〙 **${n4.username}**
+			〘4〙 **${n4.tag}**
 			**Logicpath Points**: **${res[3].logic}**<:LP:675763680863977513>
 			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
 
@@ -97,7 +95,7 @@ module.exports = {
 				res[4].Clues = res[4].Clues + 200;
 				res[4].save().catch(err => console.log(err));
 
-			})
+			});
 
 	},
 

@@ -35,8 +35,6 @@ module.exports = async (bot) => {
         const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
 
         if (!checkForWeeklyExecution) {
-            rewards(bot);
-
             const weeklySpamStopper = new Cooldown({
                 command: "weeklyrewards",
                 userID: bot.user.id,
@@ -45,6 +43,8 @@ module.exports = async (bot) => {
             });
 
             await weeklySpamStopper.save().catch(err => console.log(err));
+            rewards(bot);
+
         }
     });
 
@@ -52,8 +52,6 @@ module.exports = async (bot) => {
         const checkForExecution = await Cooldown.findOne({ userID: bot.user.id, command: "giveaway" });
 
         if (!checkForExecution) {
-            await bot.commands.get('giveaway').execute(bot);
-
             const giveawaySpamStopper = new Cooldown({
                 command: "giveaway",
                 userID: bot.user.id,
@@ -62,6 +60,9 @@ module.exports = async (bot) => {
             });
 
             await giveawaySpamStopper.save().catch(err => console.log(err));
+
+            await bot.commands.get('giveaway').execute(bot);
+
         }
 
     });

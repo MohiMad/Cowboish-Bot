@@ -19,7 +19,7 @@ module.exports = {
             .setTitle("Changes committed succesfully!")
             .setColor("0x20f72b")
             .setAuthor(message.author.username, message.author.displayAvatarURL)
-			.setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1")
+            .setFooter("Cowboish bot", "https://cdn.discordapp.com/emojis/667718317032603659.png?v=1")
             .setTimestamp();
 
 

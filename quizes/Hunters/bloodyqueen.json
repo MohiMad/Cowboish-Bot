@@ -3,43 +3,31 @@
 		"Question": "**Question:**\nWhat's the name of this skin?",
 		"Answer": ["blood bath", "bloodbath"],
 		"Difficulty": "Hard",
-		"Attachment": "https://i.pinimg.com/564x/75/b5/a8/75b5a8217c794ddbeeda60f15288ea45.jpg"
-    },
-    {
-		"Question": "**Continue the sentence:**\n`Bloody _ _ _ _ _ is the queen of terrorshocks!`",
-		"Answer": ["queen"],
-		"Difficulty": "Ez",
-		"Attachment": "https://i.pinimg.com/564x/44/38/9f/44389ffee4109042993b8a7f77f28157.jpg"
+		"Attachment": "https://i.imgur.com/FDcgvbM.png"
     },
 	{
 		"Question": "**Unsramble it:**\nUnscramble the letters! (`imrorr`)",
 		"Answer": ["mirror"],		
 		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/13/bc/2f/13bc2fd9afd4414219d301cc1c1e2f28.jpg"
+		"Attachment": "https://64.media.tumblr.com/854e83e00f8734fea47d575ba5d48ace/tumblr_pxwe4kxdoH1qew3xuo3_500.png"
 	},
 	{
 		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`mirror`, `dovlin`, `blood`, `queen`)",
 		"Answer": ["dovlin"],
 		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
+		"Attachment": "https://64.media.tumblr.com/cb41a4a7efae255aa6d2687ce0b7a9d5/tumblr_pxwe4kxdoH1qew3xuo7_500.png"
 	},
 	{
 		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`mirror`, `blood`, `queen`, `reptile`)",
 		"Answer": ["reptile"],
 		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
-	},
-	{
-		"Question": "**Hmm which word:**\nFind the odd word that doesn't fit with Bloody Queen\n(`portal`, `mirror`, `blood`, `queen`)",
-		"Answer": ["portal"],
-		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/f7/80/db/f780db0e3ad7ea29a17d780ab654b4d1.jpg"
+		"Attachment": "https://64.media.tumblr.com/26c14c63caa4459c9a2153eb5d555837/tumblr_pxwe4kxdoH1qew3xuo8_500.png"
 	},
 	{
 		"Question": "**Question**\nHow long is her mirror cooldown at the beginning of the game? (Answer in seconds)",
 		"Answer": ["8 seconds", "8", "eight", "eight seconds"],
 		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/66/84/b1/6684b1d926d9dba8e1c91d7a472aec53.jpg"
+		"Attachment": "https://64.media.tumblr.com/46db390c776cba5e299f43d1e3e4958f/tumblr_pxwe4kxdoH1qew3xuo6_500.png"
 	}
 	
 ]
