@@ -1,33 +1,36 @@
 [
 	{
 		"Question": "**Question:**\nWhat's the name of this skin?",
-		"Answer": ["joker", "Joker", "king", "King"],
+		"Answer": ["joker", "king"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674665345268842496/qDE8plBl2noAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/a9ZDps0.png"
     },
     {
 		"Question": "**Countinue the sentence:**\n`_ _ _ _ _ _ face hit me with his long popsicle`",
-		"Answer": ["smiley", "Smiley"],
+		"Answer": ["smiley"],
 		"Difficulty": "Maybe easy",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674666078642634757/AmKgAsbWq5EAAAAAElFTkSuQmCC.png"
+		"Attachment": "https://dthezntil550i.cloudfront.net/zc/latest/zc1811220550118080007762493/1280_960/ea918711-5ce6-443d-8c1c-20181b0c2b7d.png",
+		"Artist": "@Cake1236 on Artstreet"
     },
     {
 		"Question": "**Countinue the sentence:**\n`Clowny hit me with a modified drill so i _ _ _ _ out to death :'C`",
-		"Answer": ["bled", "Bled"],
+		"Answer": ["bled", "bleed"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674666078642634757/AmKgAsbWq5EAAAAAElFTkSuQmCC.png"
+		"Attachment": "https://dthezntil550i.cloudfront.net/zc/latest/zc1811220550118080007762493/1280_960/ea918711-5ce6-443d-8c1c-20181b0c2b7d.png",
+		"Artist": "@Cake1236 on Artstreet"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`dash`, `drill`, `rocket`, `boar`, `clown`)",
 		"Answer": ["boar"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688433421151895667/d96426f46d0c3e8baa482a831131390f.png?width=564&height=564"
+		"Attachment": "https://i.imgur.com/Sw9kr1L.png",
+		"Artist": "yuguchuqing on Lofter"
 	},
 	{
 		"Question": "**Unscramble da word:**\nThe word `shaD` is scrambled, unscramble it to win!",
 		"Answer": ["dash", "Dash"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/688434380884148448/tumblr_phopn7VG5l1s2xjjm_540.png"
+		"Attachment": "https://i.imgur.com/lrbaPh0.png"
 	}
 	
 ]

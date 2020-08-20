@@ -1,5 +1,6 @@
 const Guild = require("../models/guild.js");
 const logicPath = require("../models/logicpath.js");
+const spamStopper = new Set();
 
 module.exports = async (bot, message) => {
 
@@ -44,9 +45,10 @@ module.exports = async (bot, message) => {
     async function addGuildID() {
         let LP = await logicPath.findOne({ UserID: message.author.id });
         if (!LP) return;
-        if (LP.guildsID.includes(message.guild.id)) return;
-        LP.guildsID = [...LP.guildsID, message.guild.id];
-        await LP.save().catch(e => console.log(e));
+        if (!LP.guildsID.includes(message.guild.id)) {
+            LP.guildsID = [...LP.guildsID, message.guild.id];
+            await LP.save().catch(e => console.log(e));
+        }
     }
 
     addGuildID();
@@ -103,6 +105,10 @@ module.exports = async (bot, message) => {
             await bot.commands.get('say').execute(message, args, MohiMoo);
             break;
 
+
+        case 'reddit': case "subreddit":
+            await bot.commands.get('reddit').execute(message, args, bot, prefix);
+            break;
         //End Of Fun commands
 
         //____Image manipulation____
@@ -149,11 +155,11 @@ module.exports = async (bot, message) => {
             break;
 
         case "quick": case "play":
-            await bot.commands.get('quick').execute(message, args, bot, prefix);
+            await bot.commands.get('quick').execute(message, args, bot, prefix, spamStopper);
             break;
 
         case "hunter": case "hunt":
-            await bot.commands.get('hunt').execute(message, args, bot, prefix);
+            await bot.commands.get('hunt').execute(message, args, bot, prefix, spamStopper);
 
             break;
 
@@ -271,7 +277,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "help": case "commands": case "helpme":
-            await bot.commands.get('help').execute(message, args, prefix);
+            await bot.commands.get('help').execute(message, args, bot, prefix);
             break;
 
         case 'guilds': case "servers":

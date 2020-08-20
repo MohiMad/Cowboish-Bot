@@ -5,7 +5,7 @@ const { stripIndents } = require('common-tags');
 module.exports = {
     name: 'help',
     description: "sends help!",
-    execute(message, args, prefix) {
+    execute(message, args, bot, prefix) {
 
         const helpEmbed = new RichEmbed()
             .setColor("RANDOM")
@@ -21,7 +21,7 @@ module.exports = {
             .addField('<:dice:655384578499936257>  Logicpath <:s121:735775380266549319> ', '`' + prefix + 'help logicpath`', true)
             .addField("❓ Errors/suggestions ❓", "`" + prefix + "suggest`/`" + prefix + "reportissue`", true)
             .addField("For more info ", "[Cowboish Website](https://mohimad.github.io/CowboishBot/)" + " | [Invite me to servers around ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) | " + "[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
-            .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+            .setFooter("Remember to use my prefix ( ' + prefix + ') and help before providing the category's name ;D", 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
 
 
@@ -35,8 +35,8 @@ module.exports = {
                 .setTitle('😁 Help is here :D 😁')
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL)
                 .setDescription('`identify` | `roll` | `roll20` | `randomize` | `idv` | `idvwiki` | `spawns`')
-                .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
 
             message.channel.send(idvEmbed);
 
@@ -46,7 +46,7 @@ module.exports = {
                 .setTitle('<:wilding:648981862429097994> Identity V actions <:wilding:648981862429097994>')
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png')
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL)
                 .setDescription('`crash` | `bully` | `lasso` | `shoot` | `stun` | `terrorshock` | `hug` | `struggle`');
 
             message.channel.send(actionEmbed);
@@ -69,7 +69,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
                 .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest` | `reportissue`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
-                .setFooter('Cowboish bot', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL);
 
             message.channel.send(genEmbed);
 
@@ -79,8 +79,8 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("🤣 Don't move i'm coming :v", true)
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription('`meme` | `joke` | `say`')
-                .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+                .setDescription('`meme` | `joke` | `say` | `reddit`')
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL);
 
             message.channel.send(funEmbed);
 
@@ -98,6 +98,7 @@ module.exports = {
             const imageEmbed = new RichEmbed()
                 .setColor("RANDOM")
                 .setTitle("Image manipulation commands!")
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL)
                 .setDescription("Some commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair` | `chosendeath` | `siptea`")
 
             message.channel.send(imageEmbed);
@@ -107,8 +108,8 @@ module.exports = {
             const ultity_Embed = new RichEmbed()
                 .setColor("RANDOM")
                 .setTitle("Cowboish Utility commands :D")
-                .setDescription("`setup` | `userinfo` | `serverinfo`")
-                .setFooter('Remember to use my prefix ( ' + prefix + ') and help before the commands ;D', 'https://cdn.discordapp.com/attachments/633755400411414539/634054173914169354/537262399003033601.png');
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL)
+                .setDescription("`setup` | `userinfo` | `serverinfo`");
 
             message.channel.send(ultity_Embed);
         } else {

@@ -2,12 +2,13 @@ const { RichEmbed } = require("discord.js");
 const logicPath = require("../models/logicpath.js")
 const emoji = require("../emojis.json");
 
-const { ErrorMsg, addCooldown } = require("../functions.js");
+const { addCooldown } = require("../functions.js");
 const { stripIndents } = require("common-tags");
 module.exports = {
 
-    quiz: async (bot, message, path, charName) => {
+    quiz: async (bot, message, path, charName, spamStopper) => {
 
+        if (spamStopper.has(message.author)) return;
 
         const filter = m => m.author.id === message.author.id;
 
@@ -50,6 +51,7 @@ module.exports = {
             .setFooter(artist, bot.user.displayAvatarURL)
             .setColor("RANDOM");
 
+        spamStopper.add(message.author);
         message.channel.send(quizEmbed);
 
         await message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(async collected => {
@@ -65,6 +67,7 @@ module.exports = {
                 let win = Math.floor(Math.random() * wins.length);
 
                 message.channel.send(wins[win]);
+                spamStopper.delete(message.author);
 
                 if (LP.ThreeMatches != 0) LP.Dices = LP.Dices + dice;
                 else LP.Dices = LP.Dices + dice;
@@ -79,12 +82,13 @@ module.exports = {
 
             }
             else {
-                message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + charItem.Answer[0] + "**");
+                setTimeout(() => { spamStopper.delete(message.author); }, 1000);
+                return message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + charItem.Answer[0] + "**");
             }
 
         }).catch(e => {
-            console.log(`Oops! Quiz error!\n${path} character\n` + e);
-            message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
+            spamStopper.delete(message.author);
+            return message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
         });
 
 

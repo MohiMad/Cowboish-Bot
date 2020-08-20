@@ -25,7 +25,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["hermes shoes","hermes"],
+		"Answer": ["hermes shoes'", "hermes shoes’", "hermes‘ shoes", "hermes shoes"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/sFjDba6.png"
 	}

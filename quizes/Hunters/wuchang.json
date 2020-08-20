@@ -55,7 +55,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["the intersection bishounen", "intersection bishounen"],
+		"Answer": ["the intersection bishounen", "intersection bishounen", "bishounen"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/urt5YTA.png"
 	}

@@ -1,15 +1,16 @@
 const logicPath = require("../models/logicpath.js");
-const { ErrorMsg, coolEmbed, newLP, addCooldown, findCooldown } = require("../functions.js");
+const { ErrorMsg, coolEmbed, newLP, findCooldown } = require("../functions.js");
 
 const { quiz } = require("../quizes/quiz.js");
 
 module.exports = {
     name: 'quick',
     description: "play a quick match",
-    execute: async (message, args, bot, prefix) => {
+    execute: async (message, args, bot, prefix, spamStopper) => {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
         const cooldownCheck = await findCooldown(message, "quick");
+        if(spamStopper.has(message.author)) return;
 
         if (!cooldownCheck) {
 
@@ -305,7 +306,7 @@ module.exports = {
 
                     } else {
                         boolean = true;
-                        return await quiz(bot, message, x.Path, x.CharacterName);
+                        return await quiz(bot, message, x.Path, x.CharacterName, spamStopper);
 
                     }
 
