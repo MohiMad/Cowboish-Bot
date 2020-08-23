@@ -121,7 +121,7 @@ module.exports = async (bot) => {
                 });
             }
         }
-    }, 5000);
+    }, 3000);
 
     /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
 

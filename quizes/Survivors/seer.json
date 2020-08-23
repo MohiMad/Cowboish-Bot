@@ -1,39 +1,33 @@
 [
 	{
 		"Question": "**Question:**\nHow many owls does the seer spawn with?",
-		"Answer": ["one", "1", "One", "one owl", "One owl"],
+		"Answer": ["one", "1", "one owl"],
 		"Difficulty": "Ez",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673883174157287436/2Q.png"
+		"Attachment": "https://i.imgur.com/TO7bzQh.png"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of this skin?",
-		"Answer": ["Night owl", "night owl", "Night Owl"],
+		"Answer": ["night owl"],
 		"Difficulty": "Extreme",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673882804471463946/C2509bD98icOuyQzRyDat92SibMv5M9wlShN0TAXRpzwAAAABJRU5ErkJggg.png"
+		"Attachment": "https://i.imgur.com/Sl2HPB6.png"
 	},
 	{
 		"Question": "**Unscramble it:**\nUn scramble the letters `lie rkalc`",
-		"Answer": ["Eli Clark", "eli clark", "eli", "clark"],
+		"Answer": ["eli clark"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700391479285383249/image0.png"
+		"Attachment": "https://i.imgur.com/4IhNEwq.png"
 	},
 	{
 		"Question": "**Question:**\nWhat's the name of Eli's owl?",
-		"Answer": ["Brooke Rose", "brooke rose", "brooke", "rose"],
+		"Answer": ["brooke rose", "brooke"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700392224407420968/istock_000023765401_small.png?width=1002&height=563"
+		"Attachment": "https://i.imgur.com/c9bGiM4.jpg"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of the skin below?",
-		"Answer": ["Lunar Phase", "lunar phase", "lunar", "phase"],
+		"Answer": ["lunar phase"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/707961740133924894/image0.png"
-	},
-	{
-		"Question": "**Retype the sentence:**\nEli is an op stalker",
-		"Answer": ["eli is an op stalker"],
-		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/c0/62/8a/c0628ace15b5d23b6417b81d0f92c52f.jpg"
+		"Attachment": "https://i.imgur.com/9qd4pwv.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
@@ -47,7 +41,7 @@
 		"Answer": ["gertrude"],
 		"Difficulty": "VERY Hard",
 		"Attachment": "https://i.imgur.com/MyvxZdb.png",
-		"Artist": "Art: @Mikesan1014 on Twitter"
+		"Artist": "@Mikesan1014 on Twitter"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
@@ -55,5 +49,19 @@
 		"Difficulty": "Easy",
 		"Attachment": "https://i.imgur.com/DHE3Z1L.png",
 		"Artist": "@aedelish on Twitter"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["experienced huntsman"],
+		"Difficulty": "Hard af",
+		"Attachment": "https://i.imgur.com/rRzouow.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["future sight"],
+		"Difficulty": "Sorry 🤣🤣",
+		"Attachment": "https://i.imgur.com/MHDc4Hb.png"
 	}
 ]

@@ -49,6 +49,19 @@
 		"Answer": ["morgan the fairy"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/MdKzoxP.png"
-    }
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["starry night"],
+		"Difficulty": "Hard coz it's a B skin",
+		"Attachment": "https://i.imgur.com/yFydVhU.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this accessory?",
+		"Answer": ["nightmare crystal"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/fbzYKkr.png"
+	}
 
 ]

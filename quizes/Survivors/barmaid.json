@@ -3,37 +3,53 @@
 		"Question": "**Question:**\nWhat kind of drink do you drink to get back to full health?",
 		"Answer": ["strong dovlin", "dovlin"],
 		"Difficulty": "As hard as ma d :v",
-		"Attachment": "https://i.pinimg.com/564x/7d/95/f4/7d95f478766cc9751a49712f3838dda6.jpg"
+		"Attachment": "https://dthezntil550i.cloudfront.net/qq/latest/qq1910211910395700006990506/1280_960/927354b1-61e5-4c06-8559-3c22ebc31a8d.jpg",
+		"Artist": "@88popoll on Artstress"
     },
     {
 		"Question": "**Repeat da sentence:**\nType `Want a drink?`",
 		"Answer": ["want a drink?"],
 		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/f2/43/e8/f243e82e06ec75d340b9cc6be55e9b90.jpg"
+		"Attachment": "https://pbs.twimg.com/media/Ed0GWj6XoAY3-CF?format=jpg&name=medium"
     },
     {
 		"Question": "**Unscramble:**\nThe word below is scrambled, unscramble it!\n`yTspi`",
 		"Answer": ["tipsy"],
 		"Difficulty": "Extreme",
-		"Attachment": "https://i.pinimg.com/564x/42/9f/89/429f8959fff894bc903aefcc9026d85d.jpg"
+		"Attachment": "https://preview.redd.it/a83fkmloy5r41.jpg?width=640&crop=smart&auto=webp&s=c027d0a1517bc26b26326f696cac960f94c958f8",
+		"Artist": "u/sooooba on Reddit"
 	},
 	{ 
 		"Question": "**Question:**\n How long does it take to heal using Barmaid's “Strong Dovlin“ drink?",
 		"Answer": ["21", "21s", "21 seconds", "twenty one", "twenty one seconds"],
 		"Difficulty": "Very hard",
-		"Attachment": "https://i.pinimg.com/564x/f2/43/e8/f243e82e06ec75d340b9cc6be55e9b90.jpg"
+		"Attachment": "https://pbs.twimg.com/media/Ed0GW7_WoAEecQi?format=jpg&name=medium"
 	},
 	{
 		"Question": "**Question:**\nAt the beginning of the match, how many **drinkable** drinks does the barmaid have?",
 		"Answer": ["1", "one"],
 		"Difficulty": "Easy tbh",
-		"Attachment": "https://i.pinimg.com/564x/5a/80/7f/5a807f0aeeada747d105fc76e015b720.jpg"
+		"Attachment": "https://preview.redd.it/6m9u4aqbc3r41.jpg?width=640&crop=smart&auto=webp&s=f19c0d6da0d99a16608ef782b14bd6df3ad2032e",
+		"Artist":"u/sooooba on Reddit"
 	},
 	{
 		"Question": "**Minigame:**\nThe Mercenary is injured... quickly type `serve` to give them a drink so they go back to full health!",
 		"Answer": ["serve"],
 		"Difficulty": "Nonexistent",
-		"Attachment": "https://i.pinimg.com/564x/2f/e0/e3/2fe0e324e8f4d205aff735090763e946.jpg"
+		"Attachment": "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/e35/70272748_100430678021266_2596341871396693345_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=110&_nc_ohc=GyanBPTSEGMAX-hbCCS&oh=ac4cd603a2d16fdc6e91ffb8e95daff0&oe=5F6CC32B",
+		"Artist": "@heikokuru1224 on Picuki"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["true proof"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/AcPSzRu.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["black rose"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/IJ7ud3L.png"
 	}
 	
 ]

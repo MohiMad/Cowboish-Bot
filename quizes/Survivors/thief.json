@@ -1,47 +1,40 @@
 [
 	{
-		"Question": "**Retype the sentence:**\n`Thief is a big troll`",
-		"Answer": [
-			"Theif is a big troll",
-			"thief is a big troll",
-			"Thief is a big troll",
-			"troll",
-			"thief"
-		],
-		"Difficulty": "Umm eazy?",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673459634299994112/jMjYQRWYxLAmibMKfW8l9CoWEQhBwcCAazOmAYIs3qLPiKSFfwkwpne2CKqECFE3tV39GGYNgCpZh0VMyDGDGihncvgFg18BdXtJ.png"
-	},
-	{
 		"Question": "**Fill in the missing word**:\n`As a Theif main, you need to master the _ _ _ _ walk`",
-		"Answer": [
-			"moon",
-			"Moon",
-			"Backward",
-			"backward"
-		],
+		"Answer": ["moon", "backward"],
 		"Difficulty": "Medium",
-		"Attachment": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKFnEDKT9GMMHHmoWc99RwLaAUtWUfgtPLoK5h1-Pxk7bJH0IG"
+		"Attachment": "https://i.pinimg.com/564x/80/9e/04/809e0445114aba10f7a6960176ed986d.jpg",
+		"Artist": "maple040 on Lofter"
 	},
 	{
 		"Question": "**The word is scrambled... type the correct word**\n`lashfghitl`",
-		"Answer": [
-			"FLASHLIGHT",
-			"Flashlight",
-			"flashlight"
-		],
+		"Answer": ["flashlight"],
 		"Difficulty": "MEH ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673459320771313674/809e0445114aba10f7a6960176ed986d.png?width=450&height=450"
+		"Attachment": "https://i.imgur.com/WEBU5yb.png"
 	},
 	{
 		"Question": "**Guess da name**\nWhat's the name of the skin in the image?",
-		"Answer": ["lion dance", "lion", "dance"],
+		"Answer": ["lion dance"],
 		"Difficulty": "Extreme",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687702178881863680/6CPxfqYOC4x7MClYAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/n1cbpZz.png"
 	},
 	{
 		"Question": "**Guess da name**\nWhat's the name of the skin in the image?",
-		"Answer": ["painter", "Painter"],
+		"Answer": ["painter"],
 		"Difficulty": "EASY",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687702448214769671/9sczAAWHUwAAAABJRU5ErkJggg.png"
+		"Attachment": "https://i.imgur.com/ZzTngAz.png"
+	},
+	{
+		"Question": "**Guess da name**\nWhat's the name of the skin in the image?",
+		"Answer": ["pioneer"],
+		"Difficulty": "EASY",
+		"Attachment": "https://i.imgur.com/hjaJ89N.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this accessory?",
+		"Answer": ["purse"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/wpU4ra5.png"
 	}
 ]

@@ -1,63 +1,66 @@
 [
 	{
 		"Question": "**Unscramble it:**\nThe word `lleB` is scrambled, unscramble it to win!",
-		"Answer": ["bell", "Bell"],
+		"Answer": ["bell"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674636713515155476/9k.png"
+		"Attachment": "https://i.imgur.com/QPJde19.png",
+		"Artist": "@titantug59 on Deviantart"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
-		"Answer": ["Divine", "divine"],
+		"Answer": ["divine"],
 		"Difficulty": "Hard as ma d",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674637325934002186/r9c3C2lITXQAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/chEyP2I.png"
     },
-    {
-		"Question": "**Repeat the sentence:**\nType `white wu chang range is op`",
-		"Answer": ["white wu chang range is op", "wu chang", "range", "op", "white"],
-		"Difficulty": "Brruh ezz",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674638667200987166/images.png"
-	},
 	{
 		"Question": "**Question:**\nWhat inspired Wu Chang’s A skin, “Intersection Bishounen”?",
-		"Answer": ["Junji Ito", "junji ito", "junji", "ito"],
+		"Answer": ["junji ito"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687987804428566569/image0.png"
+		"Attachment": "https://i.imgur.com/3FIG1FS.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of Wu Chang’s limited edition skin?",
-		"Answer": ["Far East Wind", "far east wind", "far", "east", "wind"],
+		"Answer": ["far east wind"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700745655588618330/image0.png"
+		"Attachment": "https://i.imgur.com/1GVLHQD.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the (real) name of the character seen below?",
 		"Answer": ["fan wujiu", "fan", "wujiu"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700746001497063457/image0.png"
+		"Attachment": "https://i.imgur.com/lyahrgE.png"
 	},
 	{
 		"Question": "**Unscramble the word:**\n`Anvirna`",
 		"Answer": ["nirvana"],
 		"Difficulty": "Hard as bedrock :v",
-		"Attachment": "https://66.media.tumblr.com/e4e641934fad474a1b803ce13619b5b2/14f52cc7cf219039-e6/s1280x1920/e9de886d785b9bb007a159bbaa73a8b2d126de37.png"
+		"Attachment": "https://66.media.tumblr.com/e4e641934fad474a1b803ce13619b5b2/14f52cc7cf219039-e6/s1280x1920/e9de886d785b9bb007a159bbaa73a8b2d126de37.png",
+		"Artist":"@mishroom on Tumblr"
 	},
-	{
-		"Question": "**Question:**\nAre Xie and Fan bestfriends?",
-		"Answer": ["yes", "yep", "yas"],
-		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/77/2a/36/772a36ec4af8d65b915626b1246d55af.jpg"
-	},
+	
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["requiem"],
 		"Difficulty": "Hard",
-		"Attachment": "https://i.pinimg.com/564x/eb/45/73/eb4573ad6d7474dead10789c0c7a4534.jpg"
+		"Attachment": "https://i.imgur.com/T745vlW.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["the intersection bishounen", "intersection bishounen", "bishounen"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/urt5YTA.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this accessory?",
+		"Answer": ["tide bringer"],
+		"Difficulty": "Pretty Hard",
+		"Attachment": "https://i.imgur.com/ighy9dN.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this accessory?",
+		"Answer": ["dust"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/Fk79EAA.png"
 	}
 	
 ]

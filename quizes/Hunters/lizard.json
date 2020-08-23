@@ -34,10 +34,9 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["Crystalline", "crystalline"],
+		"Answer": ["crystalline"],
 		"Difficulty": "Hard",
-		"Attachment": "https://pbs.twimg.com/media/ELERY0sW4AAwOuM?format=jpg&name=900x900",
-		"Artist": "@Hanh_R_A - Twitter"
+		"Attachment": "https://i.imgur.com/PuxFpwE.png"
 
 	},
 	{
@@ -52,6 +51,27 @@
 		"Difficulty": "Normal",
 		"Attachment": "https://i.imgur.com/rn4KWuI.png",
 		"Artist": "@hyena_prince on Instagram"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["blue alum"],
+		"Difficulty": "B skins are Hard to remember",
+		"Attachment": "https://i.imgur.com/gfYxzqE.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["purple aconite"],
+		"Difficulty": "Haaaaard",
+		"Attachment": "https://i.imgur.com/DFgEYoS.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["dream walker"],
+		"Difficulty": "Hard Logicpath skin",
+		"Attachment": "https://i.imgur.com/obawa1q.png"
 	}
 	
 ]

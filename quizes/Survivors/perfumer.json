@@ -1,27 +1,21 @@
 [
 	{
 		"Question": "**Question:**\nHow many perfumes does the Perfumer spawn with?",
-		"Answer": ["Three", "three", "3"],
+		"Answer": ["three", "3"],
 		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
-    },
-    {
-		"Question": "**Countinue the sentence:**\n`The _ _ _ _ _ _ hit me so i perfumed back`",
-		"Answer": ["hunter", "Hunter", "hunta"],
-		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
+		"Attachment": "https://i.imgur.com/th11bxs.png"
     },
     {
 		"Question": "**Question:**\nHow long does a perfume last for?",
 		"Answer": ["6", "6 seconds", "six", "Six"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673858999120297984/2Q.png"
+		"Attachment": "https://i.imgur.com/th11bxs.png"
 	},
 	{
 		"Question": "**Question:**\nwhat is the Perfumer's real name?\nPlease provide the name only (Don't include surname)",
-		"Answer": ["chloe", "vera"],
+		"Answer": ["chloe"],
 		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/dd/0a/ae/dd0aaebc9e8e1c8b1b0357003c357954.jpg"
+		"Attachment": "https://i.imgur.com/D0R725O.png"
 	},
 	{
 		"Question": "**Question:**\nHow long does the Euphoria last for before expiring?\n(Answer in **seconds**)",
@@ -36,6 +30,27 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://pbs.twimg.com/media/EU_P2mDUMAE5NK-?format=jpg&name=large",
 		"Artist": "@Armilewmt on Twitter"
-    }
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this accessory?",
+		"Answer": ["gathering water"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/Qchdj1F.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this limited skin?",
+		"Answer": ["sands of time"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/IgY9FmT.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this limited LP skin?",
+		"Answer": ["crimson bride"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/yIL791v.png"
+	}
 
 ]

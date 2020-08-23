@@ -15,10 +15,9 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of joseph's twin brother?",
-		"Answer": ["Claude", "claude"],
+		"Answer": ["claude"],
 		"Difficulty": "SUPER HARD :v",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700393696956383262/Du0pgVuV4AAsixQ.png?width=407&height=563",
-		"Artist": "@Hanh_R_A - Twitter"
+		"Attachment": "https://i.imgur.com/gMTzINz.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of the skin below?",
@@ -49,6 +48,12 @@
 		"Answer": ["yes", "yos", "yea", "y", "yee", "yep"],
 		"Difficulty": "LMAO",
 		"Attachment": "https://i.imgur.com/PEP3a7b.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["macbeth"],
+		"Difficulty": "Hard coz it's a B skin",
+		"Attachment": "https://i.imgur.com/07bXMHl.png"
 	}
 	
 ]

@@ -1,35 +1,34 @@
 [
 	{
 		"Question": "**Question:**\nHow many seconds does the flare gun stun last for?",
-		"Answer": ["Five", "five", "5", "5 seconds", "five seconds", "Five seconds", "4.5", "4,5", "4"],
+		"Answer": ["five", "5", "5 seconds", "five seconds", "Five seconds", "4.5", "4,5", "4"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673549453239779360/D8ZkbTvP5zgrAAAAAElFTkSuQmCC.png"
+		"Attachment": "https://i.imgur.com/qMmu2eb.png"
 	},
 	{
 		"Question": "**Question:**\nWhat's the coordinator's real name",
-		"Answer": ["martha", "Martha"],
+		"Answer": ["martha"],
 		"Difficulty": "Easy",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673550821459361841/q8r9THTIxF1BxHgAAAABJRU5ErkJggg.png"
-
-	},
-	{
-	
-		"Question": "**Reaction test:**\nYou just rescued your teammate, quickly type `shoot` to shoot the hunter!",
-		"Answer": ["shoot", "Shoot"],
-		"Difficulty": "Eazy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673550659806691354/9k.png"
+		"Attachment": "https://i.pinimg.com/564x/14/1d/30/141d302db9a556c775511e24f06c0f3a.jpg",
+		"Artist": "maple040 on Lofter"
 
 	},
 	{
 		"Question": "**Fill in the missing word:**\n`Martha's main item is a flare _ _ _`",
 		"Answer": ["gun"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692745565209100288/98da7d01b92693019601c72dde177f73.png?width=608&height=564"
+		"Attachment": "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/e35/c163.0.394.394a/118239884_737414823494245_8956989631944414765_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=101&_nc_ohc=EfGSWUUlDywAX9BWtor&oh=e063b047a669a0143506b8c9b4576ec8&oe=5F44A037"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["nostalgia"],
 		"Difficulty": "Hard",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692745787431452742/images.png"
+		"Attachment": "https://64.media.tumblr.com/1676e329ea86b2d95a991e00f103e5ea/tumblr_pq57m6fsrv1vi1o8i_500.jpg"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["nidhogg"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/lVMJeo4.png"
 	}
 ]

@@ -3,19 +3,14 @@
         "Question": "**Which word?:**\nType the odd word that doesn't fit with the character\n(`zap`, `decoder`, `pallet`, `stun`)",
         "Answer": ["pallet"],
         "Difficulty": "Medium",
-        "Attachment": "https://media.discordapp.net/attachments/673091096946933790/700206665063989288/maxresdefault.png?width=1002&height=564"
-    },
-    {
-        "Question": "**Repeat da sentence:**\nType `Prisoner is better than mechanic`",
-        "Answer": ["prisoner is better than mechanic"],
-        "Difficulty": "Easy",
-        "Attachment": "https://media.discordapp.net/attachments/673091096946933790/700206920186724374/ESuz7KMVAAAITmQ.png?width=564&height=564"
+        "Attachment": "https://pbs.twimg.com/media/Ebd_5OlUYAA_bQl?format=jpg&name=large"
     },
     {
         "Question": "**Fill in the missing word:**\n`Luca used to be a world-renowned _ _ _ _ _ _ _ _`",
-        "Answer": ["Inventor", "inventor"],
+        "Answer": ["inventor"],
         "Difficulty": "Easy",
-        "Attachment": "https://media.discordapp.net/attachments/673091096946933790/700206283869126728/9498f91eb4814ce2244e0b8d4d43f6b45baab23e.png?width=491&height=564"
+        "Attachment": "https://64.media.tumblr.com/9cdf2f7ed29ed57dfdde28a20910cb84/19929c656b3c3795-bc/s1280x1920/9498f91eb4814ce2244e0b8d4d43f6b45baab23e.png",
+        "Artist": "@Mishroom on Twitter"
     },
     {
         "Question": "**Question:**\nHow long is The Prisoner's shock/stun cooldown?",
@@ -30,6 +25,18 @@
         "Difficulty": "Hard",
         "Attachment": "https://pbs.twimg.com/media/EYzBlRgVcAAFJ-j?format=jpg&name=large",
         "Artist": "@merancoru on Twitter"
-    }
+    },
+    {
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["viper"],
+		"Difficulty": "Haaaaaard :P",
+		"Attachment": "https://i.imgur.com/OinB3Y6.png"
+    },
+    {
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["moldy bread"],
+		"Difficulty": "New B skins are hard to remember >:D",
+		"Attachment": "https://i.imgur.com/uhwP2UE.png"
+	}
 
 ]

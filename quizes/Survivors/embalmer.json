@@ -1,39 +1,29 @@
 [
 	{
 		"Question": "**Question:**\nHow many coffins does the Embalmer spawn with?",
-		"Answer": ["one", "1", "One", "one coffin", "One coffin"],
+		"Answer": ["one", "1", "one coffin"],
 		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884816457990156/9k.png"
+		"Attachment": "https://pbs.twimg.com/media/D6LL46ZUwAAN3wf?format=jpg&name=small",
+		"Artist": "@windrainsky on Twitter"
     },
-    {
-		"Question": "**Repeat da sentence:**\nType `The Embalmer made me bleed out`",
-		"Answer": ["The Embalmer made me bleed out", "the embalmer made me bleed out"],
-		"Difficulty": "medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884816457990156/9k.png"
-    },
-    {
-		"Question": "**Guess the name:**\nThe word is scrambled, unscramble it!\n`scortEix`",
-		"Answer": ["exorcist", "Exorcist"],
-		"Difficulty": "Extreme",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673884480767000607/BdoGBBI13EsnAAAAAElFTkSuQmCC.png"
-	},
+    
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["exorcist"],
 		"Difficulty": "HARD",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692748026917421167/fx02sXy607ZwAAAAAElFTkSuQmCC.png"
+		"Attachment": "https://i.imgur.com/Y0ayjbp.png"
 	},
 	{
 		"Question": "**Fill in the missing word:**\n`The embalmer gains _ _ _ coffin after getting rescued`",
 		"Answer": ["one", "1"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692751079976206406/ba1e4632d456c68218f81115cb528f5d78f48889r1-1970-1700v2_uhq.png?width=654&height=564"
+		"Attachment": "https://i.imgur.com/XKtGjXv.png"
 	},
 	{
 		"Question": "**Question:**\nWho is Aesop’s adoptive father?",
-		"Answer": ["Jerry Carl", "jerry carl", "jerry", "carl"],
+		"Answer": ["jerry carl", "jerry", "carl"],
 		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/700392762004209746/image0.png?width=765&height=564"
+		"Attachment": "https://i.imgur.com/UOoub6c.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
@@ -43,7 +33,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["trickster", ""],
+		"Answer": ["trickster"],
 		"Difficulty": "HARD",
 		"Attachment": "https://i.imgur.com/vqYMGhO.png"
 	},

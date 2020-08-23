@@ -3,37 +3,32 @@
 		"Question": "**Question:**\nWho is Leo's daughter?",
 		"Answer": ["emma", "Emma", "Gardener", "gardener", "emma woods"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633255059849256/Z.png"
+		"Attachment": "https://pbs.twimg.com/media/ECozTs4U4AAYmyk?format=jpg&name=4096x4096",
+		"Artist": "@ornsteined___ on Twitter"
     },
     {
 		"Question": "**Countinue the sentence:**\n`You can throw snowballs in Leo's _ _ _ _ _ _ map`",
 		"Answer": ["memory", "Memory"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633408642547732/2Q.png"
-    },
-    {
-		"Question": "**Repeat da word:**\nType `leo is an op camper`",
-		"Answer": ["leo is an op camper", "leo", "is", "op", "an", "camper"],
-		"Difficulty": "Easy huh",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
+		"Attachment": "https://i.imgur.com/on65e51.png"
     },
     {
 		"Question": "**Unscramble it:**\nThe word `Pmhanto` is scrambled, unscramble it to win!",
 		"Answer": ["Phantom", "phantom"],
 		"Difficulty": "Hard kinda :v",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674634059405590606/Z.png"
+		"Attachment": "https://i.imgur.com/iyz4XUI.png"
     },
     {
 		"Question": "**Question:**\nWhat's Leo's real name?\nOof i accidentally said the name :v",
 		"Answer": ["leo", "leo's"],
 		"Difficulty": "Non existent :v",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674633683134709764/9k.png"
+		"Attachment": "https://i.imgur.com/2HOy1ut.png"
 	},
 	{
 		"Question": "**Guess the skin's name:**\nWhat's the name of the skin in the image?",
-		"Answer": ["aladdin", "Aladdin"],
+		"Answer": ["aladdin"],
 		"Difficulty": "Hard tbh",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/687698608396566798/AhoFpTOrYt8TAAAAAElFTkSuQmCC.png?width=546&height=565"
+		"Attachment": "https://i.imgur.com/X4qDqhY.png"
 	},
 	{
 		"Question": "**Type the odd word that doesn't fit with The Hell Ember**\n(`Fire`,`Perfumer`, `Toy Factory`, `Puppets`)",
@@ -65,6 +60,12 @@
 		"Answer": ["golden sea monster"],
 		"Difficulty": "Hard?",
 		"Attachment": "https://i.imgur.com/0viJzXB.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["pirate captain"],
+		"Difficulty": "Hard?",
+		"Attachment": "https://i.imgur.com/mUhGaM9.png"
 	}
 	
 ]

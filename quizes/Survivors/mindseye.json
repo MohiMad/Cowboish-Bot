@@ -29,5 +29,19 @@
 		"Answer": ["sound wave"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/sEjRsuM.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this accessory?",
+		"Answer": ["heart-shaped bubble", "heart shaped bubble", "heartshaped bubble"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/3hB261D.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this accessory?",
+		"Answer": ["record player"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/kPjnDXa.png"
 	}
 ]

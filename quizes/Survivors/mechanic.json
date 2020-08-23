@@ -1,26 +1,39 @@
 [
-	{
-		"Question": "**Repeat da word:**\nYou just spawned... quickly type `spawn` to spawn yo robot before the hunter comes",
-		"Answer": ["spawn", "Spawn"],
-		"Difficulty": "Ez",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673607059434110976/images.png"
-    },
+	
     {
 		"Question": "**Countinue the sentence:**\n`The mechanic can spawn _ _ _ dolls per match!`",
 		"Answer": ["two", "2", "dos"],
 		"Difficulty": "medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673607059434110976/images.png"
+		"Attachment": "https://i.imgur.com/Wd7qExt.png"
     },
     {
 		"Question": "**Question:**\nHow many S skins does the mechanic have?",
 		"Answer": ["One", "one", "1"],
 		"Difficulty": "Hard lol",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673607059434110976/images.png"
+		"Attachment": "https://i.imgur.com/UR0gmJI.png"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["red riding hood"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/FqqzIN7.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["candy girl"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/P9qqLaj.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["puppeteer"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/DNHMghL.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["oracle"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/jw32QaV.png"
 	}
 ]

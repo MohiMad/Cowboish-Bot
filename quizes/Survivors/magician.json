@@ -1,33 +1,40 @@
 [
 	{
 		"Question": "**Question:**\nHow many magic wands does the Magician spawn with?",
-		"Answer": ["Two", "two", "2"],
+		"Answer": ["two", "2"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935510091071488/Z.png"
-    },
-    {
-		"Question": "**Repeat the sentence:**\nType `Dont get terror shocked!`",
-		"Answer": ["Dont get terror shocked!", "dont get terror shocked!", "Don't get terror shocked!", "don't get terror shocked!", "dont", "get", "terror", "shocked"],
-		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935510091071488/Z.png"
+		"Attachment": "https://i.imgur.com/U2M0s3q.png"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
-		"Answer": ["Merlin", "merlin"],
+		"Answer": ["merlin"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673935270088802314/5k1AObvBdQvdLXzv8rvaMg37t1oVmwriAoAAAAASUVORK5CYII.png"
+		"Attachment": "https://i.imgur.com/p1LqwOH.png"
 	},
-	{
-		"Question": "**Repeat da sentence:**\nType `now you see me now you dont`",
-		"Answer": ["now you see me now you dont", "now you see me now you don't"],
-		"Difficulty": "Medium",
-		"Attachment": "https://i.imgur.com/wm5JB3f.png"
-	},
+
 	{
 		"Question": "**Question:**\nHow Long Does Magician Stay Invisible for? (Please answer in seconds)",
 		"Answer": ["2 seconds", "2", "two", "two seconds"],
 		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/55/fe/86/55fe86df04b229b6d1a7c41a38f2c7be.jpg"
+		"Attachment": "https://i.imgur.com/wVDI6p6.png"
+	},
+	{
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["treasure hunter"],
+		"Difficulty": "HAAAARD",
+		"Attachment": "https://i.imgur.com/uHkRMPF.png"
+	},
+	{
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["blue aladdin"],
+		"Difficulty": "HAAAARD",
+		"Attachment": "https://i.imgur.com/UDi4vN1.png"
+	},
+	{
+		"Question": "**Guess the name:**\nWhat's the name of the skin in the image?",
+		"Answer": ["platinum aladdin"],
+		"Difficulty": "HAAAARD",
+		"Attachment": "https://i.imgur.com/5PUQPp1.png"
 	}
 	
 ]

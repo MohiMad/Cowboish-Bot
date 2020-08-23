@@ -1,45 +1,53 @@
 [
 	{
-		"Question": "**Question:**\nThe the female dancer spawn, which music box is equipped first?\n**Fast box** or **Slow box**",
-		"Answer": ["Fast box", "fast box", "fast", "Fast", "red", "Red"],
+		"Question": "**Question:**\nWhen the female dancer spawn, which music box is equipped first?\n**Fast box** or **Slow box**",
+		"Answer": ["fast box", "fast", "Fast", "red", "Red"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673879868529836032/Z.png"
+		"Attachment": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5419389b-671f-420d-b612-64c27240da68/dd3f0lv-886227f8-6d3d-47ca-a4b7-51efbd74a010.png/v1/fill/w_1063,h_752,q_70,strp/female_dancer_identity_v_by_srisa_dd3f0lv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05MDYiLCJwYXRoIjoiXC9mXC81NDE5Mzg5Yi02NzFmLTQyMGQtYjYxMi02NGMyNzI0MGRhNjhcL2RkM2YwbHYtODg2MjI3ZjgtNmQzZC00N2NhLWE0YjctNTFlZmJkNzRhMDEwLnBuZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.yEIH5UDUIhv4fj0QjW2wdziBmd-X4Bw9bFAb_Lqx3Lo",
+		"Artist": "@srisa on Deviantart"
     },
     {
 		"Question": "**Guess the name:**\nWhat's the name of this skin?",
-		"Answer": ["Animal tamer", "animal tamer", "tamer", "Tamer"],
+		"Answer": ["animal tamer", "tamer"],
 		"Difficulty": "Extreme",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/673880275104825377/LykKHc8AcvtTAAAAAElFTkSuQmCC.png"
+		"Attachment": "https://i.imgur.com/JIEk34J.png"
     },
     {
 		"Question": "**Question:**\nYou just placed a blue box at the pallet and the hunter is destroying it! Quickly type `stun` to stun the hunter with a pallet!",
-		"Answer": ["Stun", "stun"],
+		"Answer": ["stun"],
 		"Difficulty": "Medium",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/673879868529836032/Z.png"
+		"Attachment": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5419389b-671f-420d-b612-64c27240da68/dd3f0lv-886227f8-6d3d-47ca-a4b7-51efbd74a010.png/v1/fill/w_1063,h_752,q_70,strp/female_dancer_identity_v_by_srisa_dd3f0lv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05MDYiLCJwYXRoIjoiXC9mXC81NDE5Mzg5Yi02NzFmLTQyMGQtYjYxMi02NGMyNzI0MGRhNjhcL2RkM2YwbHYtODg2MjI3ZjgtNmQzZC00N2NhLWE0YjctNTFlZmJkNzRhMDEwLnBuZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.yEIH5UDUIhv4fj0QjW2wdziBmd-X4Bw9bFAb_Lqx3Lo",
+		"Artist": "@srisa on Deviantart"
 	},
 	{
 		"Question": "**Fill in the missing word:**\n`The Female dancer spawns with _ _ _ _ _ music boxes`",
 		"Answer": ["three", "3"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692746386327863296/307325644148203.png?width=423&height=563"
+		"Attachment": "https://pbs.twimg.com/media/Drs2_XfV4AAq2SB?format=jpg&name=medium"
 	},
 	{
 		"Question": "**Unscramble da word:**\nThe word `suMci` is scrambled, unscramble it to win!",
 		"Answer": ["music"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692746681283903548/female_dancer_identity_v_by_srisa_dd3f0lv-fullview.png?width=797&height=564"
+		"Attachment": "https://pbs.twimg.com/media/Ed7HvMHXYAED_Ji?format=jpg&name=large"
 	},
 	{
 		"Question": "**Fill in the blank:**\n`Slow music doesn't _ _ _ _ _ _ The Female Dancer`",
 		"Answer": ["affect"],
 		"Difficulty": "Medium",
-		"Attachment": "https://i.pinimg.com/564x/85/2e/a0/852ea07467eafeb4d7156859561a0416.jpg"
+		"Attachment": "https://pbs.twimg.com/media/Ed7Hv37WAAIS81S?format=jpg&name=medium"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
 		"Answer": ["kim"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/DuOLZ7I.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["kroto"],
+		"Difficulty": "Medium",
+		"Attachment": "https://i.imgur.com/aIlg9nd.png"
 	}
 
 ]

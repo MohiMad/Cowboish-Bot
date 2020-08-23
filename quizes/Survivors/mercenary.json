@@ -38,5 +38,19 @@
 		"Difficulty": "Hmm medium?",
 		"Attachment": "https://pbs.twimg.com/media/EdF3tn3XkAUO1sP?format=jpg&name=medium",
 		"Artist": "@Nashuuki on Twitter"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this skin?",
+		"Answer": ["cursed pharaoh"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/gq6EuaN.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat's the name of this accessory?",
+		"Answer": ["eagle feather"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/CIUTpig.png"
 	}
 ]

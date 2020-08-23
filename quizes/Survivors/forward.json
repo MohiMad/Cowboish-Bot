@@ -1,33 +1,42 @@
 [
-	{
-		"Question": "**Type quickly:**\nThe hunter just picked up yo teammate, quickly type `stun` to stun them!",
-		"Answer": ["stun", "Stun"],
-		"Difficulty": "Ez",
-		"Attachment": "https://i.pinimg.com/564x/d7/96/68/d7966817c4d54853a6ca8a446cac9b3b.jpg"
-    },
+	
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
 		"Answer": ["bull power"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/5mZIeKf.png"
     },
-    {
-		"Question": "**Retype the sentence:**\nType `This forward is toxic`",
-		"Answer": ["this forward is toxic"],
-		"Difficulty": "Easy",
-		"Attachment": "https://i.pinimg.com/564x/ce/c5/27/cec527e0e77b5ef8213aae5779ff226f.jpg"
-	},
+    
 	{
 		"Question": "**Question:**\nHow many seconds can the Forward can dash with his rugby?",
 		"Answer": ["6", "6 seconds", "six seconds", "six"],
 		"Difficulty": "Hard",
-		"Attachment": "https://i.pinimg.com/564x/4e/6d/0c/4e6d0c752e1747f862cf52db0bbfb69f.jpg"
+		"Attachment": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e892782c-df3c-4d64-b4c6-991e91225496/ddjksef-f3aa3006-7dec-4d5f-9639-ac8dfcbc2868.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZTg5Mjc4MmMtZGYzYy00ZDY0LWI0YzYtOTkxZTkxMjI1NDk2XC9kZGprc2VmLWYzYWEzMDA2LTdkZWMtNGQ1Zi05NjM5LWFjOGRmY2JjMjg2OC5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.bbKK22rBEgdPL4s5TS9mTVetoMgG_SA_sKwIYiXHXcM",
+		"Artist": "@Qcrobixm on Deviantart"
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["hermes shoes'", "hermes shoes’", "hermes‘ shoes", "hermes shoes"],
+		"Answer": ["hermes' shoes'", "hermes shoes’", "hermes‘ shoes", "hermes shoes"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/sFjDba6.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["ryuji sakamoto"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/bAF9Kgc.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["lazy mr bunny", "lazy mr.bunny", "lazy mr. bunny"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/B1Ayd6I.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["nike react"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/a7Tlxii.png"
 	}
 
 	

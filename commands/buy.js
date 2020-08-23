@@ -10,10 +10,6 @@ module.exports = {
     description: "buy some stuff",
     execute: async (message, args, bot, prefix) => {
 
-
-        //____________buy embed is here_______________
-
-
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         async function frame(message, frame, price, framePath) {
@@ -108,20 +104,26 @@ module.exports = {
         };
 
         async function essBuy(name, path, emoji, URL) {
-            if (LP.Inspirations < 96) return message.channel.send(`**${message.author.username}** you can't afford buying that!\nYou need **${96 - LP.Inspirations}**${insp} more...`);
+            let number;
+            if (!args[2]) number = 1;
+            else if (isNaN(args[2])) number = 1;
+            else if (["-"].includes(args[2])) return message.reply(`**you can't buy a negative amount of essences >:/**`);
+            else number = Number(args[2]);
+
+            if (LP.Inspirations < (96 * number)) return message.channel.send(`**${message.author.username}** you can't afford buying that!\nYou need **${(96 * number) - LP.Inspirations}**${insp} more...`);
 
             const essEmbed = new RichEmbed()
-                .setAuthor(`${message.author.username} paid 96 inspirations and bought 1 ${name}!`, message.author.avatarURL)
+                .setAuthor(`${message.author.username} bought ${number} ${name}!`, message.author.avatarURL)
                 .setTimestamp()
                 .setThumbnail(URL)
-                .setDescription(`You paid **96**${insp} and bought **1**${emoji}`)
+                .setDescription(`You paid **${96 * number}**${insp} and bought **${number}**${emoji}`)
                 .setColor("GREEN")
                 .setFooter("Cowboish bot", bot.user.displayAvatarURL);
 
-            if (path === "ess1") LP.Ess1 = LP.Ess1 + 1;
-            if (path === "ess2") LP.Ess2 = LP.Ess2 + 1;
-            if (path === "ess3") LP.Ess3 = LP.Ess3 + 1;
-            LP.Inspirations = LP.Inspirations - 96;
+            if (path === "ess1") LP.Ess1 = LP.Ess1 + number;
+            if (path === "ess2") LP.Ess2 = LP.Ess2 + number;
+            if (path === "ess3") LP.Ess3 = LP.Ess3 + number;
+            LP.Inspirations = LP.Inspirations - (96 * number);
 
             await LP.save().catch(e => console.log(e));
 

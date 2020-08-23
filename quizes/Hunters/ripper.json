@@ -1,19 +1,14 @@
 [
-	{
-		"Question": "**Retype the sentence:**\nType `Ripper has too many skins`",
-		"Answer": ["Ripper has too many skins", "ripper has too many skins"],
-		"Difficulty": "Hard af xD",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674669851926724627/Z.png"
-    },
+	
     {
 		"Question": "**Question:**\nWhat's the name of the skin in the image?",
-		"Answer": ["Svengali", "svengali"],
+		"Answer": ["svengali"],
 		"Difficulty": "Hard",
-		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674667326968430602/9k.png"
+		"Attachment": "https://i.imgur.com/CJ3IhKj.png"
     },
     {
 		"Question": "**Countinue the sentence:**\n`Ripper's _ _ _ blade has no attack recovery`",
-		"Answer": ["fog", "Fog"],
+		"Answer": ["fog", "foggy"],
 		"Difficulty": "Ez",
 		"Attachment": "https://cdn.discordapp.com/attachments/673091096946933790/674669851926724627/Z.png"
 	},
@@ -21,13 +16,46 @@
 		"Question": "**Unscramble da word:**\nThe word `ogf` is scrambled, unscramble it to win!",
 		"Answer": ["fog"],
 		"Difficulty": "Medium",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692774056478375986/3d58319543d001590f603b99f446e51a.png"
+		"Attachment": "https://i.imgur.com/MuDbG0d.png",
+		"Artist": "@Yenta4-art on Deviantart"
 	},
 	{
 		"Question": "**Hmm which word:**\nType the odd word that doesn't fit with the character\n(`fog`, `blade`, `pallet`, `tall`)",
 		"Answer": ["pallet"],
 		"Difficulty": "Easy",
-		"Attachment": "https://media.discordapp.net/attachments/673091096946933790/692774567919484982/d53f35924a80a5885ef42ed8ce08e54f49e89858r1-1448-2048v2_uhq.png?width=399&height=564"
+		"Attachment": "https://i.imgur.com/ppB4VU7.png",
+		"Artist":"@Yenta4-art on Deviantart"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["evil eye host", "the evil eye host"],
+		"Difficulty": "Hard?",
+		"Attachment": "https://i.imgur.com/fVZT7LS.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["count's banquet", "count’s banquet", "count‘s banquet", "counts banquet"],
+		"Difficulty": "Hard?",
+		"Attachment": "https://i.imgur.com/g01CKOh.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["soul emissary"],
+		"Difficulty": "Hehehe hard",
+		"Attachment": "https://i.imgur.com/vh1KD0e.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this accessory?",
+		"Answer": ["soul devourer"],
+		"Difficulty": "Hehehe hard",
+		"Attachment": "https://i.imgur.com/8DPyNgX.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this accessory?",
+		"Answer": ["rose cane (blue)", "blue rose cane", "rose cane blue"],
+		"Difficulty": "*hugs*",
+		"Attachment": "https://i.imgur.com/tfTZvDA.png"
 	}
+	
 	
 ]

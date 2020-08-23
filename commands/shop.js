@@ -41,7 +41,7 @@ module.exports = {
         //___________Essence embed here_______________
         const EssEmbed = new RichEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
-            .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `" + prefix + "buy <itemID>`")
+            .setDescription("Are you low on essences? no essences at all? it's all fine, you can buy yourself some by doing `" + prefix + "buy <essenceID> [optional(Amount)]`")
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/BXAjWou.png")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`

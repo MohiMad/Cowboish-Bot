@@ -27,18 +27,29 @@
 		"Artist": "@shirasiyuki on Deviantart"
 	},
 	{
-		"Question": "**Retype the sentence:**\nGeisha's hitbox is weird",
-		"Answer": ["geisha's hitbox is weird", "geisha’s hitbox is weird", "geisha‘s hitbox is weird"],
-		"Difficulty": "Medium rare",
-		"Attachment": "https://i.pinimg.com/564x/d1/6f/a2/d16fa245e4ea9fe0124b6f9d18cf8727.jpg",
-		"Artist": "@Hanh_R_A - Twitter"
-	},
-	{
 		"Question": "**Question:**\n How long is geishas dash cooldown??",
 		"Answer": ["8","eight"],
 		"Difficulty": "Easy Peasy",
 		"Attachment": "https://pbs.twimg.com/media/ERCaFjIU0AAFncB?format=jpg&name=large",
 		"Artist": "@VnamiN on Twitter"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["manchurian crane"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/twglw7V.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["the bride", "bride"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/jseMesF.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["lady thirteen"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/gsDSh1C.png"
 	}
-	
+
 ]
