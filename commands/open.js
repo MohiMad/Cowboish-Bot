@@ -83,7 +83,7 @@ module.exports = {
 
                 if (["s12-1", "s121", "ess1", "12-1"].includes(args[1].toLowerCase()) || args[1] === "1") {
                     if (!args[2]) {
-                        if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous 10 essences to be opened!**`);
+                        if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previoused essences to be opened!**`);
                         if (LP.Ess1 === 0) return message.reply("**You don't have any " + ess1 + " `s12-1` essences!**\nTry rolling some dices or buy some from the shop!")
 
                         LP.Ess1 = LP.Ess1 - 1;
@@ -177,7 +177,7 @@ module.exports = {
 
                 } else if (["s12-2", "ess2", "s122", "12-2"].includes(args[1].toLowerCase()) || args[1] === "2") {
                     if (!args[2]) {
-                        if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous 10 essences to be opened!**`);
+                        if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous essences to be opened**`);
                         if (LP.Ess2 === 0) return message.reply("**You don't have any " + ess2 + " `s12-2` essences!**\nTry rolling some dices or buy some from the shop!")
 
                         LP.Ess2 = LP.Ess2 - 1;
