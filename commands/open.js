@@ -56,20 +56,25 @@ module.exports = {
 
             async function checkForItem(variable, essence) {
 
-                if (LP.Opened.includes(essence[variable].Item)) fragments = fragments + essence[variable].FragAmount;
+                if (LP.Opened.includes(essence[variable].Item)) {
+                    fragments = fragments + essence[variable].FragAmount;
 
-                else {
+                    await LP.save().catch(e => console.log(e));
+
+                } else {
                     LP.Opened = [...LP.Opened, essence[variable].Item];
-                    if(essence[variable].Item === "s12-2-1") LP.Sculptor = true;
+                    if (essence[variable].Item === "s12-2-1") LP.Sculptor = true;
 
                     if (essence[variable].Tier === "S") LP.S = LP.S + 1;
                     if (essence[variable].Tier === "A") LP.A = LP.A + 1;
                     if (essence[variable].Tier === "S") LP.B = LP.B + 1;
                     if (essence[variable].Tier === "C") LP.C = LP.C + 1;
                     if (essence[variable].Tier === "D") LP.D = LP.D + 1;
+
+                    await LP.save().catch(e => console.log(e));
+
                 }
 
-                await LP.save().catch(e => console.log(e));
             }
 
             try {
