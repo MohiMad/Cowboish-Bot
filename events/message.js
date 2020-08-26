@@ -97,7 +97,7 @@ module.exports = async (bot, message) => {
             await bot.commands.get('meme').execute(message, args, MohiMoo);
             break;
 
-        case 'idv': case "identityv":
+        case 'idv': case "identityv": case "identityvsubreddit": case "idvsubreddit":
             await bot.commands.get('idv').execute(message, args, MohiMoo);
             break;
 

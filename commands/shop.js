@@ -46,7 +46,7 @@ module.exports = {
             .setThumbnail("https://i.imgur.com/BXAjWou.png")
             .addField("▔ ▔ ▔ ▔ ▔ ", stripIndents`
         ${ess1} | **Essence s12-1** - Price : *96* ${insp} - ID: __*s12-1*__
-        ${ess2} | **Essence s12-2** - Price : *96* ${insp} - ID: __*s12-3*__
+        ${ess2} | **Essence s12-2** - Price : *96* ${insp} - ID: __*s12-2*__
         ${ess3} | **Essence s12-3** (__Unavailable__) - Price : *96* ${insp} - ID: __*s12-3*__
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");

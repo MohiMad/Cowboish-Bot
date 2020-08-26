@@ -52,7 +52,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["snow fear"],
+		"Answer": ["snowfear", "snow fear"],
 		"Difficulty": "VERY Hard",
 		"Attachment": "https://i.imgur.com/SwE0sjF.png"
 	},
