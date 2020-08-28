@@ -13,7 +13,7 @@ module.exports = {
 
         let LP = await logicPath.findOne({ UserID: message.author.id });
 
-        if (!LP) return newLP(message);
+        await newLP(message);
 
         function freeToUse(message, fram) {
 

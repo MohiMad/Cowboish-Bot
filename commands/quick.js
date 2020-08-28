@@ -7,14 +7,13 @@ module.exports = {
     name: 'quick',
     description: "play a quick match",
     execute: async (message, args, bot, prefix, spamStopper) => {
+        await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
         const cooldownCheck = await findCooldown(message, "quick");
         if(spamStopper.has(message.author)) return;
 
         if (!cooldownCheck) {
-
-            if (!LP) return newLP(message);
 
             let ownedSurvivorsFiles = ["doctor", "luckyguy", "gardener", "lawyer", "thief"];
 

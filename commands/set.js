@@ -6,13 +6,11 @@ module.exports = {
     name: 'set',
     description: "Set logicpath info",
     execute: async (message, args, bot, prefix) => {
+        await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        if (!LP) {
-            return newLP(message);
-        }
-        else if (!args[1]) {
+       if (!args[1]) {
             ErrorMsg(bot, message, "**Too few arguments provided...**\nPlease provide me what you want to set:\n\nTo set your **region**, do `" + prefix + "set region <regionHERE>`\nTo set your **ingame-ID**, do `" + prefix + "set ID <ingameID>`\nTo set your **biography**, do `" + prefix + "set bio <textGoesHere>`");
 
         } else if (["region", "server"].includes(args[1].toLowerCase())) {

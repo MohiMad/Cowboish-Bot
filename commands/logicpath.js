@@ -13,6 +13,8 @@ module.exports = {
     description: "logic info",
     execute: async (message, args, bot, prefix) => {
 
+        await newLP(message);
+
         let cooldownCheck = await findCooldown(message, "logicpath");
 
         if (!cooldownCheck) {

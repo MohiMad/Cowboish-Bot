@@ -11,6 +11,7 @@ module.exports = {
     name: 'open',
     description: "opens an essence for ya ",
     execute: async (message, args, bot, MohiMoo, prefix) => {
+        await newLP(message);
 
         const cooldownCheck = await findCooldown(message, "open");
         let randomItem = Math.floor(Math.random() * s12Essence.length);
@@ -80,9 +81,6 @@ module.exports = {
             try {
 
                 if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
-                if (!LP) return newLP(message);
-
 
                 if (!args[1]) return message.channel.send(noargsEmbed);
 

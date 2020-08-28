@@ -11,6 +11,7 @@ module.exports = {
     name: 'shop',
     description: "shop list for ya",
     execute: async (message, args, bot, prefix) => {
+        await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -51,11 +52,7 @@ module.exports = {
         `)
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
-        if (!LP) {
-            newLP(message);
-
-        }
-        else if (!args[1]) {
+        if (!args[1]) {
             return message.channel.send(shopEmbed);
         }
         else if (["ess", "essence", "essences"].includes(args[1].toLowerCase())) {

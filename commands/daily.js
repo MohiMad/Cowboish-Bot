@@ -7,6 +7,8 @@ module.exports = {
     name: 'daily',
     description: "daily rewards",
     execute: async (message) => {
+        await newLP(message);
+
 
         const cooldownCheck = await findCooldown(message, "daily");
 
@@ -18,10 +20,6 @@ module.exports = {
             }, async (err, LP) => {
 
                 if (err) console.log(err);
-
-                if (!LP) {
-                    await newLP(message);
-                }
 
                 else {
 

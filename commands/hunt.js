@@ -6,6 +6,7 @@ module.exports = {
     name: 'hunt',
     description: "play a match as a hunter",
     execute: async (message, args, bot, prefix, spamStopper) => {
+        await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -13,8 +14,6 @@ module.exports = {
         if (spamStopper.has(message.author)) return;
 
         if (!cooldownCheck) {
-
-            if (!LP) return newLP(message);
 
             let ownedHuntersFiles = ["leo"];
 

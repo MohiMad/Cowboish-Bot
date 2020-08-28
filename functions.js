@@ -169,6 +169,10 @@ module.exports = {
 		return channel;
 	},
 	newLP: async (message) => {
+		let LP = await logicPath.findOne({ UserID: message.author.id });
+
+		if (LP) return;
+
 		const newLP = new logicPath({
 			UserID: message.author.id,
 			guildsID: [message.guild.id],
@@ -252,9 +256,8 @@ module.exports = {
 			Portrait: "0",
 			ThreeMatches: 3
 
-		})
-		await newLP.save().catch(err => console.log(err))
-			.then(message.reply("It seems like you didn't have any idv account, a new one just got created for you!\nPlease try to run the command again :)"))
+		});
+		await newLP.save().catch(err => console.log(err));
 
 	},
 	addCooldown: async (message, cooldownTime, command) => {

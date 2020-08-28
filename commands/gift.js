@@ -10,12 +10,11 @@ module.exports = {
     name: 'gift',
     description: "Gift yo friends yo items :D",
     execute: async (message, args, bot, prefix) => {
+        await newLP(message);
 
         let LP = await logicPath.findOne({ UserID: message.author.id });
 
         let gifted = await findMember(message, args[1]);
-
-        if (!LP) return newLP(message);
 
         if (!args[1] || !args[2] || !args[3]) return ErrorMsg(bot, message, "**Too few arguments**\nPlease provide someone to gift, how much you want to gift and what you want to gift.\nLol did i get you confused?\nHere is the correct usage: `" + prefix + "gift <@tagSomeone> <amount(NUMBER)> <item>`\n\nGiftable items are: `inspirations`, `fragments`, `clues`, `ess1`, `ess2`, `ess3`");
 

@@ -8,15 +8,13 @@ module.exports = {
     name: 'roll',
     description: "rolls a 4 sided dice",
     execute: async (message, args, bot, prefix) => {
+        await newLP(message);
 
         let LP = await logicPath.findOne({ UserID: message.author.id });
 
         let cooldownCheck = await findCooldown(message, "roll");
 
         if (!cooldownCheck) {
-
-
-            if (!LP) return await newLP(message);
 
             if (LP.Dices === 0) {
 

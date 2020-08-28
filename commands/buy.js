@@ -9,6 +9,7 @@ module.exports = {
     name: 'buy',
     description: "buy some stuff",
     execute: async (message, args, bot, prefix) => {
+        await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -153,10 +154,7 @@ module.exports = {
             message.channel.send(portraitEmbed);
         };
 
-        if (!LP) {
-            return newLP(message);
-        }
-        else if (!args[1]) {
+        if (!args[1]) {
             ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + "shop` to check what you can buy")
         }
         //buy essences here
