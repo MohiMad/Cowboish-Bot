@@ -6,7 +6,7 @@ const Canvas = require('canvas');
 
 const Discord = require("discord.js");
 
-const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
+const { ErrorMsg, coolEmbed, addCooldown, findCooldown, newLP} = require("../functions.js");
 
 module.exports = {
     name: 'logicpath',
