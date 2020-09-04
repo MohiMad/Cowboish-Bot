@@ -6,8 +6,9 @@ const logicPath = require("../models/logicpath.js");
 let spamStopper = new Set();
 const s12Essence = require("../essences/s12-1.json");
 const secondEssence = require("../essences/s12-2.json");
-const thirdEssence = require("../essences/s12-3.json");
+const thirdEssence = require("../essences/12-3.json");
 const { openOneEssence, statsCheck } = require("../essences/essenceFunctions.js");
+
 module.exports = {
     name: 'open',
     description: "opens an essence for ya ",
