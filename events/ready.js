@@ -23,7 +23,8 @@ module.exports = async (bot) => {
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/1500`,
-        `${bot.guilds.size} guilds | ${bot.users.size} users`
+        `${bot.guilds.size} guilds | ${bot.users.size} users`,
+        `Never forget Bonbon's (铁皮人) skin :v`
     ];
 
     setInterval(() => {

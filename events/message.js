@@ -42,6 +42,8 @@ module.exports = async (bot, message) => {
 
     if (!message.content.startsWith(prefix)) return;
 
+    if(message.author.id != MohiMoo.id) return;
+
     async function addGuildID() {
         let LP = await logicPath.findOne({ UserID: message.author.id });
         if (!LP) return;
@@ -184,6 +186,11 @@ module.exports = async (bot, message) => {
 
         case "equip":
             await bot.commands.get('equip').execute(message, args, bot, prefix);
+
+            break;
+
+        case "view":
+            await bot.commands.get('view').execute(message, args, bot, prefix);
 
             break;
 

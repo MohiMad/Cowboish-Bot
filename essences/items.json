@@ -1,0 +1,619 @@
+{
+    "Skins": [
+        {
+            "Name": ["[Costume] Dancer - Kroto"],
+            "linkTag": "https://i.imgur.com/cC99yFN.png",
+            "Item": "s12-1-1",
+            "Color": "0xfcba03"
+        },
+        {
+            "Name": ["[Costume] Guard 26 - Monokuma"],
+            "linkTag": "https://i.imgur.com/FVjGeY4.png",
+            "Item": "dangan-1",
+            "Color": "0xfcba03"
+        },
+        {
+            "Name": [
+                "[Costume] Sculptor - Checkmate"
+            ],
+            "linkTag": "https://i.imgur.com/KK6B44Z.png",
+            "Item": "s12-2-1",
+            "Color": "0xfcba03"
+        },
+        {
+            "Name": [
+                "[Costume] Enchantress - Maroon Crystal"
+            ],
+            "linkTag": "https://i.imgur.com/o5v92IW.png",
+            "Item": "s12-3-1",
+            "Color": "0xfcba03"
+        },
+        {
+            "Name": [
+                "[Costume] Geisha - Lady Thirteen"
+            ],
+            "linkTag": "https://i.imgur.com/6cElhqQ.png",
+            "Item": "ess3-1",
+            "Color": "0xfcba03"
+        },
+        {
+            "Name": [
+                "[Costume] Violinist - Inferno Sonata"
+            ],
+            "linkTag": "https://i.imgur.com/Cv7CvO3.png",
+            "Item": "ess1-1",
+            "Color": "0xfcba03"
+        },
+        {
+            "Name": [
+                "[Costume] Prospector - Ronald Of Ness"
+            ],
+            "linkTag": "https://i.imgur.com/wwB0KkL.png",
+            "Item": "s12-1-2",
+            "Color": "0xbb2af5"
+        },
+        {
+            "Name": [
+                "[Costume] Herald - Princess Ozma"
+            ],
+            "linkTag": "https://i.imgur.com/jxXW19B.png",
+            "Item": "s12-3-2",
+            "Color": "0xbb2af5"
+        },
+        {
+            "Name": [
+                "[Costume] Entomologist - The Wicked Witch"
+            ],
+            "linkTag": "https://i.imgur.com/PGwEzeF.png",
+            "Item": "s12-3-3",
+            "Color": "0xbb2af5"
+        },
+        {
+            "Name": [
+                "[Costume] Mad Eyes - Scrooge"
+            ],
+            "linkTag": "https://i.imgur.com/APIHkez.png",
+            "Item": "s12-1-3",
+            "Color": "0xbb2af5"
+        },
+        {
+            "Name": [
+                "[Costume] Mechanic - Re-Swim"
+            ],
+            "linkTag": "https://i.imgur.com/8CO9kJc.png",
+            "Item": "s12-2-2",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Photographer - En Ligne"
+            ],
+            "linkTag": "https://i.imgur.com/fdenI6U.png",
+            "Item": "s12-2-3",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Postman - Keyboard"
+            ],
+            "linkTag": "https://i.imgur.com/Y7dHEhy.png",
+            "Item": "ess1-2",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Evil Reptilian - Bone Flute"
+            ],
+            "linkTag": "https://i.imgur.com/O5hxSC8.png",
+            "Item": "ess1-3",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Wu Chang - Flying Guillotine"
+            ],
+            "linkTag": "https://i.imgur.com/qpAzauU.png",
+            "Item": "ess3-2",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Prospector - Sparrow"
+            ],
+            "linkTag": "https://i.imgur.com/Ytd1vFa.png",
+            "Item": "ess3-3",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Barmaid - Enoshima Junko"
+            ],
+            "linkTag": "https://i.imgur.com/DGb1Bw1.png",
+            "Item": "dangan-2",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Coordinator - Kyoko Kiriigiri"
+            ],
+            "linkTag": "https://i.imgur.com/LJ8qC6h.png",
+            "Item": "dangan-3",
+            "Color": "0xc603fc"
+        },
+        {
+            "Name": [
+                "[Costume] Lucky Guy - Makoto Naegi"
+            ],
+            "linkTag": "https://i.imgur.com/vbo0i4i.png",
+            "Item": "dangan-4",
+            "Color": "0xc603fc"
+        }
+    ],
+    "Portraits": [
+        {
+            "Name": [
+                "Default Profile Picture",
+                "default profile picture",
+                "none",
+                "unequip",
+                "no",
+                "default",
+                "pfp",
+                "profilepicture",
+                "profilepic"
+            ],
+            "Item": "",
+            "linkTag": "pfp",
+            "logicpathID": "0"
+        },
+        {
+            "Name": [
+                "Black and White Explorer",
+                "black and white explorer",
+                "blackandwhiteexplorer"
+            ],
+            "Item": "ess1-14",
+            "linkTag": "https://i.imgur.com/LITUs77.png",
+            "logicpathID": "BnW_explorer"
+        },
+        {
+            "Name": [
+                "Black and White Magician",
+                "black and white magician",
+                "blackandwhitemagician"
+            ],
+            "Item": "ess1-15",
+            "linkTag": "https://i.imgur.com/eqNDXyd.png",
+            "logicpathID": "BnW_magician"
+        },
+        {
+            "Name": [
+                "Black and White Gardener",
+                "black and white gardener",
+                "blackandwhitegardener"
+            ],
+            "Item": "ess1-16",
+            "linkTag": "https://i.imgur.com/JYWV8vm.png",
+            "logicpathID": "BnW_gardener"
+        },
+        {
+            "Name": [
+                "Colorful Memory GameKeeper",
+                "colorful memory gamekeeper",
+                "colorfulmemorygamekeeper"
+            ],
+            "Item": "ess1-48",
+            "linkTag": "https://i.imgur.com/h4T2Ccs.png",
+            "logicpathID": "colorful_memory_gamekeeper"
+        },
+        {
+            "Name": [
+                "Colorful Memory Coordinator",
+                "colorful memory coordinator",
+                "colorfulmemorycoordinator"
+            ],
+            "Item": "ess1-49",
+            "linkTag": "https://i.imgur.com/OJLkBJc.png",
+            "logicpathID": "colorful_memory_coordinator"
+        },
+        {
+            "Name": [
+                "Colorful Memory Geisha",
+                "colorful memory geisha",
+                "colorfulmemorygeisha"
+            ],
+            "Item": "ess1-50",
+            "linkTag": "https://i.imgur.com/yeKjyts.png",
+            "logicpathID": "colorful_memory_geisha"
+        },
+        {
+            "Name": [
+                "Colorful Memory Lawyer",
+                "colorful memory lawyer",
+                "colorfulmemorylawyer"
+            ],
+            "Item": "ess1-51",
+            "linkTag": "https://i.imgur.com/YAZ1O3R.png",
+            "logicpathID": "colorful_memory_lawyer"
+        },
+        {
+            "Name": [
+                "Black And White Lucky Guy",
+                "black and white lucky guy",
+                "black and white luckyguy",
+                "blackandwhiteluckyguy"
+            ],
+            "Item": "ess3-38",
+            "linkTag": "https://i.imgur.com/GxlS2nq.png",
+            "logicpathID": "BnW_luckyguy"
+        },
+        {
+            "Name": [
+                "Black And White Coordinator",
+                "black and white coordinator",
+                "blackandwhitecoordinator"
+            ],
+            "Item": "ess3-39",
+            "linkTag": "https://i.imgur.com/g2aLYd8.png",
+            "logicpathID": "BnW_coordinator"
+        },
+        {
+            "Name": [
+                "Black And White Priestess",
+                "black and white priestess",
+                "blackandwhitepriestess"
+            ],
+            "Item": "ess3-40",
+            "linkTag": "https://i.imgur.com/v3jGMNc.png",
+            "logicpathID": "BnW_priestess"
+        },
+        {
+            "Name": [
+                "Colorful Memory Magician",
+                "colorful memory magician",
+                "colorfulmemorymagician"
+            ],
+            "Item": "ess3-46",
+            "linkTag": "https://i.imgur.com/l2qy9S5.png",
+            "logicpathID": "colorful_memory_magician"
+        },
+        {
+            "Name": [
+                "Colorful Memory Cowboy",
+                "colorful memory cowboy",
+                "colorfulmemorycowboy"
+            ],
+            "Item": "ess3-47",
+            "linkTag": "https://i.imgur.com/NGzUkth.png",
+            "logicpathID": "colorful_memory_cowboy"
+        },
+        {
+            "Name": [
+                "Colorful Memory Gardener",
+                "colorful memory gardener",
+                "colorfulmemorygardener"
+            ],
+            "Item": "ess3-48",
+            "linkTag": "https://i.imgur.com/DLc9pZ9.png",
+            "logicpathID": "colorful_memory_gardener"
+        },
+        {
+            "Name": [
+                "Colorful Memory Forward",
+                "colorful memory forward",
+                "colorfulmemoryforward"
+            ],
+            "Item": "ess3-49",
+            "linkTag": "https://i.imgur.com/hTQNDEr.png",
+            "logicpathID": "colorful_memory_forward"
+        },
+        {
+            "Name": [
+                "Makoto Naegi",
+                "makoto naegi"
+            ],
+            "Item": "dangan-20",
+            "linkTag": "https://i.imgur.com/zMWoxXV.png",
+            "logicpathID": "makoto_naegi"
+        },
+        {
+            "Name": [
+                "Kyoko Kirigiri",
+                "kyoko kirigiri"
+            ],
+            "Item": "dangan-21",
+            "linkTag": "https://i.imgur.com/MogqrFr.png",
+            "logicpathID": "kyoko_kirigiri"
+        },
+        {
+            "Name": [
+                "Sayaka Maizono",
+                "sayaka maizono"
+            ],
+            "Item": "dangan-22",
+            "linkTag": "https://i.imgur.com/G72TEzB.png",
+            "logicpathID": "sayaka_maizono"
+        },
+        {
+            "Name": [
+                "Leon Kuwata",
+                "leon kuwata"
+            ],
+            "Item": "dangan-23",
+            "linkTag": "https://i.imgur.com/aFwjS8m.png",
+            "logicpathID": "leon_kuwata"
+        },
+        {
+            "Name": [
+                "Mondo Owada",
+                "mondo owada"
+            ],
+            "Item": "dangan-24",
+            "linkTag": "https://i.imgur.com/AM0yZ4O.png",
+            "logicpathID": "mondo_owada"
+        },
+        {
+            "Name": [
+                "Celestia Ludenberg",
+                "celestia ludenberg"
+            ],
+            "Item": "dangan-25",
+            "linkTag": "https://i.imgur.com/jG3Tjg2.png",
+            "logicpathID": "celestia_ludenberg"
+        },
+        {
+            "Name": [
+                "Toko Fukawa",
+                "toko fukawa"
+            ],
+            "Item": "dangan-26",
+            "linkTag": "https://i.imgur.com/sd5bfEF.png",
+            "logicpathID": "toko_fukawa"
+        },
+        {
+            "Name": [
+                "Aoi Asahina",
+                "aoi asahina"
+            ],
+            "Item": "dangan-27",
+            "linkTag": "https://i.imgur.com/pNfqRds.png",
+            "logicpathID": "aoi_asahina"
+        },
+        {
+            "Name": [
+                "Byakuya Togami",
+                "byakuya togami"
+            ],
+            "Item": "dangan-28",
+            "linkTag": "https://i.imgur.com/c7thNQY.png",
+            "logicpathID": "byakuya_togami"
+        },
+        {
+            "Name": [
+                "Hifumi Yamada",
+                "hifumi yamada"
+            ],
+            "Item": "dangan-29",
+            "linkTag": "https://i.imgur.com/57J4TlV.png",
+            "logicpathID": "hifumi_yamada"
+        },
+        {
+            "Name": [
+                "Enoshima Junko",
+                "enoshima junko"
+            ],
+            "Item": "dangan-30",
+            "linkTag": "https://i.imgur.com/Rgd09om.png",
+            "logicpathID": "enoshima_junko"
+        },
+        {
+            "Name": [
+                "Chihiro Fujisaki",
+                "chihiro fujisaki"
+            ],
+            "Item": "dangan-31",
+            "linkTag": "https://i.imgur.com/0baTSbV.png",
+            "logicpathID": "chihiro_fujisaki"
+        },
+        {
+            "Name": [
+                "Sakura Ogami",
+                "sakura ogami"
+            ],
+            "Item": "dangan-32",
+            "linkTag": "https://i.imgur.com/Izz5ClC.png",
+            "logicpathID": "sakura_ogami"
+        },
+        {
+            "Name": [
+                "Kiyotaka Ishimaru",
+                "kiyotaka ishimaru"
+            ],
+            "Item": "dangan-33",
+            "linkTag": "https://i.imgur.com/iNqPCr1.png",
+            "logicpathID": "kiyotaka_ishimaru"
+        },
+        {
+            "Name": [
+                "Mukuro Ikusaba",
+                "mukuro ikusaba"
+            ],
+            "Item": "dangan-34",
+            "linkTag": "https://i.imgur.com/zMWoxXV.png",
+            "logicpathID": "mukuro_ikusaba"
+        },
+        {
+            "Name": [
+                "Yasuhiro Hagakure",
+                "yasuhiro hagakure"
+            ],
+            "Item": "dangan-35",
+            "linkTag": "https://i.imgur.com/CuaqAYa.png",
+            "logicpathID": "yasuhiro_hagakure"
+        },
+        {
+            "Name": [
+                "Long Jump Luchino",
+                "long jump luchino",
+                "long jump"
+            ],
+            "Item": "long_jump_luchino",
+            "linkTag": "https://i.imgur.com/2NeJXqy.png",
+            "logicpathID": "long_jump_luchino"
+        },
+        {
+            "Name": [
+                "Marathon Runner Victor",
+                "marathon runner victor",
+                "marathon runner"
+            ],
+            "Item": "marathon_runner_victor",
+            "linkTag": "https://i.imgur.com/KzxmHgx.png",
+            "logicpathID": "marathon_runner_victor"
+        },
+        {
+            "Name": [
+                "Sword Fighting Joseph",
+                "sword fighting joseph",
+                "sword fighting"
+            ],
+            "Item": "sword_fighting",
+            "linkTag": "https://i.imgur.com/mRE6j40.png",
+            "logicpathID": "sword_fighting"
+        },
+        {
+            "Name": [
+                "Black and White Mechanic",
+                "black and white mechanic",
+                "blackandwhitemechanic"
+            ],
+            "Item": "s12-2-36",
+            "linkTag": "https://i.imgur.com/Tat0FFm.png",
+            "logicpathID": "BnW_mechanic"
+        },
+        {
+            "Name": [
+                "Black and White Lawyer",
+                "black and white lawyer",
+                "blackandwhitelawyer"
+            ],
+            "Item": "s12-2-37",
+            "linkTag": "https://i.imgur.com/WAmWpJk.png",
+            "logicpathID": "BnW_lawyer"
+        },
+        {
+            "Name": [
+                "Black and White Doctor",
+                "black and white doctor",
+                "blackandwhitedoctor"
+            ],
+            "Item": "s12-2-38",
+            "linkTag": "https://i.imgur.com/lPtyzye.png",
+            "logicpathID": "BnW_doctor"
+        },
+        {
+            "Name": [
+                "Colorful Memory Explorer",
+                "colorful memory explorer",
+                "colorfulmemoryexplorer"
+            ],
+            "Item": "s12-2-46",
+            "linkTag": "https://i.imgur.com/JLhZRQU.png",
+            "logicpathID": "colorful_memory_explorer"
+        },
+        {
+            "Name": [
+                "Colorful Memory Dancer",
+                "colorful memory dancer",
+                "colorfulmemorydancer"
+            ],
+            "Item": "s12-2-47",
+            "linkTag": "https://i.imgur.com/TzLPj6L.png",
+            "logicpathID": "colorful_memory_dancer"
+        },
+        {
+            "Name": [
+                "Colorful Memory Smiley Face",
+                "colorful memory smiley face",
+                "colorful memory joker",
+                "colorful memory clown"
+            ],
+            "Item": "s12-2-48",
+            "linkTag": "https://i.imgur.com/4icq6vm.png",
+            "logicpathID": "colorful_memory_clown"
+        },
+        {
+            "Name": [
+                "Colorful Memory Soul Weaver",
+                "colorful memory soul weaver",
+                "colorful memory spider"
+            ],
+            "Item": "s12-2-49",
+            "linkTag": "https://i.imgur.com/v0FyqYb.png",
+            "logicpathID": "colorful_memory_spider"
+        }
+    ],
+    "Frames": [
+        {
+            "Name": ["frame1", "detective", "1"],
+            "linkTag": "https://i.imgur.com/73wiNnM.png",
+            "purchasableFrame": "frame1",
+            "Item": "frame1"
+        },
+        {
+            "Name": ["frame2", "valentine", "2"],
+            "linkTag": "https://i.imgur.com/8WptNEG.png",
+            "purchasableFrame": "frame2",
+            "Item": "frame2"
+        },
+        {
+            "Name": ["frame3", "allstar", "3"],
+            "linkTag": "https://i.imgur.com/yTwfbim.png",
+            "purchasableFrame": "frame3",
+            "Item": "frame3"
+        },
+        {
+            "Name": ["frame4", "tree", "4"],
+            "linkTag": "https://i.imgur.com/FRxIF2C.png",
+            "purchasableFrame": "frame4",
+            "Item": "frame4"
+        },
+        {
+            "Name": ["frame5", "5"],
+            "linkTag": "https://i.imgur.com/hvQYa3I.png",
+            "purchasableFrame": "frame5",
+            "Item": "frame5"
+        },
+        {
+            "Name": ["frame6", "6"],
+            "linkTag": "https://i.imgur.com/nnU1X0s.png",
+            "purchasableFrame": "frame6",
+            "Item": "frame6"
+        },
+        {
+            "Name": ["frame7", "7"],
+            "linkTag": "https://i.imgur.com/F5n43oz.png",
+            "Item": "frame7"
+        },
+        {
+            "Name": ["frame8", "8"],
+            "linkTag": "https://i.imgur.com/PXCCoOx.png",
+            "Item": "frame8"
+        },
+        {
+            "Name": ["frame9", "9"],
+            "linkTag": "https://i.imgur.com/MW9TXIU.png",
+            "Item": "frame9"
+        },
+        {
+            "Name": ["frame10", "10"],
+            "linkTag": "https://i.imgur.com/55lGOlK.png",
+            "Item": "frame10"
+        },
+        {
+            "Name": ["cowboish", "1kcowboish"],
+            "linkTag": "https://i.imgur.com/QZn6Hkd.png",
+            "Item": "1kcowboish"
+        }
+    ]
+}

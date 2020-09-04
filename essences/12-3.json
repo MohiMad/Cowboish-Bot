@@ -1,0 +1,499 @@
+[
+    {
+        "Name": "[Costume] Enchantress - Maroon Crystal",
+        "LinkTag": "https://i.imgur.com/sjc1JHF.jpg",
+        "Item": "s12-3-1",
+        "Tier": "S",
+        "FragAmount": 2000,
+        "Title": "💛 Yaaay you got Maroon Crystal, author 💛",
+        "Color": "0xfcba03",
+        "Footer": "Ooooahh Enchantress´ second S skin yaay"
+    },
+    {
+        "Name": "[Costume] Herald - Princess Ozma",
+        "LinkTag": "https://i.imgur.com/sjc1JHF.jpg",
+        "Item": "s12-3-2",
+        "Tier": "A",
+        "FragAmount": 1000,
+        "Title": "💜 author got Ozma 💜",
+        "Color": "0xbb2af5",
+        "Footer": "Wooohoooo >:D"
+    },
+    {
+        "Name": "[Costume] Entomologist - The Wicked Witch",
+        "LinkTag": "https://i.imgur.com/YlfYYMb.jpg",
+        "Item": "s12-3-3",
+        "Tier": "A",
+        "FragAmount": 1000,
+        "Title": "💜 author got The Wicked Witch 💜",
+        "Color": "0xbb2af5",
+        "Footer": "Ouuu that's Entomo's first A skin :O"
+    },
+    {
+        "Name": "[Costume] Acrobat - Emerald City Coachman",
+        "LinkTag": "https://i.imgur.com/GBM4m7p.jpg",
+        "Item": "s12-3-4",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 author got Emerald City Coachman 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Emerald U w U"
+    },
+    {
+        "Name": "[Costume] Postman - Oz, the Wizard",
+        "LinkTag": "https://i.imgur.com/7ADu8Qu.jpg",
+        "Item": "s12-3-5",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 author, the Wizard 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Wizaaaaaard >:D"
+    },
+    {
+        "Name": "[Costume] Guard 26 - The Tin Man",
+        "LinkTag": "https://i.imgur.com/8kqaYGD.jpg",
+        "Item": "s12-3-6",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 author got Tin man 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Never forget (号守卫-铁皮人) :v"
+    },
+    {
+        "Name": "[Costume] Axeboy - The Spookcrow",
+        "LinkTag": "https://i.imgur.com/tDeRFQE.jpg",
+        "Item": "s12-3-7",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 Ouuu author got Spookcrow 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Such a beautiful skin ngl"
+    },
+    {
+        "Name": "[Costume] Madeyes - The Toothless Lion",
+        "LinkTag": "https://i.imgur.com/9W5DdNa.jpg",
+        "Item": "s12-3-8",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 You got Toothless author 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Grandpa toothless :v"
+    },
+    {
+        "Name": "[Standby Motion] Female Dancer - Look",
+        "LinkTag": "https://i.imgur.com/9W5DdNa.jpg",
+        "Item": "s12-3-9",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 author got 'look' for Dancer 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Look-"
+    },
+    {
+        "Name": "[Standby Motion] Prospector - Look",
+        "LinkTag": "https://i.imgur.com/tYlKVA2.jpg",
+        "Item": "s12-3-10",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 author got look for Prospector 💙",
+        "Color": "0x2e65b8",
+        "Footer": "Oh look- *points at you* it's an unlucky human :v"
+    },
+    {
+        "Name": "[Standby Motion] Embalmer - Look",
+        "LinkTag": "https://i.imgur.com/U8JRKMv.jpg",
+        "Item": "s12-3-11",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 author got look for Embalmy boai 💙",
+        "Color": "0x2e65b8",
+        "Footer": "*looks at you cutely :3*"
+    },
+    {
+        "Name": "[Standby Motion] Seer - Look",
+        "LinkTag": "https://i.imgur.com/Kvw9zIn.jpg",
+        "Item": "s12-3-12",
+        "Tier": "B",
+        "FragAmount": 200,
+        "Title": "💙 You get 'look' for Seer, author 💙",
+        "Color": "0x2e65b8",
+        "Footer": ""
+    },
+    {
+        "Name": "[Costume] Lucky Guy - Plain Grey",
+        "LinkTag": "https://i.imgur.com/2S2QC8y.jpg",
+        "Item": "s12-3-13",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got a skin for luckiboi 💚",
+        "Color": "0x04b80a",
+        "Footer": "His name is lucky but really is unlucky"
+    },
+    {
+        "Name": "[Costume] Gardener - Violet",
+        "LinkTag": "https://i.imgur.com/MKu6CpU.jpg",
+        "Item": "s12-3-14",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 You get Violet for Gardener, author! 💚",
+        "Color": "0x04b80a",
+        "Footer": "Violet is a beautiful color 💜💜💜"
+    },
+    {
+        "Name": "[Costume] Mechanic - Focus White",
+        "LinkTag": "https://i.imgur.com/lw5uQHe.jpg",
+        "Item": "s12-3-15",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author get Focus White 💚",
+        "Color": "0x04b80a",
+        "Footer": "◽⬜◻▫⚪🤍🏳❕❔🧄"
+    },
+    {
+        "Name": "[Costume] The Mind's Eye - Peaceful Blue",
+        "LinkTag": "https://i.imgur.com/itaJ3wY.jpg",
+        "Item": "s12-3-16",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 Ooohoo author got Peaceful Blue 💚",
+        "Color": "0x04b80a",
+        "Footer": "💙🔵🔹🔷🔷🟦📘"
+    },
+    {
+        "Name": "[Costume] Cowboy - Sky Blue",
+        "LinkTag": "https://i.imgur.com/VUgL8Hz.jpg",
+        "Item": "s12-3-17",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 Aaaa author got Sky Blue 💚",
+        "Color": "0x04b80a",
+        "Footer": "It's cowboish af U^U"
+    },
+    {
+        "Name": "[Costume] Enchantress - Blazing Sun",
+        "LinkTag": "https://i.imgur.com/7ipjOaq.jpg",
+        "Item": "s12-3-18",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got Blazing Sun 💚",
+        "Color": "0x04b80a",
+        "Footer": "ヽ(*・ω・)ﾉ"
+    },
+    {
+        "Name": "[Costume] Bloody Queen - Banquet Gray",
+        "LinkTag": "https://i.imgur.com/T2UYnYH.jpg",
+        "Item": "s12-3-19",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got a Bq skin :D 💚",
+        "Color": "0x04b80a",
+        "Footer": "Bq simp? 😒😒"
+    },
+    {
+        "Name": "[Costume] Evil Reptilian - Red Algae",
+        "LinkTag": "https://i.imgur.com/MaqJXb7.jpg",
+        "Item": "s12-3-20",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 It's a lizzyboi skin, author! 💚",
+        "Color": "0x04b80a",
+        "Footer": "Lizzyboi goes J O M P"
+    },
+    {
+        "Name": "[Costume] Wildling - Green Apple",
+        "LinkTag": "https://i.imgur.com/fCs88hJ.jpg",
+        "Item": "s12-3-21",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got a green apple yaay 💚",
+        "Color": "0x04b80a",
+        "Footer": "🍏 apple 🍏"
+    },
+    {
+        "Name": "[Costume] Postman - Grave Blue",
+        "LinkTag": "https://i.imgur.com/V6p03qg.jpg",
+        "Item": "s12-3-22",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got Grave Blue for Postman 💚",
+        "Color": "0x04b80a",
+        "Footer": "^(^◇^)/"
+    },
+    {
+        "Name": "[Costume] Herald - Wilderness White",
+        "LinkTag": "https://i.imgur.com/xqYvlim.jpg",
+        "Item": "s12-3-23",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got themselves a skin for Ann 💚",
+        "Color": "0x04b80a",
+        "Footer": "🏳◽⬜⬜◻▫⚪🤍🧄"
+    },
+    {
+        "Name": "[Emote] Priestess - Cheer",
+        "LinkTag": "https://i.imgur.com/k0L3bV2.jpg",
+        "Item": "s12-3-24",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 Cheer for Priestess yaaay 💚",
+        "Color": "0x04b80a",
+        "Footer": ":D"
+    },
+    {
+        "Name": "[Emote] Coordinator - Cheer",
+        "LinkTag": "https://i.imgur.com/VvUch71.jpg",
+        "Item": "s12-3-25",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 Cheer for Coordinator whoohoo 💚",
+        "Color": "0x04b80a",
+        "Footer": "Pew pew?"
+    },
+    {
+        "Name": "[Emote] The Mind's Eye - Cheer",
+        "LinkTag": "https://i.imgur.com/VvUch71.jpg",
+        "Item": "s12-3-26",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got Cheer emote for TME 💚",
+        "Color": "0x04b80a",
+        "Footer": "u w u"
+    },
+    {
+        "Name": "[Emote] Forward - Cheer",
+        "LinkTag": "https://i.imgur.com/bYo61ox.jpg",
+        "Item": "s12-3-27",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got Cheer for Forward 💚",
+        "Color": "0x04b80a",
+        "Footer": "Forward goes zoooooom :3"
+    },
+    {
+        "Name": "[Standby Motion] The Mind's Eye - Wait",
+        "LinkTag": "https://i.imgur.com/54Bz1py.jpg",
+        "Item": "s12-3-28",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got 'Wait' standby motion 💚",
+        "Color": "0x04b80a",
+        "Footer": "Wait wait wait- nah nvm xD"
+    },
+    {
+        "Name": "[Standby Motion] Mechanic - Wait",
+        "LinkTag": "https://i.imgur.com/b05KvaX.jpg",
+        "Item": "s12-3-29",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got 'Wait' standby motion 💚",
+        "Color": "0x04b80a",
+        "Footer": "Wait wait wait- nah nvm xD"
+    },
+    {
+        "Name": "[Standby Motion] The Mind's Eye - Snooze",
+        "LinkTag": "https://i.imgur.com/dnHtJ6H.jpg",
+        "Item": "s12-3-30",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got Snooooze for TME 💚",
+        "Color": "0x04b80a",
+        "Footer": "😴😴😴"
+    },
+    {
+        "Name": "[Standby Motion] Mechanic - Snooze",
+        "LinkTag": "https://i.imgur.com/FFC0Wkv.jpg",
+        "Item": "s12-3-31",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got Mec's Snooze standyby motion 💚",
+        "Color": "0x04b80a",
+        "Footer": "😴😴😴"
+    },
+    {
+        "Name": "[Standby Motion] Explorer - Snooze",
+        "LinkTag": "https://i.imgur.com/iGbiAIQ.jpg",
+        "Item": "s12-3-32",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "💚 author got snooze for Explorer 💚",
+        "Color": "0x04b80a",
+        "Footer": "😴😴😴"
+    },
+    {
+        "Name": "[Graffiti] Priestess' Holy Key - Cartoon",
+        "LinkTag": "https://i.imgur.com/F2byNWV.jpg",
+        "Item": "s12-3-33",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 author got a graffiti for Priestess 🖤",
+        "Color": "0x04b80a",
+        "Footer": "LMAAAAO poor you"
+    },
+    {
+        "Name": "[Graffiti] Wu Chang's Rusty Bells - Cartoon",
+        "LinkTag": "https://i.imgur.com/iFAh5YU.jpg",
+        "Item": "s12-3-34",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 author got Wu Chang's Rusty Bells 🖤",
+        "Color": "0x04b80a",
+        "Footer": "That's a graffiti lol"
+    },
+    {
+        "Name": "[Graffiti] Smiley Face's Rocket - Cartoon",
+        "LinkTag": "https://i.imgur.com/Wkc7GZs.jpg",
+        "Item": "s12-3-35",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 author got Smiley Face's Rocket 🖤",
+        "Color": "0x04b80a",
+        "Footer": "It's a Smiley's long popsicle 😏"
+    },
+    {
+        "Name": "[Graffiti] Geisha's Fan - Cartoon",
+        "LinkTag": "https://i.imgur.com/bgy5OwL.jpg",
+        "Item": "s12-3-36",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 author got Geisha's Fan 🖤",
+        "Color": "0x04b80a",
+        "Footer": "Hehehe who was Geisha's fan? owo"
+    },
+    {
+        "Name": "[Portrait] Black and White - Lucky Guy",
+        "PortraitName": "Black and White Lucky Guy",
+        "LinkTag": "https://i.imgur.com/G5jnSQT.jpg",
+        "Item": "ess3-38",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 Yeeee a Lucky Guy Portrait 🖤",
+        "Color": "0x04b80a",
+        "Footer": "Equip it :3"
+    },
+    {
+        "Name": "[Portrait] Black and White - Coordinator",
+        "PortraitName": "Black and White Coordinator",
+        "LinkTag": "https://i.imgur.com/igI0axf.jpg",
+        "Item": "ess3-39",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 Ouu author got a Coord Portrait 🖤",
+        "Color": "0x04b80a",
+        "Footer": "Equip it >:3"
+    },
+    {
+        "Name": "[Portrait] Black and White - Priestess",
+        "PortraitName": "Black and White Priestess",
+        "LinkTag": "https://i.imgur.com/wTExNKG.jpg",
+        "Item": "ess3-40",
+        "Tier": "C",
+        "FragAmount": 36,
+        "Title": "🖤 author got a portrait for Priestess🖤",
+        "Color": "0x04b80a",
+        "Footer": "Cockroach ._."
+    },
+    {
+        "Name": "[Graffiti] Mechanic - Gray Shadow",
+        "LinkTag": "https://i.imgur.com/wlrDejo.jpg",
+        "Item": "s12-3-40",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a Mechanic graffiti 🖤",
+        "Color": "0x000000",
+        "Footer": "g r a f f i t i xD"
+    },
+    {
+        "Name": "[Graffiti] Coordinator - Gray Shadow",
+        "LinkTag": "https://i.imgur.com/Gm8FuKE.jpg",
+        "Item": "s12-3-41",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a graffiti for Coordinator 🖤",
+        "Color": "0x000000",
+        "Footer": "G R A F I T T I"
+    },
+    {
+        "Name": "[Graffiti] Cowboy - Gray Shadow",
+        "LinkTag": "https://i.imgur.com/hLj03NB.jpg",
+        "Item": "s12-3-42",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a cowboish graffiti 🖤",
+        "Color": "0x000000",
+        "Footer": "Heheheheh :3"
+    },
+    {
+        "Name": "[Graffiti] Forward - Gray Shadow",
+        "LinkTag": "https://i.imgur.com/83kEYUb.jpg",
+        "Item": "s12-3-43",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a graffiti for Forward 🖤",
+        "Color": "0x000000",
+        "Footer": "Nyooom"
+    },
+    {
+        "Name": "[Graffiti] Doctor - Gray Shadow",
+        "LinkTag": "https://i.imgur.com/NXLpMDH.jpg",
+        "Item": "s12-3-44",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a graffiti for Doctor 🖤",
+        "Color": "0x000000",
+        "Footer": "Graffitis are cute >:v"
+    },
+    {
+        "Name": "[Graffiti] Gardener - Gray Shadow",
+        "LinkTag": "https://i.imgur.com/gDeduZ1.jpg",
+        "Item": "s12-3-45",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got Gray Shadow for Gardener 🖤",
+        "Color": "0x000000",
+        "Footer": "Yeehaw :3"
+    },
+    {
+        "Name": "[Portrait] Colorful Memory - Magician",
+        "PortraitName": "Colorful Memory Magician",
+        "LinkTag": "https://i.imgur.com/8HLHtEi.jpg",
+        "Item": "ess3-46",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a Magician Portrait 🖤",
+        "Color": "0x000000",
+        "Footer": "Equip it u w u"
+    },
+    {
+        "Name": "[Portrait] Colorful Memory - Cowboy",
+        "PortraitName": "Colorful Memory Cowboy",
+        "LinkTag": "https://i.imgur.com/YRS5VKJ.jpg",
+        "Item": "ess3-47",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a Cowboy portrait 🖤",
+        "Color": "0x000000",
+        "Footer": "Ooooh it's a cowboish portrait :0"
+    },
+    {
+        "Name": "[Portrait] Colorful Memory - Gardener",
+        "PortraitName": "Colorful Memory Gardener",
+        "LinkTag": "https://i.imgur.com/LQlyC5F.jpg",
+        "Item": "ess3-48",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 author got a portrait for Gardener 🖤",
+        "Color": "0x000000",
+        "Footer": "Chair gurl :3"
+    },
+    {
+        "Name": "[Portrait] Colorful Memory - Forward",
+        "PortraitName": "Colorful Memory Forward",
+        "LinkTag": "https://i.imgur.com/9OfpQyK.jpg",
+        "Item": "ess3-49",
+        "Tier": "D",
+        "FragAmount": 6,
+        "Title": "🖤 Yaay author got a Forward portrait 🖤",
+        "Color": "0x000000",
+        "Footer": ">:3"
+    }
+]

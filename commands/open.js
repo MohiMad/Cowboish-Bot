@@ -6,7 +6,8 @@ const logicPath = require("../models/logicpath.js");
 let spamStopper = new Set();
 const s12Essence = require("../essences/s12-1.json");
 const secondEssence = require("../essences/s12-2.json");
-const { checkForItem, openOneEssence, statsCheck } = require("../essences/essenceFunctions.js");
+const thirdEssence = require("../essences/s12-3.json");
+const { openOneEssence, statsCheck } = require("../essences/essenceFunctions.js");
 module.exports = {
     name: 'open',
     description: "opens an essence for ya ",
@@ -16,6 +17,7 @@ module.exports = {
         const cooldownCheck = await findCooldown(message, "open");
         let randomItem = Math.floor(Math.random() * s12Essence.length);
         let secEssRandomItem = Math.floor(Math.random() * secondEssence.length);
+        let thirdEssItem = Math.floor(Math.random() * thirdEssence.length);
 
         if (!cooldownCheck) {
 
@@ -36,7 +38,7 @@ module.exports = {
                 .setDescription(stripIndents`The current season's Essences are:
                         ${ess1} | **Essences s12-1** ─ ID ➜ ${s10_cmd}
                         ${ess2} | **Essence s12-2** ─ ID ➜ ${s10_2_cmd}
-                        ${ess3} | **Essence s12-3** (__Unavailable__) ─ ID ➜ ${s10_3_cmd}
+                        ${ess3} | **Essence s12-3** ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
 
@@ -49,9 +51,6 @@ module.exports = {
                 `)
                 .setThumbnail("https://i.imgur.com/BXAjWou.png")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL);
-
-            let emojiNumbers = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"];
-
 
             let fragments = 0;
 
@@ -272,8 +271,102 @@ module.exports = {
 
                     }
 
+                } else if (["s12-3", "ess3", "s123", "12-3"].includes(args[1].toLowerCase()) || args[1] === "3") {
+                    if (!args[2]) {
+                        if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous essences to be opened**`);
+                        if (LP.Ess3 === 0) return message.reply("**You don't have any " + ess3 + " `s12-3` essences!**\nTry rolling some dices or buy some from the shop!")
+
+                        LP.Ess3 = LP.Ess3 - 1;
+                        await LP.save().catch(err => console.log(err));
+
+                        await addCooldown(message, 3000, "open");
+                        await openOneEssence(message, bot, prefix, thirdEssence, secEssRandomItem, "https://i.imgur.com/QQxyNKu.png", ".jpg");
+
+                    } else {
+                        if (isNaN(args[2])) return message.channel.send(`**${author}** please provide me the amount of **s12-3** essences ${ess3} you want to open at once...`);
+                        if (Number(args[2]) > 10) return message.channel.send(`**${author}** can't open more than 10 essences at once...`);
+                        if (LP.Ess3 < Number(args[2])) return message.channel.send(`**You have less than ${Number(args[2])} s12-3 essences, ${message.author.username}**`);
+                        if (Number(args[2]) < 1) return message.reply("**Can't open less than 1 essence >:/**");
+                        if (["-"].includes(Number(args[2]))) return message.reply("**Can't open a negative amount of essences >:/**");
+                        if (spamStopper.has(message.author)) return message.reply(`**Please wait for the previous essences to be opened!**`);
+
+                        let itemNumber1 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber2 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber3 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber4 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber5 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber6 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber7 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber8 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber9 = Math.floor(Math.random() * thirdEssence.length);
+                        let itemNumber10 = Math.floor(Math.random() * thirdEssence.length);
+
+                        let description = `1 ] **${thirdEssence[thirdEssItem].Name}**`;
+
+                        checkForItem(thirdEssItem, thirdEssence);
+
+                        let Ess3TenEmbed = new RichEmbed()
+                            .setTitle(`Here is what you got from your ${Number(args[2])} essences:`)
+                            .setTimestamp()
+                            .setImage(`https://i.imgur.com/${thirdEssence[thirdEssItem].LinkTag}.jpg`)
+                            .setColor(thirdEssence[thirdEssItem].Color)
+                            .setAuthor(`${Number(args[2])} s12-3 essences has been opened!`, "https://i.imgur.com/QQxyNKu.png")
+                            .setDescription(description);
+
+                        spamStopper.add(message.author);
+                        let msg = await message.channel.send(Ess3TenEmbed);
+
+                        for (let i = 1; i < Number(args[2]); i++) {
+
+                            let rndom;
+                            if (i === 1) rndom = itemNumber1;
+                            if (i === 2) rndom = itemNumber2;
+                            if (i === 3) rndom = itemNumber3;
+                            if (i === 4) rndom = itemNumber4;
+                            if (i === 5) rndom = itemNumber5;
+                            if (i === 6) rndom = itemNumber6;
+                            if (i === 7) rndom = itemNumber7;
+                            if (i === 8) rndom = itemNumber8;
+                            if (i === 9) rndom = itemNumber9;
+                            if (i === 10) rndom = itemNumber10;
+
+
+                            setTimeout(async () => {
+
+                                description = description + `\n\n${i + 1} ] **${thirdEssence[rndom].Name}**`;
+
+                                Ess3TenEmbed.setColor(thirdEssence[rndom].Color);
+                                Ess3TenEmbed.setImage(`https://i.imgur.com/${thirdEssence[rndom].LinkTag}.jpg`)
+                                Ess3TenEmbed.setDescription(description);
+
+                                checkForItem(rndom, thirdEssence);
+
+                                await msg.edit(Ess3TenEmbed);
+                            }, 2000 * i);
+
+                        }
+
+                        setTimeout(async () => {
+
+                            description = description + `\n\nDuplicated items gave you: **${fragments}** ${frags}`;
+
+                            Ess3TenEmbed.setDescription(description);
+
+                            LP.frags = LP.frags + fragments;
+                            LP.Ess3 = LP.Ess3 - Number(args[2]);
+                            spamStopper.delete(message.author);
+
+                            LP.save().catch(err => console.log(err));
+                            addCooldown(message, 1000 * Number(args[2]));
+
+                            await msg.edit(Ess3TenEmbed);
+
+                        }, 2000 * Number(args[2]));
+
+                    }
+
                 } else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
-                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** (__Unavailable__) ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
+                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
 
                     if (["s12-1", "s121", "ess1", "12-1"].includes(args[2].toLowerCase()) || args[2] === "1") {
                         await statsCheck(message, "s12-1", s12Essence, "https://i.imgur.com/0SglSpn.png")
@@ -284,8 +377,12 @@ module.exports = {
                         await statsCheck(message, "s12-2", secondEssence, "https://i.imgur.com/JGu6jXE.png")
                         await addCooldown(message, 3000, "open");
 
+                    } else if (["s12-3", "ess3", "s123", "12-3"].includes(args[2].toLowerCase()) || args[2] === "3") {
+                        await statsCheck(message, "s12-3", thirdEssence, "https://i.imgur.com/QQxyNKu.png")
+                        await addCooldown(message, 3000, "open");
+
                     } else {
-                        return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** (__Unavailable__) ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
+                        return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
                     }
 
                 } else {

@@ -32,6 +32,12 @@
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/wAU5fD5.png",
 		"Artist": "@Makai K on Weibo"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["the wicked witch", "wicked witch"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/sZJO8Xg.png"
 	}
 	
 ]

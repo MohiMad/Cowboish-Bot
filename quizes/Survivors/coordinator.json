@@ -1,7 +1,7 @@
 [
 	{
 		"Question": "**Question:**\nHow many seconds does the flare gun stun last for?",
-		"Answer": ["five", "5", "5 seconds", "five seconds", "Five seconds", "4.5", "4,5", "4"],
+		"Answer": ["4", "four", "4s", "4 seconds", "four seconds"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/qMmu2eb.png"
 	},

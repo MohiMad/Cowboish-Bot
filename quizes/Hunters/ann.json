@@ -30,6 +30,12 @@
 		"Answer": ["white truffle"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/UuMUqTD.png"
+	},
+	{
+		"Question": "**Question:**\nWhat is the name of this skin?",
+		"Answer": ["princess ozma", "ozma"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/vZGW30l.png"
 	}
 	
 ]
