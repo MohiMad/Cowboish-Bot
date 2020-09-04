@@ -1,7 +1,7 @@
 [
     {
         "Name": "[Costume] Enchantress - Maroon Crystal",
-        "LinkTag": "https://i.imgur.com/sjc1JHF.jpg",
+        "LinkTag": "sjc1JHF",
         "Item": "s12-3-1",
         "Tier": "S",
         "FragAmount": 2000,
@@ -11,7 +11,7 @@
     },
     {
         "Name": "[Costume] Herald - Princess Ozma",
-        "LinkTag": "https://i.imgur.com/sjc1JHF.jpg",
+        "LinkTag": "sjc1JHF",
         "Item": "s12-3-2",
         "Tier": "A",
         "FragAmount": 1000,
@@ -21,7 +21,7 @@
     },
     {
         "Name": "[Costume] Entomologist - The Wicked Witch",
-        "LinkTag": "https://i.imgur.com/YlfYYMb.jpg",
+        "LinkTag": "YlfYYMb",
         "Item": "s12-3-3",
         "Tier": "A",
         "FragAmount": 1000,
@@ -31,7 +31,7 @@
     },
     {
         "Name": "[Costume] Acrobat - Emerald City Coachman",
-        "LinkTag": "https://i.imgur.com/GBM4m7p.jpg",
+        "LinkTag": "GBM4m7p",
         "Item": "s12-3-4",
         "Tier": "B",
         "FragAmount": 200,
@@ -41,7 +41,7 @@
     },
     {
         "Name": "[Costume] Postman - Oz, the Wizard",
-        "LinkTag": "https://i.imgur.com/7ADu8Qu.jpg",
+        "LinkTag": "7ADu8Qu",
         "Item": "s12-3-5",
         "Tier": "B",
         "FragAmount": 200,
@@ -51,7 +51,7 @@
     },
     {
         "Name": "[Costume] Guard 26 - The Tin Man",
-        "LinkTag": "https://i.imgur.com/8kqaYGD.jpg",
+        "LinkTag": "8kqaYGD",
         "Item": "s12-3-6",
         "Tier": "B",
         "FragAmount": 200,
@@ -61,7 +61,7 @@
     },
     {
         "Name": "[Costume] Axeboy - The Spookcrow",
-        "LinkTag": "https://i.imgur.com/tDeRFQE.jpg",
+        "LinkTag": "tDeRFQE",
         "Item": "s12-3-7",
         "Tier": "B",
         "FragAmount": 200,
@@ -71,7 +71,7 @@
     },
     {
         "Name": "[Costume] Madeyes - The Toothless Lion",
-        "LinkTag": "https://i.imgur.com/9W5DdNa.jpg",
+        "LinkTag": "9W5DdNa",
         "Item": "s12-3-8",
         "Tier": "B",
         "FragAmount": 200,
@@ -81,7 +81,7 @@
     },
     {
         "Name": "[Standby Motion] Female Dancer - Look",
-        "LinkTag": "https://i.imgur.com/9W5DdNa.jpg",
+        "LinkTag": "9W5DdNa",
         "Item": "s12-3-9",
         "Tier": "B",
         "FragAmount": 200,
@@ -91,7 +91,7 @@
     },
     {
         "Name": "[Standby Motion] Prospector - Look",
-        "LinkTag": "https://i.imgur.com/tYlKVA2.jpg",
+        "LinkTag": "tYlKVA2",
         "Item": "s12-3-10",
         "Tier": "B",
         "FragAmount": 200,
@@ -101,7 +101,7 @@
     },
     {
         "Name": "[Standby Motion] Embalmer - Look",
-        "LinkTag": "https://i.imgur.com/U8JRKMv.jpg",
+        "LinkTag": "U8JRKMv",
         "Item": "s12-3-11",
         "Tier": "B",
         "FragAmount": 200,
@@ -111,17 +111,17 @@
     },
     {
         "Name": "[Standby Motion] Seer - Look",
-        "LinkTag": "https://i.imgur.com/Kvw9zIn.jpg",
+        "LinkTag": "Kvw9zIn",
         "Item": "s12-3-12",
         "Tier": "B",
         "FragAmount": 200,
         "Title": "💙 You get 'look' for Seer, author 💙",
         "Color": "0x2e65b8",
-        "Footer": ""
+        "Footer": "u w u"
     },
     {
         "Name": "[Costume] Lucky Guy - Plain Grey",
-        "LinkTag": "https://i.imgur.com/2S2QC8y.jpg",
+        "LinkTag": "2S2QC8y",
         "Item": "s12-3-13",
         "Tier": "C",
         "FragAmount": 36,
@@ -131,7 +131,7 @@
     },
     {
         "Name": "[Costume] Gardener - Violet",
-        "LinkTag": "https://i.imgur.com/MKu6CpU.jpg",
+        "LinkTag": "MKu6CpU",
         "Item": "s12-3-14",
         "Tier": "C",
         "FragAmount": 36,
@@ -141,7 +141,7 @@
     },
     {
         "Name": "[Costume] Mechanic - Focus White",
-        "LinkTag": "https://i.imgur.com/lw5uQHe.jpg",
+        "LinkTag": "lw5uQHe",
         "Item": "s12-3-15",
         "Tier": "C",
         "FragAmount": 36,
@@ -151,7 +151,7 @@
     },
     {
         "Name": "[Costume] The Mind's Eye - Peaceful Blue",
-        "LinkTag": "https://i.imgur.com/itaJ3wY.jpg",
+        "LinkTag": "itaJ3wY",
         "Item": "s12-3-16",
         "Tier": "C",
         "FragAmount": 36,
@@ -161,7 +161,7 @@
     },
     {
         "Name": "[Costume] Cowboy - Sky Blue",
-        "LinkTag": "https://i.imgur.com/VUgL8Hz.jpg",
+        "LinkTag": "VUgL8Hz",
         "Item": "s12-3-17",
         "Tier": "C",
         "FragAmount": 36,
@@ -171,7 +171,7 @@
     },
     {
         "Name": "[Costume] Enchantress - Blazing Sun",
-        "LinkTag": "https://i.imgur.com/7ipjOaq.jpg",
+        "LinkTag": "7ipjOaq",
         "Item": "s12-3-18",
         "Tier": "C",
         "FragAmount": 36,
@@ -181,7 +181,7 @@
     },
     {
         "Name": "[Costume] Bloody Queen - Banquet Gray",
-        "LinkTag": "https://i.imgur.com/T2UYnYH.jpg",
+        "LinkTag": "T2UYnYH",
         "Item": "s12-3-19",
         "Tier": "C",
         "FragAmount": 36,
@@ -191,7 +191,7 @@
     },
     {
         "Name": "[Costume] Evil Reptilian - Red Algae",
-        "LinkTag": "https://i.imgur.com/MaqJXb7.jpg",
+        "LinkTag": "MaqJXb7",
         "Item": "s12-3-20",
         "Tier": "C",
         "FragAmount": 36,
@@ -201,7 +201,7 @@
     },
     {
         "Name": "[Costume] Wildling - Green Apple",
-        "LinkTag": "https://i.imgur.com/fCs88hJ.jpg",
+        "LinkTag": "fCs88hJ",
         "Item": "s12-3-21",
         "Tier": "C",
         "FragAmount": 36,
@@ -211,7 +211,7 @@
     },
     {
         "Name": "[Costume] Postman - Grave Blue",
-        "LinkTag": "https://i.imgur.com/V6p03qg.jpg",
+        "LinkTag": "V6p03qg",
         "Item": "s12-3-22",
         "Tier": "C",
         "FragAmount": 36,
@@ -221,7 +221,7 @@
     },
     {
         "Name": "[Costume] Herald - Wilderness White",
-        "LinkTag": "https://i.imgur.com/xqYvlim.jpg",
+        "LinkTag": "xqYvlim",
         "Item": "s12-3-23",
         "Tier": "C",
         "FragAmount": 36,
@@ -231,7 +231,7 @@
     },
     {
         "Name": "[Emote] Priestess - Cheer",
-        "LinkTag": "https://i.imgur.com/k0L3bV2.jpg",
+        "LinkTag": "k0L3bV2",
         "Item": "s12-3-24",
         "Tier": "C",
         "FragAmount": 36,
@@ -241,7 +241,7 @@
     },
     {
         "Name": "[Emote] Coordinator - Cheer",
-        "LinkTag": "https://i.imgur.com/VvUch71.jpg",
+        "LinkTag": "VvUch71",
         "Item": "s12-3-25",
         "Tier": "C",
         "FragAmount": 36,
@@ -251,7 +251,7 @@
     },
     {
         "Name": "[Emote] The Mind's Eye - Cheer",
-        "LinkTag": "https://i.imgur.com/VvUch71.jpg",
+        "LinkTag": "VvUch71",
         "Item": "s12-3-26",
         "Tier": "C",
         "FragAmount": 36,
@@ -261,7 +261,7 @@
     },
     {
         "Name": "[Emote] Forward - Cheer",
-        "LinkTag": "https://i.imgur.com/bYo61ox.jpg",
+        "LinkTag": "bYo61ox",
         "Item": "s12-3-27",
         "Tier": "C",
         "FragAmount": 36,
@@ -271,7 +271,7 @@
     },
     {
         "Name": "[Standby Motion] The Mind's Eye - Wait",
-        "LinkTag": "https://i.imgur.com/54Bz1py.jpg",
+        "LinkTag": "54Bz1py",
         "Item": "s12-3-28",
         "Tier": "C",
         "FragAmount": 36,
@@ -281,7 +281,7 @@
     },
     {
         "Name": "[Standby Motion] Mechanic - Wait",
-        "LinkTag": "https://i.imgur.com/b05KvaX.jpg",
+        "LinkTag": "b05KvaX",
         "Item": "s12-3-29",
         "Tier": "C",
         "FragAmount": 36,
@@ -291,7 +291,7 @@
     },
     {
         "Name": "[Standby Motion] The Mind's Eye - Snooze",
-        "LinkTag": "https://i.imgur.com/dnHtJ6H.jpg",
+        "LinkTag": "dnHtJ6H",
         "Item": "s12-3-30",
         "Tier": "C",
         "FragAmount": 36,
@@ -301,7 +301,7 @@
     },
     {
         "Name": "[Standby Motion] Mechanic - Snooze",
-        "LinkTag": "https://i.imgur.com/FFC0Wkv.jpg",
+        "LinkTag": "FFC0Wkv",
         "Item": "s12-3-31",
         "Tier": "C",
         "FragAmount": 36,
@@ -311,7 +311,7 @@
     },
     {
         "Name": "[Standby Motion] Explorer - Snooze",
-        "LinkTag": "https://i.imgur.com/iGbiAIQ.jpg",
+        "LinkTag": "iGbiAIQ",
         "Item": "s12-3-32",
         "Tier": "C",
         "FragAmount": 36,
@@ -321,7 +321,7 @@
     },
     {
         "Name": "[Graffiti] Priestess' Holy Key - Cartoon",
-        "LinkTag": "https://i.imgur.com/F2byNWV.jpg",
+        "LinkTag": "F2byNWV",
         "Item": "s12-3-33",
         "Tier": "C",
         "FragAmount": 36,
@@ -331,7 +331,7 @@
     },
     {
         "Name": "[Graffiti] Wu Chang's Rusty Bells - Cartoon",
-        "LinkTag": "https://i.imgur.com/iFAh5YU.jpg",
+        "LinkTag": "iFAh5YU",
         "Item": "s12-3-34",
         "Tier": "C",
         "FragAmount": 36,
@@ -341,7 +341,7 @@
     },
     {
         "Name": "[Graffiti] Smiley Face's Rocket - Cartoon",
-        "LinkTag": "https://i.imgur.com/Wkc7GZs.jpg",
+        "LinkTag": "Wkc7GZs",
         "Item": "s12-3-35",
         "Tier": "C",
         "FragAmount": 36,
@@ -351,7 +351,7 @@
     },
     {
         "Name": "[Graffiti] Geisha's Fan - Cartoon",
-        "LinkTag": "https://i.imgur.com/bgy5OwL.jpg",
+        "LinkTag": "bgy5OwL",
         "Item": "s12-3-36",
         "Tier": "C",
         "FragAmount": 36,
@@ -362,7 +362,7 @@
     {
         "Name": "[Portrait] Black and White - Lucky Guy",
         "PortraitName": "Black and White Lucky Guy",
-        "LinkTag": "https://i.imgur.com/G5jnSQT.jpg",
+        "LinkTag": "G5jnSQT",
         "Item": "ess3-38",
         "Tier": "C",
         "FragAmount": 36,
@@ -373,7 +373,7 @@
     {
         "Name": "[Portrait] Black and White - Coordinator",
         "PortraitName": "Black and White Coordinator",
-        "LinkTag": "https://i.imgur.com/igI0axf.jpg",
+        "LinkTag": "igI0axf",
         "Item": "ess3-39",
         "Tier": "C",
         "FragAmount": 36,
@@ -384,7 +384,7 @@
     {
         "Name": "[Portrait] Black and White - Priestess",
         "PortraitName": "Black and White Priestess",
-        "LinkTag": "https://i.imgur.com/wTExNKG.jpg",
+        "LinkTag": "wTExNKG",
         "Item": "ess3-40",
         "Tier": "C",
         "FragAmount": 36,
@@ -394,7 +394,7 @@
     },
     {
         "Name": "[Graffiti] Mechanic - Gray Shadow",
-        "LinkTag": "https://i.imgur.com/wlrDejo.jpg",
+        "LinkTag": "wlrDejo",
         "Item": "s12-3-40",
         "Tier": "D",
         "FragAmount": 6,
@@ -404,7 +404,7 @@
     },
     {
         "Name": "[Graffiti] Coordinator - Gray Shadow",
-        "LinkTag": "https://i.imgur.com/Gm8FuKE.jpg",
+        "LinkTag": "Gm8FuKE",
         "Item": "s12-3-41",
         "Tier": "D",
         "FragAmount": 6,
@@ -414,7 +414,7 @@
     },
     {
         "Name": "[Graffiti] Cowboy - Gray Shadow",
-        "LinkTag": "https://i.imgur.com/hLj03NB.jpg",
+        "LinkTag": "hLj03NB",
         "Item": "s12-3-42",
         "Tier": "D",
         "FragAmount": 6,
@@ -424,7 +424,7 @@
     },
     {
         "Name": "[Graffiti] Forward - Gray Shadow",
-        "LinkTag": "https://i.imgur.com/83kEYUb.jpg",
+        "LinkTag": "83kEYUb",
         "Item": "s12-3-43",
         "Tier": "D",
         "FragAmount": 6,
@@ -434,7 +434,7 @@
     },
     {
         "Name": "[Graffiti] Doctor - Gray Shadow",
-        "LinkTag": "https://i.imgur.com/NXLpMDH.jpg",
+        "LinkTag": "NXLpMDH",
         "Item": "s12-3-44",
         "Tier": "D",
         "FragAmount": 6,
@@ -444,7 +444,7 @@
     },
     {
         "Name": "[Graffiti] Gardener - Gray Shadow",
-        "LinkTag": "https://i.imgur.com/gDeduZ1.jpg",
+        "LinkTag": "gDeduZ1",
         "Item": "s12-3-45",
         "Tier": "D",
         "FragAmount": 6,
@@ -455,7 +455,7 @@
     {
         "Name": "[Portrait] Colorful Memory - Magician",
         "PortraitName": "Colorful Memory Magician",
-        "LinkTag": "https://i.imgur.com/8HLHtEi.jpg",
+        "LinkTag": "8HLHtEi",
         "Item": "ess3-46",
         "Tier": "D",
         "FragAmount": 6,
@@ -466,7 +466,7 @@
     {
         "Name": "[Portrait] Colorful Memory - Cowboy",
         "PortraitName": "Colorful Memory Cowboy",
-        "LinkTag": "https://i.imgur.com/YRS5VKJ.jpg",
+        "LinkTag": "YRS5VKJ",
         "Item": "ess3-47",
         "Tier": "D",
         "FragAmount": 6,
@@ -477,7 +477,7 @@
     {
         "Name": "[Portrait] Colorful Memory - Gardener",
         "PortraitName": "Colorful Memory Gardener",
-        "LinkTag": "https://i.imgur.com/LQlyC5F.jpg",
+        "LinkTag": "LQlyC5F",
         "Item": "ess3-48",
         "Tier": "D",
         "FragAmount": 6,
@@ -488,7 +488,7 @@
     {
         "Name": "[Portrait] Colorful Memory - Forward",
         "PortraitName": "Colorful Memory Forward",
-        "LinkTag": "https://i.imgur.com/9OfpQyK.jpg",
+        "LinkTag": "9OfpQyK",
         "Item": "ess3-49",
         "Tier": "D",
         "FragAmount": 6,
