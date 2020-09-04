@@ -190,8 +190,6 @@ module.exports = {
             if (boolean === false) await ScrollThrough(array, "Portrait");
         } else if (["frame", "frames", "portraitframe", "portraitframes", "portrait-frame"].includes(args[1].toLowerCase())) {
 
-            var booleaaaan = false;
-
             Frames.forEach(x => {
 
                 let booleanedValue;
@@ -210,31 +208,13 @@ module.exports = {
                 } else {
                     if (LP.Opened.includes(x.Item)) array.push(x);
                 }
-
-                if (x.Name.includes(args[2].toLowerCase())) {
-                    booleaaaan = true;
-
-                    if (booleanedValue === "false") booleaaaan;
-
-                    let embed = new RichEmbed()
-                        .setTitle("Your frame is now equipped!")
-                        .setColor("0x14abf7")
-                        .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
-                        .setThumbnail(x.linkTag);
-
-                    LP.frames.equipped = x.Item;
-                    LP.save().catch(e => console.log(e));
-
-                    message.channel.send(embed);
-                }
             });
 
 
-            if (booleaaaan === false) {
-                array.push(Frames[6], Frames[7], Frames[8], Frames[9]);
+            array.push(Frames[6], Frames[7], Frames[8], Frames[9]);
 
-                await ScrollThrough(array, "Frame");
-            }
+            await ScrollThrough(array, "Frame");
+
 
         } else {
             return ErrorMsg(bot, message, msggg);
