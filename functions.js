@@ -294,8 +294,9 @@ module.exports = {
 
 		const coolEmbed = new RichEmbed()
 			.setTitle(Title)
-			.setColor("RED")
+			.setColor("0xFF0000")
 			.setDescription(des)
+			.setThumbnail("https://i.imgur.com/q6GYP17.png")
 			.setAuthor(message.author.username, message.author.displayAvatarURL)
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(coolEmbed).then(m => m.delete(30000));

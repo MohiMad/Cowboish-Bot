@@ -135,6 +135,10 @@ module.exports = async (bot, message) => {
             await bot.commands.get('siptea').execute(message, args, bot);
             break;
 
+        case "letter": case "postmansletter": case "postmanletter": case "postmansign":
+            await bot.commands.get("letter").execute(message, args);
+            break;
+
 
         //IDENTITY V LOGICPATH COMMANDS
         case "roll": case "r": case "dice":
