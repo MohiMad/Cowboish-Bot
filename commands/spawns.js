@@ -89,19 +89,18 @@ module.exports = {
 
             end.on('collect', async r => {
 
-                await r.remove(message.author);
+                msg.clearReactions().catch(error => console.log(error));
 
                 await end.stop();
                 await forward.stop();
                 await back.stop();
                 spamStopper.delete(message.author);
 
-                message.channel.send(`**${message.author.username}, Ended...**`);
-
             });
 
-            end.on('end', () => {
+            end.on('end', async () => {
                 spamStopper.delete(message.author);
+                msg.clearReactions().catch(error => console.log(error));
             });
 
         };

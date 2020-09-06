@@ -34,7 +34,10 @@ module.exports = {
 
             if (item === "Portrait" || item === "Frame") {
 
-                ["⏪", "⏩", "📥", "❌"].forEach(async (x) => msg.react(x));
+                await msg.react("⏪");
+                await msg.react("⏩");
+                await msg.react("📥");
+                await msg.react("❌");
 
                 let equipFilter = (reaction, user) => reaction.emoji.name === '📥' & user.id === message.author.id;
 
@@ -59,7 +62,10 @@ module.exports = {
                 });
 
             } else {
-                ["⏪", "⏩", "❌"].forEach(async (x) => msg.react(x));
+                await msg.react("⏪");
+                await msg.react("⏩");
+                await msg.react("❌");
+
             }
 
             let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
@@ -114,12 +120,13 @@ module.exports = {
 
             end.on('collect', async r => {
 
-                msg.clearReactions().catch(error => console.log(error));
 
                 await end.stop();
                 await forward.stop();
                 await back.stop();
                 spamStopper.delete(message.author);
+                msg.clearReactions().catch(error => console.log(error));
+
                 embed.setFooter(`This message is now inactive`);
 
                 await msg.edit(embed);

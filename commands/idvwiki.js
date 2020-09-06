@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 const { ErrorMsg } = require("../functions.js");
 
+let spamStopper = new Set();
 module.exports = {
     name: 'idvwiki',
     description: "Survivor/Hunter wikipedia",
@@ -535,15 +536,17 @@ module.exports = {
             });
 
             end.on('collect', async r => {
-
-                await r.remove(message.author);
-
                 await end.stop();
                 await forward.stop();
                 await back.stop();
+                spamStopper.delete(message.author);
+                msg.clearReactions().catch(error => console.log(error));
 
-                message.channel.send(`**${message.author.username}, Ended...**`);
+            });
 
+            end.on('end', async () => {
+                spamStopper.delete(message.author);
+                msg.clearReactions().catch(error => console.log(error));
             });
 
 
@@ -555,6 +558,9 @@ module.exports = {
         }
 
         else if (["surv", "survivor", "survivors", "the survivors"].includes(searchForString)) {
+            if (spamStopper.has(message.author)) return message.reply(`**Please react with ❌ on the previous embed..**`);
+
+            spamStopper.add(message.author);
             await switchPages([
                 new Discord.RichEmbed(luckyguy),
                 new Discord.RichEmbed(doctor),
@@ -673,6 +679,9 @@ module.exports = {
             message.channel.send(entomologist);
 
         } else if (["hunter", "hunters", "hunta", "killers", "killer", "chaser", "chasers"].includes(searchForString)) {
+            if (spamStopper.has(message.author)) return message.reply(`**Please react with ❌ on the previous embed..**`);
+
+            spamStopper.add(message.author);
 
             await switchPages([
                 new Discord.RichEmbed(hellember),
@@ -752,6 +761,9 @@ module.exports = {
             message.channel.send(sculptor);
 
         } else if (["maps", "map"].includes(searchForString)) {
+            if (spamStopper.has(message.author)) return message.reply(`**Please react with ❌ on the previous embed..**`);
+
+            spamStopper.add(message.author);
             await switchPages([
                 new Discord.RichEmbed(redchurch),
                 new Discord.RichEmbed(hospital),
