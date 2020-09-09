@@ -15,131 +15,137 @@ module.exports = {
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         async function ScrollThrough(array, item) {
-            let pageI = 0;
+            try {
+                let pageI = 0;
 
-            let embed = new RichEmbed()
-                .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
-                .setTitle(`${array[pageI].Name[0]}`)
-                .setFooter(`${item} ${pageI + 1} of ${array.length}`)
-                .setURL("https://youtu.be/K3GuaZlyiVw")
-                .setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL));
+                let embed = new RichEmbed()
+                    .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
+                    .setTitle(`${array[pageI].Name[0]}`)
+                    .setFooter(`${item} ${pageI + 1} of ${array.length}`)
+                    .setURL("https://youtu.be/K3GuaZlyiVw")
+                    .setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL));
 
-            if (!array.length) return message.reply(`**you don't have any ${item}s**`);
-            if (array.length === 1) return message.channel.send(embed);
-
-
-            spamStopper.add(message.author);
-            let msg = await message.channel.send(embed);
+                if (!array.length) return message.reply(`**you don't have any ${item}s**`);
+                if (array.length === 1) return message.channel.send(embed);
 
 
-            if (item === "Portrait" || item === "Frame") {
+                spamStopper.add(message.author);
+                let msg = await message.channel.send(embed);
 
-                await msg.react("⏪");
-                await msg.react("⏩");
-                await msg.react("📥");
-                await msg.react("❌");
 
-                let equipFilter = (reaction, user) => reaction.emoji.name === '📥' & user.id === message.author.id;
+                if (item === "Portrait" || item === "Frame") {
 
-                let equip = msg.createReactionCollector(equipFilter, {
+                    await msg.react("⏪");
+                    await msg.react("⏩");
+                    await msg.react("📥");
+                    await msg.react("❌");
+
+                    let equipFilter = (reaction, user) => reaction.emoji.name === '📥' & user.id === message.author.id;
+
+                    let equip = msg.createReactionCollector(equipFilter, {
+                        time: 300000
+                    });
+
+
+                    equip.on('collect', async r => {
+
+                        msg.clearReactions().catch(error => console.log(error));
+                        spamStopper.delete(message.author);
+
+                        if (item === "Portrait") LP.Portrait = array[pageI].logicpathID;
+                        else LP.frames.equipped = array[pageI].Item;
+
+                        LP.save().catch(e => console.log(e));
+
+                        embed.setFooter(`Equipped ${array[pageI].Name[0]}`);
+                        await msg.edit(embed);
+
+                    });
+
+                } else {
+                    await msg.react("⏪");
+                    await msg.react("⏩");
+                    await msg.react("❌");
+
+                }
+
+                let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
+
+                let forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
+
+                let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
+
+                let end = msg.createReactionCollector(endFilter, {
                     time: 300000
                 });
 
+                let back = msg.createReactionCollector(backFilter, {
+                    time: 300000
+                });
 
-                equip.on('collect', async r => {
+                let forward = msg.createReactionCollector(forwardFilter, {
+                    time: 300000
+                });
 
-                    msg.clearReactions().catch(error => console.log(error));
+                back.on('collect', async r => {
+                    await r.remove(message.author);
+
+                    if (pageI === 0) pageI = array.length - 1;
+                    else pageI--;
+
+
+                    embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL))
+                        .setFooter(`${item} ${pageI + 1} of ${array.length}`)
+                        .setURL("https://youtu.be/K3GuaZlyiVw")
+                        .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
+                        .setTitle(`${array[pageI].Name[0]}`);
+
+                    await msg.edit(embed);
+                });
+
+                forward.on('collect', async r => {
+
+                    await r.remove(message.author);
+
+                    if (pageI === array.length - 1) pageI = 0;
+                    else pageI++;
+
+                    embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL))
+                        .setFooter(`${item} ${pageI + 1} of ${array.length}`)
+                        .setURL("https://youtu.be/K3GuaZlyiVw")
+                        .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
+                        .setTitle(`${array[pageI].Name[0]}`)
+
+                    await msg.edit(embed);
+                });
+
+                end.on('collect', async r => {
+
+
+                    await end.stop();
+                    await forward.stop();
+                    await back.stop();
                     spamStopper.delete(message.author);
+                    msg.clearReactions().catch(error => console.log(error));
 
-                    if (item === "Portrait") LP.Portrait = array[pageI].logicpathID;
-                    else LP.frames.equipped = array[pageI].Item;
+                    embed.setFooter(`This message is now inactive`);
 
-                    LP.save().catch(e => console.log(e));
-
-                    embed.setFooter(`Equipped ${array[pageI].Name[0]}`);
                     await msg.edit(embed);
 
                 });
 
-            } else {
-                await msg.react("⏪");
-                await msg.react("⏩");
-                await msg.react("❌");
+                end.on('end', async () => {
+                    spamStopper.delete(message.author);
+                    msg.clearReactions().catch(error => console.log(error));
+                    embed.setFooter(`This message is now inactive`);
 
+                    await msg.edit(embed);
+                });
+
+            } catch (e) {
+                console.log(e)
+                console.log(array[pageI])
             }
-
-            let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
-
-            let forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
-
-            let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
-
-            let end = msg.createReactionCollector(endFilter, {
-                time: 300000
-            });
-
-            let back = msg.createReactionCollector(backFilter, {
-                time: 300000
-            });
-
-            let forward = msg.createReactionCollector(forwardFilter, {
-                time: 300000
-            });
-
-            back.on('collect', async r => {
-                await r.remove(message.author);
-
-                if (pageI === 0) pageI = array.length - 1;
-                else pageI--;
-
-
-                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL))
-                    .setFooter(`${item} ${pageI + 1} of ${array.length}`)
-                    .setURL("https://youtu.be/K3GuaZlyiVw")
-                    .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
-                    .setTitle(`${array[pageI].Name[0]}`);
-
-                await msg.edit(embed);
-            });
-
-            forward.on('collect', async r => {
-
-                await r.remove(message.author);
-
-                if (pageI === array.length - 1) pageI = 0;
-                else pageI++;
-
-                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL))
-                    .setFooter(`${item} ${pageI + 1} of ${array.length}`)
-                    .setURL("https://youtu.be/K3GuaZlyiVw")
-                    .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
-                    .setTitle(`${array[pageI].Name[0]}`)
-
-                await msg.edit(embed);
-            });
-
-            end.on('collect', async r => {
-
-
-                await end.stop();
-                await forward.stop();
-                await back.stop();
-                spamStopper.delete(message.author);
-                msg.clearReactions().catch(error => console.log(error));
-
-                embed.setFooter(`This message is now inactive`);
-
-                await msg.edit(embed);
-
-            });
-
-            end.on('end', async () => {
-                spamStopper.delete(message.author);
-                msg.clearReactions().catch(error => console.log(error));
-                embed.setFooter(`This message is now inactive`);
-
-                await msg.edit(embed);
-            });
 
         }
 
@@ -164,6 +170,7 @@ module.exports = {
             });
 
             await ScrollThrough(array, "Skin");
+
 
         } else if (["portraits", "portrait"].includes(args[1].toLowerCase())) {
 
