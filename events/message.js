@@ -127,8 +127,8 @@ module.exports = async (bot, message) => {
             await bot.commands.get('chair').execute(message, args, bot);
             break;
 
-        case "chosendeath": case "deth": case "death":
-            await bot.commands.get('death').execute(message, args, bot, prefix);
+        case "chosendeath": case "deth": case "death": case "soyouvechosendeath":
+            await bot.commands.get('death').execute(message, args);
             break;
 
         case "siptea": case "sip": case "sippingtea":

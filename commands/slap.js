@@ -9,60 +9,56 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "slap");
 
-        if (!cooldownCheck) {
+        if (cooldownCheck) return coolEmbed(message, "You're slapping too fast friend :'(", "Take it easy on your friends and on me .-.\nPlease wait **REMAINING** before using this command again ^^", cooldownCheck.timeRemaining, ["s"]);
 
-            const canvas = Canvas.createCanvas(1200, 800);
-            const ctx = canvas.getContext('2d');
-            // Since the image takes time to load, you should await it
-            const background = await Canvas.loadImage('./pics/slap.jpg');
-            // This uses the canvas dimensions to stretch the image onto the entire canvas
-            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+        const canvas = Canvas.createCanvas(531, 330);
+        const ctx = canvas.getContext('2d');
 
-            const slapper = await Canvas.loadImage(message.author.displayAvatarURL);
+        const background = await Canvas.loadImage("https://i.imgur.com/JHFyRr3.jpg");
 
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+        ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-            else if (!args[1]) {
-                ctx.drawImage(slapper, 40, 85, 246, 227);
+        const slapper = await Canvas.loadImage(message.author.displayAvatarURL);
+
+        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+
+        if (!args[1]) {
+            ctx.drawImage(slapper, 295, 145, 125, 132);
+
+            const botSlaps = await Canvas.loadImage(bot.user.displayAvatarURL);
+
+            ctx.drawImage(botSlaps, 168, 67, 100, 100);
+
+        } else {
+            const slapped = await findMember(message, args.slice(1).join(" "));
+
+            if (!slapped) {
+                ctx.drawImage(slapper, 295, 145, 125, 132);
 
                 const botSlaps = await Canvas.loadImage(bot.user.displayAvatarURL);
 
-                ctx.drawImage(botSlaps, 797, 107, 195, 188);
-
-            } else {
-                const slapped = await findMember(message, args[1]);
-
-
-                if (!slapped) {
-                    return ErrorMsg(bot, message, "Couldn't find that member!\nDUDE please provide the target's id/tag or mention them after the command!");
-                }
-
-                else {
-                    if (slapped.id === bot.user.id) {
-                        setTimeout(() => {
-                            message.reply("**Aaaah what was that for??!** :'c");
-                        }, 7000);
-                    }
-
-                    const slappedAvatar = await Canvas.loadImage(slapped.user.displayAvatarURL);
-
-                    ctx.drawImage(slappedAvatar, 40, 85, 246, 227);
-
-
-                    ctx.drawImage(slapper, 797, 107, 195, 188);
-
-                }
+                ctx.drawImage(botSlaps, 168, 67, 100, 100);
             }
+            else {
+                if (slapped.id === bot.user.id) {
+                    setTimeout(() => {
+                        message.reply("**Aaaah what was that for??!** :'c");
+                    }, 7000);
+                }
 
-            const attachment = new Discord.Attachment(canvas.toBuffer(), 'slapyoazz.gif');
+                const slappedAvatar = await Canvas.loadImage(slapped.user.displayAvatarURL);
 
-            message.channel.send(attachment);
-            await addCooldown(message, 10000, "slap");
+                ctx.drawImage(slappedAvatar, 295, 145, 125, 132);
 
-        } else {
-            coolEmbed(message, "You're slapping too fast friend :'(", "Take it easy on your friends and on me .-.\nPlease wait **REMAINING** before using this command again ^^", cooldownCheck.timeRemaining, ["s"]);
+                ctx.drawImage(slapper, 168, 67, 100, 100);
+
+            }
         }
 
+        const attachment = new Discord.Attachment(canvas.toBuffer(), 'slapyoazz.jpg');
+
+        message.channel.send(attachment);
+        await addCooldown(message, 10000, "slap");
 
     }
 }
