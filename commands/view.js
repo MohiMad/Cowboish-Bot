@@ -15,8 +15,9 @@ module.exports = {
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         async function ScrollThrough(array, item) {
+            let pageI = 0;
+
             try {
-                let pageI = 0;
 
                 let embed = new RichEmbed()
                     .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
@@ -143,8 +144,8 @@ module.exports = {
                 });
 
             } catch (e) {
-                console.log(e)
-                console.log(array[pageI])
+                console.log(e);
+                console.log(array[pageI]);
             }
 
         }
