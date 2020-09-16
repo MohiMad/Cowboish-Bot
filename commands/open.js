@@ -392,6 +392,7 @@ module.exports = {
 
             } catch (err) {
                 console.log(err);
+                if (spamStopper.has(message.author)) spamStopper.delete(message.author)
                 message.reply("sorry, hit an unfamiliar error!");
 
             }
