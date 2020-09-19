@@ -213,12 +213,13 @@ module.exports = {
                 else nonOwnedSurvivors = nonOwnedSurvivors + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
             });
 
-            if (ownedSurvivors === "**Survivors owned:**") ownedSurvivors = "None other than the default ones...";
-            if (nonOwnedSurvivors === "**Non Owned Survivors:**") nonOwnedSurvivors = "None... you bought em' all :v";
+            if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
+            if (nonOwnedSurvivors === "**Non Owned Survivors:**") nonOwnedSurvivors = ownedSurvivors + "\nNone... you bought em' all :v";
 
             const survEmbed = new RichEmbed()
                 .setTitle("Survivors shop list!")
-                .setDescription("To buy the survivor you want, do `" + prefix + "buy <survivorName>`\n" + `${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
+                .addField("How do I buy the survivor?", "To buy the survivor you want, do `" + prefix + "buy <survivorName>`")
+                .setDescription(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
                 .setFooter("Remember to type the Survivor's name without spacings")
                 .setColor("RANDOM");
 
