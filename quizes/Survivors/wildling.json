@@ -40,7 +40,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat is the name of this skin?",
-		"Answer": ["the great hero"],
+		"Answer": ["the great hero", "great hero"],
 		"Difficulty": "Ez",
 		"Attachment": "https://i.imgur.com/6cT7ACM.png"
 	},

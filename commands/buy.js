@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 const { ErrorMsg, newLP } = require("../functions.js");
 
 const { RichEmbed } = require('discord.js');
-
+const { Skins } = require("../essences/items.json");
 const { ess1, ess2, ess3, clues, frags, insp } = require("../emojis.json");
 
 module.exports = {
@@ -273,7 +273,36 @@ module.exports = {
         else if (["marathon runner victor", "marathon runner", "marathon victor", "marathonrunnervictor"].includes(args.slice(1).join(" ").toLowerCase())) return buyPortrait("Marathon Runner Victor", "marathon_runner_victor", 1888, "https://i.imgur.com/KzxmHgx.png");
 
         else if (["sword fighting joseph", "sword fighting", "sword fight", "swordfightingjoseph"].includes(args.slice(1).join(" ").toLowerCase())) return buyPortrait("Sword Fighting Joseph", "sword_fighting", 1888, "https://i.imgur.com/mRE6j40.png");
+        else if (["skins", "skin"].includes(args[1].toLowerCase())) {
+            let toSearchString = args.slice(2).join("").toLowerCase().replace("-", "").replace("[Costume]", "")
 
+            for (const skin of Skins) {
+                if (skin.Name.includes(toSearchString)) {
+                    let skinNAME = skin.Name[0].slice(skin.Name[0].indexOf("- ")).replace("- ", "");
+
+                    if (LP.Opened.includes(skin.Item)) return message.channel.send(`**You have already bought ${skinNAME}, ${message.author}**`);
+                    if (LP.frags < skin.Price) return message.channel.send(`**You don't have enough fragments${frags}...**\nYou need` + "`" + `${skin.Price - LP.frags}` + "`" + `${frags} more...`);
+
+                    let boughtSkinEmbed = new RichEmbed()
+                        .setTitle(`You successfully bought ${skinNAME}`)
+                        .setColor(skin.Color)
+                        .setThumbnail(skin.linkTag)
+                        .setDescription(`You paid __${skin.Price}__${frags} and bought [**${skinNAME}**](https://youtu.be/FhsEd3MIBTI)\n\n**__Description__**:\n${skin.Des}`)
+
+                    LP.Opened = [...LP.Opened, skin.Item];
+                    LP.frags = LP.frags - skin.Price;
+                    if (skin.Color === "0xfcba03") LP.S = LP.S + 1;
+                    else LP.A = LP.A + 1;
+                    await LP.save().catch(e => console.log(e));
+
+                    message.channel.send(boughtSkinEmbed);
+
+                }
+
+            }
+
+
+        }
         else message.channel.send(`**${message.author.username}** this item doesn't exist in the shop... make sure you typed it correctly...\nDo ` + "`" + prefix + "shop` for more info :3");
 
     }

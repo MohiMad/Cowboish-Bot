@@ -1,152 +1,371 @@
 {
     "Skins": [
         {
+            "Name": ["[Costume] Forward - Ricardo Milos", "ricardomilos", "1", "one", "forwardricardomilos"],
+            "linkTag": "https://i.imgur.com/xPwX3jt.png",
+            "Item": "ricardo_milos",
+            "Color": "0xfcba03",
+            "Des": "He's not gay... He just ran out of women that were worthy...",
+            "Price": 86888
+        },
+        {
+            "Name": ["[Costume] Smiley Face - King", "king", "2", "two", "smileyfaceking"],
+            "linkTag": "https://i.imgur.com/gvyKeeE.png",
+            "Item": "king",
+            "Color": "0xfcba03",
+            "Des": "Can you capture an audience with only a wonderful joke? The way to take the stage is with strength!",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Mechanic - Red Riding Hood", "redridinghood", "3", "three", "mechanicredridinghood"],
+            "linkTag": "https://i.imgur.com/E1tqEtw.png",
+            "Item": "red_riding_hood",
+            "Color": "0xfcba03",
+            "Des": "This is a dangerous world and girls with red hoods should take caution.",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Priestess - Guide", "guide", "4", "four", "priestessguide"],
+            "linkTag": "https://i.imgur.com/NzcC7n2.png",
+            "Item": "guide",
+            "Color": "0xfcba03",
+            "Des": "Pray to the Lord of Doors and perhaps he will summon an emissary to open a new path for you.",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Geisha - The Bride", "bride", "5", "five", "geishabride"],
+            "linkTag": "https://i.imgur.com/rNjq3ho.png",
+            "Item": "the_bride",
+            "Color": "0xfcba03",
+            "Des": "This is the only attire she once longed for. She obtained it after losing that person.",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Gardener - Ghost Girl", "ghostgirl", "6", "six", "gardenerghostgirl"],
+            "linkTag": "https://i.imgur.com/PFL1yX6.png",
+            "Item": "ghost_girl",
+            "Color": "0xfcba03",
+            "Des": "Surrounded by walls in a cold night - where days felt like years in the hospital, she imagined herself leaving her painful body and walking freely under the moonlight. Where is the happy girl who was once spoiled by her father like a little princess?",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Photographer - Azrael", "azrael", "7", "seven", "photographerazrael"],
+            "linkTag": "https://i.imgur.com/f49xxu7.png",
+            "Item": "azrael",
+            "Color": "0xfcba03",
+            "Des": "He fell from the heavens and brought with him the first falling leaf of the season.",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] The Mind's Eye - Dark Cake", "darkcake", "8", "eight", "themind'seyedarkcake"],
+            "linkTag": "https://i.imgur.com/LGCEyKA.png",
+            "Item": "dark_cake",
+            "Color": "0xfcba03",
+            "Des": "The noble old gold color turned the cake into a work of art!",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Magician - Treasure Hunter", "treasurehunter", "9", "nine", "magiciantreasurehunter"],
+            "linkTag": "https://i.imgur.com/zAHvFUM.png",
+            "Item": "treasure_hunter",
+            "Color": "0xfcba03",
+            "Des": "Desert, tombs, and pharaohs. It's an exciting adventure, and it'll be even better with treasure",
+            "Price": 16888
+        },
+        {
+            "Name": ["[Costume] Dancer - Valkyrie", "valkyrie", "10", "ten", "dancervalkyrie"],
+            "linkTag": "https://i.imgur.com/bc11mQa.png",
+            "Item": "valkyrie",
+            "Color": "0xfcba03",
+            "Des": "Moving forward is Gjallar's journey; Going backward is Valhalla's home.",
+            "Price": 16888
+        },
+        {
             "Name": ["[Costume] Dancer - Kroto"],
-            "linkTag": "https://i.imgur.com/cC99yFN.png",
+            "linkTag": "https://i.imgur.com/QowWmwJ.png",
             "Item": "s12-1-1",
-            "Color": "0xfcba03"
+            "Color": "0xfcba03",
+            "Des": "The blossoming flowers on the cliff often lived briefer than the withering weeds in barren lands."
         },
         {
             "Name": ["[Costume] Guard 26 - Monokuma"],
-            "linkTag": "https://i.imgur.com/FVjGeY4.png",
+            "linkTag": "https://i.imgur.com/LObjX0X.png",
             "Item": "dangan-1",
-            "Color": "0xfcba03"
+            "Color": "0xfcba03",
+            "Des": "The headmaster of Hope's Peak Academy, not some stuffed toy."
         },
         {
             "Name": [
                 "[Costume] Sculptor - Checkmate"
             ],
-            "linkTag": "https://i.imgur.com/KK6B44Z.png",
+            "linkTag": "https://i.imgur.com/TMsJs6a.png",
             "Item": "s12-2-1",
-            "Color": "0xfcba03"
+            "Color": "0xfcba03",
+            "Des": "Will castling be the winning move?"
         },
         {
             "Name": [
                 "[Costume] Enchantress - Maroon Crystal"
             ],
-            "linkTag": "https://i.imgur.com/o5v92IW.png",
+            "linkTag": "https://i.imgur.com/elZqQlM.png",
             "Item": "s12-3-1",
-            "Color": "0xfcba03"
+            "Color": "0xfcba03",
+            "Des": "By the time the Lost Girl had seen through the lies and betrayal, the land of Oz had long been decayed. Unwilling to give in, she will step into the maroon crystal shoes and return to this strange path."
         },
         {
             "Name": [
                 "[Costume] Geisha - Lady Thirteen"
             ],
-            "linkTag": "https://i.imgur.com/6cElhqQ.png",
+            "linkTag": "https://i.imgur.com/iHKyJEC.png",
             "Item": "ess3-1",
-            "Color": "0xfcba03"
+            "Color": "0xfcba03",
+            "Des": "For a beautiful woman who lived in a foreign country, perhaps the only way for her to keep herself safe... is to obtain sufficient leverage on people. Lady Thirteen always said, “Kindness alone withers the roses. Only the valuable nutrients will keep roses alive.“"
         },
         {
             "Name": [
                 "[Costume] Violinist - Inferno Sonata"
             ],
-            "linkTag": "https://i.imgur.com/Cv7CvO3.png",
+            "linkTag": "https://i.imgur.com/htcP7EK.png",
             "Item": "ess1-1",
-            "Color": "0xfcba03"
+            "Color": "0xfcba03",
+            "Des": "No one can resist the willpower embedded by the visitor from hell in the music piece. Yet the musician only cares about the elegant purity and isn't flattered by the boisterous sound. It's only when he finds out that a misfit has fled to the world of the living in pursuit of his music that he's finally motivated to play his heart out."
+        },
+        {
+            "Name": ["[Costume] Acrobat - ACE", "ace", "0", "zero", "acrobatace"],
+            "linkTag": "https://i.imgur.com/CUGVr3R.png",
+            "Item": "ace",
+            "Color": "0xbb2af5",
+            "Des": "Tie-breaker. Are you going to win this round?",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Lucky Guy - Maid Outfit", "maidoutfit", "11", "eleven", "luckyguymaidoutfit"],
+            "linkTag": "https://i.imgur.com/yCYMupv.png",
+            "Item": "maid_outfit",
+            "Color": "0xbb2af5",
+            "Des": "This set of clothes doesn't fit very well but doesn't it change one's mood...?",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Ripper - Svengali", "svengali", "12", "twelve", "rippersvengali"],
+            "linkTag": "https://i.imgur.com/6esWLAn.png",
+            "Item": "svengali",
+            "Color": "0xbb2af5",
+            "Des": "He is a gentleman capable of discerning beauty hidden under the skin, but joining him for a dance wouldn't be the wisest decision.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Gardener - Boudoir Dream", "boudoirdream", "13", "thirteen", "gardenerboudoirdream"],
+            "linkTag": "https://i.imgur.com/A2CdL34.png",
+            "Item": "boudoir_dream",
+            "Color": "0xbb2af5",
+            "Des": "Time is the best filter for dreams, at least before they come true.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Coordinator - Iron Lady", "ironlady", "14", "fourteen", "coordinatorironlady"],
+            "linkTag": "https://i.imgur.com/lPj7MbT.png",
+            "Item": "iron_lady",
+            "Color": "0xbb2af5",
+            "Des": "She is beautiful with a strong mind and knows what she wants.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Wu chang - Broken Blossoms", "brokenblossoms", "15", "fifteen", "wuchangbrokenblossoms"],
+            "linkTag": "https://i.imgur.com/klzbpiL.png",
+            "Item": "broken_blossoms",
+            "Color": "0xbb2af5",
+            "Des": "Waiting still as the moon's up high, the eastern wind blows from the curtain inside.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Priestess - Samara", "samara", "16", "sixteen", "priestesssamara"],
+            "linkTag": "https://i.imgur.com/DDBKbfk.png",
+            "Item": "samara",
+            "Color": "0xbb2af5",
+            "Des": "You need to sacrifice everything to get what you desire.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Doctor - Rythm Of The Rain", "rythmoftherain", "17", "seventeen", "doctorrythmoftherain"],
+            "linkTag": "https://i.imgur.com/Rk2ssnK.png",
+            "Item": "rythm_of_the_rain",
+            "Color": "0xbb2af5",
+            "Des": "In honor of the big screen classic-Singin' in the Rain! Singing in silence...",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Seer - Reculse", "reculse", "18", "eighteen", "seerreculse"],
+            "linkTag": "https://i.imgur.com/E2v9gPH.png",
+            "Item": "reculse",
+            "Color": "0xbb2af5",
+            "Des": "Law of survival in the dark - endure the most unbearable loneliness in the world.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Perfumer - Fatal Affection", "fatalaffection", "19", "nineteen", "perfumerfatalaffection"],
+            "linkTag": "https://i.imgur.com/5qGLz0l.png",
+            "Item": "fatal_affection",
+            "Color": "0xbb2af5",
+            "Des": "The fragrance from the cosmetics worn by the living is everywhere. Who's next?",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Doctor - Holy Angel", "holyangel", "20", "twenty", "doctorholyangel"],
+            "linkTag": "https://i.imgur.com/q0Vuiqj.png",
+            "Item": "holy_angel",
+            "Color": "0xbb2af5",
+            "Des": "A radiant angel will sometimes appear in the illusions of sailors whose ship has sunk and lead them back to tranquility.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Mercenary - Parasite", "parasite", "21", "twentyone", "mercenaryparasite"],
+            "linkTag": "https://i.imgur.com/1Jjrvrl.png",
+            "Item": "parasite",
+            "Color": "0xbb2af5",
+            "Des": "These eye-shaped gems make his skin glitter... they are so shiny!",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Forward - Bull Power", "bullpower", "22", "twentytwo", "forwardbullpower"],
+            "linkTag": "https://i.imgur.com/FS9W4tD.png",
+            "Item": "bull_power",
+            "Color": "0xbb2af5",
+            "Des": "The circus could not accept his rude and unreasonable behavior, but on the day of the parade he witnessed a figure even more outrageous than himself.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Feaster - Nepenthes", "nepenthes", "23", "twentythree", "feasternepenthes"],
+            "linkTag": "https://i.imgur.com/c3QH9nG.png",
+            "Item": "nepenthes",
+            "Color": "0xbb2af5",
+            "Des": "The woodctter asks the tree for an axe handle, and the tree bestows one upon him. Nepenthes is skeptical of this story.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Geisha - White Peacock", "whitepeacock", "24", "twentyfour", "geishawhitepeacock"],
+            "linkTag": "https://i.imgur.com/6RJ5r3Q.png",
+            "Item": "white_peacock",
+            "Color": "0xbb2af5",
+            "Des": "The poor peacock; a white dress stained with dust when first used.",
+            "Price": 6888
         },
         {
             "Name": [
                 "[Costume] Prospector - Ronald Of Ness"
             ],
-            "linkTag": "https://i.imgur.com/wwB0KkL.png",
+            "linkTag": "https://i.imgur.com/HObjiFY.png",
             "Item": "s12-1-2",
-            "Color": "0xbb2af5"
+            "Color": "0xbb2af5",
+            "Des": "It's you, the strings that weave our destiny - let it become the web that entangles us all."
         },
         {
             "Name": [
                 "[Costume] Herald - Princess Ozma"
             ],
-            "linkTag": "https://i.imgur.com/jxXW19B.png",
+            "linkTag": "https://i.imgur.com/rLqsoxZ.png",
             "Item": "s12-3-2",
-            "Color": "0xbb2af5"
+            "Color": "0xbb2af5",
+            "Des": "Those in true power fabricate one elaborate lie after another to absorb their prey's life essence when they are most vulnerable."
         },
         {
             "Name": [
                 "[Costume] Entomologist - The Wicked Witch"
             ],
-            "linkTag": "https://i.imgur.com/PGwEzeF.png",
+            "linkTag": "https://i.imgur.com/3fq9Vgz.png",
             "Item": "s12-3-3",
-            "Color": "0xbb2af5"
+            "Color": "0xbb2af5",
+            "Des": "Despite being deceived, framed, and imprisoned in a lonely tower, she still hasn't given up the name she once had, and the person she once was."
         },
         {
             "Name": [
                 "[Costume] Mad Eyes - Scrooge"
             ],
-            "linkTag": "https://i.imgur.com/APIHkez.png",
+            "linkTag": "https://i.imgur.com/NnhDe20.png",
             "Item": "s12-1-3",
-            "Color": "0xbb2af5"
+            "Color": "0xbb2af5",
+            "Des": "When the ropes of destiny intertwine, who would become our Atropos?"
         },
         {
             "Name": [
                 "[Costume] Mechanic - Re-Swim"
             ],
-            "linkTag": "https://i.imgur.com/8CO9kJc.png",
+            "linkTag": "https://i.imgur.com/0DO69yd.png",
             "Item": "s12-2-2",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "Do you prefer the cheer at the end of the lane or the silence beneath the waves"
         },
         {
             "Name": [
                 "[Costume] Photographer - En Ligne"
             ],
-            "linkTag": "https://i.imgur.com/fdenI6U.png",
+            "linkTag": "https://i.imgur.com/DiBXNdH.png",
             "Item": "s12-2-3",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "Are you ready to pierce the illusion?"
         },
         {
             "Name": [
                 "[Costume] Postman - Keyboard"
             ],
-            "linkTag": "https://i.imgur.com/Y7dHEhy.png",
+            "linkTag": "https://i.imgur.com/wC2Aix0.png",
             "Item": "ess1-2",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "A misfit who's crazy about music, he can't stand the harsh rules and inequality of the sound of hell any longer, so he banished himself to the world of the living. He comes across a quirky bar on the way and is attracted by music that reminded him of home. Yet he never thought he's about stepping into a trap that may cost him his faith"
         },
         {
             "Name": [
                 "[Costume] Evil Reptilian - Bone Flute"
             ],
-            "linkTag": "https://i.imgur.com/O5hxSC8.png",
+            "linkTag": "https://i.imgur.com/X0PGKKD.png",
             "Item": "ess1-3",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "When he's hunting down the fleeing demons, the flute embedded in his body will begin emitting steam, sounding off terrifying piping noises. The noises symbolize the wailing left behind by the hunted. For his next target, he hunts the ones who have given up morality."
         },
         {
             "Name": [
                 "[Costume] Wu Chang - Flying Guillotine"
             ],
-            "linkTag": "https://i.imgur.com/qpAzauU.png",
+            "linkTag": "https://i.imgur.com/f04bm5q.png",
             "Item": "ess3-2",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "As destiny pushes him off a cliff, the cries of the gentle, even at the top of their lungs, won't turn back time. As the dust settled... perhaps... remaining calm is the ultimate answer."
         },
         {
             "Name": [
                 "[Costume] Prospector - Sparrow"
             ],
-            "linkTag": "https://i.imgur.com/Ytd1vFa.png",
+            "linkTag": "https://i.imgur.com/PtVhmOZ.png",
             "Item": "ess3-3",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "It's only natural that a child who has never seen kindness will treasure his hard-earned candy. Trying to blend into adults' world, learning to disguise, but perhaps...she's still the one who understands his value and dreams."
         },
         {
             "Name": [
                 "[Costume] Barmaid - Enoshima Junko"
             ],
-            "linkTag": "https://i.imgur.com/DGb1Bw1.png",
+            "linkTag": "https://i.imgur.com/nZsaArF.png",
             "Item": "dangan-2",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "A student in Hope's Peak Academy's Class 78th, the “Ultimate Fashionista“. Her true identity is actually..."
         },
         {
             "Name": [
                 "[Costume] Coordinator - Kyoko Kirigiri"
             ],
-            "linkTag": "https://i.imgur.com/LJ8qC6h.png",
+            "linkTag": "https://i.imgur.com/4zEHouo.png",
             "Item": "dangan-3",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "A student in Hope's Peak Academy's Class 78th, the “Ultimate Detective“. A mysterious girl."
         },
         {
             "Name": [
                 "[Costume] Lucky Guy - Makoto Naegi"
             ],
-            "linkTag": "https://i.imgur.com/vbo0i4i.png",
+            "linkTag": "https://i.imgur.com/0ACGJ0I.png",
             "Item": "dangan-4",
-            "Color": "0xc603fc"
+            "Color": "0xc603fc",
+            "Des": "A student in Hope's Peak Academy's Class 78th, the “Ultimate Lucky Student“. An ordinary guy."
         }
     ],
     "Portraits": [

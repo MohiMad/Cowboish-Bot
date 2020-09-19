@@ -25,8 +25,9 @@ module.exports = {
                 .setURL("https://youtu.be/K3GuaZlyiVw")
                 .setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL));
 
-            if (array.length === 1) return message.channel.send(embed);
+            if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
 
+            if (array.length === 1) return message.channel.send(embed);
 
             spamStopper.add(message.author);
             let msg = await message.channel.send(embed);
@@ -99,6 +100,10 @@ module.exports = {
                     .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
                     .setTitle(`${array[pageI].Name[0]}`);
 
+
+                if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
+
+
                 await msg.edit(embed);
             });
 
@@ -114,6 +119,9 @@ module.exports = {
                     .setURL("https://youtu.be/K3GuaZlyiVw")
                     .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
                     .setTitle(`${array[pageI].Name[0]}`)
+
+                if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
+
 
                 await msg.edit(embed);
             });
