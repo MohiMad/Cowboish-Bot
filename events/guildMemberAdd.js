@@ -1,5 +1,5 @@
-
 const Guild = require("../models/guild.js");
+const { findRole } = require("../functions.js");
 
 module.exports = async (bot, member) => {
 
@@ -7,11 +7,19 @@ module.exports = async (bot, member) => {
 
     if (!guild) return;
 
-    else if (guild.welcome.enabled === false) return;
+    if (guild.autoroles.length !== 0) {
+        for (const role of guild.autoroles) {
+            let findTheRole = await findRole(message, role);
+            if (!findTheRole) return;
+            await member.addRole(role).catch(() => void null);
+        }
+    }
 
-    else if (!guild.welcome.message || guild.welcome.message.length < 1) return;
+    if (guild.welcome.enabled === false) return;
 
-    else if (guild.welcome.channel === null) return;
+    if (!guild.welcome.message || guild.welcome.message.length < 1) return;
+
+    if (guild.welcome.channel === null) return;
 
 
     const welcomeMessage = guild.welcome.message
