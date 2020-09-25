@@ -305,7 +305,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "setup":
-            await bot.commands.get('setup').execute(message, args, MohiMoo, bot);
+            await bot.commands.get('setup').execute(message, args, bot, prefix);
             break;
 
         case "invite": case "cowboishinvite":

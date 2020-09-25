@@ -12,10 +12,7 @@ const Cooldown = require("../models/cooldown.js");
 
 module.exports = async (bot) => {
 
-    console.log(`Logged in as ${bot.user.tag}!`);
-    console.log(`___________________________________________`);
-    console.log(`Now let's yeet some damsels >:D`);
-    console.log(`___________________________________________`);
+    console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠 🤠 🤠 Yeehaw! 🤠 🤠 🤠\n___________________________________________`);
 
     const activities_list = [
         `and yoinking around >:v`,
@@ -49,7 +46,7 @@ module.exports = async (bot) => {
         }
     });
 
-    schedule.scheduleJob("0 0 * * *", async function () {
+    schedule.scheduleJob("0 9 * * *", async function () {
         const checkForExecution = await Cooldown.findOne({ userID: bot.user.id, command: "giveaway" });
 
         if (!checkForExecution) {

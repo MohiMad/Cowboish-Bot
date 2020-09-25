@@ -27,66 +27,67 @@ module.exports = {
 
         let randomRewardNumber = Math.floor(Math.random() * rewards.length);
 
-        let LP = await logicPath.findOne({ UserID: randomUser.user.id });
-
-        if (!LP) return;
-
-        switch (randomRewardNumber) {
-            case 0:
-                LP.Clues = LP.Clues + 1000;
-                LP.Ess3 = LP.Ess3 + 5;
-                break;
-
-            case 1:
-                LP.Clues = LP.Clues + 500;
-                LP.Ess3 = LP.Ess3 + 3;
-                LP.Ess2 = LP.Ess2 + 3;
-                break;
-
-            case 2:
-                LP.Inspirations = LP.Inspirations + 100;
-                LP.frags = LP.frags + 1000;
-                LP.Clues = LP.Clues + 200;
-                break;
-
-            case 3:
-                LP.frags = LP.frags + 500;
-                LP.Ess2 = LP.Ess2 + 5;
-                LP.Inspirations = LP.Inspirations + 96;
-                break;
-
-            case 4:
-                LP.Ess2 = LP.Ess2 + 5;
-                LP.Ess1 = LP.Ess1 + 7;
-                LP.Clues = LP.Clues + 700;
-                break;
-
-            case 5:
-                LP.Ess1 = LP.Ess1 + 10;
-                LP.Ess2 = LP.Ess2 + 10;
-                LP.Ess3 = LP.Ess3 + 10;
-            break;
-
-        }
-
-        LP.save().catch(e => console.log(e));
-
-
-        let giveawayEmbed = new RichEmbed()
-            .setAuthor(`${randomUser.user.tag} won today's giveaway`, randomUser.user.displayAvatarURL)
-            .setThumbnail("https://cdn.discordapp.com/emojis/699667884833636352.png?v=1")
-            .setDescription(`Congrats ${randomUser.user.username}! You won today's giveaway and got:\n` + rewards[randomRewardNumber])
-            .setColor("0xFFF030")
-            .setTimestamp()
-            .setFooter(`Oooohoo lucky ${randomUser.user.username} >:3`, bot.user.displayAvatarURL);
-
-        let giveawayChannel = bot.channels.get('676502025499836416');
-
-        if (!giveawayChannel) return;
-
-        giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
-
         try {
+
+            let LP = await logicPath.findOne({ UserID: randomUser.user.id });
+
+            if (!LP) return;
+
+            switch (randomRewardNumber) {
+                case 0:
+                    LP.Clues = LP.Clues + 1000;
+                    LP.Ess3 = LP.Ess3 + 5;
+                    break;
+
+                case 1:
+                    LP.Clues = LP.Clues + 500;
+                    LP.Ess3 = LP.Ess3 + 3;
+                    LP.Ess2 = LP.Ess2 + 3;
+                    break;
+
+                case 2:
+                    LP.Inspirations = LP.Inspirations + 100;
+                    LP.frags = LP.frags + 1000;
+                    LP.Clues = LP.Clues + 200;
+                    break;
+
+                case 3:
+                    LP.frags = LP.frags + 500;
+                    LP.Ess2 = LP.Ess2 + 5;
+                    LP.Inspirations = LP.Inspirations + 96;
+                    break;
+
+                case 4:
+                    LP.Ess2 = LP.Ess2 + 5;
+                    LP.Ess1 = LP.Ess1 + 7;
+                    LP.Clues = LP.Clues + 700;
+                    break;
+
+                case 5:
+                    LP.Ess1 = LP.Ess1 + 10;
+                    LP.Ess2 = LP.Ess2 + 10;
+                    LP.Ess3 = LP.Ess3 + 10;
+                    break;
+
+            }
+
+            LP.save().catch(e => console.log(e));
+
+
+            let giveawayEmbed = new RichEmbed()
+                .setAuthor(`${randomUser.user.tag} won today's giveaway`, randomUser.user.displayAvatarURL)
+                .setThumbnail("https://cdn.discordapp.com/emojis/699667884833636352.png?v=1")
+                .setDescription(`Congrats ${randomUser.user.username}! You won today's giveaway and got:\n` + rewards[randomRewardNumber])
+                .setColor("0xFFF030")
+                .setTimestamp()
+                .setFooter(`Oooohoo lucky ${randomUser.user.username} >:3`, bot.user.displayAvatarURL);
+
+            let giveawayChannel = bot.channels.get('676502025499836416');
+
+            if (!giveawayChannel) return;
+
+            giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
+
 
             await logicPath.updateMany({}, {
                 $set:

@@ -4,6 +4,7 @@ const { stripIndents } = require('common-tags');
 const Cooldown = require("./models/cooldown.js");
 const humanizeDuration = require("humanize-duration");
 const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
+const Guild = require("./models/guild.js");
 
 module.exports = {
 
@@ -301,6 +302,40 @@ module.exports = {
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(coolEmbed).then(m => m.delete(30000));
 
+	},
+	checkForGuildDataExistance: async (message) => {
+		const guild = await Guild.findOne({ guildID: message.guild.id });
+
+		if (guild) return;
+
+		const newGuild = new Guild({
+
+			guildID: message.guild.id,
+
+			leave: {
+				enabled: false,
+
+				channel: null,
+
+				message: null,
+			},
+			welcome: {
+
+				enabled: false,
+
+				channel: null,
+
+				message: null,
+			},
+
+			prefix: ">",
+
+			autoroles: [],
+
+		});
+		await newGuild.save().catch(err => console.log(err));
+
 	}
+
 
 };
