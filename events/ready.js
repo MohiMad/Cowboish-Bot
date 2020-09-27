@@ -12,7 +12,7 @@ const Cooldown = require("../models/cooldown.js");
 
 module.exports = async (bot) => {
 
-    console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠 🤠 🤠 Yeehaw! 🤠 🤠 🤠\n___________________________________________`);
+    console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
     const activities_list = [
         `and yoinking around >:v`,
@@ -21,7 +21,8 @@ module.exports = async (bot) => {
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/1500`,
         `${bot.guilds.size} guilds | ${bot.users.size} users`,
-        `Never forget Bonbon's (铁皮人) skin :v`
+        `Never forget Bonbon's (铁皮人) skin`,
+        `R.I.P Cowboy's One Tap Lassos 😔`
     ];
 
     setInterval(() => {
@@ -99,8 +100,6 @@ module.exports = async (bot) => {
                 if (!member) return;
 
                 let muteRole = guild.roles.find((x) => x.name === "muted");
-
-
 
                 if (!muteRole) muteRole = guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
 
