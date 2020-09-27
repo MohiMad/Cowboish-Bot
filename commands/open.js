@@ -27,8 +27,7 @@ module.exports = {
             stats_cmd = "`" + prefix + "open stats <essenceID>`",
             author = message.author.username,
             open10 = "`" + prefix + "open s12-1 10`\n`" + prefix + "open s12-1 3`",
-            boolean = false,
-            statsBooboo = false;
+            boolean = false;
 
         const noargsEmbed = new RichEmbed()
             .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL)
@@ -220,7 +219,6 @@ module.exports = {
                     if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
-                        statsBooboo = true;
                         await statsCheck(message, `s12-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
                         await addCooldown(message, 3000, "open");
 
@@ -229,7 +227,6 @@ module.exports = {
                 }
             }
             if (boolean === false) return message.channel.send(noargsEmbed);
-            if (statsBooboo === false) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
 
 
         } catch (err) {
