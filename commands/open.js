@@ -78,7 +78,7 @@ module.exports = {
                     essenceLP = LP.Ess3;
                 }
 
-                let randomItem = Math.floor(Math.random() * essence.length);
+                let randomItem = Math.floor(Math.random() * essence.slice(1).length);
 
                 if (essence[0].Shortcuts.includes(args[1].toLowerCase())) {
 
