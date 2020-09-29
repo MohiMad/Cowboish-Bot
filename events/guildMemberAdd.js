@@ -9,7 +9,7 @@ module.exports = async (bot, member) => {
 
     if (guild.autoroles.length !== 0) {
         for (const role of guild.autoroles) {
-            let findTheRole = await findRole(message, role);
+            let findTheRole = await findRole(member, role);
             if (!findTheRole) return;
             await member.addRole(role).catch(() => void null);
         }
