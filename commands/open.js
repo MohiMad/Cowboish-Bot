@@ -82,11 +82,12 @@ module.exports = {
 
                 if (essence[0].Shortcuts.includes(args[1].toLowerCase())) {
 
+                    let EssenceONLY = essence.slice(1);
+
                     if (!args[2] || args[2] === "1") {
                         boolean = true;
                         if (essenceLP === 0) return message.reply("**You don't have any " + essence[0].Emoji + " `" + essence[0].WhichEss + "` essences!**\nTry rolling some dices or buy some from the shop!");
 
-                        let EssenceONLY = essence.slice(1);
 
                         const embed = new RichEmbed()
                             .setAuthor(EssenceONLY[randomItem].Title.replace("author", message.author.username), essence[0].LinkOfIt)
