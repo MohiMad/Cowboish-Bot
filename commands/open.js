@@ -86,27 +86,29 @@ module.exports = {
                         boolean = true;
                         if (essenceLP === 0) return message.reply("**You don't have any " + essence[0].Emoji + " `" + essence[0].WhichEss + "` essences!**\nTry rolling some dices or buy some from the shop!");
 
-                        const embed = new RichEmbed()
-                            .setAuthor(essence[randomItem].Title.replace("author", message.author.username), essence[0].LinkOfIt)
-                            .setImage(`https://i.imgur.com/${essence[randomItem].LinkTag}${essence[0].Format}`)
-                            .setColor(essence[randomItem].Color)
-                            .setFooter(essence[randomItem].Footer, bot.user.displayAvatarURL)
+                        let EssenceONLY = essence.slice(1);
 
-                        if (LP.Opened.includes(essence[randomItem].Item)) {
-                            embed.setDescription(`You have this item already! You get **${essence[randomItem].FragAmount}** ${frags} instead :D`);
-                            LP.frags = LP.frags + essence[randomItem].FragAmount;
+                        const embed = new RichEmbed()
+                            .setAuthor(EssenceONLY[randomItem].Title.replace("author", message.author.username), essence[0].LinkOfIt)
+                            .setImage(`https://i.imgur.com/${EssenceONLY[randomItem].LinkTag}${essence[0].Format}`)
+                            .setColor(EssenceONLY[randomItem].Color)
+                            .setFooter(EssenceONLY[randomItem].Footer, bot.user.displayAvatarURL)
+
+                        if (LP.Opened.includes(EssenceONLY[randomItem].Item)) {
+                            embed.setDescription(`You have this item already! You get **${EssenceONLY[randomItem].FragAmount}** ${frags} instead :D`);
+                            LP.frags = LP.frags + EssenceONLY[randomItem].FragAmount;
 
                         } else {
-                            LP.Opened = [...LP.Opened, essence[randomItem].Item];
-                            if (essence[randomItem].Item === "s12-2-1") LP.Sculptor = true;
+                            LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
+                            if (EssenceONLY[randomItem].Item === "s12-2-1") LP.Sculptor = true;
 
-                            if (essence[randomItem].Tier === "S") LP.S = LP.S + 1;
-                            if (essence[randomItem].Tier === "A") LP.A = LP.A + 1;
-                            if (essence[randomItem].Tier === "S") LP.B = LP.B + 1;
-                            if (essence[randomItem].Tier === "C") LP.C = LP.C + 1;
-                            if (essence[randomItem].Tier === "D") LP.D = LP.D + 1;
+                            if (EssenceONLY[randomItem].Tier === "S") LP.S = LP.S + 1;
+                            if (EssenceONLY[randomItem].Tier === "A") LP.A = LP.A + 1;
+                            if (EssenceONLY[randomItem].Tier === "S") LP.B = LP.B + 1;
+                            if (EssenceONLY[randomItem].Tier === "C") LP.C = LP.C + 1;
+                            if (EssenceONLY[randomItem].Tier === "D") LP.D = LP.D + 1;
 
-                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49"].includes(essence[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${essence[randomItem].PortraitName}` + "`");
+                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
                         }
                         if (i === 0) LP.Ess1 = LP.Ess1 - 1;
                         if (i === 1) LP.Ess2 = LP.Ess2 - 1;
@@ -127,22 +129,18 @@ module.exports = {
                         if (EssenceNumber < 1) return message.reply("**Can't open less than 1 essence >:/**");
                         if (["-"].includes(EssenceNumber)) return message.reply("**Can't open a negative amount of essences >:/**");
 
-                        let itemNumber = Math.floor(Math.random() * essence.length);
-                        if (itemNumber === 0) {
-                            itemNumber = Math.floor(Math.random() * essence.length);
-                        }
-                        if (itemNumber === 0) itemNumber = 1;
+                        let itemNumber = Math.floor(Math.random() * essence.slice(1).length);
 
-                        let itemNumber1 = Math.floor(Math.random() * essence.length);
-                        let itemNumber2 = Math.floor(Math.random() * essence.length);
-                        let itemNumber3 = Math.floor(Math.random() * essence.length);
-                        let itemNumber4 = Math.floor(Math.random() * essence.length);
-                        let itemNumber5 = Math.floor(Math.random() * essence.length);
-                        let itemNumber6 = Math.floor(Math.random() * essence.length);
-                        let itemNumber7 = Math.floor(Math.random() * essence.length);
-                        let itemNumber8 = Math.floor(Math.random() * essence.length);
-                        let itemNumber9 = Math.floor(Math.random() * essence.length);
-                        let itemNumber10 = Math.floor(Math.random() * essence.length);
+                        let itemNumber1 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber2 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber3 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber4 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber5 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber6 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber7 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber8 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber9 = Math.floor(Math.random() * essence.slice(1).length);
+                        let itemNumber10 = Math.floor(Math.random() * essence.slice(1).length);
 
                         let description = "\n",
                             lastEssenceColor,
@@ -163,27 +161,27 @@ module.exports = {
                             if (s === 9) rndom = itemNumber10;
 
                             if (s + 1 === EssenceNumber) {
-                                lastEssenceColor = essence[rndom].Color ? essence[rndom].Color : essence[itemNumber].Color;
-                                lastEssenceImage = `https://i.imgur.com/${essence[rndom].LinkTag ? essence[rndom].LinkTag : essence[itemNumber].LinkTag}${essence[0].Format}`;
+                                lastEssenceColor = EssenceONLY[rndom].Color;
+                                lastEssenceImage = `https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}`;
 
                             }
 
-                            if (LP.Opened.includes(essence[rndom].Item)) {
-                                fragments = fragments + (essence[rndom].FragAmount ? essence[rndom].FragAmount : essence[itemNumber].FragAmount);
-                                description = description + `\n\n[**${s + 1} 】 ${essence[rndom].Name ? essence[rndom].Name : essence[itemNumber].Name}**](https://i.imgur.com/${essence[rndom].LinkTag ? essence[rndom].LinkTag : essence[itemNumber].LinkTag}${essence[0].Format})`;
+                            if (LP.Opened.includes(EssenceONLY[rndom].Item)) {
+                                fragments = fragments + (EssenceONLY[rndom].FragAmount);
+                                description = description + `\n\n[**${s + 1} 】 ${EssenceONLY[rndom].Name}**](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format})`;
 
                             } else {
 
-                                LP.Opened = [...LP.Opened, essence[rndom].Item ? essence[rndom].Item : essence[itemNumber].Item];
-                                if (essence[rndom].Item ? essence[rndom].Item : essence[itemNumber].Item === "s12-2-1") LP.Sculptor = true;
+                                LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
+                                if (EssenceONLY[rndom].Item === "s12-2-1") LP.Sculptor = true;
 
-                                if (essence[rndom].Tier ? essence[rndom].Tier : essence[itemNumber].Tier === "S") LP.S = LP.S + 1;
-                                if (essence[rndom].Tier ? essence[rndom].Tier : essence[itemNumber].Tier === "A") LP.A = LP.A + 1;
-                                if (essence[rndom].Tier ? essence[rndom].Tier : essence[itemNumber].Tier === "S") LP.B = LP.B + 1;
-                                if (essence[rndom].Tier ? essence[rndom].Tier : essence[itemNumber].Tier === "C") LP.C = LP.C + 1;
-                                if (essence[rndom].Tier ? essence[rndom].Tier : essence[itemNumber].Tier === "D") LP.D = LP.D + 1;
+                                if (EssenceONLY[rndom].Tier === "S") LP.S = LP.S + 1;
+                                if (EssenceONLY[rndom].Tier === "A") LP.A = LP.A + 1;
+                                if (EssenceONLY[rndom].Tier === "S") LP.B = LP.B + 1;
+                                if (EssenceONLY[rndom].Tier === "C") LP.C = LP.C + 1;
+                                if (EssenceONLY[rndom].Tier === "D") LP.D = LP.D + 1;
 
-                                description = description + `\n\n[${s + 1} 】 ${essence[rndom].Name ? essence[rndom].Name : essence[itemNumber].Name}](https://i.imgur.com/${essence[rndom].LinkTag ? essence[rndom].LinkTag : essence[itemNumber].LinkTag}${essence[0].Format})`;
+                                description = description + `\n\n[${s + 1} 】 ${EssenceONLY[rndom].Name}](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format})`;
 
                             }
 
