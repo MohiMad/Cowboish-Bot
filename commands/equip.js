@@ -375,16 +375,16 @@ module.exports = {
                     equipThePortrait("colorful_memory_spider", "s12-2-49", "https://i.imgur.com/v0FyqYb.png");
 
                 }else if (["colorful memory prospector"].includes(portraitString.toLowerCase())) {
-                    equipThePortrait("colorful_memory_prospector", "s13-2-47", "https://i.imgur.com/jYhlLjL.png");
+                    equipThePortrait("colorful_memory_prospector", "s13-1-47", "https://i.imgur.com/jYhlLjL.png");
 
                 } else if (["colorful memory enchantress"].includes(portraitString.toLowerCase())) {
-                    equipThePortrait("colorful_memory_enchantress", "s13-2-48", "https://i.imgur.com/MqLkHoP.png");
+                    equipThePortrait("colorful_memory_enchantress", "s13-1-48", "https://i.imgur.com/MqLkHoP.png");
 
                 }else if (["colorful memory bonbon", "colorful memory guard 26"].includes(portraitString.toLowerCase())) {
-                    equipThePortrait("colorful_memory_bonbon", "s13-2-49", "https://i.imgur.com/qHcEiJH.png");
+                    equipThePortrait("colorful_memory_bonbon", "s13-1-49", "https://i.imgur.com/qHcEiJH.png");
 
-                }else if (["colorful memory bloody queen", "colorful memory mary"].includes(portraitString.toLowerCase())) {
-                    equipThePortrait("colorful_memory_bloodyqueen", "s13-2-50", "https://i.imgur.com/tsLS63D.png");
+                }else if (["colorful memory bloodyqueen", "colorful memory bloody queen", "colorful memory mary"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_bloodyqueen", "s13-1-50", "https://i.imgur.com/tsLS63D.png");
 
                 } else if (["makoto naegi", "makoto"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("makoto_naegi", "dangan-20", "https://i.imgur.com/zMWoxXV.png");

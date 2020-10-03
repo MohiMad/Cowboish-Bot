@@ -88,6 +88,13 @@
             "Des": "The blossoming flowers on the cliff often lived briefer than the withering weeds in barren lands."
         },
         {
+            "Name": ["[Costume] Painter - Golden Ratio"],
+            "linkTag": "https://i.imgur.com/9rTILAM.png",
+            "Item": "s13-1-1",
+            "Color": "0xfcba03",
+            "Des": "With the red stone as the medium and himself as the sacrifice. he blends the organic and inorganic materials in a golden ratio and adds a finishing touch for aesthetics - a miracle was thus born. "
+        },
+        {
             "Name": ["[Costume] Guard 26 - Monokuma"],
             "linkTag": "https://i.imgur.com/LObjX0X.png",
             "Item": "dangan-1",
