@@ -5,7 +5,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: "paintingstare",
     description: "Stare the at painter's um- painting >:v",
-    execute: async (message, args, bot, prefix) => {
+    execute: async (message, args, bot) => {
 
         const cooldownCheck = await findCooldown(message, "paintingstare");
         if (cooldownCheck) return coolEmbed(message, "Too much to stare at 0__0", "Take it easy, go grab yourself a cup of coffee and return and you'll be able to use this command again...\nOr you can stare at your screen for **REMAINING** >:v", cooldownCheck.timeRemaining, ["s"]);
@@ -13,17 +13,23 @@ module.exports = {
         const canvas = Canvas.createCanvas(640, 608);
         const ctx = canvas.getContext('2d');
 
-        const lookingForAMemberPing = await findMember(message, args.slice(1).join(" "))
+        const lookingForAMemberPing = await findMember(message, args.slice(0).join(" "));
         let memberImage;
 
-        //await message.channel.messages.fetch();
-
         if (!message.attachments.first()) {
-            if (lookingForAMemberPing) {
-                memberImage = await Canvas.loadImage(lookingForAMemberPing.user.displayAvatarURL);
-            } else {
-                memberImage = await Canvas.loadImage(message.author.displayAvatarURL);
-            }
+
+            await message.channel.fetchMessages().then(async (x) => {
+                let IMAGE = x.filter(m => m.author.id != bot.user.id && m.attachments.first() != undefined);
+
+                if (!lookingForAMemberPing) {
+                    if (!IMAGE.first()) {
+                        memberImage = await Canvas.loadImage(message.author.displayAvatarURL);
+                    } else {
+                        memberImage = await Canvas.loadImage(IMAGE.first().attachments.first().url);
+                    }
+                } else memberImage = await Canvas.loadImage(lookingForAMemberPing.user.displayAvatarURL);
+
+            });
         } else {
             memberImage = await Canvas.loadImage(message.attachments.first().url);
         }

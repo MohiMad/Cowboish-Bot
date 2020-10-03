@@ -139,8 +139,8 @@ module.exports = async (bot, message) => {
             await bot.commands.get("letter").execute(message, args);
             break;
 
-        case "paintingstare": case "stareatpainting": case "distractingpainting": case "paintingstaring":
-            await bot.commands.get("paintingstare").execute(message, args, bot, prefix);
+        case "paintingstare": case "stareatpainting": case "distractingpainting": case "painting":
+            await bot.commands.get("paintingstare").execute(message, args, bot);
             break;
 
 
