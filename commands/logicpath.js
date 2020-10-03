@@ -98,6 +98,27 @@ module.exports = {
 
                         ctx.drawImage(colorful_memory_forward, 14, 13, 140, 140);
                     }
+                    if (LP.Portrait === "colorful_memory_prospector") {
+                        const colorful_memory_prospector = await Canvas.loadImage("https://i.imgur.com/jYhlLjL.png");
+
+                        ctx.drawImage(colorful_memory_prospector, 16, 10, 140, 140);
+                    }
+                    if (LP.Portrait === "colorful_memory_enchantress") {
+                        const colorful_memory_enchantress = await Canvas.loadImage("https://i.imgur.com/MqLkHoP.png");
+
+                        ctx.drawImage(colorful_memory_enchantress, 16, 10, 140, 140);
+                    }
+                    if (LP.Portrait === "colorful_memory_bonbon") {
+                        const colorful_memory_bonbon = await Canvas.loadImage("https://i.imgur.com/qHcEiJH.png");
+
+                        ctx.drawImage(colorful_memory_bonbon, 16, 10, 140, 140);
+                    }
+                    if (LP.Portrait === "colorful_memory_bloodyqueen") {
+                        const colorful_memory_bloodyqueen = await Canvas.loadImage("https://i.imgur.com/tsLS63D.png");
+
+                        ctx.drawImage(colorful_memory_bloodyqueen, 16, 10, 140, 140);
+                    }
+
                     if (LP.Portrait === "colorful_memory_geisha") {
                         const colorful_memory_geisha = await Canvas.loadImage("https://i.imgur.com/yeKjyts.png");
 
@@ -383,7 +404,7 @@ module.exports = {
                 ctx.font = '14px Arial';
                 ctx.fillStyle = '#000000';
 
-                ctx.fillText(LP.Ess1, 70, 270);
+                ctx.fillText(LP.Ess1, 70, 265);
 
                 ctx.fillText(LP.Ess2, 189, 267);
 
@@ -508,7 +529,10 @@ module.exports = {
                     "dangan-27", "dangan-28", "dangan-29",
                     "dangan-30", "dangan-31", "dangan-32",
                     "dangan-33", "dangan-34", "dangan-35",
-                    "sword_fighting", "marathon_runner_victor", "long_jump_luchino", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
+                    "sword_fighting", "marathon_runner_victor", "long_jump_luchino", 
+                    "s12-2-36", "s12-2-37", "s12-2-38", 
+                    "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49",
+                "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50"].forEach(x => { if (LP.Opened.includes(x)) portraitAmount++; });
 
                 ctx.fillStyle = '#000000';
                 ctx.fillText(portraitAmount, 390, 130);
@@ -522,7 +546,7 @@ module.exports = {
                 LP.Survivors.Barmaid, LP.Survivors.Magician, LP.Survivors.Explorer,
                 LP.Survivors.Forward, LP.Survivors.Prospector, LP.Survivors.Enchantress,
                 LP.Survivors.Wilding, LP.Survivors.Postman, LP.Survivors.NewSurv,
-                LP.Survivors.AnotherSurv, LP.Entomologist].forEach(x => { if (x === true) SurvivorNumber++; });
+                LP.Survivors.AnotherSurv, LP.Entomologist, LP.Painter].forEach(x => { if (x === true) SurvivorNumber++; });
 
                 ctx.fillStyle = '#0a8fd0';
                 ctx.fillText(SurvivorNumber, 292, 130);

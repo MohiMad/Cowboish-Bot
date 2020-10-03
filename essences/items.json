@@ -131,12 +131,11 @@
             "Des": "No one can resist the willpower embedded by the visitor from hell in the music piece. Yet the musician only cares about the elegant purity and isn't flattered by the boisterous sound. It's only when he finds out that a misfit has fled to the world of the living in pursuit of his music that he's finally motivated to play his heart out."
         },
         {
-            "Name": ["[Costume] Acrobat - ACE", "ace", "0", "zero", "acrobatace"],
+            "Name": ["[Costume] Acrobat - ACE"],
             "linkTag": "https://i.imgur.com/CUGVr3R.png",
             "Item": "ace",
             "Color": "0xbb2af5",
-            "Des": "Tie-breaker. Are you going to win this round?",
-            "Price": 6888
+            "Des": "Tie-breaker. Are you going to win this round?"
         },
         {
             "Name": ["[Costume] Lucky Guy - Maid Outfit", "maidoutfit", "11", "eleven", "luckyguymaidoutfit"],
@@ -249,6 +248,86 @@
             "Color": "0xbb2af5",
             "Des": "The poor peacock; a white dress stained with dust when first used.",
             "Price": 6888
+        },  
+        {
+            "Name": ["[Costume] HellEmber - Eternal King", "eternalking", "25", "twentyfive", "hellembereternalking"],
+            "linkTag": "https://i.imgur.com/THU6x3e.png",
+            "Item": "eternal_king",
+            "Color": "0xbb2af5",
+            "Des": "He firmly believes that as long as he has the desire to defeat someone, he will.",
+            "Price": 6888
+        },  
+        {
+            "Name": ["[Costume] Cowboy - Tribe Warrior", "tribewarrior", "26", "twentysix", "cowboytribewarrior", "brave", "cowboybrave"],
+            "linkTag": "https://i.imgur.com/dJyZ4MN.png",
+            "Item": "tribe_warrior",
+            "Color": "0xbb2af5",
+            "Des": "Tribal warriors ran with wild buffaloes, dances with wolves and soared high with eagles.",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Thief - Pioneer", "pioneer", "27", "twentyseven", "thiefpioneer"],
+            "linkTag": "https://i.imgur.com/LwGZE2G.png",
+            "Item": "pioneer",
+            "Color": "0xbb2af5",
+            "Des": "How are you supposed to teach them when you don't understand it yourself? It also would seem...that this requires a bit of talent.",
+            "Price": 6888
+        },  
+        {
+            "Name": ["[Costume] Ripper - White Tentacle", "whitetentacle", "28", "twentyeight", "ripperwhitetentacle"],
+            "linkTag": "https://i.imgur.com/bpzcSCg.png",
+            "Item": "white_tentacle",
+            "Color": "0xbb2af5",
+            "Des": "Even the mutated abberation fog city can't stand the original color. He is eager for a little scarlet to adorn himself with.",
+            "Price": 6888
+        },  
+        {
+            "Name": ["[Costume] Gamekeeper - Punk", "punk", "29", "twentynine", "gamekeeperpunk"],
+            "linkTag": "https://i.imgur.com/AZnm1wD.png",
+            "Item": "punk",
+            "Color": "0xbb2af5",
+            "Des": "The meeting between an oddball from the Iron Hats and the expedition's traitor would have remained a secret if it wasn't accidentally interrupted by that guy playing with spring",
+            "Price": 6888
+        },  
+        {
+            "Name": ["[Costume] Geisha - Rashomon", "rashomon", "30", "thirty", "geisharashomon"],
+            "linkTag": "https://i.imgur.com/F9ouNvu.png",
+            "Item": "rashomon",
+            "Color": "0xbb2af5",
+            "Des": "Tears can fool anyone, including oneself.",
+            "Price": 6888
+        },  
+        {
+            "Name": ["[Costume] Mercenary - Spring Hand", "springhand", "31", "thirtyone", "mercenaryspringhand"],
+            "linkTag": "https://i.imgur.com/bRSepq0.png",
+            "Item": "spring_hand",
+            "Color": "0xbb2af5",
+            "Des": "Hey! These hands are weak, but you really should see how they look with the springs loaded!",
+            "Price": 6888
+        },
+        {
+            "Name": ["[Costume] Ripper - Green Tentacle", "greententacle", "32", "thirtytwo", "rippergreententacle"],
+            "linkTag": "https://i.imgur.com/Byuch6d.png",
+            "Item": "green_tentacle",
+            "Color": "0xbb2af5",
+            "Des": "Even the mutated aberration fog city can't stand the original color. He is eager for a little scarlet to adorn himself with.",
+            "Price": 6888
+        },
+        {
+            "Name": ["Forward - Black Nose", "blacknose", "33", "thirtythree", "forwardblacknose"],
+            "linkTag": "https://i.imgur.com/clqgIji.png",
+            "Item": "black_nose",
+            "Color": "0xbb2af5",
+            "Des": ". . .",
+            "Price": 3999
+        },
+        {
+            "Name": ["Smiley Face - Scarecrow", "scarecrow", "34", "thirtyfour", "smileyfacescarecrow"],
+            "linkTag": "https://i.imgur.com/bMCWBDp.png",
+            "Item": "clown_scarecrow",
+            "Color": "0xbb2af5",
+            "Des": ". . .",
+            "Price": 3999
         },
         {
             "Name": [
@@ -454,6 +533,48 @@
             "Item": "ess1-51",
             "linkTag": "https://i.imgur.com/YAZ1O3R.png",
             "logicpathID": "colorful_memory_lawyer"
+        },
+        {
+            "Name": [
+                "Colorful Memory Prospector",
+                "colorful memory prospector",
+                "colorfulmemoryprospector"
+            ],
+            "Item": "s13-1-47",
+            "linkTag": "https://i.imgur.com/jYhlLjL.png",
+            "logicpathID": "colorful_memory_prospector"
+        },
+        {
+            "Name": [
+                "Colorful Memory Enchantress",
+                "colorful memory enchantress",
+                "colorfulmemoryenchantress"
+            ],
+            "Item": "s13-1-48",
+            "linkTag": "https://i.imgur.com/MqLkHoP.png",
+            "logicpathID": "colorful_memory_enchantress"
+        },
+        {
+            "Name": [
+                "Colorful Memory Guard 26",
+                "colorful memory guard 26",
+                "colorfulmemoryguard26",
+                "colorfulmemorybonbon",
+                "colorful memory bonbon"
+            ],
+            "Item": "s13-1-49",
+            "linkTag": "https://i.imgur.com/qHcEiJH.png",
+            "logicpathID": "colorful_memory_bonbon"
+        },
+        {
+            "Name": [
+                "Colorful Memory Bloody Queen",
+                "colorfulmemorybloodyqueen",
+                "colorful memory bloodyqueen"
+            ],
+            "Item": "s13-1-50",
+            "linkTag": "https://i.imgur.com/tsLS63D.png",
+            "logicpathID": "colorful_memory_bloodyqueen"
         },
         {
             "Name": [

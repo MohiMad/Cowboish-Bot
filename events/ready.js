@@ -16,13 +16,14 @@ module.exports = async (bot) => {
 
     const activities_list = [
         `and yoinking around >:v`,
-        `>invite | >help`,
+        `Under maintenance... please stand by ;)`
+        /*`>invite | >help`,
         `Identity V in ${bot.guilds.size} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.size}/1500`,
         `${bot.guilds.size} guilds | ${bot.users.size} users`,
         `Never forget Bonbon's (铁皮人) skin`,
-        `R.I.P Cowboy's One Tap Lassos 😔`
+        `R.I.P Cowboy's One Tap Lassos 😔`*/
     ];
 
     setInterval(() => {

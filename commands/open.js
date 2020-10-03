@@ -3,7 +3,7 @@ const { stripIndents } = require("common-tags");
 const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../functions.js");
 const { ess1, ess2, ess3, frags } = require("../emojis.json");
 const logicPath = require("../models/logicpath.js");
-const { firstEssence, secondEssence, thirdEssence } = require("../essences/essences.json");
+const { firstEssence } = require("../essences/essences.json");
 
 const { statsCheck } = require("../essences/essenceFunctions.js");
 
@@ -34,8 +34,8 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
                         ${ess1} | **Essences s12-1** ─ ID ➜ ${s10_cmd}
-                        ${ess2} | **Essence s12-2** ─ ID ➜ ${s10_2_cmd}
-                        ${ess3} | **Essence s12-3** ─ ID ➜ ${s10_3_cmd}
+                        ${ess2} | ~~**Essence s12-2**~~ ─ ID ➜ ${s10_2_cmd}
+                        ${ess3} | ~~**Essence s12-3**~~ ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
 
@@ -46,7 +46,7 @@ module.exports = {
                         **Example:** 
                         ${open10}
                 `)
-            .setThumbnail("https://i.imgur.com/BXAjWou.png")
+            .setThumbnail("https://i.imgur.com/y5K6iNN.png")
             .setFooter(bot.user.tag, bot.user.displayAvatarURL);
 
         let fragments = 0;
@@ -58,7 +58,7 @@ module.exports = {
             if (!args[1]) return message.channel.send(noargsEmbed);
 
 
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < 1; i++) {
 
                 let essence,
                     essenceLP;
@@ -101,7 +101,7 @@ module.exports = {
 
                         } else {
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
-                            if (EssenceONLY[randomItem].Item === "s12-2-1") LP.Sculptor = true;
+                            if (EssenceONLY[randomItem].Item === "s13-1-1") LP.Painter = true;
 
                             if (EssenceONLY[randomItem].Tier === "S") LP.S = LP.S + 1;
                             if (EssenceONLY[randomItem].Tier === "A") LP.A = LP.A + 1;

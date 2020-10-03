@@ -46,12 +46,12 @@ module.exports = {
         const EssEmbed = new RichEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
-            ${e.ess1} | **Essence s12-1** - Price : *96* ${e.insp} - ID: __*s12-1*__
-            ${e.ess2} | **Essence s12-2** - Price : *96* ${e.insp} - ID: __*s12-2*__
-            ${e.ess3} | **Essence s12-3** - Price : *96* ${e.insp} - ID: __*s12-3*__
+            ${e.ess1} | **Essence s13-1** - Price : *96* ${e.insp} - ID: __*s13-1*__
+            ${e.ess2} | ~~**Essence s13-2**~~ - Price : *96* ${e.insp} - ID: __*s13-2*__
+            ${e.ess3} | ~~**Essence s13-3**~~ - Price : *96* ${e.insp} - ID: __*s13-3*__
             `)
             .setColor("RANDOM")
-            .setThumbnail("https://i.imgur.com/BXAjWou.png")
+            .setThumbnail("https://i.imgur.com/y5K6iNN.png")
             .setFooter("Cowboish essence shop ─ page 1 of 1");
 
         if (!args[1]) return message.channel.send(shopEmbed);
@@ -65,7 +65,7 @@ module.exports = {
                 {
                     LP_Path: LP.Survivors.Cowboy,
                     CharacterName: "Cowboy",
-                    Emoji: e.cowboy
+                    Emoji: "🤠"
 
                 },
                 {
@@ -108,7 +108,7 @@ module.exports = {
                 {
                     LP_Path: LP.Survivors.Dancer,
                     CharacterName: "Dancer",
-                    Emoji: e.dancer
+                    Emoji: "💃"
 
                 },
                 {
@@ -202,28 +202,37 @@ module.exports = {
                     CharacterName: "Entomologist",
                     Emoji: e.entomologist
 
+                },
+
+                {
+                    LP_Path: LP.Painter,
+                    CharacterName: "Painter",
+                    Emoji: "🖌️"
                 }
             ];
 
             let ownedSurvivors = "**Owned Survivors:**",
-                nonOwnedSurvivors = "**Non Owned Survivors:**"
-
-            SurvivorsArray.forEach(x => {
-                if (x.LP_Path === true) ownedSurvivors = ownedSurvivors + `\n${x.Emoji} | **${x.CharacterName}**`;
-                else nonOwnedSurvivors = nonOwnedSurvivors + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
-            });
-
-            if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
-            if (nonOwnedSurvivors === "**Non Owned Survivors:**") nonOwnedSurvivors = ownedSurvivors + "\nNone... you bought em' all :v";
+                nonOwnedSurvivors = "**Not Owned Survivors:**";
 
             const survEmbed = new RichEmbed()
                 .setTitle("Survivors shop list!")
                 .addField("How do I buy the survivor?", "To buy the survivor you want, do `" + prefix + "buy <survivorName>`")
-                .setDescription(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
                 .setFooter("Remember to type the Survivor's name without spacings")
                 .setColor("RANDOM");
 
-            return message.channel.send(survEmbed);
+            SurvivorsArray.forEach(x => {
+
+                if (x.LP_Path === true) ownedSurvivors = ownedSurvivors + `\n${x.Emoji} | **${x.CharacterName}**`;
+                
+                else nonOwnedSurvivors = nonOwnedSurvivors + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
+            });
+
+            if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
+            if (nonOwnedSurvivors === "**Not Owned Survivors:**") nonOwnedSurvivors = ownedSurvivors + "\nNone... you bought em' all :v";
+
+            console.log(ownedSurvivors.length + nonOwnedSurvivors.length);
+            return message.channel.send(survEmbed.setDescription(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
+            );
 
 
         }//survivor bracket
@@ -231,7 +240,7 @@ module.exports = {
         else if (["hunter", "hunters"].includes(args[1].toLowerCase())) {
 
             let ownedHunters = "**Owned Hunters:**",
-                nonOwnedHunter = "**Non Owned Hunters:**",
+                nonOwnedHunter = "**Not Owned Hunters:**",
                 hunterArray = [
                     {
                         LP_Path: LP.Hunters.AxeBoi,
@@ -324,11 +333,11 @@ module.exports = {
 
             hunterArray.forEach(x => {
                 if (x.LP_Path === true) ownedHunters = ownedHunters + `\n${x.Emoji} | **${x.CharacterName}**`;
-                else nonOwnedHunter = nonOwnedHunter + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
+                else nonOwnedHunter = nonOwnedHunter + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 4508}__ ${e.clues}`
             });
 
             if (ownedHunters === "**Owned Hunters:**") ownedHunters = ownedHunters + "\nNone other than Hellember :v";
-            if (nonOwnedHunter === "**Non Owned Hunters:**") nonOwnedHunter = nonOwnedHunter + "\nNone... you bought em' all :v";
+            if (nonOwnedHunter === "**Not Owned Hunters:**") nonOwnedHunter = nonOwnedHunter + "\nNone... you bought em' all :v";
 
 
             const huntaEmbed = new RichEmbed()
@@ -472,8 +481,8 @@ module.exports = {
 
             let skinPages = [
                 {
-                    link: "https://i.imgur.com/5DUpUat.png",
-                    des: `[***《 TIME LIMITED 》***](https://youtu.be/qh_0YACMxyo)\nEnds at: *3rd October*\n\n:zero: | **[Costume] Acrobat - ACE**\n***Price: *** __6888__${e.frags}\n***Description:***\nTie-breaker. Are you going to win this round?`
+                    link: "https://i.imgur.com/CR35DLy.png",
+                    des: `[***《 TIME LIMITED 》***](https://youtu.be/qh_0YACMxyo)\n*Ends at: 1st November*\n\n:three: :three: | **Forward - Black Nose** ─ __3999__${e.frags}\n\n:three: :four: | **Smiley Face - Scarecrow** ─ __3999__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",
@@ -486,6 +495,10 @@ module.exports = {
                 {
                     link: "https://i.imgur.com/7toytbk.png",
                     des: `:one: :seven: | **Doctor - Rythm Of The Rain** ─ __6888__${e.frags}\n\n:one: :eight: | **Seer - Reculse** ─ __6888__${e.frags}\n\n:one: :nine: | **Perfumer - Fatal Affection** ─ __6888__${e.frags}\n\n:two: :zero: | **Doctor - Holy Angel** ─ __6888__${e.frags}\n\n:two: :one: | **Mercenary - Parasite** ─ __6888__${e.frags}\n\n:two: :two: | **Forward - Bull Power** ─ __6888__${e.frags}\n\n:two: :three: | **Feaster - Nepenthes** ─ __6888__${e.frags}\n\n:two: :four: | **Geisha - White Peacock** ─ __6888__${e.frags}`
+                },
+                {
+                    link: "https://i.imgur.com/KgRompQ.png",
+                    des: `:two: :five: | **HellEmber - Eternal King** ─ __6888__${e.frags}\n\n:two: :six: | **Cowboy - Tribe Warrior** ─ __6888__${e.frags}\n\n:two: :seven: | **Thief - Pioneer** ─ __6888__${e.frags}\n\n:two: :eight: | **Ripper - White Tentacle** ─ __6888__${e.frags}\n\n:two: :nine: | **Gamekeeper - Punk** ─ __6888__${e.frags}\n\n:three: :zero: | **Geisha - Rashomon** ─ __6888__${e.frags}\n\n:three: :one: | **Mercenary - Spring Hand** ─ __6888__${e.frags}\n\n:three: :two: | **Ripper - Green Tentacle** ─ __6888__${e.frags}`
                 }
 
             ];

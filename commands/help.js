@@ -99,7 +99,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("Image manipulation commands!")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL)
-                .setDescription("Some commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair` | `chosendeath` | `siptea` | `postmanletter`")
+                .setDescription("Some commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair` | `chosendeath` | `siptea` | `postmanletter` | `paintingstare`")
 
             message.channel.send(imageEmbed);
         }

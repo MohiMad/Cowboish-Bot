@@ -253,6 +253,7 @@ module.exports = {
 				equipped: "0"
 			},
 			Entomologist: false,
+			Painter: false,
 			Sculptor: false,
 			Portrait: "0",
 			ThreeMatches: 3

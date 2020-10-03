@@ -79,6 +79,7 @@ module.exports = {
             if (charName === "Postman") LP.Survivors.Postman = true;
             if (charName === "Prisoner") LP.Survivors.AnotherSurv = true;
             if (charName === "Entomologist") LP.Entomologist = true;
+            if (charName === "Painter") LP.Painter = true;
 
             if (charName === "Wu chang") LP.Hunters.WuChang = true;
             if (charName === "Axeboy") LP.Hunters.AxeBoi = true;
@@ -158,15 +159,15 @@ module.exports = {
             ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + "shop` to check what you can buy")
         }
         //buy essences here
-        else if (["s12-2", "s122", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
-            await essBuy("s12-2", "ess2", ess2, "https://i.imgur.com/JGu6jXE.png");
+        else if (["s13-2", "s132", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
+            await essBuy("s13-2", "ess2", ess2, "https://i.imgur.com/JGu6jXE.png");
         }
-        else if (["s211", "s12-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
-            await essBuy("s12-1", "ess1", ess1, "https://i.imgur.com/0SglSpn.png");
+        else if (["s211", "s13-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
+            await essBuy("s13-1", "ess1", ess1, "https://i.imgur.com/33Rr0iU.png");
 
         }
-        else if (["s12-3", "s123", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
-            await essBuy("s12-3", "ess3", ess3, "https://i.imgur.com/QQxyNKu.png");
+        else if (["s13-3", "s133", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
+            await essBuy("s13-3", "ess3", ess3, "https://i.imgur.com/QQxyNKu.png");
         }
         //buy essences ends here
 
@@ -216,6 +217,8 @@ module.exports = {
         else if (["prisoner", "luka", '"prisoner"'].includes(args[1].toLowerCase())) await buyIt("Prisoner", LP.Survivors.AnotherSurv, 3568, 'You bought zappy stunny man, the "prisoner" idk why the two "" exists but wtvr :)', "https://pm1.narvii.com/7489/81752f9a352981d8657fdc1cfef7c700fb951fabr1-1080-1863v2_hq.jpg");
 
         else if (["entomo", "entomologist", "melly"].includes(args[1].toLowerCase())) await buyIt("Entomologist", LP.Entomologist, 3568, "Aaaa noooo bees ;-;\nYou bought the Entomologist :D\nDo `" + prefix + "quick entomo` to play as her ^-^", "https://i.imgur.com/uU1pIL4.png");
+        else if (["painter", "artist", "edgar"].includes(args[1].toLowerCase())) await buyIt("Painter", LP.Painter, 3568, "Ooohoo it's an artist 0-0\nYou bought the Painter, Edgar :D\nDo `" + prefix + "quick edgar` to play as him :3", "https://static.wikia.nocookie.net/id5/images/4/4a/Artist_Transparent.png/revision/latest/scale-to-width-down/1000?cb=20200924174637");
+
         //survivors ends here
 
         //hunters begins here

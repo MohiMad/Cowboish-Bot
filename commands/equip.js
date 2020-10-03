@@ -296,6 +296,11 @@ module.exports = {
                     checkForPortrait("s12-2-48", "Colorful Memory Smiley Face");
                     checkForPortrait("s12-2-49", "Colorful Memory Soul Weaver");
 
+                    checkForPortrait("s13-2-47", "Colorful Memory Prospector");
+                    checkForPortrait("s13-2-48", "Colorful Memory Enchantress");
+                    checkForPortrait("s13-2-49", "Colorful Memory Guard 26");
+                    checkForPortrait("s13-2-50", "Colorful Memory Bloody Queen");
+
                     let ownedPortraitEmbed = new RichEmbed()
                         .setAuthor(message.author.username, message.author.displayAvatarURL)
                         .setTitle("Pfff you're missing some arguments friend >:3")
@@ -367,7 +372,19 @@ module.exports = {
                     equipThePortrait("colorful_memory_clown", "s12-2-48", "https://i.imgur.com/4icq6vm.png");
 
                 } else if (["colorful memory soul weaver", "(colorful memory soul weaver)"].includes(portraitString.toLowerCase())) {
-                    equipThePortrait("colorful_memory_clown", "s12-2-49", "https://i.imgur.com/v0FyqYb.png");
+                    equipThePortrait("colorful_memory_spider", "s12-2-49", "https://i.imgur.com/v0FyqYb.png");
+
+                }else if (["colorful memory prospector"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_prospector", "s13-2-47", "https://i.imgur.com/jYhlLjL.png");
+
+                } else if (["colorful memory enchantress"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_enchantress", "s13-2-48", "https://i.imgur.com/MqLkHoP.png");
+
+                }else if (["colorful memory bonbon", "colorful memory guard 26"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_bonbon", "s13-2-49", "https://i.imgur.com/qHcEiJH.png");
+
+                }else if (["colorful memory bloody queen", "colorful memory mary"].includes(portraitString.toLowerCase())) {
+                    equipThePortrait("colorful_memory_bloodyqueen", "s13-2-50", "https://i.imgur.com/tsLS63D.png");
 
                 } else if (["makoto naegi", "makoto"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("makoto_naegi", "dangan-20", "https://i.imgur.com/zMWoxXV.png");

@@ -42,7 +42,7 @@ module.exports = async (bot, message) => {
 
     if (!message.content.startsWith(prefix)) return;
 
-    //if(message.author.id != MohiMoo.id) return;
+    if(message.author.id != MohiMoo.id) return;
 
     async function addGuildID() {
         let LP = await logicPath.findOne({ UserID: message.author.id });
@@ -138,6 +138,11 @@ module.exports = async (bot, message) => {
         case "letter": case "postmansletter": case "postmanletter": case "postmansign":
             await bot.commands.get("letter").execute(message, args);
             break;
+
+        case "paintingstare": case "stareatpainting": case "distractingpainting": case "paintingstaring":
+            await bot.commands.get("paintingstare").execute(message, args, bot, prefix);
+            break;
+
 
 
         //IDENTITY V LOGICPATH COMMANDS

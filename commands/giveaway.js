@@ -16,11 +16,11 @@ module.exports = {
         let randomUser = giveawayRole.members.random();
 
         let rewards = [
-            `1000 ${clues} and 5 ${ess3}`, //0
-            `500 ${clues}, 3 ${ess3}, and 3 ${ess2}`, //1
-            `100 ${insp}, 1000 ${frags}, and 200 ${clues}`, //2
-            `500 ${frags}, 5 ${ess2}, and 96 ${insp}`, //3
-            `7 ${ess1}, 5 ${ess2}, and 700 ${clues}`, //4
+            `1000 ${clues} and 25 ${ess3}`, //0
+            `500 ${clues}, 10 ${ess3}, and 10 ${ess1}`, //1
+            `200 ${insp}, 5000 ${frags}, and 500 ${clues}`, //2
+            `3000 ${frags}, 15 ${ess1}, and 96 ${insp}`, //3
+            `10 ${ess1}, 5 ${ess2}, and 1000 ${clues}`, //4
             `10 ${ess1}, 10 ${ess2}, 10 ${ess3}`, //5
 
         ];
@@ -36,7 +36,7 @@ module.exports = {
             switch (randomRewardNumber) {
                 case 0:
                     LP.Clues = LP.Clues + 1000;
-                    LP.Ess3 = LP.Ess3 + 5;
+                    LP.Ess1 = LP.Ess1 + 25;
                     break;
 
                 case 1:
@@ -46,21 +46,21 @@ module.exports = {
                     break;
 
                 case 2:
-                    LP.Inspirations = LP.Inspirations + 100;
-                    LP.frags = LP.frags + 1000;
-                    LP.Clues = LP.Clues + 200;
+                    LP.Inspirations = LP.Inspirations + 200;
+                    LP.frags = LP.frags + 5000;
+                    LP.Clues = LP.Clues + 500;
                     break;
 
                 case 3:
-                    LP.frags = LP.frags + 500;
-                    LP.Ess2 = LP.Ess2 + 5;
+                    LP.frags = LP.frags + 300;
+                    LP.Ess1 = LP.Ess1 + 15;
                     LP.Inspirations = LP.Inspirations + 96;
                     break;
 
                 case 4:
                     LP.Ess2 = LP.Ess2 + 5;
-                    LP.Ess1 = LP.Ess1 + 7;
-                    LP.Clues = LP.Clues + 700;
+                    LP.Ess1 = LP.Ess1 + 10;
+                    LP.Clues = LP.Clues + 1000;
                     break;
 
                 case 5:
