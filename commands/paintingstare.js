@@ -18,7 +18,7 @@ module.exports = {
 
         //await message.channel.messages.fetch();
 
-        if (!message.attachments.first().url) {
+        if (!message.attachments.first()) {
             if (lookingForAMemberPing) {
                 memberImage = await Canvas.loadImage(lookingForAMemberPing.user.displayAvatarURL);
             } else {

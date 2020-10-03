@@ -230,7 +230,6 @@ module.exports = {
             if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
             if (nonOwnedSurvivors === "**Not Owned Survivors:**") nonOwnedSurvivors = ownedSurvivors + "\nNone... you bought em' all :v";
 
-            console.log(ownedSurvivors.length + nonOwnedSurvivors.length);
             return message.channel.send(survEmbed.setDescription(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
             );
 
