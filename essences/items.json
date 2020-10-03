@@ -92,7 +92,7 @@
             "linkTag": "https://i.imgur.com/9rTILAM.png",
             "Item": "s13-1-1",
             "Color": "0xfcba03",
-            "Des": "With the red stone as the medium and himself as the sacrifice. he blends the organic and inorganic materials in a golden ratio and adds a finishing touch for aesthetics - a miracle was thus born. "
+            "Des": "With the red stone as the medium and himself as the sacrifice. he blends the organic and inorganic materials in a golden ratio and adds a finishing touch for aesthetics - a miracle was thus born."
         },
         {
             "Name": ["[Costume] Guard 26 - Monokuma"],
@@ -335,6 +335,24 @@
             "Color": "0xbb2af5",
             "Des": ". . .",
             "Price": 3999
+        },
+        {
+            "Name": [
+                "[Costume] Prisoner - Electrolysis"
+            ],
+            "linkTag": "https://i.imgur.com/FZeT4VJ.png",
+            "Item": "s13-1-2",
+            "Color": "0xbb2af5",
+            "Des": "He made use of the delicate relationship between science and alchemy to complete the performance of turning stone into gold, yet he has no idea that the real Philosopher's Stone is nothing but a glorified lie."
+        },
+        {
+            "Name": [
+                "[Costume] Violinist - Ouroboros"
+            ],
+            "linkTag": "https://i.imgur.com/rXYuqSc.png",
+            "Item": "s13-1-3",
+            "Color": "0xbb2af5",
+            "Des": "In order to harvest the essence generated from the displacement of body and soul, the Ouroboros is cursed with the fate of devouring itself."
         },
         {
             "Name": [

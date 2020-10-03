@@ -481,7 +481,7 @@ module.exports = {
             let skinPages = [
                 {
                     link: "https://i.imgur.com/CR35DLy.png",
-                    des: `[***《 TIME LIMITED 》***](https://youtu.be/qh_0YACMxyo)\n*Ends at: 1st November*\n\n:three: :three: | **Forward - Black Nose** ─ __3999__${e.frags}\n\n:three: :four: | **Smiley Face - Scarecrow** ─ __3999__${e.frags}`
+                    des: `[《 TIME LIMITED 》](https://youtu.be/qh_0YACMxyo)\n*Ends at: 1st November*\n\n:three: :three: | **Forward - Black Nose** ─ __3999__${e.frags}\n\n:three: :four: | **Smiley Face - Scarecrow** ─ __3999__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",
