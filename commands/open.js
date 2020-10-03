@@ -174,7 +174,7 @@ module.exports = {
                             } else {
 
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
-                                if (EssenceONLY[rndom].Item === "s12-2-1") LP.Sculptor = true;
+                                if (EssenceONLY[rndom].Item === "s13-1-1") LP.Painter = true;
 
                                 if (EssenceONLY[rndom].Tier === "S") LP.S = LP.S + 1;
                                 if (EssenceONLY[rndom].Tier === "A") LP.A = LP.A + 1;
