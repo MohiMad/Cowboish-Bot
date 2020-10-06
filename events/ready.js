@@ -18,10 +18,10 @@ module.exports = async (bot) => {
         `and yoinking around >:v`,
         //`Under maintenance... please stand by ;)`
         `>invite | >help`,
-        `Identity V in ${bot.guilds.size} servers 💕`,
+        `Identity V in ${bot.guilds.cache.size} servers 💕`,
         "Welcome to Identit | >invite",
-        `milestone ${bot.guilds.size}/2000`,
-        `${bot.guilds.size} guilds | ${bot.users.size} users`,
+        `milestone ${bot.guilds.cache.size}/2000`,
+        `${bot.guilds.cache.size} guilds | ${bot.users.size} users`,
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
         `Yeehaw! >:D`
@@ -111,17 +111,17 @@ module.exports = async (bot) => {
 
     /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
 
-    Glenn.updateStats(bot.guilds.size).catch(e => console.log(e));
+    Glenn.updateStats(bot.guilds.cache.size).catch(e => console.log(e));
 */
 
     const dbl = new DBL(config.dbl_token, bot);
 
-    dbl.postStats(bot.guilds.size).catch(e => console.log(e));
+    dbl.postStats(bot.guilds.cache.size).catch(e => console.log(e));
 
 
     const Boats = new BOATS(config.boatsToken);
 
-    Boats.postStats(bot.guilds.size, "632291800585076761")
+    Boats.postStats(bot.guilds.cache.size, "632291800585076761")
         .catch((err) => {
             console.log(err);
         });
@@ -133,7 +133,7 @@ module.exports = async (bot) => {
         const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
             .set("Authorization", `Bot ${config.dblToken_2}`)
             .send({
-                guilds: bot.guilds.size,
+                guilds: bot.guilds.cache.size,
                 users: bot.users.size,
             })
 
