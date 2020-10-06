@@ -486,7 +486,7 @@ module.exports = {
                 else {
                     bio = LP.bio
                     ctx.fillStyle = '#000000';
-
+                    
                     ctx.fillText(bio, 200, 88, 571);
 
 
@@ -551,7 +551,7 @@ module.exports = {
                 ctx.fillStyle = '#0a8fd0';
                 ctx.fillText(SurvivorNumber, 292, 130);
 
-                const attachment = new Discord.Attachment(canvas.toBuffer(), 'LP.png');
+                const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'LP.png');
 
                 message.channel.send(attachment);
 

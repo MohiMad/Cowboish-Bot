@@ -1,5 +1,5 @@
 const { ErrorMsg } = require("../functions.js");
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
 let spamStopper = new Set();
 module.exports = {
@@ -20,9 +20,9 @@ module.exports = {
             let Pages = imageArray;
             let pageI = 0;
 
-            let embed = new RichEmbed()
+            let embed = new MessageEmbed()
                 .setColor("RANDOM")
-                .setAuthor(title, message.author.displayAvatarURL, imageArray[pageI].replace(".jpg", ""));
+                .setAuthor(title, message.author.displayAvatarURL(), imageArray[pageI].replace(".jpg", ""));
 
             embed.setFooter(`Spawn 1 of ${imageArray.length}`);
             embed.setImage(imageArray[pageI]);
@@ -51,7 +51,7 @@ module.exports = {
             });
 
             back.on('collect', async r => {
-                await r.remove(message.author);
+                await r.users.remove(message.author);
 
                 if (pageI === 0) {
                     pageI = Pages.length - 1;
@@ -67,7 +67,7 @@ module.exports = {
 
             forward.on('collect', async r => {
 
-                await r.remove(message.author);
+                await r.users.remove(message.author);
 
                 if (pageI === Pages.length - 1) {
 
@@ -89,7 +89,7 @@ module.exports = {
 
             end.on('collect', async r => {
 
-                msg.clearReactions().catch(error => console.log(error));
+                msg.reactions.removeAll().catch(error => console.log(error));
 
                 await end.stop();
                 await forward.stop();
@@ -100,7 +100,7 @@ module.exports = {
 
             end.on('end', async () => {
                 spamStopper.delete(message.author);
-                msg.clearReactions().catch(error => console.log(error));
+                msg.reactions.removeAll().catch(error => console.log(error));
             });
 
         };
@@ -210,4 +210,4 @@ module.exports = {
 
     }
 
-}
+}   

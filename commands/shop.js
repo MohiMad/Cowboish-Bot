@@ -3,7 +3,7 @@ const { stripIndents } = require('common-tags');
 
 const e = require("../emojis.json");
 
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { newLP } = require("../functions.js");
 
 const { Portraits } = require("../essences/items.json");
@@ -17,7 +17,7 @@ module.exports = {
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         //___________Main shop list_________________
-        const shopEmbed = new RichEmbed()
+        const shopEmbed = new MessageEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
             .setColor("RANDOM")
             .setDescription("Here is a list of the lists available in the shop! do `" + prefix + "shop <listID>`\n\n" + stripIndents`
@@ -43,7 +43,7 @@ module.exports = {
             .setFooter("Cowboish shop list ─ page 1 of 1");
 
         //___________Essence embed here_______________
-        const EssEmbed = new RichEmbed()
+        const EssEmbed = new MessageEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
             ${e.ess1} | **Essence s13-1** - Price : *96* ${e.insp} - ID: __*s13-1*__
@@ -52,7 +52,7 @@ module.exports = {
             `)
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")
-            .setFooter("Cowboish essence shop ─ page 1 of 1");
+            .setFooter("Cowboish Essence Shop ─ page 1 of 1");
 
         if (!args[1]) return message.channel.send(shopEmbed);
 
@@ -214,7 +214,7 @@ module.exports = {
             let ownedSurvivors = "**Owned Survivors:**",
                 nonOwnedSurvivors = "**Not Owned Survivors:**";
 
-            const survEmbed = new RichEmbed()
+            const survEmbed = new MessageEmbed()
                 .setTitle("Survivors shop list!")
                 .addField("How do I buy the survivor?", "To buy the survivor you want, do `" + prefix + "buy <survivorName>`")
                 .setFooter("Remember to type the Survivor's name without spacings")
@@ -223,7 +223,7 @@ module.exports = {
             SurvivorsArray.forEach(x => {
 
                 if (x.LP_Path === true) ownedSurvivors = ownedSurvivors + `\n${x.Emoji} | **${x.CharacterName}**`;
-                
+
                 else nonOwnedSurvivors = nonOwnedSurvivors + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
             });
 
@@ -339,7 +339,7 @@ module.exports = {
             if (nonOwnedHunter === "**Not Owned Hunters:**") nonOwnedHunter = nonOwnedHunter + "\nNone... you bought em' all :v";
 
 
-            const huntaEmbed = new RichEmbed()
+            const huntaEmbed = new MessageEmbed()
                 .setTitle("Cowboish Hunter shop!")
                 .setColor("RANDOM")
                 .setDescription("To buy the hunter of your choice, do `" + prefix + "buy <HunterName>`\n\n" + `${ownedHunters}\n\n${nonOwnedHunter}`)
@@ -441,12 +441,12 @@ module.exports = {
             if (ownedFrames === "\n") ownedFrames = "\nNone!";
             if (nonOwnedFrame === "\n") nonOwnedFrame = "\nNone!";
 
-            let framEmbed = new RichEmbed()
-                .setAuthor("Portrait-frame shop!", message.author.displayAvatarURL)
+            let framEmbed = new MessageEmbed()
+                .setAuthor("Portrait-frame shop!", message.author.displayAvatarURL())
                 .setColor("0xeb34c9")
                 .setThumbnail("https://i.imgur.com/sqrVkq7.png")
                 .setDescription("To buy the frame of your choice, do `" + prefix + "buy <frameID>`\n\n" + `**Equipped frame:**\n${equippedFrame}\n\n__**Frames you own:**__${ownedFrames}\n__**Frames in the shop:**__${nonOwnedFrame}`)
-                .setFooter("Cowboish Frame Shop ─ Mohi says yeehaw", bot.user.displayAvatarURL)
+                .setFooter("Cowboish Frame Shop ─ Mohi says yeehaw", bot.user.displayAvatarURL())
 
             message.channel.send(framEmbed);
 
@@ -466,11 +466,11 @@ module.exports = {
             if (ownedPortraits === "\n") ownedPortraits = "\nLMAO none cause you broke :v\nYou can obtain portraits by opening essence tho ;)";
             if (NotOwnedPortraits === "\n") NotOwnedPortraits = "\nYou got them all OwO";
 
-            let ownedPortraitEmbed = new RichEmbed()
-                .setAuthor("Cowboish Portrait Shop >:3", bot.user.displayAvatarURL)
+            let ownedPortraitEmbed = new MessageEmbed()
+                .setAuthor("Cowboish Portrait Shop >:3", bot.user.displayAvatarURL())
                 .setColor("0x6714f7")
                 .setThumbnail("https://i.imgur.com/NGzUkth.png")
-                .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", message.author.displayAvatarURL)
+                .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", message.author.displayAvatarURL())
                 .setDescription("An equipped Portrait will display in `" + prefix + "logicpath` instead of your actual profile-picture\nTo equip the portrait of your choice, do\n`" + prefix + "equip portrait <portrait name>`\n\n**You can also navigate between the portrait smoothly by doing\n**`" + prefix + "view portraits`\n\n**Dunno what portraits you have? Here are they:**" + ownedPortraits + "\n\n**Here are the portraits you don't own**" + NotOwnedPortraits + "\n\n**《 Purchasable Portraits 》**\nTo buy one of these portraits, do `" + prefix + "buy <portrait name>`\n\n🦎 | __**Long Jump Luchino**__ ➜ Price __1888__ " + e.frags + "\n📧 | __**Marathon Runner Victor**__ ➜ Price __1888__ " + e.frags + "\n⚔️ | __**Sword fighting Joseph**__ ➜ Price __1888__ " + e.frags + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`");
 
             message.channel.send(ownedPortraitEmbed);
@@ -508,8 +508,8 @@ module.exports = {
             else if (Number(args[2]) > skinPages.length) return message.channel.send(`Um- there are only ${skinPages.length} skin pages... **${message.author.username}**`)
             else page = Number(args[2] - 1);
 
-            let skinsEmbed = new RichEmbed()
-                .setAuthor("Cowboish Skins Shop ヽ(´･ω･`)丿", message.author.displayAvatarURL)
+            let skinsEmbed = new MessageEmbed()
+                .setAuthor("Cowboish Skins Shop ヽ(´･ω･`)丿", message.author.displayAvatarURL())
                 .setColor("0xFBFF00")
                 .setThumbnail("https://i.imgur.com/b0brEsj.png")
                 .setDescription("To buy a specific skin, do\n`" + prefix + "buy skin [skinNumberHere]`\nThe skin number is displayed on the left side of the skin in the image attached to this embed...\nTo go to the next skin page, do `" + prefix + "shop skins [pageNumber]`\n\n" + skinPages[page].des)

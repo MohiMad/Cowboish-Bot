@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const logicPath = require("../models/logicpath.js")
 const emoji = require("../emojis.json");
 
@@ -17,7 +17,6 @@ module.exports = {
         let diceChances = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3];
 
         let dice = diceChances[Math.floor(Math.random() * diceChances.length)];
-
 
         let reward;
         if (LP.ThreeMatches != 0) {
@@ -39,16 +38,16 @@ module.exports = {
 
         if (artist === null || artist === undefined) artist = "Cowboish Bot"
 
-        const quizEmbed = new RichEmbed()
+        const quizEmbed = new MessageEmbed()
             .setTitle(`Answer the question below to get a dice ${emoji.dice}`)
-            .setAuthor(message.author.username, message.author.displayAvatarURL)
+            .setAuthor(message.author.username, message.author.displayAvatarURL())
             .setDescription(stripIndents`
 			**Question about** : ${charName}
 			**Difficulty** : ${charItem.Difficulty}
 			**Time** : 60 Seconds
 			**Reward** : ${reward}` + "\n\n" + charItem.Question)
             .setImage(charItem.Attachment)
-            .setFooter(artist, bot.user.displayAvatarURL)
+            .setFooter(artist, bot.user.displayAvatarURL())
             .setColor("RANDOM");
 
         spamStopper.add(message.author);
@@ -83,12 +82,12 @@ module.exports = {
             }
             else {
                 setTimeout(() => { spamStopper.delete(message.author); }, 1000);
-                return message.channel.send("**" + message.author.username + "**, Wrooong! You lost the minigame!\nThe correct answer was: **" + charItem.Answer[0] + "**");
+                return message.channel.send(`**${message.author.username}**, Wrooong! You lost the minigame!\nThe correct answer was: **${charItem.Answer[0]}**`);
             }
 
         }).catch(e => {
             spamStopper.delete(message.author);
-            return message.channel.send("**" + message.author.username + "**, Time is over! You lost the minigame!");
+            return message.channel.send(`**${message.author.username}**, Time is over! You lost the minigame!`);
         });
 
 

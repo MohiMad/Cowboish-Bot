@@ -13,7 +13,7 @@ module.exports = {
         const cooldownCheck = await findCooldown(message, "hunt");
         if (spamStopper.has(message.author)) return;
 
-        if (!cooldownCheck) {
+        if (cooldownCheck) return coolEmbed(message, "You can't hunt just yet :(", "Please wait **REMAINING** before you can use the `hunt` command again...", cooldownCheck.timeRemaining, ["m", "s"]);
 
             let ownedHuntersFiles = ["leo"];
 
@@ -59,7 +59,6 @@ module.exports = {
 
             for (i = 0; i < LPHuntervalues.length; i++) {
                 if (LPHuntervalues[i] === true) ownedHuntersFiles.push(allHunterFiles[i]);
-
             }
 
             let ownedHunters = [];
@@ -213,12 +212,6 @@ module.exports = {
             });
 
             if (boolean === false) return message.channel.send(`Make sure you spelled the name of the **hunter** correctly, **${message.author.username}**!`);
-
-
-        } else {
-            coolEmbed(message, "You can't hunt just yet :(", "Please wait **REMAINING** before you can use the `hunt` command again...", cooldownCheck.timeRemaining, ["m", "s"]);
-
-        }
 
     }
 }

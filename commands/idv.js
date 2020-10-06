@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const got = require('got');
 const { addCooldown, coolEmbed, findCooldown } = require("../functions.js");
 const moment = require("moment");
@@ -51,7 +51,7 @@ module.exports = {
                 if (flair === null) flair = ` `;
                 else flair = "➤ " + flair
 
-                const embeed = new RichEmbed()
+                const embeed = new MessageEmbed()
                     .setTitle(`${PostTitle}`)
                     .setURL(`${URL}`)
                     .setAuthor(`${postFalir} ─ ${author}  ` + flair, "https://i.imgur.com/j0elwEQ.png")
@@ -60,7 +60,7 @@ module.exports = {
                     .setColor("RANDOM")
                     .setFooter(`${moment(allowed[randomPostNumber].data.created * 1000).calendar().replace("Tomorrow", "Today")} ─ 👍 ${Upvotes} | 💬 ${CommentAmount}`);
 
-                //await addCooldown(message, 5000, "idv");
+                await addCooldown(message, 5000, "idv");
                 message.channel.send(embeed);
 
             });

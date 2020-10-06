@@ -1,8 +1,8 @@
 const logicPath = require("../models/logicpath.js");
 
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
-const { findMember, newLP, ErrorMsg } = require("../functions.js");
+const { newLP, ErrorMsg } = require("../functions.js");
 
 const { frame1, frame2, frame3, frame4, frame5, frame6, frame7, frame8, frame9, frame10, cowboish_frame } = require("../emojis.json");
 
@@ -17,7 +17,7 @@ module.exports = {
 
         function freeToUse(message, fram) {
 
-            let freeToUseEmbed = new RichEmbed()
+            let freeToUseEmbed = new MessageEmbed()
                 .setTitle("Your frame is now equipped!")
                 .setColor("0x14abf7")
                 .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
@@ -34,7 +34,7 @@ module.exports = {
                 return ErrorMsg(bot, message, "You don't have that frame!\nYou need to buy that frame to be able to equip it!\n\nTo buy the frame, do `" + prefix + "buy " + frames + "`\nTo check what frames exists, do `" + prefix + "shop frames`");
             }
 
-            let embed = new RichEmbed()
+            let embed = new MessageEmbed()
                 .setTitle("Your frame is now equipped!")
                 .setColor("0x14abf7")
                 .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
@@ -123,11 +123,11 @@ module.exports = {
                     equipped = "None!";
                 }
 
-                let framEmbed = new RichEmbed()
-                    .setAuthor(bot.user.username, bot.user.displayAvatarURL)
+                let framEmbed = new MessageEmbed()
+                    .setAuthor(bot.user.username, bot.user.displayAvatarURL())
                     .setColor("RANDOM")
                     .setDescription("Please provide the frame's ID you want to equip!\nCorrect usage: `" + prefix + "equip frame <frameID>`\n\n**Frames you already own**" + description + "\n▔ ▔ ▔ ▔ ▔\n**Equipped frame**: " + equipped + "\n▔ ▔ ▔ ▔ ▔\nDunno what to equip? do `" + prefix + "shop frames` to see what's in the shop\nWanna unequip your frame? do `" + prefix + "equip frame none`")
-                    .setFooter(message.author.tag, message.author.displayAvatarURL)
+                    .setFooter(message.author.tag, message.author.displayAvatarURL())
                     .setTimestamp();
 
                 if (!args[2]) {
@@ -207,13 +207,13 @@ module.exports = {
                         return message.channel.send(`**${message.author.username}**, you don't own that portrait...\nYou need to obtain it from an essence in order for you to be able to equip it...`);
                     } else {
 
-                        let setPortraitEmbed = new RichEmbed()
+                        let setPortraitEmbed = new MessageEmbed()
                             .setTitle("Succesfully changed your portrait!")
-                            .setAuthor(message.author.tag, message.author.displayAvatarURL)
+                            .setAuthor(message.author.tag, message.author.displayAvatarURL())
                             .setThumbnail(portraitAttachment)
                             .setColor("0x952cdb")
                             .setDescription("Your portrait has been set to:\n**" + portraitString + "**\n\nWanna see how it looks like? Do `" + prefix + "logicpath`")
-                            .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+                            .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
                         LP.Portrait = portraitName;
                         LP.save().catch(e => console.log(e));
@@ -229,13 +229,13 @@ module.exports = {
                     LP.Portrait = stringName;
                     await LP.save().catch(e => console.log(e));
 
-                    let PaidPortraitEmbed = new RichEmbed()
+                    let PaidPortraitEmbed = new MessageEmbed()
                         .setTitle("Succesfully changed your portrait!")
-                        .setAuthor(message.author.tag, message.author.displayAvatarURL)
+                        .setAuthor(message.author.tag, message.author.displayAvatarURL())
                         .setThumbnail(link)
                         .setColor("0x952cdb")
                         .setDescription("Your portrait has been set to:\n**" + portraitString + "**\n\nWanna see how it looks like? Do `" + prefix + "logicpath`")
-                        .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+                        .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
                     message.channel.send(PaidPortraitEmbed);
                 }
@@ -301,11 +301,11 @@ module.exports = {
                     checkForPortrait("s13-2-49", "Colorful Memory Guard 26");
                     checkForPortrait("s13-2-50", "Colorful Memory Bloody Queen");
 
-                    let ownedPortraitEmbed = new RichEmbed()
-                        .setAuthor(message.author.username, message.author.displayAvatarURL)
+                    let ownedPortraitEmbed = new MessageEmbed()
+                        .setAuthor(message.author.username, message.author.displayAvatarURL())
                         .setTitle("Pfff you're missing some arguments friend >:3")
                         .setColor("0x6714f7")
-                        .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", bot.user.displayAvatarURL)
+                        .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", bot.user.displayAvatarURL())
                         .setDescription("Please provide me what portrait you want to equip, to do that, do`" + prefix + "equip portrait <portrait name>`\n\nDunno what portraits you have? Here are they" + ownedPortraits + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`\n\nWanna set your portrait back to your profile-picture? do `" + prefix + "equip portrait default`");
 
                     message.channel.send(ownedPortraitEmbed);
@@ -443,7 +443,7 @@ module.exports = {
                 } else if (["sword fighting joseph", "sword fighting", "sword fight", "swordfightingjoseph"].includes(portraitString.toLowerCase())) {
                     paidPortraits("sword_fighting", "https://i.imgur.com/mRE6j40.png");
 
-                } else if (["none", "unequip", "no", "default", "pfp", "profilepicture", "profilepic"]) {
+                } else if (["none", "unequip", "no", "default", "pfp", "profilepicture", "profilepic"].includes(portraitString.toLowerCase())) {
 
                     LP.Portrait = "0";
                     LP.save().catch(e => console.log(e));
@@ -453,7 +453,7 @@ module.exports = {
                     ErrorMsg(bot, message, "**Ooops, looks like you provided a nonexistent portrait...**\nAre you sure it exists? Make sure you typed it correctly...\n\nTo check what portraits you actually own, do `" + prefix + "shop portrait` or `" + prefix + "equip portrait`\n\n**Example of Usage:**`" + prefix + "equip portrait colorful memory forward`\n\nWanna set your portrait back to your profile-picture? do `" + prefix + "equip portrait default`")
                 }
 
-            } else {
+            } else {    
                 return ErrorMsg(bot, message, "**Seems like you messed up with your first arguments**\nTo equip a specific *portrait-frame*, do `" + prefix + "equip frame <frameID>`\nAre you trying to equip a *portrait*? Do `" + prefix + "equip portrait <portrait name>`\n\nTo check what frames exist, do `" + prefix + "shop frames`\nTo check what portraits you have, do `" + prefix + "shop portraits`")
             }
 

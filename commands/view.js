@@ -3,7 +3,7 @@ const { newLP, ErrorMsg } = require("../functions.js");
 const spamStopper = new Set();
 const { Skins, Portraits, Frames } = require("../essences/items.json");
 
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: 'view',
@@ -18,12 +18,12 @@ module.exports = {
             let pageI = 0;
             if (!array.length) return message.reply(`**you don't have any ${item}s**`);
 
-            let embed = new RichEmbed()
+            let embed = new MessageEmbed()
                 .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
                 .setTitle(`${array[pageI].Name[0]}`)
                 .setFooter(`${item} ${pageI + 1} of ${array.length}`)
                 .setURL("https://youtu.be/K3GuaZlyiVw")
-                .setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL));
+                .setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()));
 
             if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
 
@@ -49,7 +49,7 @@ module.exports = {
 
                 equip.on('collect', async r => {
 
-                    msg.clearReactions().catch(error => console.log(error));
+                    msg.reactions.removeAll().catch(error => console.log(error));
                     spamStopper.delete(message.author);
 
                     if (item === "Portrait") LP.Portrait = array[pageI].logicpathID;
@@ -88,13 +88,13 @@ module.exports = {
             });
 
             back.on('collect', async r => {
-                await r.remove(message.author);
+                await r.users.remove(message.author);
 
                 if (pageI === 0) pageI = array.length - 1;
                 else pageI--;
 
 
-                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL))
+                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
                     .setFooter(`${item} ${pageI + 1} of ${array.length}`)
                     .setURL("https://youtu.be/K3GuaZlyiVw")
                     .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
@@ -109,12 +109,12 @@ module.exports = {
 
             forward.on('collect', async r => {
 
-                await r.remove(message.author);
+                await r.users.remove(message.author);
 
                 if (pageI === array.length - 1) pageI = 0;
                 else pageI++;
 
-                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL))
+                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
                     .setFooter(`${item} ${pageI + 1} of ${array.length}`)
                     .setURL("https://youtu.be/K3GuaZlyiVw")
                     .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
@@ -133,7 +133,7 @@ module.exports = {
                 await forward.stop();
                 await back.stop();
                 spamStopper.delete(message.author);
-                msg.clearReactions().catch(error => console.log(error));
+                msg.reactions.removeAll().catch(error => console.log(error));
 
                 embed.setFooter(`This message is now inactive`);
 
@@ -143,7 +143,7 @@ module.exports = {
 
             end.on('end', async () => {
                 spamStopper.delete(message.author);
-                msg.clearReactions().catch(error => console.log(error));
+                msg.reactions.removeAll().catch(error => console.log(error));
                 embed.setFooter(`This message is now inactive`);
 
                 await msg.edit(embed);
@@ -188,13 +188,13 @@ module.exports = {
                     if (boolean === true) return;
 
                     boolean = true;
-                    let setPortraitEmbed = new RichEmbed()
+                    let setPortraitEmbed = new MessageEmbed()
                         .setTitle("Succesfully changed your portrait!")
-                        .setAuthor(message.author.tag, message.author.displayAvatarURL)
-                        .setThumbnail(x.linkTag.replace("pfp", message.author.displayAvatarURL))
+                        .setAuthor(message.author.tag, message.author.displayAvatarURL())
+                        .setThumbnail(x.linkTag.replace("pfp", message.author.displayAvatarURL()))
                         .setColor("0x952cdb")
                         .setDescription("Your portrait has been set to:\n**" + x.Name[0] + "**\n\nWanna see how it looks like? Do `" + prefix + "logicpath`")
-                        .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+                        .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
                     LP.Portrait = x.logicpathID;
                     LP.save().catch(e => console.log(e));

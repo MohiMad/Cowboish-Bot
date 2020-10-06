@@ -55,7 +55,7 @@ module.exports = {
 
         ctx.fillText(letterMessage, width, length);
 
-        const attachment = new Discord.Attachment(canvas.toBuffer(), 'postmansletter.png');
+        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'postmansletter.png');
         await addCooldown(message, 10000, "letter");
         message.channel.send(attachment);
 

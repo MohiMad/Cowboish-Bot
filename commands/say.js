@@ -1,24 +1,18 @@
-const { ErrorMsg } = require("../functions.js");
+const { Util } = require('discord.js');
+
 
 module.exports = {
     name: 'say',
     description: "repeats what you just said!",
     execute(message, args, MohiMoo) {
 
-        return message.reply(`**This command is disabled at the moment... sorry**`);
-
         const sayMessage = args.slice(1).join(" ");
 
         if (message.deletable) message.delete();
 
-        if (!args[1])
-            message.channel.send("Tell me what to say...");
+        if (!args[1]) return message.channel.send("Tell me what to say...");
 
-        else {
-            message.channel.send("**" + message.author.tag + "** says:\n" + sayMessage.replace("@", "@ "));
-
-        }
-
+        message.channel.send(Util.cleanContent(`**${message.author.tag}** says:\n${sayMessage}`, message));
 
     }
 }

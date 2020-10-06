@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const got = require('got');
 
 const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
@@ -10,64 +10,52 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "meme");
 
-        if (!cooldownCheck) {
-
-            const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json"];
-
-            const random = subReddits[Math.floor(Math.random() * subReddits.length)];
-
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+        if (cooldownCheck) return coolEmbed(message, "The cooldown is still on >:/", "This command requires a lot of energy from me, that's why there is a **5** seconds cooldown set on this command... You have to wait **REMAINING** more :)", cooldownCheck.timeRemaining, ["s"]);
 
 
-            try {
-                got(random).then(async (response) => {
+        const subReddits = ["https://www.reddit.com/r/memes/random/.json", "https://www.reddit.com/r/dankmemes/random/.json"];
 
-                    let content = JSON.parse(response.body);
+        const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
-                    let permalink = content[0].data.children[0].data.permalink;
-
-                    let memeUrl = `https://reddit.com${permalink}`;
-
-                    let memeImage = content[0].data.children[0].data.url;
-
-                    let memeTitle = content[0].data.children[0].data.title;
-
-                    let memeUpvotes = content[0].data.children[0].data.ups;
-
-                    let memeNumComments = content[0].data.children[0].data.num_comments;
+        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH FILES** to true");
 
 
-                    const embeed = new RichEmbed()
-                        .setTitle(`${memeTitle}`)
-                        .setURL(`${memeUrl}`)
-                        .setColor("RANDOM")
-                        .setImage(memeImage)
-                        .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
+        try {
+            got(random).then(async (response) => {
 
-                    message.channel.send(embeed);
-                    await addCooldown(message, 5000, "meme");
+                let content = JSON.parse(response.body);
 
+                let permalink = content[0].data.children[0].data.permalink;
 
-                }).catch(err => {
+                let memeUrl = `https://reddit.com${permalink}`;
 
-                    if (err.message === "Response code 429 (Too Many Requests)") {
-                        return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
-                    }
-                    else if (err.message === "RichEmbed descriptions may not exceed 2048 characters.") {
-                        return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
-                    }
-                    else {
-                        message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
-                    }
+                let memeImage = content[0].data.children[0].data.url;
 
-                })
-            } catch (err) {
-                console.log(err);
-            }
+                let memeTitle = content[0].data.children[0].data.title;
+
+                let memeUpvotes = content[0].data.children[0].data.ups;
+
+                let memeNumComments = content[0].data.children[0].data.num_comments;
 
 
-        } else {
-            coolEmbed(message, "The cooldown is still on >:/", "This command requires a lot of energy from me, that's why there is a **5** seconds cooldown set on this command... You have to wait **REMAINING** more :)", cooldownCheck.timeRemaining, ["s"]);
+                const embeed = new MessageEmbed()
+                    .setTitle(`${memeTitle}`)
+                    .setURL(`${memeUrl}`)
+                    .setColor("RANDOM")
+                    .setImage(memeImage)
+                    .setFooter(`👍 ${memeUpvotes}/💬 ${memeNumComments}`);
+
+                message.channel.send(embeed);
+                await addCooldown(message, 5000, "meme");
+
+
+            }).catch(err => {
+                if (err.message === "Response code 429 (Too Many Requests)") return message.channel.send(`**${message.author.username}**, dude stop abusing me smh, take it easy...`);
+                if (err.message === "MessageEmbed descriptions may not exceed 2048 characters.") return message.channel.send(`**${message.author.username}**, This post was too long...\nPlease try to execute this command again?`);
+                else return message.channel.send(`**${message.author.username}** Hit an unfamiliar error... SORRY`)
+            })
+        } catch (err) {
+            console.log(err);
         }
 
     }

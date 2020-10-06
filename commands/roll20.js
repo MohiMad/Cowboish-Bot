@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { ErrorMsg } = require("../functions.js");
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
 
             var fact = Math.floor(Math.random() * facts.length);
 
-            const rollEmbed = new RichEmbed()
+            const rollEmbed = new MessageEmbed()
                 .setTitle('You rolled a 20 sided dice and got...')
                 .setDescription((facts[fact]))
                 .setImage("https://media.giphy.com/media/Y1ejXrUbBCnEhCyTAI/giphy.gif")

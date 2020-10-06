@@ -35,36 +35,23 @@ module.exports = async (bot) => {
     schedule.scheduleJob("1 12 * * 1", async function () {
         const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
 
-        if (!checkForWeeklyExecution) {
-            const weeklySpamStopper = new Cooldown({
-                command: "weeklyrewards",
-                userID: bot.user.id,
-                timeRemaining: Date.now() + 300000,
-                dateNow: Date.now()
-            });
+        if (checkForWeeklyExecution) return;
+        const weeklySpamStopper = new Cooldown({
+            command: "weeklyrewards",
+            userID: bot.user.id,
+            timeRemaining: Date.now() + 300000,
+            dateNow: Date.now()
+        });
 
-            await weeklySpamStopper.save().catch(err => console.log(err));
-            rewards(bot);
-
-        }
+        await weeklySpamStopper.save().catch(err => console.log(err));
+        rewards(bot);
     });
 
     schedule.scheduleJob("0 9 * * *", async function () {
         const checkForExecution = await Cooldown.findOne({ userID: bot.user.id, command: "giveaway" });
 
-        if (!checkForExecution) {
-            const giveawaySpamStopper = new Cooldown({
-                command: "giveaway",
-                userID: bot.user.id,
-                timeRemaining: Date.now() + 300000,
-                dateNow: Date.now()
-            });
-
-            await giveawaySpamStopper.save().catch(err => console.log(err));
-
-            await bot.commands.get('giveaway').execute(bot);
-
-        }
+        if (checkForExecution) return;
+        await bot.commands.get('giveaway').execute(bot);
 
     });
 
@@ -97,19 +84,19 @@ module.exports = async (bot) => {
 
                 if (!guild) return;
 
-                const member = guild.members.get(mute.userID);
+                const member = guild.members.cache.get(mute.userID);
 
                 if (!member) return;
 
-                let muteRole = guild.roles.find((x) => x.name === "muted");
+                let muteRole = guild.roles.cache.find((x) => x.name === "muted");
 
-                if (!muteRole) muteRole = guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
+                if (!muteRole) muteRole = guild.roles.create({ name: "muted", color: "#27272b", permissions: [], reason: "Couldn't find a muted role!" });
 
                 if (!member.roles.has(muteRole.id)) return;
 
-                member.removeRole(muteRole);
+                member.roles.remove(muteRole);
 
-                const logChannel = guild.channels.get(mute.channelID);
+                const logChannel = guild.channels.cache.get(mute.channelID);
 
                 if (!logChannel) return;
 
@@ -155,8 +142,5 @@ module.exports = async (bot) => {
 
     let botUPDATE = await updateBotList();
     */
-
-
-
 
 };

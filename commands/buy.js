@@ -1,7 +1,7 @@
 const logicPath = require("../models/logicpath.js");
 const { ErrorMsg, newLP } = require("../functions.js");
 
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { Skins } = require("../essences/items.json");
 const { ess1, ess2, ess3, clues, frags, insp } = require("../emojis.json");
 
@@ -20,8 +20,8 @@ module.exports = {
                 return ErrorMsg(bot, message, "Poor you can't afford that!\nYou need " + `**${price - LP.frags}**<:frags:655840344725913600> more...`)
             } else {
 
-                let frameEmbed = new RichEmbed()
-                    .setAuthor("Successful purchase!", message.author.displayAvatarURL)
+                let frameEmbed = new MessageEmbed()
+                    .setAuthor("Successful purchase!", message.author.displayAvatarURL())
                     .setDescription(`You successfully bought ${frame} and paid ${price}<:frags:655840344725913600>\nIt's now equipped and can be seen if you do` + "`" + prefix + "logicpath`\n\nTo change your frame to another one, do `" + prefix + "equip <FrameID>`")
                     .attachFiles([`./pics/${frame}.png`])
                     .setThumbnail("attachment://" + frame + ".png");
@@ -48,13 +48,13 @@ module.exports = {
 
             if (price > LP.Clues) return message.channel.send(`You don't have enough clues ${clues}, **${message.author.username}**...\nYou need **${price - LP.Clues}** more...`);
 
-            const buyEmbed = new RichEmbed()
-                .setAuthor(`${message.author.username} paid ${price} clues and bought the ${charName}!`, message.author.avatarURL)
+            const buyEmbed = new MessageEmbed()
+                .setAuthor(`${message.author.username} paid ${price} clues and bought the ${charName}!`, message.author.displayAvatarURL())
                 .setTimestamp()
                 .setThumbnail(URL)
                 .setDescription(boughtMessage)
                 .setColor("GREEN")
-                .setFooter("Cowboish bot", bot.user.displayAvatarURL);
+                .setFooter("Cowboish bot", bot.user.displayAvatarURL());
 
             if (charName === "Cowboy") LP.Survivors.Cowboy = true;
             if (charName === "Mercenary") LP.Survivors.Mercenary = true;
@@ -114,13 +114,13 @@ module.exports = {
 
             if (LP.Inspirations < (96 * number)) return message.channel.send(`**${message.author.username}** you can't afford buying that!\nYou need **${(96 * number) - LP.Inspirations}**${insp} more...`);
 
-            const essEmbed = new RichEmbed()
-                .setAuthor(`${message.author.username} bought ${number} ${name}!`, message.author.avatarURL)
+            const essEmbed = new MessageEmbed()
+                .setAuthor(`${message.author.username} bought ${number} ${name}!`, message.author.displayAvatarURL())
                 .setTimestamp()
                 .setThumbnail(URL)
                 .setDescription(`You paid **${96 * number}**${insp} and bought **${number}**${emoji}`)
                 .setColor("GREEN")
-                .setFooter("Cowboish bot", bot.user.displayAvatarURL);
+                .setFooter("Cowboish bot", bot.user.displayAvatarURL());
 
             if (path === "ess1") LP.Ess1 = LP.Ess1 + number;
             if (path === "ess2") LP.Ess2 = LP.Ess2 + number;
@@ -138,13 +138,13 @@ module.exports = {
 
             if (LP.Opened.includes(path)) return message.channel.send(`**${message.author.username}** You have bought this portrait already... Why buy it again? ;-;`);
 
-            const portraitEmbed = new RichEmbed()
-                .setAuthor(`${message.author.username} bought ${PortraitName}`, message.author.avatarURL)
+            const portraitEmbed = new MessageEmbed()
+                .setAuthor(`${message.author.username} bought ${PortraitName}`, message.author.displayAvatarURL())
                 .setTimestamp()
                 .setThumbnail(link)
                 .setDescription(`You paid **${price}**${frags} and bought **${PortraitName}**\n\nYour portraits is automatically equipped now...\nDo ` + "`" + prefix + "LP` to see how it looks like!")
                 .setColor("GREEN")
-                .setFooter("Cowboish bot", bot.user.displayAvatarURL);
+                .setFooter("Cowboish bot", bot.user.displayAvatarURL());
 
             LP.Opened = [...LP.Opened, path];
             LP.frags = LP.frags - price;
@@ -286,7 +286,7 @@ module.exports = {
                     if (LP.Opened.includes(skin.Item)) return message.channel.send(`**You have already bought ${skinNAME}, ${message.author}**`);
                     if (LP.frags < skin.Price) return message.channel.send(`**You don't have enough fragments${frags}...**\nYou need` + "`" + `${skin.Price - LP.frags}` + "`" + `${frags} more...`);
 
-                    let boughtSkinEmbed = new RichEmbed()
+                    let boughtSkinEmbed = new MessageEmbed()
                         .setTitle(`You successfully bought ${skinNAME}`)
                         .setColor(skin.Color)
                         .setThumbnail(skin.linkTag)

@@ -1,5 +1,5 @@
 const Guild = require("../models/guild.js");
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 const { findRole, checkForGuildDataExistance } = require("../functions.js");
 module.exports = {
@@ -9,12 +9,12 @@ module.exports = {
         await checkForGuildDataExistance(message);
         const guild = await Guild.findOne({ guildID: message.guild.id });
 
-        const errEmbed = new RichEmbed()
+        const errEmbed = new MessageEmbed()
             .setTitle("❌ Ooops an error has occurred! ❌")
             .setColor("0xf72020");
 
 
-        const sucEmbed = new RichEmbed()
+        const sucEmbed = new MessageEmbed()
             .setTitle("Changes committed succesfully!")
             .setColor("0x20f72b")
             .setTimestamp();
@@ -26,7 +26,7 @@ module.exports = {
             if(whatToReplace === null || !whatToReplace) return; 
             let idk = whatToReplace
                 .replace("memberCount", message.guild.memberCount)
-                .replace("botCount", message.guild.members.filter(x => x.user.bot).size)
+                .replace("botCount", message.guild.members.cache.filter(x => x.user.bot).size)
                 .replace("serverName", message.guild.name)
                 .replace("userName", message.author.username)
                 .replace("userMention", message.author.toString())
@@ -83,10 +83,10 @@ module.exports = {
                 description = description + `⚪ **Auto Roles**\nNo autorole to be given to new members is set...\nTo add one, do ` + "`" + prefix + "setup autorole <@tagTheRoleHere>`"
             }
 
-            const doneEmbed = new RichEmbed()
+            const doneEmbed = new MessageEmbed()
                 .setTitle(`${message.guild.name} setup information!`)
                 .setDescription(description)
-                .setThumbnail(message.guild.iconURL)
+                .setThumbnail(message.guild.iconURL())
                 .setColor("0x00BDFF");
 
             return message.channel.send(doneEmbed);

@@ -1,5 +1,5 @@
 const logicPath = require("../models/logicpath.js");
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, newLP } = require("../functions.js");
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-       if (!args[1]) {
+        if (!args[1]) {
             ErrorMsg(bot, message, "**Too few arguments provided...**\nPlease provide me what you want to set:\n\nTo set your **region**, do `" + prefix + "set region <regionHERE>`\nTo set your **ingame-ID**, do `" + prefix + "set ID <ingameID>`\nTo set your **biography**, do `" + prefix + "set bio <textGoesHere>`");
 
         } else if (["region", "server"].includes(args[1].toLowerCase())) {
@@ -74,7 +74,7 @@ module.exports = {
             if (!args[2]) {
 
                 if (LP.ID === "0") {
-                    const noArgsEmbed = new RichEmbed()
+                    const noArgsEmbed = new MessageEmbed()
                         .setTitle("You haven't set your ingame ID yet!")
                         .setColor("RED")
                         .setDescription("Adding your ingame ID allows your friends to quickly add you and finding your ID via the `" + prefix + "LP <TagHere>` command\n\n• Usage: `" + prefix + "set ID <IngameID>`\n• The ID must be **6, 7 or 8** numbers long\n• It's an ID so it must be numbers only!");
@@ -82,7 +82,7 @@ module.exports = {
                     message.channel.send(noArgsEmbed);
                 }
                 else {
-                    const idEmbed = new RichEmbed()
+                    const idEmbed = new MessageEmbed()
                         .setAuthor(`Hey ${message.author.username}! Your ID is set to...`)
                         .setColor("GREEN")
                         .setDescription(`IngameID: **${LP.ID}**` + "\nYou can change your ID again by doing `" + prefix + "set ID <ID_here>`");
@@ -95,25 +95,11 @@ module.exports = {
                 message.reply("the ID given must contain **numbers** only and is **6, 7 or 8** numbers long!")
 
             }
-            else if (args[2].length === 6) {
+            else if (args[2].length === 6 || args[2].length === 7 || args[2].length === 8) {
                 LP.ID = args[2];
                 LP.save().catch(err => console.log(err));
 
-                message.channel.send("Successfully set your ID to **" + args[2] + "**");
-
-            }
-            else if (args[2].length === 7) {
-                LP.ID = args[2];
-                LP.save().catch(err => console.log(err));
-
-                message.channel.send("Successfully set your ID to **" + args[2] + "**");
-
-            }
-            else if (args[2].length === 8) {
-                LP.ID = args[2];
-                LP.save().catch(err => console.log(err));
-
-                message.channel.send("Successfully set your ID to **" + args[2] + "**");
+                message.channel.send(`Successfully set your ID to **${args[2]}**`);
 
             }
             else {
@@ -126,7 +112,7 @@ module.exports = {
             if (!args[2]) {
 
                 if (LP.bio !== "0") {
-                    return message.channel.send(`Hey **${message.author.username}**!\nYour biography is set to: ${LP.bio}`);
+                    return message.channel.send(`Hey **${message.author.username}**!\nYour biography is set to:\m${LP.bio}`);
                 }
                 return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide something to set as your biography!");
             }

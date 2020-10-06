@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags");
 const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../functions.js");
 const { ess1, ess2, ess3, frags } = require("../emojis.json");
@@ -19,23 +19,23 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        var s10_cmd = "`s12-1` or `1`";
-        s10_2_cmd = "`s12-2` or `2`",
-            s10_3_cmd = "`s12-3` or `3`",
+        var s10_cmd = "`s13-1` or `1`";
+        s10_2_cmd = "`s13-2` or `2`",
+            s10_3_cmd = "`s13-3` or `3`",
 
-            exmple = "`" + prefix + "open 1` to open a `s12-1` " + ess1 + " essence",
+            exmple = "`" + prefix + "open 1` to open a `s13-1` " + ess1 + " essence",
             stats_cmd = "`" + prefix + "open stats <essenceID>`",
             author = message.author.username,
-            open10 = "`" + prefix + "open s12-1 10`\n`" + prefix + "open s12-1 3`",
+            open10 = "`" + prefix + "open s13-1 10`\n`" + prefix + "open s13-1 3`",
             boolean = false;
 
-        const noargsEmbed = new RichEmbed()
-            .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL)
+        const noargsEmbed = new MessageEmbed()
+            .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL())
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
-                        ${ess1} | **Essences s12-1** ─ ID ➜ ${s10_cmd}
-                        ${ess2} | ~~**Essence s12-2**~~ ─ ID ➜ ${s10_2_cmd}
-                        ${ess3} | ~~**Essence s12-3**~~ ─ ID ➜ ${s10_3_cmd}
+                        ${ess1} | **Essences s13-1** ─ ID ➜ ${s10_cmd}
+                        ${ess2} | ~~**Essence s13-2**~~ ─ ID ➜ ${s10_2_cmd}
+                        ${ess3} | ~~**Essence s13-3**~~ ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
 
@@ -47,7 +47,7 @@ module.exports = {
                         ${open10}
                 `)
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")
-            .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+            .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
         let fragments = 0;
 
@@ -89,11 +89,11 @@ module.exports = {
                         if (essenceLP === 0) return message.reply("**You don't have any " + essence[0].Emoji + " `" + essence[0].WhichEss + "` essences!**\nTry rolling some dices or buy some from the shop!");
 
 
-                        const embed = new RichEmbed()
+                        const embed = new MessageEmbed()
                             .setAuthor(EssenceONLY[randomItem].Title.replace("author", message.author.username), essence[0].LinkOfIt)
                             .setImage(`https://i.imgur.com/${EssenceONLY[randomItem].LinkTag}${essence[0].Format}`)
                             .setColor(EssenceONLY[randomItem].Color)
-                            .setFooter(EssenceONLY[randomItem].Footer, bot.user.displayAvatarURL)
+                            .setFooter(EssenceONLY[randomItem].Footer, bot.user.displayAvatarURL())
 
                         if (LP.Opened.includes(EssenceONLY[randomItem].Item)) {
                             embed.setDescription(`You have this item already! You get **${EssenceONLY[randomItem].FragAmount}** ${frags} instead :D`);
@@ -190,13 +190,13 @@ module.exports = {
 
                         description = description.replace("\n", `Duplicated items gave you: **${fragments}** <:frags:655840344725913600>`);
 
-                        let Ess1TenEmbed = new RichEmbed()
+                        let Ess1TenEmbed = new MessageEmbed()
                             .setTitle(`Here is what you got from your ${EssenceNumber} essences:`)
                             .setTimestamp()
                             .setColor(lastEssenceColor)
                             .setThumbnail(essence[0].LinkOfIt)
                             .setImage(lastEssenceImage)
-                            .setAuthor(`${EssenceNumber} s12-${essence[0].WhichEss.replace("Ess", "")} essences has been opened!`, essence[0].LinkOfIt)
+                            .setAuthor(`${EssenceNumber} s13-${essence[0].WhichEss.replace("Ess", "")} essences has been opened!`, essence[0].LinkOfIt)
                             .setDescription(description);
 
                         LP.frags = LP.frags + fragments;
@@ -215,10 +215,10 @@ module.exports = {
                 else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                     boolean = true;
 
-                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s12-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s12-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s12-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s12-1`");
+                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s13-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s13-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s13-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s13-1`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
-                        await statsCheck(message, `s12-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
+                        await statsCheck(message, `s13-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
                         await addCooldown(message, 3000, "open");
 
                     }
@@ -226,7 +226,6 @@ module.exports = {
                 }
             }
             if (boolean === false) return message.channel.send(noargsEmbed);
-
 
         } catch (err) {
             console.log(err);

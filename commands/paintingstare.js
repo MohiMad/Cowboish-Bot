@@ -13,21 +13,21 @@ module.exports = {
         const canvas = Canvas.createCanvas(640, 608);
         const ctx = canvas.getContext('2d');
 
-        const lookingForAMemberPing = await findMember(message, args.slice(0).join(" "));
+        const lookingForAMemberPing = await findMember(message, args.slice(1).join(" "));
         let memberImage;
 
         if (!message.attachments.first()) {
 
-            await message.channel.fetchMessages().then(async (x) => {
+            await message.channel.messages.fetch().then(async (x) => {
                 let IMAGE = x.filter(m => m.author.id != bot.user.id && m.attachments.first() != undefined);
 
                 if (!lookingForAMemberPing) {
                     if (!IMAGE.first()) {
-                        memberImage = await Canvas.loadImage(message.author.displayAvatarURL);
+                        memberImage = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'png', dynamic: false, }));
                     } else {
                         memberImage = await Canvas.loadImage(IMAGE.first().attachments.first().url);
                     }
-                } else memberImage = await Canvas.loadImage(lookingForAMemberPing.user.displayAvatarURL);
+                } else memberImage = await Canvas.loadImage(lookingForAMemberPing.user.displayAvatarURL({ format: 'png', dynamic: false, }));
 
             });
         } else {
@@ -36,11 +36,10 @@ module.exports = {
 
         ctx.drawImage(memberImage, 52, 245, 166, 195);
 
-
         const background = await Canvas.loadImage("https://i.imgur.com/jnnxE6C.png");
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-        const attachment = new Discord.Attachment(canvas.toBuffer(), 'starestare0-0.png');
+        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'starestare0-0.png');
 
         message.channel.send(attachment);
 

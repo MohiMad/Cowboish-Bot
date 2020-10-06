@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
@@ -6,22 +6,15 @@ module.exports = {
     description: "take dis hug",
     execute: async (message, args, bot, prefix) => {
 
+        const persona = await findMember(message, args.slice(1).join(" "));
 
-        const persona = await findMember(message, args[1]);
+        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH FILES** to true");
+        if (!args[1]) return message.channel.send("Who do you want to hug? you can't hug air :v");
 
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+        
+        if (!persona) return ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "hug <MentionHere>`")
 
-        else if (!args[1]) {
-            return ErrorMsg(bot, message, "Who do you want to hug? you can't hug air :v")
-
-        }
-        else if (!persona) {
-            ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "hug <MentionHere>`")
-
-        }
-        else if (persona.id === message.author.id) {
-            message.channel.send(`Oof sorry, **${message.author.username}** but that's not possible :/`);
-        } else {
+         if (persona.id === message.author.id) return message.channel.send(`I would hug you if I was a human, ${message.author}...`);
 
             let hugs = [
                 "https://media.giphy.com/media/WO5lHiF8TlyuAIzGvB/giphy.gif",
@@ -43,14 +36,12 @@ module.exports = {
             ];
             var fact = Math.floor(Math.random() * facts.length);
 
-            const bullyembed = new RichEmbed()
-                .setAuthor((facts[fact]), message.author.avatarURL)
+            const hugEmbed = new MessageEmbed()
+                .setAuthor((facts[fact]), message.author.avatarURL())
                 .setImage((hugs[hug]))
                 .setColor("RANDOM")
 
-            message.channel.send(bullyembed);
-
-        }
+            message.channel.send(hugEmbed);
 
     }
 }

@@ -1,7 +1,7 @@
 const logicPath = require("../models/logicpath.js");
 
-const { RichEmbed } = require('discord.js');
-
+const { MessageEmbed } = require('discord.js');
+const Cooldown = require("../models/cooldown.js");
 const { clues, insp, ess1, ess2, ess3, frags } = require("../emojis.json");
 
 module.exports = {
@@ -9,11 +9,14 @@ module.exports = {
     description: "Daily giveaways for cowboish members :3",
     execute: async (bot) => {
 
-        let mainGuild = bot.guilds.get("636241255994490900");
+        let mainGuild = bot.guilds.cache.get("636241255994490900");
 
-        let giveawayRole = mainGuild.roles.get("721657451916820543");
+        let giveawayRole = mainGuild.roles.cache.get("721657451916820543");
 
-        let randomUser = giveawayRole.members.random();
+        let randomUser = giveawayRole.members.filter(async (m) => {
+            let usersLP = await logicPath.findOne({ UserID: m.user.id });
+            m.user.bot === false && usersLP
+        }).random();
 
         let rewards = [
             `1000 ${clues} and 25 ${ess3}`, //0
@@ -74,27 +77,35 @@ module.exports = {
             LP.save().catch(e => console.log(e));
 
 
-            let giveawayEmbed = new RichEmbed()
-                .setAuthor(`${randomUser.user.tag} won today's giveaway`, randomUser.user.displayAvatarURL)
-                .setThumbnail("https://cdn.discordapp.com/emojis/699667884833636352.png?v=1")
+            let giveawayEmbed = new MessageEmbed()
+                .setAuthor(`${randomUser.user.tag} won today's giveaway`, randomUser.user.displayAvatarURL())
+                .setThumbnail("https://i.imgur.com/iplaxWs.png")
                 .setDescription(`Congrats ${randomUser.user.username}! You won today's giveaway and got:\n` + rewards[randomRewardNumber])
                 .setColor("0xFFF030")
                 .setTimestamp()
-                .setFooter(`Oooohoo lucky ${randomUser.user.username} >:3`, bot.user.displayAvatarURL);
+                .setFooter(`Oooohoo lucky ${randomUser.user.username} >:3`, bot.user.displayAvatarURL());
 
-            let giveawayChannel = bot.channels.get('676502025499836416');
+            let giveawayChannel = bot.channels.cache.get('676502025499836416');
 
             if (!giveawayChannel) return;
 
             giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
-
 
             await logicPath.updateMany({}, {
                 $set:
                 {
                     ThreeMatches: 3
                 }
+            }).catch(e => console.log(e));
+
+            const giveawaySpamStopper = new Cooldown({
+                command: "giveaway",
+                userID: bot.user.id,
+                timeRemaining: Date.now() + 300000,
+                dateNow: Date.now()
             });
+
+            await giveawaySpamStopper.save().catch(err => console.log(err));
 
         } catch (err) {
             console.log(err);

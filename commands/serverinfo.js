@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require('common-tags');
 const { formatDate } = require("../functions.js");
 
@@ -11,21 +11,15 @@ module.exports = {
 		const created = formatDate(message.guild.createdAt)
 		const joined = formatDate(message.author.joinedAt);
 
-
-		const embed = new RichEmbed()
+		const embed = new MessageEmbed()
 			.setColor("RANDOM")
-
-
-			.setDescription(`Info about **${message.guild.name}** (ID: ${message.guild.id})`)
-
+			.setDescription(`Info about **${message.guild.name}**\n(ID: ${message.guild.id})`)
 			.addField(
 				'❯ Channels',
 				stripIndents`
-				🙎‍♂️ ${message.guild.channels.filter(ch => ch.type === 'text').size} Text, ${
-					message.guild.channels.filter(ch => ch.type === 'voice').size
+				🙎‍♂️ ${message.guild.channels.cache.filter(ch => ch.type === 'text').size} Text, ${message.guild.channels.cache.filter(ch => ch.type === 'voice').size
 					} 🎙️ Voice
-				💤 AFK: ${
-					message.guild.afkChannelID
+				💤 AFK: ${message.guild.afkChannelID
 						? `<#${message.guild.afkChannelID}> after ${message.guild.afkTimeout / 60}min`
 						: 'None'
 					}
@@ -42,11 +36,12 @@ module.exports = {
 			.addField(
 				'❯ Other',
 				stripIndents`
-				📜 Roles: ${message.guild.roles.size}
+				📜 Roles: ${message.guild.roles.cache.size}
 				🌎 Region: ${message.guild.region}
 				🕐 Created at: ${(created)}
 			`,
-			);
+			)
+			.setThumbnail(message.guild.iconURL())
 
 
 		message.channel.send(embed);

@@ -1,57 +1,45 @@
 const { ErrorMsg } = require("../functions.js");
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: 'clear',
     description: "clear commands",
-    execute: async (message, args, bot) => {
+    execute: async (message, args, bot, prefix) => {
 
         const toClear = args[1];
 
-        if (!message.channel.permissionsFor(message.guild.me).missing('MANAGE_MESSAGES')) {
-            return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE_MESSAGES**")
+        if (!message.channel.permissionsFor(message.guild.me).missing('MANAGE_MESSAGES')) return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE MESSAGES**")
 
-        }
+        else if (!message.member.hasPermission("MANAGE_MESSAGES", { checkAdmin: true, checkOwner: true })) message.channel.send("You do not have the required permissions to execute this command!");
 
-        else if (!message.member.hasPermission("MANAGE_MESSAGES", false, true, true)) return ErrorMsg(bot, message, "You do not have the required permissions to execute this command!");
+        else if (isNaN(toClear) || !toClear || toClear > 100) return ErrorMsg(bot, message, "Please provide a number of messages for me to delete\nUsage: `" + prefix + "clear [amount] [reason(optional)]`\n\n**Note**: The highest amount of messages is *100*");
 
-        else if (isNaN(toClear) || !toClear || toClear > 100) return ErrorMsg(bot, message, "Please provide a number of messages for me to delete\nUsage: `>clear [amount] [reason(optional)]`\n\n**Note**: The highest amount of messages is *100*");
+        else if (toClear.includes("-")) return message.channel.send("The amount of messages given can't be under 1");
 
-        else if(toClear.includes("-")){
-            return ErrorMsg(bot, message, "The amount of messages given can't be under 1");
-        }
-        else if(toClear === 0){
-            return ErrorMsg(bot, message, "The amount of messages given can't be under 1");
+        else if (toClear === 0) return message.channel.send("The amount of messages given can't be under 1");
 
-        }
-        else {
-            try {
-                const messages = await message.channel.fetchMessages({ limit: toClear });
-                await message.delete();
-                const reason = args.slice(2).join(" ") || "No Reason";
+        try {
+            const messages = await message.channel.messages.fetch({ limit: toClear });
+            await message.channel.bulkDelete(messages);
 
-                await message.channel.bulkDelete(messages);
+            const reason = args.slice(2).join(" ") || "No Reason";
 
-                const clearEmbed = new RichEmbed()
-                    .setColor("#000000")
-                    .setAuthor(`Clear case!`, message.author.displayAvatarURL)
-                    .setTimestamp()
-                    .setDescription(`
+            const clearEmbed = new MessageEmbed()
+                .setColor("#000000")
+                .setAuthor(`Clear case!`, message.author.displayAvatarURL())
+                .setTimestamp()
+                .setDescription(`
                     **Cleared Messages:** ${messages.size}\n
                     **Cleared in :**${message.channel}\n
                     **Cleared by:** ${message.author}\n
                     **Reason:** ${reason ? reason : "No Reason"}`);
 
-                message.channel.send(clearEmbed).then(m => m.delete(20000));
-            } catch (err) {
-                if (err.message === 'You can only bulk delete messages that are under 14 days old.') return ErrorMsg(bot, message, "**I can't delete messages that's older than 14 days!** sorry")
+            message.channel.send(clearEmbed).then(m => m.delete({ timeout:7000, reason: reason ? reason : "No Reason" }));
 
-                else {
-                    console.log(err)
-                    message.channel.send(`Sorry **${message.author.username}** i hit an unknown error... :c`)
-                }
+        } catch (err) {
+            if (err.message === 'You can only bulk delete messages that are under 14 days old.') return ErrorMsg(bot, message, "**I can't delete messages that's older than 14 days!** sorry")
 
-            }
+            console.log(err);
         }
     }
 }

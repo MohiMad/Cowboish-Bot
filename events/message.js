@@ -4,7 +4,7 @@ const spamStopper = new Set();
 
 module.exports = async (bot, message) => {
 
-    const MohiMoo = bot.users.get("478527909250990090");
+    const MohiMoo = bot.users.cache.get("478527909250990090");
 
     if (message.channel.type === 'dm') return;
 
@@ -14,22 +14,13 @@ module.exports = async (bot, message) => {
 
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
-    let prefix;
+    let prefix = ">"; //we change this
 
-    if (!guild_0) {
-        prefix = ">";
-    }
-    else if (guild_0.prefix === null) {
-        prefix = ">";
-    }
-    else if (guild_0.prefix.length < 1) {
-        prefix = ">";
-
-    }
-    else {
-        prefix = guild_0.prefix;
-    }
-
+    if (!guild_0) prefix = "!";
+    else if (guild_0.prefix === null) prefix = "!";
+    else if (guild_0.prefix.length < 1) prefix = "!";
+    else prefix = guild_0.prefix;
+    
     let args = message.content.substring(prefix.length).split(" ");
 
     if (message.author.id === bot.user.id) return;
@@ -63,7 +54,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "identify": case "whois": case "stereotype":
-            await bot.commands.get('identify').execute(message, args, MohiMoo);
+            await bot.commands.get('identify').execute(message, args);
             break;
 
         case "winrate": case "wr":
@@ -226,7 +217,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "crash":
-            await bot.commands.get('crash').execute(message, args, bot);
+            await bot.commands.get('crash').execute(message, args, bot, prefix);
             break;
 
         case "terrorshock": case "ts":
@@ -255,7 +246,7 @@ module.exports = async (bot, message) => {
         //Moderation Commands starts here
 
         case "clear": case "purge": case "delete":
-            await bot.commands.get('clear').execute(message, args, bot);
+            await bot.commands.get('clear').execute(message, args, bot, prefix);
             break;
 
         case "kick":
@@ -289,7 +280,7 @@ module.exports = async (bot, message) => {
 
         case 'ping':
             const m = await message.channel.send("Yee?");
-            m.edit(`<:peepo_haw:699667884833636352> Haw!\nLatency is **${m.createdTimestamp - message.createdTimestamp}ms**.\nAPI Latency is **${Math.round(bot.ping)}ms**`);
+            m.edit(`<:peepo_haw:699667884833636352> Haw!\nLatency is **${m.createdTimestamp - message.createdTimestamp}ms**.\nAPI Latency is **${Math.round(bot.ws.ping)}ms**`);
             break;
 
         case "help": case "commands": case "helpme":

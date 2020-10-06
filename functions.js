@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Cooldown = require("./models/cooldown.js");
@@ -15,15 +15,15 @@ module.exports = {
 				if (err) console.log(err);
 
 				//the ID of Rewards channel on Cowboish server
-				let reChannel = bot.channels.get('676502025499836416');
+				let reChannel = bot.channels.cache.get('676502025499836416');
 
-				let n1 = bot.users.get(res[0].UserID) || "Not found";
-				let n2 = bot.users.get(res[1].UserID) || "Not found";
-				let n3 = bot.users.get(res[2].UserID) || "Not found";
-				let n4 = bot.users.get(res[3].UserID) || "Not found";
-				let n5 = bot.users.get(res[4].UserID) || "Not found";
+				let n1 = bot.users.cache.get(res[0].UserID) || "Not found";
+				let n2 = bot.users.cache.get(res[1].UserID) || "Not found";
+				let n3 = bot.users.cache.get(res[2].UserID) || "Not found";
+				let n4 = bot.users.cache.get(res[3].UserID) || "Not found";
+				let n5 = bot.users.cache.get(res[4].UserID) || "Not found";
 
-				let reeEmbed = new RichEmbed()
+				let reeEmbed = new MessageEmbed()
 					.setTitle("Yaaaay a new week has began!")
 					.setColor("0xf0cf07")
 					.setDescription(stripIndents`
@@ -55,6 +55,7 @@ module.exports = {
 					.setThumbnail("https://i.imgur.com/VGo6rp3.png")
 					.setTimestamp()
 
+				if (!reChannel) return;
 				reChannel.send(reeEmbed);
 
 				res[0].Echoes = res[0].Echoes + 50;
@@ -101,15 +102,15 @@ module.exports = {
 	},
 
 	getMember: function (message, toFind = '') {
-		toFind = toFind.toLowerCase();
+		toFind = toFind.toLowerCase().replace("<@", "").replace(">", "");
 
-		let target = message.guild.members.get(toFind);
+		let target = message.guild.members.cache.get(toFind);
 
 		if (!target && message.mentions.members)
 			target = message.mentions.members.first();
 
 		if (!target && toFind) {
-			target = message.guild.members.find(member => {
+			target = message.guild.members.cache.find(member => {
 				return member.displayName.toLowerCase().includes(toFind) ||
 					member.user.tag.toLowerCase().includes(toFind)
 			});
@@ -123,19 +124,19 @@ module.exports = {
 	findMember: async (message, toFind) => {
 		let member;
 		if (message.mentions && message.mentions.members.size == 0 && message.mentions.users.size > 0) {
-			const toFetch = await message.guild.fetchMember(message.mentions.users.first());
+			const toFetch = await message.guild.members.fetch(message.mentions.users.first());
 			return toFetch;
 		}
 		else {
 			if (!toFind) return message.member;
 			toFind = toFind.toLowerCase();
-			member = message.mentions.members.first() || message.guild.members.find((x) => x.user.username.toLowerCase() === toFind) || message.guild.members.get(toFind);
+			member = message.mentions.members.first() || message.guild.members.cache.find((x) => x.user.username.toLowerCase() === toFind) || message.guild.members.cache.get(toFind);
 		}
 		return member;
 	},
 
 	formatDate: function (date) {
-		return new Intl.DateTimeFormat('en-US').format(date)
+		return new Intl.DateTimeFormat('en-US').format(date);
 	},
 
 	ErrorMsg: (bot, message, error) => {
@@ -149,24 +150,24 @@ module.exports = {
 
 		let errMsg = Math.floor(Math.random() * errMsgs.length);
 
-		const errEmbed = new RichEmbed()
+		const errEmbed = new MessageEmbed()
 			.setTitle(errMsgs[errMsg])
 			.setColor("RED")
 			.setDescription(error)
-			.setAuthor(message.author.username, message.author.displayAvatarURL)
+			.setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(errEmbed);
 	},
 
 	findRole: (message, toFind) => {
-		toFind = toFind.toLowerCase();
-		const role = message.guild.roles.find((x) => x.name.toLowerCase() === toFind) || message.guild.roles.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.roles.get(toFind);
+		toFind = toFind.toLowerCase().replace("<@&", "").replace(">", "");
+		const role = message.guild.roles.cache.find((x) => x.name.toLowerCase() === toFind) || message.guild.roles.cache.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.roles.cache.get(toFind);
 		return role;
 	},
 
 	findChannel: (message, toFind) => {
-		toFind = toFind.toLowerCase();
-		const channel = message.mentions.channels.first() || message.guild.channels.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.channels.find((x) => x.name.toLowerCase() === (toFind)) || message.guild.channels.get(toFind);
+		toFind = toFind.toLowerCase().replace("<#", "").replace(">", "");
+		const channel = message.mentions.channels.first() || message.guild.channels.cache.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.channels.cache.find((x) => x.name.toLowerCase() === (toFind)) || message.guild.channels.cache.get(toFind);
 		return channel;
 	},
 	newLP: async (message) => {
@@ -294,14 +295,14 @@ module.exports = {
 			des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`
 		}
 
-		const coolEmbed = new RichEmbed()
+		const coolEmbed = new MessageEmbed()
 			.setTitle(Title)
 			.setColor("0xFF0000")
 			.setDescription(des)
 			.setThumbnail("https://i.imgur.com/q6GYP17.png")
-			.setAuthor(message.author.username, message.author.displayAvatarURL)
+			.setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
-		message.channel.send(coolEmbed).then(m => m.delete(30000));
+		message.channel.send(coolEmbed).then(m => m.delete({ timeout: 30000, reason: "To make the chat cleaner :)" }));
 
 	},
 	checkForGuildDataExistance: async (message) => {

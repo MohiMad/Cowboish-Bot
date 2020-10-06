@@ -42,7 +42,7 @@ module.exports = {
 
         ctx.fillText(sayMessage.replace(letterInALine, "$&@").split(/\s+@/).join("\n"), 50, height);
 
-        const attachment = new Discord.Attachment(canvas.toBuffer(), 'deth.png');
+        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'deth.png');
 
         message.channel.send(attachment);
         await addCooldown(message, 10000, "death");

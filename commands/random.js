@@ -33,7 +33,9 @@ module.exports = {
             "Cowboy",
             "Postman",
             "Gravekeeper",
-            "Prisoner"
+            "Prisoner",
+            "Entomologist",
+            "Painter"
         ];
 
         var hunters = [
@@ -52,7 +54,8 @@ module.exports = {
             "Bloody queen",
             "No. 26",
             "Ann",
-            "Violinist"
+            "Violinist",
+            "Sculptor"
         ];
 
         var hunter = Math.floor(Math.random() * hunters.length);
@@ -61,18 +64,14 @@ module.exports = {
 
         if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values to randomly pick from them!\n**Example:** `" + prefix + "randomize cat fish dog`\n**Example respond:** I choose **dog**\nRemember to seperate the values with a space in between\n\nOr you can do `" + prefix + "randomize survivor` or `" + prefix + "randomize hunter` so i pick a random character for you!")
 
-        else if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) {
+        if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) return message.channel.send(`I choose **${facts[fact]}**`);
 
-            message.channel.send(`I choose **${facts[fact]}**`);
+        if (["hunter", "hunters"].includes(args[1].toLowerCase())) return message.channel.send(`I choose **${hunters[hunter]}**`);
+        
+        let values = args.slice(1).join(" ").split(" ").length;
+        let rNumber = Math.floor(Math.random() * (values - 1 + 1)) + 1;
 
-        } else if (["hunter", "hunters"].includes(args[1].toLowerCase())) {
-            message.channel.send(`I choose **${hunters[hunter]}**`);
-        } else {
-            let values = args.slice(1).join(" ").split(" ").length;
-            rNumber = Math.floor(Math.random() * (values - 1 + 1)) + 1;
-
-            message.channel.send(`I choose **${args[rNumber]}**`);
-        }
+        return message.channel.send(`I choose **${args[rNumber]}**`);
 
 
 

@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 let spamStopper = new Set();
 
@@ -9,20 +9,21 @@ module.exports = {
 
         var firstQuestion = "0";
         var secondQuestion = "0";
-        const suggest = bot.channels.get('721685336161517579');
+        const suggest = bot.channels.cache.get('721685336161517579');
         let errorMsg = args.slice(1).join(" ");
 
         if (!suggest) return;
 
         const cooldownCheck = await findCooldown(message, "reportissue");
 
-        if (!cooldownCheck) {
+        if (cooldownCheck) return coolEmbed(message, "Ooops! Can't report Issues so quickly!", "There is a **5 minutes** cooldown set on this command!\nYou have to wait **REMAINING** before being able to report another Issue", cooldownCheck.timeRemaining, ["m", "s"]);
 
-            let embed = new RichEmbed()
-                .setAuthor(`${message.author.username} found an issue/bug!`, message.author.displayAvatarURL)
-                .setThumbnail(message.author.displayAvatarURL)
+
+            let embed = new MessageEmbed()
+                .setAuthor(`${message.author.username} found an issue/bug!`, message.author.displayAvatarURL())
+                .setThumbnail(message.author.displayAvatarURL())
                 .setTimestamp()
-                .setFooter(bot.user.tag, bot.user.displayAvatarURL)
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL())
                 .setColor("0xF8CE14");
 
             const filter = m => m.author.id === message.author.id;
@@ -64,12 +65,12 @@ module.exports = {
 
                             suggest.send(embed);
 
-                            let respEmbed = new RichEmbed()
+                            let respEmbed = new MessageEmbed()
                                 .setTitle("Your issue/bug will reach out to the developer soon!")
-                                .setAuthor(message.author.tag, message.author.displayAvatarURL)
+                                .setAuthor(message.author.tag, message.author.displayAvatarURL())
                                 .setDescription("Your submitted issue/bug has been sent to the developers...\nWe will look through your submission and try to fix it as soon as possible :D\n\nThanks for your cooperation")
                                 .setColor("0xF8CE14")
-                                .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+                                .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
                             message.channel.send(respEmbed);
                             await addCooldown(message, 5 * 60 * 1000, "reportissue");
@@ -120,12 +121,12 @@ module.exports = {
 
                         suggest.send(embed);
 
-                        let respEmbed = new RichEmbed()
+                        let respEmbed = new MessageEmbed()
                             .setTitle("Your issue/bug will reach out to the developer soon!")
-                            .setAuthor(message.author.tag, message.author.displayAvatarURL)
+                            .setAuthor(message.author.tag, message.author.displayAvatarURL())
                             .setDescription("Your submitted issue/bug has been sent to the developers...\nWe will look through your submission and try to fix it as soon as possible :D\n\nThanks for your cooperation")
                             .setColor("0xF8CE14")
-                            .setFooter(bot.user.tag, bot.user.displayAvatarURL);
+                            .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
                         message.channel.send(respEmbed);
                         await addCooldown(message, 5 * 60 * 1000, "reportissue");
@@ -142,10 +143,5 @@ module.exports = {
                     return message.reply(`**Time is over!** try again...`);
                 });
             }
-
-        } else {
-            coolEmbed(message, "Ooops! Can't report Issues so quickly!", "There is a **5 minutes** cooldown set on this command!\nYou have to wait **REMAINING** before being able to report another Issue", cooldownCheck.timeRemaining, ["m", "s"]);
-        }
-
     }
 }

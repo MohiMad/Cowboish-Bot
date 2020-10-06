@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { findMember, ErrorMsg } = require("../functions.js");
 
 module.exports = {
@@ -9,43 +9,27 @@ module.exports = {
 
         const reason = args.slice(2).join(" ") || "No Reason";
 
-        const errEmbed = new RichEmbed()
-            .setAuthor("Oops an error has occured!", message.author.AvatarURL)
+        const errEmbed = new MessageEmbed()
+            .setAuthor("Oops an error has occured!", message.author.displayAvatarURL())
             .setColor("0xe80202")
             .setTimestamp();
 
-        if (!message.member.hasPermission("KICK_MEMBERS", false, true, true)) {
+        if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(errEmbed.setDescription("You don't have the required permission to use this command!"));
 
-            errEmbed.setDescription("You don't have the required permission to use this command!");
-            message.channel.send(errEmbed);
-        }
+        if (!args[1]) return message.channel.send(errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `" + prefix + "kick <@tagMember> <reason here>`"));
 
-        else if (!args[1]) {
-            errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `" + prefix + "kick <@tagMember> <reason here>`");
-            message.channel.send(errEmbed);
-        }
+        if (!member) return message.channel.send(errEmbed.setDescription("Couldn't find that member!"));
 
-        else if (!member) {
-            errEmbed.setDescription("Couldn't find that member!");
+        else if (!member.kickable) return message.channel.send(errEmbed.setDescription("This member is not kickable! please nerf"));
 
-        }
+        member.kick(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
 
-        else if (!member.kickable) {
-            errEmbed.setDescription("This member is not kickable! please nerf");
-            message.channel.send(errEmbed);
-        }
-        else {
-            member.kick(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
+        const kickEmbed = new MessageEmbed()
+            .setColor("0xe80202")
+            .setAuthor(`Kick Case`, member.user.displayAvatarURL())
+            .setDescription(`**Kicked By:** ${message.author.tag}\n**Kicked User:** ${member.user.tag}\n **Reason:** ${reason ? reason : "No reason provided!"}`);
 
-            const kickEmbed = new RichEmbed()
-                .setColor("0xe80202")
-                .setAuthor(`Kick Case`, member.user.displayAvatarURL)
-                .setDescription(`**Kicked By:** ${message.author.tag}\n**Kicked User:** ${member.user.tag}\n **Reason:** ${reason ? reason : "No reason provided!"}`);
-
-            message.channel.send(kickEmbed);
-        }
-
-
+        message.channel.send(kickEmbed);
 
     }
 

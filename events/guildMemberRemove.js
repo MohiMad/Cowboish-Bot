@@ -15,18 +15,16 @@ module.exports = async (bot, member) => {
 
     const leaveMessage = guild.leave.message
         .replace("memberCount", member.guild.memberCount)
-        .replace("botCount", member.guild.members.filter(x => x.user.bot).size)
+        .replace("botCount", member.guild.members.cache.filter(x => x.user.bot).size)
         .replace("serverName", member.guild.name)
         .replace("userName", member.user.username)
         .replace("userMention", member.user.toString())
         .replace("userTag", member.user.tag);
 
-    const leaveChannel = member.guild.channels.get(guild.leave.channel);
+    const leaveChannel = member.guild.channels.cache.get(guild.leave.channel);
 
-    if (!leaveChannel) {
-        return;
+    if (!leaveChannel) return;
 
-    } else {
-        leaveChannel.send(leaveMessage).catch(() => void null);
-    }
+    leaveChannel.send(leaveMessage).catch(() => void null);
+
 };

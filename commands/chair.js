@@ -9,50 +9,35 @@ module.exports = {
 
         let cooldownCheck = await findCooldown(message, "chair");
 
-        if (!cooldownCheck) {
+        if (cooldownCheck) return coolEmbed(message, "You're using this command way too fast >:(", "I'm a bot... But bots deserves rest too :'(\nPlease wait **REMAINING** before trying to use this command again...", cooldownCheck.timeRemaining, ["s"]);
 
-            const chaired = await findMember(message, args[1]);
+        const chaired = await findMember(message, args.slice(1).join(" "));
 
-            const canvas = Canvas.createCanvas(1200, 900);
-            const ctx = canvas.getContext('2d');
-            // Since the image takes time to load, you should await it
-            const background = await Canvas.loadImage('./pics/chair.jpg');
-            // This uses the canvas dimensions to stretch the image onto the entire canvas
-            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-            // Use helpful Attachment class structure to process the file for you
+        const canvas = Canvas.createCanvas(1200, 900);
+        const ctx = canvas.getContext('2d');
 
-            ctx.strokeStyle = '#74037b';
-            // Draw a rectangle with the dimensions of the entire canvas
-            ctx.strokeRect(1, 1, canvas.width, canvas.height);
+        const background = await Canvas.loadImage("https://i.imgur.com/HMBFSzn.jpg");
 
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
+        ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-            else if (!args[1]) {
-                const authAvatar = await Canvas.loadImage(message.author.displayAvatarURL);
-                ctx.drawImage(authAvatar, 547, 500, 109, 109);
+        try {
+            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **Attach Files** to true");
 
-            }
-            else {
-                if (!chaired) {
-                    return ErrorMsg(bot, message, "Couldn't find that member!\nplease provide their id/tag or mention them after the command!");
-                }
-                else {
-                    const avatar = await Canvas.loadImage(chaired.user.displayAvatarURL);
-                    // Move the image downwards vertically and constrain its height to 200, so it's a square
-                    ctx.drawImage(avatar, 547, 500, 109, 109);
+            let avatar;
 
+            if (!args[1]) avatar = await Canvas.loadImage(message.author.avatarURL({ format: 'png', dynamic: false }));
+            else if (!chaired) avatar = await Canvas.loadImage(message.author.avatarURL({ format: 'png', dynamic: false }));
+            else avatar = await Canvas.loadImage(chaired.user.avatarURL({ format: 'png', dynamic: false }));
 
-                }
+            ctx.drawImage(avatar, 547, 500, 109, 109);
 
-            }
+            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'getChaired.png');
 
-            const attachment = new Discord.Attachment(canvas.toBuffer(), 'getChairedbich.gif');
+            message.channel.send(attachment);
+            await addCooldown(message, 25000, "chair");
 
-            message.channel.send(`<:rocketchair:679651828157513741> HAH get chaired **${chaired.user.username}**!`, attachment)
-
-            await addCooldown(message, 10000, "chair");
-        } else {
-            coolEmbed(message, "You're using this command way too fast >:(", "I'm a bot... But bots deserves rest too :'(\nPlease wait **REMAINING** before trying to use this command again...", cooldownCheck.timeRemaining, ["s"]);
+        } catch (e) {
+            console.log(e);
         }
     }
 }
