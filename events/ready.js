@@ -80,7 +80,7 @@ module.exports = async (bot) => {
         for (const mute of mutes) {
             if (mute.created + mute.muteTime <= Date.now()) {
 
-                const guild = bot.guilds.get(mute.guildID);
+                const guild = bot.guilds.cache.get(mute.guildID);
 
                 if (!guild) return;
 
