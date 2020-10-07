@@ -21,7 +21,7 @@ module.exports = async (bot) => {
         `Identity V in ${bot.guilds.cache.size} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${bot.guilds.cache.size}/2000`,
-        `${bot.guilds.cache.size} guilds | ${bot.users.size} users`,
+        `${bot.guilds.cache.size} guilds | ${bot.users.cache.size} users`,
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
         `Yeehaw! >:D`

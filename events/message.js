@@ -16,11 +16,11 @@ module.exports = async (bot, message) => {
 
     let prefix = ">"; //we change this
 
-    if (!guild_0) prefix = "!";
-    else if (guild_0.prefix === null) prefix = "!";
-    else if (guild_0.prefix.length < 1) prefix = "!";
+    if (!guild_0) prefix = ">";
+    else if (guild_0.prefix === null) prefix = ">";
+    else if (guild_0.prefix.length < 1) prefix = ">";
     else prefix = guild_0.prefix;
-    
+
     let args = message.content.substring(prefix.length).split(" ");
 
     if (message.author.id === bot.user.id) return;
