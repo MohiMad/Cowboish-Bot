@@ -15,9 +15,7 @@ module.exports = {
         let person = await findMember(message, args.slice(1).join(" "));
 
         if (!args[1]) person = message.author;
-
         if (!person) person = message.author;
-
         else person = await findMember(message, args.slice(1).join(" "));
 
         const canvas = Canvas.createCanvas(193, 261);
@@ -28,7 +26,9 @@ module.exports = {
 
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-        const avatar = await Canvas.loadImage(person.displayAvatarURL({ format: 'png', dynamic: false }) || person.user.displayAvatarURL({ format: 'png', dynamic: false }));
+        let avatar = await Canvas.loadImage(person.user.displayAvatarURL({ format: 'png', dynamic: false }));
+
+        if (!person.user) avatar = await Canvas.loadImage(person.displayAvatarURL({ format: 'png', dynamic: false }));
 
         ctx.drawImage(avatar, 29, 46, 117, 108);
 
