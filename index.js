@@ -1,6 +1,6 @@
 //_______________Modules_____________
 const Discord = require('discord.js');
-const bot = new Discord.Client({ disableMentions: 'everyone' });
+const bot = new Discord.Client({ disableMentions: 'everyone', messageCacheMaxSize: 0 });
 const config = require("./config.json");
 
 const mongoose = require("mongoose");
