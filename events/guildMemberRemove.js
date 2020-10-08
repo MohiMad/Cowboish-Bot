@@ -1,6 +1,6 @@
 const Guild = require("../models/guild.js");
 
-module.exports = async (bot, member) => {
+module.exports = async (bot, botGuildCount, member) => {
 
     const guild = await Guild.findOne({ guildID: member.guild.id });
 

@@ -2,7 +2,7 @@ const Guild = require("../models/guild.js");
 const logicPath = require("../models/logicpath.js");
 const spamStopper = new Set();
 
-module.exports = async (bot, message) => {
+module.exports = async (bot, botGuildCount, message) => {
 
     const MohiMoo = bot.users.cache.get("478527909250990090");
 
@@ -288,7 +288,7 @@ module.exports = async (bot, message) => {
             break;
 
         case 'guilds': case "servers":
-            message.channel.send(`Cowboish stats:\n**${bot.users.cache.size}** Users\n**${bot.channels.cache.size}** Channels\n**${bot.guilds.cache.size}** Guilds :D`)
+            message.channel.send(`Cowboish stats:\n**${bot.users.cache.size}** Users\n**${bot.channels.cache.size}** Channels\n**${botGuildCount}** Guilds :D`)
             break;
 
         case 'suggest': case "suggestidea":
