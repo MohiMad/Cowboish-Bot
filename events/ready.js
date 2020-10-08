@@ -75,7 +75,7 @@ module.exports = async (bot) => {
 
         }
 
-        const mutes = await Mutes.find({});
+        /*const mutes = await Mutes.find({});
 
         for (const mute of mutes) {
             if (mute.created + mute.muteTime <= Date.now()) {
@@ -106,7 +106,7 @@ module.exports = async (bot) => {
                     if (err) console.log(err);
                 });
             }
-        }
+        }*/
     }, 3000);
 
     /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
