@@ -10,9 +10,8 @@ const { rewards } = require("../functions.js");
 const Mutes = require("../models/mutes");
 const Cooldown = require("../models/cooldown.js");
 
-module.exports = async (bot) => {
+module.exports = async (bot, botGuildCount) => {
 
-    const botGuildCount = bot.guilds.cache.size;
 
     console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
@@ -32,7 +31,7 @@ module.exports = async (bot) => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         bot.user.setActivity(activities_list[index]);
-    }, 300000);//sets the activity each 100 s
+    }, 300000);
 
     schedule.scheduleJob("1 12 * * 1", async function () {
         const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
@@ -44,6 +43,18 @@ module.exports = async (bot) => {
             timeRemaining: Date.now() + 300000,
             dateNow: Date.now()
         });
+
+        const dbl = new DBL(config.dbl_token, bot);
+
+        dbl.postStats(botGuildCount).catch(e => console.log(e));
+
+
+        const Boats = new BOATS(config.boatsToken);
+
+        Boats.postStats(botGuildCount, "632291800585076761")
+            .catch((err) => {
+                console.log(err);
+            });
 
         await weeklySpamStopper.save().catch(err => console.log(err));
         rewards(bot);
@@ -102,23 +113,8 @@ module.exports = async (bot) => {
     /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
 
     Glenn.updateStats(botGuildCount).catch(e => console.log(e));
-*/
 
-    const dbl = new DBL(config.dbl_token, bot);
-
-    dbl.postStats(botGuildCount).catch(e => console.log(e));
-
-
-    const Boats = new BOATS(config.boatsToken);
-
-    Boats.postStats(botGuildCount, "632291800585076761")
-        .catch((err) => {
-            console.log(err);
-        });
-
-
-
-    /*const updateBotList = async () => {
+    const updateBotList = async () => {
 
         const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
             .set("Authorization", `Bot ${config.dblToken_2}`)

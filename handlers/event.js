@@ -1,12 +1,12 @@
 const { readdirSync } = require("fs");
 
-module.exports = bot => {
+module.exports = (bot, botGuildCount) => {
 	const events = readdirSync("./events/").filter(file => file.endsWith(".js"));
 
 	for (const file of events) {
 		const evt = require(`../events/${file}`);
 
 		const eName = file.split(".")[0];
-		bot.on(eName, evt.bind(null, bot));
+		bot.on(eName, evt.bind(null, bot, botGuildCount));
 	}
 };
