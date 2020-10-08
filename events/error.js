@@ -1,4 +1,4 @@
-module.exports = (bot, botGuildCount, err) => {
+module.exports = (bot, err) => {
     
     console.log(err);
     

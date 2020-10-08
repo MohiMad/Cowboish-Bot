@@ -14,11 +14,10 @@ mongoose.connect(config.mongoose_uri, {
     useUnifiedTopology: true
 });
 
-const botGuildCount = bot.guilds.cache.size;
 
 bot.setMaxListeners(0);
 
-["event", "command"].forEach(x => require(`./handlers/${x}`)(bot, botGuildCount));
+["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
 
 
 bot.login(config.token);

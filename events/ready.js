@@ -10,8 +10,9 @@ const { rewards } = require("../functions.js");
 const Mutes = require("../models/mutes");
 const Cooldown = require("../models/cooldown.js");
 
-module.exports = async (bot, botGuildCount) => {
+module.exports = async (bot) => {
 
+    const botGuildCount = bot.guilds.cache.size;
 
     console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
