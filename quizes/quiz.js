@@ -53,7 +53,7 @@ module.exports = {
         spamStopper.add(message.author);
         message.channel.send(quizEmbed);
 
-        await message.channel.awaitMessages(filter, { max: 2, time: 60000 }).then(async collected => {
+        await message.channel.awaitMessages(filter, { max: 1, time: 60000 }).then(async collected => {
 
             if (charItem.Answer.includes(collected.first().content.toLowerCase())) {
 
