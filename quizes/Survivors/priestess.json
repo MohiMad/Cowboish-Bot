@@ -1,7 +1,7 @@
 [
 	{
 		"Question": "**Question:**\nHow long does it take to gain one portal\nPlease answer in seconds!",
-		"Answer": ["sixty", "60", "60 seconds", "sixty seconds", "Sixty"],
+		"Answer": ["70", "seventy", "70 seconds", "seventy seconds", "70s"],
 		"Difficulty": "Medium",
 		"Attachment": "https://i.imgur.com/vIH8n9k.png"
     },

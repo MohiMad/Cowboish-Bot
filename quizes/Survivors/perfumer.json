@@ -5,12 +5,6 @@
 		"Difficulty": "Ez",
 		"Attachment": "https://i.imgur.com/th11bxs.png"
     },
-    {
-		"Question": "**Question:**\nHow long does a perfume last for?",
-		"Answer": ["6", "6 seconds", "six", "Six"],
-		"Difficulty": "Hard",
-		"Attachment": "https://i.imgur.com/th11bxs.png"
-	},
 	{
 		"Question": "**Question:**\nwhat is the Perfumer's real name?\nPlease provide the name only (Don't include surname)",
 		"Answer": ["chloe"],
