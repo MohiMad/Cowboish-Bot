@@ -5,11 +5,7 @@ const bot = new Discord.Client({
     messageCacheMaxSize: 1,
     fetchAllMembers: false
 });
-const got = require("got");
-const snekfetch = require('snekfetch');
-const DBL = require("dblapi.js");
-const BOATS = require('boats.js');
-//const GBL = require('gblapi.js');
+
 const schedule = require('node-schedule');
 const { rewards } = require("./functions.js");
 
@@ -22,36 +18,8 @@ mongoose.connect(config.mongoose_uri, {
     useUnifiedTopology: true
 });
 
-const dbl = new DBL(config.dbl_token, bot);
 const botGuildCount = bot.guilds.cache.size;
-dbl.postStats(botGuildCount).catch(e => console.log(e));
 
-
-const Boats = new BOATS(config.boatsToken);
-
-Boats.postStats(botGuildCount, "632291800585076761")
-    .catch((err) => {
-        console.log(err);
-    });
-
-/*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
-
-Glenn.updateStats(botGuildCount).catch(e => console.log(e));
-
-const updateBotList = async () => {
-
-const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
-.set("Authorization", `Bot ${config.dblToken_2}`)
-.send({
-    guilds: botGuildCount,
-    users: bot.users.size,
-})
-
-return (reply);
-}
-
-let botUPDATE = await updateBotList();
-*/
 
 schedule.scheduleJob("1 12 * * 1", async function () {
     const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
