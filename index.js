@@ -23,7 +23,7 @@ mongoose.connect(config.mongoose_uri, {
 });
 
 const dbl = new DBL(config.dbl_token, bot);
-
+const botGuildCount = bot.guilds.cache.size;
 dbl.postStats(botGuildCount).catch(e => console.log(e));
 
 
