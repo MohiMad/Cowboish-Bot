@@ -11,7 +11,7 @@ const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
 const schedule = require('node-schedule');
-const { rewards } = require("../functions.js");
+const { rewards } = require("./functions.js");
 
 const config = require("./config.json");
 
