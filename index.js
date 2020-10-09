@@ -6,7 +6,6 @@ const bot = new Discord.Client({
     fetchAllMembers: false
 });
 const got = require("got");
-const config = require("../config.json");
 const snekfetch = require('snekfetch');
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
