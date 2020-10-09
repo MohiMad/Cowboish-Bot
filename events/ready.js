@@ -1,5 +1,4 @@
 
-
 const Mutes = require("../models/mutes");
 const Cooldown = require("../models/cooldown.js");
 
@@ -8,7 +7,7 @@ const snekfetch = require('snekfetch');
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
-
+const config = require("../config.json");
 module.exports = async (bot) => {
 
     const botGuildCount = bot.guilds.cache.size;
