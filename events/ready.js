@@ -32,7 +32,7 @@ module.exports = async (bot) => {
         bot.user.setActivity(activities_list[index]);
     }, 300000);
 
-    
+
 
     setInterval(async () => {
 
@@ -78,33 +78,33 @@ module.exports = async (bot) => {
 
     const dbl = new DBL(config.dbl_token, bot);
 
-dbl.postStats(botGuildCount).catch(e => console.log(e));
+    dbl.postStats(botGuildCount).catch(e => console.log(e));
 
 
-const Boats = new BOATS(config.boatsToken);
+    const Boats = new BOATS(config.boatsToken);
 
-Boats.postStats(botGuildCount, "632291800585076761")
-    .catch((err) => {
-        console.log(err);
-    });
+    Boats.postStats(botGuildCount, "632291800585076761")
+        .catch((err) => {
+            console.log(err);
+        });
 
-/*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
-
-Glenn.updateStats(botGuildCount).catch(e => console.log(e));
-
-const updateBotList = async () => {
-
-const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
-.set("Authorization", `Bot ${config.dblToken_2}`)
-.send({
-    guilds: botGuildCount,
-    users: bot.users.size,
-})
-
-return (reply);
-}
-
-let botUPDATE = await updateBotList();
-*/
+    /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
+    
+    Glenn.updateStats(botGuildCount).catch(e => console.log(e));
+    
+    const updateBotList = async () => {
+    
+    const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
+    .set("Authorization", `Bot ${config.dblToken_2}`)
+    .send({
+        guilds: botGuildCount,
+        users: bot.users.size,
+    })
+    
+    return (reply);
+    }
+    
+    let botUPDATE = await updateBotList();
+    */
 
 };

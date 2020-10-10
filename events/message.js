@@ -14,7 +14,7 @@ module.exports = async (bot, message) => {
 
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
-    let prefix = ">"; //we change this
+    let prefix = ">"; 
 
     if (!guild_0) prefix = ">";
     else if (guild_0.prefix === null) prefix = ">";

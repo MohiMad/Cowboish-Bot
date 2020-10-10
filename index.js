@@ -44,7 +44,7 @@ schedule.scheduleJob("0 9 * * *", async function () {
 
 });
 
-bot.setMaxListeners(0);
+bot.setMaxListeners(15);
 
 ["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
 
