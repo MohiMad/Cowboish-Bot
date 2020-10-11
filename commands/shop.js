@@ -476,12 +476,14 @@ module.exports = {
             message.channel.send(ownedPortraitEmbed);
 
         } else if (["skins", "skin"].includes(args[1].toLowerCase())) {
-
-
             let skinPages = [
                 {
                     link: "https://i.imgur.com/CR35DLy.png",
                     des: `[《 TIME LIMITED 》](https://youtu.be/qh_0YACMxyo)\n*Ends at: 1st November*\n\n:three: :three: | **Forward - Black Nose** ─ __3999__${e.frags}\n\n:three: :four: | **Smiley Face - Scarecrow** ─ __3999__${e.frags}`
+                },
+                {
+                    link: "https://i.imgur.com/I7wgeau.png",
+                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",

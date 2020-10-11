@@ -32,7 +32,6 @@ module.exports = {
                         message.reply("**Aaaah what was that for??!** :'c");
                     }, 7000);
                 }
-
                 const slappedAvatar = await Canvas.loadImage(slapped.user.displayAvatarURL({ format: "png", dynamic: false }));
                 ctx.drawImage(slappedAvatar, 295, 145, 125, 132);
                 ctx.drawImage(slapper, 168, 67, 100, 100);

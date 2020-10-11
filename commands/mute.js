@@ -45,7 +45,7 @@ module.exports = {
       userID: member.user.id,
       channelID: message.channel.id,
       created: Date.now(),
-      muteTime: muteTime || 999999999999999999999999999999999,
+      muteTime: muteTime,
     });
 
     mute.save().catch(e => console.log(e));

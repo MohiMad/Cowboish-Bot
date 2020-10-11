@@ -14,7 +14,7 @@ module.exports = async (bot, message) => {
 
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
 
-    let prefix = ">"; 
+    let prefix = ">";
 
     if (!guild_0) prefix = ">";
     else if (guild_0.prefix === null) prefix = ">";
@@ -258,7 +258,8 @@ module.exports = async (bot, message) => {
             break;
 
         case "mute": case "shutup":
-            await bot.commands.get('mute').execute(message, args, bot, prefix);
+            message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
+            //await bot.commands.get('mute').execute(message, args, bot, prefix);
             break;
 
         //End of moderation commands

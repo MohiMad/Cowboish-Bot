@@ -297,6 +297,16 @@ module.exports = {
                 .setColor("0xC9B37A")
                 .setDescription("**《** " + emojiDices + " **》**" + "\n" + loot)
 
+            if (LP.logic > 1528) {
+                if (!LP.Opened.includes("LP-13")) {
+                    LP.Opened = [...LP.Opened, "LP-13"];
+                    LP.A = LP.A + 1;
+
+                    DiceEmbed.setDescription(`You had walked **1528** logicpath steps and got\n__*Seer - Final Honor*__\n\n**《**${emojiDices}**》**\n${loot}`)
+                        .setThumbnail("https://i.imgur.com/RTNytX6.png");
+                }
+            }
+            
             LP.Dices = LP.Dices - number;
             await LP.save().catch(e => console.log(e));
             await addCooldown(message, 1000 * number, "roll");

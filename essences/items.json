@@ -552,12 +552,35 @@
         },
         {
             "Name": [
+                "Wu Chang - Frost",
+                "frost",
+                "35",
+                "thirtyfive",
+                "wuchangfrost"
+            ],
+            "linkTag": "https://i.imgur.com/8ZZCgAg.png",
+            "Item": "wuchang_frost",
+            "Color": "0xbb2af5",
+            "Des": "Passion only brings a full head of steam that destroys one's process of thinking. A rational thinker must stay cool and calm at all times.",
+            "Price": 16888
+        },
+        {
+            "Name": [
                 "[Costume] Prisoner - Electrolysis"
             ],
             "linkTag": "https://i.imgur.com/FZeT4VJ.png",
             "Item": "s13-1-2",
             "Color": "0xbb2af5",
             "Des": "He made use of the delicate relationship between science and alchemy to complete the performance of turning stone into gold, yet he has no idea that the real Philosopher's Stone is nothing but a glorified lie."
+        },
+        {
+            "Name": [
+                "[Costume] Seer - Final Honor"
+            ],
+            "linkTag": "https://i.imgur.com/RTNytX6.png",
+            "Item": "LP-13",
+            "Color": "0xbb2af5",
+            "Des": "After a horrible riot, the region he guarded was in decline. Yet despite the notoriety, he insisted on sending out this secret letter."
         },
         {
             "Name": [

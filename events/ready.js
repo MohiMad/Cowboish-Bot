@@ -54,26 +54,42 @@ module.exports = async (bot) => {
 
         }
 
-        const mutes = await Mutes.find({});
+        /*const mutes = await Mutes.find({});
 
         for (const mute of mutes) {
+
             if (mute.created + mute.muteTime <= Date.now()) {
-                const guild = bot.guilds.cache.get(mute.guildID);
-                if (!guild) return;
-                const member = guild.members.cache.get(mute.userID);
-                if (!member) return;
-                let muteRole = guild.roles.cache.find((x) => x.name === "muted");
-                if (!muteRole) muteRole = guild.roles.create({ name: "muted", color: "#27272b", permissions: [], reason: "Couldn't find a muted role!" });
-                if (!member.roles.has(muteRole.id)) return;
-                member.roles.remove(muteRole);
-                const logChannel = guild.channels.cache.get(mute.channelID);
-                if (!logChannel) return;
-                logChannel.send(`Unmuted ${member.user}!`);
+
                 await Mutes.deleteOne({ userID: member.user.id, guildID: guild.id }, err => {
                     if (err) console.log(err);
                 });
+
+                const guild = bot.guilds.cache.get(mute.guildID);
+
+                if (!guild) return;
+
+                const member = guild.members.cache.get(mute.userID);
+
+                if (!member) return;
+
+                let muteRole = guild.roles.cache.find((x) => x.name === "muted");
+
+                if (!muteRole) muteRole = guild.roles.create({ name: "muted", color: "#27272b", permissions: [], reason: "Couldn't find a muted role!" });
+
+                if (!member.roles.has(muteRole.id)) return;
+
+                member.roles.remove(muteRole);
+
+                const logChannel = guild.channels.cache.get(mute.channelID);
+
+                if (!logChannel) return;
+
+                logChannel.send(`Unmuted ${member.user}!`);
+
+
             }
         }
+        */
     }, 3000);
 
     const dbl = new DBL(config.dbl_token, bot);
