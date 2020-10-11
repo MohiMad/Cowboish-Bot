@@ -15,21 +15,22 @@ module.exports = {
 
         await newLP(message);
 
-        function freeToUse(message, fram) {
+        function freeToUse(message, fram, link) {
 
             let freeToUseEmbed = new MessageEmbed()
                 .setTitle("Your frame is now equipped!")
                 .setColor("0x14abf7")
                 .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
-                .attachFiles([`./pics/${fram}.png`])
-                .setThumbnail("attachment://" + fram + ".png");
+                .setThumbnail(link);
 
+            LP.frames.equipped = fram;
+            LP.save().catch(e => console.log(e));
             message.channel.send(freeToUseEmbed);
 
         }
 
 
-        function frameFunction(message, frames, eFrame) {
+        function frameFunction(message, frames, link, eFrame) {
             if (eFrame === false) {
                 return ErrorMsg(bot, message, "You don't have that frame!\nYou need to buy that frame to be able to equip it!\n\nTo buy the frame, do `" + prefix + "buy " + frames + "`\nTo check what frames exists, do `" + prefix + "shop frames`");
             }
@@ -38,8 +39,7 @@ module.exports = {
                 .setTitle("Your frame is now equipped!")
                 .setColor("0x14abf7")
                 .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
-                .attachFiles([`./pics/${frames}.png`])
-                .setThumbnail("attachment://" + frames + ".png");
+                .setThumbnail(link);
 
             LP.frames.equipped = frames;
             LP.save().catch(e => console.log(e));
@@ -135,50 +135,34 @@ module.exports = {
                     message.channel.send(framEmbed);
 
                 } else if (["frame1", "detective", "1"].includes(args[2].toLowerCase())) {
-                    return frameFunction(message, "frame1", LP.frames.frame1);
+                    return frameFunction(message, "frame1", "https://i.imgur.com/73wiNnM.png", LP.frames.frame1);
                 }
                 else if (["frame2", "valentine", "2"].includes(args[2].toLowerCase())) {
-                    return frameFunction(message, "frame2", LP.frames.frame2);
+                    return frameFunction(message, "frame2", "https://i.imgur.com/8WptNEG.png", LP.frames.frame2);
                 }
                 else if (["frame3", "allstar", "3"].includes(args[2].toLowerCase())) {
-                    return frameFunction(message, "frame3", LP.frames.frame3);
+                    return frameFunction(message, "frame3", "https://i.imgur.com/yTwfbim.png", LP.frames.frame3);
                 }
                 else if (["frame4", "tree", "4"].includes(args[2].toLowerCase())) {
-                    return frameFunction(message, "frame4", LP.frames.frame4);
+                    return frameFunction(message, "frame4", "https://i.imgur.com/FRxIF2C.png", LP.frames.frame4);
                 }
                 else if (["frame5", "5"].includes(args[2].toLowerCase())) {
-                    return frameFunction(message, "frame5", LP.frames.frame5);
+                    return frameFunction(message, "frame5", "https://i.imgur.com/hvQYa3I.png", LP.frames.frame5);
                 }
                 else if (["frame6", "6"].includes(args[2].toLowerCase())) {
-                    return frameFunction(message, "frame6", LP.frames.frame6);
+                    return frameFunction(message, "frame6", "https://i.imgur.com/nnU1X0s.png", LP.frames.frame6);
                 }
                 else if (["frame7", "7"].includes(args[2].toLowerCase())) {
-                    LP.frames.equipped = "frame7";
-                    LP.save().catch(e => console.log(e));
-
-                    freeToUse(message, "frame7");
-
+                    freeToUse(message, "frame7", "https://i.imgur.com/F5n43oz.png");
                 }
                 else if (["frame8", "8"].includes(args[2].toLowerCase())) {
-                    LP.frames.equipped = "frame8";
-                    LP.save().catch(e => console.log(e));
-
-                    freeToUse(message, "frame8");
-
+                    freeToUse(message, "frame8", "https://i.imgur.com/PXCCoOx.png");
                 }
                 else if (["frame9", "9"].includes(args[2].toLowerCase())) {
-                    LP.frames.equipped = "frame9";
-                    LP.save().catch(e => console.log(e));
-
-                    freeToUse(message, "frame9");
-
+                    freeToUse(message, "frame9", "https://i.imgur.com/MW9TXIU.png");
                 }
                 else if (["frame10", "10"].includes(args[2].toLowerCase())) {
-                    LP.frames.equipped = "frame10";
-                    LP.save().catch(e => console.log(e));
-
-                    freeToUse(message, "frame10");
-
+                    freeToUse(message, "frame10", "https://i.imgur.com/55lGOlK.png");
                 }
                 else if (["cowboish", "1kcowboish"].includes(args[2].toLowerCase())) {
                     if (!LP.Opened.includes("1kcowboish")) return message.channel.send(`**You can't equip this frame...**`);
@@ -374,16 +358,16 @@ module.exports = {
                 } else if (["colorful memory soul weaver", "(colorful memory soul weaver)"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_spider", "s12-2-49", "https://i.imgur.com/v0FyqYb.png");
 
-                }else if (["colorful memory prospector"].includes(portraitString.toLowerCase())) {
+                } else if (["colorful memory prospector"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_prospector", "s13-1-47", "https://i.imgur.com/jYhlLjL.png");
 
                 } else if (["colorful memory enchantress"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_enchantress", "s13-1-48", "https://i.imgur.com/MqLkHoP.png");
 
-                }else if (["colorful memory bonbon", "colorful memory guard 26"].includes(portraitString.toLowerCase())) {
+                } else if (["colorful memory bonbon", "colorful memory guard 26"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_bonbon", "s13-1-49", "https://i.imgur.com/qHcEiJH.png");
 
-                }else if (["colorful memory bloodyqueen", "colorful memory bloody queen", "colorful memory mary"].includes(portraitString.toLowerCase())) {
+                } else if (["colorful memory bloodyqueen", "colorful memory bloody queen", "colorful memory mary"].includes(portraitString.toLowerCase())) {
                     equipThePortrait("colorful_memory_bloodyqueen", "s13-1-50", "https://i.imgur.com/tsLS63D.png");
 
                 } else if (["makoto naegi", "makoto"].includes(portraitString.toLowerCase())) {
@@ -453,7 +437,7 @@ module.exports = {
                     ErrorMsg(bot, message, "**Ooops, looks like you provided a nonexistent portrait...**\nAre you sure it exists? Make sure you typed it correctly...\n\nTo check what portraits you actually own, do `" + prefix + "shop portrait` or `" + prefix + "equip portrait`\n\n**Example of Usage:**`" + prefix + "equip portrait colorful memory forward`\n\nWanna set your portrait back to your profile-picture? do `" + prefix + "equip portrait default`")
                 }
 
-            } else {    
+            } else {
                 return ErrorMsg(bot, message, "**Seems like you messed up with your first arguments**\nTo equip a specific *portrait-frame*, do `" + prefix + "equip frame <frameID>`\nAre you trying to equip a *portrait*? Do `" + prefix + "equip portrait <portrait name>`\n\nTo check what frames exist, do `" + prefix + "shop frames`\nTo check what portraits you have, do `" + prefix + "shop portraits`")
             }
 
