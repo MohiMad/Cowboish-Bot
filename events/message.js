@@ -3,6 +3,7 @@ const logicPath = require("../models/logicpath.js");
 const spamStopper = new Set();
 const { MessageAttachment } = require("discord.js");
 const { newLP } = require("../functions.js");
+const Cooldown = require("../models/cooldown.js");
 
 module.exports = async (bot, message) => {
 
@@ -42,6 +43,19 @@ module.exports = async (bot, message) => {
     async function announcIt() {
         let randomNumber = Math.floor(Math.random() * 10),
             oneTo10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        const checkForChannel = Cooldown.findOne({ userID: message.channel.id, command: "anniversary" });
+
+        if (checkForChannel) return;
+
+        const cooldownChannel = new Cooldown({
+            command: "anniversary",
+            userID: message.channel.id,
+            timeRemaining: Date.now() + 1800000,
+            dateNow: Date.now()
+        });
+
+        await cooldownChannel.save().catch(err => console.log(err));
 
         if (oneTo10[randomNumber] > 3 && oneTo10[randomNumber] < 8) {
             await newLP(message);
