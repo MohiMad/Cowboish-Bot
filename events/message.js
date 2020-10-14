@@ -45,7 +45,7 @@ module.exports = async (bot, message) => {
 
         if (oneTo10[randomNumber] > 3 && oneTo10[randomNumber] < 8) {
             await newLP(message);
-            const LP = await logicpath.findOne({ UserID: message.author.id });
+            const LP = await logicPath.findOne({ UserID: message.author.id });
             if (LP.Opened.includes("1yrAnniversary")) return;
             if (LP.Opened.includes("hasFired")) return;
 
