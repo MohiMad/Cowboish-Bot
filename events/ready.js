@@ -17,14 +17,17 @@ module.exports = async (bot) => {
     const activities_list = [
         `and yoinking around >:v`,
         //`Under maintenance... please stand by ;)`
-        `>invite | >help`,
+        /*`>invite | >help`,
         `Identity V in ${botGuildCount} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${botGuildCount}/2000`,
         `${botGuildCount} guilds | ${bot.users.cache.size} users`,
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
-        `Yeehaw! >:D`
+        `Yeehaw! >:D`*/
+        `Type "Happy Birthday Cowboish" In the chat to get free rewards :3`,
+        `Celebrating One Year Anniversary ✨🎉🥳`,
+        `Celebrating Cowboish's Anniversary ✨🎉🥳`
     ];
 
     setInterval(() => {
