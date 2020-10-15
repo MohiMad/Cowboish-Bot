@@ -337,6 +337,36 @@ module.exports = {
 		});
 		await newGuild.save().catch(err => console.log(err));
 
+	},
+	announcIt: async (message, event) => {
+		let randomNumber = Math.floor(Math.random() * 10),
+			oneTo10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+		const checkForChannel = Cooldown.findOne({ userID: message.channel.id, command: event });
+
+		if (checkForChannel) return;
+
+		const cooldownChannel = new Cooldown({
+			command: event,
+			userID: message.channel.id,
+			timeRemaining: Date.now() + 1800000,
+			dateNow: Date.now()
+		});
+
+		await cooldownChannel.save().catch(err => console.log(err));
+
+		if (oneTo10[randomNumber] > 3 && oneTo10[randomNumber] < 8) {
+			/*await newLP(message);
+			const LP = await logicPath.findOne({ UserID: message.author.id });
+			if (LP.Opened.includes("1yrAnniversary")) return;
+			if (LP.Opened.includes("hasFired")) return;
+
+			LP.Opened = [...LP.Opened, "hasFired"];
+			LP.save().catch(e => console.log(e));
+
+			message.channel.send("**Celebrating Cowboish's one year anniversary :D**\nType __`Happy Birthday Cowboish`__ in the chat to trigger the anniversary event :3", new MessageAttachment("https://i.imgur.com/LZlynfT.png"))
+			*/
+		}
 	}
 
 
