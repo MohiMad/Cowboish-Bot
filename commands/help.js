@@ -57,7 +57,7 @@ module.exports = {
                 .setTitle('🔧So u need sum help huh?🔧')
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription('`kick` | `ban` | `clear` | `mute` \n\nRemember to use my prefix `' + prefix + '` before the commands ;D')
+                .setDescription('`kick` | `ban` | `clear` | ~~`mute`~~ \n\nRemember to use my prefix `' + prefix + '` before the commands ;D')
                 .setFooter('A wild Cowboii :v', bot.user.displayAvatarURL());
 
             return message.channel.send(modEmbed);
@@ -103,7 +103,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("Image manipulation commands!")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription("Some commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair` | `chosendeath` | `siptea` | `postmanletter` | `paintingstare`")
+                .setDescription("Some commands are Identity V related as well ;D\nFeel free to suggest more image manipulation ideas by joining [Cowboish server](https://discordapp.com/invite/YWcSukS)\n\n`slap` | `ingamechat` | `chair` | `chosendeath` | `siptea` | `postmanletter` | `paintingstare` | `simpsonshug`")
 
             return message.channel.send(imageEmbed);
         }

@@ -134,6 +134,10 @@ module.exports = async (bot, message) => {
             bot.commands.get("paintingstare").execute(message, args, bot);
             break;
 
+        case "simpsonshug": case "iluvit": case "iloveit":
+            bot.commands.get("simpsonshug").execute(message, args, bot);
+            break;
+
 
 
         //IDENTITY V LOGICPATH COMMANDS

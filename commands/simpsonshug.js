@@ -3,14 +3,14 @@ const { coolEmbed, addCooldown, findCooldown, findMember } = require("../functio
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "paintingstare",
-    description: "Stare the at painter's um- painting >:v",
+    name: "simpsonshug",
+    description: "H U G UWU",
     execute: async (message, args, bot) => {
 
-        const cooldownCheck = await findCooldown(message, "paintingstare");
-        if (cooldownCheck) return coolEmbed(message, "Too much to stare at 0__0", "Take it easy, go grab yourself a cup of coffee and return and you'll be able to use this command again...\nOr you can stare at your screen for **REMAINING** >:v", cooldownCheck.timeRemaining, ["s"]);
+        const cooldownCheck = await findCooldown(message, "simpsonshug");
+        if (cooldownCheck) return coolEmbed(message, "You're hugging too frequently QwQ", "I know you love hugging and people love being hugged by you... But Cowboish needs a **REMAINING** rest now -v-", cooldownCheck.timeRemaining, ["s"]);
 
-        const canvas = Canvas.createCanvas(640, 608);
+        const canvas = Canvas.createCanvas(640, 633);
         const ctx = canvas.getContext('2d');
 
         const lookingForAMemberPing = await findMember(message, args.slice(1).join(" "));
@@ -35,16 +35,21 @@ module.exports = {
         } else {
             memberImage = await Canvas.loadImage(message.attachments.first().url);
         }
-        ctx.drawImage(memberImage, 52, 245, 166, 195);
 
-        const background = await Canvas.loadImage("https://i.imgur.com/jnnxE6C.png");
+        var rotation = -10;
+
+        ctx.rotate(rotation * Math.PI / 180);
+        ctx.drawImage(memberImage, 115, 115, 205, 145);
+        ctx.rotate((rotation * -1) * Math.PI / 180);
+
+        const background = await Canvas.loadImage("https://i.imgur.com/7wdjN4K.png");
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'starestare0-0.png');
+        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'simpsons_H-U-G.png');
 
         message.channel.send(attachment);
 
-        await addCooldown(message, 10000, "paintingstare");
+        await addCooldown(message, 10000, "simpsonshug");
 
 
     }
