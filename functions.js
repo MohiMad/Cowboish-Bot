@@ -291,7 +291,7 @@ module.exports = {
 
 		let des = Description.replace("REMAINING", Remaining);
 
-		let randomNumber = Math.floor(Math.random() * 3),
+		let randomNumber = Math.floor(Math.random() * 3);
 
 		if (randomNumber === 1) {
 			if (message.guild.id !== "636241255994490900") {
