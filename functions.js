@@ -297,10 +297,10 @@ module.exports = {
 			if (message.guild.id !== "636241255994490900") {
 				des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`
 			}
-		} else if (randomNumber === 1) {
+		} else if (randomNumber === 2) {
 			des = des + `\n\nWhile you here, you may want to follow **[Mohi on Twitter](https://twitter.com/MohiHaw)**${twitter} to stay updated ^-^`
 		} else {
-			des = des + `\n\n**Hello Cowboish user! Just know that Mohi loves youuuuuuu ${feaster}${feaster}**`
+			des = des + `\n\n**Hello Cowboish user!**\nJust know that Mohi loves youuuuuuu ${feaster}${feaster}`
 		}
 
 		const coolEmbed = new MessageEmbed()
