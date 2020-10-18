@@ -12,7 +12,7 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "daily");
 
-        if (cooldownCheck) return coolEmbed(message, "The cooldwon isn't over yet ma friend .-.", "Since it's a daily reward, the cooldown is set to **24** hours...\nYou have to wait **REMAINING** until you can obtain your daily-rewards once again :)", cooldownCheck.timeRemaining, ["h", "m", "s"]);
+        if (cooldownCheck) return coolEmbed(message, "The cooldown isn't over yet ma friend .-.", "Since it's a daily reward, the cooldown is set to **24** hours...\nYou have to wait **REMAINING** until you can obtain your daily-rewards once again :)", cooldownCheck.timeRemaining, ["h", "m", "s"]);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
