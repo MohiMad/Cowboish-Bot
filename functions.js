@@ -3,7 +3,7 @@ const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Cooldown = require("./models/cooldown.js");
 const humanizeDuration = require("humanize-duration");
-const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
+const { clues, frags, insp, ess1, ess2, ess3, twitter, feaster } = require("./emojis.json");
 const Guild = require("./models/guild.js");
 
 module.exports = {
@@ -291,13 +291,21 @@ module.exports = {
 
 		let des = Description.replace("REMAINING", Remaining);
 
-		if (message.guild.id !== "636241255994490900") {
-			des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`
+		let randomNumber = Math.floor(Math.random() * 3),
+
+		if (randomNumber === 1) {
+			if (message.guild.id !== "636241255994490900") {
+				des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`
+			}
+		} else if (randomNumber === 1) {
+			des = des + `\n\nWhile you here, you may want to follow **[Mohi on Twitter](https://twitter.com/MohiHaw)**${twitter} to stay updated ^-^`
+		} else {
+			des = des + `\n\n**Hello Cowboish user! Just know that Mohi loves youuuuuuu ${feaster}${feaster}**`
 		}
 
 		const coolEmbed = new MessageEmbed()
 			.setTitle(Title)
-			.setColor("0xFF0000")
+			.setColor("FFF800")
 			.setDescription(des)
 			.setThumbnail("https://i.imgur.com/q6GYP17.png")
 			.setAuthor(message.author.username, message.author.displayAvatarURL())

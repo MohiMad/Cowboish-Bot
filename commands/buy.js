@@ -13,34 +13,29 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        async function frame(message, frame, price, framePath) {
-            if (framePath === true) {
-                return ErrorMsg(bot, message, "You already own this frame, why would you buy it twice?\nAre you trying to equip it instead of another one?\nIf so then `" + prefix + "equip` is the command you're looking for...");
-            } else if (LP.frags < price) {
-                return ErrorMsg(bot, message, "Poor you can't afford that!\nYou need " + `**${price - LP.frags}**<:frags:655840344725913600> more...`)
-            } else {
+        async function frame(message, frame, price, framePath, link) {
+            if (framePath === true) return ErrorMsg(bot, message, "You already own this frame, why would you buy it twice?\nAre you trying to equip it instead of another one?\nIf so then `" + prefix + "equip` is the command you're looking for...");
 
-                let frameEmbed = new MessageEmbed()
-                    .setAuthor("Successful purchase!", message.author.displayAvatarURL())
-                    .setDescription(`You successfully bought ${frame} and paid ${price}<:frags:655840344725913600>\nIt's now equipped and can be seen if you do` + "`" + prefix + "logicpath`\n\nTo change your frame to another one, do `" + prefix + "equip <FrameID>`")
-                    .attachFiles([`./pics/${frame}.png`])
-                    .setThumbnail("attachment://" + frame + ".png");
+            if (LP.frags < price) return ErrorMsg(bot, message, "Poor you can't afford that!\nYou need " + `**${price - LP.frags}**<:frags:655840344725913600> more...`)
 
-                if (frame === "frame1") LP.frames.frame1 = true;
-                if (frame === "frame2") LP.frames.frame2 = true;
-                if (frame === "frame3") LP.frames.frame3 = true;
-                if (frame === "frame4") LP.frames.frame4 = true;
-                if (frame === "frame5") LP.frames.frame5 = true;
-                if (frame === "frame6") LP.frames.frame6 = true;
+            let frameEmbed = new MessageEmbed()
+                .setAuthor("Successful purchase!", message.author.displayAvatarURL())
+                .setDescription(`You successfully bought ${frame} and paid ${price}<:frags:655840344725913600>\nIt's now equipped and can be seen if you do` + "`" + prefix + "logicpath`\n\nTo change your frame to another one, do `" + prefix + "equip <FrameID>`")
+                .setThumbnail(link);
 
-                LP.frames.equipped = frame;
-                LP.frags = LP.frags - price;
+            if (frame === "frame1") LP.frames.frame1 = true;
+            if (frame === "frame2") LP.frames.frame2 = true;
+            if (frame === "frame3") LP.frames.frame3 = true;
+            if (frame === "frame4") LP.frames.frame4 = true;
+            if (frame === "frame5") LP.frames.frame5 = true;
+            if (frame === "frame6") LP.frames.frame6 = true;
 
-                await LP.save().catch(e => console.log(e));
+            LP.frames.equipped = frame;
+            LP.frags = LP.frags - price;
 
-                message.channel.send(frameEmbed);
-            }
+            await LP.save().catch(e => console.log(e));
 
+            return message.channel.send(frameEmbed);
         };
 
         async function buyIt(charName, item, price, boughtMessage, URL) {
@@ -257,17 +252,17 @@ module.exports = {
         else if (["galatea", "sculptor", "thesculptor", "the-sculptor"].includes(args[1].toLowerCase())) await buyIt("Sculptor", LP.Sculptor, 4508, "You now own the Sculptor and can play as her by doing `" + prefix + "hunt sculptor`", "https://vignette.wikia.nocookie.net/id5/images/2/22/Sculptor.PNG/revision/latest/scale-to-width-down/1000?cb=20200728030734");
 
         //Frames begins HERE
-        else if (["frame1", "detective"].includes(args[1].toLowerCase())) return frame(message, "frame1", 2888, LP.frames.frame1);
+        else if (["frame1", "detective"].includes(args[1].toLowerCase())) return frame(message, "frame1", 2888, LP.frames.frame1, "https://i.imgur.com/73wiNnM.png");
 
-        else if (["frame2", "valentine"].includes(args[1].toLowerCase())) return frame(message, "frame2", 2888, LP.frames.frame2);
+        else if (["frame2", "valentine"].includes(args[1].toLowerCase())) return frame(message, "frame2", 2888, LP.frames.frame2, "https://i.imgur.com/8WptNEG.png");
 
-        else if (["frame3", "allstar"].includes(args[1].toLowerCase())) return frame(message, "frame3", 2888, LP.frames.frame3);
+        else if (["frame3", "allstar"].includes(args[1].toLowerCase())) return frame(message, "frame3", 2888, LP.frames.frame3, "https://i.imgur.com/yTwfbim.png");
 
-        else if (["frame4", "tree"].includes(args[1].toLowerCase())) return frame(message, "frame4", 2888, LP.frames.frame4);
+        else if (["frame4", "tree"].includes(args[1].toLowerCase())) return frame(message, "frame4", 2888, LP.frames.frame4, "https://i.imgur.com/FRxIF2C.png");
 
-        else if (["frame5"].includes(args[1].toLowerCase())) return frame(message, "frame5", 28888, LP.frames.frame5);
+        else if (["frame5"].includes(args[1].toLowerCase())) return frame(message, "frame5", 28888, LP.frames.frame5, "https://i.imgur.com/hvQYa3I.png");
 
-        else if (["frame6"].includes(args[1].toLowerCase())) return frame(message, "frame6", 2888, LP.frames.frame6);
+        else if (["frame6"].includes(args[1].toLowerCase())) return frame(message, "frame6", 2888, LP.frames.frame6, "https://i.imgur.com/nnU1X0s.png");
 
         //we begin with portraits here huh?
 
