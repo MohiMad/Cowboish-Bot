@@ -103,8 +103,8 @@ module.exports = {
         async function essBuy(name, path, emoji, URL) {
             let number;
             if (!args[2]) number = 1;
-            else if (isNaN(args[2])) number = 1;
-            else if (["-"].includes(args[2])) return message.reply(`**you can't buy a negative amount of essences >:/**`);
+             else if (isNaN(args[2])) number = 1;
+             else if (args[2].includes("-")) return message.reply(`**you can't buy a negative amount of essences >:/**`);
             else number = Number(args[2]);
 
             if (LP.Inspirations < (96 * number)) return message.channel.send(`**${message.author.username}** you can't afford buying that!\nYou need **${(96 * number) - LP.Inspirations}**${insp} more...`);
