@@ -482,7 +482,7 @@ module.exports = {
                     des: `[《 TIME LIMITED 》](https://youtu.be/qh_0YACMxyo)\n*Ends at: 1st November*\n\n:three: :three: | **Forward - Black Nose** ─ __3999__${e.frags}\n\n:three: :four: | **Smiley Face - Scarecrow** ─ __3999__${e.frags}`
                 },
                 {
-                    link: "https://i.imgur.com/I7wgeau.png",
+                    link: "https://i.imgur.com/vAl1ABG.png",
                     des: `[《 TIME LIMITED 》](https://i.imgur.com/vAl1ABG.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
                 },
                 {
