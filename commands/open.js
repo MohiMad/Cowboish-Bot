@@ -3,7 +3,7 @@ const { stripIndents } = require("common-tags");
 const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../functions.js");
 const { ess1, ess2, ess3, frags } = require("../emojis.json");
 const logicPath = require("../models/logicpath.js");
-const { firstEssence } = require("../essences/essences.json");
+const { firstEssence, secondEssence } = require("../essences/essences.json");
 
 const { statsCheck } = require("../essences/essenceFunctions.js");
 
@@ -34,7 +34,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
                         ${ess1} | **Essences s13-1** ─ ID ➜ ${s10_cmd}
-                        ${ess2} | ~~**Essence s13-2**~~ ─ ID ➜ ${s10_2_cmd}
+                        ${ess2} | **Essence s13-2** ─ ID ➜ ${s10_2_cmd}
                         ${ess3} | ~~**Essence s13-3**~~ ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
@@ -57,26 +57,14 @@ module.exports = {
 
             if (!args[1]) return message.channel.send(noargsEmbed);
 
+            for (var i = 0; i < 2; i++) {
 
-            for (var i = 0; i < 1; i++) {
+                let essence;
 
-                let essence,
-                    essenceLP;
+                if (i === 0) essence = firstEssence;
+                if (i === 1) essence = secondEssence;
+                //if (i === 2) essence = thirdEssence;
 
-                if (i === 0) {
-                    essence = firstEssence;
-                    essenceLP = LP.Ess1;
-                }
-
-                if (i === 1) {
-                    essence = secondEssence;
-                    essenceLP = LP.Ess2;
-
-                }
-                if (i === 2) {
-                    essence = thirdEssence;
-                    essenceLP = LP.Ess3;
-                }
 
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
 
@@ -86,7 +74,7 @@ module.exports = {
 
                     if (!args[2] || args[2] === "1") {
                         boolean = true;
-                        if (essenceLP === 0) return message.reply("**You don't have any " + essence[0].Emoji + " `" + essence[0].WhichEss + "` essences!**\nTry rolling some dices or buy some from the shop!");
+                        if (LP[essence[0].WhichEss] === 0) return message.reply("**You don't have any " + essence[0].Emoji + " `" + essence[0].WhichEss + "` essences!**\nTry rolling some dices or buy some from the shop!");
 
 
                         const embed = new MessageEmbed()
@@ -103,22 +91,17 @@ module.exports = {
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
                             if (EssenceONLY[randomItem].Item === "s13-1-1") LP.Painter = true;
 
-                            if (EssenceONLY[randomItem].Tier === "S") LP.S = LP.S + 1;
-                            if (EssenceONLY[randomItem].Tier === "A") LP.A = LP.A + 1;
-                            if (EssenceONLY[randomItem].Tier === "S") LP.B = LP.B + 1;
-                            if (EssenceONLY[randomItem].Tier === "C") LP.C = LP.C + 1;
-                            if (EssenceONLY[randomItem].Tier === "D") LP.D = LP.D + 1;
+                            LP[EssenceONLY[randomItem].Tier] = LP[EssenceONLY[randomItem].Tier] + 1;
 
-                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49", "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
+                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49", "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50", "s13-2-46", "s13-2-47", "s13-2-48", "s13-2-49"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
                         }
-                        if (i === 0) LP.Ess1 = LP.Ess1 - 1;
-                        if (i === 1) LP.Ess2 = LP.Ess2 - 1;
-                        if (i === 2) LP.Ess3 = LP.Ess3 - 1;
+
+                        LP[essence[0].WhichEss] = LP[essence[0].WhichEss] - 1;
 
                         await LP.save().catch(err => console.log(err));
                         await addCooldown(message, 3000, "open");
 
-                        message.channel.send(embed);
+                        return message.channel.send(embed);
 
                     } else {
                         boolean = true;
@@ -126,11 +109,9 @@ module.exports = {
 
                         if (isNaN(args[2])) return message.channel.send(`**${author}** please provide me the amount of **${essence[0].WhichEss}** essences ${essence[0].Emoji} you want to open...`);
                         if (EssenceNumber > 10) return message.channel.send(`**${author}** can't open more than 10 essences...`);
-                        if (essenceLP < EssenceNumber) return message.channel.send(`**You have less than ${EssenceNumber} ${essence[0].WhichEss} essences, ${message.author.username}**`);
+                        if (LP[essence[0].WhichEss] < EssenceNumber) return message.channel.send(`**You have less than ${EssenceNumber} ${essence[0].WhichEss} essences, ${message.author.username}**`);
                         if (EssenceNumber < 1) return message.reply("**Can't open less than 1 essence >:/**");
                         if (["-"].includes(EssenceNumber)) return message.reply("**Can't open a negative amount of essences >:/**");
-
-                        let itemNumber = Math.floor(Math.random() * essence.slice(1).length);
 
                         let itemNumber1 = Math.floor(Math.random() * essence.slice(1).length);
                         let itemNumber2 = Math.floor(Math.random() * essence.slice(1).length);
@@ -172,21 +153,15 @@ module.exports = {
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) **${EssenceONLY[rndom].Name}**`;
 
                             } else {
-
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
                                 if (EssenceONLY[rndom].Item === "s13-1-1") LP.Painter = true;
-
-                                if (EssenceONLY[rndom].Tier === "S") LP.S = LP.S + 1;
-                                if (EssenceONLY[rndom].Tier === "A") LP.A = LP.A + 1;
-                                if (EssenceONLY[rndom].Tier === "S") LP.B = LP.B + 1;
-                                if (EssenceONLY[rndom].Tier === "C") LP.C = LP.C + 1;
-                                if (EssenceONLY[rndom].Tier === "D") LP.D = LP.D + 1;
+                                LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
 
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) ${EssenceONLY[rndom].Name}`;
-
                             }
 
                         }
+
 
                         description = description.replace("\n", `Duplicated items gave you: **${fragments}** <:frags:655840344725913600>`);
 
@@ -201,9 +176,7 @@ module.exports = {
 
                         LP.frags = LP.frags + fragments;
 
-                        if (i === 0) LP.Ess1 = LP.Ess1 - EssenceNumber;
-                        if (i === 1) LP.Ess2 = LP.Ess2 - EssenceNumber;
-                        if (i === 2) LP.Ess3 = LP.Ess3 - EssenceNumber;
+                        LP[essence[0].WhichEss] = LP[essence[0].WhichEss] - EssenceNumber;
 
                         LP.save().catch(err => console.log(err));
                         await addCooldown(message, 1000 * EssenceNumber, "open");
@@ -215,7 +188,7 @@ module.exports = {
                 else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                     boolean = true;
 
-                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s13-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " | **Essence s13-2** ─ ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s13-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s13-1`");
+                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s13-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Essence s13-2** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s13-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s13-1`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
                         await statsCheck(message, `s13-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);

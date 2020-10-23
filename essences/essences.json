@@ -1,7 +1,14 @@
 {
     "firstEssence": [
         {
-            "Shortcuts": ["s13-1", "ess1", "1", "s131", "131", "one"],
+            "Shortcuts": [
+                "s13-1",
+                "ess1",
+                "1",
+                "s131",
+                "131",
+                "one"
+            ],
             "WhichEss": "Ess1",
             "LinkOfIt": "https://i.imgur.com/33Rr0iU.png",
             "Format": ".jpg",
@@ -399,7 +406,7 @@
             "Title": "🖤 Ouu it's a Gardener Portrait UwU 🖤",
             "Color": "0x000000",
             "Footer": "At least portraits are functional now :3"
-        },    
+        },
         {
             "Name": "[Graffiti] Mad Eyes - Cute Version",
             "LinkTag": "LjInSSQ",
@@ -514,7 +521,518 @@
             "Color": "0x000000",
             "Footer": ":D"
         }
-
-
+    ],
+    "secondEssence": [
+        {
+            "Shortcuts": [
+                "s13-2",
+                "ess2",
+                "2",
+                "s132",
+                "132",
+                "two"
+            ],
+            "WhichEss": "Ess2",
+            "LinkOfIt": "https://i.imgur.com/JGu6jXE.png",
+            "Format": ".jpg",
+            "Emoji": "<:ess2:655840643847028751>"
+        },
+        {
+            "Name": "[Costume] Photographer - Judge",
+            "LinkTag": "JmQCp2R",
+            "Item": "s13-2-1",
+            "Tier": "S",
+            "FragAmount": 2000,
+            "Title": "💛 author got Judge for Photoboi 💛",
+            "Color": "0xfcba03",
+            "Footer": "Ngl i thought he was pointing his middle finger xD"
+        },
+        {
+            "Name": "[Costume] Thief - Deputy",
+            "LinkTag": "MIJ5Er7",
+            "Item": "s13-2-2",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "💜 author got Deputy for Thief 💜",
+            "Color": "0xbb2af5",
+            "Footer": "*uses shout emote*"
+        },
+        {
+            "Name": "[Costume] Mind's Eye - Clerk",
+            "LinkTag": "9RKDrfl",
+            "Item": "s13-2-3",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "💜 AAA author got Clerk for cutie pie 💜",
+            "Color": "0xbb2af5",
+            "Footer": "AAAAAAAAA Mind's eye cutie >-<"
+        },
+        {
+            "Name": "[Costume] Seer - Bailiff",
+            "LinkTag": "3WfzNNv",
+            "Item": "s13-2-5",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets Bailiff woohoo 💙",
+            "Color": "0x2e65b8",
+            "Footer": "Owl abuser skin 😒"
+        },
+        {
+            "Name": "[Costume] Priestess - Court 5 Commissioner",
+            "LinkTag": "3cDwITk",
+            "Item": "s13-2-6",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author a Priestess skin 💙",
+            "Color": "0x2e65b8",
+            "Footer": "Ngl i suffered typing the name of that skin xD"
+        },
+        {
+            "Name": "[Costume] Guard 26 - Court 6 Commissioner",
+            "LinkTag": "1fkNfXQ",
+            "Item": "s13-2-7",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author got Court 6 Commissioner 💙",
+            "Color": "0x2e65b8",
+            "Footer": "Too long name right?"
+        },
+        {
+            "Name": "[Costume] Bloody Queen - Accused Duchess",
+            "LinkTag": "Eb95NSM",
+            "Item": "s13-2-8",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets a BloodyQueen skin 💙",
+            "Color": "0x2e65b8",
+            "Footer": ":D"
+        },
+        {
+            "Name": "[Costume] Dancer - Court 7 Commissioner",
+            "LinkTag": "BMISEMh",
+            "Item": "s13-2-9",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets Court 7 Commissioner 💙",
+            "Color": "0x2e65b8",
+            "Footer": "So the only difference between the name is a number '-'"
+        },
+        {
+            "Name": "[Costume] Sculptor - Court 3 Commissioner",
+            "LinkTag": "uDWtwSu",
+            "Item": "s13-2-10",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets Court 3 Commissioner 💙",
+            "Color": "0x2e65b8",
+            "Footer": "Love how the 'Court Commissioners' aren't in order :v"
+        },
+        {
+            "Name": "[Emote] Guard 26 - Threaten",
+            "LinkTag": "4YqxoRz",
+            "Item": "s13-2-11",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "🧡 author got Threaten for Bonbon 🧡",
+            "Color": "0x795C4C",
+            "Footer": "Bonbon - Guard 26 - Pingu - Trashcan - what else?"
+        },
+        {
+            "Name": "[Emote] Gravekeeper - Dance",
+            "LinkTag": "dQ7y5iY",
+            "Item": "s13-2-12",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "🧡 Aaaa author got Dance for Gravekeeper 🧡",
+            "Color": "0x795C4C",
+            "Footer": "*dances cutely*"
+        },
+        {
+            "Name": "[Standby Motion] Priestess - Snooze",
+            "LinkTag": "Jq0Jcny",
+            "Item": "s13-2-13",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets Snooze for Fiona 💙",
+            "Color": "0x2A6DD4",
+            "Footer": "Zzz"
+        },
+        {
+            "Name": "[Standby Motion] Barmaid - Ready",
+            "LinkTag": "jn8IvQ6",
+            "Item": "s13-2-14",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets Ready for Barmaid 💙",
+            "Color": "0x2A6DD4",
+            "Footer": "*Hits the 'ready' button*"
+        },
+        {
+            "Name": "[Costume] Lucky Guy - Mellow Yellow",
+            "LinkTag": "CUAEU69",
+            "Item": "s13-2-15",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Mellow Yellow for author UwU 💚",
+            "Color": "0x909F82",
+            "Footer": "💛💛💛💛💛💛💛"
+        },
+        {
+            "Name": "[Costume] Doctor - Calm Yellow",
+            "LinkTag": "KcJn66h",
+            "Item": "s13-2-16",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Calm Yellow for author UwU 💚",
+            "Color": "0x909F82",
+            "Footer": "💛💛💛💛💛💛💛"
+        },
+        {
+            "Name": "[Costume] Dancer - Purple Tune",
+            "LinkTag": "cBXNWwm",
+            "Item": "s13-2-17",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Purple Tune 💚",
+            "Color": "0x909F82",
+            "Footer": "The woman behind the slaughter?"
+        },
+        {
+            "Name": "[Costume] Gravekeeper - Yellow Mud",
+            "LinkTag": "7HdlQKh",
+            "Item": "s13-2-18",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Take this yellow mud, author! 💚",
+            "Color": "0x909F82",
+            "Footer": "*Throws mud at you*"
+        },
+        {
+            "Name": "[Costume] Enchantress - Blue Jellyfish",
+            "LinkTag": "zrvpdAp",
+            "Item": "s13-2-19",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Blue Jellyfish for Enchantress 💚",
+            "Color": "0x909F82",
+            "Footer": ">:3"
+        },
+        {
+            "Name": "[Costume] Prisoner - Moldy Bread",
+            "LinkTag": "Ul1bnzq",
+            "Item": "s13-2-20",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Take this moldy bread, author 💚",
+            "Color": "0x909F82",
+            "Footer": "Blonde rat :v"
+        },
+        {
+            "Name": "[Costume] Wildling - Red Maple Leaf",
+            "LinkTag": "WxMknX7",
+            "Item": "s13-2-21",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got a Wildling skin 💚",
+            "Color": "0x909F82",
+            "Footer": "🐗🐗🐗"
+        },
+        {
+            "Name": "[Costume] First Officer - Black Mast",
+            "LinkTag": "jfbaoCb",
+            "Item": "s13-2-22",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Black Mast 💚",
+            "Color": "0x909F82",
+            "Footer": "🖤 3 🖤"
+        },
+        {
+            "Name": "[Costume] Herald - Blood Moon Red",
+            "LinkTag": "POy8tlW",
+            "Item": "s13-2-23",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Blood Moon Red 💚",
+            "Color": "0x909F82",
+            "Footer": "Why do all of her skins look the same?"
+        },
+        {
+            "Name": "[Emote] Mercenary - Shame",
+            "LinkTag": "ULMazDo",
+            "Item": "s13-2-24",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Shame emote for Merc 💚",
+            "Color": "0x909F82",
+            "Footer": "Shame -v-"
+        },
+        {
+            "Name": "[Emote] Coordinator - Shame",
+            "LinkTag": "eU57hFp",
+            "Item": "s13-2-25",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Shame emote for Coord 💚",
+            "Color": "0x909F82",
+            "Footer": "Shame -v-"
+        },
+        {
+            "Name": "[Emote] Seer - Shame",
+            "LinkTag": "qnIUg58",
+            "Item": "s13-2-26",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Shame emote for Seer 💚",
+            "Color": "0x909F82",
+            "Footer": "Shame -v-"
+        },
+        {
+            "Name": "[Emote] Female Dancer - Shame",
+            "LinkTag": "i4YFAmr",
+            "Item": "s13-2-27",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Shame emote for Dancer 💚",
+            "Color": "0x909F82",
+            "Footer": "Shame -v-"
+        },
+        {
+            "Name": "[Standby Motion] Forward - Snooze",
+            "LinkTag": "sMzlsch",
+            "Item": "s13-2-28",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Snooze Standby Motion 💚",
+            "Color": "0x909F82",
+            "Footer": "..."
+        },
+        {
+            "Name": "[Standby Motion] Explorer - Ready",
+            "LinkTag": "IOO2BMv",
+            "Item": "s13-2-29",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got a Standby Motion 💚",
+            "Color": "0x909F82",
+            "Footer": "Ready?"
+        },
+        {
+            "Name": "[Standby Motion] Mercenary - Ready",
+            "LinkTag": "Gex6NOu",
+            "Item": "s13-2-30",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got a Standby Motion 💚",
+            "Color": "0x909F82",
+            "Footer": "Ready?"
+        },
+        {
+            "Name": "[Standby Motion] Lawyer - Ready",
+            "LinkTag": "TMYBWz2",
+            "Item": "s13-2-31",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got a Standby Motion 💚",
+            "Color": "0x909F82",
+            "Footer": "Ready?"
+        },
+        {
+            "Name": "[Standby Motion] Forward - Wait",
+            "LinkTag": "7B9gjLG",
+            "Item": "s13-2-32",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got a Standby Motion 💚",
+            "Color": "0x909F82",
+            "Footer": "Wait!"
+        },
+        {
+            "Name": "[Graffiti] The Ripper's Claws - Cartoon",
+            "LinkTag": "bCZ95gG",
+            "Item": "s13-2-33",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a Ripper graffiti 💚",
+            "Color": "0x909F82",
+            "Footer": "@-@"
+        },
+        {
+            "Name": "[Graffiti] Mechanic's Controller - Cartoon",
+            "LinkTag": "ZnSK3yi",
+            "Item": "s13-2-34",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Mechanic's Controller 💚",
+            "Color": "0x909F82",
+            "Footer": "🕹️ ~ 🕹️"
+        },
+        {
+            "Name": "[Graffiti] Mercenary's Hood - Cartoon",
+            "LinkTag": "XPE3lei",
+            "Item": "s13-2-35",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Mercenary's Hood 💚",
+            "Color": "0x909F82",
+            "Footer": ":D"
+        },
+        {
+            "Name": "[Graffiti] Gamekeeper's Horn - Cartoon",
+            "LinkTag": "PXPgQGS",
+            "Item": "s13-2-36",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Gamekeeper's Horn 💚",
+            "Color": "0x909F82",
+            "Footer": "🦌🦌🦌"
+        },
+        {
+            "Name": "[Portrait] Black-and-White - Mechanic",
+            "PortraitName": "Black and White Mechanic",
+            "LinkTag": "94ifvtx",
+            "Item": "s12-2-36",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Mechanic's Portrait 💚",
+            "Color": "0x909F82",
+            "Footer": "🖤🤍🖤🤍"
+        },
+        {
+            "Name": "[Portrait] Black-and-White - Lawyer",
+            "PortraitName": "Black and White Lawyer",
+            "LinkTag": "YNmcOpV",
+            "Item": "s12-2-37",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Lawyer's Portrait 💚",
+            "Color": "0x909F82",
+            "Footer": "🖤🤍🖤🤍"
+        },
+        {
+            "Name": "[Portrait] Black-and-White - Doctor",
+            "PortraitName": "Black and White Doctor",
+            "LinkTag": "jYIZpcE",
+            "Item": "s12-2-38",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Doctor's Portrait 💚",
+            "Color": "0x909F82",
+            "Footer": "🖤🤍🖤🤍"
+        },
+        {
+            "Name": "[Graffiti] Embalmer - Silhouette",
+            "LinkTag": "KD6tdHu",
+            "Item": "s13-2-40",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 author gets an Embalmer graffiti 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "It's okay to be unlucky :')"
+        },
+        {
+            "Name": "[Graffiti] Dream Witch - Silhouette",
+            "LinkTag": "HWEQ2h3",
+            "Item": "s13-2-40",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 author get a graffit 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "Everyone has gotten graffitis before... don't cri ;-;"
+        },
+        {
+            "Name": "[Graffiti] Enchantress - Gray Shadow",
+            "LinkTag": "h02YWqU",
+            "Item": "s13-2-41",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 author gets a graffit for Enchantress 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "Clicker mains wouldn't complain"
+        },
+        {
+            "Name": "[Graffiti] Evil Reptilian - Cute Version",
+            "LinkTag": "HAJwf7J",
+            "Item": "s13-2-42",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 Aaaa author gets a cute Lizzyboi graffit 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "How is it called 'cute' when Luchi is cute from the beginning? >.<"
+        },
+        {
+            "Name": "[Graffiti] Postman - Letter Cartoon",
+            "LinkTag": "cqm5fRt",
+            "Item": "s13-2-43",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 Aaaa author gets a Postman graffit 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "📧📧📧📧"
+        },
+        {
+            "Name": "[Graffiti] Acrobat - Gray Shadow",
+            "LinkTag": "b7zkG1t",
+            "Item": "s13-2-44",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 author gets a Acrobat graffit 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "These Gray Shadow graffitis ain't pretty :<"
+        },
+        {
+            "Name": "[Graffiti] Guard 26 - Silhouette",
+            "LinkTag": "9fDZ5I5",
+            "Item": "s13-2-45",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 a Silhouette for author :3 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": ":'D"
+        },
+        {
+            "Name": "[Portrait] Colorful Memory - Wu Chang",
+            "LinkTag": "2z3K53R",
+            "PortraitName": "Colorful Memory Wu Chang",
+            "Item": "s13-2-46",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 author got a Wuwu portrait 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "Yeeey :D"
+        },
+        {
+            "Name": "[Portrait] Colorful Memory - The Mind's Eye",
+            "PortraitName": "Colorful Memory Minds Eye",
+            "LinkTag": "0K5Yaam",
+            "Item": "s13-2-47",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 AAAA author got a cute Helena portrait 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "Mind's eye ❤️❤️ ヽ(´･ω･`)丿"
+        },
+        {
+            "Name": "[Portrait] Colorful Memory - Mercenary",
+            "PortraitName": "Colorful Memory Mercenary",
+            "LinkTag": "tLgW2ok",
+            "Item": "s13-2-48",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 author got a Mercenary portrait 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "*alexa play 'they call me the merc'*"
+        },
+        {
+            "Name": "[Portrait] Colorful Memory - Mechanic",
+            "PortraitName": "Colorful Memory Mechanic",
+            "LinkTag": "w0BmiJx",
+            "Item": "s13-2-49",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 Ouuu author got a Mechanic portrait 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "Mec cutie >___<"
+        }
     ]
 }

@@ -113,7 +113,6 @@ module.exports = {
             if (x.searchArray.includes(args[3].toLowerCase())) {
                 if (isNaN(args[2]) === true) return ErrorMsg(bot, message, "The amount to be gifted must be a number!\nExample: `" + prefix + "gift`" + ` ${message.author}` + "` 10 " + x.searchArray[1] + "`");
 
-
                 if (LP[x.item] < args[2]) return ErrorMsg(bot, message, `You don't have enough ${x.searchArray[0]}!\nYou have **${LP[x.item]}** ${x.searchArray[0]}!`);
 
                 giftedLP[x.item] = giftedLP[x.item] + Number(args[2]);
@@ -121,7 +120,6 @@ module.exports = {
                 LP[x.item] = LP[x.item] - Number(args[2]);
 
                 [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
-
 
                 let giftedEmbed = new MessageEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL())

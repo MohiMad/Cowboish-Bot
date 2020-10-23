@@ -47,7 +47,7 @@ module.exports = {
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
             ${e.ess1} | **Essence s13-1** - Price : *96* ${e.insp} - ID: __*s13-1*__
-            ${e.ess2} | ~~**Essence s13-2**~~ - Price : *96* ${e.insp} - ID: __*s13-2*__
+            ${e.ess2} | **Essence s13-2** - Price : *96* ${e.insp} - ID: __*s13-2*__
             ${e.ess3} | ~~**Essence s13-3**~~ - Price : *96* ${e.insp} - ID: __*s13-3*__
             `)
             .setColor("RANDOM")
@@ -483,7 +483,7 @@ module.exports = {
                 },
                 {
                     link: "https://i.imgur.com/I7wgeau.png",
-                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}`
+                    des: `[《 TIME LIMITED 》](https://i.imgur.com/vAl1ABG.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",

@@ -131,8 +131,8 @@ module.exports = {
 
             ctx.font = 'bold 23px sitka-display';
 
+            //Edit this here to check through the Opened instead
             ctx.fillText(LP.S, 90, 405);
-
             ctx.fillText(LP.A, 246, 405);
 
             ctx.font = '15px sitka-display';

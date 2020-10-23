@@ -289,8 +289,10 @@ module.exports = {
 
                     LP.Opened = [...LP.Opened, skin.Item];
                     LP.frags = LP.frags - skin.Price;
+
                     if (skin.Color === "0xfcba03") LP.S = LP.S + 1;
                     else LP.A = LP.A + 1;
+                    
                     await LP.save().catch(e => console.log(e));
 
                     message.channel.send(boughtSkinEmbed);

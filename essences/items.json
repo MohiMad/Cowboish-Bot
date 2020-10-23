@@ -160,6 +160,15 @@
         },
         {
             "Name": [
+                "[Costume] Photographer - Judge"
+            ],
+            "linkTag": "https://i.imgur.com/YgApigf.png",
+            "Item": "s13-2-1",
+            "Color": "0xfcba03",
+            "Des": "Justice? Fairness? These are only worth considering when one isn't bound by shackles."
+        },
+        {
+            "Name": [
                 "[Costume] Guard 26 - Monokuma"
             ],
             "linkTag": "https://i.imgur.com/LObjX0X.png",
@@ -566,12 +575,44 @@
         },
         {
             "Name": [
+                "Forward - Locomotive",
+                "locomotive",
+                "36",
+                "thirtysix",
+                "forwardlocomotive"
+            ],
+            "linkTag": "",
+            "Item": "forward_locomotive",
+            "Color": "0xfcba03",
+            "Des": "The train he vowed to protect never reached the station. When the world is frozen still, the interminable engine he carries shall power the last train that has no terminus.",
+            "Price": 16888
+        },
+        {
+            "Name": [
                 "[Costume] Prisoner - Electrolysis"
             ],
             "linkTag": "https://i.imgur.com/FZeT4VJ.png",
             "Item": "s13-1-2",
             "Color": "0xbb2af5",
             "Des": "He made use of the delicate relationship between science and alchemy to complete the performance of turning stone into gold, yet he has no idea that the real Philosopher's Stone is nothing but a glorified lie."
+        },
+        {
+            "Name": [
+                "[Costume] Thief - Deputy"
+            ],
+            "linkTag": "https://i.imgur.com/crNoW25.png",
+            "Item": "s13-2-2",
+            "Color": "0xbb2af5",
+            "Des": "The tears of innocence and the feathers of lust - I hope you measure their weights before the judgment day comes."
+        },
+        {
+            "Name": [
+                "[Costume] Mind's Eye - Clerk"
+            ],
+            "linkTag": "https://i.imgur.com/ksb3EOS.png",
+            "Item": "s13-3-2",
+            "Color": "0xbb2af5",
+            "Des": "Wisdom is the source of all conflicts, and ignorance is the annotation of all sins."
         },
         {
             "Name": [
@@ -725,9 +766,9 @@
             "Item": "0",
             "linkTag": "pfp",
             "logicpathID": "0",
-            "x": 32,
-            "y": 26,
-            "Width": 108,
+            "x": 30.5,
+            "y": 24.5,
+            "Width": 113,
             "Height": 113
         },
         {
@@ -1336,6 +1377,65 @@
             "y": 11,
             "Width": 140,
             "Height": 140
+        },
+        {
+            "Name": [
+               "Colorful Memory Wu Chang",
+               "colorful memory wu chang",
+               "colorful memory wuchang",
+               "colorful memory wu"
+            ],
+            "Item": "s13-2-46",
+            "linkTag": "https://i.imgur.com/fdXRI94.png",
+            "logicpathID": "colorful_memory_wuchang",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+               "Colorful Memory Minds Eye",
+               "colorful memory minds eye",
+               "colorful memory minds",
+               "colorful memory the minds eye",
+               "colorful memory mindseye"
+            ],
+            "Item": "s13-2-47",
+            "linkTag": "https://i.imgur.com/Iw0bFw9.png",
+            "logicpathID": "colorful_memory_mindseye",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+               "Colorful Memory Mercenary",
+               "colorful memory mercenary",
+               "colorful memory merc"
+            ],
+            "Item": "s13-2-48",
+            "linkTag": "https://i.imgur.com/oc04phA.png",
+            "logicpathID": "colorful_memory_mercenary",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+               "Colorful Memory Mechanic",
+               "colorful memory mechanic",
+               "colorful memory mec"
+            ],
+            "Item": "s13-2-49",
+            "linkTag": "https://i.imgur.com/REWuBZg.png",
+            "logicpathID": "colorful_memory_mechanic",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
         }
     ],
     "Frames": [
