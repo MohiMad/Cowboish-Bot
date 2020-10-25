@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({
     disableMentions: 'everyone',
-    messageCacheMaxSize: 1,
+    messageCacheMaxSize: 20,
     fetchAllMembers: false
 });
 
