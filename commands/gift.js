@@ -88,7 +88,7 @@ module.exports = {
 
                     let boughtSkinEmbed = new MessageEmbed()
                         .setAuthor(message.author.tag, message.author.displayAvatarURL({ format: "png", dynamic: true }))
-                        .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** __${skinNAME}__!\nDefinitely worth ${skin.Price} ${e.frags} :3   `)
+                        .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** __${skinNAME}__!\nWorth ${skin.Price} ${e.frags} :3`)
                         .setColor(skin.Color)
                         .setThumbnail(skin.linkTag)
                         .setFooter(gifted.user.username, gifted.user.displayAvatarURL({ format: "png", dynamic: true }))

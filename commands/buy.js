@@ -285,7 +285,7 @@ module.exports = {
                         .setTitle(`You successfully bought ${skinNAME}`)
                         .setColor(skin.Color)
                         .setThumbnail(skin.linkTag)
-                        .setDescription(`You paid __${skin.Price}__${frags} and bought [**${skinNAME}**](https://youtu.be/FhsEd3MIBTI)\n\n**__Description__**:\n${skin.Des}`)
+                        .setDescription(`You paid __${skin.Price}__${frags} and bought [${skinNAME}](https://youtu.be/FhsEd3MIBTI)\n\n**__Description__**:\n${skin.Des}`)
 
                     LP.Opened = [...LP.Opened, skin.Item];
                     LP.frags = LP.frags - skin.Price;

@@ -36,6 +36,12 @@
 		"Answer": ["princess ozma", "ozma"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/vZGW30l.png"
+	},
+	{
+		"Question": "**Question:**\nWhat's the name of the wooden weapon Ann carries?",
+		"Answer": ["stake", "cross", "a stake", "a cross", "sword cross steak", "wooden cross sword", "wooden sword", "stick"],
+		"Difficulty": "Hard",
+		"Attachment": "https://i.imgur.com/YkzRQGj.png"
 	}
 	
 ]

@@ -1,7 +1,7 @@
 const logicPath = require("../models/logicpath.js");
 const { newLP, ErrorMsg } = require("../functions.js");
 const spamStopper = new Set();
-const { Skins, Portraits, Frames } = require("../essences/items.json");
+const { Skins, Portraits, Frames, Characters } = require("../essences/items.json");
 
 const { MessageEmbed } = require("discord.js");
 
@@ -156,7 +156,7 @@ module.exports = {
 
         if (spamStopper.has(message.author)) return message.reply("**Please react with ❌ on the previous embed before being able to start a new item scroller!**");
 
-        let msggg = "Please provide me something to view/equip...\n\nTo view what skins you own, do `" + prefix + "view skins`\nTo view S or A skins separatedly, add `S` or `A` after 'skins'\n**Example:** `" + prefix + "view skins S`\n\nTo view/equip a **portrait**, do `" + prefix + "view portraits`\nYou can also equip the portrait immeditly by providing it's name...\n**Example:** `" + prefix + "equip portrait Black And White Magician`\n\nTo equip/view a frame, do `" + prefix + "equip frame`";
+        let msggg = "Please provide me something to **view**...\n\nTo view what **skins** you own, do `" + prefix + "view skins`\nTo view **S** or **A** skins separatedly, add `S` or `A` after 'skins'\n**Example:** `" + prefix + "view skins S`\n\nTo view a **portrait**, do `" + prefix + "view portraits`\nYou can also equip the portrait immediately by providing it's **name**...\n**Example:** `" + prefix + "view portrait Black And White Magician`\n\nTo view frames, do `" + prefix + "view frames`\n\nYou can also view what **characters** you own by doing\n`" + prefix + "view characters`\n\nTo view **Hunters** separatedly from **Survivors** or vice versa, add the __faction name__ after `characters`\n**Example:** `" + prefix + "view characters survivors`";
         if (!args[1]) return ErrorMsg(bot, message, msggg);
 
         if (["skin", "skins"].includes(args[1].toLowerCase())) {
@@ -226,13 +226,31 @@ module.exports = {
                 }
             });
 
-
             array.push(Frames[6], Frames[7], Frames[8], Frames[9]);
-
             await ScrollThrough(array, "Frame");
 
 
-        } else {
+        } else if (["character", "characters", "survivor", "hunter"].includes(args[1].toLowerCase())) {
+
+            let Chars = Characters;
+            if (args[2]) {
+                if (["survivors", "survivor", "surv", "s"].includes(args[2].toLowerCase())) Chars = Characters.filter(charac => charac.Price === (3568 || 1988 || 1468))
+                if (["hunters", "hunter", "hunta", "h"].includes(args[2].toLowerCase())) Chars = Characters.filter(charac => charac.Price === (4508 || 3988 || 1888))
+            }
+
+            for (const x of Chars) {
+                if (x.LP_Value.includes("Survivors")) {
+                    if (LP.Survivors[x.LP_Value.replace("Survivors.", "")] === true) array.push(x);
+                } else if (x.LP_Value.includes("Hunters")) {
+                    if (LP.Hunters[x.LP_Value.replace("Hunters.", "")] === true) array.push(x);
+                } else {
+                    if (LP[x.LP_Value] === true) array.push(x);
+                }
+            }
+
+            await ScrollThrough(array, "Character");
+        }
+        else {
             return ErrorMsg(bot, message, msggg);
         }
     }

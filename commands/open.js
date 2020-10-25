@@ -15,7 +15,7 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "open");
 
-        if (cooldownCheck) return coolEmbed(message, "Ooops! The cooldown is still on >:/", "Please wait **REMAINING** before being able to execute this command again :)\n\n*psst, Mohi love you <3*", cooldownCheck.timeRemaining, ["s"]);
+        if (cooldownCheck) return coolEmbed(message, "Ooops! The cooldown is still on >:/", "Please wait **REMAINING** before being able to execute this command again :)", cooldownCheck.timeRemaining, ["s"]);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 

@@ -35,7 +35,6 @@ module.exports = {
     
             ${e.portrait} | **Portraits list!** - ID ➜ __*portraits*__
             Change your portrait to the one you prefer to be shown in __${prefix}logicpath__
-
             ${e.S_Card} | **Skins list!** - ID ➜ __*skins*__
             Finally a usage of your fragments${e.frags} huh?
     
@@ -214,25 +213,24 @@ module.exports = {
             let ownedSurvivors = "**Owned Survivors:**",
                 nonOwnedSurvivors = "**Not Owned Survivors:**";
 
+            for (const x of SurvivorsArray) {
+                if (x.LP_Path === true) {
+                    ownedSurvivors = `${ownedSurvivors}\n${x.Emoji} | **${x.CharacterName}**`;
+                }
+                else nonOwnedSurvivors = nonOwnedSurvivors + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
+            }
+
+            if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
+            if (nonOwnedSurvivors === "**Not Owned Survivors:**") nonOwnedSurvivors = nonOwnedSurvivors + "\nNone... you bought em' all :v";
+
             const survEmbed = new MessageEmbed()
                 .setTitle("Survivors shop list!")
                 .addField("How do I buy the survivor?", "To buy the survivor you want, do `" + prefix + "buy <survivorName>`")
                 .setFooter("Remember to type the Survivor's name without spacings")
+                .setDescription(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
                 .setColor("RANDOM");
 
-            SurvivorsArray.forEach(x => {
-
-                if (x.LP_Path === true) ownedSurvivors = ownedSurvivors + `\n${x.Emoji} | **${x.CharacterName}**`;
-
-                else nonOwnedSurvivors = nonOwnedSurvivors + `\n${x.Emoji} | **${x.CharacterName}** ➜ __${x.Price ? x.Price : 3568}__ ${e.clues}`
-            });
-
-            if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
-            if (nonOwnedSurvivors === "**Not Owned Survivors:**") nonOwnedSurvivors = ownedSurvivors + "\nNone... you bought em' all :v";
-
-            return message.channel.send(survEmbed.setDescription(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`)
-            );
-
+            return message.channel.send(survEmbed);
 
         }//survivor bracket
 
@@ -483,7 +481,7 @@ module.exports = {
                 },
                 {
                     link: "https://i.imgur.com/vAl1ABG.png",
-                    des: `[《 TIME LIMITED 》](https://i.imgur.com/vAl1ABG.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
+                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",

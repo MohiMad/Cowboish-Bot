@@ -1380,10 +1380,10 @@
         },
         {
             "Name": [
-               "Colorful Memory Wu Chang",
-               "colorful memory wu chang",
-               "colorful memory wuchang",
-               "colorful memory wu"
+                "Colorful Memory Wu Chang",
+                "colorful memory wu chang",
+                "colorful memory wuchang",
+                "colorful memory wu"
             ],
             "Item": "s13-2-46",
             "linkTag": "https://i.imgur.com/fdXRI94.png",
@@ -1395,11 +1395,11 @@
         },
         {
             "Name": [
-               "Colorful Memory Minds Eye",
-               "colorful memory minds eye",
-               "colorful memory minds",
-               "colorful memory the minds eye",
-               "colorful memory mindseye"
+                "Colorful Memory Minds Eye",
+                "colorful memory minds eye",
+                "colorful memory minds",
+                "colorful memory the minds eye",
+                "colorful memory mindseye"
             ],
             "Item": "s13-2-47",
             "linkTag": "https://i.imgur.com/Iw0bFw9.png",
@@ -1411,9 +1411,9 @@
         },
         {
             "Name": [
-               "Colorful Memory Mercenary",
-               "colorful memory mercenary",
-               "colorful memory merc"
+                "Colorful Memory Mercenary",
+                "colorful memory mercenary",
+                "colorful memory merc"
             ],
             "Item": "s13-2-48",
             "linkTag": "https://i.imgur.com/oc04phA.png",
@@ -1425,9 +1425,9 @@
         },
         {
             "Name": [
-               "Colorful Memory Mechanic",
-               "colorful memory mechanic",
-               "colorful memory mec"
+                "Colorful Memory Mechanic",
+                "colorful memory mechanic",
+                "colorful memory mec"
             ],
             "Item": "s13-2-49",
             "linkTag": "https://i.imgur.com/REWuBZg.png",
@@ -1600,6 +1600,507 @@
             "y": 3,
             "Width": 140,
             "Height": 140
+        }
+    ],
+    "Characters": [
+        {
+            "LP_Value": "Survivors.Cowboy",
+            "Name": [
+                "Cowboy",
+                "cowboy",
+                "cowboi",
+                "kevin"
+            ],
+            "linkTag": "https://i.imgur.com/g4gFMTM.png",
+            "Price": 3568,
+            "BoughtMessage": "The Cowboy is now yeeted into your account >:)\nYou can play as him by doing `$prefixquick cowboy`"
+        },
+        {
+            "LP_Value": "Survivors.Mercenary",
+            "Name": [
+                "Mercenary",
+                "mercenary",
+                "merc",
+                "naib"
+            ],
+            "Price": 3048,
+            "linkTag": "https://i.imgur.com/BjUrwlA.png",
+            "BoughtMessage": "Yeee you bought the punshing bag :D\nYou can now play as the mercenary by doing `$prefixquick merc`"
+        },
+        {
+            "LP_Value": ".Survivors.Coordinator",
+            "BoughtMessage": "Shoot shoot?\nYou can now play as the coordinator by doing `$prefixquick coordinator`",
+            "Price": 3568,
+            "linkTag": "https://i.imgur.com/nYH0b2Z.png",
+            "Name": [
+                "Coordinator",
+                "coordinator",
+                "martha",
+                "coord"
+            ]
+        },
+        {
+            "LP_Value": "Survivors.Priestess",
+            "Name": [
+                "The Priestess",
+                "priestess",
+                "fiona"
+            ],
+            "linkTag": "https://i.imgur.com/VUYBOLH.png",
+            "Price": 3568,
+            "BoughtMessage": "Yee you own the cockroach now >:D\nTo play as her, do `$prefixquick priestess`"
+        },
+        {
+            "LP_Value": "Survivors.Mechanic",
+            "Name": [
+                "The Mechanic",
+                "mechanic",
+                "mec",
+                "tracy"
+            ],
+            "linkTag": "https://i.imgur.com/xxd59yI.png",
+            "Price": 3568,
+            "BoughtMessage": "Hehe the mechanic and her bot are now yours!\nTo play as her do `$prefixquick mec`"
+        },
+        {
+            "LP_Value": "Survivors.Mindseye",
+            "Name": [
+                "The Mind's Eye",
+                "mindseye",
+                "themindseye",
+                "helena",
+                "tme"
+            ],
+            "linkTag": "https://i.imgur.com/eDq4ei3.png",
+            "Price": 3568,
+            "BoughtMessage": "Did you buy her? I can't see ><\nTo play as the mind's eye, do `$prefixquick mindseye`"
+        },
+        {
+            "LP_Value": "Survivors.Prefumer",
+            "Name": [
+                "The Perfumer",
+                "perfumer",
+                "vera"
+            ],
+            "linkTag": "https://i.imgur.com/RJuzO9w.png",
+            "Price": 3568,
+            "BoughtMessage": "Yaaay you have the Perfumer now :D\nDo, `$prefixquick perfumer` to play as her"
+        },
+        {
+            "LP_Value": "Survivors.Dancer",
+            "Name": [
+                "The Dancer",
+                "dancer",
+                "margaretha",
+                "femaledancer"
+            ],
+            "linkTag": "https://i.imgur.com/YBX5jq3.png",
+            "Price": 3568,
+            "BoughtMessage": "*Insert fortnite dance here*\nYou bought the Dancer Yaaay!"
+        },
+        {
+            "LP_Value": "Survivors.Seer",
+            "Name": [
+                "The Seer",
+                "seer",
+                "eli",
+                "owlboi"
+            ],
+            "linkTag": "https://i.imgur.com/nS6BjwO.png",
+            "Price": 3568,
+            "BoughtMessage": "O I see a stalker main QwQ\nDo `$prefixquick seer` to play as the Seer :3"
+        },
+        {
+            "LP_Value": "Survivors.Embalmer",
+            "Name": [
+                "The Embalmer",
+                "embalmer",
+                "aseop",
+                "aesop"
+            ],
+            "linkTag": "https://i.imgur.com/i3wUj8m.png",
+            "Price": 3568,
+            "BoughtMessage": "*insert coffin dance meme here :v*\nDo `$prefixquick embalmer` to play as the Embalmer ^-^"
+        },
+        {
+            "LP_Value": "Survivors.Acrobat",
+            "Name": [
+                "The Acrobat",
+                "acrobat",
+                "mike"
+            ],
+            "linkTag": "https://i.imgur.com/ShLv7vH.png",
+            "Price": 3568,
+            "BoughtMessage": "Jump jump? Yaaay Acroboi is now yours :D\nDo `$prefixquick acrobat` to play as him :3"
+        },
+        {
+            "LP_Value": "Survivors.Officer",
+            "Name": [
+                "The 1st Officer",
+                "officer",
+                "1stofficer",
+                "jose"
+            ],
+            "linkTag": "https://i.imgur.com/gTEujQ6.png",
+            "Price": 3568,
+            "BoughtMessage": "Hehe the 1st Officer is in your hands... wait is he? OwO\n\nDo `$prefixquick officer` to play as him :3"
+        },
+        {
+            "LP_Value": "Survivors.Barmaid",
+            "Name": [
+                "The Barmaid",
+                "barmaid",
+                "bartender",
+                "demi"
+            ],
+            "linkTag": "https://i.imgur.com/qmfV3jR.png",
+            "Price": 3568,
+            "BoughtMessage": "Need a drink?\nYou now own the Barmaid and can play as her by doing `$prefixquick barmaid`"
+        },
+        {
+            "LP_Value": "Survivors.Magician",
+            "Name": [
+                "The Magician",
+                "magician",
+                "servais"
+            ],
+            "linkTag": "https://i.imgur.com/kRhW3OD.png",
+            "Price": 1988,
+            "BoughtMessage": "Ouuu you bought the Magician Yaaay!\nNow do `$prefixquick magician` to play as him"
+        },
+        {
+            "LP_Value": "Survivors.Explorer",
+            "Name": [
+                "The Explorer",
+                "explorer",
+                "kurt"
+            ],
+            "linkTag": "https://i.imgur.com/2Gj7DkA.png",
+            "Price": 1468,
+            "BoughtMessage": "Tiny explorer, tiny `_ _ _ _` xD jk jk\nTo play as the Explorer, do `$prefixquick explorer`"
+        },
+        {
+            "LP_Value": "Survivors.Forward",
+            "Name": [
+                "The Forward",
+                "forward",
+                "william"
+            ],
+            "linkTag": "https://i.imgur.com/nDEHD6X.png",
+            "Price": 3568,
+            "BoughtMessage": "Time to bully some?\nDo `$prefixquick forward` to play as him >:3"
+        },
+        {
+            "LP_Value": "Survivors.Prospector",
+            "Name": [
+                "The Prospector",
+                "prospector",
+                "norton",
+                "pros"
+            ],
+            "linkTag": "https://i.imgur.com/vRGTC3V.png",
+            "Price": 3568,
+            "BoughtMessage": "So we gon' deliver some donuts to the hunters?\n`$prefixquick prospector` to play as him >:)"
+        },
+        {
+            "LP_Value": "Survivors.Enchantress",
+            "Name": [
+                "The Enchantress",
+                "enchantress",
+                "patricia"
+            ],
+            "linkTag": "https://i.imgur.com/0Ep2SSo.png",
+            "Price": 3568,
+            "BoughtMessage": "Congrats! you bought the most annoying survivor in the game! are you happy now?\nDo `$prefixquick enchantress` to play as her..."
+        },
+        {
+            "LP_Value": "Survivors.Wilding",
+            "Name": [
+                "The Wildling",
+                "wildling",
+                "wilding",
+                "murro"
+            ],
+            "linkTag": "https://i.imgur.com/MV783gV.png",
+            "Price": 3568,
+            "BoughtMessage": "$author be ridin' 0-O\nDo `$prefixquick wildling` to play as him ;)"
+        },
+        {
+            "LP_Value": "Survivors.NewSurv",
+            "Name": [
+                "The Gravekeeper",
+                "gravekeeper",
+                "gravedigger",
+                "andrew"
+            ],
+            "linkTag": "https://i.imgur.com/mConaHp.png",
+            "Price": 3568,
+            "BoughtMessage": "There ya go! The Gavekeeper is now yours OwO\nDo `$prefixquick gravekeeper` to play as Andrew :3"
+        },
+        {
+            "LP_Value": "Survivors.Postman",
+            "Name": [
+                "The Postman",
+                "postman",
+                "postmain",
+                "victor"
+            ],
+            "linkTag": "https://i.imgur.com/8R41NkG.png",
+            "Price": 3568,
+            "BoughtMessage": "A special deliverrrryyyy :D\nYou now own the Postman and can play as him by doing `$prefixquick victor` ^-^"
+        },
+        {
+            "LP_Value": "Survivors.AnotherSurv",
+            "Name": [
+                "The Prisoner",
+                "prisoner",
+                "luka",
+                "rat"
+            ],
+            "linkTag": "https://i.imgur.com/vVwznpn.png",
+            "Price": 3568,
+            "BoughtMessage": "You bought zappy stunny man, the prisoner"
+        },
+        {
+            "LP_Value": "Entomologist",
+            "Name": [
+                "The Entomologist",
+                "entomologist",
+                "entomo",
+                "melly",
+                "ento"
+            ],
+            "linkTag": "https://i.imgur.com/gHWZ1sh.png",
+            "Price": 3568,
+            "BoughtMessage": "Aaaa noooo bees ;-;\nYou bought the Entomologist :D\nDo `$prefixquick entomo` to play as her ^-^"
+        },
+        {
+            "LP_Value": "Painter",
+            "Name": [
+                "The Painter",
+                "painter",
+                "artist",
+                "edgar"
+            ],
+            "linkTag": "https://i.imgur.com/Yg2vlCb.png",
+            "Price": 3568,
+            "BoughtMessage": "Ooohoo it's an artist 0-0\nYou bought the Painter, Edgar :D\nDo `$prefixquick edgar` to play as him :3"
+        },
+        {
+            "LP_Value": "Hunters.WuChang",
+            "Name": [
+                "The Wu Chang",
+                "wuchang",
+                "uwuchang",
+                "wuchangus",
+                "wu"
+            ],
+            "linkTag": "https://i.imgur.com/B3zzbzu.png",
+            "Price": 4508,
+            "BoughtMessage": "I got black i got white whatchu want? >:3\nYou bought Wuchang and play as him by doing `$prefixhunt wu`"
+        },
+        {
+            "LP_Value": "Hunters.AxeBoi",
+            "Name": [
+                "The Axeboy",
+                "axeboy",
+                "robbie",
+                "axeboy"
+            ],
+            "linkTag": "https://i.imgur.com/uiuf24V.png",
+            "Price": 4508,
+            "BoughtMessage": "Isn't that a potatobag on his head?\nYaay you bought the missing child- whao wait what?"
+        },
+        {
+            "LP_Value": "Hunters.Lizard",
+            "Name": [
+                "The Evil Reptilian",
+                "lizard",
+                "evilreptilian",
+                "lizzyboi",
+                "luchino",
+                "lunchino",
+                "lizzyboi",
+                "reptilian"
+            ],
+            "linkTag": "https://i.imgur.com/E57mWcy.png",
+            "Price": 4508,
+            "BoughtMessage": "Yaaay you bought lizzboi :3\nNow do `$prefixhunt lizard` to play as him"
+        },
+        {
+            "LP_Value": "Hunters.Clown",
+            "Name": [
+                "The Clown",
+                "clown",
+                "joker",
+                "smileyface"
+            ],
+            "linkTag": "https://i.imgur.com/2PgMwXq.png",
+            "Price": 1888,
+            "BoughtMessage": "Yaaay you bought Dishdashy... Ehh I meant the Clown :v\nDo `$prefixhunt joker` to play as him"
+        },
+        {
+            "LP_Value": "Hunters.GameKeeper",
+            "Name": [
+                "The Gamekeeper",
+                "gamekeeper",
+                "bane",
+                "gk"
+            ],
+            "linkTag": "https://i.imgur.com/bGJCw3I.png",
+            "Price": 3988,
+            "BoughtMessage": "Yee you bought a cowboish hunter :D\nYou now own the Gamekeeper and can play as him by doing `$prefixhunt gk`"
+        },
+        {
+            "LP_Value": "Hunters.Ripper",
+            "Name": [
+                "The Ripper",
+                "ripper",
+                "jack",
+                "theripper"
+            ],
+            "linkTag": "https://i.imgur.com/wPonGQk.png",
+            "Price": 4508,
+            "BoughtMessage": "You bought the most hated hunter, not because of how fast he is but because how many S skins he got :v\nAnyway do `$prefixhunt ripper` to play as him :)"
+        },
+        {
+            "LP_Value": "Hunters.SoulWeaver",
+            "Name": [
+                "The Soul Weaver",
+                "soulweaver",
+                "spider",
+                "violetta",
+                "sw"
+            ],
+            "linkTag": "https://i.imgur.com/FWEeng0.png",
+            "Price": 4508,
+            "BoughtMessage": "Nascar goes vrooom >:v\nDo `$prefixhunt spider` to play as Violetta ^-^"
+        },
+        {
+            "LP_Value": "Hunters.Geisha",
+            "Name": [
+                "The Geisha",
+                "geisha",
+                "michiko",
+                "gaysha",
+                "michikowo"
+            ],
+            "linkTag": "https://i.imgur.com/EDcroVi.png",
+            "Price": 4508,
+            "BoughtMessage": "ou bought the Gaysha i mean Geisha :v\nDo `$prefixhunt geisha` Hehe"
+        },
+        {
+            "LP_Value": "Hunters.PhotoGrapher",
+            "Name": [
+                "The Photographer",
+                "photographer",
+                "photoboi",
+                "joseph"
+            ],
+            "linkTag": "https://i.imgur.com/ZIbw7o1.png",
+            "Price": 4508,
+            "BoughtMessage": "Yaaay! You bought the Photographer :D\nNow do `$prefixhunt photographer` to play as him :)"
+        },
+        {
+            "LP_Value": "Hunters.MadEyes",
+            "Name": [
+                "The Madeyes",
+                "madeyes",
+                "madeye",
+                "burke"
+            ],
+            "linkTag": "https://i.imgur.com/YVoKGF8.png",
+            "Price": 4508,
+            "BoughtMessage": "You bought Trump's right hand, aka the old man the Madeyes :D\nDo `$prefixhunt burke` to play as him :3"
+        },
+        {
+            "LP_Value": "Hunters.Feaster",
+            "Name": [
+                "The Feaster",
+                "feaster",
+                "hastur",
+                "feasta"
+            ],
+            "linkTag": "https://i.imgur.com/YqcyKYP.png",
+            "Price": 4508,
+            "BoughtMessage": "Yaay the Feaster is now yours :)\nDo `$prefixhunt feaster` to play as him"
+        },
+        {
+            "LP_Value": "Hunters.DreamWitch",
+            "Name": [
+                "The Dreamwitch",
+                "dreamwitch",
+                "dw",
+                "yidhra"
+            ],
+            "linkTag": "https://i.imgur.com/N1MbW0F.png",
+            "Price": 4508,
+            "BoughtMessage": "You bought the Dreambi- witch :v\nDo `$prefixhunt dw` to play as her ^-^"
+        },
+        {
+            "LP_Value": "Hunters.Pingu",
+            "Name": [
+                "The Guard 26",
+                "bonbon",
+                "pingu",
+                "no.26",
+                "guard26"
+            ],
+            "linkTag": "https://i.imgur.com/qG20hBu.png",
+            "Price": 4508,
+            "BoughtMessage": "You bought- wait isn't that a robot? OwO\nBonbon is now yours hehe\nDo `$prefixhunt bonbon` to play as him >:D"
+        },
+        {
+            "LP_Value": "Hunters.Sister",
+            "Name": [
+                "The Ann",
+                "ann",
+                "sister",
+                "nun",
+                "disiciple"
+            ],
+            "linkTag": "https://i.imgur.com/nVFgxCc.png",
+            "Price": 4508,
+            "BoughtMessage": "Yaaay you bought the Discliple :D\nDo `$prefixhunt ann` to play as her :)"
+        },
+        {
+            "LP_Value": "Hunters.BloodyQueen",
+            "Name": [
+                "The Bloody Queen",
+                "bloodyqueen",
+                "queen",
+                "bq",
+                "mary"
+            ],
+            "linkTag": "https://i.imgur.com/blppy5o.png",
+            "Price": 4508,
+            "BoughtMessage": "Congrats! You bought the Bloodyqueen...\nDo `$prefixhunt bq` to play as her ^-^"
+        },
+        {
+            "LP_Value": "Hunters.NewHunta",
+            "Name": [
+                "The Violinist",
+                "violinist",
+                "musician",
+                "antonio",
+                "vio"
+            ],
+            "linkTag": "https://i.imgur.com/Y9ZtZud.png",
+            "Price": 4508,
+            "BoughtMessage": "You now own the Violinist and can play as him by doing `$prefixhunt vio"
+        },
+        {
+            "LP_Value": "Sculptor",
+            "Name": [
+                "The Sculptor",
+                "sculptor",
+                "thesculptor",
+                "the-sculptor",
+                "galatea"
+            ],
+            "linkTag": "https://i.imgur.com/diI3MIK.png",
+            "Price": 4508,
+            "BoughtMessage": "You now own the Sculptor and can play as her by doing `$prefixhunt sculptor`"
         }
     ]
 }
