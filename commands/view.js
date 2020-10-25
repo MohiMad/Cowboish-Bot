@@ -230,7 +230,7 @@ module.exports = {
             await ScrollThrough(array, "Frame");
 
 
-        } else if (["character", "characters", "survivor", "hunter"].includes(args[1].toLowerCase())) {
+        } else if (["character", "characters", "chars", "char", "c"].includes(args[1].toLowerCase())) {
 
             let Chars = Characters;
             if (args[2]) {
