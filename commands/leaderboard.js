@@ -80,7 +80,7 @@ module.exports = {
 
                         for (i = 0; i < 5; i++) {
 
-                            let member = bot.users.get(res[i].UserID) || "Not found";
+                            let member = bot.users.cache.get(res[i].UserID) || "Not found";
 
                             if (member === "Not found") {
                                 guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**`;

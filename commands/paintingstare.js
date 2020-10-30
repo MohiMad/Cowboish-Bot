@@ -22,7 +22,7 @@ module.exports = {
 
                 let IMAGE = x.filter(m => m.author.id != bot.user.id && m.attachments.first() != (undefined || null));
 
-                if (lookingForAMemberPing.user.id === message.author.id) {
+                if (!lookingForAMemberPing.user.id || lookingForAMemberPing.user.id === message.author.id) {
                     if (!IMAGE.first()) {
                         memberImage = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'png', dynamic: false, }));
                     } else {

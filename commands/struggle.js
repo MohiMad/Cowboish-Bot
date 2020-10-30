@@ -15,7 +15,6 @@ module.exports = {
         else if (!persona) persona = message.author;
         else persona = await findMember(message, args.slice(1).join(" "));
 
-
         var facts = [
             `${persona.username} struggles...`,
             `${persona.username} is struggling >:3`,
@@ -25,7 +24,7 @@ module.exports = {
 
 
         const struggleEmbed = new MessageEmbed()
-            .setAuthor((facts[fact]), (persona.displayAvatarURL() || persona.user.displayAvatarURL()))
+            .setAuthor((facts[fact]), message.author.displayAvatarURL())
             .setImage("https://media.giphy.com/media/fUjs0DifJYe2dgHuoe/giphy.gif")
             .setFooter(`Credits to @chrysalisobel on giphy <3`)
             .setColor("RANDOM");
