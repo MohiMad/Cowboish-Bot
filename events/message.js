@@ -293,7 +293,7 @@ module.exports = async (bot, message) => {
             break;
 
         case 'guilds': case "servers":
-            message.channel.send(`Cowboish stats:\n**${bot.users.cache.size}** Users\n**${bot.channels.cache.size}** Channels\n**${bot.guilds.cache.size}** Guilds :D`)
+            message.channel.send(`Cowboish stats:\n**${bot.users.cache.size}** Users\n**${bot.guilds.cache.reduce((a, c) => a + c.memberCount, 0)}** Channels\n**${bot.guilds.cache.size}** Guilds :D`);
             break;
 
         case 'suggest': case "suggestidea":
