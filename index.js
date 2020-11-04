@@ -2,8 +2,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({
     disableMentions: 'everyone',
-    messageCacheMaxSize: 20,
-    fetchAllMembers: false
+    messageCacheMaxSize: 20
 });
 
 const schedule = require('node-schedule');
@@ -18,8 +17,9 @@ mongoose.connect(config.mongoose_uri, {
     useUnifiedTopology: true
 });
 
-const botGuildCount = bot.guilds.cache.size;
+bot.setMaxListeners(15);
 
+["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
 
 schedule.scheduleJob("1 12 * * 1", async function () {
     const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
@@ -44,9 +44,7 @@ schedule.scheduleJob("0 9 * * *", async function () {
 
 });
 
-bot.setMaxListeners(15);
 
-["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
 
 
 bot.login(config.token);

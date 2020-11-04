@@ -533,31 +533,32 @@
         },
         {
             "Name": [
-                "Forward - Black Nose",
-                "blacknose",
+                "[Costume] Ripper - Count's Banquet",
+                "count'sbanquet",
+                "countsbanquet",
                 "33",
                 "thirtythree",
-                "forwardblacknose"
+                "rippercountsbanquet"
             ],
-            "linkTag": "https://i.imgur.com/clqgIji.png",
-            "Item": "black_nose",
-            "Color": "0xbb2af5",
-            "Des": ". . .",
-            "Price": 3999
+            "linkTag": "https://i.imgur.com/oa7XlBq.png",
+            "Item": "counts_banquet",
+            "Color": "0xfcba03",
+            "Des": "The Count lived in seclusion in the old castle, and his bloodthirsty instincts have long been drowned by emptiness and loneliness. Eventually, when everyone forgot the Bloodline Count's name, the banquet invitation from the castle set off a new shockwave.",
+            "Price": 16888
         },
         {
             "Name": [
-                "Smiley Face - Scarecrow",
-                "scarecrow",
+                "[Costume] Postman - Specter",
+                "specter",
                 "34",
                 "thirtyfour",
-                "smileyfacescarecrow"
+                "postmanspecter"
             ],
-            "linkTag": "https://i.imgur.com/bMCWBDp.png",
-            "Item": "clown_scarecrow",
+            "linkTag": "https://i.imgur.com/rmjHbrR.png",
+            "Item": "postman_specter",
             "Color": "0xbb2af5",
-            "Des": ". . .",
-            "Price": 3999
+            "Des": "Specter never turns down greedy desires, yet those who fail to pay the price will be sealed into a doll.",
+            "Price": 1
         },
         {
             "Name": [
@@ -586,6 +587,24 @@
             "Color": "0xfcba03",
             "Des": "The train he vowed to protect never reached the station. When the world is frozen still, the interminable engine he carries shall power the last train that has no terminus.",
             "Price": 16888
+        },
+        {
+            "Name": [
+                "Forward - Black Nose"
+            ],
+            "linkTag": "https://i.imgur.com/clqgIji.png",
+            "Item": "black_nose",
+            "Color": "0xbb2af5",
+            "Des": "..."
+        },
+        {
+            "Name": [
+                "Smiley Face - Scarecrow"
+            ],
+            "linkTag": "https://i.imgur.com/PYOp4ga.png",
+            "Item": "clown_scarecrow",
+            "Color": "0xbb2af5",
+            "Des": "It's a scarecrow outfit found near the exit gate. Although it was on fire, I thought it could be salvaged."
         },
         {
             "Name": [
@@ -1436,6 +1455,24 @@
             "y": 11,
             "Width": 145,
             "Height": 145
+        },
+        {
+            "Name": [
+                "Happy Birthday Seer",
+                "seer birthday",
+                "happy birthday seer",
+                "hbd seer",
+                "happybirthdayseer",
+                "seerbirthday",
+                "seer"
+            ],
+            "Item": "seerBirthday",
+            "linkTag": "https://i.imgur.com/9dVcah8.png",
+            "logicpathID": "seerBirthday",
+            "x": 20,
+            "y": 17,
+            "Width": 120,
+            "Height": 120
         }
     ],
     "Frames": [
@@ -1598,6 +1635,25 @@
             "inOpened": true,
             "x": 13,
             "y": 3,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "seer",
+                "seerbirthday",
+                "owlboi",
+                "seer birthday",
+                "happy birthday seer",
+                "hbd seer",
+                "happybirthdayseer",
+                "seerbirthday"
+            ],
+            "linkTag": "https://i.imgur.com/jUhhMje.png",
+            "Item": "seerBirthday",
+            "inOpened": true,
+            "x": 15,
+            "y": 11,
             "Width": 140,
             "Height": 140
         }

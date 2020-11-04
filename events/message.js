@@ -30,6 +30,9 @@ module.exports = async (bot, message) => {
     if (message.content.startsWith("setcowboishprefix")) {
         bot.commands.get('setcowboishprefix').execute(message, args, bot);
     }
+    if (["happybirthdayseer", "happybdseer", "hbdseer", "happybirthdayseer", "happybdseer"].includes(message.content.split(" ").join("").toLowerCase())) {
+        bot.commands.get("birthday").execute(message, args, bot, prefix);
+    }
 
     if (!message.content.startsWith(prefix)) return;
 

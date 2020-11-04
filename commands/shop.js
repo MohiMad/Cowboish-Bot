@@ -476,12 +476,8 @@ module.exports = {
         } else if (["skins", "skin"].includes(args[1].toLowerCase())) {
             let skinPages = [
                 {
-                    link: "https://i.imgur.com/CR35DLy.png",
-                    des: `[《 TIME LIMITED 》](https://youtu.be/qh_0YACMxyo)\n*Ends at: 1st November*\n\n:three: :three: | **Forward - Black Nose** ─ __3999__${e.frags}\n\n:three: :four: | **Smiley Face - Scarecrow** ─ __3999__${e.frags}`
-                },
-                {
-                    link: "https://i.imgur.com/vAl1ABG.png",
-                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st November*\n\n:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
+                    link: "https://i.imgur.com/wjXeJgR.png",
+                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st November*\n\n:three: :three: | **Ripper - Count's Banquet** ─ __16888__${e.frags}\n\n:three: :four: | **Postman - Specter** ─ __1__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",
@@ -498,6 +494,10 @@ module.exports = {
                 {
                     link: "https://i.imgur.com/KgRompQ.png",
                     des: `:two: :five: | **HellEmber - Eternal King** ─ __6888__${e.frags}\n\n:two: :six: | **Cowboy - Tribe Warrior** ─ __6888__${e.frags}\n\n:two: :seven: | **Thief - Pioneer** ─ __6888__${e.frags}\n\n:two: :eight: | **Ripper - White Tentacle** ─ __6888__${e.frags}\n\n:two: :nine: | **Gamekeeper - Punk** ─ __6888__${e.frags}\n\n:three: :zero: | **Geisha - Rashomon** ─ __6888__${e.frags}\n\n:three: :one: | **Mercenary - Spring Hand** ─ __6888__${e.frags}\n\n:three: :two: | **Ripper - Green Tentacle** ─ __6888__${e.frags}`
+                },
+                {
+                    link: "https://i.imgur.com/vAl1ABG.png",
+                    des: `:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
                 }
 
             ];
