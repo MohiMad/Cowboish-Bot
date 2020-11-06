@@ -3,6 +3,7 @@ const { findRole } = require("../functions.js");
 
 module.exports = async (bot, member) => {
 
+    console.log("yeet");
     const guild = await Guild.findOne({ guildID: member.guild.id });
 
     if (!guild) return;

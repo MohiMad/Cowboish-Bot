@@ -35,6 +35,7 @@ module.exports = {
     
             ${e.portrait} | **Portraits list!** - ID ➜ __*portraits*__
             Change your portrait to the one you prefer to be shown in __${prefix}logicpath__
+            
             ${e.S_Card} | **Skins list!** - ID ➜ __*skins*__
             Finally a usage of your fragments${e.frags} huh?
     
@@ -477,7 +478,7 @@ module.exports = {
             let skinPages = [
                 {
                     link: "https://i.imgur.com/wjXeJgR.png",
-                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st November*\n\n:three: :three: | **Ripper - Count's Banquet** ─ __16888__${e.frags}\n\n:three: :four: | **Postman - Specter** ─ __1__${e.frags}`
+                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st December*\n\n:three: :three: | **Ripper - Count's Banquet** ─ __16888__${e.frags}\n\n:three: :four: | **Postman - Specter** ─ __1__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",
