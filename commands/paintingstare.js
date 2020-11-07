@@ -22,7 +22,7 @@ module.exports = {
 
                 let IMAGE = x.filter(m => m.author.id != bot.user.id && m.attachments.first() != (undefined || null));
 
-                if (!lookingForAMemberPing.user.id || lookingForAMemberPing.user.id === message.author.id) {
+                if (!lookingForAMemberPing) {
                     if (!IMAGE.first()) {
                         memberImage = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'png', dynamic: false, }));
                     } else {
@@ -35,6 +35,7 @@ module.exports = {
         } else {
             memberImage = await Canvas.loadImage(message.attachments.first().url);
         }
+
         ctx.drawImage(memberImage, 52, 245, 166, 195);
 
         const background = await Canvas.loadImage("https://i.imgur.com/jnnxE6C.png");
