@@ -21,10 +21,8 @@ module.exports = async (bot) => {
         `Identity V in ${botGuildCount} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${botGuildCount}/2000`,
-        `${botGuildCount} guilds | ${bot.guilds.cache.reduce((a, c) => a + c.memberCount, 0)} users`,
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
-        `Type "Happy Birthday Seer" in the chat to light fireworks 🎆🎆`,
         `Yeehaw! >:D`
 
     ];
