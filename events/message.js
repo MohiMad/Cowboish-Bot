@@ -258,16 +258,18 @@ module.exports = async (bot, message) => {
             break;
 
         case "kick":
+            return message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
             bot.commands.get('kick').execute(message, args, prefix);
             break;
 
         case "ban":
+            return message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
             bot.commands.get('ban').execute(message, args, bot, prefix);
             break;
 
         case "mute": case "shutup":
-            message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
-            //bot.commands.get('mute').execute(message, args, bot, prefix);
+            return message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
+            bot.commands.get('mute').execute(message, args, bot, prefix);
             break;
 
         //End of moderation commands
