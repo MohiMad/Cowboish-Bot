@@ -310,7 +310,10 @@ module.exports = {
 			.setThumbnail("https://i.imgur.com/q6GYP17.png")
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
-		message.channel.send(coolEmbed).then(m => m.delete({ timeout: 30000, reason: "To make the chat cleaner :)" }));
+		message.channel.send(coolEmbed).then(m => {
+			if (!m) return;
+			m.delete({ timeout: 30000, reason: "To make the chat cleaner :)" });
+		});
 
 	},
 	checkForGuildDataExistance: async (message) => {

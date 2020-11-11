@@ -14,13 +14,14 @@ module.exports = {
             .setColor("0xe80202")
             .setTimestamp();
 
-        if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(errEmbed.setDescription("You don't have the required permission to use this command!"));
-
+        if (!message.member.hasPermission("KICK_MEMBERS", { checkAdmin: true, checkOwner: true })) return message.channel.send(errEmbed.setDescription("You don't have the required permission to use this command!"));
+        if (!message.guild.me.hasPermission("KICK_MEMBERS")) return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **KICK MEMBERS**")
         if (!args[1]) return message.channel.send(errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `" + prefix + "kick <@tagMember> <reason here>`"));
 
         if (!member) return message.channel.send(errEmbed.setDescription("Couldn't find that member!"));
-
-        else if (!member.kickable) return message.channel.send(errEmbed.setDescription("This member is not kickable! please nerf"));
+        if (member.user.id === message.author.id) return message.reply("Oh really? .-.\nYou're tryna kick yourself? -v-");
+        if (!member.kickable) return message.channel.send(errEmbed.setDescription("This member is not kickable! please nerf"));
+        if (member.roles.highest.position >= message.member.roles.highest.position) return message.reply("You can't kick someone with the same/or higher role than you -v-");
 
         member.kick(reason ? reason : "No Reason").catch(() => message.reply("Oh no an error occured, please contact the owner!"));
 

@@ -86,6 +86,10 @@ module.exports = async (bot, message) => {
             bot.commands.get('joke').execute(message, args, MohiMoo);
             break;
 
+            case "mohi": case "mohii": case "ihom":
+            bot.commands.get('mohi').execute(message, args, bot, prefix);
+            break;
+
         case "yee":
             bot.commands.get('yee').execute(message, args, MohiMoo);
             break;
@@ -211,7 +215,6 @@ module.exports = async (bot, message) => {
 
 
         //Identity V Actions 
-
         case "blink":
             bot.commands.get('blink').execute(message, args, bot, prefix);
             break;
@@ -258,12 +261,10 @@ module.exports = async (bot, message) => {
             break;
 
         case "kick":
-            return message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
             bot.commands.get('kick').execute(message, args, prefix);
             break;
 
         case "ban":
-            return message.channel.send(`**Sorry ${message.author}... but this command is temporarily disabled**`);
             bot.commands.get('ban').execute(message, args, bot, prefix);
             break;
 
