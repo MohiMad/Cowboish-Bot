@@ -311,8 +311,12 @@ module.exports = {
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(coolEmbed).then(m => {
-			if (!m) return;
-			m.delete({ timeout: 30000, reason: "To make the chat cleaner :)" });
+
+			setTimeout(() => {
+				if (!m) return;
+				m.delete({ timeout: 1000, reason: "To make the chat cleaner :)" });
+			}, 29000);
+
 		});
 
 	},
@@ -322,29 +326,19 @@ module.exports = {
 		if (guild) return;
 
 		const newGuild = new Guild({
-
 			guildID: message.guild.id,
-
 			leave: {
 				enabled: false,
-
 				channel: null,
-
 				message: null,
 			},
 			welcome: {
-
 				enabled: false,
-
 				channel: null,
-
 				message: null,
 			},
-
 			prefix: ">",
-
 			autoroles: [],
-
 		});
 		await newGuild.save().catch(err => console.log(err));
 
