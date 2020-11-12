@@ -281,13 +281,13 @@ module.exports = {
 
 		return cooldownChecker;
 	},
-	coolEmbed: (message, Title, Description, remainingTime, units) => {
+	coolEmbed: async (message, Title, Description, remainingTime, units) => {
 
 		const timeLeft = new Date(remainingTime);
 
 		const Remaining = humanizeDuration(timeLeft - Date.now(), { units: units, round: true });
 
-		if (message.deletable) message.delete();
+		if (message.deletable) message.delete({ reason: "Command executed during cooldown..." });
 
 		let des = Description.replace("REMAINING", Remaining);
 
@@ -310,14 +310,14 @@ module.exports = {
 			.setThumbnail("https://i.imgur.com/q6GYP17.png")
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
-		message.channel.send(coolEmbed).then(m => {
 
-			setTimeout(() => {
-				if (!m) return;
-				m.delete({ timeout: 1000, reason: "To make the chat cleaner :)" });
-			}, 29000);
+		let m = await message.channel.send(coolEmbed);
 
-		});
+		setTimeout(() => {
+			if (!m || m === null || m === undefined || !m.deletable) return;
+			else m.delete();
+		}, 30000);
+
 
 	},
 	checkForGuildDataExistance: async (message) => {
