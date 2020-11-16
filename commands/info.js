@@ -11,8 +11,6 @@ module.exports = {
             .setColor("0xFFE700")
             .setDescription(stripIndents`👇 <@632291800585076761> information 👇
     Cowboish bot is Mohi's first project coded using *JavaScript*
-    Mohi: -Ngl at first, I took this bot as a hobby... for fun, wasting my spare time on Discord with friends...
-    Never... like, NEVER thought I would make it this far <3
 
     ⚙️ Bot's prefix : **${prefix}**
     - *Use this prefix before any of my commands ;D*
@@ -22,9 +20,12 @@ module.exports = {
     <:cowboy:649130677253439508> Creator: **${MohiMoo.tag}**
 
     🎉 My birthday : 🎂 **14/10/2019**
+
+    **Credits and usage rights note:**
+    - All art used in Cowboish have their artists credited.\nIf you have any issues with your content being featured don't hesitate in contacting me :)
     
     `, true)
-            .addField("▔ ▔ ▔ ▔ ▔", stripIndents`**For more information**
+            .addField("\u200b", stripIndents`**For more information**
     [Cowboish Website](https://mohimad.github.io/CowboishBot/)
     [Invite Me ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
     [Cowboish Server](https://discordapp.com/invite/YWcSukS)`)

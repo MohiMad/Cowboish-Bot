@@ -25,7 +25,7 @@ module.exports = {
             .setAuthor(message.author.username + "'s winrate is " + (facts[fact]) + '%', message.author.avatarURL())
             .setColor('0x1AA9EE')
 
-        if (!args[1]) return message.channel.send(wiEmbed);
+        if (!persona || persona.user.id === message.author.id) return message.channel.send(wiEmbed);
 
         const winEmbed = new MessageEmbed()
             .setAuthor(persona.user.username + "'s winrate is " + (facts[fact]) + '%', persona.user.avatarURL())

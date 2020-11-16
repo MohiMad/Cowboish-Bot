@@ -84,7 +84,7 @@ module.exports = {
                     let skinNAME = skin.Name[0].slice(skin.Name[0].indexOf("- ")).replace("- ", "");
 
                     if (giftedLP.Opened.includes(skin.Item)) return message.channel.send(`**${gifted.user.username}** already has **__${skinNAME}__**, ${message.author}`);
-                    if (LP.frags < skin.Price) return message.channel.send(`**You don't have enough fragments${frags}...**\nYou disappointed me and **${gifted.user.username}**`);
+                    if (LP.frags < skin.Price) return message.channel.send(`**You don't have enough fragments${e.frags}...**\nYou disappointed me and **${gifted.user.username}**`);
 
                     let boughtSkinEmbed = new MessageEmbed()
                         .setAuthor(message.author.tag, message.author.displayAvatarURL({ format: "png", dynamic: true }))
