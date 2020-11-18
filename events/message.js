@@ -30,7 +30,7 @@ module.exports = async (bot, message) => {
     if (message.content.startsWith("setcowboishprefix")) {
         bot.commands.get('setcowboishprefix').execute(message, args, bot);
     }
-    
+
     /*if (["happybirthdayseer", "happybdseer", "hbdseer", "happybirthdayseer", "happybdseer"].includes(message.content.split(" ").join("").toLowerCase())) {
         bot.commands.get("birthday").execute(message, args, bot, prefix);
     }*/
@@ -51,6 +51,10 @@ module.exports = async (bot, message) => {
     await addGuildID();
 
     switch (args[0].toLowerCase()) {
+
+        case "announcenews":
+            bot.commands.get('announcenews').execute(message, bot);
+            break;
 
         //Identity V commands Starts Here!
         case "roll20": case "r20":
@@ -77,6 +81,10 @@ module.exports = async (bot, message) => {
             bot.commands.get('spawns').execute(message, args, bot, prefix);
             break;
 
+        case "identityvnews": case "idvnews": case "identityvupdates": case "identityvupdatesandnews": case "identityvnewsandupdates": case "idvupdates":
+            bot.commands.get('identityvnews').execute(message, args, bot, prefix);
+            break;
+
 
         //End Of identity V commands
 
@@ -86,7 +94,7 @@ module.exports = async (bot, message) => {
             bot.commands.get('joke').execute(message, args, MohiMoo);
             break;
 
-            case "mohi": case "mohii": case "ihom":
+        case "mohi": case "mohii": case "ihom":
             bot.commands.get('mohi').execute(message, args, bot, prefix);
             break;
 

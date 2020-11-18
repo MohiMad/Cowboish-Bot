@@ -160,12 +160,15 @@ module.exports = {
 	},
 
 	findRole: (message, toFind) => {
+		if (toFind === null) return;
+
 		toFind = toFind.toLowerCase().replace("<@&", "").replace(">", "");
 		const role = message.guild.roles.cache.find((x) => x.name.toLowerCase() === toFind) || message.guild.roles.cache.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.roles.cache.get(toFind);
 		return role;
 	},
 
 	findChannel: (message, toFind) => {
+		if (!toFind) return;
 		toFind = toFind.toLowerCase().replace("<#", "").replace(">", "");
 		const channel = message.mentions.channels.first() || message.guild.channels.cache.find((x) => x.name.toLowerCase().startsWith(toFind)) || message.guild.channels.cache.find((x) => x.name.toLowerCase() === (toFind)) || message.guild.channels.cache.get(toFind);
 		return channel;
@@ -339,6 +342,10 @@ module.exports = {
 			},
 			prefix: ">",
 			autoroles: [],
+			News: {
+				Channel: null,
+				toPingRole: null,
+			}
 		});
 		await newGuild.save().catch(err => console.log(err));
 

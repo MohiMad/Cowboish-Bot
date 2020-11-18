@@ -1,7 +1,7 @@
 const Guild = require("../models/guild.js");
 const { MessageEmbed } = require('discord.js');
+const { findRole, checkForGuildDataExistance, findChannel } = require("../functions.js");
 
-const { findRole, checkForGuildDataExistance } = require("../functions.js");
 module.exports = {
     name: 'setup',
     description: "set some stuff for the guild",
@@ -23,7 +23,7 @@ module.exports = {
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(`This command requires the **Manage Guild** permission and you don't have it, ${message.author}`);
 
         function replaceMe(whatToReplace) {
-            if(whatToReplace === null || !whatToReplace) return; 
+            if (whatToReplace === null || !whatToReplace) return;
             let idk = whatToReplace
                 .replace("memberCount", message.guild.memberCount)
                 .replace("botCount", message.guild.members.cache.filter(x => x.user.bot).size)
@@ -80,7 +80,7 @@ module.exports = {
 
                 description = description + `⚪ **Auto Roles**${rolesTagged}\nWanna remove it? Adding an already existing autorole removes it...`;
             } else {
-                description = description + `⚪ **Auto Roles**\nNo autorole to be given to new members is set...\nTo add one, do ` + "`" + prefix + "setup autorole <@tagTheRoleHere>`"
+                description = description + `⚪ **__Auto Roles__**\nNo autorole to be given to new members is set...\nTo add one, do ` + "`" + prefix + "setup autorole <@tagTheRoleHere>`"
             }
 
             const doneEmbed = new MessageEmbed()
@@ -92,8 +92,11 @@ module.exports = {
             return message.channel.send(doneEmbed);
         }
 
+        const channel = await findChannel(message, args[2]);
+
         if (["welcomechannel", "greetchannel"].includes(args[1].toLowerCase())) {
-            const channel = message.mentions.channels.first();
+
+            if (!message.guild.channels.cache.get(channel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
 
             if (["disable", "off"].includes(args[2].toLowerCase())) {
 
@@ -135,7 +138,8 @@ module.exports = {
 
         }
         if (["leavechannel", "leave-channel"].includes(args[1].toLowerCase())) {
-            const channel = message.mentions.channels.first();
+
+            if (!message.guild.channels.cache.get(channel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
 
             if (["disable", "off"].includes(args[2].toLowerCase())) {
                 guild.leave.enabled = false;
@@ -191,6 +195,7 @@ module.exports = {
 
             return message.channel.send(sucEmbed.setDescription(`Successfully added the role **${searchForARole.name}**\nThis role will now be given to new members :D`));
         }
+
 
     }
 }

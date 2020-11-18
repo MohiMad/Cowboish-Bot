@@ -21,11 +21,11 @@ module.exports = {
 
     🎉 My birthday : 🎂 **14/10/2019**
 
-    **Credits and usage rights note:**
-    - All art used in Cowboish have their artists credited.\nIf you have any issues with your content being featured don't hesitate in contacting me :)
+    **Credits And Usage Rights:**
+    - All art used in Cowboish have their artists credited.\nIf you have any issues with your content being featured don't hesitate in contacting me.
     
     `, true)
-            .addField("\u200b", stripIndents`**For more information**
+            .addField("\u200b", stripIndents`**For More Information**
     [Cowboish Website](https://mohimad.github.io/CowboishBot/)
     [Invite Me ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
     [Cowboish Server](https://discordapp.com/invite/YWcSukS)`)

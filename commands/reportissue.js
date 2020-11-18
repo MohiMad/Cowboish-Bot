@@ -36,7 +36,7 @@ module.exports = {
                 spamStopper.add(message.author);
 
                 await message.channel.awaitMessages(filter, {
-                    max: 2,
+                    max: 1,
                     time: 180000
                 }).then(async collected => {
                     firstQuestion = collected.first().content;
@@ -45,7 +45,7 @@ module.exports = {
 
 
                     await message.channel.awaitMessages(filter, {
-                        max: 2,
+                        max: 1,
                         time: 180000
                     }).then(async collected => {
                         secondQuestion = collected.first().content;
@@ -53,7 +53,7 @@ module.exports = {
                         message.channel.send('**Do you have any screenshot of the bug/issue?**\nPlease send an image of how the bug looks like... if you don’t have a screenshot of it just type "No"');
 
                         await message.channel.awaitMessages(filter, {
-                            max: 2,
+                            max: 1,
                             time: 180000
                         }).then(async collected => {
 
@@ -101,7 +101,7 @@ module.exports = {
                 spamStopper.add(message.author);
 
                 await message.channel.awaitMessages(filter, {
-                    max: 2,
+                    max: 1,
                     time: 180000
                 }).then(async collected => {
                     secondQuestion = collected.first().content;
@@ -109,7 +109,7 @@ module.exports = {
                     message.channel.send('**Do you have any screenshot of the bug/issue?**\nPlease send an image of how the bug looks like... if you don’t have a screenshot of it just type "No"');
 
                     await message.channel.awaitMessages(filter, {
-                        max: 2,
+                        max: 1,
                         time: 180000
                     }).then(async collected => {
 

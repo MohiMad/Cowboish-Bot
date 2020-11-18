@@ -13,6 +13,13 @@ module.exports = {
 
         let giveawayRole = mainGuild.roles.cache.get("721657451916820543");
 
+        await logicPath.updateMany({}, {
+            $set:
+            {
+                ThreeMatches: 3
+            }
+        }).catch(e => console.log(e));
+
         let randomUser = giveawayRole.members.filter(async (m) => {
             let usersLP = await logicPath.findOne({ UserID: m.user.id });
             m.user.bot === false && usersLP
@@ -91,12 +98,7 @@ module.exports = {
 
             giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
 
-            await logicPath.updateMany({}, {
-                $set:
-                {
-                    ThreeMatches: 3
-                }
-            }).catch(e => console.log(e));
+
 
             const giveawaySpamStopper = new Cooldown({
                 command: "giveaway",

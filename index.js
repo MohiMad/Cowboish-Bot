@@ -2,9 +2,7 @@
 const Discord = require('discord.js');
 
 const bot = new Discord.Client({
-    disableMentions: 'everyone',
-    messageCacheMaxSize: 25,
-    fetchAllMembers: false
+    messageCacheMaxSize: 25
 });
 
 const schedule = require('node-schedule');
@@ -45,9 +43,6 @@ schedule.scheduleJob("0 9 * * *", async function () {
     await bot.commands.get('giveaway').execute(bot);
 
 });
-
-
-
 
 bot.login(config.token);
 

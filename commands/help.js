@@ -34,7 +34,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription('`identify` | `roll` | `roll20` | `randomize` | `idv` | `idvwiki` | `spawns`')
+                .setDescription('`identify` | `roll` | `roll20` | `randomize` | `idv` | `idvwiki` | `spawns` | `identityVNews`')
 
             return message.channel.send(idvEmbed);
 

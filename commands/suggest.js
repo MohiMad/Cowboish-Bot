@@ -31,7 +31,7 @@ module.exports = {
             message.channel.send('**Before starting... Just know that everything suggested will be sent to the devs...**\nAre you sure you wanna continue? Type "No" to cancel... Send anything else to continue the suggesting process...');
             spamStopper.add(message.author);
             await message.channel.awaitMessages(filter, {
-                max: 2,
+                max: 1,
                 time: 180000
             }).then(async collected => {
 
@@ -45,7 +45,7 @@ module.exports = {
 
 
                 await message.channel.awaitMessages(filter, {
-                    max: 2,
+                    max: 1,
                     time: 180000
                 }).then(async collected => {
                     firstQuestion = collected.first().content;
@@ -53,7 +53,7 @@ module.exports = {
                     message.channel.send("**At what priority level do you want this suggestion to happen?**\nLow? Medium? High?");
 
                     await message.channel.awaitMessages(filter, {
-                        max: 2,
+                        max: 1,
                         time: 180000
                     }).then(async collected => {
 
@@ -105,7 +105,7 @@ module.exports = {
             spamStopper.add(message.author);
 
             await message.channel.awaitMessages(filter, {
-                max: 2,
+                max: 1,
                 time: 180000
             }).then(async collected => {
 
@@ -116,7 +116,7 @@ module.exports = {
                 message.channel.send("**At what priority level do you want this suggestion to happen?**\nLow? Medium? High?");
 
                 await message.channel.awaitMessages(filter, {
-                    max: 2,
+                    max: 1,
                     time: 180000
                 }).then(async collected => {
 

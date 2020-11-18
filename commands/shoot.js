@@ -28,7 +28,8 @@ module.exports = {
         var fact = Math.floor(Math.random() * facts.length);
 
         let gifs = [
-            "https://media.giphy.com/media/Tf9YqAW7duuj5CTVYO/giphy.gif"
+            "https://media.giphy.com/media/Tf9YqAW7duuj5CTVYO/giphy.gif",
+            "https://media.giphy.com/media/1xoothKLhP574t7AbY/giphy.gif"
         ];
 
         let gif = Math.floor(Math.random() * gifs.length);

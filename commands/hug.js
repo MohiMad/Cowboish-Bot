@@ -21,6 +21,7 @@ module.exports = {
                 "https://media.giphy.com/media/jRBH1BrIqdLPdW8eo1/giphy.gif",
                 "https://media.giphy.com/media/hpFTl6sn0OdpXZNKxM/giphy.gif",
                 "https://media.giphy.com/media/iGpvkIsdAw7K2MxEsr/giphy.gif",
+                "https://media.giphy.com/media/8FcLMAHkLgBAsfbrgV/giphy.gif",
                 "https://media.giphy.com/media/eJ96BIs6ABNa4ellhk/giphy.gif", //lady bella's
                 "https://media.giphy.com/media/SXOY6zg9WhZQdtxCrW/giphy.gif" //Hannah's uwu
 
