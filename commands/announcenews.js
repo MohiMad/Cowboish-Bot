@@ -9,7 +9,7 @@ module.exports = {
     description: "You know how we do it ;)",
     execute: async (message, bot) => {
 
-        if (!["478527909250990090"].includes(message.author.id)) return;
+        if (!["478527909250990090", "427200618399268874", "638831021995065344"].includes(message.author.id) && message.channel.id != "778904412793864223") return;
 
         var vtoFind, vMessage, vTitle, vDescription, vImage, vThumbnail, vFooter;
 
@@ -98,39 +98,15 @@ module.exports = {
                                 }).then(async collected => {
                                     vFooter = collected.first().content;
 
-                                    IdVNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
-                                    await IdentityVNews.updateOne({ toGrab: "632291800585076761" },
-                                        {
-                                            News: [
-                                                {
-
-                                                    toFind: `${vtoFind}`,
-                                                    Message: `${vMessage}`,
-                                                    Title: `${vTitle}`,
-                                                    Description: `${vDescription}`,
-                                                    Image: `${vImage}`,
-                                                    Thumbnail: `${vThumbnail}`,
-                                                    Footer: `${vFooter}`,
-                                                    HasSent: false
-
-                                                },
-                                                ...IdVNews.News
-                                            ]
-
-                                        });
-
-
-                                    IdvNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
-
                                     const embed = new MessageEmbed()
                                         .setColor("1F05FA")
-                                        .setTitle(IdvNews.News[0].Title)
-                                        .setDescription(IdvNews.News[0].Description)
-                                        .setImage(IdvNews.News[0].Image)
-                                        .setThumbnail(IdvNews.News[0].Thumbnail)
-                                        .setFooter(IdvNews.News[0].Footer);
+                                        .setTitle(vTitle)
+                                        .setDescription(vDescription)
+                                        .setImage(vImage)
+                                        .setThumbnail(vThumbnail)
+                                        .setFooter(vFooter);
 
-                                    let msg = await message.channel.send(IdvNews.News[0].Message.replace("$ping", "(Ping)"), embed);
+                                    let msg = await message.channel.send(vMessage.replace("$ping", "(Ping)"), embed);
 
                                     await msg.react('✅');
                                     await msg.react('❌');
@@ -152,24 +128,49 @@ module.exports = {
                                         msg.reactions.removeAll().catch(error => console.log(error));
                                         spamStopper.delete(message.author);
 
-                                        const GUILDS = await Guild.find({});
+
+                                        IdVNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
+                                        await IdentityVNews.updateOne({ toGrab: "632291800585076761" },
+                                            {
+                                                News: [
+                                                    {
+
+                                                        toFind: `${vtoFind}`,
+                                                        Message: `${vMessage}`,
+                                                        Title: `${vTitle}`,
+                                                        Description: `${vDescription}`,
+                                                        Image: `${vImage}`,
+                                                        Thumbnail: `${vThumbnail}`,
+                                                        Footer: `${vFooter}`,
+                                                        HasSent: false
+
+                                                    },
+                                                    ...IdVNews.News
+                                                ]
+
+                                            });
+
+                                        IdvNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
 
                                         IdvNews.News[0].HasSent = true;
                                         IdvNews.save().catch(e => console.log(e));
-    
+
+                                        const GUILDS = await Guild.find({});
+
                                         for (const guild of GUILDS.filter(x => x.News.Channel != null)) {
                                             if (guild.News.Channel === null) return;
                                             const toSendChannel = bot.channels.cache.get(guild.News.Channel);
                                             if (!toSendChannel) return;
-    
-    
-                                            let toPingRole = await findRole(message, guild.News.toPingRole);
-    
+
+                                            const guild = bot.guilds.cache.get("636241255994490900");
+
+                                            const toPingRole = guild.roles.cache.get(guild.News.toPingRole);
+
                                             if (guild.News.toPingRole === "everyone") toPingRole = "@everyone";
                                             else if (guild.News.toPingRole === "here") toPingRole = "@here";
                                             else if (!toPingRole) toPingRole = "";
-    
-                                            await toSendChannel.send(IdvNews.News[0].Message.replace("$ping", toPingRole), embed);
+
+                                            await toSendChannel.send(vMessage.replace("$ping", toPingRole), embed);
                                         }
 
                                         message.channel.send(`${message.author} process started... Update/News should be sent in the mean time :)`);
