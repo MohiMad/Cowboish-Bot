@@ -18,6 +18,7 @@ module.exports = {
         let sayMessage = args.slice(1).join(" ");
 
         if (!suggest) return;
+        if(message.channel.id === suggest.id) return;
 
         const filter = m => m.author.id === message.author.id;
 

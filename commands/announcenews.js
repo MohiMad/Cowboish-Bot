@@ -21,7 +21,7 @@ module.exports = {
         const filter = m => m.author.id === message.author.id;
         await message.channel.awaitMessages(filter, {
             max: 1,
-            time: 180000
+            time: 10 * 60 * 1000
         }).then(async collected => {
 
             if (["n"].includes(collected.first().content.toLowerCase())) {
@@ -35,7 +35,7 @@ module.exports = {
 
             await message.channel.awaitMessages(filter, {
                 max: 1,
-                time: 180000
+                time: 10 * 60 * 1000
             }).then(async collected => {
 
                 if (["n"].includes(collected.first().content.toLowerCase())) {
@@ -49,7 +49,7 @@ module.exports = {
 
                 await message.channel.awaitMessages(filter, {
                     max: 1,
-                    time: 180000
+                    time: 10 * 60 * 1000
                 }).then(async collected => {
 
                     vTitle = collected.first().content;
@@ -58,7 +58,7 @@ module.exports = {
 
                     await message.channel.awaitMessages(filter, {
                         max: 1,
-                        time: 180000
+                        time: 10 * 60 * 1000
                     }).then(async collected => {
                         vDescription = collected.first().content;
 
@@ -66,7 +66,7 @@ module.exports = {
 
                         await message.channel.awaitMessages(filter, {
                             max: 1,
-                            time: 180000
+                            time: 10 * 60 * 1000
                         }).then(async collected => {
 
                             if (!collected.first()) return;
@@ -77,7 +77,7 @@ module.exports = {
 
                             await message.channel.awaitMessages(filter, {
                                 max: 1,
-                                time: 180000
+                                time: 10 * 60 * 1000
                             }).then(async collected => {
 
 
@@ -94,7 +94,7 @@ module.exports = {
 
                                 await message.channel.awaitMessages(filter, {
                                     max: 1,
-                                    time: 180000
+                                    time: 10 * 60 * 1000
                                 }).then(async collected => {
                                     vFooter = collected.first().content;
 
@@ -157,17 +157,17 @@ module.exports = {
 
                                         const GUILDS = await Guild.find({});
 
-                                        for (const guild of GUILDS.filter(x => x.News.Channel != null)) {
-                                            if (guild.News.Channel === null) return;
-                                            const toSendChannel = bot.channels.cache.get(guild.News.Channel);
+                                        for (const g of GUILDS.filter(x => x.News.Channel != null)) {
+                                            if (g.News.Channel === null) return;
+                                            const toSendChannel = bot.channels.cache.get(g.News.Channel);
                                             if (!toSendChannel) return;
 
                                             const guild = bot.guilds.cache.get("636241255994490900");
 
-                                            const toPingRole = guild.roles.cache.get(guild.News.toPingRole);
+                                            const toPingRole = guild.roles.cache.get(g.News.toPingRole);
 
-                                            if (guild.News.toPingRole === "everyone") toPingRole = "@everyone";
-                                            else if (guild.News.toPingRole === "here") toPingRole = "@here";
+                                            if (g.News.toPingRole === "everyone") toPingRole = "@everyone";
+                                            else if (g.News.toPingRole === "here") toPingRole = "@here";
                                             else if (!toPingRole) toPingRole = "";
 
                                             await toSendChannel.send(vMessage.replace("$ping", toPingRole), embed);
