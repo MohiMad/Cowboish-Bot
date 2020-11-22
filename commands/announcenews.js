@@ -84,10 +84,10 @@ module.exports = {
                                 if (["idv", "identityv", "identity v"].includes(collected.first().content.toLowerCase())) {
                                     vThumbnail = "https://i.imgur.com/owSSNF4.png";
                                 } else if (["netease", "net ease"].includes(collected.first().content.toLowerCase())) {
-                                    vThumbnail = "https://i.imgur.com/fD2V6Yd.png";
+                                    vThumbnail = "https://i.imgur.com/WAf9KK1.png";
                                 } else {
-                                    if (!collected.first().attachments.first()) vImage = collected.first().content;
-                                    else vImage = collected.first().attachments.first().url;
+                                    if (!collected.first().attachments.first()) vThumbnail = collected.first().content;
+                                    else vThumbnail = collected.first().attachments.first().url;
                                 }
 
                                 message.channel.send("**Now pick a Footer for the embed**\nA footer could be further information, or even the News' release date :D");
@@ -164,7 +164,7 @@ module.exports = {
 
                                             const guild = bot.guilds.cache.get("636241255994490900");
 
-                                            const toPingRole = guild.roles.cache.get(g.News.toPingRole);
+                                            let toPingRole = guild.roles.cache.get(g.News.toPingRole);
 
                                             if (g.News.toPingRole === "everyone") toPingRole = "@everyone";
                                             else if (g.News.toPingRole === "here") toPingRole = "@here";
