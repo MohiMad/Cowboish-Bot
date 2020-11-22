@@ -21,8 +21,10 @@ module.exports = {
         }).catch(e => console.log(e));
 
         let randomUser = giveawayRole.members.filter(async (m) => {
+
             let usersLP = await logicPath.findOne({ UserID: m.user.id });
-            m.user.bot === false && usersLP
+
+            m.user.bot === false && usersLP != undefined
         }).random();
 
         let rewards = [

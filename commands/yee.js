@@ -7,8 +7,7 @@ module.exports = {
             "Haaaw >:D", 
             "Yeeeeeeeeeeeet", 
             "Pizzaa?", 
-            "did someone say Yee?, Heeey :D", 
-            "Haaaw >:3\nFun fact, this command was my first command ever :3"
+            "did someone say Yee?, Heeey :D"        
         ];
         var fact = Math.floor(Math.random() * facts.length);
         message.channel.send(facts[fact]);
