@@ -37,8 +37,8 @@ module.exports = {
             `$target is the player to ask for a character nerf before it hasn't even gotten released`,
             `$target is the Geisha using blink 😂😂`,
             `$target begs for Friendly Hunter in chat but becomes salty when the hunter only chairs them`,
-            `$target fails to prime cipher because of lag and accidentally pops it. Ouch.`
-                `$target: *sends an owl too late and gets a "Thank You!"*`,
+            `$target fails to prime cipher because of lag and accidentally pops it. Ouch.`,
+            `$target: *sends an owl too late and gets a "Thank You!"*`,
             `$target is frustrated with perfect or nothing calibrations`,
             `$target always pings the wrong chat when kiting`,
             `$target tries to kite looking backwards and accidentally gets stuck.`,
