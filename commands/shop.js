@@ -482,7 +482,7 @@ module.exports = {
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",
-                    des: `:one: | **Forward - Ricardo Milos** ─ __86888__${e.frags}\n\n:two: | **Smiley Face - King** ─ __16888__${e.frags}\n\n:three: | **Mechanic - Red Riding Hood** ─ __16888__${e.frags}\n\n:four: | **Priestess - Guide** ─ __16888__${e.frags}\n\n:five: | **Geisha - The Bride** ─ __16888__${e.frags}\n\n:six: | **Gardener - Ghost Girl** ─ __16888__${e.frags}\n\n:seven: **Photogarpher - Azrael** ─ __16888__${e.frags}\n\n:eight: | **The Mind's Eye - Dark Cake** ─ __16888__${e.frags}`
+                    des: `:one: | **Forward - Ricardo Milos** ─ __86888__${e.frags}\n\n:two: | **Smiley Face - King** ─ __16888__${e.frags}\n\n:three: | **Mechanic - Red Riding Hood** ─ __16888__${e.frags}\n\n:four: | **Priestess - Guide** ─ __16888__${e.frags}\n\n:five: | **Geisha - The Bride** ─ __16888__${e.frags}\n\n:six: | **Gardener - Ghost Girl** ─ __16888__${e.frags}\n\n:seven: **Photographer - Azrael** ─ __16888__${e.frags}\n\n:eight: | **The Mind's Eye - Dark Cake** ─ __16888__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/NpwrCQb.png",

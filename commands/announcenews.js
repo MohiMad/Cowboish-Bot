@@ -100,11 +100,12 @@ module.exports = {
 
                                     const embed = new MessageEmbed()
                                         .setColor("1F05FA")
+                                        .setAuthor("Identity V ~ News/Updates", "https://i.imgur.com/hSMftcq.png")
                                         .setTitle(vTitle)
                                         .setDescription(vDescription)
                                         .setImage(vImage)
                                         .setThumbnail(vThumbnail)
-                                        .setFooter(vFooter);
+                                        .setFooter(vFooter, bot.user.displayAvatarURL({ format: "png", dynamic: false }));
 
                                     let msg = await message.channel.send(vMessage.replace("$ping", "(Ping)"), embed);
 
