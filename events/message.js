@@ -53,7 +53,7 @@ module.exports = async (bot, message) => {
     switch (args[0].toLowerCase()) {
 
         case "announcenews":
-            bot.commands.get('announcenews').execute(message, bot);
+            bot.commands.get('announcenews').execute(message, bot, args);
             break;
 
         //Identity V commands Starts Here!

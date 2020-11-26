@@ -34,7 +34,8 @@ module.exports = {
                 LP.Hunters.SoulWeaver,
                 LP.Hunters.WuChang,
                 LP.Hunters.NewHunta, //violinist
-                LP.Sculptor
+                LP.Sculptor,
+                LP.Percy
             ];
 
             let allHunterFiles = [
@@ -54,7 +55,8 @@ module.exports = {
                 "soulweaver",
                 "wuchang",
                 "violinist",
-                "sculptor"
+                "sculptor",
+                "percy"
             ];
 
             for (i = 0; i < LPHuntervalues.length; i++) {
@@ -183,6 +185,12 @@ module.exports = {
                     LP_Path: LP.Sculptor,
                     Path: "Hunters/sculptor",
                     CharacterName: "The Sculptor"
+                },
+                {
+                    SearchArray: ["percy", "undead", "theundead"],
+                    LP_Path: LP.Percy,
+                    Path: "Hunters/percy",
+                    CharacterName: "Percy"
                 },
                 {
                     SearchArray: ["r", "randomize", "random", "random-hunter", "randomhunter"],

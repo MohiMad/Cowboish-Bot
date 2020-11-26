@@ -259,6 +259,7 @@ module.exports = {
 			Entomologist: false,
 			Painter: false,
 			Sculptor: false,
+			Percy: false,
 			Portrait: "0",
 			ThreeMatches: 3
 
@@ -345,7 +346,8 @@ module.exports = {
 			News: {
 				Channel: null,
 				toPingRole: null,
-			}
+			},
+			PatchChannel: null
 		});
 		await newGuild.save().catch(err => console.log(err));
 

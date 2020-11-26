@@ -81,6 +81,31 @@ module.exports = {
                 } else {
                     return message.channel.send(errEmbed.setDescription("**Arguments Missing!**\nIf you want me to set an __Identity V News and Updates__ Channel then you need to provide me which channel you want me to send news in, to do that, mention the channel in your second argument.\n\n**Example:** `" + prefix + "IdentityVNews Channel <#MentionChennelHere>`\n\nIn order for me to set a **to-ping** role, you gotta provide me the role you want me to mention whenever an Identity V News announcement is sent right?\n\nOkay now, try again but mention a role. \n**Example:** `" + prefix + "IdentityVNews Role <RoleGoesHere>`\n\nIt doesn't have to be a role, it can also be 'everyone' or 'here' if you want me to mention that ^-^"));
                 }
+            } else if (["patchnotes", "patch-notes", "patch_notes", "identityvpatchnotes", "patchnoteschannel"].includes(args[1].toLowerCase())) {
+                if (!args[2]) return message.channel.send(errEmbed.setDescription("**Missing Arguments**\nYou gotta provide me the **Patch-Notes Channel** in your second arguments...\n\n**Example:** `" + prefix + "identityvnews patchnotes <#Channel>`"));
+
+                if (["turn-off", "off", "disable"].includes(args[2].toLowerCase())) {
+                    if (guild.PatchChannel === null) return message.reply("The **Identity V Patch-Notes** function is already disabled >:/");
+
+                    const patchNotesChannel = guild.PatchChannel;
+
+                    guild.PatchChannel = null;
+                    guild.save().catch(e => console.log(e));
+
+                    return message.reply(`Successfully disabled the **IdentityV Patch Notes** function ^-^\nI will no longer send the patch notes in <#${patchNotesChannel}>`);
+                }
+
+                const findPatchNotesChannel = await findChannel(message, args.slice(2).join(" "));
+
+                if (!findPatchNotesChannel) return message.channel.send(errEmbed.setDescription("**Channel not found!**\nI failed to find any channel in your message, please make sure you actually provided one... Try again and run:\n`" + prefix + "idvNews patchnotes <#channelGoesHere>`"));
+
+                if (!message.guild.channels.cache.get(findPatchNotesChannel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
+
+                guild.PatchChannel = findPatchNotesChannel.id;
+                guild.save().catch(e => console.log(e));
+
+                return message.channel.send(sucEmbed.setDescription(`Sucessfully set the **Identity V Patch-Notes Channel** to <#${NewsChannel.id}>\n - From now on, newly released patch notes will be sent in that channel :D`));
+
             }
         }
 
@@ -89,6 +114,11 @@ module.exports = {
                 toCheck: guild.News.Channel,
                 toSayIfNull: "📰 __**Identity V News Channel is not set**__\nDo `" + prefix + "IdentityVNews Channel <#channel>` if you want to get informed of the latest Identity V News",
                 toSayIfTrue: "📰 **Identity V News Channel** <#" + guild.News.Channel + ">\nWanna disable this function? If so then do\n`" + prefix + "IdentityVNews channel disable`"
+            },
+            {
+                toCheck: guild.PatchChannel,
+                toSayIfNull: "📓 __**Identity V Patch-Notes Channel Is Not Set**__\nDo `" + prefix + "IdentityVNews PatchNotesChannel <#channel>` if you want Cowboish to post the full version of the Patch-Notes in the channel",
+                toSayIfTrue: "📓 **Identity V Patch-Notes Channel** <#" + guild.PatchChannel + ">\nWanna disable this function? If so, do\n`" + prefix + "IdentityVNews Patch-Notes disable`"
             }
         ],
             description = "Cowboish Bot has the ability to power your server up with the lastest **Identity V News And Updates**\nAll you gotta do is providing the bot a channel to send news in it using this command.\nYou even have the ability to set a to-ping role or mention once the bot send a news annoncement!\n\n";
@@ -118,9 +148,9 @@ module.exports = {
 
         const doneEmbed = new MessageEmbed()
             .setTitle(`${message.guild.name} information!`)
-            .setDescription(`${description}\n\n__**Example on how an Identity V Update/News announcement can look like:**__`)
+            .setDescription(`${description}`)
             .setThumbnail(message.guild.iconURL())
-            .setImage("https://i.imgur.com/7DsbEc4.png")
+            .setImage("https://i.imgur.com/GYkPsow.png")
             .setTimestamp()
             .setColor("0x00BDFF");
 

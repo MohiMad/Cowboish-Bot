@@ -93,6 +93,7 @@ module.exports = {
             if (charName === "Bloody Queen") LP.Hunters.BloodyQueen = true;
             if (charName === "Violinist") LP.Hunters.NewHunta = true;
             if (charName === "Sculptor") LP.Sculptor = true;
+            if (charName === "Percy") LP.Percy = true;
 
             LP.Clues = LP.Clues - price;
             await LP.save().catch(e => console.log(e));
@@ -250,6 +251,7 @@ module.exports = {
         else if (["violinist", "musician", "antonio"].includes(args[1].toLowerCase())) await buyIt("Violinist", LP.Hunters.NewHunta, 4508, "You now own the Violinist and can play as him by doing `" + prefix + "hunt vio`", "https://vignette.wikia.nocookie.net/id5/images/4/42/Violinist_%28Transparent%29.png/revision/latest/top-crop/width/360/height/450?cb=20200524021507");
 
         else if (["galatea", "sculptor", "thesculptor", "the-sculptor"].includes(args[1].toLowerCase())) await buyIt("Sculptor", LP.Sculptor, 4508, "You now own the Sculptor and can play as her by doing `" + prefix + "hunt sculptor`", "https://vignette.wikia.nocookie.net/id5/images/2/22/Sculptor.PNG/revision/latest/scale-to-width-down/1000?cb=20200728030734");
+        else if (["undead", "theundead", "percy"].includes(args[1].toLowerCase())) await buyIt("Percy", LP.Percy, 4508, "You now own the Undead and can play as him by doing `" + prefix + "hunt percy`", "https://i.imgur.com/wPV986B.png");
 
         //Frames begins HERE
         else if (["frame1", "detective"].includes(args[1].toLowerCase())) return frame(message, "frame1", 2888, LP.frames.frame1, "https://i.imgur.com/73wiNnM.png");

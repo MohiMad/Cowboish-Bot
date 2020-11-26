@@ -326,7 +326,13 @@ module.exports = {
                         LP_Path: LP.Sculptor,
                         CharacterName: "Sculptor",
                         Emoji: e.sculptor
+                    },
+                    {
+                        LP_Path: LP.Percy,
+                        CharacterName: "Undead",
+                        Emoji: "💀"
                     }
+
                 ];
 
             hunterArray.forEach(x => {

@@ -18,7 +18,8 @@ const guildSchema = new Schema({
     News: {
         Channel: String,
         toPingRole: String,
-    }
+    },
+    PatchChannel: String
 
 });
 module.exports = model("Guild", guildSchema);
