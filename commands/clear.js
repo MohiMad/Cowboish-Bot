@@ -10,7 +10,7 @@ module.exports = {
 
         if (!message.channel.permissionsFor(message.guild.me).missing('MANAGE_MESSAGES')) return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE MESSAGES**")
 
-        else if (!message.member.hasPermission("MANAGE_MESSAGES", { checkAdmin: true, checkOwner: true })) message.channel.send("You do not have the required permissions to execute this command!");
+        else if (!message.member.hasPermission("MANAGE_MESSAGES", { checkAdmin: true, checkOwner: true })) return message.channel.send("You do not have the required permissions to execute this command!");
 
         else if (isNaN(toClear) || !toClear || toClear > 100) return ErrorMsg(bot, message, "Please provide a number of messages for me to delete\nUsage: `" + prefix + "clear [amount] [reason(optional)]`\n\n**Note**: The highest amount of messages is *100*");
 
