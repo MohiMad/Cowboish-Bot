@@ -22,8 +22,6 @@ module.exports = {
             .setImage("");
 
 
-
-
         let luckyguy = new Discord.MessageEmbed()
             .setAuthor("Lucky Guy", survivorIcon)
             .setColor("#15f153")
@@ -255,21 +253,21 @@ module.exports = {
             .setAuthor("", hunterIcon, "")
             .setColor("RED")
             .setDescription("**Background:**\nTEXTHERE\n\n**《 External traits 》**\n\n**《 Abilities 》**\n\n")
-            .setFooter(`The Hunters - Page x of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page x of 19 | Information taken from IdentityV wiki`)
             .setImage("");
 
         let hellember = new Discord.MessageEmbed()
             .setAuthor("Hell Ember - Leo Beck", hunterIcon, "https://identityv.gamepedia.com/Leo_Beck")
             .setColor("RED")
             .setDescription("**Background:**\nThe factory manager was married in 1874. Three years later, his daughter was born. He operated a small textile factory and was flexible in handiwork. He also made small toys for his daughter. Though he didn't have a big career, he loved his family.\nThe factory owner suffered a career issue, and many years of friends and lawyers helped him. After taking the advice of his friend Freddy Riley, he bought a small gun factory that was severely in debt. Before Leo realized the poor conditions of the factory, his wife and Freddy Riley made off with all his possessions and disappeared.\n[Read more](https://identityv.gamepedia.com/Leo_Beck)\n\n**《 External traits 》**\n\n**Infernal Soul:** When Leo pursues a survivor, is stunned or when the survivors decode a cipher machine with none of the survivors incapacitated, he becomes furious. When he has accumulated enough Fury, it will turn to Rage, and he can use it to activate his Awaken skill.\n\n**《 Abilities 》**\n\n**Awaken:** Tap the skill button to awaken Phantoms for **25** seconds; hold the skill button to transmit Rage to you Puppet and order it to pursue nearby Survivors.\nWhen the Puppet hits a Survivor or if you change places with the Puppet, it will stop moving.\n\n__Phantom__\nPhantoms will automatically pursue nearby Survivors. Tap the skill button again during this period to recall the Phantoms. After recalling the Phantoms, a percentage of Rage will be recovered according to the remaining time.\n\n**Puppet Control:** For an unknown reason, Leo is connected to his Puppet. After tapping Deploy or Cast, the Puppets can detect surrounding Survivors and alert Leo. Leo can switch positions with the Puppet, gaining an acceleration boost for a short period. The Puppet can be dismantled by Survivors, during which time Leo is unable to switch positions.\n\n**Multiple Puppet Control:** Leo acquires a second Puppet.")
-            .setFooter(`The Hunters - Page 1 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 1 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/3/34/Leo_Beck.png/212px-Leo_Beck.png?version=66f37472b515f01f23a3578eb8ce1a37");
 
         let clown = new Discord.MessageEmbed()
             .setAuthor("The Smiley Face - Joker", hunterIcon, "https://identityv.gamepedia.com/Joker")
             .setColor("RED")
             .setDescription("**Background:**\nJoker was once the star of the circus. His naturally sullen face made him the best crying clown. However, the advantage changed when the handsome smile clown Segi and the glamorous acrobat and actress Natalie joined the circus, and Joker realized it's time for him to change his 'professional track'. Obviously, after getting his eternal smile, Joker can go nuts in new comedy shows.\n\n**《 External traits 》**\n\n**Rocket Modification:** Joker can collect parts scattered around the Map to modify his weapon. Modification is lost after an attack or a Rocket Dash.\n\n__Wind Wings__:\nIncreases Attack Speed and Rocket Dash Speed\n\n__Drill__:\nSurvivors take a longer time to heal when hit by normals attacks or skills.\n\n__Propeller__:\nIncreases the effect of Rocket Dash once, but the weight is also increased, thus slightly decreasing its speed.\n\n**《 Abilities 》**\n\n**Rocket Dash:** Brandishing a rocket, Joker dashes forward quickly and destroys all targets in his way. [**Cooldown**: **12** seconds]\n\n**Crazed Dash:** After multiple intimate collaborations, Joker can dash further and faster with his rocket. [**Cooldown**: **12** seconds]")
-            .setFooter(`The Hunters - Page 2 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 2 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/3/3b/Joker2.png/150px-Joker2.png?version=27c3316d234669f44bde3652bb892391");
 
 
@@ -277,35 +275,37 @@ module.exports = {
             .setAuthor("Jack - The Ripper", hunterIcon, "https://identityv.gamepedia.com/Jack")
             .setColor("RED")
             .setDescription(`**Background:**\nBefore becoming "The Ripper", he was a student of James Whistler, a renowned artist influenced by Edgar Degas. Who would guess that a well-dressed gentleman during the day will, when darkness falls, walk into an alley and stalk poor women? As "The Ripper" gained infamy, the boundary between his two identities began to fade. Of course, before you see his true face, "The Ripper" is still happy to take a walk at night.\n\n**《 External traits 》**\n\n**Freezing Fog:** The fog's chill can be felt in one's bones. Fog Blades are created as fog collects onto The Ripper's bladed hand. When a certain amount of fog has been amassed, The Ripper's attacks will trigger flying Fog Blades.\n\n**《 Abilities 》**\n\n**Freezing Fog:** Every once in awhile The Ripper's attack will trigger a flying Fog Blade. Fog Blades will leave Fog on its path. Survivors hit by Fog Blades will also leave a trail of fog behind them as they move around. [**Cooldown**: **20 **seconds]\n\n__Fog__\nWhile in the Fog, The Ripper has increased Movement Speed and greatly reduced Hidden Mist countdown.\n\n**Hidden in Mist:** When not striking or vaulting, The Ripper will gradually enter Hidden in Mist mode and gain accelerated Movement Speed. [**Cooldown**: **17** seconds]\n\n**Hidden in Shadows:** The Ripper will enter Hidden in Mist mode quicker and will move faster. [**Cooldown**: **14** seconds]`)
-            .setFooter(`The Hunters - Page 3 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 3 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/4/46/Jack.png/224px-Jack.png?version=928726e2df9e0810bd7f04c324aed8ab");
 
         let gamekeeper = new Discord.MessageEmbed()
             .setAuthor("Bane Perez - The Gamekeeper", hunterIcon, "https://identityv.gamepedia.com/Bane_Perez")
             .setColor("RED")
             .setDescription("Bane Perez was in charge of the forest farm and patrol cabin at Oletus Manor. He raised a black-nosed moose like a child. However, accidents always happen, and a new hunting season was coming. Bane wondered how he could hide the black-nose to ensure its safety, but he was too late. A team of fully armed poachers had already arrived.\nThe gunshots rang through the forest. When Bane arrived, he saw that the black-nose had fallen to the ground. He recognized a familiar face from the poacher's team. It was the boy that he had rescued a few years prior. However, when Bane pleaded with him, they cruelly wanted to turn him into a Minotaur. They cut off his tongue and put the head of the black-nose moose on him. They locked him up with a steel-jaw bear trap and began a massacre in the forest.\n[Read more](https://identityv.gamepedia.com/Bane_Perez)\n\nSuffocation: Hitting different targets with Bane's Chain Hook will trigger different effects.\nWhen Bane is dragged forwards by his Chain Hook and lands, it will generate shockwaves that decrease Movement Speed of Survivors within a certain range by 20% for 5 seconds. Getting hit by the shockwaves again during this period will further slow down Survivors.\nWhen hit by the Chain Hook, Survivors will be marked by the scent of rotting leaves and their location will be periodically exposed 2 times within 60 seconds, and Bane's attack recovery rate will be increased when he hits the exposed Survivors.\n\n《 Abilities 》\n\nChain Hook: Bane hooks survivors and pulls them to him or hooks a wall and pulls himself towards the wall. Long press to aim more precisely.\n\nThorny Chain Hook: Survivors' Manifestation of Horror are the thorns on the Chain Hook, when Bane's Chain Hook hits a Survivor, it will deal 50% of normal attack damage.\n**Fury Hook:** Furious Bane won't let an intruder escape his Chain Hook. If the Chain Hook hits an object, Bane can cast the Chain Hook again within 7 seconds up to 2 times, until the Chain Hooks hits a Survivor or misses")
-            .setFooter(`The Hunters - Page 4 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 4 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/9/9a/Bane.png/244px-Bane.png?version=5d81fbd6505b6154928c6b6fc9e5923c");
 
         let soulweaver = new Discord.MessageEmbed()
             .setAuthor("Violetta - The Soul Weaver", hunterIcon, "https://identityv.gamepedia.com/Violetta")
             .setColor("RED")
             .setDescription("Violetta was once a famous freak show performer, later reduced to performing in third-rate circuses after the audience lost interest in her. She's always wanted to get back on stage and once again become the much-anticipated star. With the help of a mechanic, Violetta installed flexible mechanical prostheses and a few sophisticated gadgets on herself and created a new show—Human Spider Show. Her old boss refused to let her perform, but Violetta didn't give up. She has accepted an invitation to perform, and is going to hold her comeback show at Oletus Manor. Of course, for safety reasons, audiences shouldn't watch it up close\n\n**《 External traits 》**\n\n**Cocoon Death:** Violetta can wrap up a Survivor in a Cocoon with 60 threads, and eliminate them on the spot without Rocket Chairs.\n\n**Entangled:** When Survivors are ensnared by Violetta's trap they will become Entangled, which can stack up to 3 layers.\n**__Special__**\n\n__1 Layer__: Reveals Survivor's location and decreases their Interaction Speed.\n\n__2 Layers__: Additionally decreases Survivor's Movement Speed.\n\n__3 Layers__: Greatly decreases Survivor's Movement and Interaction Speed.\n\n**《 Abilities 》**\n\n**Webbing:** Spinning webs is Violetta's natural instinct. Hold down the skill button and select a suitable place to release **Entangled**.\n**Entangled**\nVioletta will gain a brief acceleration that gradually slows when passing cobweb traps. This effect can be stacked up to 3 times by using new webs.\nVioletta will be alerted to the location of Survivors that step on a trap and Survivors will become entangled with one layer of webbing; Survivors can be entangled with up to 3 layers of webbing.\n\n**Spinning:** Spits out a ball of web that Entangles its target. Each successful hit deals half the damage of a normal attack and the target is Entangled with 1 layer of webbing, up to a maximum of 3 layers.\n\n**Web Attack:** As time passes, the Soul Weaver's spinning ability becomes stronger, speeding up the spinning action and reducing its cost.")
-            .setFooter(`The Hunters - Page 5 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 5 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/f/f1/Violetta.png/375px-Violetta.png?version=9a77c1ce44b1ceb193b63cca814a07b6");
 
         let geisha = new Discord.MessageEmbed()
             .setAuthor("Michiko - The Geisha", hunterIcon, "https://identityv.gamepedia.com/Michiko")
             .setColor("RED")
-            .setDescription("**Background:**\nOnce the best dancer in Yoshiwara, Michiko gave up everything to marry her true love Mr. Miles. The Geisha met Miles, a foreign army officer at a banquet where they fell in love soon after. She was curious and excited as a kid on this foreign land, but only found the marriage to be the beginning of the miseries. After they got married and returned to Miles’ homeland together. His father was particularly vocal in his opposition to their marriage. He was cynical of her and hoped to drive her out of the family home.\n[Read more](https://identityv.gamepedia.com/Michiko)\n\n**《 External traits 》**\n\n**Triple Phases:**\nMichiko has three different moods and forms. She assums the Beauty form when calm: in this form her fear radius is smaller, but has higher movement speed; when angry she assumes the Prajna form: in this form her fear radius is larger, but has lower movement speed; she enters Panic form when her face is seen by a survivovr: her fear radius remains unchanged, but has lower movement speed.\n\n**《 Abilities 》**\n\n**Dash Hit:**\nMichiko enters genesis mode and assumes the Prajna form. She ignores the terrain and rushes toward the survivor closest to the middle of where she is looking. But, should Michikos face be gazed upon by a survivor, Panic form will be activated and special abilities negated.\n\n**Soul Departure:** Michiko enters genesis mode and changes into Prajna form and jumps into the air to overlook the surrounding environment. Her Dash Hit also gains casting distance. But, should Michiko's face be seen by a survivor, Panic form will be activated and the skill will lose its effect.\n\n**Dash Hit:** Survivors' fear increases the Michiko's powers. Michiko can now dash towards survivors at a higher speed.")
-            .setFooter(`The Hunters - Page 6 of 18 | Information taken from IdentityV wiki`)
+            .setDescription("**Background:**\nOnce the best dancer in Yoshiwara, Michiko gave up everything to marry her true love Mr. Miles. The Geisha met Miles, a foreign army officer at a banquet where they fell in love soon after. She was curious and excited as a kid on this foreign land, but only found the marriage to be the beginning of the miseries. After they got married and returned to Miles’ homeland together. His father was particularly vocal in his opposition to their marriage. He was cynical of her and hoped to drive her out of the family home.\n[Read more](https://identityv.gamepedia.com/Michiko)\n\n**《 External traits 》**\n\n**Triple Phases:**\nMichiko has three different moods and forms. She assums the Beauty form when calm: in this form her fear radius is smaller, but has higher movement speed; when angry she assumes the Prajna form: in this form her fear radius is larger, but has lower movement speed; she enters Panic form when her face is seen by a survivovr: her fear radius remains unchanged, but has lower movement speed.\n\n**《 Abilities 》**\n\n**Dancing in Misery:**\nMichiko sends out a Swallowtail Butterfly with a lifespan of 40 seconds to the target location. It will take some time for it to get there. She can dash towards it while it is traveling but will stop dashing when it reaches its destination or if she surpasses it. Michiko can dash towards butterflies even if they are not attached to a survivor, however, she needs to see the prajna symbol above it in order to dash. She will also be unable to dash if the butterfly disappears behind an obstacle.\n\n**Swallowtail:**\nMichiko's resentment transforms into a butterfly spirit which can be used as a target for Dash Hit.\nWhen a survivor comes into contact with a Swallowtail Butterfly, it will attach itself to the survivor for 30 seconds, making a survivor a target for Dash Hit.\nSurvivors with an attached Swallowtail Butterfly can interrupt Dash Hit by staring at Michiko.")
+            .addField("Dash Hit:", "Michiko enters genesis mode and assumes the Prajna form. She ignores the terrain and rushes towards the survivor closest to the middle of where she is looking. But, should Michiko’s face be gazed upon by a survivor, Panic form will be activated and special abilities negated.\nSoul Departure: Michiko enters genesis mode and changes into Prajna form and jumps into the air to overlook the surrounding environment. Her Dash Hit also gains casting distance. But, should Michiko's face be seen by a survivor while she fears someone, Panic form will be activated and the skill will lose its effect.")
+            .addField("Dash Hit - Enhanced:", "Survivors' fear increases Michiko's powers. Michiko can now dash towards survivors at a higher speed.")
+            .setFooter(`The Hunters - Page 6 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/d/db/Michiko.png/303px-Michiko.png?version=5fb97528042c68305c0389bf2e9ac18e");
 
         let feaster = new Discord.MessageEmbed()
             .setAuthor("Hastur - The Feaster", hunterIcon, "https://identityv.gamepedia.com/Hastur")
             .setColor("RED")
             .setDescription("**Background:**\nOnce a messenger appeared clad in a yellow robe prophesying the catastrophic arrival of a dynasty; this messenger was known as the Feaster, him who Is not to be named. He is the embodiment of calamity and suffering, but those with curious hearts have always tried to seek him out in the hope of being enlightened and learning the truth of the world.\n\n**《 External traits 》**\n\n**Shape of Terror:** Terror is generated and Tentacles will appear when a Survivor is injured or when a Teammate is knocked down. Hastur is also able to use Tentacles to attack nearby Survivors.\n\n__Special__\nTentacles will decrease nearby Survivors' decoding, gate opening, vaulting and healing speed.\n\nTentacles will also disappear faster when there are Survivors tied to Rocket Chairs.\n\n**Terrified:** Survivors will continuously charge Hastur's Tentacles when they are within the Terror Radius. The more Survivors within range, the faster they charge. Every time it's charged, Hastur will gain a Tentacle summon usage up to **5** times.\n\n**《 Abilities 》**\n\n**Nightmare Attack:** Hastur can control nearby tentacles. Tap and hold the skill button to hit the nearest survivor with the tentacle.\n\n**Tentacles:** Hastur can absorb the Survivors' Terror to charge and summon the Tentacles. Hastur can also release the Tentacles at a specific location by long holding it.\n\n**Condensation of Terror:** On top of absorbing Survivors' Terror, Hastur's Tentacles will also gain additional charge over time, up to **5** times. [**Cooldown**: **40** seconds]\n\n**Nightmare Gaze:** Hastur can choose to stare at a Survivor. After being stared at by Hastur over **20** seconds, Hastur can tap the Skill button repeatedly to attack Survivors passing the Tentacles. [**Cooldown**: **5** seconds]")
-            .setFooter(`The Hunters - Page 7 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 7 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/2/27/Hastur.png/316px-Hastur.png?version=543aa625f334de496f3664bd2e483185");
 
         let wuchang = new Discord.MessageEmbed()
@@ -313,7 +313,7 @@ module.exports = {
             .setColor("RED")
             .setDescription("**Background:**\nXie Bi'an and Fan Wujiu (the White and Black Guards) have always been like brothers. As they traveled to Nantai Bridge one day, they noticed it was going to rain. Xie told Fan to wait under the bridge while he returned home to get an umbrella. After Xie left, the rain began to pour and the river rose, but Fan, reluctant to break his promise, stayed under the bridge. Shortly after, Xie returned with the umbrella only to find that the bridge was now submerged and Fan nowhere to be seen... He had drowned.\n[Read more](https://identityv.gamepedia.com/Wu_Chang)\n\n**《 External traits 》**\n\n**Dual Soul:** The White and Black Guards had their souls imbued into an umbrella and their souls can be switched by using Summon. The White Guard excels at patrol and pursuit and moves swiftly but has slow stun recovery and attack speed; the Black Guard excels at melee combat and has fast stun recovery and attack speed, but moves slowly.\n\n**《 Abilities 》**\n\n**Infinite Nirvana:** Throws the Umbrella at the target location, where it will stay for 5 seconds. Outlines of Survivors in the area covered by the Umbrella will be shown, with their movement speed and vaulting speed slightly decreased, and other interaction speeds significantly decreased. Outlines of these Survivors will still be shown for 5 seconds after they move outside the area. For the duration where the Umbrella is active, Wu Chang can choose to teleport to where the Umbrella is and switch to Dual Soul mode, or retrieve the Umbrella to recover skill countdown. Without the Umbrella, Wu Chang's movement speed and window vaulting speed is increased. The Umbrella will return to Wu Chang when the 5 seconds are up.\n\n**Summon:** Use the skill to switch into Dual Soul mode, or hold down the skill button to charge up and toss the soul umbrella forward and then switch to Dual Soul mode and teleport to where the umbrella lands. The longer you charge the skill the further you can toss the umbrella.")
             .addField("Siphon Soul & Wavering Soul", "The White Guard's body moves with ease, and when it fully enters the spiritual realm it won't be able to interact with anything for **5** seconds. However, its movement speed is greatly increased and it will siphon the souls of nearby Survivors. If it manages to fully siphon a Survivor's soul, their soul will be lost.\n\n__**Lost Soul**__\nBedazzled and unable to interact with the environment.\n\nWhen the Black Guard rings the bell and casts Wavering Soul, all Survivors that hear the ringing have to steel their resolve and calibrate with precision. Should they fail the calibration, the will become horrified for **60** seconds; if they fail another calibration during that time, their soul will waver.**__Spiritless__**\n\nMovement directions will be reversed.\n\n**Summon - Enhanced:** Reduces the time it takes to switch souls in Dual Soul mode and you will immediately perform a powerful Siphon Soul or Wavering Soul upon switching.")
-            .setFooter(`The Hunters - Page 8 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 8 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/d/da/Black_and_White.png/267px-Black_and_White.png?version=317f1bc2f89b07026f5590c2faec413d");
 
         let photographer = new Discord.MessageEmbed()
@@ -322,7 +322,7 @@ module.exports = {
             .setDescription("**Background:**\nComing from an affluent aristocratic family, Joseph, also known as Ex-Count Desaulniers, was born in France alongside his twin brother, Claude. During the early years of his life, it is implied his family was forced to flee France and move to England, likely because of the mass emigration to Britain during the French Revolution. Not too long after, his brother passed away from illness, and the pain of losing his dear twin and trusted companion caused Joseph to become emotionlessly absorbed with art and photography. He hoped that he would be able to save the appearances of the people and objects he took photos of to liven up his pictures. Despite being arrogant, biased, and overly sentimental, the count was a wealthy and well-respected man, his French accent, and elegance alluring to the many people who were willing to model for his hobby. However, suspicions and rumors about the now-elderly Joseph began to spread amongst the maids and workers of the Desaulniers Manor when the population of the hamlet began to drop rapidly. Now seemingly slipping into a dark place, a panic-stricken mob forced their way into Joseph's residence, but the old gentleman was nowhere to be seen. On the wall of his studio, however, were all kinds of lifelike portraits of people that seemed to be looking right at them; it seemed that Joseph's shutter took more than photos, after all.\n\n**《 External traits 》**")
             .addField("Camera World", "After Joseph takes a photo with his Camera, he can replicate the Survivors and environment from that moment and create a static Camera World. Joseph can enter the Camera World at will to find the Survivor from that moment and place them upon a Rocket Chair.\nWhile in the static Camera World, Survivors cannot escape the Manor or be sent back there from Rocket Chairs; similarly, Survivors in the real world can enter the Camera World through recorded images.\nSurvivors who do this can decode Cipher Machines for progress but cannot decode them completely.\nThose in the Camera World will not apply team buffs or debuffs to Survivors.\nAfter Joseph takes a photo with his camera, he can replicate the Survivors and environment from that moment and create a static Camera World. Joseph can enter the Camera World at will to find the Survivor from that moment and place them upon a Rocket Chair.")
             .addField("Spacetime", "Grants the power of two spacetimes. Regular attacks deal 1.5x the damage.\n\n**Recorded Moment:** A recorded moment which can be used while Camera World is active. Joseph may use it to enter and exit the Camera World freely.\n\n**Time Jump:** Joseph records last **15** seconds in time as he moves. Return to your desired point in time by holding down the skill button for the corresponding number of seconds.")
-            .setFooter(`The Hunters - Page 9 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 9 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/2/2f/Photographer.png/287px-Photographer.png?version=13286090bacdb8beeabfcca4e4874c88");
 
         let madeyes = new Discord.MessageEmbed()
@@ -330,7 +330,7 @@ module.exports = {
             .setColor("RED")
             .setDescription(`**Background:**\n\nAs the eldest son of a construction worker, Burke has been playing with design drawings and a wide variety of machines and tools since he was a child. He has great talent and was well known in the local area when he was twenty. After being employed by a couple, Burke came to the still-destroyed Oletus Manor, taking on most of the architectural work. At the request of the employer, Burke led the workers to continue to expand. At the same time, Burke also joined his own little "hobby" - the institution, and this manor became his secret experimental field.\nIt is said that even up until that unfortunate incident this crazy architect was still planning the addition of new devices.\n\n**《 External traits 》**\n\n**Console:** Balck has full authority over consoles. He can use consoles on the map to operate any control monitor. Survivors can decode consoles and gain limited access to them when decoded. They can expend an increased amount of energy to use the control monitor in the console's area of influence. When a survivor is logged into a console, Balck is unable to access that console's control monitor and the console is unable to restore energy.\n\n**Control Monitor:** There is a control monitor in each console's area of influence. Drag the thumbstick to move across the monitor's field of vision and press the screen to raise a fence in that location. The amount of energy expended each time this action is performed increases with every fence raised.\n\n**Fence:** Raising fences inflicts half the damage of a normal attack upon survivors in the area. Survivors can vault the fence using the action button, which will also lower the fence, inflicting the same amount of damage as a normal attack. Survivors can also choose to wait for the fence to become disabled. Nearby fences will become disabled if there are undecoded cipher machines, consoles, basements, active rocket chairs and the exit gate has been activated.\n\n**《 Abilities 》**`)
             .addField("Portable Console", "Burke can use the portable console to patch into a monitor directly, but using the portable console consumes more energy.\n\n**Overclock:** Can be used on the control monitor interface after this ability has been unlocked. The cooldown time and amount of energy consumed will be greatly decreased. This control monitor will be unable to restore energy for a period of time after Overclock has been used.")
-            .setFooter(`The Hunters - Page 10 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 10 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/a/a7/Mad_Eyes.png/375px-Mad_Eyes.png?version=9977198a06dc4d915f5377b071daefec");
 
         let dreamwitch = new Discord.MessageEmbed()
@@ -338,7 +338,7 @@ module.exports = {
             .setColor("RED")
             .setDescription("**Background:**\nIt is said that Yidhra has existed on earth before the emergence of the very first microorganism. As billions of years passed, Yidhra acquired a unique ability from the changes that took place around her, devouring creatures to acquire their characteristics. Yidhra can, therefore, divide herself into different aspects, though each part shares her consciousness. Merging themselves with Yidhra gifts her followers eternal life. She often hides her true form through powerful images, with only summoned followers being able to see it.\n\n**《 External traits 》**\n\n**Hidden Dream:** Yidhra conceals herself in dreams. Her Movement Speed is extremely fast, but she isn't able to interact directly. Survivors will not see her true face;\nand she comes with a Follower that cannot be removed. This Follower follows Yidhra's footsteps and is never far from her.\n\n**Follower:** Yidhra creates a Follower near a chosen Survivor.\n\n**Follower**\n\nThe summoned Follower's existence is dependent on its host and is unable to leave its host.\nAttacking Yidhra will cause the Follower to disappear and can be removed by Survivors with the Witch Mark.\n\nFollowers are affected by Talent and have their own cooldown period for secondary skills.\nFollowers' movements and directions are controlled by Yidhra and only when Yidhra possesses will it show a fear radius.\n\n**Witch Mark:** Yidhra leaves a Witch Mark when she creates a Follower. Survivors can pick up the Witch Mark and use it to remove Followers from leeching on to self and Teammates. However, removing Followers from self consumes more time.\n\n**《 Abilities 》**\n\n**Leech:** Hold the button to select a Survivor without a leeching Follower, and spawn a Witch Mark and a Follower. The skill cooldown will be decreased when the Follower hits a Survivor\n\n**Preach:** Tap on the wheel to control Followers. There is a short cooldown between each control. Followers cannot change target while casting a skill or attacking")
             .addField("Assimilation", "Significantly decreases the cooldown of Leech skills\n\n**Martyr:** Increases control of Followers to significantly increase the Followers' movement radius")
-            .setFooter(`The Hunters - Page 11 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 11 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/f/f9/Yidhra.png/375px-Yidhra.png?version=9a143b7599beec372640d15f5ec9a37d");
 
         let axeboy = new Discord.MessageEmbed()
@@ -347,7 +347,7 @@ module.exports = {
             .setDescription("**Background:**\nIn one night, Robbie had lost his spacious house, comfortable bed, delicious food… and his parents. His life is replaced by endless work and his emotionless boss. But with the help from his sister Dolores, he gradually got used to the work in the yard and gardening became his new hobby. Not long, the White Sand Street Orphanage was taken over by the church and the orphans do not need to work for life. Robbie somewhat felt disappointed about that. However, compare to Dolores dose not need to beg on the street and nuns were providing warm food for everyone, Robbie’s little hobby seems less important. After all, his life with his sister was back to the right track. And that was the last memory Robbie could recall, When he woke up under the juniper tree, his sister and the orphanage was no longer exist, the only thing left to him is the dead branch in his hand. Robbie could continue on doing his little hobby.\n\n**《 External traits 》**\n\n**Corrupt Area:** Over time, the Peaceful Pine seedlings will grow and expand its roots to form a Corrupt Area. As the seedlings grow, two Resentful Souls will converge unconsciously in the area. When many Peaceful Pine roots connect with each other, it will form a complete Corrupt Area. Robbie is able to control the Resentful Souls in the Corrupt Area to move them quickly to him in order to absorb them and gain a temporary acceleration effect.\n\nDuring this process, if the Resentful Soul comes in contact with Survivors, it will deal damage equal to one normal attack to Survivors and disappear. The Resentful Soul will reappear in the vicinity of the Peaceful Pine after **20** seconds.")
             .addField("Endless Growth", "At the beginning of each game, several Peaceful Pine seedlings will grow in the area, and a maximum of 6 Peaceful Pines can be present in one game. Survivors can destroy mature Peaceful Pines to remove the Corrupt Area and Resentful Souls. However, destroying the Peaceful Pine will provide the Hunter with an indication of the Survivor's location. Destroyed Peaceful Pines will leave a branch for Robbie. Robbie can also obtain a branch from a Peaceful Pine that has matured for a while to plant a new Peaceful Pine.\n\n**《 Abilities 》**\n\n**Dispel Souls:** Robbie is able to control the Resentful Souls in the Corrupt Area to move them quickly to him in order to absorb them and gain a temporary acceleration effect. During this process, if the Resentful Soul comes in contact with Survivors, it will deal damage equal to one normal attack to Survivors and disappear. The Resentful Soul will reappear in the vicinity of the Peaceful Pine after **20** seconds.")
             .addField("Resurge", "When Robbie has a Peaceful Pine branch, he can use it to make new Peaceful Pines. Once the number of Peaceful Pines in the area reaches the maximum of **6**, the newly planted Peaceful Pine will replace the earliest planted Peaceful Pine.\n\n**Restful Road:** Robbie summons the Peaceful Pine and the roots start growing rapidly forward under his feet, forming an acceleration path. Robbie will have a large increase in movement speed and all interaction speed.\n\n**Expel Souls:** After drawing a Resentful Soul to him using Dispel Souls, Robbie can now cast it back out in a specific direction after absorbing it")
-            .setFooter(`The Hunters - Page 12 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 12 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/1/13/Robbie.png/167px-Robbie.png?version=c19a17be9f9bedb3d5acea2c7a151136");
 
 
@@ -355,21 +355,21 @@ module.exports = {
             .setAuthor("Luchino - The Evil Reptilian", hunterIcon, "https://identityv.gamepedia.com/Luchino")
             .setColor("RED")
             .setDescription("**Background:**\nLuchino was an outstanding scholar who was fascinated with reptiles. Not soon after getting a rare poisonous snake from his colleague, Luchino has suddenly vanished. In his room, people only found bloody scales on the ground. The strange thing is those giant green scales are rough and hard and don’t seem to belong to any known reptile.\n\n**《 External traits 》**\n\n**Cursed Body:** Luchino's body has gained a great explosive power after mutating, but it consumes energy every time it leaps. Multiple leaps in the air consume less energy, which can be recovered gradually with time.\n\n**《 Abilities 》**\n\n**Preying Leap:** After leaping from the ground, Luchino can make a second leap in the air. If Luchino hits an obstacle while leaping, it will fall from the sky.\n\n**Crash:** Luchino can crash vertically from the air at will.\n\n**Lethal Crash:** After leaping to a certain height, tapping on the Skill button again will cause Luchino to drop vertically at high speed, causing damage to the nearest Survivor within crash range and destroying all dropped Pallets within range.\n\n**Mania:** Luchino mutates further and is able to leap three times in the air.\n\n**Basilisk:** Luchino's explosive force will greatly increase the dropping speed.")
-            .setFooter(`The Hunters - Page 13 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 13 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/c/c7/Luchino_FP.png/285px-Luchino_FP.png?version=b65d270624a375411af97d8abf36d781");
 
         let bloodyqueen = new Discord.MessageEmbed()
             .setAuthor("Mary - Bloody Queen", hunterIcon, "https://identityv.gamepedia.com/Mary")
             .setColor("RED")
             .setDescription("**Background:**\nMary was born in France to the royal family, hence her name 'Bloody Queen.' Due to no guidebook or deduction targets being out for Mary (as of April 2020), further lore is unknown; however, based on her similarities to Marie Antoinette and her background video, it can be assumed that she neglected the citizens of her country in favor of her own luxuries and conspiring with others, which thus caused her execution by guillotine in October 1793.\n\n**《 External traits 》**\n\n**Aqua Mirror:** Bloody Queen creates a Mirror Image by using an Aqua Mirror. The Mirror Image ignores collisions and reflects the location, state and motion of the actual body in real time. It can inflict damage on Survivors, but Survivors can only receive one damage at a time.\n\n**《 Abilities 》**\n\n**Mirror Image:** Summon the Aqua Mirror to generate a Mirror Image of the body. When the image is formed, tap the skill button again to switch positions with the Mirror Image.\n\n**Mirror Rotation:** Rotate the Aqua Mirror to make the Mirror Image turn to the nearest Survivor.\n\n**Into the Mirror:** When summoning the Aqua Mirror within a **5m** radius of a survivor, a Mirror Image of the nearest Survivor will be generated. The Survivor's Mirror Image will disappear after the Survivor is hit by the Bloody Queen.")
-            .setFooter(`The Hunters - Page 14 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 14 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/6/66/Mary_FP.png/244px-Mary_FP.png?version=3fec4cc960a2bdd09ae32c77e5cb0b7e");
 
         let bonbon = new Discord.MessageEmbed()
             .setAuthor("Bonbon - Guard 26", hunterIcon, "https://identityv.gamepedia.com/Bonbon")
             .setColor("RED")
             .setDescription(`**Background:**\n[Burke](https://identityv.gamepedia.com/Burke) (the Architect) had failed to make a robot 25 times, and he finally succeeded in the 26th time, which he could be proud of. No 26 has a high self-awareness, which significantly increased its efficiently, and allowed Burke to have a temporary "vacation", away from the complex repetitive work, and to develop him a new "body". Gradually, No 26's self-awareness involved, and it even had a "name" - Bonbon.\nBurke was very angry to find out that the efficiency of No 26 decreased after the over-development of self-awareness, so he replaced the CPU and wrote No 26 a new program. But strange things happened. No matter how many times he changed the CPU, or how many times he wrote a new program , he would hear the same phrase after reboot: "Nice to meet you, I’m Bonbon".\n\n**《 External traits 》**\n\n**Bomb Chain:** Bonbon can store a large number of bombs. It explodes in a cross shape and detonates all bombs within range.\n\n__Special__\n\nEach bomb only inflicts damage equal to **50%** of a normal attack. A Survivor hit by multiple bombs at the same time will only receive damage once.\n\n**《 Abilities 》**\n\n**Time Bomb:** Time bombs can be placed or thrown. The bomb will explode at the end of the timer, and the timer can be adjusted before the bomb is thrown.\n**Cooldown: 6 seconds**\n\n**Remote-Controlled Bomb:** Placing or throwing the special Remote-Controlled Bomb, and then tapping the skill button again will detonate the bomb. The Remote-Controlled Bomb will detonate automatically once it reaches the time limit.\n\n**EX Bomb:** Decreased the charging time of Time Bombs and increased the explosion range of all bombs.`)
-            .setFooter(`The Hunters - Page 15 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 15 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/3/3b/Bonbon_FP.png/347px-Bonbon_FP.png?version=be0b0a248f72f2c4cd100bfb7a107b2e");
 
         let ann = new Discord.MessageEmbed()
@@ -378,7 +378,7 @@ module.exports = {
             .setDescription("**Background:**\nA strange disease had struck Ann's eyes and made them different from ordinary people. And more, unfortunately, with this change, the plague came to the city.\n\nThe epidemic took the lives of her parents, and there were rumours that she was the eye of devil, and it was her who spread the plague. And many angry people began to advocate for her to be executed.\n\nAnn began to live in fear, and the ubiquitous death threat shocked her fragile nerves and led her to believe it herself.\n\nOn a moonless night, Ann couldn't sleep for a long time and wanted to go to a Church in search of inner peace. But as she was about to arrive, a wooden stake pierced through her heart, and dying Ann was left lying in the wilderness.\n\nBefore she died, she felt that unusual eyes were watching her at the end of the night, but her fading consciousness made it impossible to know whether it was the salvation of miracle or the call of evil.\n\n**《 External traits 》**\n\n**Shadow Step:** Cat was born in a dark shadow and ignores certain laws of physics. Its body generates an expanding **Alert Radius** (small) and **Paralysis Area** (big) after it splits.\n\n__Alert Radius__\nWhen Survivors enter its range, the alerted Cat will refresh its existence time, bite on the Survivor's shadow and move with it.\n\n__Paralysis Area__\nWhen Ann enters its range, Cat's strength surges and it confines the movement of all Survivors in the area.\n\n__Special__\nGetting confined by the Cat multiple times continuously will significantly reduce the confined duration.\n\n**《 Abilities 》**\n\n**Catwalk:** Ann shares some of her Cat's power through their bond. Ann can now sense where her cat is and dash towards it at alarming speed.\n\n**Swoop:** Ann sends her Cat sprinting in the target direction. Tap the skill button again and the Cat will split into two and run in opposite directions.\nThe Cat will split automatically after **5** seconds. After the split, the Cat will exist for **10** seconds.")
             .addField("Guide", "Ann creates a Command Mark at the target location.\nThe Cat will refresh its existence time and come towards the Mark.")
             .addField("Psychic", "Ann assimilates more with the Cat.\nAnn can now dash more quickly and frequently.")
-            .setFooter(`The Hunters - Page 16 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 16 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/3/30/Ann.png/202px-Ann.png?version=453264cd9eb0631f1dd4e21b68f94af2");
 
         let violinist = new Discord.MessageEmbed()
@@ -387,7 +387,7 @@ module.exports = {
             .setDescription(`**Background:**\n"He can see the rhythms of the whole world, which are controlled by the ubiquitous strings.”\nEven at the height of his fame and skill the Violinist Antonio did not abandon his unrestrained desire for music. His skill on the violin exceeded its peak when he was able to play on stage on a single string, and this greatly shocked the audience! In addition to the unheard-of melodies, his appearance and almost inhuman figure caused many legends: the audience claimed that during Antonio's performance, the devil himself appeared behind his shoulders, who manipulated his hands to perform an amazing technique. Moreover, some saw the violinist in a trance, when his entire body was connected to the bow and strings, and his hair could play a rhythmic melody.\n\nBut what is the truth, and who cares?\n\n**《 External traits 》**\n\n**Terrifying Melody:** Antonio plays out terrifying music with all the melody in the world. Survivors hit with Antonio's abilities will be infected with multiple stacks of [Demon Notes].\n\n**Demon Notes:** Survivors' movements are affected by the music resounding in their earsThe Survivor needs to find a quiet place to calm his mind. Each layer has the following effects: **1 / 2 / 3** stacks of [**Demon Notes**] will decrease movement speed by **4% / 8% / 12%**, and decrease healing and decoding speed by **15% / 30% / 50%**. When there are no other Survivors with a **24m** radius, the survivor can calm down through meditation and remove the effects of Demon Notes.\n\n**《 Abilities 》**\n\n**Sonata:** Antonio plays the first note at the target location and within **5** seconds can throw the second note. The notes that reach the ground connect and create a [*Terrifying String Music*].`)
             .addField("Terrifying String Music", "Stays on the field for **13** seconds and only deals damage when it is generated. Survivors who are hit will suffer damage equal to **1** normal attack plus **1** stack of Demon Notes. When these survivors touch the same string music later, another stack of Demon Note will be added with no damaging effect. There is a **5s** buffer for the String Music to add a stack of Demon Note to the same survivor.\n\n**Rhapsody:** Antonio performs for **9** seconds: During the crazed performance, he can move during the backswing of normal attacks and charged attacks. His attacks won't collide with scene features. At the same time, he will also send out an additional [Terrifying Music Note] along with each attack.\n\n**Terrifying Music Note:** Music notes that ignore the terrain and keep on flying, adding **1** stack of Demon Note to the hit Survivors.")
             .addField("Perpetual Motion", "Within a **20m** radius of the Terrifying String Music, Antonio can bring out his bow and play out String Music, vibrating, and creating **10** parallel fleeting pieces of String Music. Survivors hit by the String Music will suffer damage equal to **1** normal attack. Survivors in the areas between the pieces won't be affected.")
-            .setFooter(`The Hunters - Page 17 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 17 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://vignette.wikia.nocookie.net/id5/images/4/42/Violinist_%28Transparent%29.png/revision/latest/scale-to-width-down/620?cb=20200524021507");
 
         let sculptor = new Discord.MessageEmbed()
@@ -397,9 +397,19 @@ module.exports = {
             .addField("Continuity of her Background", "Her family thought Galatea was crazy so they sent her to a mental asylum. However, Galatea's condition didn't improve. She's beginning to refuse to communicate with living people. She would take everything out that could be sculpted at her hand, carve out the same face and name this face after her own name.\n\nThe hospital arranged her in a remote yard, leaving only a female nurse to look after her. One day, the nursing staff did not go to the main building to report Galatea's recent situation to the doctor as per usual. The doctor went to the yard to check and found out that Galatea was nowhere to be found and only a complete masterpiece was left in the ward.")
             .addField("**《 External traits 》**", "**Sculpture of Strength**: Galatea’s sculpture can push Survivors by force. Pushing Survivors against obstacles will deal damage equal to half of a normal attack on them.\nSculptures are generated in pairs and will move towards each other at high speed once they have risen. If they hit an obstacle, they will return in the opposite direction. They will be destroyed if they hit an obstacle **3** times.\n__Special__: The generation of sculptures is restricted in certain special terrains. Survivors will not suffer repeated damage from Sculpture Crush within **1** second.")
             .addField("**《 Abilities 》**", "**Sculpture of Wisdom**: Galatea summons a pair of side-by-side sculptures at the target location. Upon hitting a Survivor it will crush them between the two sculptures, dealing **0.25** damage.\n\n**Sculpture of Agility:** Galatea summons a pair of sculptures, one in front of another, at the target location.\n\n**Hieroglyphic Graveyard:** Galatea throws out a weapon toward the target location. Once the weapon lands, a Hieroglyphic Graveyard will be generated. In the next 16 seconds, Galatea will look down on the Hieroglyphic Graveyard from the creator’s perspective and make sculptures, during which she can move but cannot perform most actions such as attack.\n\n**Sculpture of Nobility**: When two different sculptures collide, they will merge into the Sculpture of Nobility and immediately charge towards the nearest Survivor. It will shatter when it hits the target or an obstacle, dealing damage equal to half of a normal attack to all Survivors within a small range.")
-            .setFooter(`The Hunters - Page 18 of 18 | Information taken from IdentityV wiki`)
+            .setFooter(`The Hunters - Page 18 of 19 | Information taken from IdentityV wiki`)
             .setImage("https://vignette.wikia.nocookie.net/id5/images/2/22/Sculptor.PNG/revision/latest?cb=20200728030734");
 
+
+
+        let percy = new Discord.MessageEmbed()
+            .setAuthor("The Undead - Percy", hunterIcon, "https://id5.fandom.com/wiki/%22Undead%22")
+            .setColor("RED")
+            .setDescription("**《 External traits 》**\n\n**Energy Charge:**\nPercy can use this ability to increase his energy load. When the energy reaches *50*, Percy will enter an Energy Surge state, during which his ability is enhanced. During Energy Surge state, his normal attack cannot be interrupted by Survivors and he can shatter pallets that have been pulled down. When the energy reaches *100*, Percy will enter an overload state, during which his movement speed is decreased by **8%** and he is unable to use any of his abilities for **14 seconds**\n\n****Surrogate:**\nPercy is unable to place Survivors on Rocket Chairs. However, the elimination progress of Survivors knocked down by Percy is increased by **25%**, their self-heal limit is raised to **95%**, their crawling speed is increased by **200%**, and their location is revealed to Percy for **6** seconds when they get back on their feet.\n\n__**Special:**__\nWhen all of the Survivors are knocked down, the elimination speed is increased by **300%**. After the gate's electrical switch is activated, the elimination speed against knocked down Survivors is increased by **300%**.\n\n**《 Abilities 》**\n\n**Kinetic Dash Hit**\nDash forward for a short distance and deal damage by launching up to a Survivor. The ability ends when he hits an obstacle or reaches the maximum distance. Using this skill increases Energy load by *10*\n\n**Energy Surge:**\nThis ability cannot be interrupted by Survivors. Tapping the ability button again during the brief launch up period will trigger another hit that deals damage upon hitting a Survivor.")
+            .addField("Charged Strike", "A charged strike on the ground sending all Survivors within range flying. The range expands as the charged duration increases. When the charged duration exceeds a certain threshold, the hit comes with the effect of a normal attack. Using this skill increases the Energy load by *20*\n\n**Energy Surge:**\nThis ability cannot be interrupted by Survivors. Before the Charged Strike ability ends, holding the ability button again will trigger another Charged Strike.")
+            .addField("Energy Conversion", "When the ability is used while Percy's energy load is below *50*, his energy load will increase by 50 and he'll enter Energy Surge. When this ability is used when Percy is in Energy Surge mode, his energy will decrease by *50* and he will exit Energy Surge mode.")
+            .setFooter(`The Hunters - Page 19 of 19`)
+            .setImage("https://i.imgur.com/GGsCZLS.png");
 
         //maps starts here hehehehe
         let mapTemplate = new Discord.MessageEmbed()
@@ -481,6 +491,7 @@ module.exports = {
             .setColor("RANDOM")
             .setImage("https://vignette.wikia.nocookie.net/id5/images/6/60/GoldenCave6.jpg/revision/latest?cb=20200208195736")
             .setFooter("Identity V Maps | Page 9 out of 9");
+
 
 
         let searchForString = args.slice(1).join(" ").toLowerCase();
@@ -609,93 +620,93 @@ module.exports = {
             ]);
 
         } else if (["lucky", "luckyguy", "lg", "lucky guy", "the lucky guy"].includes(searchForString)) {
-            message.channel.send(luckyguy);
+            return message.channel.send(luckyguy);
 
         } else if (["doc", "doctor", "emily"].includes(searchForString)) {
-            message.channel.send(doctor);
+            return message.channel.send(doctor);
 
         } else if (["lawyer", "freddy"].includes(searchForString)) {
-            message.channel.send(lawyer);
+            return message.channel.send(lawyer);
 
         } else if (["theif", "kreacher"].includes(searchForString)) {
-            message.channel.send(theif);
+            return message.channel.send(theif);
 
         } else if (["magician", "servais"].includes(searchForString)) {
-            message.channel.send(magician);
+            return message.channel.send(magician);
 
         } else if (["explorer", "kurt"].includes(searchForString)) {
-            message.channel.send(explorer);
+            return message.channel.send(explorer);
 
         } else if (["merc", "mercenary", "naib"].includes(searchForString)) {
-            message.channel.send(mercenary);
+            return message.channel.send(mercenary);
 
         } else if (["coordinator", "coord", "martha"].includes(searchForString)) {
-            message.channel.send(coordinator);
+            return message.channel.send(coordinator);
 
         } else if (["mec", "mechanic", "tracy"].includes(searchForString)) {
-            message.channel.send(mechanic);
+            return message.channel.send(mechanic);
 
         } else if (["forward", "william"].includes(searchForString)) {
-            message.channel.send(forwardy);
+            return message.channel.send(forwardy);
 
         } else if (["mindseye", "themindseye", "helena", "the minds eye", "the mind's eye", "mind's eye"].includes(searchForString)) {
-            message.channel.send(mindseye);
+            return message.channel.send(mindseye);
 
         } else if (["fiona", "priestess"].includes(searchForString)) {
-            message.channel.send(priestess);
+            return message.channel.send(priestess);
 
         } else if (["perfumer", "vera"].includes(searchForString)) {
-            message.channel.send(perfumer);
+            return message.channel.send(perfumer);
 
         } else if (["cowboy", "kevin"].includes(searchForString)) {
-            message.channel.send(cowboy);
+            return message.channel.send(cowboy);
 
         } else if (["dancer", "femaledancer", "female", "margaretha", "female dancer", "the female dancer"].includes(searchForString)) {
-            message.channel.send(dancer);
+            return message.channel.send(dancer);
 
         } else if (["seer", "eli"].includes(searchForString)) {
-            message.channel.send(seer);
+            return message.channel.send(seer);
 
         } else if (["embalmer", "aesop"].includes(searchForString)) {
-            message.channel.send(embalmer);
+            return message.channel.send(embalmer);
 
         } else if (["prospector", "norton"].includes(searchForString)) {
-            message.channel.send(prospector);
+            return message.channel.send(prospector);
 
         } else if (["enchantress", "patricia"].includes(searchForString)) {
-            message.channel.send(enchantress);
+            return message.channel.send(enchantress);
 
         } else if (["wildling", "murro", "wilding"].includes(searchForString)) {
-            message.channel.send(wildling);
+            return message.channel.send(wildling);
 
         } else if (["mike", "acrobat"].includes(searchForString)) {
-            message.channel.send(acrobat);
+            return message.channel.send(acrobat);
 
         } else if (["jose", "officer", "1stofficer", "1st officer"].includes(searchForString)) {
-            message.channel.send(officer);
+            return message.channel.send(officer);
 
         } else if (["bartender", "barmaid", "demi"].includes(searchForString)) {
-            message.channel.send(barmaid);
+            return message.channel.send(barmaid);
 
         } else if (["postman", "victor", "viktor"].includes(searchForString)) {
-            message.channel.send(postman);
+            return message.channel.send(postman);
 
         } else if (["gravekeeper", "gravedigger", "andrew"].includes(searchForString)) {
-            message.channel.send(postman);
+            return message.channel.send(postman);
 
         } else if (["prisoner", '"prisoner"', "luca"].includes(searchForString)) {
-            message.channel.send(prisoner);
+            return message.channel.send(prisoner);
 
         } else if (["gardener", "emma", "lisa"].includes(searchForString)) {
-            message.channel.send(gardener);
+            return message.channel.send(gardener);
 
         }
         else if (["entomologist", "entomo", "pliny"].includes(searchForString)) {
-            message.channel.send(entomologist);
+            return message.channel.send(entomologist);
 
         }
         else if (["painter", "artist", "edgar"].includes(searchForString)) {
-            message.channel.send(painter);
+            return message.channel.send(painter);
 
         } else if (["hunter", "hunters", "hunta", "killers", "killer", "chaser", "chasers"].includes(searchForString)) {
             if (spamStopper.has(message.author)) return message.reply(`**Please react with ❌ on the previous embed..**`);
@@ -721,63 +732,67 @@ module.exports = {
                 new Discord.MessageEmbed(ann),
                 new Discord.MessageEmbed(violinist),
                 new Discord.MessageEmbed(sculptor),
-
-
+                new Discord.MessageEmbed(percy)
             ]);
 
         } else if (["leo", "hellember", "hell ember"].includes(searchForString)) {
-            message.channel.send(hellember);
+            return message.channel.send(hellember);
 
         } else if (["clown", "smileyface", "smiley", "joker", "smiley face"].includes(searchForString)) {
-            message.channel.send(clown);
+            return message.channel.send(clown);
 
         } else if (["ripper", "theripper", "jack", "the ripper"].includes(searchForString)) {
-            message.channel.send(ripper);
+            return message.channel.send(ripper);
 
         } else if (["gamekeeper", "thegamekeeper", "bane"].includes(searchForString)) {
-            message.channel.send(gamekeeper);
+            return message.channel.send(gamekeeper);
 
         } else if (["soulweaver", "violetta", "spider", "spooder", "soul weaver"].includes(searchForString)) {
-            message.channel.send(soulweaver);
+            return message.channel.send(soulweaver);
 
         } else if (["geisha", "michiko"].includes(searchForString)) {
-            message.channel.send(geisha);
+            return message.channel.send(geisha);
 
         } else if (["hastur", "feaster"].includes(searchForString)) {
-            message.channel.send(feaster);
+            return message.channel.send(feaster);
 
         } else if (["wu", "wuchang", "blackandwhite", "wuwu", "wuchangus"].includes(searchForString)) {
-            message.channel.send(wuchang);
+            return message.channel.send(wuchang);
 
         } else if (["photographer", "photoboi", "joseph"].includes(searchForString)) {
-            message.channel.send(photographer);
+            return message.channel.send(photographer);
 
         } else if (["madeye", "madeyes", "burke"].includes(searchForString)) {
-            message.channel.send(madeyes);
+            return message.channel.send(madeyes);
 
         } else if (["dw", "dreamwitch", "yidhra"].includes(searchForString)) {
-            message.channel.send(dreamwitch);
+            return message.channel.send(dreamwitch);
 
         } else if (["axeboi", "axeboy", "robbie"].includes(searchForString)) {
-            message.channel.send(axeboy);
+            return message.channel.send(axeboy);
 
         } else if (["reptile", "evilreptilian", "reptilian", "lizard", "luchino"].includes(searchForString)) {
-            message.channel.send(lizard);
+            return message.channel.send(lizard);
 
         } else if (["bq", "bloodyqueen", "mary", "bloody queen"].includes(searchForString)) {
-            message.channel.send(bloodyqueen);
+            return message.channel.send(bloodyqueen);
 
         } else if (["guard26", "guard", "no26", "bonbon", "guard 26", "guard no 26"].includes(searchForString)) {
-            message.channel.send(bonbon);
+            return message.channel.send(bonbon);
 
         } else if (["ann", "disciple", '"disciple"'].includes(searchForString)) {
-            message.channel.send(ann);
+            return message.channel.send(ann);
 
         } else if (["antontio", "violinist"].includes(searchForString)) {
-            message.channel.send(violinist);
+            return message.channel.send(violinist);
 
         } else if (["sculptor", "galatea", "the sculptor"].includes(searchForString)) {
-            message.channel.send(sculptor);
+            return message.channel.send(sculptor);
+
+            
+
+        } else if (["percy", "undead", 'undead', "the undead"].includes(searchForString)) {
+            return message.channel.send(percy);
 
         } else if (["maps", "map"].includes(searchForString)) {
             if (spamStopper.has(message.author)) return message.reply(`**Please react with ❌ on the previous embed..**`);
@@ -796,38 +811,38 @@ module.exports = {
 
             ]);
         } else if (["chruch", "the red church", "red church", "redchurch"].includes(searchForString)) {
-            message.channel.send(redchurch);
+            return message.channel.send(redchurch);
 
         } else if (["hospital", "sacred heart hospital", "sacred heart"].includes(searchForString)) {
-            message.channel.send(hospital);
+            return message.channel.send(hospital);
 
         }
         else if (["arms", "arms factory", "the arms factory"].includes(searchForString)) {
-            message.channel.send(factory);
+            return message.channel.send(factory);
 
         }
         else if (["lake", "lakeside", "lakeside village", "lake side village"].includes(searchForString)) {
-            message.channel.send(lakeside);
+            return message.channel.send(lakeside);
 
         }
         else if (["moonlit", "moonlit river", "moonlit river park", "moonlitriverpark"].includes(searchForString)) {
-            message.channel.send(moonlit);
+            return message.channel.send(moonlit);
 
         }
         else if (["leo's memory", "leo memory", "leos memory", "leosmemory"].includes(searchForString)) {
-            message.channel.send(leosmemory);
+            return message.channel.send(leosmemory);
 
         }
         else if (["white sand street asylum", "white sand street", "asylum", "whitesandstreetasylum"].includes(searchForString)) {
-            message.channel.send(whitesand);
+            return message.channel.send(whitesand);
 
         }
         else if (["eversleeping", "eversleeping town", "eversleepingtown"].includes(searchForString)) {
-            message.channel.send(eversleeping);
+            return message.channel.send(eversleeping);
 
         }
         else if (["cave", "golden cave", "the golden cave", "goldencave"].includes(searchForString)) {
-            message.channel.send(cave);
+            return message.channel.send(cave);
 
         }
         else {

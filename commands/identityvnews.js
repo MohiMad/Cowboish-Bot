@@ -150,7 +150,6 @@ module.exports = {
             .setTitle(`${message.guild.name} information!`)
             .setDescription(`${description}`)
             .setThumbnail(message.guild.iconURL())
-            .setImage("https://i.imgur.com/GYkPsow.png")
             .setTimestamp()
             .setColor("0x00BDFF");
 
