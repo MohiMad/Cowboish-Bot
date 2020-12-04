@@ -57,14 +57,15 @@ module.exports = {
 
             if (!args[1]) return message.channel.send(noargsEmbed);
 
+            /*
             for (var i = 0; i < 2; i++) {
 
                 let essence;
 
-                /*if (i === 0) essence = firstEssence;
+                if (i === 0) essence = firstEssence;
                 if (i === 1) essence = secondEssence;
                 if (i === 2) essence = thirdEssence;
-                */
+                
 
 
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
@@ -197,6 +198,8 @@ module.exports = {
 
                 }
             }
+            */
+
             if (boolean === false) return message.channel.send(noargsEmbed);
 
         } catch (err) {
@@ -204,5 +207,6 @@ module.exports = {
             message.reply("**Sorry, hit an unfamiliar error!**");
 
         }
+        
     }
 }
