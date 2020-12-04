@@ -19,23 +19,23 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        var s10_cmd = "`s13-1` or `1`";
-        s10_2_cmd = "`s13-2` or `2`",
-            s10_3_cmd = "`s13-3` or `3`",
+        var s10_cmd = "`s14-1` or `1`";
+        s10_2_cmd = "`s14-2` or `2`",
+            s10_3_cmd = "`s14-3` or `3`",
 
-            exmple = "`" + prefix + "open 1` to open a `s13-1` " + ess1 + " essence",
+            exmple = "`" + prefix + "open 1` to open a `s14-1` " + ess1 + " essence",
             stats_cmd = "`" + prefix + "open stats <essenceID>`",
             author = message.author.username,
-            open10 = "`" + prefix + "open s13-1 10`\n`" + prefix + "open s13-1 3`",
+            open10 = "`" + prefix + "open s14-1 10`\n`" + prefix + "open s14-1 3`",
             boolean = false;
 
         const noargsEmbed = new MessageEmbed()
             .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL())
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
-                        ${ess1} | **Essences s13-1** ─ ID ➜ ${s10_cmd}
-                        ${ess2} | **Essence s13-2** ─ ID ➜ ${s10_2_cmd}
-                        ${ess3} | ~~**Essence s13-3**~~ ─ ID ➜ ${s10_3_cmd}
+                        ${ess1} | ~~**Essences s14-1**~~ ─ ID ➜ ${s10_cmd}
+                        ${ess2} | ~~**Essence s14-2**~~ ─ ID ➜ ${s10_2_cmd}
+                        ${ess3} | ~~**Essence s14-3**~~ ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
 
@@ -61,9 +61,10 @@ module.exports = {
 
                 let essence;
 
-                if (i === 0) essence = firstEssence;
+                /*if (i === 0) essence = firstEssence;
                 if (i === 1) essence = secondEssence;
-                //if (i === 2) essence = thirdEssence;
+                if (i === 2) essence = thirdEssence;
+                */
 
 
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
@@ -89,11 +90,10 @@ module.exports = {
 
                         } else {
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
-                            if (EssenceONLY[randomItem].Item === "s13-1-1") LP.Painter = true;
 
                             LP[EssenceONLY[randomItem].Tier] = LP[EssenceONLY[randomItem].Tier] + 1;
 
-                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49", "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50", "s13-2-46", "s13-2-47", "s13-2-48", "s13-2-49"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
+                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49", "s14-1-47", "s14-1-48", "s14-1-49", "s14-1-50", "s14-2-46", "s14-2-47", "s14-2-48", "s14-2-49"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
                         }
 
                         LP[essence[0].WhichEss] = LP[essence[0].WhichEss] - 1;
@@ -154,7 +154,6 @@ module.exports = {
 
                             } else {
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
-                                if (EssenceONLY[rndom].Item === "s13-1-1") LP.Painter = true;
                                 LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
 
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) ${EssenceONLY[rndom].Name}`;
@@ -171,7 +170,7 @@ module.exports = {
                             .setColor(lastEssenceColor)
                             .setThumbnail(essence[0].LinkOfIt)
                             .setImage(lastEssenceImage)
-                            .setAuthor(`${EssenceNumber} s13-${essence[0].WhichEss.replace("Ess", "")} essences has been opened!`, essence[0].LinkOfIt)
+                            .setAuthor(`${EssenceNumber} s14-${essence[0].WhichEss.replace("Ess", "")} essences has been opened!`, essence[0].LinkOfIt)
                             .setDescription(description);
 
                         LP.frags = LP.frags + fragments;
@@ -188,10 +187,10 @@ module.exports = {
                 else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                     boolean = true;
 
-                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s13-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Essence s13-2** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s13-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s13-1`");
+                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s14-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Essence s14-2** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s14-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s14-1`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
-                        await statsCheck(message, `s13-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
+                        await statsCheck(message, `s14-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
                         await addCooldown(message, 3000, "open");
 
                     }

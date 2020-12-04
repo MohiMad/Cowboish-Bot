@@ -644,6 +644,15 @@
         },
         {
             "Name": [
+                "[Costume] Feaster - Exoplanet"
+            ],
+            "linkTag": "https://i.imgur.com/x2jL9TY.png",
+            "Item": "LP-14",
+            "Color": "0xbb2af5",
+            "Des": "Knowledge changes one's fate is an inescapable truth. Are you willing to exchange your soul for a little taboo that can stir up a storm?"
+        },
+        {
+            "Name": [
                 "[Costume] Violinist - Ouroboros"
             ],
             "linkTag": "https://i.imgur.com/rXYuqSc.png",
@@ -2157,6 +2166,21 @@
             "linkTag": "https://i.imgur.com/diI3MIK.png",
             "Price": 4508,
             "BoughtMessage": "You now own the Sculptor and can play as her by doing `$prefixhunt sculptor`"
+        },
+        {
+            "LP_Value": "Percy",
+            "Name": [
+                "The Undead",
+                "percy",
+                "undead",
+                "theundead",
+                "the-undead"
+                
+            ],
+            "linkTag": "https://i.imgur.com/GGsCZLS.png",
+            "Price": 4508,
+            "BoughtMessage": "Yey! You bought the hated-by-the-community hunter :'D\nYou can play as him by doing $prefixhunt percy"
         }
+
     ]
 }

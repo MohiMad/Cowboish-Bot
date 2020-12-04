@@ -29,11 +29,11 @@ module.exports = {
 
         let rewards = [
             `1000 ${clues} and 25 ${ess3}`, //0
-            `500 ${clues}, 10 ${ess3}, and 10 ${ess1}`, //1
+            `500 ${clues}, 30 ${ess1}`, //1
             `200 ${insp}, 5000 ${frags}, and 500 ${clues}`, //2
             `3000 ${frags}, 15 ${ess1}, and 96 ${insp}`, //3
             `10 ${ess1}, 5 ${ess2}, and 1000 ${clues}`, //4
-            `10 ${ess1}, 10 ${ess2}, 10 ${ess3}`, //5
+            `50 ${ess1}`, //5
 
         ];
 
@@ -53,8 +53,7 @@ module.exports = {
 
                 case 1:
                     LP.Clues = LP.Clues + 500;
-                    LP.Ess3 = LP.Ess3 + 3;
-                    LP.Ess2 = LP.Ess2 + 3;
+                    LP.Ess1 = LP.Ess1 + 30;
                     break;
 
                 case 2:
@@ -76,9 +75,8 @@ module.exports = {
                     break;
 
                 case 5:
-                    LP.Ess1 = LP.Ess1 + 10;
-                    LP.Ess2 = LP.Ess2 + 10;
-                    LP.Ess3 = LP.Ess3 + 10;
+                    LP.Ess1 = LP.Ess1 + 50;
+                    
                     break;
 
             }

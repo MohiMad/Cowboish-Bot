@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
-
 const { stripIndents } = require('common-tags');
+const e = require("../emojis.json");
 
 module.exports = {
     name: 'help',
@@ -18,7 +18,7 @@ module.exports = {
             .addField('🤣 Fun 🤣', '`' + prefix + 'help fun`', true)
             .addField('📷 Images 📷', '`' + prefix + 'help images`', true)
             .addField("🛠 Utility 🛠", "`" + prefix + "help utility`", true)
-            .addField('<:dice:655384578499936257>  Logicpath <:ess1:655840713904488469>', '`' + prefix + 'help logicpath`', true)
+            .addField(`${e.dice} Logicpath ${e.ess1}`, '`' + prefix + 'help logicpath`', true)
             .addField("❓ Errors/suggestions ❓", "`" + prefix + "suggest`/`" + prefix + "reportissue`", true)
             .addField("For more info ", "[Cowboish Website](https://mohimad.github.io/CowboishBot/)\n[Invite Me :3](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)\n[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter("Remember to use my prefix ( " + prefix + ") and help before providing the category's name ;D", bot.user.displayAvatarURL());

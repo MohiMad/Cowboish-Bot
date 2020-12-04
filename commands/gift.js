@@ -55,7 +55,7 @@ module.exports = {
             {
                 searchArray: ["s13-1 essences", "ess1", "s13-1", "1"],
                 item: "Ess1",
-                link: "33Rr0iU",
+                link: "tmohFQk",
                 emoji: e.ess1,
                 hex: "0x1994F4"
 

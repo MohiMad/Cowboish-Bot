@@ -4,7 +4,7 @@ const { findMember, ErrorMsg } = require("../functions.js");
 module.exports = {
     name: 'kick',
     description: "kick them trolls",
-    execute: async (message, args, prefix) => {
+    execute: async (message, args, bot, prefix) => {
         const member = await findMember(message, args[1]);
 
         const reason = args.slice(2).join(" ") || "No Reason";

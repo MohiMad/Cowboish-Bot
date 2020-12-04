@@ -298,12 +298,12 @@ module.exports = {
                 .setDescription("**《** " + emojiDices + " **》**" + "\n" + loot)
 
             if (LP.logic > 1528) {
-                if (!LP.Opened.includes("LP-13")) {
-                    LP.Opened = [...LP.Opened, "LP-13"];
+                if (!LP.Opened.includes("LP-14")) {
+                    LP.Opened = [...LP.Opened, "LP-14"];
                     LP.A = LP.A + 1;
 
-                    DiceEmbed.setDescription(`You had walked **1528** logicpath steps and got\n__*Seer - Final Honor*__\n\n**《**${emojiDices}**》**\n${loot}`)
-                        .setThumbnail("https://i.imgur.com/RTNytX6.png");
+                    DiceEmbed.setDescription(`You had walked **1528** logicpath steps and got\n__*Feaster - Exoplanet*__\n\n**《**${emojiDices}**》**\n${loot}`)
+                        .setThumbnail("https://i.imgur.com/x2jL9TY.png");
                 }
             }
             

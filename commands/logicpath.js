@@ -77,7 +77,7 @@ module.exports = {
                 }
             }
 
-            const background = await Canvas.loadImage("https://i.imgur.com/vASgDu9.png");
+            const background = await Canvas.loadImage("https://i.imgur.com/iEGgs4O.png");
 
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -99,7 +99,7 @@ module.exports = {
                 {
                     printValue: LP.Ess1,
                     Width: 70,
-                    Height: 267
+                    Height: 268
                 },
                 {
                     printValue: LP.Ess2,

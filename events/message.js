@@ -269,7 +269,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "kick":
-            bot.commands.get('kick').execute(message, args, prefix);
+            bot.commands.get('kick').execute(message, args, bot, prefix);
             break;
 
         case "ban":

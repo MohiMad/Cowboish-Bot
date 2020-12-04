@@ -46,9 +46,9 @@ module.exports = {
         const EssEmbed = new MessageEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
-            ${e.ess1} | **Essence s13-1** - Price : *96* ${e.insp} - ID: __*s13-1*__
-            ${e.ess2} | **Essence s13-2** - Price : *96* ${e.insp} - ID: __*s13-2*__
-            ${e.ess3} | ~~**Essence s13-3**~~ - Price : *96* ${e.insp} - ID: __*s13-3*__
+            ${e.ess1} | ~~**Essence s14-1**~~ - Price : *96* ${e.insp} - ID: __*s14-1*__
+            ${e.ess2} | ~~**Essence s14-2**~~ - Price : *96* ${e.insp} - ID: __*s14-2*__
+            ${e.ess3} | ~~**Essence s14-3**~~ - Price : *96* ${e.insp} - ID: __*s14-3*__
             `)
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")
