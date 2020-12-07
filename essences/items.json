@@ -214,6 +214,30 @@
         },
         {
             "Name": [
+                "[Costume] Percy - Conquer",
+                "conquer",
+                "33",
+                "thirtythree",
+                "percyconquer"
+            ],
+            "linkTag": "https://i.imgur.com/oAd6zMS.png",
+            "Item": "conquer",
+            "Color": "0xfcba03",
+            "Des": "Indulging in the marvels of engineering and feeding his insatiable desire for cybernetic enhancements, he relishes between the pain and pleasure brought by body aumentation.",
+            "Price": 16888
+        },
+        {
+            "Name": [
+                "[Costume] Ripper - Count's Banquet"
+            ],
+            "linkTag": "https://i.imgur.com/oa7XlBq.png",
+            "Item": "counts_banquet",
+            "Color": "0xfcba03",
+            "Des": "The Count lived in seclusion in the old castle, and his bloodthirsty instincts have long been drowned by emptiness and loneliness. Eventually, when everyone forgot the Bloodline Count's name, the banquet invitation from the castle set off a new shockwave.",
+            "Price": 16888
+        },
+        {
+            "Name": [
                 "[Costume] Acrobat - ACE"
             ],
             "linkTag": "https://i.imgur.com/CUGVr3R.png",
@@ -533,26 +557,7 @@
         },
         {
             "Name": [
-                "[Costume] Ripper - Count's Banquet",
-                "count'sbanquet",
-                "countsbanquet",
-                "33",
-                "thirtythree",
-                "rippercountsbanquet"
-            ],
-            "linkTag": "https://i.imgur.com/oa7XlBq.png",
-            "Item": "counts_banquet",
-            "Color": "0xfcba03",
-            "Des": "The Count lived in seclusion in the old castle, and his bloodthirsty instincts have long been drowned by emptiness and loneliness. Eventually, when everyone forgot the Bloodline Count's name, the banquet invitation from the castle set off a new shockwave.",
-            "Price": 16888
-        },
-        {
-            "Name": [
-                "[Costume] Postman - Specter",
-                "specter",
-                "34",
-                "thirtyfour",
-                "postmanspecter"
+                "[Costume] Postman - Specter"
             ],
             "linkTag": "https://i.imgur.com/rmjHbrR.png",
             "Item": "postman_specter",
@@ -562,11 +567,7 @@
         },
         {
             "Name": [
-                "Wu Chang - Frost",
-                "frost",
-                "35",
-                "thirtyfive",
-                "wuchangfrost"
+                "Wu Chang - Frost"
             ],
             "linkTag": "https://i.imgur.com/8ZZCgAg.png",
             "Item": "wuchang_frost",
@@ -576,11 +577,7 @@
         },
         {
             "Name": [
-                "Forward - Locomotive",
-                "locomotive",
-                "36",
-                "thirtysix",
-                "forwardlocomotive"
+                "Forward - Locomotive"
             ],
             "linkTag": "https://i.imgur.com/5904Kpg.png",
             "Item": "forward_locomotive",

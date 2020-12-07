@@ -458,33 +458,20 @@ module.exports = {
 
         } else if (["portraits", "portrait"].includes(args[1].toLowerCase())) {
 
-            let ownedPortraits = "\n";
-
-            let NotOwnedPortraits = "\n";
-
-            Portraits.forEach(x => {
-                if (Portraits.indexOf(x) === 0) return;
-                if (LP.Opened.includes(x.Item)) ownedPortraits = ownedPortraits + `__${x.Name[0]}__\n`;
-                else NotOwnedPortraits = NotOwnedPortraits + `${x.Name[0]}\n`;
-            });
-
-            if (ownedPortraits === "\n") ownedPortraits = "\nLMAO none cause you broke :v\nYou can obtain portraits by opening essence tho ;)";
-            if (NotOwnedPortraits === "\n") NotOwnedPortraits = "\nYou got them all OwO";
-
             let ownedPortraitEmbed = new MessageEmbed()
                 .setAuthor("Cowboish Portrait Shop >:3", bot.user.displayAvatarURL())
                 .setColor("0x6714f7")
                 .setThumbnail("https://i.imgur.com/NGzUkth.png")
                 .setFooter("Keep in mind that you can't equip a portrait you haven't obtained from an essence...", message.author.displayAvatarURL())
-                .setDescription("An equipped Portrait will display in `" + prefix + "logicpath` instead of your actual profile-picture\nTo equip the portrait of your choice, do\n`" + prefix + "equip portrait <portrait name>`\n\n**You can also navigate between the portrait smoothly by doing\n**`" + prefix + "view portraits`\n\n**Dunno what portraits you have? Here are they:**" + ownedPortraits + "\n\n**Here are the portraits you don't own**" + NotOwnedPortraits + "\n\n**《 Purchasable Portraits 》**\nTo buy one of these portraits, do `" + prefix + "buy <portrait name>`\n\n🦎 | __**Long Jump Luchino**__ ➜ Price __1888__ " + e.frags + "\n📧 | __**Marathon Runner Victor**__ ➜ Price __1888__ " + e.frags + "\n⚔️ | __**Sword fighting Joseph**__ ➜ Price __1888__ " + e.frags + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`");
+                .setDescription("An equipped Portrait will display in `" + prefix + "logicpath` instead of your actual profile-picture\nTo equip the portrait of your choice, do\n`" + prefix + "equip portrait <portrait name>`\n\n**You can also navigate between the portrait smoothly by doing\n**`" + prefix + "view portraits`" + "\n\n**《 Purchasable Portraits 》**\nTo buy one of these portraits, do `" + prefix + "buy <portrait name>`\n\n🦎 | __**Long Jump Luchino**__ ➜ Price __1888__ " + e.frags + "\n📧 | __**Marathon Runner Victor**__ ➜ Price __1888__ " + e.frags + "\n⚔️ | __**Sword fighting Joseph**__ ➜ Price __1888__ " + e.frags + "\n\n**Example Usage**:\n`" + prefix + "equip portrait Black And White Priestess`");
 
-            message.channel.send(ownedPortraitEmbed);
+            return message.channel.send(ownedPortraitEmbed);
 
         } else if (["skins", "skin"].includes(args[1].toLowerCase())) {
             let skinPages = [
                 {
-                    link: "https://i.imgur.com/wjXeJgR.png",
-                    des: `[《 TIME LIMITED 》](https://i.imgur.com/2QdMZ7z.png)\n*Ends at: 1st December*\n\n:three: :three: | **Ripper - Count's Banquet** ─ __16888__${e.frags}\n\n:three: :four: | **Postman - Specter** ─ __1__${e.frags}`
+                    link: "https://i.imgur.com/67HSf00.png",
+                    des: `:three: :three: | **Percy - Conquer** ─ __16888__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/Oy4Cs7O.png",
@@ -501,10 +488,6 @@ module.exports = {
                 {
                     link: "https://i.imgur.com/KgRompQ.png",
                     des: `:two: :five: | **HellEmber - Eternal King** ─ __6888__${e.frags}\n\n:two: :six: | **Cowboy - Tribe Warrior** ─ __6888__${e.frags}\n\n:two: :seven: | **Thief - Pioneer** ─ __6888__${e.frags}\n\n:two: :eight: | **Ripper - White Tentacle** ─ __6888__${e.frags}\n\n:two: :nine: | **Gamekeeper - Punk** ─ __6888__${e.frags}\n\n:three: :zero: | **Geisha - Rashomon** ─ __6888__${e.frags}\n\n:three: :one: | **Mercenary - Spring Hand** ─ __6888__${e.frags}\n\n:three: :two: | **Ripper - Green Tentacle** ─ __6888__${e.frags}`
-                },
-                {
-                    link: "https://i.imgur.com/vAl1ABG.png",
-                    des: `:three: :five: | **Wu Chang - Frost** ─ __16888__${e.frags}\n\n:three: :six: | **Forward - Locomotive**  ─ __16888__${e.frags}`
                 }
 
             ];

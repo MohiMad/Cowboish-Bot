@@ -96,6 +96,7 @@ module.exports = {
 
                 for (const portrait of Portraits.slice(1)) {
                     if (LP.Opened.includes(portrait.Item)) {
+                        if(ownedPortraits.length > 1600) return;
                         ownedPortraits = `${ownedPortraits}\n${portrait.Name[0]}`;
                     }
                 }
