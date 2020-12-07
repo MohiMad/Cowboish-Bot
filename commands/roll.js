@@ -77,6 +77,20 @@ module.exports = {
                         Ess2: 0,
                         Ess3: 1,
                         Logic: 1
+                    }, {
+                        Clues: 0,
+                        Inspirations: 0,
+                        Ess1: 0,
+                        Ess2: 2,
+                        Ess3: 0,
+                        Logic: 1
+                    }, {
+                        Clues: 0,
+                        Inspirations: 0,
+                        Ess1: 0,
+                        Ess2: 2,
+                        Ess3: 1,
+                        Logic: 1
                     },//logic 1 ends here
                     {
                         Clues: 20,
@@ -125,6 +139,14 @@ module.exports = {
                         Ess2: 0,
                         Ess3: 1,
                         Logic: 2
+                    }, 
+                    {
+                        Clues: 10,
+                        Inspirations: 0,
+                        Ess1: 0,
+                        Ess2: 3,
+                        Ess3: 0,
+                        Logic: 2
                     }, //2 ends
                     {
                         Clues: 30,
@@ -165,12 +187,28 @@ module.exports = {
                         Ess2: 0,
                         Ess3: 2,
                         Logic: 3
-                    }, //End of logic 3
+                    },
                     {
-                        Clues: 40,
+                        Clues: 10,
                         Inspirations: 0,
                         Ess1: 0,
-                        Ess2: 0,
+                        Ess2: 3,
+                        Ess3: 0,
+                        Logic: 3
+                    },
+                    {
+                        Clues: 0,
+                        Inspirations: 0,
+                        Ess1: 1,
+                        Ess2: 1,
+                        Ess3: 1,
+                        Logic: 3
+                    }, //End of logic 3
+                    {
+                        Clues: 10,
+                        Inspirations: 0,
+                        Ess1: 0,
+                        Ess2: 2,
                         Ess3: 1,
                         Logic: 4
                     },
@@ -178,16 +216,16 @@ module.exports = {
                         Clues: 20,
                         Inspirations: 60,
                         Ess1: 2,
-                        Ess2: 0,
-                        Ess3: 1,
+                        Ess2: 1,
+                        Ess3: 0,
                         Logic: 4
                     },
                     {
                         Clues: 20,
                         Inspirations: 0,
                         Ess1: 1,
-                        Ess2: 0,
-                        Ess3: 1,
+                        Ess2: 1,
+                        Ess3: 0,
                         Logic: 4
                     },
                     {
@@ -210,7 +248,7 @@ module.exports = {
                         Clues: 20,
                         Inspirations: 60,
                         Ess1: 1,
-                        Ess2: 0,
+                        Ess2: 2,
                         Ess3: 1,
                         Logic: 4
                     },
@@ -226,7 +264,7 @@ module.exports = {
                         Clues: 30,
                         Inspirations: 0,
                         Ess1: 0,
-                        Ess2: 0,
+                        Ess2: 1,
                         Ess3: 2,
                         Logic: 4
                     }
@@ -306,7 +344,7 @@ module.exports = {
                         .setThumbnail("https://i.imgur.com/x2jL9TY.png");
                 }
             }
-            
+
             LP.Dices = LP.Dices - number;
             await LP.save().catch(e => console.log(e));
             await addCooldown(message, 1000 * number, "roll");

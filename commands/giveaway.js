@@ -29,7 +29,7 @@ module.exports = {
 
         let rewards = [
             `1000 ${clues} and 25 ${ess3}`, //0
-            `500 ${clues}, 30 ${ess1}`, //1
+            `500 ${clues}, 30 ${ess2}`, //1
             `200 ${insp}, 5000 ${frags}, and 500 ${clues}`, //2
             `3000 ${frags}, 15 ${ess1}, and 96 ${insp}`, //3
             `10 ${ess1}, 5 ${ess2}, and 1000 ${clues}`, //4
@@ -53,7 +53,7 @@ module.exports = {
 
                 case 1:
                     LP.Clues = LP.Clues + 500;
-                    LP.Ess1 = LP.Ess1 + 30;
+                    LP.Ess2 = LP.Ess2 + 30;
                     break;
 
                 case 2:

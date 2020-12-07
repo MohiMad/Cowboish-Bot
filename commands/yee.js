@@ -12,5 +12,7 @@ module.exports = {
         var fact = Math.floor(Math.random() * facts.length);
         message.channel.send(facts[fact]);
 
+
+       
     }
 }

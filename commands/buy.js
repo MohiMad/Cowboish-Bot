@@ -155,11 +155,11 @@ module.exports = {
             ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + "shop` to check what you can buy")
         }
         //buy essences here
-        else if (["s14-2", "s142", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
-            await essBuy("s14-2", "ess2", ess2, "https://i.imgur.com/JGu6jXE.png");
+        else if (["s14-2", "s142", "ess2", "dangan2", "danganronpa2"].includes(args[1].toLowerCase()) || args[1] === "2") {
+            await essBuy("s14-2", "ess2", ess2, "https://i.imgur.com/tmohFQk.png");
         }
-        else if (["s211", "s14-1", "ess1"].includes(args[1].toLowerCase()) || args[1] === "1") {
-            await essBuy("s14-1", "ess1", ess1, "https://i.imgur.com/tmohFQk.png");
+        else if (["s211", "s14-1", "ess1", "dangan1", "dangan", "danganronpa", "danganronpa1"].includes(args[1].toLowerCase()) || args[1] === "1") {
+            await essBuy("s14-1", "ess1", ess1, "https://i.imgur.com/M8OK22c.png");
 
         }
         else if (["s14-3", "s143", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {

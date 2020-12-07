@@ -77,7 +77,7 @@ module.exports = {
                 }
             }
 
-            const background = await Canvas.loadImage("https://i.imgur.com/iEGgs4O.png");
+            const background = await Canvas.loadImage("https://i.imgur.com/oAUm3c8.png");
 
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -215,27 +215,14 @@ module.exports = {
             LP.Hunters.SoulWeaver, LP.Hunters.Geisha, LP.Hunters.PhotoGrapher,
             LP.Hunters.MadEyes, LP.Hunters.Feaster, LP.Hunters.DreamWitch,
             LP.Hunters.BloodyQueen, LP.Hunters.Pingu, LP.Hunters.Sister,
-            LP.Hunters.NewHunta, LP.Hunters.AnotherHunta, LP.Sculptor].forEach(x => { if (x === true) HunterNumber++; });
+            LP.Hunters.NewHunta, LP.Hunters.AnotherHunta, LP.Sculptor, LP.Percy].forEach(x => { if (x === true) HunterNumber++; });
 
             ctx.fillStyle = '#d73232';
             ctx.fillText(HunterNumber, 206, 130);
 
             let portraitAmount = 0;
-            ["ess1-14", "ess1-15", "ess1-16",
-                "ess1-48", "ess1-49", "ess1-50",
-                "ess1-51", "ess3-38", "ess3-39",
-                "ess3-40", "ess3-46", "ess3-47",
-                "ess3-48", "ess3-49", "dangan-20",
-                "dangan-21", "dangan-22", "dangan-23",
-                "dangan-24", "dangan-25", "dangan-26",
-                "dangan-27", "dangan-28", "dangan-29",
-                "dangan-30", "dangan-31", "dangan-32",
-                "dangan-33", "dangan-34", "dangan-35",
-                "sword_fighting", "marathon_runner_victor", "long_jump_luchino",
-                "s12-2-36", "s12-2-37", "s12-2-38",
-                "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49",
-                "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50"].forEach(x => {
-                    if (LP.Opened.includes(x)) portraitAmount++;
+           Portraits.forEach(x => {
+                    if (LP.Opened.includes(x.Item)) portraitAmount++;
                 });
 
             ctx.fillStyle = '#000000';

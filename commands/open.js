@@ -19,11 +19,11 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        var s10_cmd = "`s14-1` or `1`";
-        s10_2_cmd = "`s14-2` or `2`",
-            s10_3_cmd = "`s14-3` or `3`",
+        var s10_cmd = "`dangan`, `dr`, or `1`";
+        s10_2_cmd = "`dangan2`, `dr2`, or `2`",
+            s10_3_cmd = "`s14-3`, `ess3` or `3`",
 
-            exmple = "`" + prefix + "open 1` to open a `s14-1` " + ess1 + " essence",
+            exmple = "`" + prefix + "open 1` to open a `Danganronpa1` " + ess1 + " essence",
             stats_cmd = "`" + prefix + "open stats <essenceID>`",
             author = message.author.username,
             open10 = "`" + prefix + "open s14-1 10`\n`" + prefix + "open s14-1 3`",
@@ -33,8 +33,8 @@ module.exports = {
             .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL())
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
-                        ${ess1} | ~~**Essences s14-1**~~ ─ ID ➜ ${s10_cmd}
-                        ${ess2} | ~~**Essence s14-2**~~ ─ ID ➜ ${s10_2_cmd}
+                        ${ess1} | **Danganronpa Essence 1** ─ ID ➜ ${s10_cmd}
+                        ${ess2} | **Danganronpa Essence 2** ─ ID ➜ ${s10_2_cmd}
                         ${ess3} | ~~**Essence s14-3**~~ ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
@@ -57,16 +57,13 @@ module.exports = {
 
             if (!args[1]) return message.channel.send(noargsEmbed);
 
-            /*
+            
             for (var i = 0; i < 2; i++) {
 
                 let essence;
 
                 if (i === 0) essence = firstEssence;
-                if (i === 1) essence = secondEssence;
-                if (i === 2) essence = thirdEssence;
-                
-
+                if (i === 1) essence = secondEssence;                
 
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
 
@@ -198,7 +195,7 @@ module.exports = {
 
                 }
             }
-            */
+            
 
             if (boolean === false) return message.channel.send(noargsEmbed);
 

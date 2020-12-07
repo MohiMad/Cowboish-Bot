@@ -10,7 +10,7 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "leaderboard");
 
-        if (cooldownCheck) return coolEmbed(message, "Ooof there is a cooldown on this command :C", "Please wait **REMAINING** until you can use this command again... :)", cooldownCheck.timeRemaining, ["m", "s"]);
+        if (cooldownCheck) return coolEmbed(message, "Ooof there is a cooldown on this command :C", "Please wait **REMAINING** until you can use this command again... :)", cooldownCheck.timeRemaining, ["s"]);
 
         if (!args[1]) {
 
@@ -33,11 +33,11 @@ module.exports = {
                 .setAuthor("Cowboish bot LP LeaderBoard!", message.author.displayAvatarURL())
                 .setDescription(description.replace("〘1〙", `〘${first}〙`).replace("〘2〙", `〘${second}〙`).replace("〘3〙", `〘${third}〙`))
                 .setColor("0xebe305")
-                .setFooter(`Top 5 players out of 3696+ results`, bot.user.displayAvatarURL());
+                .setFooter(`Top 5 players out of 6491+ results`, bot.user.displayAvatarURL());
 
             message.channel.send(LD_Embed);
 
-            await addCooldown(message, 300000, "leaderboard");
+            await addCooldown(message, 30000, "leaderboard");
 
         } else if (["guild", "server"].includes(args[1].toLowerCase())) {
 
@@ -94,7 +94,7 @@ module.exports = {
                     message.channel.send(LD_Embed);
                 });
 
-            await addCooldown(message, 300000, "leaderboard");
+            await addCooldown(message, 30000, "leaderboard");
 
 
         } else {

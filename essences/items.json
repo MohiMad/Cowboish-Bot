@@ -1264,6 +1264,244 @@
         },
         {
             "Name": [
+                "Gundham Tanaka",
+                "gundham tanaka",
+                "gundhamtanaka"
+            ],
+            "Item": "dangan~2-27",
+            "linkTag": "https://i.imgur.com/lT0Bd8e.png",
+            "logicpathID": "gundham_tanaka",
+            "x": 30,
+            "y": 24,
+            "Width": 115,
+            "Height": 115
+        },
+        {
+            "Name": [
+                "Peko Pekoyama",
+                "peko pekoyama",
+                "pekopekoyama"
+            ],
+            "Item": "dangan~2-26",
+            "linkTag": "https://i.imgur.com/TyedlwI.png",
+            "logicpathID": "peko_pekoyama",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Fuyuhiko Kuzuryu",
+                "fuyuhiko kuzuryu",
+                "fuyuhikokuzuryu"
+            ],
+            "Item": "dangan~2-25",
+            "linkTag": "https://i.imgur.com/I2O3DVX.png",
+            "logicpathID": "fuyuhiko_kuzuryu",
+            "x": 23,
+            "y": 22,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Akane Owari",
+                "akane owari",
+                "akaneowari"
+            ],
+            "Item": "dangan~2-24",
+            "linkTag": "https://i.imgur.com/GCcnvro.png",
+            "logicpathID": "akane_owari",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Nekomaru Nidai",
+                "nekomaru nidai",
+                "nekomarunidai"
+            ],
+            "Item": "dangan~2-23",
+            "linkTag": "https://i.imgur.com/2ctEo4Y.png",
+            "logicpathID": "nekomaru_nidai",
+            "x": 23,
+            "y": 22,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Hiyoko Saionji",
+                "hiyoko saionji",
+                "hiyokosaionji"
+            ],
+            "Item": "dangan~2-22",
+            "linkTag": "https://i.imgur.com/16AGIxo.png",
+            "logicpathID": "hiyoko_saionji",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Sonia Nevermind",
+                "sonia nevermind",
+                "sonianevermind"
+            ],
+            "Item": "dangan~2-28",
+            "linkTag": "https://i.imgur.com/eDjoOO2.png",
+            "logicpathID": "sonia_nevermind",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Hajime Hinata",
+                "hajime hinata",
+                "hajimehinata"
+            ],
+            "Item": "dangan~2-17",
+            "linkTag": "https://i.imgur.com/K95b7lN.png",
+            "logicpathID": "hajime_hinata",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Kazuichi Soda",
+                "kazuichi soda",
+                "kazuichisoda"
+            ],
+            "Item": "dangan~2-29",
+            "linkTag": "https://i.imgur.com/OngS1vy.png",
+            "logicpathID": "kazuichi_soda",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Nagito Komaeda",
+                "nagito komaeda",
+                "nagitokomaeda"
+            ],
+            "Item": "dangan~2-18",
+            "linkTag": "https://i.imgur.com/797iS65.png",
+            "logicpathID": "nagito_komaeda",
+            "x": 23,
+            "y": 21,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Mikan Tsumiki",
+                "mikan tsumiki",
+                "mikantsumiki"
+            ],
+            "Item": "dangan~2-30",
+            "linkTag": "https://i.imgur.com/sOVeMvK.png",
+            "logicpathID": "mikan_tsumiki",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Chiaki Nanami",
+                "chiaki nanami",
+                "chiakinanami"
+            ],
+            "Item": "dangan~2-19",
+            "linkTag": "https://i.imgur.com/YTCvit1.png",
+            "logicpathID": "chiaki_nanami",
+            "x": 23,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Ibuki Mioda",
+                "ibuki mioda",
+                "ibukimioda"
+            ],
+            "Item": "dangan~2-31",
+            "linkTag": "https://i.imgur.com/W2aFB9h.png",
+            "logicpathID": "ibuki_mioda",
+            "x": 22,
+            "y": 23,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Byakuya Togami 2",
+                "byakuya togami 2",
+                "byakuyatogami2"
+            ],
+            "Item": "dangan~2-28",
+            "linkTag": "https://i.imgur.com/aUXMpW3.png",
+            "logicpathID": "byakuya_togami_2",
+            "x": 22,
+            "y": 17,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Teruteru Hanamura",
+                "teruteru hanamura",
+                "teruteruhanamura"
+            ],
+            "Item": "dangan~2-32",
+            "linkTag": "https://i.imgur.com/0ZQOALK.png",
+            "logicpathID": "teruteru_hanamura",
+            "x": 23,
+            "y": 19,
+            "Width": 120,
+            "Height": 120
+        },
+        {
+            "Name": [
+                "Mahiru Koizumi",
+                "mahiru koizumi",
+                "mahirukoizumi"
+            ],
+            "Item": "dangan~2-21",
+            "linkTag": "https://i.imgur.com/35bHSUV.png",
+            "logicpathID": "mahiru_koizumi",
+            "x": 20,
+            "y": 15,
+            "Width": 130,
+            "Height": 130
+        },
+        {
+            "Name": [
+                "Monomi",
+                "monomi",
+                "usami"
+            ],
+            "Item": "dangan~2-33",
+            "linkTag": "https://i.imgur.com/SWxku3B.png",
+            "logicpathID": "monomi",
+            "x": 9,
+            "y": 5,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
                 "Long Jump Luchino",
                 "long jump luchino",
                 "long jump"
@@ -2175,12 +2413,10 @@
                 "undead",
                 "theundead",
                 "the-undead"
-                
             ],
             "linkTag": "https://i.imgur.com/GGsCZLS.png",
             "Price": 4508,
             "BoughtMessage": "Yey! You bought the hated-by-the-community hunter :'D\nYou can play as him by doing $prefixhunt percy"
         }
-
     ]
 }

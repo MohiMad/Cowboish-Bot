@@ -1,7 +1,7 @@
 module.exports = {
-    PatchDate: "Nov.26th, 2020",
+    PatchDate: "Dec.7th, 2020",
     patchImage: "https://i.imgur.com/FuZtLio.png",
-    patchDateFooter: "Patch 11.26.20 - November 26, 2020",
+    patchDateFooter: "Patch 12.07.20 - December 07, 2020",
 
     patchNotes: ``
 }
