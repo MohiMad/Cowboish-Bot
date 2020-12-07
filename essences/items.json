@@ -178,6 +178,15 @@
         },
         {
             "Name": [
+                "[Costume] Prospector - Hajime Hinata"
+            ],
+            "linkTag": "https://i.imgur.com/aTfQ2tf.png",
+            "Item": "dangan~2-1",
+            "Color": "0xfcba03",
+            "Des": "A preparatory course student at Hope's Peak Academy. An ordinary person with a strong sense of justice."
+        },
+        {
+            "Name": [
                 "[Costume] Sculptor - Checkmate"
             ],
             "linkTag": "https://i.imgur.com/TMsJs6a.png",
@@ -244,6 +253,33 @@
             "Item": "ace",
             "Color": "0xbb2af5",
             "Des": "Tie-breaker. Are you going to win this round?"
+        },
+        {
+            "Name": [
+                "[Costume] Doctor - Mikan Tsumiki"
+            ],
+            "linkTag": "https://i.imgur.com/qC2XWIX.png",
+            "Item": "dangan~2-2",
+            "Color": "0xbb2af5",
+            "Des": "An introverted Hope's Peak student from the class of 77, also known as the “Ultimate Nurse”"
+        },
+        {
+            "Name": [
+                "[Costume] Mechanic - Chiaki Nanami"
+            ],
+            "linkTag": "https://i.imgur.com/B19ArLw.png",
+            "Item": "dangan~2-3",
+            "Color": "0xbb2af5",
+            "Des": "A Hope's Peak student in the class of 77, also known as the “Ultimate Gamer”. She's the kind of student who is exceptionally focused when playing games but a sleepy head when not"
+        },
+        {
+            "Name": [
+                "[Costume] Mercenary - Nagito Komaeda"
+            ],
+            "linkTag": "https://i.imgur.com/TBXHNxS.png",
+            "Item": "dangan~2-4",
+            "Color": "0xbb2af5",
+            "Des": "A Hope's Peak student in the class of 77, also known as the “Ultimate Lucky Student”. Even in hopeless situations, his faith in his companions never flaters."
         },
         {
             "Name": [
