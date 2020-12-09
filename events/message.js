@@ -300,7 +300,7 @@ module.exports = async (bot, message) => {
             break;
 
         case "yee":
-            bot.commands.get('yee').execute(message);
+            bot.commands.get('yee').execute(message, bot);
             break;
 
 
