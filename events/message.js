@@ -95,7 +95,7 @@ module.exports = async (bot, message) => {
             break;
 
         case 'ping':
-            bot.commands.get('ping').execute(message);
+            bot.commands.get('ping').execute(message, prefix);
             break;
 
 
