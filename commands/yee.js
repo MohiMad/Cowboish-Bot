@@ -1,18 +1,9 @@
 module.exports = {
     name: 'yee',
     description: "haaaw",
-    execute(message, args, MohiMoo) {
-
-        var facts = [
-            "Haaaw >:D", 
-            "Yeeeeeeeeeeeet", 
-            "Pizzaa?", 
-            "did someone say Yee?, Heeey :D"        
-        ];
-        var fact = Math.floor(Math.random() * facts.length);
-        message.channel.send(facts[fact]);
-
-
-       
+    execute: async (message) => {
+        
+        const m = await message.channel.send("Yee?");
+        m.edit(`<:peepo_haw:699667884833636352> Haw!\nLatency is **${m.createdTimestamp - message.createdTimestamp}ms**.\nAPI Latency is **${Math.round(bot.ws.ping)}ms**`);  
     }
 }

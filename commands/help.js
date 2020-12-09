@@ -34,7 +34,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription('`identify` | `roll` | `roll20` | `randomize` | `idv` | `idvwiki` | `spawns` | `identityVNews`')
+                .setDescription('`identify` | `roll20` | `randomize` | `idvreddit` | `idvwiki` | `spawns` | `identityVNews` | `ping`')
 
             return message.channel.send(idvEmbed);
 
@@ -57,8 +57,8 @@ module.exports = {
                 .setTitle('🔧So u need sum help huh?🔧')
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription('`kick` | `ban` | `clear` | ~~`mute`~~ \n\nRemember to use my prefix `' + prefix + '` before the commands ;D')
-                .setFooter('A wild Cowboii :v', bot.user.displayAvatarURL());
+                .setDescription('`kick` | `ban` | `clear` | ~~`mute`~~')
+                .setFooter('Remember to use my prefix `' + prefix + '` before the commands', bot.user.displayAvatarURL());
 
             return message.channel.send(modEmbed);
 
@@ -69,7 +69,7 @@ module.exports = {
                 .setTitle('⚙ Help is here :D ⚙', true)
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .addField('Here are the bots config commands', '`help` | `ping` | `guilds` | `ìnfo` | `suggest` | `reportissue`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix\n**NOTE**: `setcowboishprefix` command doesnt need a prefix to use!')
+                .addField('Here are the bots config commands', '`help` | `yee` | `guilds` | `ìnfo` | `suggest` | `reportissue`\n\nThe last command is `setcowboishprefix`, use it if you want to change my prefix')
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
             return message.channel.send(genEmbed);
@@ -81,7 +81,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("🤣 Don't move i'm coming :v", true)
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription('`meme` | `joke` | `say` | `reddit`')
+                .setDescription('`meme` | `joke` | `say` | `reddit` | `mohi`')
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
             return message.channel.send(funEmbed);
@@ -92,7 +92,7 @@ module.exports = {
             const logicpathEmbed = new MessageEmbed()
                 .setTitle("Identity V logicpath commands!")
                 .setColor("RANDOM")
-                .setDescription("In this category you get to play matches and roll dices to be able to open the season's current essences :D\n\n**LogicPath commands!**\n`daily` ➜ Get your daily reward, **24** hours cooldown\n\n`hunt` ➜ Answer the quiz of the chosen hunter to get a dice\n\n`quick` ➜ Play a quick match as a survivor to get dices\n\n`roll` ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:s121:735775380266549319>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`open` ➜ Open the season's current essences (<:s121:735775380266549319>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`logicpath` ➜ Check your logicpath status\n\n`shop` ➜ A list of stuff you can buy (Survivors, Hunters and essences)\n\n`buy` ➜ Buy Survivors, Hunters or essences\n\n`leaderboard` ➜ check the top 5 players for this category\n\n`set` ➜ Set your `region`, `biography` and `ID`\n\n`equip` ➜ equip/change your portrait-frame/portrait to be seen in the `lp` command\n\n`gift` ➜ Gift your friends your (<:inspirations:655840409674711060>, <:frags:655840344725913600>, <:clue:655384523735040000>, <:s121:735775380266549319>, <:ess2:655840643847028751> or <:ess3:655840571616919586>)\n\n`view` ➜ Displays what *skins*, *portraits* and *frames* you have and allows you to navigate them quicker")
+                .setDescription("In this category you get to play matches and roll dices to be able to open the season's current essences :D\n\n**LogicPath commands!**\n`daily` ➜ Get your daily reward, **24** hours cooldown\n\n`hunt` ➜ Answer the quiz of the chosen hunter to get a dice\n\n`quick` ➜ Play a quick match as a survivor to get dices\n\n`roll` ➜ Roll the 4-sided dice you just got, rewards may be: (<:inspirations:655840409674711060>, <:clue:655384523735040000>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`open` ➜ Open the season's current essences (<:s121:735775380266549319>, <:ess2:655840643847028751>, <:ess3:655840571616919586>)\n\n`logicpath` ➜ Check your logicpath status\n\n`shop` ➜ A list of stuff you can buy (Survivors, Hunters and essences)\n\n`buy` ➜ Buy Survivors, Hunters or essences\n\n`leaderboard` ➜ check the top 5 players for this category\n\n`set` ➜ Set your `region`, `biography` and `ID`\n\n`equip` ➜ equip/change your portrait-frame/portrait to be seen in the `lp` command\n\n`gift` ➜ Gift your friends your (<:inspirations:655840409674711060>, <:frags:655840344725913600>, <:clue:655384523735040000>, <:s121:735775380266549319>, <:ess2:655840643847028751> or <:ess3:655840571616919586>)\n\n`view` ➜ Displays what *skins*, *portraits* and *frames* you have and allows you to navigate them quicker")
                 .setFooter("This category is still W.I.P so feel free to suggest anything by doing " + prefix + "suggest :)");
 
             return message.channel.send(logicpathEmbed);
@@ -113,7 +113,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("Cowboish Utility commands :D")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription("`setup` | `userinfo` | `serverinfo`");
+                .setDescription("`setup` | `userinfo` | `serverinfo` | `identityVNews`");
 
             return message.channel.send(ultity_Embed);
 

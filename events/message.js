@@ -94,12 +94,13 @@ module.exports = async (bot, message) => {
             bot.commands.get('joke').execute(message, args, MohiMoo);
             break;
 
-        case "mohi": case "mohii": case "ihom":
-            bot.commands.get('mohi').execute(message, args, bot, prefix);
+        case 'ping':
+            bot.commands.get('ping').execute(message);
             break;
 
-        case "yee":
-            bot.commands.get('yee').execute(message, args, MohiMoo);
+
+        case "mohi": case "mohii": case "ihom":
+            bot.commands.get('mohi').execute(message, args, bot, prefix);
             break;
 
         case 'meme': case "memes":
@@ -298,10 +299,10 @@ module.exports = async (bot, message) => {
             bot.commands.get('serverinfo').execute(message, args, MohiMoo);
             break;
 
-        case 'ping':
-            const m = await message.channel.send("Yee?");
-            m.edit(`<:peepo_haw:699667884833636352> Haw!\nLatency is **${m.createdTimestamp - message.createdTimestamp}ms**.\nAPI Latency is **${Math.round(bot.ws.ping)}ms**`);
+        case "yee":
+            bot.commands.get('yee').execute(message);
             break;
+
 
         case "help": case "commands": case "helpme":
             bot.commands.get('help').execute(message, args, bot, prefix);

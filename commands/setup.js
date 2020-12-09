@@ -96,8 +96,6 @@ module.exports = {
 
         if (["welcomechannel", "greetchannel"].includes(args[1].toLowerCase())) {
 
-            if (!message.guild.channels.cache.get(channel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
-
             if (["disable", "off"].includes(args[2].toLowerCase())) {
 
                 guild.welcome.enabled = false;
@@ -111,6 +109,8 @@ module.exports = {
                 message.channel.send(errEmbed);
             }
             else {
+                if (!message.guild.channels.cache.get(channel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
+
                 guild.welcome.enabled = true;
                 guild.welcome.channel = channel.id;
                 guild.save().catch(console.error);
@@ -139,7 +139,6 @@ module.exports = {
         }
         if (["leavechannel", "leave-channel"].includes(args[1].toLowerCase())) {
 
-            if (!message.guild.channels.cache.get(channel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
 
             if (["disable", "off"].includes(args[2].toLowerCase())) {
                 guild.leave.enabled = false;
@@ -152,6 +151,7 @@ module.exports = {
 
             if (!channel) return message.channel.send(errEmbed.setDescription("Please provide the channel name after the command\n**Example:** `>setup leavechannel <#channelname>`"));
 
+            if (!message.guild.channels.cache.get(channel.id)) return message.channel.send(errEmbed.setDescription("Oops! I couldn't find this channel in this guild... Make sure you're providing a valid channel that actually exists in this server"));
 
             if (guild.leave.message === null) sucEmbed.setDescription(`✅ Leave channel is now set to <#${channel.id}>!\nOne more step! you need to set the leave message by doing\n` + "`>setup leavemessage <leave message here..>`");
             else sucEmbed.setDescription(`✅ Leave channel is now set to <#${channel.id}>!\n\nYou're ready to go :D\nImma say bai to people who leave the guild`);
