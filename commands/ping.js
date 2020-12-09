@@ -5,7 +5,8 @@ module.exports = {
     description: "999ms command",
     execute: async (message, prefix) => {
 
-        if(spamStopper.has(message.author)) return;
+        if(spamStopper.has(message.author)) return spamStopper.delete(message.author);
+        
 
         const m = await message.channel.send("**Quickly type anything in the chat again!**");
         const filter = m => m.author.id === message.author.id;
@@ -28,8 +29,8 @@ module.exports = {
             spamStopper.delete(message.author);
             return message.channel.send(message.author.username + "'s ping is " + emoji + "`" + ping + "ms`");
         }).catch(late => {
-            message.channel.send(`**LMAO ${message.author}!**\n` + "Your response was too late and your ping went above 🟥`" + "4999" + "ms`");
             spamStopper.delete(message.author);
+            message.channel.send(`**LMAO ${message.author}!**\n` + "Your response was too late and your ping went above 🟥`" + "4999" + "ms`");
         });
 
     }
