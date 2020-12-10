@@ -48,6 +48,10 @@ module.exports = {
 
 
                 equip.on('collect', async r => {
+                    if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
+                        spamStopper.delete(message.author);
+                        return equip.stop();
+                    }
 
                     msg.reactions.removeAll().catch(error => console.log(error));
                     spamStopper.delete(message.author);
@@ -142,6 +146,13 @@ module.exports = {
             });
 
             end.on('end', async () => {
+                if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
+                    forward.stop();
+                    back.stop();
+                    spamStopper.delete(message.author);
+                    return end.stop();
+                }
+
                 spamStopper.delete(message.author);
                 msg.reactions.removeAll().catch(error => console.log(error));
                 embed.setFooter(`This message is now inactive`);

@@ -560,6 +560,13 @@ module.exports = {
             });
 
             end.on('collect', async r => {
+                if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
+                    forward.stop();
+                    back.stop();
+                    spamStopper.delete(message.author);
+                    return end.stop();
+                }
+                
                 await end.stop();
                 await forward.stop();
                 await back.stop();
