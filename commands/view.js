@@ -145,7 +145,7 @@ module.exports = {
 
             });
 
-            end.on('end', async () => {
+            end.on('end', async (r) => {
                 if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
                     forward.stop();
                     back.stop();
