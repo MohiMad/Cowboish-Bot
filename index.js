@@ -13,12 +13,9 @@ const Cooldown = require("./models/cooldown.js");
 const mongoose = require("mongoose");
 
 
-const Cooldown = require("../models/cooldown.js");
-
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
-const config = require("../config.json");
 
 const botGuildCount = bot.guilds.cache.size;
 
