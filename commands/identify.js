@@ -12,7 +12,7 @@ module.exports = {
         else target = target.user.username;
 
         var infos = [
-            `$target is the Coordinator who misser her flare gun... You had one job`,
+            `$target is the Coordinator who misses her flare gun... You had one job`,
             `$target is the Gardener who sends "Focus on decoding" while dismantling a Rocket Chair...`,
             `$target is the Wildling with 400% decoding... Better be a Mind's eye -v-`,
             `$target is the Prospector who removes the Hunter's attack recovery animation after getting hit... Well done!`,

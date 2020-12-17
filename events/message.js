@@ -85,7 +85,7 @@ module.exports = async (bot, message) => {
             bot.commands.get('identityvnews').execute(message, args, bot, prefix);
             break;
 
-            case "patches": case "patchnotes": case "identityvpatches": case "idvpatches": case "identityvpatchnotes":
+        case "patches": case "patchnotes": case "identityvpatches": case "idvpatches": case "identityvpatchnotes":
                 bot.commands.get('patches').execute(message, bot, prefix);
                 break;
 

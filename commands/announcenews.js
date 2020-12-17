@@ -209,13 +209,14 @@ module.exports = {
 
                                             for (const g of GUILDS.filter(x => x.News.Channel != null)) {
                                                 if (g.News.Channel === null) return;
-                                                const toSendChannel = bot.channels.cache.get(g.News.Channel);
-                                                if (!toSendChannel) return;
-
-                                                const guild = bot.guilds.cache.get(g.guildID);
+                                                
+                                                const guild = await bot.guilds.cache.get(g.guildID);
                                                 if (!guild) return;
 
-                                                let toPingRole = guild.roles.cache.get(g.News.toPingRole);
+                                                const toSendChannel = await bot.channels.cache.get(g.News.Channel);
+                                                if (!toSendChannel) return;
+
+                                                let toPingRole = await guild.roles.cache.get(g.News.toPingRole);
 
                                                 if (g.News.toPingRole === "everyone") toPingRole = "@everyone";
                                                 else if (g.News.toPingRole === "here") toPingRole = "@here";
