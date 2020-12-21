@@ -2,14 +2,13 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'stun',
-    description: "stuns you",
+    name: ["stun", "palletstun"],
+    description: "Stun your friends with a pallet >:D\n\n**Usage:** `$prefixstun <user>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
 
         let persona = await findMember(message, args.slice(1).join(" "));
-
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
         if (!args[1]) return ErrorMsg(bot, message, "Who do you want to shut the pallet on? Mention them right after the command | example: `" + prefix + "stun @Cowboish Bot`")
 

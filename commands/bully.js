@@ -1,13 +1,14 @@
 const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
+
 module.exports = {
     name: 'bully',
-    description: "bullyies you",
+    description: "Hahah you can bully your friends using this command, just don't take the bully too far ;w;\n\n**Usage:** `$prefixbully <user>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));
 
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **Attach Files** to true");
         if (!args[1]) return ErrorMsg(bot, message, "Who do you want to bully? Mention them right after the command | example: `" + prefix + "bully @Cowboish Bot` . oh no... plz don't bully me :(");
         if (!persona) return ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "blink <MentionHere>`");
         if (persona.id === message.author.id) return message.channel.send(`Nah cmon, **${message.author.username}** why would you bully yourself? :C`);

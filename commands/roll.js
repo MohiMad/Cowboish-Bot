@@ -5,9 +5,10 @@ const { newLP, coolEmbed, findCooldown, addCooldown, } = require("../functions.j
 const logicPath = require("../models/logicpath.js");
 
 module.exports = {
-    name: 'roll',
-    description: "rolls a 4 sided dice",
-    execute: async (message, args, bot, prefix) => {
+    name: ["roll", "rolldice", "dice", "r"],
+    description: "Roll a 4-sided Dice and get some Logicpath rewards such as Essences, Clues and Inspirations\nYou can roll up to 10 dices at once by providing the amount of Dices you want to roll as your 1st Argument\n\n**Usage:** `$prefixroll [amount]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "USE_EXTERNAL_EMOJIS"],
+    execute: async (message, args, prefix) => {
         await newLP(message);
 
         let LP = await logicPath.findOne({ UserID: message.author.id });

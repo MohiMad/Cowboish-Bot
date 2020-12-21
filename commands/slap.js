@@ -1,10 +1,12 @@
 const Canvas = require('canvas');
-const { ErrorMsg, findMember, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
+const { findMember, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 const Discord = require("discord.js");
 
 module.exports = {
-    name: 'slap',
-    description: "slap yo friends",
+    name: ["slap", "smack"],
+    description: "Let Photographer slap your friends >:D\n*please don't slap Cowboish ;w;*\n\n**Usage:** `$prefixslap <user>`",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+
     execute: async (message, args, bot) => {
 
         const cooldownCheck = await findCooldown(message, "slap");
@@ -14,7 +16,6 @@ module.exports = {
         const background = await Canvas.loadImage("https://i.imgur.com/JHFyRr3.jpg");
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
         const slapper = await Canvas.loadImage(message.author.displayAvatarURL({ format: "png", dynamic: false }));
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
         if (!args[1]) {
             ctx.drawImage(slapper, 295, 145, 125, 132);
             const botSlaps = await Canvas.loadImage(bot.user.displayAvatarURL({ format: "png", dynamic: false }));

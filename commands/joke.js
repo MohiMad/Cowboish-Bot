@@ -4,9 +4,10 @@ const got = require('got');
 const { coolEmbed, findCooldown, addCooldown } = require("../functions.js");
 
 module.exports = {
-    name: 'joke',
-    description: "sends a random joke",
-    execute: async (message, args, MohiMoo) => {
+    name: ["joke", "redditjoke", "lemmelaugh"],
+    description: "Sends a random joke from the subreddit r/Jokes",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    execute: async (message) => {
 
         const cooldownCheck = await findCooldown(message, "joke");
 

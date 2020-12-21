@@ -7,6 +7,8 @@ const { clues, insp, ess1, ess2, ess3, frags } = require("../emojis.json");
 module.exports = {
     name: 'giveaway',
     description: "Daily giveaways for cowboish members :3",
+    isDisabled: true,
+    admins: ["632291800585076761"],
     execute: async (bot) => {
 
         let mainGuild = bot.guilds.cache.get("636241255994490900");

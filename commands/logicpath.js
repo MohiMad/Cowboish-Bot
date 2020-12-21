@@ -6,8 +6,9 @@ const { ErrorMsg, coolEmbed, addCooldown, findCooldown, newLP, findMember } = re
 const { Portraits, Frames } = require("../essences/items.json");
 
 module.exports = {
-    name: 'logicpath',
-    description: "logic info",
+    name: ["logicpath", "lp", "profile", "inv", "inventory"],
+    description: "Displays your Logicpath items in an Identity V Profile format\n\n`$prefixLP [user]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         await newLP(message);

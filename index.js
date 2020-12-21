@@ -12,9 +12,6 @@ const config = require("./config.json");
 const Cooldown = require("./models/cooldown.js");
 const mongoose = require("mongoose");
 
-
-
-
 mongoose.connect(config.mongoose_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true

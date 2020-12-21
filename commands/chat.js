@@ -3,8 +3,9 @@ const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions
 const Discord = require("discord.js");
 
 module.exports = {
-    name: 'chat',
-    description: "Type something in english chat",
+    name: ["ingamechat", "chat", "globalchat"],
+    description: "Type a message in the ingame global chat\n\n**Usage:** `$prefixingamechat <message goes in here>`",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         const cooldownCheck = await findCooldown(message, "chat");
@@ -13,7 +14,6 @@ module.exports = {
 
             const sayMessage = args.slice(1).join(" ");
 
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
              if (!args[1]) return ErrorMsg(bot, message, "Can send an empty message!\nPlease provide something to send to the ingame chat!\n\n**Right Usage:** `" + prefix + "chat <message Goes HERE>`");
             if (sayMessage.length > 50) return ErrorMsg(bot, message, "The message given is tooo loong, like for real\nPlease try to send something that's shorter :)")
             

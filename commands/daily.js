@@ -4,8 +4,9 @@ const { ess2, ess1, ess3, clues, dice } = require("../emojis.json");
 const logicPath = require("../models/logicpath.js");
 
 module.exports = {
-    name: 'daily',
-    description: "daily rewards",
+    name: ["daily", "dailyreward"],
+    description: "Grab your daily rewards which contains logicpath items such as Dices, Essences and Clues\n**24 Hours** cooldown\n\n**Usage:** `$prefixdaily`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
     execute: async (message) => {
         await newLP(message);
 

@@ -2,9 +2,10 @@ const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 
 module.exports = {
-    name: 'info',
-    description: "info about bot",
-    execute(message, args, bot, MohiMoo, prefix) {
+    name: ["info", "botinfo", "bot-info"],
+    description: "Sends general information about Cowboish bot",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    execute(message, bot, MohiMoo, prefix) {
 
 
         const betterEmbed = new MessageEmbed()

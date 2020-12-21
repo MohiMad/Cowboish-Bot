@@ -3,9 +3,9 @@ const { MessageEmbed } = require('discord.js');
 const { findRole, checkForGuildDataExistance, findChannel } = require("../functions.js");
 
 module.exports = {
-    name: 'setup',
+    name: ["setup", "set"],
     description: "set some stuff for the guild",
-    execute: async (message, args, bot, prefix) => {
+    execute: async (message, args, prefix) => {
         await checkForGuildDataExistance(message);
         const guild = await Guild.findOne({ guildID: message.guild.id });
 

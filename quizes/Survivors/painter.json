@@ -25,6 +25,27 @@
         "Difficulty": "Super Duper Hard",
         "Attachment": "https://pbs.twimg.com/media/EjB4ElTWkAIYPEg?format=jpg&name=medium",
         "Artist": "@doceuwu on Twitter"
+    },
+    {
+        "Question": "**Question:**\nDoes the painter use blood to paint?",
+        "Answer": ["yes", "yep", "y", "yeah", "mhm"],
+        "Difficulty": "Easy",
+        "Attachment": "https://i.imgur.com/phq4ZjI.png",
+        "Artist": "@nanatsumami on Twitter"
+    },
+    {
+        "Question": "**Question:**\nWhat does the painter use to draw? (A tool, what tool?)",
+        "Answer": ["a paint brush", "a brush", "paint brush", "brush"],
+        "Difficulty": "Easy",
+        "Attachment": "https://pbs.twimg.com/media/EhUW9XZWoAAs6Ez?format=jpg&name=large",
+        "Artist": "@Mitsunba on Twitter"
+    },
+    {
+        "Question": "**Question:**\nOriginally, was Edgar supposed to be able to paint on himself to disguise himself as the background?",
+        "Answer": ["yes", "yep", "y", "yeah", "mhm"],
+        "Difficulty": "Easy",
+        "Attachment": "https://i.imgur.com/ghgdQI7.png",
+        "Artist": "@lucamikes on Twitter"
     }
    
 

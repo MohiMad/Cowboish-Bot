@@ -1,6 +1,7 @@
 module.exports = {
-    name: 'yee',
-    description: "haaaw",
+    name: ["yee", "yeee"],
+    description: "Haw 🤠\nBasically displays Cowboish's ping (Speed of response)",
+    permissions: ["SEND_MESSAGES", "USE_EXTERNAL_EMOJIS"],
     execute: async (message, bot) => {
         
         const m = await message.channel.send("Yee?");

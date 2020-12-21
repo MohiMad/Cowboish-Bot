@@ -5,8 +5,9 @@ const e = require("../emojis.json");
 const { Skins } = require("../essences/items.json");
 
 module.exports = {
-    name: 'gift',
-    description: "Gift yo friends yo items :D",
+    name: ["gift", "transfer", "give"],
+    description: "Transfer your Logicpath Items to your friends using this command :D\n\n**Giftable Items are:**\n`inspirations`, `fragments`, `clues`, `ess1`, `ess2`, `ess3`\nYou can also gift a skin by doing: `$prefixgift skin <skinNumber>`\n\n**Usage:** `$prefixgift <itemName> <amount/ItemID>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
     execute: async (message, args, bot, prefix) => {
         await newLP(message);
 

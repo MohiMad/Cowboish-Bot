@@ -1,9 +1,10 @@
 const { MessageEmbed } = require('discord.js');
 const { findMember } = require("../functions.js");
 module.exports = {
-    name: 'winrate',
-    description: "sends a random winrate",
-    execute: async (message, args, MohiMoo) => {
+    name: ["winrate", "win-rate", "wr"],
+    description: "Check your/others' winrate\n\n**Usage:** `$prefixwinrate [user]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    execute: async (message, args) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));
 
@@ -20,8 +21,6 @@ module.exports = {
             .setColor("RANDOM")
 
         message.channel.send(winEmbed);
-
-
 
     }
 }

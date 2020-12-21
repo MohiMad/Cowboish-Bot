@@ -2,8 +2,9 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'shoot',
-    description: "shoots you",
+    name: ["shoot", "flaregunshoot", "pewpew"],
+    description: "***BOOM HEADSHOT***\n\n**Usage:** `$prefixshoot <user>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));
@@ -40,10 +41,7 @@ module.exports = {
             .setImage(gifs[gif])
             .setColor("RANDOM");
 
-
-
         message.channel.send(shootEmbed);
-
 
     }
 }

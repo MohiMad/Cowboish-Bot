@@ -5,27 +5,13 @@ const e = require("../emojis.json");
 const { Portraits, Frames } = require("../essences/items.json");
 
 module.exports = {
-    name: 'equip',
-    description: "Equip the frame you bought!",
+    name: ["equip"],
+    description: "This command alows you to fancinize and customize your `$prefixLP` the way you want it to look.\nYou get Portraits and you can buy portraits right? these Portraits/Frames are equipable using this command\n\n**Valid Items:** `portraits` or `frames`\n**Usage:** `$prefixequip <item(portrait/frame)> <portrait/frame's name>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
     execute: async (message, args, bot, prefix) => {
 
         await newLP(message);
         let LP = await logicPath.findOne({ UserID: message.author.id });
-
-        function freeToUse(message, fram, link) {
-
-            let freeToUseEmbed = new MessageEmbed()
-                .setTitle("Your frame is now equipped!")
-                .setColor("0x14abf7")
-                .setDescription("Wanna see how it looks like? go ahead and do `" + prefix + "logicpath`")
-                .setThumbnail(link);
-
-            LP.frames.equipped = fram;
-            LP.save().catch(e => console.log(e));
-            message.channel.send(freeToUseEmbed);
-
-        }
-
 
         function frameFunction(message, frame, link) {
 

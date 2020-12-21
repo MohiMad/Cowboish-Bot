@@ -3,8 +3,9 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, newLP } = require("../functions.js");
 
 module.exports = {
-    name: 'set',
-    description: "Set logicpath info",
+    name: ["set", "logicpathset", "logicpath-set", "lpset"],
+    description: "Set your logicpath infomation to stylize your profile\nYou can set your `region`, `ID`, and `bio`\n\n**Usage:** `$prefixset <whatToSet> <value>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     execute: async (message, args, bot, prefix) => {
         await newLP(message);
 

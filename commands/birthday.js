@@ -4,8 +4,11 @@ const logicPath = require("../models/logicpath.js");
 
 module.exports = {
     name: 'birthday',
-    description: "Happy anniversary lov",
-    execute: async (message, args, bot, prefix) => {
+    description: "...",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    isDisabled: true,
+    admins: ["632291800585076761"],
+    execute: async (message, prefix) => {
         await newLP(message);
         const LP = await logicPath.findOne({ UserID: message.author.id });
 

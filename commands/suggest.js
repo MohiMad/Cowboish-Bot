@@ -3,8 +3,9 @@ const { coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 
 const spamStopper = new Set();
 module.exports = {
-    name: 'suggest',
-    description: "sends a suggestion to mohimoo",
+    name: ["suggest", "sendsuggestion", "suggestidea"],
+    description: "Send a suggestion to the Developer of Cowboish Bot...\nCowboish will ask you a chain of question to complete your suggestion\nSuggestions are directly sent in the [Cowboish Server](https://discord.com/invite/YWcSukS) but your username/other information won't be displayed... Your suggestion is completely anonymous ^-^",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     execute: async (message, bot, args, MohiMoo) => {
 
         const cooldownCheck = await findCooldown(message, "suggest");
@@ -124,12 +125,11 @@ module.exports = {
                     secondQuestion = collected.first().content;
 
                     let embed = new MessageEmbed()
-                        .setAuthor(`${message.author.username} has a suggestion!`, message.author.displayAvatarURL())
-                        .setThumbnail(message.author.displayAvatarURL())
+                        .setAuthor(`Someone has a suggestion!`)
+                        .setThumbnail(bot.user.displayAvatarURL())
                         .setColor("0xF8CE14")
                         .setDescription(`
                         🆔: *${message.author.id}*
-                        📎 **User Tag**: *${message.author.tag}*
 
                         💭 **Suggestion**:
                         ${firstQuestion}

@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-
 const { ErrorMsg } = require("../functions.js");
 
 let spamStopper = new Set();
 module.exports = {
-    name: 'idvwiki',
-    description: "Survivor/Hunter wikipedia",
+    name: ["idvwiki", "idvwikipedia", "idvw", "identityvwiki", "identityvwikipedia"],
+    description: "The Identity V Wikipedia but in Discord UwU\nYou can find any Survivor/Hunter/Map information you're looking for here\nYou can also navigate through `Survivors`, `Hunters`, or `Maps` by providing one of them as your first argument\n\n**Usage:** `$prefixidvwikipedia <characterName/mapName>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "ADD_REACTIONS", "MANAGE_MESSAGES"],
     execute: async (message, args, bot, prefix) => {
 
 

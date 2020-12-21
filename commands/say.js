@@ -2,9 +2,10 @@ const { Util } = require('discord.js');
 
 
 module.exports = {
-    name: 'say',
-    description: "repeats what you just said!",
-    execute(message, args, MohiMoo) {
+    name: ["say", "repeat"],
+    description: "Repeats what you say\n\n**Usage:** `$prefixsay <what to say? say it here -v->`",
+    permissions: ["SEND_MESSAGES"],
+    execute(message, args) {
 
         const sayMessage = args.slice(1).join(" ");
 

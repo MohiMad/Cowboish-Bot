@@ -4,8 +4,9 @@ const { coolEmbed, findCooldown, addCooldown, ErrorMsg } = require("../functions
 const { first, second, third } = require("../emojis.json");
 
 module.exports = {
-    name: 'leaderboard',
-    description: "Leaderboard for logicpath commands",
+    name: ["leaderboard", "ld"],
+    description: "Displays the top 5 users of the Logicpath category globally or in this server\nTo view which members have walked the most logicpath steps in this server, add `guild` as your 1st argument\n\n**Usage:** `$prefixleaderboard [server]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     execute: async (message, args, bot, prefix) => {
 
         const cooldownCheck = await findCooldown(message, "leaderboard");

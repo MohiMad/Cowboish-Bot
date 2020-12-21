@@ -2,15 +2,14 @@ const { ErrorMsg } = require("../functions.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'clear',
-    description: "clear commands",
+    name: ["clear", "purge", "delete", "deletemessages", "sweep"],
+    description: "Delete multiple messages at once using this command\nThis command can only be used by users with the permission **Manage Messages**\n\n**Usage:** `$prefixclear <amountOfMessages> [Reason]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "MANAGE_MESSAGES"],
     execute: async (message, args, bot, prefix) => {
 
         const toClear = args[1];
 
-        if (!message.channel.permissionsFor(message.guild.me).missing('MANAGE_MESSAGES')) return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **MANAGE MESSAGES**")
-
-        else if (!message.member.hasPermission("MANAGE_MESSAGES", { checkAdmin: true, checkOwner: true })) return message.channel.send("You do not have the required permissions to execute this command!");
+        if (!message.member.hasPermission("MANAGE_MESSAGES", { checkAdmin: true, checkOwner: true })) return message.channel.send("You do not have the required permissions to execute this command!");
 
         else if (isNaN(toClear) || !toClear || toClear > 100) return ErrorMsg(bot, message, "Please provide a number of messages for me to delete\nUsage: `" + prefix + "clear [amount] [reason(optional)]`\n\n**Note**: The highest amount of messages is *100*");
 
@@ -29,9 +28,9 @@ module.exports = {
                 .setAuthor(`Clear case!`, message.author.displayAvatarURL())
                 .setTimestamp()
                 .setDescription(`
-                    **Cleared Messages:** ${messages.size}\n
-                    **Cleared in :**${message.channel}\n
-                    **Cleared by:** ${message.author}\n
+                    **Cleared Messages:** ${messages.size}
+                    **Cleared in: **${message.channel}
+                    **Cleared by:** ${message.author}
                     **Reason:** ${reason ? reason : "No Reason"}`);
 
             message.channel.send(clearEmbed).then(m => m.delete({ timeout:7000, reason: reason ? reason : "No Reason" }));

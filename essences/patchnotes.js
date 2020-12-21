@@ -1,7 +1,7 @@
 module.exports = {
-    PatchDate: "Dec.10th, 2020",
+    PatchDate: "Dec.17th, 2020",
     patchImage: "https://i.imgur.com/FuZtLio.png",
-    patchDateFooter: "Patch 12.10.20 - December 10, 2020",
+    patchDateFooter: "Patch 12.17.20 - December 17, 2020",
 
     patchNotes: `**Note:** This Patch is rewritten by a client, expect typos...
         
@@ -19,7 +19,7 @@ module.exports = {
     
     - The "Christmas Carol" warm-up event is now available: You stumble upon a violinist blocking
     
-    your path on Christmas Eve. He asks to play you a song in exchange for some drinking money.
+    your path on Christmas Event. He asks to play you a song in exchange for some drinking money.
     
     Before the music reaches a crescendo, the performance attracted even more spectators who are
     going through a myriad of emotions as they're trying to seek comfort on Christmas Eve. Complete

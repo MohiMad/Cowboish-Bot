@@ -1,11 +1,12 @@
 const Canvas = require('canvas');
-const { findMember, ErrorMsg, findCooldown, coolEmbed, addCooldown } = require("../functions.js");
+const { findMember, findCooldown, coolEmbed, addCooldown } = require("../functions.js");
 const Discord = require("discord.js");
 
 module.exports = {
-    name: 'chair',
-    description: "CHair yo friends",
-    execute: async (message, args, bot) => {
+    name: ["chair", "rocketchair"],
+    description: "Place your friends on the Rocket Chair >:D\nThis command will replace the profile-picture of the mentioned user(or you) on a poor chaired Explorer\n\n**Usage:** `$prefixchair [user]`",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    execute: async (message, args) => {
 
         let cooldownCheck = await findCooldown(message, "chair");
 
@@ -21,7 +22,6 @@ module.exports = {
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
         try {
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **Attach Files** to true");
 
             let avatar;
 

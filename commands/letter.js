@@ -3,8 +3,9 @@ const { coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "letter",
-    description: "Um- puts your message in a pic :v",
+    name: ["postmanletter", "letter", "postmansletter", "postmansign"],
+    description: "Puts your message in Postman's letter :D\nArt belongs to: [@thevileruler](https://twitter.com/thevileruler)\n\n**Usage:** `$prefixletter <message goes here uwu>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args) => {
 
         const cooldownCheck = await findCooldown(message, "letter");

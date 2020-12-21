@@ -4,8 +4,9 @@ const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions
 const MOHI = require("../models/mohi.js");
 
 module.exports = {
-    name: 'mohi',
-    description: "Mohiiii",
+    name: ["mohi", "ihom", "mohii", "mohii"],
+    description: "Mohiiii\n\n*please don't ask why this exists*",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         let cooldownCheck = await findCooldown(message, "mohi");

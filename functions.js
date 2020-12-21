@@ -6,6 +6,8 @@ const humanizeDuration = require("humanize-duration");
 const { clues, frags, insp, ess1, ess2, ess3, twitter, feaster } = require("./emojis.json");
 const Guild = require("./models/guild.js");
 
+const permissions = require("./permissions.js");
+
 module.exports = {
 
 	rewards: async (bot) => {
@@ -27,27 +29,27 @@ module.exports = {
 					.setTitle("Yaaaay a new week has began!")
 					.setColor("0xf0cf07")
 					.setDescription(stripIndents`
-			《<:uno:676017997420167187>》 **${n1.user.tag}** 
+			《<:uno:676017997420167187>》 **${n1.tag}** 
 			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
 			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
 
 			- - - - -
-			〘<:dos:676019548016738304>〙 **${n2.user.tag}**
+			〘<:dos:676019548016738304>〙 **${n2.tag}**
 			**Logicpath Points**: **${res[1].logic}**<:LP:675763680863977513>
 			**Rewards**: **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
 
 			- - - - -
-			〘<:tres:676019592757248001>〙 **${n3.user.tag}**
+			〘<:tres:676019592757248001>〙 **${n3.tag}**
 			**Logicpath Points** **${res[2].logic}**<:LP:675763680863977513>
 			**Rewards**: **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
 
 			- - - - -
-			〘4〙 **${n4.user.tag}**
+			〘4〙 **${n4.tag}**
 			**Logicpath Points**: **${res[3].logic}**<:LP:675763680863977513>
 			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
 
 			- - - - -
-			〘5〙 **${n5.user.username}**
+			〘5〙 **${n5.tag}**
 			**Logicpath Points**: **${res[4].logic}**<:LP:675763680863977513>
 			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
 				
@@ -176,7 +178,13 @@ module.exports = {
 	newLP: async (message) => {
 		let LP = await logicPath.findOne({ UserID: message.author.id });
 
-		if (LP) return;
+		if (LP) {
+			if (!LP.guildsID.includes(message.guild.id)) {
+				LP.guildsID = [...LP.guildsID, message.guild.id];
+				return await LP.save().catch(e => console.log(e));
+			}
+			else return;
+		}
 
 		const newLP = new logicPath({
 			UserID: message.author.id,
@@ -374,12 +382,45 @@ module.exports = {
 			const LP = await logicPath.findOne({ UserID: message.author.id });
 			if (LP.Opened.includes("1yrAnniversary")) return;
 			if (LP.Opened.includes("hasFired")) return;
-
+	
 			LP.Opened = [...LP.Opened, "hasFired"];
 			LP.save().catch(e => console.log(e));
-
+	
 			message.channel.send("**Celebrating Cowboish's one year anniversary :D**\nType __`Happy Birthday Cowboish`__ in the chat to trigger the anniversary event :3", new MessageAttachment("https://i.imgur.com/LZlynfT.png"))
 			*/
+		}
+	},
+	permsCheck(message, bot, highestRole, requiredPerms, permissionsInGuild, permissionsInChannel) {
+
+		const missingPermissionsEmbed = new MessageEmbed()
+			.setAuthor("🟥 Missing permissions!", message.author.displayAvatarURL, "https://mohimad.github.io/CowboishBot/")
+			.setColor("0xE75A5A")
+			.setTimestamp()
+			.setFooter(bot.user.tag, bot.user.displayAvatarURL);
+
+		for (const perm of requiredPerms) {
+
+			if (!permissionsInChannel.includes(perm)) {
+				if (perm === "SEND_MESSAGES") return true;
+
+				if (perm === "ATTACH_FILES" || perm === "EMBED_LINKS") return message.channel.send(`I'm missing the permission **${permissions[perm]}** in this __**Channel**__\nPlease make sure none of the roles I have doesn't doesn't have the permission **${permissions[perm]}** disabled in ${message.channel}\n\nIf one of my roles does, I won't able to execute this command properly...	`), true;
+
+				missingPermissionsEmbed.setDescription(`I'm missing the permission **${permissions[perm]}** in this __**Channel**__\nPlease change the permissions for the role **${highestRole.toString()}** in ${message.channel} and set **${permissions[perm]}** to true... Otherwise I won't be able to execute this command in a proper way`)
+
+				return message.channel.send(missingPermissionsEmbed), true;
+			}
+
+			if (!permissionsInGuild.includes(perm)) {
+				if (perm === "SEND_MESSAGES") return true;
+
+				if (perm === "ATTACH_FILES" || perm === "EMBED_LINKS") return message.channel.send(`I'm missing the permission **${permissions[perm]}** in this __**Server**__\nPlease change the permissions for the role **${highestRole.name}** and set **${permissions[perm]}** to true... Otherwise I won't be able to execute this command properly`), true;
+
+				missingPermissionsEmbed.setDescription(`I'm missing the permission **${permissions[perm]}** in this __**Server**__\nPlease change the permissions for the role **${highestRole.toString()}** and set **${permissions[perm]}** to true... Otherwise I won't be able to execute this command in a proper way`)
+
+				return message.channel.send(missingPermissionsEmbed), true;
+			}
+
+
 		}
 	}
 

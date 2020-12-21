@@ -6,8 +6,9 @@ const { Skins, Portraits, Frames, Characters } = require("../essences/items.json
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'view',
-    description: "Scroll between the items you own",
+    name: ["view", "display"],
+    description: "Scroll between the Logicpath Items you own...\nCowboish will react with ◀ ▶ and reacting with them allows you to go forward/back in the list of items\n\n**Usage:** `$prefixview <item> [filter/itemName]`\nThe `<item>` tag can be: Portraits, Frames, Characters, or Skins",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "ADD_REACTIONS", "MANAGE_MESSAGES"],
     execute: async (message, bot, args, prefix) => {
 
         await newLP(message);

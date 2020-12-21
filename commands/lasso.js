@@ -2,13 +2,12 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'lasso',
-    description: "lassos you",
+    name: ["lasso", "yeet", "yoink"],
+    description: "Yeehaw you know we're cowboish so we needed to have a lasso command 🤠\n\n**Usage:** `$prefixlasso <userMention>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, perfix) => {
 
         let persona = await findMember(message, args[1]);
-
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
         if (!args[1]) return ErrorMsg(bot, message, 'Who do you want to lasso? Mention them right after the command | example: `' + perfix + 'lasso @Cowboish Bot` Oh yes lasso me >:D')
 
@@ -43,8 +42,6 @@ module.exports = {
 
 
         message.channel.send(lassoembed);
-
-
 
     }
 }

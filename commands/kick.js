@@ -2,8 +2,9 @@ const { MessageEmbed } = require('discord.js');
 const { findMember, ErrorMsg } = require("../functions.js");
 
 module.exports = {
-    name: 'kick',
-    description: "kick them trolls",
+    name: ["kick", "kickmember"],
+    description: "Kicks the mentioned user out of the server\n\n**Usage:** `$prefixkick <user> [reason]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "KICK_MEMBERS"],
     execute: async (message, args, bot, prefix) => {
         const member = await findMember(message, args[1]);
 
@@ -15,7 +16,6 @@ module.exports = {
             .setTimestamp();
 
         if (!message.member.hasPermission("KICK_MEMBERS", { checkAdmin: true, checkOwner: true })) return message.channel.send(errEmbed.setDescription("You don't have the required permission to use this command!"));
-        if (!message.guild.me.hasPermission("KICK_MEMBERS")) return ErrorMsg(bot, message, "I don't have the required permissions to execute this command!\nRequired permission: **KICK MEMBERS**")
         if (!args[1]) return message.channel.send(errEmbed.setDescription("Please mention the member you want to kick!\nUsage: `" + prefix + "kick <@tagMember> <reason here>`"));
 
         if (!member) return message.channel.send(errEmbed.setDescription("Couldn't find that member!"));

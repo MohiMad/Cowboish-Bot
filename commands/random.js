@@ -1,10 +1,10 @@
 const { ErrorMsg } = require("../functions.js");
 
 module.exports = {
-    name: 'random',
-    description: "randomizes a surv",
+    name: ["randomize", "random", "pickrandomly"],
+    description: "Picks you a random Item, Survivor or Hunter... You choose which ;)\nTo randomize between Survivors, add `survivors` as your 1st arguments and same goes for Hunters...\n\nIf you want Cowboish to pick something from a list your provide, add the list of your items you want Cowboih to pick between separated with a whitespace\n\n**Usage:** `$prefixrandomize <survivors/hunters>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     execute(message, args, bot, prefix) {
-
 
         var facts = [
             "1st Officer",
@@ -55,7 +55,8 @@ module.exports = {
             "No. 26",
             "Ann",
             "Violinist",
-            "Sculptor"
+            "Sculptor",
+            "Percy"
         ];
 
         var hunter = Math.floor(Math.random() * hunters.length);

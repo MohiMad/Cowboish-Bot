@@ -3,9 +3,10 @@ const { stripIndents } = require("common-tags");
 const { getMember, formatDate } = require("../functions.js");
 
 module.exports = {
-    name: 'userinfo',
-    description: "show info",
-    execute(message, args, MohiMoo) {
+    name: ["userinfo", "usrinfo", "user-info", "userinformation", "user-information"],
+    description: "Displays your/others' User Information\n\n**Usage:** `$prefixuserinfo [user]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    execute(message, args) {
 
 
         const member = getMember(message, args.slice(1).join(" "));

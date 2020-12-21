@@ -1,4 +1,3 @@
-const { findRole } = require("../functions.js");
 const Guild = require("../models/guild.js");
 const { MessageEmbed } = require("discord.js");
 const IdentityVNews = require("../models/news.js");
@@ -7,10 +6,10 @@ const p = require("../essences/patchnotes.js");
 
 module.exports = {
     name: 'announcenews',
-    description: "You know how we do it ;)",
+    description: "...",
+    admins: ["478527909250990090", "427200618399268874", "638831021995065344"],
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "MANAGE_MESSAGES", "ADD_REACTIONS"],
     execute: async (message, bot, args) => {
-
-        if (!["478527909250990090", "427200618399268874", "638831021995065344"].includes(message.author.id)) return;
 
         const GUILDS = await Guild.find({});
 

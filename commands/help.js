@@ -3,8 +3,9 @@ const { stripIndents } = require('common-tags');
 const e = require("../emojis.json");
 
 module.exports = {
-    name: 'help',
-    description: "sends help!",
+    name: ["help", "helpme", "commands"],
+    description: "You're using the command right now lol\nDisplays the bot's categories and it's commands\n\n**Usage:** `$prefixhelp [category] [commandName]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     execute(message, args, bot, prefix) {
 
         const helpEmbed = new MessageEmbed()

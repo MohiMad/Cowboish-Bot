@@ -2,16 +2,15 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'hug',
-    description: "take dis hug",
+    name: ["hug", "squeeze"],
+    description: "Hugs the mentioned user :D\nGive your friends some hugs but in a idv style ;)\n\n**Usage:** `$prefixhug <user>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         const persona = await findMember(message, args.slice(1).join(" "));
 
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH FILES** to true");
         if (!args[1]) return message.channel.send("Who do you want to hug? you can't hug air :v");
 
-        
         if (!persona) return ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "hug <MentionHere>`")
 
          if (persona.id === message.author.id) return message.channel.send(`I would hug you if I was a human, ${message.author}...`);

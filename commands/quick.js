@@ -4,8 +4,9 @@ const { ErrorMsg, coolEmbed, newLP, findCooldown } = require("../functions.js");
 const { quiz } = require("../quizes/quiz.js");
 
 module.exports = {
-    name: 'quick',
-    description: "play a quick match",
+    name: ["quickmatch", "quick", "q", "play", "survmatch", "survivormatch"],
+    description: "Play a Quick-Match as your favorite Survivor and answer a question about them to gain Dices\nAs in-game, you need to buy the Survivor if you wanna play as them... But LuckyGuy, Gardener, Lawyer, Thief, and Doctor are always free-to-play\n\n**Usage:** `$prefixquickmatch <survivorName>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix, spamStopper) => {
         await newLP(message);
 

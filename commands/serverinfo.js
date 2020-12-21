@@ -3,9 +3,10 @@ const { stripIndents } = require('common-tags');
 const { formatDate } = require("../functions.js");
 
 module.exports = {
-	name: 'serverinfo',
-	description: "shows the info of the server",
-	execute(message, args, MohiMoo) {
+	name: ["serverinfo", "server-info", "srvrinfo"],
+	description: "Shows this Server's general Information",
+	permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+	execute(message) {
 
 
 		const created = formatDate(message.guild.createdAt)

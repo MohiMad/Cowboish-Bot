@@ -6,8 +6,9 @@ const { Skins } = require("../essences/items.json");
 const { ess1, ess2, ess3, clues, frags, insp } = require("../emojis.json");
 
 module.exports = {
-    name: 'buy',
-    description: "buy some stuff",
+    name: ["buy", "purchase"],
+    description: "This command belongs to the **Logicpath** category and allows you to buy LP items such as:\nEssences, Characters, Portraits, Frames, and other Powerups...\nIf you're confused about what is purchasable, check the `$prefixshop` and then head to this command and do:\n`$prefixbuy <itemID>`\n\nThe arguments in this command are a bit flexible, it varies from an item to another...",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
     execute: async (message, args, bot, prefix) => {
         await newLP(message);
 

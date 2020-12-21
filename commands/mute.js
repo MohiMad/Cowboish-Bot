@@ -7,13 +7,13 @@ const { MessageEmbed } = require("discord.js");
 const Mutes = require("../models/mutes.js");
 
 module.exports = {
-  name: 'mute',
-  description: "Mute...",
+  name: ["mute", "shutup"],
+  description: "Mutes the mentioned member for a specified amount of time...\n\n**Usage:** `$prefixmute <user> <time> [reason]`\n\nThe `<time>` tag should be provided using the following format:\n**10 Seconds**: `10s`\n**10 Minutes**: `10m`\n**10 Hours**: `10h`\n**10 Days**: `10d`",
+  admins: ["478527909250990090"],
+  permissions: ["SEND_MESSAGES", "MANAGE_CHANNELS", "MANAGE_ROLES", "EMBED_LINKS"],
   execute: async (message, args, bot, prefix) => {
 
     if (!message.member.hasPermission("MANAGE_ROLES", { checkAdmin: true, checkOwner: true })) return ErrorMsg(bot, message, "Not enough permissions!\nOnly members with the permission: **MANAGE_ROLES** can execute this command!");
-
-    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **MANAGE_ROLES** to true");
 
     if (!args[1] || !args[2]) return ErrorMsg(bot, message, "**No Member** provided or **Mute Time**!\nPlease provide me a member to mute and the amount of time you want me to mute them for.\n\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason(optional)>`");
 

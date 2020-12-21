@@ -10,5 +10,18 @@
         "Answer": ["burke", "the madeyes", "madeyes", "mad eyes", "burke "],
         "Difficulty": "Hard",
         "Attachment": "https://i.imgur.com/NY23lPn.png"
-    }
+    },
+    {
+        "Question": "**Fill in the missing word:**\n`When Percy reaches 100 _ _ _ _ _ _, he will enter an overload state`",
+        "Answer": ["energy"],
+        "Difficulty": "Medium",
+        "Attachment": "https://pbs.twimg.com/media/EoFZSyWWEAAxTij?format=jpg&name=small",
+        "Artist": "@tutcheff on Twitter"
+    },
+    {
+        "Question": "**Question:**\nWhat is the name of this skin?",
+        "Answer": ["conquer"],
+        "Difficulty": "Easy",
+        "Attachment": "https://i.imgur.com/1AGotqa.png"
+        }
 ]

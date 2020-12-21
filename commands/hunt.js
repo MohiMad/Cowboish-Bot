@@ -3,8 +3,9 @@ const { ErrorMsg, newLP, coolEmbed, findCooldown } = require("../functions.js");
 const { quiz } = require("../quizes/quiz.js");
 
 module.exports = {
-    name: 'hunt',
-    description: "play a match as a hunter",
+    name: ["hunt", "hunter", "huntas", "h", "huntermatch", "huntmatch"],
+    description: "Play a match as a hunter to get dices :D\nYou can only play as Hunters you bought... Just like in-game, you can always play as Leo/Hellember\n\n**Usage:** `$prefixhunt <hunterName>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix, spamStopper) => {
         await newLP(message);
 

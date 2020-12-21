@@ -3,8 +3,9 @@ const Guild = require("../models/guild.js");
 const { ErrorMsg, checkForGuildDataExistance } = require("../functions.js");
 
 module.exports = {
-    name: 'setcowboishprefix',
-    description: "Change my prefix!",
+    name: ["setcowboishprefix", "cowboishprefix", "setcowboishbotprefix"],
+    description: "Change the prefix for Cowboish Bot\nThe prefix can't includes whitespaces and it's length should be between 1 and 7 characters\nMy current prefix is: `$prefix`\n\n**Usage:** `$prefixsetcowboishprefix <newPrefix>`\n\nThis command works even without using a prefix, you just gotta type `setcowboishprefix` in the chat",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     execute: async (message, args, bot) => {
         await checkForGuildDataExistance(message);
         const guild = await Guild.findOne({ guildID: message.guild.id });

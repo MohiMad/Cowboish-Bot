@@ -3,9 +3,10 @@ const Discord = require("discord.js");
 const { findMember, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 
 module.exports = {
-    name: 'siptea',
-    description: "Ashryb shai",
-    execute: async (message, args, bot) => {
+    name: ["siptea", "sip-tea", "sippingtea", "sip"],
+    description: "*sips tea nervously*",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    execute: async (message, args) => {
 
         const cooldownCheck = await findCooldown(message, "sip");
 

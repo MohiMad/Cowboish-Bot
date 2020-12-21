@@ -1,9 +1,10 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'invite', 
-    description: "Sends an invitation link",
-    execute(message, args, bot){
+    name: ["invite", "botinvite", "botinvitationlink", "cowboishinvite"], 
+    description: "Sends the invitation link for Cowboish Bot\nProvides two links, one with the recommended permissions and one with full permissions (Admin)",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    execute(message, bot){
 
         const invEmbed = new MessageEmbed()
             .setColor("0xffff00")

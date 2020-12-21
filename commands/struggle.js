@@ -1,15 +1,14 @@
 const { MessageEmbed } = require('discord.js');
-const { ErrorMsg, findMember } = require("../functions.js");
+const { findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'struggle',
-    description: "Bongo cat struggling :3",
-    execute: async (message, args, bot) => {
+    name: ["struggle", "bongostruggle", "bongocatstruggle"],
+    description: "Struggle away from the Hunter cutely >:3\n**Credits to:** [Noxandus Rayn](https://www.youtube.com/channel/UChHchLwXe0AqdDTZ7JTZ3JQ)\n\n**Usage:** `$prefixstruggle <user>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    execute: async (message, args) => {
 
 
         let persona = await findMember(message, args.slice(1).join(" "));
-
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
         if (!args[1]) persona = message.author;
         else if (!persona) persona = message.author;
@@ -28,8 +27,6 @@ module.exports = {
             .setImage("https://media.giphy.com/media/fUjs0DifJYe2dgHuoe/giphy.gif")
             .setFooter(`Credits to @chrysalisobel on giphy <3`)
             .setColor("RANDOM");
-
-
 
         message.channel.send(struggleEmbed);
 

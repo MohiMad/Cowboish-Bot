@@ -6,11 +6,10 @@ const e = require("../emojis.json");
 const { MessageEmbed } = require('discord.js');
 const { newLP } = require("../functions.js");
 
-const { Portraits } = require("../essences/items.json");
-
 module.exports = {
-    name: 'shop',
-    description: "shop list for ya",
+    name: ["shop", "lpshop", "logicpathshop"],
+    description: "Yeehaw Cowboish Shop for ya :D\nDisplays what you can buy from the shop...\nThis command includes only the list of purchasable items... you need to use the command `$prefixbuy` to purchase items\n\n**Usage:** `$prefixshop [category]`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
     execute: async (message, args, bot, prefix) => {
         await newLP(message);
 

@@ -3,8 +3,9 @@ const { coolEmbed, addCooldown, findCooldown, findMember } = require("../functio
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "paintingstare",
-    description: "Stare the at painter's um- painting >:v",
+    name: ["paintingstare", "stareatpainting", "distractingpainting", "painting"],
+    description: "Stare the at Painter's um- painting :v\n*ah yes very distracting... this command was released with the Painter lol*\nYou can attach an image with the command so cowboish puts it into the painting... cowboish even checks if there are attachments in the channel and he puts it in the painting if no image is provided\n\n**Usage:** `$prefixpaintingstare <image>`",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
     execute: async (message, args, bot) => {
 
         const cooldownCheck = await findCooldown(message, "paintingstare");

@@ -5,8 +5,9 @@ const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions
 
 module.exports = {
     name: 'meme',
-    description: "sends a random meme",
-    execute: async (message, args, MohiMoo) => {
+    description: "Grabs a random meme from the subreddits (r/memes or r/dankmemes)",
+    permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    execute: async (message) => {
 
         const cooldownCheck = await findCooldown(message, "meme");
 

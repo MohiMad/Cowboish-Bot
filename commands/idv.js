@@ -4,9 +4,10 @@ const { addCooldown, coolEmbed, findCooldown } = require("../functions.js");
 const moment = require("moment");
 
 module.exports = {
-    name: 'idv',
-    description: "sends a random reddit post",
-    execute: async (message, args, bot, prefix) => {
+    name: ["identityvreddit", "idvreddit", "idv", "r/identityv", "r/idv", "idvr"],
+    description: "Sends a random post from the subreddit r/IdentityV",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    execute: async (message) => {
 
         const cooldownCheck = await findCooldown(message, "idv");
 

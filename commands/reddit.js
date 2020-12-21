@@ -4,8 +4,9 @@ const { ErrorMsg, addCooldown, coolEmbed, findCooldown } = require("../functions
 const moment = require("moment");
 
 module.exports = {
-    name: 'reddit',
-    description: "sends a random reddit post",
+    name: ["reddit", "subreddit"],
+    description: "Sends a random post from the subreddit you provided\n\n**Usage:** `$prefixreddit <subredditName>`",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, bot, prefix) => {
 
         const cooldownCheck = await findCooldown(message, "reddit");

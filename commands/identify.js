@@ -1,8 +1,9 @@
 const { findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'identify',
-    description: "identifies ur friends",
+    name: ["identify", "whois", "stereotype"],
+    description: "Identifies what kind of an Identity V player you/your friends are...\n\n**Usage:** `$prefixidentify [userToIdentify]`",
+    permissions: ["SEND_MESSAGES"],
     execute: async (message, args) => {
 
 
@@ -49,7 +50,7 @@ module.exports = {
             `$target is a prospector main that repels their teammates into the hunter. Biggest screw ups but became a joke?`,
             `$target spams "Thank You!" For everything. E. V. E. R. Y. T. H. I. N. G.`,
             `$target is a Photographer main who is more blind than Mind's Eye.`,
-            `$target screams Meow meow when they see Disciple's cat.`
+            `$target screams pspspspsps when they see Disciple's cat.`
         ];
 
         var info = Math.floor(Math.random() * infos.length);
