@@ -1,7 +1,7 @@
 const Guild = require("../models/guild.js");
 const logicPath = require("../models/logicpath.js");
 const { permsCheck } = require('../functions.js');
-const spamStopper = new Set();
+const SpamSet = new Set();
 
 module.exports = async (bot, message) => {
 
@@ -39,7 +39,7 @@ module.exports = async (bot, message) => {
     }*/
 
     if (!message.content.startsWith(prefix)) return;
-    if(message.author.id !== MohiMoo.id) return;
+    //if(message.author.id !== MohiMoo.id) return;
 
     const objects = {
         message: message,
@@ -47,7 +47,7 @@ module.exports = async (bot, message) => {
         bot: bot,
         prefix: prefix,
         MohiMoo: MohiMoo,
-        spamStopper: spamStopper,
+        SpamSet: SpamSet,
         permissionsInChannel: permissionsInChannel,
         permissionsInGuild: permissionsInGuild,
         highestRole: highestRole
@@ -80,7 +80,7 @@ module.exports = async (bot, message) => {
             if (permsCheck(message, bot, highestRole, command.permissions, permissionsInGuild, permissionsInChannel) === true) return;
 
             const execParms = await getArgsRequested(command.execute);
-            command.execute(objects[execParms[0]], objects[execParms[1]], objects[execParms[2]], objects[execParms[3]]);
+            command.execute(objects[execParms[0]], objects[execParms[1]], objects[execParms[2]], objects[execParms[3]], objects[execParms[4]]);
         }
 
     }

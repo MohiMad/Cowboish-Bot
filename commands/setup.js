@@ -4,7 +4,8 @@ const { findRole, checkForGuildDataExistance, findChannel } = require("../functi
 
 module.exports = {
     name: ["setup", "set"],
-    description: "set some stuff for the guild",
+    description: "Set some stuff for the guild",
+    permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message, args, prefix) => {
         await checkForGuildDataExistance(message);
         const guild = await Guild.findOne({ guildID: message.guild.id });

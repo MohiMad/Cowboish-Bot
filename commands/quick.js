@@ -7,12 +7,12 @@ module.exports = {
     name: ["quickmatch", "quick", "q", "play", "survmatch", "survivormatch"],
     description: "Play a Quick-Match as your favorite Survivor and answer a question about them to gain Dices\nAs in-game, you need to buy the Survivor if you wanna play as them... But LuckyGuy, Gardener, Lawyer, Thief, and Doctor are always free-to-play\n\n**Usage:** `$prefixquickmatch <survivorName>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
-    execute: async (message, args, bot, prefix, spamStopper) => {
+    execute: async (message, args, bot, prefix, SpamSet) => {
         await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
         const cooldownCheck = await findCooldown(message, "quick");
-        if (spamStopper.has(message.author)) return;
+        if (SpamSet.has(message.author)) return;
 
         if (cooldownCheck) return coolEmbed(message, "The cooldown is still on...", "Please wait **REMAINING** before you can play a match again...", cooldownCheck.timeRemaining, ["m", "s"]);
 
@@ -315,7 +315,7 @@ module.exports = {
 
                 } else {
                     boolean = true;
-                    return await quiz(bot, message, x.Path, x.CharacterName, spamStopper);
+                    return await quiz(bot, message, x.Path, x.CharacterName, SpamSet);
 
                 }
 

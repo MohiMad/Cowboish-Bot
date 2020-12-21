@@ -6,13 +6,13 @@ module.exports = {
     name: ["hunt", "hunter", "huntas", "h", "huntermatch", "huntmatch"],
     description: "Play a match as a hunter to get dices :D\nYou can only play as Hunters you bought... Just like in-game, you can always play as Leo/Hellember\n\n**Usage:** `$prefixhunt <hunterName>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
-    execute: async (message, args, bot, prefix, spamStopper) => {
+    execute: async (message, args, bot, prefix, SpamSet) => {
         await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
         const cooldownCheck = await findCooldown(message, "hunt");
-        if (spamStopper.has(message.author)) return;
+        if (SpamSet.has(message.author)) return;
 
         if (cooldownCheck) return coolEmbed(message, "You can't hunt just yet :(", "Please wait **REMAINING** before you can use the `hunt` command again...", cooldownCheck.timeRemaining, ["m", "s"]);
 
@@ -213,7 +213,7 @@ module.exports = {
 
                     } else {
                         boolean = true;
-                        return await quiz(bot, message, x.Path, x.CharacterName, spamStopper);
+                        return await quiz(bot, message, x.Path, x.CharacterName, SpamSet);
 
                     }
 
