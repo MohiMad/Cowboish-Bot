@@ -6,9 +6,7 @@ const spamStopper = new Set();
 module.exports = async (bot, message) => {
 
     if (message.channel.type === 'dm') return;
-
     if (!message.guild.me.hasPermission("SEND_MESSAGES")) return;
-
     if (!message.guild) return;
 
     const guild_0 = await Guild.findOne({ guildID: message.guild.id });
@@ -26,9 +24,9 @@ module.exports = async (bot, message) => {
 
     if (message.author.bot) return;
 
-    const MohiMoo = bot.users.cache.get("478527909250990090");
-    const permissionsInGuild = message.channel.permissionsFor(message.guild.me).toArray();
-    const permissionsInChannel = message.guild.me.permissionsIn(message.channel).toArray();
+    const MohiMoo = await bot.users.cache.get("478527909250990090");
+    const permissionsInGuild = await message.channel.permissionsFor(message.guild.me).toArray();
+    const permissionsInChannel = await message.guild.me.permissionsIn(message.channel).toArray();
 
     const highestRole = message.guild.me.roles.highest;
 
@@ -41,7 +39,6 @@ module.exports = async (bot, message) => {
     }*/
 
     if (!message.content.startsWith(prefix)) return;
-
     if(message.author.id !== MohiMoo.id) return;
 
     const objects = {
@@ -53,7 +50,7 @@ module.exports = async (bot, message) => {
         spamStopper: spamStopper,
         permissionsInChannel: permissionsInChannel,
         permissionsInGuild: permissionsInGuild,
-        rolePermissions: rolePermissions
+        highestRole: highestRole
     }
 
     function getArgsRequested(func) {
