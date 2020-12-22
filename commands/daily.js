@@ -7,6 +7,7 @@ module.exports = {
     name: ["daily", "dailyreward"],
     description: "Grab your daily rewards which contains logicpath items such as Dices, Essences and Clues\n**24 Hours** cooldown\n\n**Usage:** `$prefixdaily`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
+    category: "Logicpath",
     execute: async (message) => {
         await newLP(message);
 

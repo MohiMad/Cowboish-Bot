@@ -6,6 +6,7 @@ module.exports = {
     name: ["postmanletter", "letter", "postmansletter", "postmansign"],
     description: "Puts your message in Postman's letter :D\nArt belongs to: [@thevileruler](https://twitter.com/thevileruler)\n\n**Usage:** `$prefixletter <message goes here uwu>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args) => {
 
         const cooldownCheck = await findCooldown(message, "letter");

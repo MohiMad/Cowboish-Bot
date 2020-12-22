@@ -6,6 +6,7 @@ const moment = require("moment");
 module.exports = {
     name: ["identityvreddit", "idvreddit", "idv", "r/identityv", "r/idv", "idvr"],
     description: "Sends a random post from the subreddit r/IdentityV",
+    category: "IdentityV",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     execute: async (message) => {
 

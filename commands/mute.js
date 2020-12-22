@@ -11,6 +11,7 @@ module.exports = {
   description: "Mutes the mentioned member for a specified amount of time...\n\n**Usage:** `$prefixmute <user> <time> [reason]`\n\nThe `<time>` tag should be provided using the following format:\n**10 Seconds**: `10s`\n**10 Minutes**: `10m`\n**10 Hours**: `10h`\n**10 Days**: `10d`",
   admins: ["478527909250990090"],
   permissions: ["SEND_MESSAGES", "MANAGE_CHANNELS", "MANAGE_ROLES", "EMBED_LINKS"],
+  category: "Moderation",
   execute: async (message, args, bot, prefix) => {
 
     if (!message.member.hasPermission("MANAGE_ROLES", { checkAdmin: true, checkOwner: true })) return ErrorMsg(bot, message, "Not enough permissions!\nOnly members with the permission: **MANAGE_ROLES** can execute this command!");

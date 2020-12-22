@@ -4,8 +4,9 @@ const { findRole, checkForGuildDataExistance, findChannel } = require("../functi
 
 module.exports = {
     name: ["setup", "set"],
-    description: "Set some stuff for the guild",
+    description: "Set up some stuff for the Server...\nYou can set a:\n\n**Greeting Channel**\n- Where Cowboish will refer to and send the Greet-Message in\n\n**Custom Greet Message**\n- Customize a message for Cowboish to send whenever a new member joins the server\n\n**Leave Channel**\n- Set a Channel for Cowboish to refer to and send the Leave-message in whenever a member leaves the Server\n\n**Custom Leave Message**\n- Set a customized message for Cowboish to send whenver a Member leaves the Server\n\n**Auto Roles to be given for new members**\n- Assign roles for Cowboish to automatically give new members these roles",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Moderation",
     execute: async (message, args, prefix) => {
         await checkForGuildDataExistance(message);
         const guild = await Guild.findOne({ guildID: message.guild.id });

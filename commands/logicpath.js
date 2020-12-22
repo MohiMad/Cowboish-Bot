@@ -9,6 +9,7 @@ module.exports = {
     name: ["logicpath", "lp", "profile", "inv", "inventory"],
     description: "Displays your Logicpath items in an Identity V Profile format\n\n`$prefixLP [user]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Logicpath",
     execute: async (message, args, bot, prefix) => {
 
         await newLP(message);

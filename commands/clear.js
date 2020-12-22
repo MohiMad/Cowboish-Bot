@@ -5,6 +5,7 @@ module.exports = {
     name: ["clear", "purge", "delete", "deletemessages", "sweep"],
     description: "Delete multiple messages at once using this command\nThis command can only be used by users with the permission **Manage Messages**\n\n**Usage:** `$prefixclear <amountOfMessages> [Reason]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "MANAGE_MESSAGES"],
+    category: "Moderation",
     execute: async (message, args, bot, prefix) => {
 
         const toClear = args[1];

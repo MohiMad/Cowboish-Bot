@@ -5,6 +5,7 @@ module.exports = {
     name: ["crash", "lethalcrash"],
     description: "Land a lethal crash on your friend 🦎\n\n**Usage:** `$prefixcrash <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, prefix) => {
 
         const persona = await findMember(message, args.slice(1).join(" "));

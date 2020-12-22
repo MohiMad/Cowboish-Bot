@@ -4,6 +4,7 @@ module.exports = {
     name: ["randomize", "random", "pickrandomly"],
     description: "Picks you a random Item, Survivor or Hunter... You choose which ;)\nTo randomize between Survivors, add `survivors` as your 1st arguments and same goes for Hunters...\n\nIf you want Cowboish to pick something from a list your provide, add the list of your items you want Cowboih to pick between separated with a whitespace\n\n**Usage:** `$prefixrandomize <survivors/hunters>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    category: "IdentityV",
     execute(message, args, bot, prefix) {
 
         var facts = [

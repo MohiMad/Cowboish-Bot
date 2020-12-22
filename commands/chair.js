@@ -6,6 +6,7 @@ module.exports = {
     name: ["chair", "rocketchair"],
     description: "Place your friends on the Rocket Chair >:D\nThis command will replace the profile-picture of the mentioned user(or you) on a poor chaired Explorer\n\n**Usage:** `$prefixchair [user]`",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args) => {
 
         let cooldownCheck = await findCooldown(message, "chair");

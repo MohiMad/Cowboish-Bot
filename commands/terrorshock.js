@@ -19,7 +19,6 @@ module.exports = {
 
         if (persona.id === message.author.id) return message.channel.send(`You... wanna terrorshock yourself **${message.author}** is that even possible??!`);
 
-
         var facts = [
             'Oof ' + message.author.username + ' got ' + persona.user.username + ' terrorshocked :C',
             persona.user.username + " got terrorshocked by " + message.author.username,

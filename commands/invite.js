@@ -4,6 +4,7 @@ module.exports = {
     name: ["invite", "botinvite", "botinvitationlink", "cowboishinvite"], 
     description: "Sends the invitation link for Cowboish Bot\nProvides two links, one with the recommended permissions and one with full permissions (Admin)",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    category: "Config",
     execute(message, bot){
 
         const invEmbed = new MessageEmbed()

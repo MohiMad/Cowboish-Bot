@@ -5,6 +5,7 @@ module.exports = {
     name: ["lasso", "yeet", "yoink"],
     description: "Yeehaw you know we're cowboish so we needed to have a lasso command 🤠\n\n**Usage:** `$prefixlasso <userMention>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, perfix) => {
 
         let persona = await findMember(message, args[1]);

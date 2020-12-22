@@ -6,6 +6,7 @@ module.exports = {
     name: ["patches", "patchnotes", "identityvpatches", "idvpatches", "identityvpatchnotes"],
     description: "Check Identity V's latest patchnotes\nCowboish will send the full version of it split into multiple pages and you can move to next/previous page by reacting with ◀ ▶ on the embed",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "ADD_REACTIONS", "MANAGE_MESSAGES"],
+    category: "IdentityV",
     execute: async (message, bot, prefix) => {
 
         if (spamStopper.has(message.author)) return message.reply("**You can't run two patchnotes-scrollers at once... Please react with ❌ on the previous embed before being able to start a new scroller!**");

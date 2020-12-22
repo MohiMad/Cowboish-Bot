@@ -4,6 +4,7 @@ module.exports = {
     name: ["winrate", "win-rate", "wr"],
     description: "Check your/others' winrate\n\n**Usage:** `$prefixwinrate [user]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    category: "IdentityV",
     execute: async (message, args) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));

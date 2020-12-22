@@ -11,6 +11,7 @@ module.exports = {
     name: ["open", "essence", "ess", "e"],
     description: "Open this season's current essences in Discord ヽ(´･ω･`)丿\n\n**Usage:** `$prefixopen <essenceID> [amount]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Logicpath",
     execute: async (message, args, bot, prefix) => {
         await newLP(message);
 

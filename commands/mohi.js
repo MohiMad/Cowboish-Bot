@@ -7,6 +7,7 @@ module.exports = {
     name: ["mohi", "ihom", "mohii", "mohii"],
     description: "Mohiiii\n\n*please don't ask why this exists*",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args, bot, prefix) => {
 
         let cooldownCheck = await findCooldown(message, "mohi");

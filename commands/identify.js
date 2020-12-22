@@ -4,6 +4,7 @@ module.exports = {
     name: ["identify", "whois", "stereotype"],
     description: "Identifies what kind of an Identity V player you/your friends are...\n\n**Usage:** `$prefixidentify [userToIdentify]`",
     permissions: ["SEND_MESSAGES"],
+    category: "IdentityV",
     execute: async (message, args) => {
 
 

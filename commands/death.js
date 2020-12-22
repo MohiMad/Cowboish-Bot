@@ -6,6 +6,7 @@ module.exports = {
     name: ["chosendeath", "death", "soyouvechosendeath"],
     description: "So you have chosen.. DEATH\nCustomize this meme template on your own by providing what text to put inside of it\n\n**Usage:** `$prefixchosendeath <message goes here>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args) => {
 
         const cooldownCheck = await findCooldown(message, "death");

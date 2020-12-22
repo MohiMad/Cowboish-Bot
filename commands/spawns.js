@@ -6,6 +6,7 @@ module.exports = {
     name: ["spawns", "spawn", "mapspawns", "map-spawns", "mapspawn", "map-spawn"],
     description: "Check the Spawn points of Survivors, Hunters, Cipher Machines and Dungeon locations in a specific map\nThe ingame maps are: Church, Hospital, Factory, Moonlit, Lakeside, Eversleeping, and Asylum... (Golden Cave isn't included because it's made of multiple floors/levels)\nThe **Filter** arguement can be: `ciphers`, `characters`, or `dungeon`... Providing one of these as your 2nd argument will make Cowboish only display the spawn-location of what you asked it to provide in that map\n\n**Command Usage:** `$prefixspawns <mapName> [Filter]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "MANAGE_MESSAGES", "ADD_REACTIONS"],
+    category: "IdentityV",
     execute: async (message, args, bot, prefix) => {
 
         let cipherNames = ["cipher", "gen", "ciphers", "gens", "ciphermachine", "ciphermachines", "generator", "generators"];

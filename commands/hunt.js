@@ -6,6 +6,7 @@ module.exports = {
     name: ["hunt", "hunter", "huntas", "h", "huntermatch", "huntmatch"],
     description: "Play a match as a hunter to get dices :D\nYou can only play as Hunters you bought... Just like in-game, you can always play as Leo/Hellember\n\n**Usage:** `$prefixhunt <hunterName>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Logicpath",
     execute: async (message, args, bot, prefix, SpamSet) => {
         await newLP(message);
 

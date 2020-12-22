@@ -5,6 +5,7 @@ module.exports = {
     name: 'ban',
     description: "This command is for Admins/Moderators to use when they want to ban a specific member...\nThe member can't be the server owner or a member with a higher role than you...\n\n**Valid Usage:** `$prefixban <toBanMember> [Reason]`",
     permissions: ["SEND_MESSAGES", "BAN_MEMBERS", "EMBED_LINKS"],
+    category: "Moderation",
     execute: async (message, args, bot, prefix) => {
 
         const member = await findMember(message, args[1]);

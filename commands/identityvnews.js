@@ -6,6 +6,7 @@ module.exports = {
     name: ["identityvnews", "idvnews", "identityvupdates", "identityvupdatesandnews", "identityvnewsandupdates", "idvupdates"],
     description: "Cowboish Bot has the ability to power your server up with the lastest **Identity V News And Updates**\nAll you gotta do is providing the bot a channel to send news in it using this command.\nYou even have the ability to set a **to-ping** role or mention once the bot send a news annoncement!\n\nYou can even set a channel for cowboish to send a full version of the **Patch Notes** whenever they're out\n\n**Usage:** `$prefixIdentityVNews <whatToSet> <channel/role>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "IdentityV",
     execute: async (message, args, prefix) => {
         await checkForGuildDataExistance(message);
         const guild = await Guild.findOne({ guildID: message.guild.id });

@@ -6,7 +6,7 @@ module.exports = {
     name: ["slap", "smack"],
     description: "Let Photographer slap your friends >:D\n*please don't slap Cowboish ;w;*\n\n**Usage:** `$prefixslap <user>`",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
-
+    category: "Image",
     execute: async (message, args, bot) => {
 
         const cooldownCheck = await findCooldown(message, "slap");

@@ -6,6 +6,7 @@ module.exports = {
 	name: ["serverinfo", "server-info", "srvrinfo"],
 	description: "Shows this Server's general Information",
 	permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+	category: "Utility",
 	execute(message) {
 
 

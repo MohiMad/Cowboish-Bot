@@ -6,6 +6,7 @@ module.exports = {
     name: ["userinfo", "usrinfo", "user-info", "userinformation", "user-information"],
     description: "Displays your/others' User Information\n\n**Usage:** `$prefixuserinfo [user]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Utility",
     execute(message, args) {
 
 

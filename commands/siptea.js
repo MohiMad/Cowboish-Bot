@@ -6,6 +6,7 @@ module.exports = {
     name: ["siptea", "sip-tea", "sippingtea", "sip"],
     description: "*sips tea nervously*",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args) => {
 
         const cooldownCheck = await findCooldown(message, "sip");

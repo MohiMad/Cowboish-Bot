@@ -6,6 +6,7 @@ module.exports = {
     name: ["simpsonshug", "iluvit", "iloveit"],
     description: "Put your favorite image in a Simpson hugging image, let cowboish do the work ;)\nYou just gotta send an image with the command... Or have a previously sent image in the chat\n\n**Usage:** `$prefixsimpsonshug [attachment]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args, bot) => {
 
         const cooldownCheck = await findCooldown(message, "simpsonshug");

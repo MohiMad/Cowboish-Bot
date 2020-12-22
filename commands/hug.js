@@ -5,6 +5,7 @@ module.exports = {
     name: ["hug", "squeeze"],
     description: "Hugs the mentioned user :D\nGive your friends some hugs but in a idv style ;)\n\n**Usage:** `$prefixhug <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, prefix) => {
 
         const persona = await findMember(message, args.slice(1).join(" "));

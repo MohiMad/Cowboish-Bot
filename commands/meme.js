@@ -7,6 +7,7 @@ module.exports = {
     name: 'meme',
     description: "Grabs a random meme from the subreddits (r/memes or r/dankmemes)",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    category: "Fun",
     execute: async (message) => {
 
         const cooldownCheck = await findCooldown(message, "meme");

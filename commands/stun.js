@@ -5,6 +5,7 @@ module.exports = {
     name: ["stun", "palletstun"],
     description: "Stun your friends with a pallet >:D\n\n**Usage:** `$prefixstun <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, prefix) => {
 
 

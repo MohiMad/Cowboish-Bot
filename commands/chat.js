@@ -6,6 +6,7 @@ module.exports = {
     name: ["ingamechat", "chat", "globalchat"],
     description: "Type a message in the ingame global chat\n\n**Usage:** `$prefixingamechat <message goes in here>`",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
+    category: "Image",
     execute: async (message, args, bot, prefix) => {
 
         const cooldownCheck = await findCooldown(message, "chat");

@@ -5,6 +5,7 @@ module.exports = {
     name: ["shoot", "flaregunshoot", "pewpew"],
     description: "***BOOM HEADSHOT***\n\n**Usage:** `$prefixshoot <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, prefix) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));

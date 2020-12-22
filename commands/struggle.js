@@ -5,6 +5,7 @@ module.exports = {
     name: ["struggle", "bongostruggle", "bongocatstruggle"],
     description: "Struggle away from the Hunter cutely >:3\n**Credits to:** [Noxandus Rayn](https://www.youtube.com/channel/UChHchLwXe0AqdDTZ7JTZ3JQ)\n\n**Usage:** `$prefixstruggle <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args) => {
 
 

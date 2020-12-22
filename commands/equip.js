@@ -8,6 +8,7 @@ module.exports = {
     name: ["equip"],
     description: "This command alows you to fancinize and customize your `$prefixLP` the way you want it to look.\nYou get Portraits and you can buy portraits right? these Portraits/Frames are equipable using this command\n\n**Valid Items:** `portraits` or `frames`\n**Usage:** `$prefixequip <item(portrait/frame)> <portrait/frame's name>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
+    category: "Logicpath",
     execute: async (message, args, bot, prefix) => {
 
         await newLP(message);

@@ -5,6 +5,7 @@ module.exports = {
     name: ["say", "repeat"],
     description: "Repeats what you say\n\n**Usage:** `$prefixsay <what to say? say it here -v->`",
     permissions: ["SEND_MESSAGES"],
+    category: "Fun",
     execute(message, args) {
 
         const sayMessage = args.slice(1).join(" ");

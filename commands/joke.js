@@ -7,6 +7,7 @@ module.exports = {
     name: ["joke", "redditjoke", "lemmelaugh"],
     description: "Sends a random joke from the subreddit r/Jokes",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
+    category: "Fun",
     execute: async (message) => {
 
         const cooldownCheck = await findCooldown(message, "joke");

@@ -5,6 +5,7 @@ module.exports = {
     name: 'bully',
     description: "Hahah you can bully your friends using this command, just don't take the bully too far ;w;\n\n**Usage:** `$prefixbully <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, prefix) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));

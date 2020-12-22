@@ -7,6 +7,7 @@ module.exports = {
     name: ["reddit", "subreddit"],
     description: "Sends a random post from the subreddit you provided\n\n**Usage:** `$prefixreddit <subredditName>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Fun",
     execute: async (message, args, bot, prefix) => {
 
         const cooldownCheck = await findCooldown(message, "reddit");

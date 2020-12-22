@@ -5,6 +5,7 @@ module.exports = {
     name: ["info", "botinfo", "bot-info"],
     description: "Sends general information about Cowboish bot",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Config",
     execute(message, bot, MohiMoo, prefix) {
 
 

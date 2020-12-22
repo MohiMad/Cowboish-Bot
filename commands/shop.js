@@ -10,6 +10,7 @@ module.exports = {
     name: ["shop", "lpshop", "logicpathshop"],
     description: "Yeehaw Cowboish Shop for ya :D\nDisplays what you can buy from the shop...\nThis command includes only the list of purchasable items... you need to use the command `$prefixbuy` to purchase items\n\n**Usage:** `$prefixshop [category]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "USE_EXTERNAL_EMOJIS"],
+    category: "Logicpath",
     execute: async (message, args, bot, prefix) => {
         await newLP(message);
 

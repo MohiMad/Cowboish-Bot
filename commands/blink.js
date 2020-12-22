@@ -5,6 +5,7 @@ module.exports = {
     name: 'blink',
     description: "This command allows you to blink your friends >:D\nAll you gotta do is mentioning them in your 1st arguments...\n\n**Usage:** `$prefixblink <userMention>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Actions",
     execute: async (message, args, bot, prefix) => {
 
         let persona = await findMember(message, args.slice(1).join(" "));

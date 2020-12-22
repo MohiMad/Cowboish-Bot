@@ -4,6 +4,7 @@ module.exports = {
     name: ["roll20", "r20", "rolldice20", "roll20sideddice"],
     description: "Rolls a 20 Sided Dice... Isn't a part of the Logicpath category which means it doesn't affect your logicpathsteps",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "IdentityV",
     execute(message) {
 
         var facts = ["10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
