@@ -39,7 +39,7 @@ module.exports = async (bot, message) => {
     }*/
 
     if (!message.content.startsWith(prefix)) return;
-    if(message.content.length === 1) return;
+    if(message.content.length === prefix.length) return;
     //if(message.author.id !== MohiMoo.id) return;
 
     const objects = {

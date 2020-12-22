@@ -22,8 +22,7 @@ module.exports = {
 
 
             let embed = new MessageEmbed()
-                .setAuthor(`${message.author.username} found an issue/bug!`, message.author.displayAvatarURL())
-                .setThumbnail(message.author.displayAvatarURL())
+                .setAuthor(`Someone found an issue/bug!`)
                 .setTimestamp()
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
                 .setColor("0xF8CE14");
@@ -59,7 +58,7 @@ module.exports = {
                             time: 180000
                         }).then(async collected => {
 
-                            embed.setDescription(`🆔: *${message.author.id}*\n📎 **User Tag**: *${message.author.tag}*\n\n❗ **Issue/Bug**:\n${firstQuestion}\n⏰ **Timestamp**:\n${secondQuestion}`);
+                            embed.setDescription(`🆔: *${message.author.id}*\n\n❗ **Issue/Bug**:\n${firstQuestion}\n⏰ **Timestamp**:\n${secondQuestion}`);
 
                             if (!collected.first()) return;
                             else if (!collected.first().attachments.first()) embed.setImage("https://i.imgur.com/kEZanqR.png");
@@ -69,7 +68,6 @@ module.exports = {
 
                             let respEmbed = new MessageEmbed()
                                 .setTitle("Your issue/bug will reach out to the developer soon!")
-                                .setAuthor(message.author.tag, message.author.displayAvatarURL())
                                 .setDescription("Your submitted issue/bug has been sent to the developers...\nWe will look through your submission and try to fix it as soon as possible :D\n\nThanks for your cooperation")
                                 .setColor("0xF8CE14")
                                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
@@ -115,7 +113,7 @@ module.exports = {
                         time: 180000
                     }).then(async collected => {
 
-                        embed.setDescription(`🆔: *${message.author.id}*\n📎 **User Tag**: *${message.author.tag}*\n\n❗ **Issue/Bug**:\n${firstQuestion}\n⏰ **Timestamp**:\n${secondQuestion}`);
+                        embed.setDescription(`🆔: *${message.author.id}*\n\n❗ **Issue/Bug**:\n${firstQuestion}\n⏰ **Timestamp**:\n${secondQuestion}`);
 
                         if (!collected.first()) return;
                         else if (!collected.first().attachments.first()) embed.setImage("https://i.imgur.com/kEZanqR.png");
@@ -125,7 +123,6 @@ module.exports = {
 
                         let respEmbed = new MessageEmbed()
                             .setTitle("Your issue/bug will reach out to the developer soon!")
-                            .setAuthor(message.author.tag, message.author.displayAvatarURL())
                             .setDescription("Your submitted issue/bug has been sent to the developers...\nWe will look through your submission and try to fix it as soon as possible :D\n\nThanks for your cooperation")
                             .setColor("0xF8CE14")
                             .setFooter(bot.user.tag, bot.user.displayAvatarURL());
