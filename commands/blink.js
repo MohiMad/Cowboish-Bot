@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'blink',
+    name: ["blink"],
     description: "This command allows you to blink your friends >:D\nAll you gotta do is mentioning them in your 1st arguments...\n\n**Usage:** `$prefixblink <userMention>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Actions",

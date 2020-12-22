@@ -4,7 +4,7 @@ const got = require('got');
 const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
 
 module.exports = {
-    name: 'meme',
+    name: ["meme", "memes"],
     description: "Grabs a random meme from the subreddits (r/memes or r/dankmemes)",
     permissions: ["SEND_MESSAGES", "ATTACH_FILES"],
     category: "Fun",

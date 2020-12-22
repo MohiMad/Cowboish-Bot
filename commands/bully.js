@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { ErrorMsg, findMember } = require("../functions.js");
 
 module.exports = {
-    name: 'bully',
+    name: ["bully"],
     description: "Hahah you can bully your friends using this command, just don't take the bully too far ;w;\n\n**Usage:** `$prefixbully <user>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Actions",
@@ -11,7 +11,7 @@ module.exports = {
         let persona = await findMember(message, args.slice(1).join(" "));
 
         if (!args[1]) return ErrorMsg(bot, message, "Who do you want to bully? Mention them right after the command | example: `" + prefix + "bully @Cowboish Bot` . oh no... plz don't bully me :(");
-        if (!persona) return ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "blink <MentionHere>`");
+        if (!persona) return ErrorMsg(bot, message, "Couldn't find that member!\nPlease provide their id, tag or mention em after the command\nUsage: `" + prefix + "bully <MentionHere>`");
         if (persona.id === message.author.id) return message.channel.send(`Nah cmon, **${message.author.username}** why would you bully yourself? :C`);
 
         var facts = [

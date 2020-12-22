@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { findMember, ErrorMsg } = require("../functions.js");
 
 module.exports = {
-    name: 'ban',
+    name: ["ban"],
     description: "This command is for Admins/Moderators to use when they want to ban a specific member...\nThe member can't be the server owner or a member with a higher role than you...\n\n**Valid Usage:** `$prefixban <toBanMember> [Reason]`",
     permissions: ["SEND_MESSAGES", "BAN_MEMBERS", "EMBED_LINKS"],
     category: "Moderation",
