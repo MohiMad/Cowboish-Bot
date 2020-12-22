@@ -1,11 +1,13 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require('common-tags');
 const e = require("../emojis.json");
+const permissions = require("../permissions.js");
 
 module.exports = {
     name: ["help", "helpme", "commands"],
     description: "You're using the command right now lol\nDisplays the bot's categories and it's commands\n\n**Usage:** `$prefixhelp [category] [commandName]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
+    category: "Config",
     execute: async (message, args, bot, prefix) => {
 
         const Commands = bot.commands.array();
@@ -31,12 +33,18 @@ module.exports = {
 
                 if (command.name.includes(args[2].toLowerCase())) {
 
-                    const rg = new RegExp("$prefix", "g");
+                    const rg = new RegExp(/\$prefix/, "g");
+
+                    let betterPerms = new Array();
+
+                    for (perm of command.permissions){
+                        betterPerms.push(permissions[perm]);
+                    }
 
                     const embed = new MessageEmbed()
-                        .setTitle(`Usage of the command ${name} in the ${category} Category`)
+                        .setTitle(`Usage of the command "${name}" in the ${category} Category`)
                         .setColor("RANDOM")
-                        .setDescription(`${command.description.replace(rg, prefix)}\n\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`")
+                        .setDescription(`${command.description.replace(rg, prefix)}\n\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`" + "\n\n**Required Permissions:** " + betterPerms.join(", "))
                         .setFooter(`Information about the ${name} command`);
 
                     message.channel.send(embed)
@@ -73,7 +81,7 @@ module.exports = {
                 .setURL('https://mohimad.github.io/CowboishBot/')
                 .setThumbnail("https://i.imgur.com/owSSNF4.png")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription("To check how to use a specific command do `" + prefix + "help idv <command>`\n\nCommands: " + await listThemCommands("IdentityV"));
+                .setDescription("To check how to use a specific command do `" + prefix + "help idv <command>`\n\n**Commands:** " + await listThemCommands("IdentityV"));
 
             return message.channel.send(idvEmbed);
 
@@ -87,7 +95,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription("To check how to use a specific command do `" + prefix + "help actions <command>`\n\nCommands: " + await listThemCommands("Actions"));
+                .setDescription("To check how to use a specific command do `" + prefix + "help actions <command>`\n\n**Commands:** " + await listThemCommands("Actions"));
 
             return message.channel.send(actionEmbed);
 
@@ -100,7 +108,7 @@ module.exports = {
                 .setTitle('🔧So u need sum help huh?🔧')
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription("To check how to use a specific command do `" + prefix + "help moderation <command>`\n\nCommands: " + await listThemCommands("Moderation"))
+                .setDescription("To check how to use a specific command do `" + prefix + "help moderation <command>`\n\n**Commands:** " + await listThemCommands("Moderation"))
                 .setFooter('Remember to use my prefix `' + prefix + '` before the commands', bot.user.displayAvatarURL());
 
             return message.channel.send(modEmbed);
@@ -114,7 +122,7 @@ module.exports = {
                 .setTitle('⚙ Help is here :D ⚙', true)
                 .setColor("RANDOM")
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription("To check how to use a specific command do `" + prefix + "help config <command>`\n\nCommands: " + await listThemCommands("Config"))
+                .setDescription("To check how to use a specific command do `" + prefix + "help config <command>`\n\n**Commands:** " + await listThemCommands("Config"))
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
             return message.channel.send(genEmbed);
@@ -128,7 +136,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("🤣 Don't move i'm coming :v", true)
                 .setURL('https://mohimad.github.io/CowboishBot/')
-                .setDescription("To check how to use a specific command do `" + prefix + "help fun <command>`\n\nCommands: " + await listThemCommands("Fun"))
+                .setDescription("To check how to use a specific command do `" + prefix + "help fun <command>`\n\n**Commands:** " + await listThemCommands("Fun"))
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
             return message.channel.send(funEmbed);
@@ -141,7 +149,7 @@ module.exports = {
             const logicpathEmbed = new MessageEmbed()
                 .setTitle("Identity V logicpath commands!")
                 .setColor("RANDOM")
-                .setDescription("To check how to use a specific command do `" + prefix + "help logicpath <command>`\n\nCommands: " + await listThemCommands("Logicpath"))
+                .setDescription("To check how to use a specific command do `" + prefix + "help logicpath <command>`\n\n**Commands:** " + await listThemCommands("Logicpath"))
                 .setFooter("This category is still W.I.P so feel free to suggest anything by doing " + prefix + "suggest :)");
 
             return message.channel.send(logicpathEmbed);
@@ -154,7 +162,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("Image manipulation commands!")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription("To check how to use a specific command do `" + prefix + "help image <command>`\n\nCommands: " + await listThemCommands("Image"))
+                .setDescription("To check how to use a specific command do `" + prefix + "help image <command>`\n\n**Commands:** " + await listThemCommands("Image"))
 
             return message.channel.send(imageEmbed);
         }
@@ -167,7 +175,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTitle("Cowboish Utility commands :D")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-                .setDescription("To check how to use a specific command do `" + prefix + "help utility <command>`\n\nCommands: " + await listThemCommands("Utility"))
+                .setDescription("To check how to use a specific command do `" + prefix + "help utility <command>`\n\n**Commands:** " + await listThemCommands("Utility"))
 
             return message.channel.send(ultity_Embed);
 
