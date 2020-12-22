@@ -31,10 +31,12 @@ module.exports = {
 
                 if (command.name.includes(args[2].toLowerCase())) {
 
+                    const rg = new RegExp("$prefix", "g");
+
                     const embed = new MessageEmbed()
                         .setTitle(`Usage of the command ${name} in the ${category} Category`)
                         .setColor("RANDOM")
-                        .setDescription(`${command.description}\n\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`")
+                        .setDescription(`${command.description.replace(rg, prefix)}\n\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`")
                         .setFooter(`Information about the ${name} command`);
 
                     message.channel.send(embed)
