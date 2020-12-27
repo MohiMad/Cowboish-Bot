@@ -12,6 +12,7 @@ module.exports = {
     execute: async (bot) => {
 
         let mainGuild = bot.guilds.cache.get("636241255994490900");
+        await mainGuild.members.cache.fetch().catch(e => console.log("Giveaway fetching error:", e));
 
         let giveawayRole = mainGuild.roles.cache.get("721657451916820543");
 

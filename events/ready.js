@@ -15,7 +15,9 @@ module.exports = async (bot) => {
 
     const activities_list = [
         `and yoinking around >:v`,
-        //`Under maintenance... please stand by ;)`
+        `Happy Birthday Kevin 🤠`,
+        `If it's Kevin's Bday then it's my Birthday too`,
+        /*`Under maintenance... please stand by ;)`
         `>invite | >help`,
         `Identity V in ${botGuildCount} servers 💕`,
         "Welcome to Identit | >invite",
@@ -23,6 +25,7 @@ module.exports = async (bot) => {
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
         `Yeehaw! >:D`
+        */
 
     ];
 
