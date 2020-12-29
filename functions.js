@@ -276,6 +276,9 @@ module.exports = {
 
 	},
 	addCooldown: async (message, cooldownTime, command) => {
+		const cooldownChecker = Cooldown.findOne({ userID: message.author.id, command: command });
+
+		if (cooldownChecker) return;
 
 		const newCooldown = new Cooldown({
 			command: command,
@@ -285,8 +288,6 @@ module.exports = {
 		});
 
 		await newCooldown.save().catch(err => console.log(err));
-
-
 	},
 	findCooldown: async (message, command) => {
 		const cooldownChecker = Cooldown.findOne({ userID: message.author.id, command: command });
@@ -303,7 +304,7 @@ module.exports = {
 
 		let des = Description.replace("REMAINING", Remaining);
 
-		let randomNumber = Math.floor(Math.random() * 3);
+		let randomNumber = Math.round(Math.random() * 2);
 
 		if (randomNumber === 1) {
 			if (message.guild.id !== "636241255994490900") {
@@ -311,8 +312,6 @@ module.exports = {
 			}
 		} else if (randomNumber === 2) {
 			des = des + `\n\nWhile you here, you may want to follow **[Mohi on Twitter](https://twitter.com/MohiHaw)**${twitter} to stay updated ^-^`
-		} else {
-			des = des + `\n\n**Hello Cowboish user!**\nJust know that Mohi loves youuuuuuu ${feaster}${feaster}`
 		}
 
 		const coolEmbed = new MessageEmbed()

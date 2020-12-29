@@ -15,14 +15,15 @@ module.exports = async (bot) => {
 
     const activities_list = [
         `and yoinking around >:v`,
+        `Happy Birthday IAlien... ah I'm late`
         //`Under maintenance... please stand by ;)`
-        `>invite | >help`,
+        /*`>invite | >help`,
         `Identity V in ${botGuildCount} servers 💕`,
         "Welcome to Identit | >invite",
         `milestone ${botGuildCount}/2000`,
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
-        `Yeehaw! >:D`
+        `Yeehaw! >:D`*/
 
 
     ];
