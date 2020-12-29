@@ -185,7 +185,7 @@ module.exports = {
             if (!searchForARole) return message.channel.send(errEmbed.setDescription("Couldn't find any roles in your message above!\n\nPlease make sure to ping that role or provide it's name/id after the command...\n**Example: **`" + prefix + "setup autorole <pingRoleHere>`"));
 
             if (guild.autoroles.includes(searchForARole.id)) {
-                guild.autoroles = guild.autoroles.splice(guild.autoroles.findIndex(x => x === searchForARole.id));
+                guild.autoroles = guild.autoroles.splice(guild.autoroles.indexOf(searchForARole.id));
 
                 guild.save().catch(e => console.log(e));
                 return message.reply(`Successfully removed the role **${searchForARole.name}**!`);

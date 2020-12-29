@@ -1,15 +1,11 @@
 const ms = require("ms");
-
 const { ErrorMsg, findMember, findRole } = require("../functions");
-
 const { MessageEmbed } = require("discord.js");
-
 const Mutes = require("../models/mutes.js");
 
 module.exports = {
   name: ["mute", "shutup"],
   description: "Mutes the mentioned member for a specified amount of time...\n\n**Usage:** `$prefixmute <user> <time> [reason]`\n\nThe `<time>` tag should be provided using the following format:\n**10 Seconds**: `10s`\n**10 Minutes**: `10m`\n**10 Hours**: `10h`\n**10 Days**: `10d`",
-  admins: ["478527909250990090"],
   permissions: ["SEND_MESSAGES", "MANAGE_CHANNELS", "MANAGE_ROLES", "EMBED_LINKS"],
   category: "Moderation",
   execute: async (message, args, bot, prefix) => {
@@ -26,8 +22,10 @@ module.exports = {
 
     const reason = args.slice(3).join(" ");
 
-    message.guild.channels.cache.forEach((channel) => {
-      channel.createOverwrite(muteRole, {
+    await message.guild.channels.cache.forEach(async (channel) => {
+        if(!channel.viewable) return;
+
+      await channel.createOverwrite(muteRole, {
         SEND_MESSAGES: false,
         SPEAK: false,
       });
@@ -39,7 +37,7 @@ module.exports = {
 
     if (isNaN(muteTime)) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason>`");
 
-    if (muteTime > 2592000000000) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> <reason>`");
+    if (muteTime > 2592000000000) return ErrorMsg(bot, message, "Please provide a mute time under 30 days!\nCorrect usage: `" + prefix + "mute <member> <time(s/m/d)> [reason]`");
 
     const mute = new Mutes({
       guildID: message.guild.id,

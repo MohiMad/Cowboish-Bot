@@ -29,7 +29,7 @@ module.exports = {
             },
             {
                 a: "https://i.imgur.com/FE5jrT7.png",
-                b: "Flashlight",
+                b: "a Flashlight",
                 c: 11
 
             },

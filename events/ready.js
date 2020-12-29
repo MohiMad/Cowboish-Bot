@@ -23,7 +23,7 @@ module.exports = async (bot) => {
         `Never forget Bonbon's (铁皮人) skin`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
         `Yeehaw! >:D`
-        
+
 
     ];
 
@@ -47,57 +47,58 @@ module.exports = async (bot) => {
             if (check) {
                 if (!cooldownCheck) return;
 
-                await cooldown.delete({}, err => {
-                    if (err) console.log(err);
-                });
+                await cooldown.delete({}).catch(e => console.log(e));
             }
 
         }
 
-        /*
         const mutes = await Mutes.find({});
 
         for (const mute of mutes) {
-
             if (mute.created + mute.muteTime <= Date.now()) {
 
-                await Mutes.deleteOne({ userID: member.user.id, guildID: guild.id }, err => {
-                    if (err) console.log(err);
-                });
+                async function deleteDoc() {
+                    await Mutes.deleteOne(mute).catch(e => console.log(e));
+                }
 
-                const guild = bot.guilds.cache.get(mute.guildID);
+                const guild = await bot.guilds.cache.get(mute.guildID);
 
-                if (!guild) return;
+                if (!guild) return deleteDoc();
 
-                const member = guild.members.cache.get(mute.userID);
+                const member = await guild.members.cache.get(mute.userID);
 
-                if (!member) return;
-                let muteRole = guild.roles.cache.find((x) => x.name === "muted");
-                if (!muteRole) muteRole = guild.roles.create({ name: "muted", color: "#27272b", permissions: [], reason: "Couldn't find a muted role!" });
+                if (!member) return deleteDoc();
 
-                if (!member.roles.cache.has(muteRole.id)) return;
+                let muteRole = await guild.roles.cache.find((x) => x.name === "muted");
+
+                if (!muteRole) muteRole = await guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
+
+                if (!member.roles.cache.has(muteRole.id)) return deleteDoc();
 
                 member.roles.remove(muteRole);
-                const logChannel = guild.channels.cache.get(mute.channelID);
-                if (!logChannel) return;
-                logChannel.send(`Unmuted ${member.user}!`);
+
+                const logChannel = await guild.channels.cache.get(mute.channelID);
+
+                if (!logChannel) return deleteDoc();
+
+                logChannel.send(`${member.user} has been unmuted!`);
+                deleteDoc();
 
             }
-        }*/
-        
+        }
     }, 3000);
 
 
     const dbl = new DBL(config.dbl_token, bot);
-    
+
     dbl.postStats(botGuildCount).catch(e => console.log(e));
-    
-    
+
+
     const Boats = new BOATS(config.boatsToken);
-    
+
     Boats.postStats(botGuildCount, "632291800585076761")
         .catch((err) => console.log(err));
-    
+
     /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
     
     Glenn.updateStats(botGuildCount).catch(e => console.log(e));
@@ -116,6 +117,6 @@ module.exports = async (bot) => {
     
     let botUPDATE = await updateBotList();
     */
-    
+
 
 };

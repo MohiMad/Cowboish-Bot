@@ -82,7 +82,7 @@ module.exports = {
             }
             else {
                 setTimeout(() => { spamStopper.delete(message.author); }, 1000);
-                return message.channel.send(`**${message.author.username}**, Wrooong! You lost the minigame!\nThe correct answer was: **${charItem.Answer[0]}**`);
+                return message.channel.send(`**${message.author.username}**, Wrooong! You lost the minigame!`);
             }
 
         }).catch(e => {
