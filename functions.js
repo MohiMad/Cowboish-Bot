@@ -276,10 +276,6 @@ module.exports = {
 
 	},
 	addCooldown: async (message, cooldownTime, command) => {
-		const cooldownChecker = Cooldown.findOne({ userID: message.author.id, command: command });
-
-		if (cooldownChecker) return;
-
 		const newCooldown = new Cooldown({
 			command: command,
 			userID: message.author.id,
@@ -290,7 +286,7 @@ module.exports = {
 		await newCooldown.save().catch(err => console.log(err));
 	},
 	findCooldown: async (message, command) => {
-		const cooldownChecker = Cooldown.findOne({ userID: message.author.id, command: command });
+		const cooldownChecker = await Cooldown.findOne({ userID: message.author.id, command: command });
 
 		return cooldownChecker;
 	},
