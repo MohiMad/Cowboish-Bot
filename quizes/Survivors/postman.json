@@ -36,6 +36,13 @@
 		"Answer": ["keyboard"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/EBnYQPw.png"
-    }
+	},
+	{
+		"Question": "**Which of the following colors does Victor's hair **NOT** turn into outgoing from his Skins?\nBlack, White, Purple, or Pink? (One option only)",
+		"Answer": ["purple"],
+		"Difficulty": "Medium",
+		"Attachment": "https://pbs.twimg.com/media/EpuZYQJUUAA1SX2?format=jpg&name=large",
+		"Artist": "@potatobxbix_ on Twitter"
+	}
 	
 ]

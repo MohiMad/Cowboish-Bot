@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require('common-tags');
-const { formatDate } = require("../functions.js");
+const moment = require("moment");
 
 module.exports = {
 	name: ["serverinfo", "server-info", "srvrinfo"],
@@ -10,8 +10,9 @@ module.exports = {
 	execute(message) {
 
 
-		const created = formatDate(message.guild.createdAt)
-		const joined = formatDate(message.author.joinedAt);
+		const created =  moment.utc(message.guild.createdAt).format("dddd, MMMM Do YYYY");
+
+		const joined = moment.utc(message.member.joinedAt).format("dddd, MMMM Do YYYY");
 
 		const embed = new MessageEmbed()
 			.setColor("RANDOM")

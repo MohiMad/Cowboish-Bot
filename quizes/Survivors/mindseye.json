@@ -43,5 +43,13 @@
 		"Answer": ["record player"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/kPjnDXa.png"
+	},
+	{
+
+		"Question": "**Question:**\nWhat is the maximum decoding speed for Helena in Violent Struggle?",
+		"Answer": ["145%", "145", "145 %", "145% faster"],
+		"Difficulty": "VERY HARD",
+		"Attachment": "https://pbs.twimg.com/media/EpuZYQKVEAAM18v?format=jpg&name=large",
+		"Artist": "@potatobxbix_ on Twitter"
 	}
 ]
