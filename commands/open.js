@@ -93,9 +93,9 @@ module.exports = {
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
                             LP[EssenceONLY[randomItem].Tier] = LP[EssenceONLY[randomItem].Tier] + 1;
 
-                            if(EssenceONLY[randomItem].Item === "s14-3-1") {
-                            LP.Batter = true;
-                            embed.setDescription("Yey you got Ganji Caputa! Do `" + prefix + "quick batter` to play as him UwU");
+                            if (EssenceONLY[randomItem].Item === "s14-3-1") {
+                                LP.Batter = true;
+                                embed.setDescription("Yey you got Ganji Caputa! Do `" + prefix + "quick batter` to play as him UwU");
                             }
 
                             if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49", "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50", "s13-2-46", "s13-2-47", "s13-2-48", "s13-2-49", "s13-2-49", "s14-3-34", "s14-3-35", "s14-3-36"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
@@ -154,13 +154,18 @@ module.exports = {
                             }
 
                             if (LP.Opened.includes(EssenceONLY[rndom].Item)) {
+                                if (EssenceONLY[randomItem].Item === "s14-3-1") {
+                                    if (LP.Batter !== true) LP.Batter = true;
+                                }
+
                                 fragments = fragments + (EssenceONLY[rndom].FragAmount);
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) **${EssenceONLY[rndom].Name}**`;
 
                             } else {
+                                if (EssenceONLY[randomItem].Item === "s14-3-1") LP.Batter = true;
+
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
                                 LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
-                                if(EssenceONLY[randomItem].Item === "s14-3-1") LP.Batter = true;
 
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) ${EssenceONLY[rndom].Name}`;
                             }

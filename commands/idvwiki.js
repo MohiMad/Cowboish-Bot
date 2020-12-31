@@ -724,7 +724,7 @@ module.exports = {
             return message.channel.send(painter);
 
         }else if (["batter", "thebatter", "ganji"].includes(searchForString)) {
-            return message.channel.send(painter);
+            return message.channel.send(batter);
 
         } else if (["hunter", "hunters", "hunta", "killers", "killer", "chaser", "chasers"].includes(searchForString)) {
             if (spamStopper.has(message.author)) return message.reply(`**Please react with ❌ on the previous embed..**`);

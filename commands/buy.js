@@ -77,6 +77,7 @@ module.exports = {
             if (charName === "Prisoner") LP.Survivors.AnotherSurv = true;
             if (charName === "Entomologist") LP.Entomologist = true;
             if (charName === "Painter") LP.Painter = true;
+            if (charName === "Batter") LP.Batter = true;
 
             if (charName === "Wu chang") LP.Hunters.WuChang = true;
             if (charName === "Axeboy") LP.Hunters.AxeBoi = true;
