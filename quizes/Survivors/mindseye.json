@@ -46,8 +46,8 @@
 	},
 	{
 
-		"Question": "**Question:**\nWhat is the maximum decoding speed for Helena in Violent Struggle?",
-		"Answer": ["145%", "145", "145 %", "145% faster"],
+		"Question": "**Question:**\nWhat is the maximum/fastest decoding speed for Helena in Violent Struggle? **(Answer in percentage)**",
+		"Answer": ["160%", "160", "160 %", "160% faster"],
 		"Difficulty": "VERY HARD",
 		"Attachment": "https://pbs.twimg.com/media/EpuZYQKVEAAM18v?format=jpg&name=large",
 		"Artist": "@potatobxbix_ on Twitter"

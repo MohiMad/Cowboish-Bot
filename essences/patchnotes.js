@@ -1,332 +1,286 @@
+const { stripIndents } = require('common-tags');
+
 module.exports = {
-    PatchDate: "Dec.24th, 2020",
-    patchImage: "https://i.imgur.com/nN363Xr.jpg",
-    patchDateFooter: "Patch 12.24.20 - December 24, 2020",
+    PatchDate: "Dec.31th, 2020",
+    patchImage: "https://i.imgur.com/FuZtLio.png",
+    patchDateFooter: "Patch 12.31.20 - December 31, 2020",
 
     patchNotes:
-        `Events
+        stripIndents`
+    Dear player:
+Welcome to Identity V!
+Identity V will undergo maintenance at 08:00 on December 31, 2020 (UTC+8) and will take
 
-"Christmas Carol" Event has began
+approximately 240 minutes to complete. During this time, players will be unable to log in to
+servers. We ask for your understanding and patience during maintenance.
 
-You stumble upon a violinist blocking your path on Christmas Eve. He asks to play you a song in
-exchange for some drinking money. Before the music reaches a crescendo, the performance
-attracted even more spectators who are going through a myriad of emotions as they're trying to
-seek comfort on Christmas Eve.
+Maintenance content for this week:
+Events
 
-Part I: Christmas Carol
+~ Character Day: Violetta's (Soul Weaver) Character Day (January 2) is here and the annual
+Character Day Event has begun. Participate in the event and complete quests to obtain unique
 
-1, Complete specific quests to obtain Christmas Coins, which can be used to make song requests
-with the Violinist
+a Character Day rewards!
 
-2. Players may switch between "Play as you wish" and "Play a specific song” when requesting a
-song from a list of 4 songs.
+For Violetta’s second Character Day in Identity V, we've prepared various new rewards to
+celebrate this milestone! Players who have obtained the portrait from her first Character Day
+event will receive a second-year Character Day Portrait Frame after completing the event quests!
+Those who haven't obtained the reward from Violetta's first Character Day event will receive her
+first-year Character Day reward.
 
-3. Play as you wish: Spend 1 Christmas Coin per song to attract different characters who are
-passing by.
+Event Period: January 2, 00:00:00 - January 2, 23:59:59 (Server Time)
 
-4, Play a specific song: Spend 1 Christmas Coin to play a song for a character you've already met
-to increase your Friendship with them.
+- Character Day: Patricia's (Enchantress) birthday (January 3) is here and the annual birthday
+party has officially begun. Participate in the event and complete quests to obtain unique Character rewards!
 
-5. Rewards:
-
-5.1 Obtain a Christmas Costume Trial Card, an event portrait, a portrait frame, and other
-amazing rewards for the first performance each day.
-
-5.2 Players may choose to obtain special rewards from one of the characters with Max
-Friendship: Emote - Resonance (the emote will also be available in the shop for a limited time).
-
-Availability: After the update on December 24, 2020, to January 6, 2021 (Server Time)
-(The event will be available on NA/EU Servers starting December 24, 2020, 07:30:00)
-
-Part 2: Block Party
-
-1. Complete specific quests to obtain Christmas Greeting Cards, which can be used to exchange
-rewards in the time-limited Event Shop.
-
-2. Gardener - Xmas Ensemble, Hell Ember - Santa, and many other rewards are available for
-exchange (choose | of 2 costumes).
-
-Availability: January 1, 2021, 00:00:00 - January 6, 2021 (Server Time)
-Friends Interactive Chat is now available
-
-1, Apart from interacting with specific characters who are passing by, players can also invite/
-visit in-game friends' Event Rooms.
-
-2. Players in the same Event Room can chat on the same screen and send event emojis to each
-other.
-
-3. Players can also leave messages to friends on the message board.
-
-4. Players can increase the popularity of their friends’ rooms when they visit them for the first
-
-time each day.
-
-(The event will be available on NA/EU Servers starting December 24, 2020, 07:30:00)
-
-Server-wide Sharing Event
-
-1. Players who share about the game during the event will contribute to the server-wide sharing
-count.
-
-2. Players will obtain Memory Spheres and Discount Cards as rewards when the count reaches a
-certain number.
-
-Availability: After the update on December 24, 2020 to January 6, 2021 (Server Time)
-
-(The event will be available on NA/EU Servers starting December 24, 2020, 07:30:00)
-
-- [Map]: Added the "Dawn Atmosphere" to Leo's Memory. Players can try out this map for a
-limited time in Quick Match and Custom Mode. Numerous Christmas hats "magically"
-appeared in Leo's Memory. Rumor has it that they were left behind by someone in an old leaky
-car. If you happen to get your hands on one, treat it as Leo's Christmas blessing to you.
-
-~ Character Day: Kevin's (Cowboy) birthday (December 27) is here and the annual birthday party
-has officially begun. Participate in the event and complete quests to obtain unique Character
-rewards! For Kevin's second birthday in Identity V, we've prepared various new rewards to
-celebrate this milestone! Players who have obtained the portrait from his first birthday event will
-receive a second-year Birthday Portrait Frame after completing the event quests! Those who
-haven't obtained the reward from Kevin's first birthday event will receive his first-year birthday
+For Patricia's second birthday in Identity V, we've prepared various new rewards to celebrate this
+milestone! Players who have obtained the portrait from her first birthday event will receive a
+second-year Birthday Portrait Frame after completing the event quests! Those who haven't
+obtained the reward from Patricia's first birthday event will receive her first-year birthday
 reward.
 
-Event Period: December 27, 00:00:00 - December 27, 23:59:59 (Server Time)
+Event Period: January 3, 00:00:00 - January 3, 23:59:59 (Server Time)
 
-Character Day: Victor's (Postman) birthday (December 25) is here and the annual birthday
-party has officially begun. Participate in the event and complete quests to obtain unique
-Character rewards!
+Season Essence
 
-Event Period: December 25, 00:00:00 - December 25, 23:59:59 (Server Time)
+- Season 14 Essence 2 becomes available this week. New Costume updates include the Batter's S :
+Costume - Lava Cake, the Grave Keeper's A Costume - Cheese, and Smiley Face's A Costume ’
+Oven. Obtain S Costume "Lava Cake" to receive the all-new Survivor, Batter, for free. This ;
+Character cannot be used in Rank Matches, Duo Hunters, Blackjack Mode, and Tarot Mode
+currently.
 
-Shop
+  
+New Survivor
+Name: Ganji Gupta
 
-- Emotes: Emote - Resonance for the Gardener, Axe Boy, the Postman, Soul Weaver, the Cowboy,
-the Enchantress, the Entomologist, and the Violinist is now available in the shop. Players can
-also purchase all 8 of them as a package with 40% off. The emotes and package are only available
+Career: Batter
 
-for a limited time.
+Introduction: No one, no matter how affable one is, can tolerate repeated deception. Even after
+all this time, Ganji struggles to find a sense of belonging.
 
-Availability: December 24, 2020 (after the update) - January 6, 2021 (Server Time)
+__**External Trait:**__
 
-(NA/EU Servers: Available from December 24, 2020, 07:30:00)
+   
+**Cricket Bat:**
+
+The Batter carries a Cricket Bat with him. Tap and hold to hit a cricket ball in a specified
+direction. The longer you hold, the greater the charge, and the more velocity the cricket ball has.
+
+**Cricket Hit:**
+The cricket ball will gradually lose velocity as it travels farther. A Hunter hit by the cricket ball
+
+will be knocked back. The more velocity the cricket ball has, the farther the Hunter will be
+knocked back,
+
+The Batter can pick up cricket balls on the ground to increase the usage of [Cricket Bat].
+
+**Rampage:**
+
+The Batter focuses his energy to unleash a 20 second Rampage. He must wait 40 seconds after
+each Rampage before activating the next one.
+
+
+If acricket ball hits a Hunter when the Batter is on a rampage, the hit will stun the Hunter
+upon hitting an obstacle. The farther the knockback distance, the longer the stun duration.
+
+If acricket ball hits an obstacle when the Batter is on a rampage, the cricket ball will shatter
+and becomes irretrievable,
+
+Athletic: Athletically gifted. Obstacle vaulting speed is increased by **20%**, and pallet pulling
+speed is increased by **20%**.
+
+Altruism: The Batter refuses to stand back when others are in danger. When a Survivor is
+attacked within 18 meters of him, as long as the Batter is not being pursued, his movement speed
+will increase by 50% for 10 seconds, He must wait 60 seconds before the speed boost can be
+triggered again.
+
+All Thumbs: Clumsy and terrible with machines. Decoding speed is decreased by 20%.
+[Shop}
+
+~ (Spyglass Package] is now available for purchase for a limited time. This package is now on sale
+at a price of 288 echoes and contains 100 spy glasses, 188 Clues, and 188 Fragments.
+
+Availability: December 24, 2020 (After maintenance) - January 6, 2021, 23:59:59
+
+Character Story
+
+- Added 4 new character story subplots for the Magician. Players must complete the Basic
+Objective in the last stage of Magician's Deduction Quest in order to enter the subplots.
+Complete the Magician's subplots to obtain corresponding rewards. Complete all of them to
+receive the clearance reward: Magician's Costume - Dark Side.
 
 Synesthesia Mode
 
-- When a Survivor is transported back to the Manor on a Rocket Chair in Quick Matches and
-Rank Matches, they won't enter the results page. Instead, they will enter Synesthesia Mode,
+~ Survivors in Synesthesia Mode can now see each other.
 
-where they will stay in the game and observe as a detective in a synesthesia state.
+Players in Synesthesia Mode can now detect the locations of their teammates in battle across the map.
 
-~ Players may choose to exit Synesthesia Mode and enter regular Spectate Mode from the results
-
-~ Players may choose any detective costumes through Self Examination (mirror) in the Room for
-
-the Synesthesia Mode. 
-
-~ Detectives can vault over windows/pallets, move with a speed boost, and more.
-
-- Other Survivors and Hunters can't see the detective, but the detective can see all of the
-Survivors. However, the detective can only see a Hunter if the Hunter is within a 25-meter range
-of any Survivor.
-
-- Players can deactivate Synesthesia Mode in Settings.
 Battle Adjustments
-~ Added scores obtained by the "Undead" when knocking down or eliminating a Survivor.
 
-- While the Embalmer is considering whether to use Rebirth and while Rebirth is taking effect
-ona knocked-down Survivor, the target Survivor's elimination progress will not increase.
+~ Improved Rocket Chairs' remaining collision time after they're sent flying so that it fits the
+visual performance better.
 
-on a knocked-down Survivor, the target Survivor's elimination progress will not increase.
+Sculptor Adjustments:
 
-- Modified the description of the Survivor Talent, Self Deception, from "decrease shock action by
-half" to "reduce the period of time during which they can't decode by half.”
+Fixed an issue where a Survivor who was dropping a pallet wouldn't be injured by Sculpture
+Crush coming from the side.
 
-- Modified the description of the "Prisoner's" external trait, Obsession, from "rigid time is
-decreased by 30%" to "reduce the period of time during which he can't decode by 30%."
+Tarot:
 
-~ Improved the landing location judgment of the Hunter active trait, Teleport, so that there will
-be an additional judgment as to whether there is any Survivor at the default landing location to
-avoid having the landing location adjusted to an irregular location.
+- The Cowboy will earn Stars for hitting an enemy Survivor with his lasso. He will earn even
 
-- When "the Ripper" is stunned by the Flashlight, the cooldown of "Hidden in Mist” will no
-longer increase. 
-
-Players can now set individual operation plans for Duo Hunters, Blackjack Mode, and Tarot
-Mode in Custom Battle Controls.
+more Stars when hitting the enemy King.
 
 Experience Optimizations
+- Replaced the image applied to Leo's Memory - Dawn in Custom Mode.
 
-- Adjusted the saturation of the Geisha’s Costume - Lady Thirteen.
+Matching will only begin after teammates have entered the Detective Lobby or Room.
+- Added Rebirth effects to the Embalmer's Accessory "Remains of Yellow Roses," when tied to a
+Rocket Chair, knocked down, and performing Cocoon Death.
+- Adjusted the halo effects of the Priestess' Costume "Golden Future" and added a switch to hide
+the halo effect during a match. Players can now hide the Halo effect when wearing the costume.
 
-- Improved the camera performance when the "Undead" hit an obstacle with Jump Chop.
+~ Character Audio: Added audio recordings for the Explorer, the Prospector, the Thief, the
+Magician, the Enchantress, the Gardener, the Mechanic, the Priestess, and the Perfumer.
 
-~ Added a Hieroglyphic Graveyard effect switch for the Sculptor's accessory "Endgame Check."
-Players can now turn on the switch in Special Effects Settings to revert the Hieroglyphic
-Graveyard's effect to default.
+- When sending a Friend request, players will now receive a notification if they have been added
+to the other player's Block List.
 
-~ Password Pages will now be displayed in the Spectate interface.
+- After rejecting a Friend request, if the player continues to send multiple requests, there is now
+an option to block this player's requests for a period of time.
 
-- Added an "Auto Play” button to the Music Player in the Room. Players can tap this button to
-resume playing the last music played before they left the Room (in some circumstances, the music
-will be played from the start).
+~ Players can now see the progress bar as a spectator when the character they are observing is
+searching for a box.
 
-- In the Spectate interface, players will now see the progress bar of Seer's Rage accumulating,
-knocked-down characters healing themselves and being healed by others, Survivors dispelling the
-Follower, the Priestess creating the Ultra-long Passage, the Grave Keeper's digging duration, and
-the Barmaid's mixing. At the same time, spectators will also see the direction for the Explorer's
-treasure location, hints of Hunter's direction, and the digging progress of Password Pages.
+~ Players can now see the progress bar as a spectator when the character they are observing is
 
-Added a "Recently Obtained” function in the item display interface. Players can tap it to filter
-"Recently Obtained" items (i.e. items with a red dot).
+dismantling Rocket Chairs, Peaceful Pines, Puppets, and the Feaster's Tentacles.
+
+~ Players can now see the progress bar as a spectator when the character they are observing is
+healing themselves with an item.
+
 
 Bug Fixes
+- Fixed some errors in the Christmas Carol event text.
 
-- Fixed an issue where the screen would freeze when Bloody Queen released the Aqua Mirror
+- Fixed an issue where the Violinist's Costume "Inferno Sonata" was displayed abnormally under
+the light in certain locations in the Room.
+
+- Fixed an issue where the hair in the Coordinator's Costume "Kyoko Kirigiri” was stuck together.
+
+- Fixed an issue where the material of the Priestess' Costume "Golden Future" was displayed
+abnormally in High Graphics mode on iOS devices.
+
+- Fixed an issue where the shadows of players’ models in the Matching Room were abnormally
+displayed on some devices.
+
+Fixed an issue where, when a player was matched with other players and tapped to enter the
+interface to claim rewards, such interface couldn't be closed.
+
+- Fixed an issue in the Beginner Tutorial where the buttons in "Read Diary" were displayed in
+advance on some interfaces.
+
+- Fixed an issue in the Promotion Matches' Deduction Review where changes in Rank Points
+were displayed incorrectly.
+
+- Fixed an issue where a player's name wasn't displayed in the Matching Room when the player
+was teaming up.
+
+- Fixed an issue where, when two players teamed up in Duo Hunters Mode, the matching time
+would not be reset after they switched between Survivor and Hunter.
+
+- Backswing. Hunters can no longer use Blink in mid-air,
+
+- Fixed an issue in Duo Hunters Mode where a Survivor's status would be abnormal if they were
+knocked down right after they stopped interacting with the phone booth.
+
+- Fixed an issue in Tarot Mode where the captain/team member's matching time would continue
+to accumulate after they had changed factions when teaming up.
+
+  
+- Fixed an issue on the Five-player Rank Match Results Page where the hierarchical display of
+the Spectate options was erroneous.
+
+- Fixed an issue where there's a chance that the Dream Witch's Follower would teleport when
+following players.
+
+- Fixed an issue where Hunters could use Blink in mid-air and perform a normal attack without
+
+~ Fixed an issue where Geisha's Dash Hit wouldn't be interrupted even when the client was
+
+frozen.
+
+- Fixed an issue where all of the Hunter's charging abilities (e.g., Geisha - Dancing in Misery)
+couldn't be used right when they were fully charged.
+
+- Fixed an issue where the Evil Reptilian could enter the Basement after leaping over a window
+on the second floor and used Crash while falling.
+
+~ Fixed an issue where the Grave Keeper could enter the Basement if he dug into the floor below
+while using Underground Sneak on the second floor.
+
+- Fixed an issue where the game would freeze when a Survivor was knocked down and eliminated
+by the Undead.
+
+- Fixed an issue where the Undead could shatter a pallet that was being pulled down.
+
+- Fixed an issue where players could enter both Tarot matching and Tutorial at the same time
 under certain circumstances.
 
-- Fixed an issue where the "Undead" could hit Survivors through low obstacles with Kinetic Dash
-Hit when he's in Energy Surge state.
+- Fixed an issue where the moving direction of Dream Witch's Follower wouldn't be affected by a
+struggling Survivor.
 
-Fixed an issue where the old description of the Geisha's ability "Dash Hit" was still being used.
-~ Fixed some typos in the Violinist's deduction quests.
+Fixed an issue in Duo Hunters Mode where, when the Prospector's Costume - Hajime Hinata
+used the Travel Journals, the Magnet would cause it to shrink.
 
-- Fixed an issue in the Moon River Park where the Hunter could hit Survivors through pallets in
-certain pallet areas.
+~ Fixed an issue where the Magnet would be released immediately when the Prospector held the
+ability button while attracting/repulsing (with progress bar visible).
 
-- Fixed an issue in the PC version where the character selection interface would appear twice
-when tapping the Seer's ability too quickly.
 
-- Fixed an issue in the PC version where Axe Boy's Dispel Souls ability couldn't be used under
-extreme circumstances,
+- Fixed an issue where the Survivor could end up on the other side of the pallet after they had
+dismantled the Tentacle when a Feaster's Tentacle was placed close to a pallet and a Survivor was
+facing the pallet when dismantling the Tentacle,
 
-- Fixed an issue where, if Borrowed Time was triggered while the elimination progress of a
-Survivor who was knocked down by the "Undead" was increasing, the actual elimination progress
-would not increase.
+- Fixed an issue where there's a chance that the Axe Boy's ability would become ineffective and
+enter cooldown when the ability was used at the moment a Resentful Soul disappeared.
 
-~ Fixed an issue where closing the client would display anomalies after the Perfumer used
+~ Fixed an issue where players may get stuck in the scene objects while passing through the
+Priestess’ Straight Passage in Leo's Memory - Dawn.
 
-Euphoria.
-- Fixed an issue where irregular landing spots would appear when the Gamekeeper's Chain was hooked onto a wall
+Fixed an issue where the buttons in Leo's Memory - Dawn would overlap with one another after
+customization.
 
-- Fixed an issue where some characters would get stuck at the landing location after using
-abilities or jumping.
+- Fixed an issue where a box in Leo's Memory - Dawn was erroneously placed within a scene
+object.
 
-- Fixed an issue in Tarot Mode where the number of delayed knocked-downs caused by the
-Mercenary's Steel Will trait wasn't included in the records.
+- Crossover “Danganronpa” is coming to an end on January 6, 2021, 23:59:59 (UTC+8). The
+Crossover chest will no longer be available for purchase after the event is over, the unopened
+crossover chests will be opened automatically, and the crossover cheats on logic path will be
+replaced with Season 14 essence 2.
 
-- Fixed an issue where some wounded characters could interrupt the abilities' launching actions
-by tapping the joystick.
+Update Notice [January 7, 2021)
 
-- Fixed an issue in the PC version's Compatible Mode where the color of the Room furniture
-"Dusty Bookcase" was irregular.
-
-Fixed an issue where the Cat would sometimes jump out from behind the "Herald" when she
-used Swoop.
-
-- Fixed an issue in the PC version where players could re-enter Tutorial.
-
-- Fixed an issue where the Geisha could send a Swallowtail Butterfly into locked basements when
-holding the Dancing in Misery ability button.
-
-- Fixed an issue where, if the Priestess was banned from using her abilities by the "Herald's" Cat
-when she saw a passage's pre-target effect, such effect would last until the ban was over.
-
-- Fixed an issue in the Spectate Mode where the spectators would see that all of the Survivors
-were banned from using their abilities when only one of the Survivors was banned by the
-"Herald's" Cat.
-
-Fixed an issue where the butterfly's effects from the Geisha's accessory "Falling Butterfly”
-wouldn't disappear after a player lost connection and reconnected.
-
-- Fixed an issue where the chair from the Barmaid's costume "True Proof” was missing in the
-Display Interface.
-
-- Fixed an issue where Hunters might get stuck while tracking the Drawing Board under extreme
-circumstances and couldn't move until the maximum duration was reached.
-
-Fixed an issue where the Hunter's moving direction when putting a Survivor on a Rocket Chair
-would sometimes be inconsistent with the joystick.
-
-- Fixed an issue in Tarot Mode where the Hunter would get stuck in mid-air when the Raven and
-the Blink ability were used at the same time,
-
-- Fixed an issue in Spectate Mode where the Priestess's item bar would remain highlighted after
-she was eliminated.
-
-- Fixed an issue where Hunters might not be able to hit the residual image of Survivors who had
-gone through Priestess's Ultra-Long Passage.
-
-- Fixed an issue where Smiley Face's location would become irregular when the app was put in the
-
-background while the Rocket Dash ability was being used.
-
-- Fixed an issue where the decoding progress reduction after the Perfumer failed a calibration was
-incorrect.
-
-- Fixed an issue where a Hunter would still receive a bonus for hitting a Survivor while in an
-invincible state inside the Priestess's Straight Passage.
-
-- Fixed an issue where the "Some Costume and Accessory special effects are hidden from Hunters
-" function in Settings wasn't effective at times.
-
-Fixed an issue where the Acrobat could still hit the Dream Witch's Follower at the location
-where the Follower had already disappeared, causing the bombed area to disappear.
-
-- Fixed an issue where the "Undead" could get stuck in scene objects when using his abilities near
-the roller coaster terminal in Moon River Park
-
-- Fixed an issue in the Halloween Red Church where players using Escape at the corner of the
-small house end up entering the basement.
-
-- Fixed the issue in Eversleeping Town where the "Undead" would show anomalies after getting
-hit by the tram during attack recovery.
-
-- Fixed an issue where the Prospector could attract the Soul Weaver through pallets at a certain
-location in the Sacred Heart Hospital.
-
-~ Fixed an issue where the Embalmer would show anomalies if he was interrupted by Borrowed
-Time while using Rebirth.
-
-- Fixed the incorrect description of the Dancer's abilities displayed in battles.
-
-- Fixed an issue in the Red Church map where a shrunk Explorer could hide in buildings.
-
-Fixed an issue where the Hunter couldn't attack the Swarm of Insects on the stairs below them
-if the staircase was too narrow.
-
-- Fixed an issue where the synced Block Team Invitation status was displayed incorrectly when a
-player activated the Block Team Invitation setting and logged in on a different device.
-
-- Fixed an issue where other parts of the Rocket Chair were missing except the safety device under
-certain circumstances.
-
-- Fixed an issue where the icon of the Mercenary's emote "Boxing" was incorrect.
-
-Fixed an issue where the Permanent Identity Card in "Choose one of four Permanent Identities
-for the Returning Player event" would unlock characters other than the four intended ones.
-
-- Fixed an issue where players could enter a character's deduction interface by tapping the
-notebook during Tarot matching.
-
-- Fixed an issue where tapping the "Read Diary" button in the Room would lead to an incorrect
-layout for the interface under unusual circumstances.
-
-- Fixed an issue where the effects of the "Undead" hitting an obstacle with Jump Chop would be
-misplaced.
-
-- Fixed the issue where the hair in some of the emotes of the Doctor's costume - Mikan Tsumiki
-would overlap.
-
-Update Notice [December 31, 2020]
-
-Identity V will be updated on December 31, 2020 (UTC+8). The following content is for reference
+Identity V will be updated on January 7, 2021 (UTC+8). The following content is for reference
 only, and the content of the actual maintenance notice shall prevail.
 
-~ Season Essence: Trap the greedy humans with alluring sweetness. Season 14 Essence 2 will
-become available this week. New Costumes include the Batter's $ Costume - Lava Cake, the
-Grave Keeper's A Costume - Cheese, and Smiley Face's A Costume - Oven. Obtain S Costume
-"Lava Cake" to receive the all-new Survivor, Batter, for free! This Character cannot be used in
-Rank Matches currently.
+
+Snow Festival: Winter is here and the Snow Festival is upon us! Complete event quests to obtain
+Clues, Fragments, Costume Trial Cards, Snow Festival Portraits, and various rewards!
+
+Also, [Emote] Mercenary - Throws Snowball, [Emote] Mind's Eye - Throws Snowball, [Emote]
+Magician - Throws Snowball, and [Emote] Perfumer - Throws Snowball will be available in the
+Event Shop for a limited time!
+
+Event Period: January 7, 2021 (after maintenance) - January 13, 2021, 23:59:59 (Server Time)
+
+     
 
 Thank you for your continued support for Identity V. We will attach gifts via in-game mail to
 compensate for any inconvenience that the maintenance may ensue!
-`
+
+May the nightingale's singing foll i ur dr find yourself again.
+jay the nightingale's singing follow you ine a a oo gan fi d your steal
+
+    `
+
 }
