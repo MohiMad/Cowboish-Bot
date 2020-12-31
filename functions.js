@@ -269,7 +269,8 @@ module.exports = {
 			Sculptor: false,
 			Percy: false,
 			Portrait: "0",
-			ThreeMatches: 3
+			ThreeMatches: 3,
+			Batter: false
 
 		});
 		await newLP.save().catch(err => console.log(err));

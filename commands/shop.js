@@ -48,7 +48,7 @@ module.exports = {
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
             ${e.ess1} | **Danganronpa Essence 1** - Price : *96* ${e.insp} - ID: __*dangan*__
             ${e.ess2} | **Danganronpa Essence 2** - Price : *96* ${e.insp} - ID: __*dangan2*__
-            ${e.ess3} | ~~**Essence s14-3**~~ - Price : *96* ${e.insp} - ID: __*s14-3*__
+            ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: __*s14-3*__
             `)
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")
@@ -203,11 +203,15 @@ module.exports = {
                     Emoji: e.entomologist
 
                 },
-
                 {
                     LP_Path: LP.Painter,
                     CharacterName: "Painter",
                     Emoji: "🖌️"
+                },
+                {
+                    LP_Path: LP.Batter,
+                    CharacterName: "Batter",
+                    Emoji: "⚾"
                 }
             ];
 

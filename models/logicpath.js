@@ -99,8 +99,8 @@ const LPSchema = mongoose.Schema({
     Percy: Boolean,
     Painter: Boolean,
     Portrait: String,
-    ThreeMatches: Number
-
+    ThreeMatches: Number,
+    Batter: Boolean
 
 });
 

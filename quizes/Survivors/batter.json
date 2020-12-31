@@ -1,0 +1,14 @@
+[
+	{
+		"Question": "**Question:**\nWhat is the Batter's name?",
+		"Answer": ["Ganji", "ganji", "ganji gupta"],
+		"Difficulty": "Easy",
+        "Attachment": "https://i.imgur.com/9qy7mdo.png"
+    },
+    {
+		"Question": "**Question:**\nWhat's the name of the skin in the image?",
+		"Answer": ["Lava Cake", "lava cake", "lavacake"],
+		"Difficulty": "Medium",
+        "Attachment": "https://i.imgur.com/URe5IA1.png"
+    }
+]

@@ -216,6 +216,7 @@ module.exports = {
 
         else if (["entomo", "entomologist", "melly"].includes(args[1].toLowerCase())) await buyIt("Entomologist", LP.Entomologist, 3568, "Aaaa noooo bees ;-;\nYou bought the Entomologist :D\nDo `" + prefix + "quick entomo` to play as her ^-^", "https://i.imgur.com/uU1pIL4.png");
         else if (["painter", "artist", "edgar"].includes(args[1].toLowerCase())) await buyIt("Painter", LP.Painter, 3568, "Ooohoo it's an artist 0-0\nYou bought the Painter, Edgar :D\nDo `" + prefix + "quick edgar` to play as him :3", "https://static.wikia.nocookie.net/id5/images/4/4a/Artist_Transparent.png/revision/latest/scale-to-width-down/1000?cb=20200924174637");
+        else if (["batter", "ganji", "ganjicaputa"].includes(args[1].toLowerCase())) await buyIt("Batter", LP.Batter, 3568, "You bought the Batter :D\nDo `" + prefix + "quick batter` to play as him UwU", "https://i.imgur.com/9qy7mdo.png");
 
         //survivors ends here
 

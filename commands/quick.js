@@ -43,7 +43,8 @@ module.exports = {
             LP.Survivors.NewSurv,
             LP.Survivors.AnotherSurv,
             LP.Entomologist,
-            LP.Painter
+            LP.Painter,
+            LP.Batter
         ];
 
         let allSurvFiles = [
@@ -70,7 +71,8 @@ module.exports = {
             "gravekeeper",
             "prisoner",
             "entomologist",
-            "painter"
+            "painter",
+            "batter"
         ];
 
         for (i = 0; i < LPSurvivorvalues.length; i++) {
@@ -294,6 +296,13 @@ module.exports = {
                 LP_Path: LP.Painter,
                 Path: "Survivors/painter",
                 CharacterName: "The Painter"
+
+            },
+            {
+                SearchArray: ["batter", "ganji", "thebatter"],
+                LP_Path: LP.Batter,
+                Path: "Survivors/batter",
+                CharacterName: "The Batter"
 
             },
             {
