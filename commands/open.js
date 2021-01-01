@@ -87,8 +87,8 @@ module.exports = {
 
                         if (LP.Opened.includes(EssenceONLY[randomItem].Item)) {
                             if (EssenceONLY[randomItem].Item === "s14-3-1") {
-                                if(LP.Batter != true){
-                                LP.Batter = true;
+                                if(LP.Batter !== true){
+                                    LP.Batter = true;
                                 }
                             }
                             embed.setDescription(`You have this item already! You get **${EssenceONLY[randomItem].FragAmount}** ${frags} instead :D`);
@@ -98,7 +98,7 @@ module.exports = {
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
                             LP[EssenceONLY[randomItem].Tier] = LP[EssenceONLY[randomItem].Tier] + 1;
 
-                            if (EssenceONLY[randomItem].Item === "s14-3-1") {
+                            if (EssenceONLY[randomItem].Item === "s14-3-1" && i === 2) {
                                 LP.Batter = true;
                                 embed.setDescription("Yey you got Ganji Caputa! Do `" + prefix + "quick batter` to play as him UwU");
                             }
@@ -153,11 +153,10 @@ module.exports = {
                             if (s + 1 === EssenceNumber) {
                                 lastEssenceColor = EssenceONLY[rndom].Color;
                                 lastEssenceImage = `https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}`;
-
                             }
 
                             if (LP.Opened.includes(EssenceONLY[rndom].Item)) {
-                                if (EssenceONLY[randomItem].Item === "s14-3-1") {
+                                if (EssenceONLY[randomItem].Item === "s14-3-1" && i === 2) {
                                     if (LP.Batter !== true) LP.Batter = true;
                                 }
 
@@ -165,13 +164,14 @@ module.exports = {
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) **${EssenceONLY[rndom].Name}**`;
 
                             } else {
-                                if (EssenceONLY[randomItem].Item === "s14-3-1") LP.Batter = true;
+                                if (EssenceONLY[randomItem].Item === "s14-3-1" && i === 2) LP.Batter = true;
 
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
                                 LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
 
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) ${EssenceONLY[rndom].Name}`;
                             }
+                            LP.save().catch(err => console.log(err));
 
                         }
 

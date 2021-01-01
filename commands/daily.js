@@ -21,7 +21,7 @@ module.exports = {
         const dailyEmbed = new MessageEmbed()
             .setTitle("🎁 Daily reward given! 🎁")
             .setThumbnail("https://i.imgur.com/VGo6rp3.png")
-            .setDescription(`I've yeeted **10** ${dice}, **500** ${clues} and **10** ${ess1} **10** ${ess2} into your account ;D`)
+            .setDescription(`I've yeeted **10**${dice}, **500**${clues}, **10**${ess1}, **10**${ess2}, and **10**${ess3} into your account ;D`)
             .setColor("0xffd500")
             .setFooter("Remember to come back the next day to get your rewards again :)");
 
@@ -32,7 +32,7 @@ module.exports = {
         LP.Clues = LP.Clues + 500;
         LP.Ess1 = LP.Ess1 + 10;
         LP.Ess2 = LP.Ess2 + 10;
-
+        LP.Ess3 = LP.Ess3 + 10;
 
         LP.save().catch(err => console.log(err));
 
