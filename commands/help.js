@@ -44,7 +44,7 @@ module.exports = {
                     const embed = new MessageEmbed()
                         .setTitle(`Usage of the command "${name}" in the ${category} Category`)
                         .setColor("RANDOM")
-                        .setDescription("Arguments put inside of `<>` are **mandatory** but arguments put inside of `[]` are **optional**!" + `${command.description.replace(rg, prefix)}\n\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`" + "\n\n**Required Permissions:** " + betterPerms.join(", "))
+                        .setDescription("Arguments put inside of `<>` are **mandatory** but arguments put inside of `[]` are **optional**!\n\n" + `${command.description.replace(rg, prefix)}\n\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`" + "\n\n**Required Permissions:** " + betterPerms.join(", "))
                         .setFooter(`Information about the ${name} command`);
 
                     message.channel.send(embed)

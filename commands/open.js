@@ -86,6 +86,11 @@ module.exports = {
                             .setFooter(EssenceONLY[randomItem].Footer, bot.user.displayAvatarURL())
 
                         if (LP.Opened.includes(EssenceONLY[randomItem].Item)) {
+                            if (EssenceONLY[randomItem].Item === "s14-3-1") {
+                                if(LP.Batter != true){
+                                LP.Batter = true;
+                                }
+                            }
                             embed.setDescription(`You have this item already! You get **${EssenceONLY[randomItem].FragAmount}** ${frags} instead :D`);
                             LP.frags = LP.frags + EssenceONLY[randomItem].FragAmount;
 
@@ -97,8 +102,6 @@ module.exports = {
                                 LP.Batter = true;
                                 embed.setDescription("Yey you got Ganji Caputa! Do `" + prefix + "quick batter` to play as him UwU");
                             }
-
-                            if (["ess1-14", "ess1-15", "ess1-16", "ess1-48", "ess1-49", "ess1-50", "ess1-51", "s12-2-36", "s12-2-37", "s12-2-38", "s12-2-46", "s12-2-47", "s12-2-48", "s12-2-49", "s13-1-47", "s13-1-48", "s13-1-49", "s13-1-50", "s13-2-46", "s13-2-47", "s13-2-48", "s13-2-49", "s13-2-49", "s14-3-34", "s14-3-35", "s14-3-36"].includes(EssenceONLY[randomItem].Item)) embed.setDescription(`Yaay you got a new portrait! You can equip it by doing` + "`" + prefix + `equip portrait ${EssenceONLY[randomItem].PortraitName}` + "`");
                         }
 
                         LP[essence[0].WhichEss] = LP[essence[0].WhichEss] - 1;
