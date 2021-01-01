@@ -7,12 +7,12 @@ const { clues, insp, ess1, ess2, ess3, frags } = require("../emojis.json");
 module.exports = {
     name: 'giveaway',
     description: "Daily giveaways for cowboish members :3",
-    isDisabled: true,
-    admins: ["632291800585076761"],
+    admins: ["478527909250990090"],
+    permissions: ["SEND_MESSAGES"],
     execute: async (bot) => {
 
         let mainGuild = bot.guilds.cache.get("636241255994490900");
-        await mainGuild.members.cache.fetch().catch(e => console.log("Giveaway fetching error:", e));
+        await mainGuild.members.fetch().catch(e => console.log("Giveaway fetching error:", e));
 
         let giveawayRole = mainGuild.roles.cache.get("721657451916820543");
 
@@ -24,10 +24,8 @@ module.exports = {
         }).catch(e => console.log(e));
 
         let randomUser = giveawayRole.members.filter(async (m) => {
-
             let usersLP = await logicPath.findOne({ UserID: m.user.id });
-
-            m.user.bot === false && usersLP != undefined
+            m.user.bot === false && usersLP
         }).random();
 
         let rewards = [
@@ -100,8 +98,6 @@ module.exports = {
             if (!giveawayChannel) return;
 
             giveawayChannel.send(`Congrats ${randomUser} on winning today's giveaway!`, giveawayEmbed);
-
-
 
             const giveawaySpamStopper = new Cooldown({
                 command: "giveaway",
