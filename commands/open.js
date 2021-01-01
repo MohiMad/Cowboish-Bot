@@ -171,8 +171,6 @@ module.exports = {
 
                                 description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) ${EssenceONLY[rndom].Name}`;
                             }
-                            LP.save().catch(err => console.log(err));
-
                         }
 
 
@@ -188,7 +186,6 @@ module.exports = {
                             .setDescription(description);
 
                         LP.frags = LP.frags + fragments;
-
                         LP[essence[0].WhichEss] = LP[essence[0].WhichEss] - EssenceNumber;
 
                         LP.save().catch(err => console.log(err));
