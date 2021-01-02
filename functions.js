@@ -270,7 +270,8 @@ module.exports = {
 			Percy: false,
 			Portrait: "0",
 			ThreeMatches: 3,
-			Batter: false
+			Batter: false,
+			Inventory: ["pass", "switch", "excitement"]
 
 		});
 		await newLP.save().catch(err => console.log(err));

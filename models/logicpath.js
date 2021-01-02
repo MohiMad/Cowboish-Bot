@@ -100,7 +100,8 @@ const LPSchema = mongoose.Schema({
     Painter: Boolean,
     Portrait: String,
     ThreeMatches: Number,
-    Batter: Boolean
+    Batter: Boolean,
+    Inventory: Array
 
 });
 
