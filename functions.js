@@ -276,20 +276,33 @@ module.exports = {
 		await newLP.save().catch(err => console.log(err));
 
 	},
+	findCooldownByCommand: async (command) => {
+		const cooldownChecker = Cooldown.findOne({ command: command });
+
+		return cooldownChecker;
+	},
+	findCooldown: async (message, command) => {
+		const cooldownChecker = Cooldown.findOne({ userID: message.author.id, command: command });
+
+		return cooldownChecker;
+	},
 	addCooldown: async (message, cooldownTime, command) => {
+		const cooldownReducerDoc = await Cooldown.findOne({ userID: message.author.id, command: `10Cooldown[${message.author.id}]` }) ||
+			await Cooldown.findOne({ userID: message.author.id, command: `30Cooldown[${message.author.id}]` }) ||
+			await Cooldown.findOne({ userID: message.author.id, command: `50Cooldown[${message.author.id}]` });
+
+		let percentage = 1;
+		if (cooldownReducerDoc) percentage = cooldownReducerDoc.command.slice(0, 2) / 100
+
 		const newCooldown = new Cooldown({
 			command: command,
 			userID: message.author.id,
-			timeRemaining: Date.now() + cooldownTime,
+			timeRemaining: Date.now() + (cooldownTime * percentage),
 			dateNow: Date.now()
 		});
 
 		await newCooldown.save().catch(err => console.log(err));
-	},
-	findCooldown: async (message, command) => {
-		const cooldownChecker = await Cooldown.findOne({ userID: message.author.id, command: command });
 
-		return cooldownChecker;
 	},
 	coolEmbed: async (message, Title, Description, remainingTime, units) => {
 
@@ -418,6 +431,12 @@ module.exports = {
 
 
 		}
+	},
+	spliceArray(DocArray, toSplice) {
+		const SplicedArray = DocArray;
+		SplicedArray.splice(SplicedArray.indexOf(toSplice), 1);
+
+		return SplicedArray;
 	}
 
 

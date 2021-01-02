@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Canvas = require('canvas');
 const Discord = require("discord.js");
-const { ErrorMsg, coolEmbed, addCooldown, findCooldown, newLP, findMember } = require("../functions.js");
+const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../functions.js");
 const { Portraits, Frames } = require("../essences/items.json");
 
 module.exports = {
@@ -10,17 +10,14 @@ module.exports = {
     description: "Displays your Logicpath items in an Identity V Profile format\n\n`$prefixLP [user]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Logicpath",
-    execute: async (message, args, bot, prefix) => {
+    execute: async (message, args, prefix) => {
 
         await newLP(message);
 
         let cooldownCheck = await findCooldown(message, "logicpath");
-
         if (cooldownCheck) return coolEmbed(message, "Oops, the cooldown is still on!", "You know, it takes a while to generate and edit images, that's why there is a **30** seconds cooldown on this command!\nPlease wait **REMAINING** before running this command once again :3", cooldownCheck.timeRemaining, ["s"]);
 
         let LPuser = await findMember(message, args.slice(1).join(" "));
-
-        if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
 
         if (!args[1]) LPuser = message.author;
         else if (!LPuser) LPuser = message.author;
@@ -223,9 +220,9 @@ module.exports = {
             ctx.fillText(HunterNumber, 206, 130);
 
             let portraitAmount = 0;
-           Portraits.forEach(x => {
-                    if (LP.Opened.includes(x.Item)) portraitAmount++;
-                });
+            Portraits.forEach(x => {
+                if (LP.Opened.includes(x.Item)) portraitAmount++;
+            });
 
             ctx.fillStyle = '#000000';
             ctx.fillText(portraitAmount, 390, 130);
@@ -239,10 +236,16 @@ module.exports = {
             LP.Survivors.Barmaid, LP.Survivors.Magician, LP.Survivors.Explorer,
             LP.Survivors.Forward, LP.Survivors.Prospector, LP.Survivors.Enchantress,
             LP.Survivors.Wilding, LP.Survivors.Postman, LP.Survivors.NewSurv,
-            LP.Survivors.AnotherSurv, LP.Entomologist, LP.Painter].forEach(x => { if (x === true) SurvivorNumber++; });
+            LP.Survivors.AnotherSurv, LP.Entomologist, LP.Painter, LP.Batter].forEach(x => { if (x === true) SurvivorNumber++; });
 
             ctx.fillStyle = '#0a8fd0';
             ctx.fillText(SurvivorNumber, 292, 130);
+
+            const findMud = await findCooldownByCommand(`Mud[${LP.UserID}]`);
+            if (findMud) {
+                const blackMud = await Canvas.loadImage("https://i.imgur.com/ROSKcV7.png");
+                ctx.drawImage(blackMud, 0, 50);
+            }
 
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'LP.png');
 

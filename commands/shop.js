@@ -1,8 +1,6 @@
 const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
-
 const e = require("../emojis.json");
-
 const { MessageEmbed } = require('discord.js');
 const { newLP } = require("../functions.js");
 
@@ -15,40 +13,43 @@ module.exports = {
         await newLP(message);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
-
+        const rg = new RegExp(/\$/, "g");
         //___________Main shop list_________________
         const shopEmbed = new MessageEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
             .setColor("RANDOM")
             .setDescription("Here is a list of the lists available in the shop! do `" + prefix + "shop <listID>`\n\n" + stripIndents`
-            ${e.ess1} | **Essences shop!** ─ ID ➜  __*essence*__
-            Too unlucky to get essences? well buy some...
+            ${e.ess1} | **Essences shop!** ─ ID ➜  $essence$
+             - Too unlucky to get essences? well buy some...
     
-            ${e.luckyguy} | **Survivors list!** ─ ID ➜  __*survivors*__
-            I swear to god if you buy Enchantress...
+            ${e.luckyguy} | **Survivors list!** ─ ID ➜  $survivors$
+             - I swear to god if you buy Enchantress...
     
-            ${e.uwuchang} | **Hunters list!** ─ ID ➜ __*hunters*__
-            Nothing to say here tbh... 
+            ${e.uwuchang} | **Hunters list!** ─ ID ➜ $hunters$
+             - Nothing to say here tbh... 
             
-            ${e.frame5} | **Portrait-frames list!** - ID ➜ __*frames*__
-            Make your __${prefix}logicpath__ look more colorful :D
+            ${e.frame5} | **Portrait-frames list!** - ID ➜ $frames$
+             - Make your $${prefix}logicpath$ look more colorful :D
     
-            ${e.portrait} | **Portraits list!** - ID ➜ __*portraits*__
-            Change your portrait to the one you prefer to be shown in __${prefix}logicpath__
+            ${e.portrait} | **Portraits list!** - ID ➜ $portraits$
+             - Change your portrait to the one you prefer to be shown in $${prefix}logicpath$
             
-            ${e.S_Card} | **Skins list!** - ID ➜ __*skins*__
-            Finally a usage of your fragments${e.frags} huh?
+            ${e.S_Card} | **Skins list!** - ID ➜ $skins$
+             - Finally a usage of your fragments${e.frags} huh?
+
+            ${e.mud} | **Powerups list!** - ID ➜ $powerups$
+             - Speed cooldowns up, troll friends, and do stuff :v
     
-            `)
+            `.replace(rg, "`"))
             .setFooter("Cowboish shop list ─ page 1 of 1");
 
         //___________Essence embed here_______________
         const EssEmbed = new MessageEmbed()
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
-            ${e.ess1} | **Danganronpa Essence 1** - Price : *96* ${e.insp} - ID: __*dangan*__
-            ${e.ess2} | **Danganronpa Essence 2** - Price : *96* ${e.insp} - ID: __*dangan2*__
-            ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: __*s14-3*__
+            ${e.ess1} | **Danganronpa Essence 1** - Price : *96* ${e.insp} - ID: $dangan$
+            ${e.ess2} | **Danganronpa Essence 2** - Price : *96* ${e.insp} - ID: $dangan2$
+            ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: $s14-3$
             `)
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")
@@ -512,7 +513,59 @@ module.exports = {
 
             message.channel.send(skinsEmbed);
 
-        } else {
+        } else if (["power", "power-ups", "powerup", "powerups", "pwrups"].includes(args[1].toLowerCase())) {
+
+            const powerupEmbed1 = new MessageEmbed()
+                .setTitle("Cowboish Powerups Shop! o((>ω< ))o")
+                .setColor("0x8E0ED8")
+                .setThumbnail("https://i.imgur.com/8Qcg9F1.png")
+                .setDescription(
+                    stripIndents`
+                Powerups are basically items that help you boost your logicpath status, some of them are for fun too!
+                To buy the powerup of your choice, use the buy command and do $${prefix}buy <powerupID>$
+                
+                **Here is what's available in the shop:**
+                ${e.switchCard} | **Switch Card (${LP.Inventory.filter(x => x === "switch").length})** - Price: **96**${e.insp} ~ ID ⇀ [$switch$](https://youtu.be/V5X-p3oZcqQ?t=47)
+                - Allows you to switch/change to another question in $${prefix}quick$/$${prefix}hunt$
+
+                ${e.passCard} | **Pass Card (${LP.Inventory.filter(x => x === "pass").length})** - Price: **128**${e.insp} ~ ID ⇀ [$pass$](https://youtu.be/V5X-p3oZcqQ?t=47)
+                - Allows you to pass/skip answering the question in $${prefix}quick$/$${prefix}hunt$ and gives you your dices ${e.dice} immediately
+
+                ${e.revealCard} | **Reveal Card (${LP.Inventory.filter(x => x === "reveal").length})** - Price: **196**${e.insp} ~ ID ⇀ [$reveal$](https://youtu.be/V5X-p3oZcqQ?t=47)
+                - Reveals the answer of the question in $${prefix}quick$/$${prefix}hunt$... The answer would be displayed in the embed
+
+            `.replace(rg, "`"))
+                .setFooter("Cowboish Powerup Shop ~ Page 1 of 2", bot.user.displayAvatarURL({ dynamic: false }));
+
+            const powerupEmbed2 = new MessageEmbed()
+                .setTitle("Cowboish Powerups Shop! o((>ω< ))o")
+                .setColor("0x8E0ED8")
+                .setThumbnail("https://i.imgur.com/8Qcg9F1.png")
+                .setDescription(
+                    stripIndents`
+                Powerups are basically items that help you boost your logicpath status, some of them are for fun too!
+                To buy the powerup of your choice, use the buy command and do $${prefix}buy <powerupID>$
+                
+                **Here is what's available in the shop:**
+                ${e.blackMud} | **Black Mud (${LP.Inventory.filter(x => x === "mud").length})** - Price: **96**${e.insp} ~ ID ⇀ [$mud$](https://youtu.be/V5X-p3oZcqQ?t=47)
+                - Throw Mud at your friend's logicpath-profile... Useable via the command $${prefix}use$
+
+                ${e.Excitement} | **Excitement / Effect Remover (${LP.Inventory.filter(x => x === "excitement").length})** - Price: **38**${e.insp} ~ ID ⇀ [$excitement$](https://youtu.be/V5X-p3oZcqQ?t=47)
+                - Removes the negative effect of other powerups. 
+                Ex: Removes Black Mud off your $${prefix}logicpath$
+
+                ${e.speedPill} | **Speed-Pill / Cooldown Minimizer (${LP.Inventory.filter(x => x === "cooldownMinimizer").length})** - Price: **128**${e.insp} ~ ID ⇀ [$cooldownMinimizer$](https://youtu.be/V5X-p3oZcqQ?t=47)
+                - Speeds up newly added cooldowns by either **10%**, **30%** or **50%**. 
+                The effect lasts for **1 Hour** and can't be stacked.
+
+
+            `.replace(rg, "`"))
+                .setFooter("Cowboish Powerup Shop ~ Page 2 of 2", bot.user.displayAvatarURL({ dynamic: false }));
+
+            if (!args.slice(2).join("") || ["page1", "1", "one", "pageone"].includes(args.slice(2).join(""))) return message.channel.send(powerupEmbed1);
+            return message.channel.send(powerupEmbed2);
+        }
+        else {
             message.channel.send(shopEmbed);
         }
 

@@ -2562,7 +2562,7 @@
             "Name": ["Black Mud", "blackmud", "mud", "mudbomb"],
             "Link": "https://i.imgur.com/IY5b2UJ.png",
             "Emoji": "blackMud",
-            "Usage": "This powerup is useable via the command `$prefixuse` and it allows you to throw a mud-ball at your friend's `logicpath` profile\n**Usage:** `$prefixuse mud <user>`",
+            "Usage": "This powerup is useable via the command `$prefixuse` and it allows you to throw a mud-ball at your friend's `logicpath` profile\nThe effect lasts for **24 hours** but can be removed by using the **Excitement-Powerup**\n\n**Usage:** `$prefixuse mud <user>`",
             "Price": 96,
             "ID": "mud"
         },
@@ -2570,9 +2570,17 @@
             "Name": ["Cooldown Minimizer", "cooldownminimizer", "speed", "speedpill", "speedpotion", "cooldown"],
             "Link": "https://i.imgur.com/KbFzIQu.png",
             "Emoji": "speedPill",
-            "Usage": "This powerup minimizes the cooldowns for all commands... The percentage of the cooldown' reducement is randomized, it can be **10%**, **30%** or **50%**...\nTo use this powerup, do `$prefixuse speed`... The effect lasts for **1 hour** and Can't be stacked.",
+            "Usage": "This powerup minimizes the cooldowns for all commands... The percentage of the cooldowns' reducement is randomized, it can be either **10%**, **30%** or **50%**...\nTo use this powerup, do `$prefixuse cooldownMinimizer`... The effect lasts for **1 hour** and Can't be stacked.",
             "Price": 128,
-            "ID": "speed"
-}
+            "ID": "cooldownMinimizer"
+        },
+        {
+            "Name": ["Excitement", "excitement", "exc", "exitment"],
+            "Link": "https://i.imgur.com/NjC5N6r.png",
+            "Emoji": "Excitement",
+            "Usage": "Use this powerup to remove negative effects/powerups put on you by other users...\nThis powerup removes the effect of Black Mud...\nDo `$prefixuse excitement` to remove the effect",
+            "Price": 38,
+            "ID": "excitement"
+        }
     ]
 }

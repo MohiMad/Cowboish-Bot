@@ -15,16 +15,16 @@ module.exports = async (bot) => {
 
     const activities_list = [
         `and yoinking around >:v`,
-        "Happy New Year 🥳✨🎉"
         //`Under maintenance... please stand by ;)`
-        /*`>invite | >help`,
+        `>invite | >help`,
         `Identity V in ${botGuildCount} servers 💕`,
-        "Welcome to Identit",
-        `milestone ${botGuildCount}/2000`,
+        `With ${guilds.cache.reduce((a, g) => a + g.memberCount, 0)} damsels ;)`,
+        "Welcome to Identit.",
+        `Milestone ${botGuildCount}/2000`,
         `Never forget Bonbon's "铁皮人" skin`,
         `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`
         `R.I.P Cowboy's One Tap Lassos 😔`,
-        `Yeehaw! >:D`*/
+        `Yeehaw! >:D`
 
 
     ];
