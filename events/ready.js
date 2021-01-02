@@ -22,7 +22,7 @@ module.exports = async (bot) => {
         "Welcome to Identit.",
         `Milestone ${botGuildCount}/2000`,
         `Never forget Bonbon's "铁皮人" skin`,
-        `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`
+        `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
         `Yeehaw! >:D`
 
