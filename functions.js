@@ -293,7 +293,7 @@ module.exports = {
 			await Cooldown.findOne({ userID: message.author.id, command: `50Cooldown[${message.author.id}]` });
 
 		let percentage = 1;
-		if (cooldownReducerDoc) percentage = cooldownReducerDoc.command.slice(0, 2) / 100
+		if (cooldownReducerDoc) percentage = 1 - cooldownReducerDoc.command.slice(0, 2) / 100;
 
 		const newCooldown = new Cooldown({
 			command: command,
