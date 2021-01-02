@@ -18,7 +18,7 @@ module.exports = async (bot) => {
         //`Under maintenance... please stand by ;)`
         `>invite | >help`,
         `Identity V in ${botGuildCount} servers 💕`,
-        `With ${guilds.cache.reduce((a, g) => a + g.memberCount, 0)} damsels ;)`,
+        `With ${bot.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} damsels ;)`,
         "Welcome to Identit.",
         `Milestone ${botGuildCount}/2000`,
         `Never forget Bonbon's "铁皮人" skin`,
