@@ -23,7 +23,7 @@ module.exports = {
             `$target is the guy who drops the pallet infront of their teammate's face... We aren't playing Blackjack are we?`,
             `$target is the player who begs for gifts in the server chat...`,
             `$target is the player who sends "Camp = report" before the match starts... Probably got camped on...`,
-            `Someone tell $target to stope getting terrorshocked .-.`,
+            `Someone tell $target to stop getting terrorshocked .-.`,
             `$target is the "I was laggy" excuse user`,
             `$target: *disconnects early-game and gets found first*... GG`,
             `$target: *tries to surrender but unable to because the hunter downed the whole team too early*`,
@@ -51,7 +51,8 @@ module.exports = {
             `$target is a prospector main that repels their teammates into the hunter. Biggest screw ups but became a joke?`,
             `$target spams "Thank You!" For everything. E. V. E. R. Y. T. H. I. N. G.`,
             `$target is a Photographer main who is more blind than Mind's Eye.`,
-            `$target screams pspspspsps when they see Disciple's cat.`
+            `$target screams pspspspsps when they see Disciple's cat.`,
+            `Bet the randoms are better than $target`
         ];
 
         var info = Math.floor(Math.random() * infos.length);

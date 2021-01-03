@@ -24,6 +24,7 @@ module.exports = {
 
     await message.guild.channels.cache.forEach(async (channel) => {
         if(!channel.viewable) return;
+        if(!channel.editable) return;
 
       await channel.createOverwrite(muteRole, {
         SEND_MESSAGES: false,

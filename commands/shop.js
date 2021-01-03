@@ -37,8 +37,8 @@ module.exports = {
             ${e.S_Card} | **Skins list!** - ID ➜ $skins$
              - Finally a usage of your fragments${e.frags} huh?
 
-            ${e.mud} | **Powerups list!** - ID ➜ $powerups$
-             - Speed cooldowns up, troll friends, and do stuff :v
+            ${e.blackMud} | **Powerups list!** - ID ➜ $powerups$
+             - Boost your Logicpath grind using these powerups!
     
             `.replace(rg, "`"))
             .setFooter("Cowboish shop list ─ page 1 of 1");

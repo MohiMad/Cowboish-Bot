@@ -1,6 +1,6 @@
 
 const logicPath = require("../models/logicpath.js");
-const { newLP, addCooldown, findMember, findCooldown, spliceArray, findCooldownByCommand } = require("../functions.js");
+const { newLP, addCooldown, findMember, findCooldown, spliceArray, findCooldownByCommand, getMember } = require("../functions.js");
 const { PowerUps } = require("../essences/items.json");
 const { stripIndents } = require("common-tags");
 const { MessageEmbed } = require("discord.js");
@@ -47,14 +47,14 @@ module.exports = {
         const Excitement = findit("Excitement");
 
         if (blackMud.Name.includes(args[1].toLowerCase())) {
-            const Friend = await findMember(message, args[2]);
+            const Friend = await findMember(message, args.slice(2).join(" "));
 
-            if (Friend.id === message.author.id) return message.channel.send(`**${message.author.toString()}, why do you wanna throw mud at yourself?**\nAsk others to do that pretty sure they will accept your request without hesitating ^-^`);
+            if (!Friend || Friend === undefined || Friend === null) return message.channel.send("**You need to mention someone to throw the Black Mud at**\nFor instance `" + prefix + "use mud `" + message.author.toString());
             if (Friend.id === bot.user.id) return message.channel.send(`${message.author.toString()}, no thank you... The superior Cowboish doesn't want your mud -v-`);
+            if (Friend.id === message.author.id) return message.channel.send(`**${message.author.toString()}, why do you wanna throw mud at yourself?**\nAsk others to do that pretty sure they will accept your request without hesitating ^-^`);
             if (Friend.user.bot) return message.channel.send(`${message.author.toString()}, I don't think my bot friend ${Friend.toString()} want mud, keep it for yourself.`);
 
             if (!LP.Inventory.includes("mud")) return message.channel.send(`**You don't have any ${e.blackMud} Black Muds, ${message.author.toString()}...**\nYou need to buy more from the shop!`);
-            if (!Friend) return message.channel.send("**You need to mention someone to throw the Black Mud at**\nFor instance `" + prefix + "use mud `" + message.author.toString());
             const isMudded = await findCooldownByCommand(`Mud[${Friend.id}]`);
 
             if (isMudded) return message.channel.send(`**Someone have already put ${e.blackMud} Black Mud on ${Friend.user.username}'s Logicpath profile...**\nYou can't stack Muds on your poor friend（︶^︶）`);
@@ -114,7 +114,6 @@ module.exports = {
         }
 
         return message.channel.send("You provided invalid arguments. Please read through the embed below again...", noArgsEmbed);
-
 
     }
 }

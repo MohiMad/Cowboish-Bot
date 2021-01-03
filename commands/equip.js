@@ -79,12 +79,17 @@ module.exports = {
             } else if (["portrait", "portraits"].includes(args[1].toLowerCase())) {
 
                 let ownedPortraits = ":";
+                let x = 0;
                 let portraitString = args.slice(2).join(" ");
 
                 for (const portrait of Portraits.slice(1)) {
                     if (LP.Opened.includes(portrait.Item)) {
-                        if(ownedPortraits.length > 1600) return;
+                        if(ownedPortraits.length > 1600){
+                            x++;
+                            if(portrait.Item === "seerBirthday") ownedPortraits += `...\nAnd **${x}** more portraits, ` + "`" + prefix +"view portraits` to view all."
+                        } else {
                         ownedPortraits = `${ownedPortraits}\n${portrait.Name[0]}`;
+                        }
                     }
                 }
                 if (ownedPortraits === ":") ownedPortraits = "None lol";

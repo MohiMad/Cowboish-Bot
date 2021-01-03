@@ -293,7 +293,8 @@ module.exports = {
 			await Cooldown.findOne({ userID: message.author.id, command: `50Cooldown[${message.author.id}]` });
 
 		let percentage = 1;
-		if (cooldownReducerDoc) percentage = 1 - cooldownReducerDoc.command.slice(0, 2) / 100;
+		if (message.guild.id === "636241255994490900") percentage += - 0.2;
+		if (cooldownReducerDoc) percentage += - cooldownReducerDoc.command.slice(0, 2) / 100;
 
 		const newCooldown = new Cooldown({
 			command: command,
@@ -315,7 +316,7 @@ module.exports = {
 
 		let des = Description.replace("REMAINING", Remaining);
 
-		let randomNumber = Math.round(Math.random() * 2);
+		let randomNumber = Math.round(Math.random() * 3);
 
 		if (randomNumber === 1) {
 			if (message.guild.id !== "636241255994490900") {
@@ -323,6 +324,10 @@ module.exports = {
 			}
 		} else if (randomNumber === 2) {
 			des = des + `\n\nWhile you here, you may want to follow **[Mohi on Twitter](https://twitter.com/MohiHaw)**${twitter} to stay updated ^-^`
+		} else if (randomNumber === 3) {
+			if (message.guild.id !== "636241255994490900") {
+				des += `\n\n**Tired of Cooldowns?**\nUse Cowboish in [Cowboish Server](https://discord.com/invite/YWcSukS) and you'll get **20%** shorter cooldowns!`
+			}
 		}
 
 		const coolEmbed = new MessageEmbed()
@@ -336,7 +341,7 @@ module.exports = {
 		let m = await message.channel.send(coolEmbed);
 
 		setTimeout(() => {
-			if (!m || m === null || m === undefined || !m.deletable) return;
+			if (!m || m == null || m == undefined || !m.deletable) return;
 			else m.delete();
 		}, 30000);
 
