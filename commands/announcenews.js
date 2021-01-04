@@ -230,7 +230,7 @@ module.exports = {
                                                 if (!Perms.includes(permsInNewsChannel)) {
                                                     if (!permsInNewsChannel.includes(Perms[0])) return;
 
-                                                    return findPatchChannel.send("Hello there! The Manor owner sent me to announce Identity V News in this channel but unfortunately, I can't because I'm missing the permissions (**Attach Files** and **Embed Links**) in this channel specifically.\n\nPlease check the role that overrides these permissions and enable it so I'm able to announce Identity V news next time, thanks! :)");
+                                                    return toSendChannel.send("Hello there! The Manor owner sent me to announce Identity V News in this channel but unfortunately, I can't because I'm missing the permissions (**Attach Files** and **Embed Links**) in this channel specifically.\n\nPlease check the role that overrides these permissions and enable it so I'm able to announce Identity V news next time, thanks! :)");
                                                 }
 
                                                 let toPingRole = await guild.roles.cache.get(g.News.toPingRole);
