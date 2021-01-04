@@ -194,7 +194,7 @@ module.exports = {
                                             Q1.reactions.removeAll().catch(error => console.log(error));
                                             spamStopper.delete(message.author);
 
-                                            IdVNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
+                                            const IdVNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
                                             await IdentityVNews.updateOne({ toGrab: "632291800585076761" },
                                                 {
                                                     News: [
@@ -213,26 +213,24 @@ module.exports = {
 
                                                 });
 
-                                            IdvNews = await IdentityVNews.findOne({ toGrab: "632291800585076761" });
 
                                             for (const g of GUILDS.filter(x => x.News.Channel != null)) {
                                                 if (g.News.Channel == null) return;
 
                                                 const guild = await bot.guilds.cache.get(g.guildID);
                                                 if (!guild) return;
-                                                if (!guild.available) return;
 
                                                 const toSendChannel = await bot.channels.cache.get(g.News.Channel);
                                                 if (!toSendChannel) return;
                                                 if (toSendChannel.deleted) return;
                                                 if (!toSendChannel.viewable) return;
 
-                                                const permsInNewsChannel = toSendChannel.guild.me.permissionsIn(toSendChannel).toArray()
+                                                const permsInNewsChannel = await toSendChannel.guild.me.permissionsIn(toSendChannel).toArray()
 
                                                 if (!Perms.includes(permsInNewsChannel)) {
-                                                    if (!Perms[0].includes(permsInNewsChannel)) return;
+                                                    if (!permsInNewsChannel.includes(Perms[0])) return;
 
-                                                    return findPatchChannel.send("Hello there! The Manor owner sent me to announce Identity V News in this channel but unfortunately, I can't because I'm missing the permissions (**Attach Files** and **Embed Links**) in this channel specifically.\n\nPlease check the role that overrides these permissions and enable it so I'm able to announce Identity V news next time, thanks! :)")
+                                                    return findPatchChannel.send("Hello there! The Manor owner sent me to announce Identity V News in this channel but unfortunately, I can't because I'm missing the permissions (**Attach Files** and **Embed Links**) in this channel specifically.\n\nPlease check the role that overrides these permissions and enable it so I'm able to announce Identity V news next time, thanks! :)");
                                                 }
 
                                                 let toPingRole = await guild.roles.cache.get(g.News.toPingRole);
@@ -243,9 +241,6 @@ module.exports = {
                                                 await toSendChannel.send(vMessage.replace("$ping", toPingRole), embed);
 
                                             }
-
-                                            message.channel.send(`${message.author} process started... Update/News should be sent in the mean time :)`);
-
                                         });
 
                                         end.on('collect', async r => {

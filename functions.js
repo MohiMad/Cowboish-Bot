@@ -320,13 +320,13 @@ module.exports = {
 
 		if (randomNumber === 1) {
 			if (message.guild.id !== "636241255994490900") {
-				des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be (${clues}, ${frags}, ${insp}, ${ess1}, ${ess2} and ${ess3})`
+				des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be ${clues}, ${frags}, ${insp}, ${ess1}, ${ess2}, ${ess3}, and more!`
 			}
 		} else if (randomNumber === 2) {
 			des = des + `\n\nWhile you here, you may want to follow **[Mohi on Twitter](https://twitter.com/MohiHaw)**${twitter} to stay updated ^-^`
 		} else if (randomNumber === 3) {
 			if (message.guild.id !== "636241255994490900") {
-				des += `\n\n**Tired of Cooldowns?**\nUse Cowboish in [Cowboish Server](https://discord.com/invite/YWcSukS) and you'll get **20%** shorter cooldowns!`
+				des += `\n\n**Tired of Waiting?**\nUse Cowboish in **[Cowboish Server](https://discord.com/invite/YWcSukS)** and you'll get **20%** shorter cooldowns!`
 			}
 		}
 
@@ -334,7 +334,7 @@ module.exports = {
 			.setTitle(Title)
 			.setColor("FFF800")
 			.setDescription(des)
-			.setThumbnail("https://i.imgur.com/q6GYP17.png")
+			.setThumbnail("https://i.imgur.com/twI8Vnp.png")
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 
