@@ -83,7 +83,11 @@ module.exports = {
             else if (["reveal", "reveal answer", "revealcard", "reveal-card", "reveal card", "revealanswer"].includes(collected.first().content.toLowerCase())) {
                 await addTheCooldown(message, path);
 
-                if (!LP.Inventory.includes("reveal")) return message.channel.send(`${message.author}, **You don't have any Reveal-Cards to use! You should buy more from the shop!**\nMinigame failed! Please try again...`);
+                if (!LP.Inventory.includes("reveal")) {
+                    spamStopper.delete(message.author);
+                    return message.channel.send(`${message.author}, **You don't have any Reveal-Cards to use! You should buy more from the shop!**\nMinigame failed! Please try again...`);
+                }
+
                 if (collected.first().deletable) collected.first().delete();
 
                 LP.Inventory = spliceArray(LP.Inventory, "reveal");
@@ -114,22 +118,22 @@ module.exports = {
 
                         let win = Math.floor(Math.random() * wins.length);
 
-                        message.channel.send(wins[win]);
                         spamStopper.delete(message.author);
 
                         if (LP.ThreeMatches != 0) LP.Dices = LP.Dices + dice;
                         else LP.Dices = LP.Dices + dice;
 
                         await addTheCooldown(message, path);
+                        message.channel.send(wins[win]);
+
                     }
                     else {
                         await addTheCooldown(message, path);
-                        setTimeout(() => { spamStopper.delete(message.author); }, 1000);
+                        setTimeout(spamStopper.delete(message.author), 1000);
                         message.channel.send(`**${message.author.username}**, Wrooong!\nLmao how come you even fail that? The answer was literally revealed -w-`);
                     }
 
-                }).catch((e) => {
-                    console.log(e)
+                }).catch(() => {
                     spamStopper.delete(message.author);
                     message.channel.send(`**${message.author.username}**, Time is over! You lost the minigame!`);
                 });
@@ -139,8 +143,6 @@ module.exports = {
             else if (["switch", "switch", "switchquestion", "switch question"].includes(collected.first().content.toLowerCase())) {
 
                 LP.Inventory = spliceArray(LP.Inventory, "switch");
-
-                spamStopper.delete(message.author);
 
                 if (collected.first().deletable) collected.first().delete();
 
@@ -177,7 +179,7 @@ module.exports = {
                         await addTheCooldown(message, path);
                         spamStopper.delete(message.author);
 
-                        message.channel.send(`**${message.author.toString()} You can't use Powerups after using a Switch-Card...**\nMinigame lost! Try again!`);
+                        return message.channel.send(`**${message.author.toString()} You can't use Powerups after using a Switch-Card...**\nMinigame lost! Try again!`);
                     }
                     else if (char2Item.Answer.includes(collected.first().content.toLowerCase())) {
 
@@ -189,22 +191,21 @@ module.exports = {
 
                         let win = Math.floor(Math.random() * wins.length);
 
-                        message.channel.send(wins[win]);
                         spamStopper.delete(message.author);
 
                         if (LP.ThreeMatches != 0) LP.Dices = LP.Dices + dice;
                         else LP.Dices = LP.Dices + dice;
 
                         await addTheCooldown(message, path);
+                        message.channel.send(wins[win]);
                     }
                     else {
                         await addTheCooldown(message, path);
-                        setTimeout(() => { spamStopper.delete(message.author); }, 1000);
+                        setTimeout(spamStopper.delete(message.author), 1000);
                         message.channel.send(`**${message.author.username}**, Wrooong! You lost the minigame!`);
                     }
 
-                }).catch((e) => {
-                    console.log(e);
+                }).catch(() => {
                     spamStopper.delete(message.author);
                     message.channel.send(`**${message.author.username}**, Time is over! You lost the minigame!`);
                 });
@@ -232,13 +233,12 @@ module.exports = {
             }
             else {
                 await addTheCooldown(message, path);
-                setTimeout(() => { spamStopper.delete(message.author); }, 1000);
+                setTimeout(spamStopper.delete(message.author), 1000);
                 return message.channel.send(`**${message.author.username}**, Wrooong! You lost the minigame!`);
             }
             await LP.save().catch(err => console.log(err));
 
         }).catch((e) => {
-            console.log(e);
             spamStopper.delete(message.author);
             return message.channel.send(`**${message.author.username}**, Time is over! You lost the minigame!`);
         });
