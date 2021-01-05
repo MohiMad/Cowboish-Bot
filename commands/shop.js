@@ -229,7 +229,6 @@ module.exports = {
             if (ownedSurvivors === "**Owned Survivors:**") ownedSurvivors = "\n"
             if (nonOwnedSurvivors === "**Not Owned Survivors:**") nonOwnedSurvivors = nonOwnedSurvivors + "\nNone... you bought em' all :v";
 
-            console.log(`${ownedSurvivors}\n\n${nonOwnedSurvivors}`.length);
             const survEmbed = new MessageEmbed()
                 .setTitle("Survivors shop list!")
                 .addField("How do I buy the survivor?", "To buy the survivor you want, do `" + prefix + "buy <survivorName>`")
