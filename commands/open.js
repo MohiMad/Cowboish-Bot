@@ -17,7 +17,7 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "open");
 
-        if (cooldownCheck) return coolEmbed(message, "Ooops! The cooldown is still on >:/", "Please wait **REMAINING** before being able to execute this command again :)", cooldownCheck.timeRemaining, ["s"]);
+        //if (cooldownCheck) return coolEmbed(message, "Ooops! The cooldown is still on >:/", "Please wait **REMAINING** before being able to execute this command again :)", cooldownCheck.timeRemaining, ["s"]);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
@@ -55,10 +55,7 @@ module.exports = {
 
         try {
 
-            if (!message.guild.me.hasPermission("ATTACH_FILES")) return ErrorMsg(bot, message, "I don't have enough permission to execute this command!\nPlease change my role's permissions and set **ATTACH_FILES** to true");
-
             if (!args[1]) return message.channel.send(noargsEmbed);
-
 
             for (var i = 0; i < 3; i++) {
 
@@ -72,7 +69,7 @@ module.exports = {
 
                 if (essence[0].Shortcuts.includes(args[1].toLowerCase())) {
 
-                    let EssenceONLY = essence.slice(1);
+                    const EssenceONLY = essence.slice(1);
 
                     if (!args[2] || args[2] === "1") {
                         boolean = true;
@@ -87,7 +84,7 @@ module.exports = {
 
                         if (LP.Opened.includes(EssenceONLY[randomItem].Item)) {
                             if (EssenceONLY[randomItem].Item === "s14-3-1") {
-                                if(LP.Batter !== true){
+                                if (LP.Batter !== true) {
                                     LP.Batter = true;
                                 }
                             }
@@ -156,15 +153,17 @@ module.exports = {
                             }
 
                             if (LP.Opened.includes(EssenceONLY[rndom].Item)) {
-                                if (EssenceONLY[randomItem].Item === "s14-3-1" && i === 2) {
-                                    if (LP.Batter !== true) LP.Batter = true;
+                                if (EssenceONLY[rndom].Item === "s14-3-1") {
+                                    if (LP.Batter !== true) {
+                                        LP.Batter = true;
+                                    }
                                 }
 
-                                fragments = fragments + (EssenceONLY[rndom].FragAmount);
-                                description = description + `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) **${EssenceONLY[rndom].Name}**`;
+                                fragments += EssenceONLY[rndom].FragAmount;
+                                description += `\n\n[${s + 1} 】](https://i.imgur.com/${EssenceONLY[rndom].LinkTag}${essence[0].Format}) **${EssenceONLY[rndom].Name}**`;
 
                             } else {
-                                if (EssenceONLY[randomItem].Item === "s14-3-1" && i === 2) LP.Batter = true;
+                                if (EssenceONLY[rndom].Item === "s14-3-1") LP.Batter = true;
 
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
                                 LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
@@ -208,7 +207,6 @@ module.exports = {
 
                 }
             }
-
 
             if (boolean === false) return message.channel.send(noargsEmbed);
 
