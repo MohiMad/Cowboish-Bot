@@ -32,6 +32,8 @@ module.exports = {
                 GUILDS.filter(x => x.PatchChannel != null).forEach(async (doc) => {
                     if (doc.guildID != "656224515688366111") return;
 
+                    await bot.channels.fetch(doc.PatchChannel).catch(e => console.log(e));
+
                     const findPatchChannel = await bot.channels.cache.get(doc.PatchChannel);
                     if (!findPatchChannel) return;
                     if (findPatchChannel.deleted) return;
@@ -156,7 +158,7 @@ module.exports = {
                                         vThumbnail = "https://i.imgur.com/owSSNF4.png";
                                     } else if (["netease", "net ease"].includes(collected.first().content.toLowerCase())) {
                                         vThumbnail = "https://i.imgur.com/WAf9KK1.png";
-                                    }else if (["game", "gameicon"].includes(collected.first().content.toLowerCase())) {
+                                    } else if (["game", "gameicon"].includes(collected.first().content.toLowerCase())) {
                                         vThumbnail = "https://i.imgur.com/hSMftcq.png";
                                     } else {
                                         if (!collected.first().attachments.first()) vThumbnail = collected.first().content;
@@ -228,8 +230,11 @@ module.exports = {
                                             for (const g of GUILDS.filter(x => x.News.Channel != null)) {
                                                 if (g.News.Channel == null) return;
 
+                                                await bot.guilds.fetch(g.guildID);
+
                                                 const guild = await bot.guilds.cache.get(g.guildID);
                                                 if (!guild) return;
+                                                await bot.channels.fetch(g.News.Channel).catch(e => console.log(e));
 
                                                 const toSendChannel = await bot.channels.cache.get(g.News.Channel);
                                                 if (!toSendChannel) return;
@@ -246,6 +251,7 @@ module.exports = {
 
                                                     }
                                                 }
+                                                await guild.roles.fetch(g.News.toPingRole);
 
                                                 let toPingRole = await guild.roles.cache.get(g.News.toPingRole);
                                                 if (g.News.toPingRole == "everyone") toPingRole = "@everyone";
