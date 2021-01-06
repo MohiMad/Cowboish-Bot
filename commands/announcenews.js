@@ -246,7 +246,6 @@ module.exports = {
                                                 for (const perm of Perms) {
                                                     if (!permsInNewsChannel.includes(perm)) {
                                                         if (perm === "SEND_MESSAGES") return;
-
                                                         if (perm === "ATTACH_FILES" || perm === "EMBED_LINKS") return await toSendChannel.send(`**News about [${vMessage}]**\n\nHello there! The Manor owner sent me to announce **Identity V News** in this channel but unfortunately, I can't because I'm missing the permission ${PERMISSIONS[perm]} in this channel specifically.\n\nPlease check the role that overrides these permissions and enable it so I'm able to announce News next time, thanks! :)`);
 
                                                     }
