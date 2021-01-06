@@ -30,8 +30,6 @@ module.exports = {
 
 
                 GUILDS.filter(x => x.PatchChannel != null).forEach(async (doc) => {
-                    if (doc.guildID != "656224515688366111") return;
-
                     await bot.channels.fetch(doc.PatchChannel).catch(e => console.log(e));
 
                     const findPatchChannel = await bot.channels.cache.get(doc.PatchChannel);
@@ -230,10 +228,7 @@ module.exports = {
                                             for (const g of GUILDS.filter(x => x.News.Channel != null)) {
                                                 if (g.News.Channel == null) return;
 
-                                                await bot.guilds.fetch(g.guildID);
 
-                                                const guild = await bot.guilds.cache.get(g.guildID);
-                                                if (!guild) return;
                                                 await bot.channels.fetch(g.News.Channel).catch(e => console.log(e));
 
                                                 const toSendChannel = await bot.channels.cache.get(g.News.Channel);
@@ -250,12 +245,21 @@ module.exports = {
 
                                                     }
                                                 }
-                                                await guild.roles.fetch(g.News.toPingRole);
 
-                                                let toPingRole = await guild.roles.cache.get(g.News.toPingRole);
-                                                if (g.News.toPingRole == "everyone") toPingRole = "@everyone";
-                                                else if (g.News.toPingRole == "here") toPingRole = "@here";
-                                                else if (!toPingRole) toPingRole = "";
+                                                let toPingRole = "";
+
+                                                if (g.News.toPingRole != null) {
+                                                    await bot.guilds.fetch(g.guildID);
+
+                                                    const guild = await bot.guilds.cache.get(g.guildID);
+
+                                                    await guild.roles.fetch(g.News.toPingRole);
+                                                    if (!guild) return;
+                                                    if (g.News.toPingRole == "everyone") toPingRole = "@everyone";
+                                                    else if (g.News.toPingRole == "here") toPingRole = "@here";
+                                                    else if (!toPingRole) toPingRole = "";
+                                                    else toPingRole = await guild.roles.cache.get(g.News.toPingRole);
+                                                }
 
                                                 await toSendChannel.send(vMessage.replace("$ping", toPingRole), embed);
 
