@@ -57,11 +57,11 @@ module.exports = async (bot) => {
         const mutes = await Mutes.find({});
 
         for (const mute of mutes) {
-            if (mute.created + mute.muteTime <= Date.now()) {
+            async function deleteDoc() {
+                await Mutes.deleteOne(mute).catch(e => console.log(e));
+            }
 
-                async function deleteDoc() {
-                    await Mutes.deleteOne(mute).catch(e => console.log(e));
-                }
+            if (mute.created + mute.muteTime <= Date.now() || mute.muteTime < 1000) {
 
                 const guild = await bot.guilds.cache.get(mute.guildID);
 
