@@ -76,7 +76,7 @@ module.exports = {
                 }
             }
 
-            const background = await Canvas.loadImage("https://i.imgur.com/oAUm3c8.png");
+            const background = await Canvas.loadImage("https://i.imgur.com/aQJ0kl7.png");
 
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
