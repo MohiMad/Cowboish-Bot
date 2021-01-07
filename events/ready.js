@@ -36,7 +36,7 @@ module.exports = async (bot) => {
 
 
 
-    setInterval(() => {
+    setInterval(async () => {
 
         const cooldownCheck = await Cooldown.find({});
 
