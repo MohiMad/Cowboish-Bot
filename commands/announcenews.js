@@ -27,8 +27,6 @@ module.exports = {
 
                 //.replace(/[(]/g, '**(').replace(/[)]/g, ')**');
 
-
-
                 GUILDS.filter(x => x.PatchChannel != null).forEach(async (doc) => {
                     await bot.channels.fetch(doc.PatchChannel).catch(e => console.log(e));
 

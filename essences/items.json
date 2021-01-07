@@ -1807,6 +1807,118 @@
         },
         {
             "Name": [
+                "Priestess Dark Side",
+                "priestess dark side",
+                "priestessdarkside"
+            ],
+            "Item": "coa-14",
+            "linkTag": "https://i.imgur.com/MqdfLmi.png",
+            "logicpathID": "priestess_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Cowboy Dark Side",
+                "cowboy dark side",
+                "cowboydarkside"
+            ],
+            "Item": "coa-15",
+            "linkTag": "https://i.imgur.com/djwTy36.png",
+            "logicpathID": "cowboy_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Perfumer Dark Side",
+                "perfumer dark side",
+                "perfumerdarkside"
+            ],
+            "Item": "coa-16",
+            "linkTag": "https://i.imgur.com/k5udxtL.png",
+            "logicpathID": "perfumer_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Lucky Guy Dark Side",
+                "lucky guy dark side",
+                "luckyguydarkside"
+            ],
+            "Item": "coa-17",
+            "linkTag": "https://i.imgur.com/bGGS5Ma.png",
+            "logicpathID": "luckyguy_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Geisha Dark Side",
+                "geisha dark side",
+                "geishadarkside"
+            ],
+            "Item": "coa-18",
+            "linkTag": "https://i.imgur.com/b4Ez2h8.png",
+            "logicpathID": "geisha_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Soul Weaver Dark Side",
+                "soul weaver dark side",
+                "soulweaverdarkside"
+            ],
+            "Item": "coa-19",
+            "linkTag": "https://i.imgur.com/7RU4KqQ.png",
+            "logicpathID": "soulweaver_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Wu Chang Dark Side",
+                "wu chang dark side",
+                "wuchangdarkside"
+            ],
+            "Item": "coa-20",
+            "linkTag": "https://i.imgur.com/UXdG0ZR.png",
+            "logicpathID": "wuchang_DS",
+            "x": 15,
+            "y": 11,
+            "Width": 145,
+            "Height": 145
+        },
+        {
+            "Name": [
+                "Feaster Dark Side",
+                "feaster dark side",
+                "feasterdarkside"
+            ],
+            "Item": "coa-21",
+            "linkTag": "https://i.imgur.com/IgwgFgd.png",
+            "logicpathID": "feaster_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 135,
+            "Height": 135
+        },
+        {
+            "Name": [
                 "Happy Birthday Seer",
                 "seer birthday",
                 "happy birthday seer",
@@ -2535,7 +2647,14 @@
     ],
     "PowerUps": [
         {
-            "Name": ["Pass Card", "pass", "passcard", "skip", "passquestion", "skipquestion"],
+            "Name": [
+                "Pass Card",
+                "pass",
+                "passcard",
+                "skip",
+                "passquestion",
+                "skipquestion"
+            ],
             "Link": "https://i.imgur.com/f21kQra.png",
             "Emoji": "passCard",
             "Usage": "This item is useable in the commands `$prefixquick` and `$prefixhunt`... Once you run one of those commands and feel like not being able to answer the question given, use your Pass Card by typing 'Pass' in the chat",
@@ -2543,7 +2662,13 @@
             "ID": "pass"
         },
         {
-            "Name": ["Reveal Card", "reveal", "revealcard", "reveal-card", "revealanswer"],
+            "Name": [
+                "Reveal Card",
+                "reveal",
+                "revealcard",
+                "reveal-card",
+                "revealanswer"
+            ],
             "Link": "https://i.imgur.com/OWX1LT4.png",
             "Emoji": "revealCard",
             "Usage": "Reveal Cards are useable in `$prefixquick` and `$prefixhunt` commands and it gives you the ability to reveal the answer of the question you're stuck in... The answer is revealed at the end of the embed's description, powerups can't be used twice on one question!",
@@ -2551,7 +2676,12 @@
             "ID": "reveal"
         },
         {
-            "Name": ["Switch Card", "switchcard", "switch", "switchquestion"],
+            "Name": [
+                "Switch Card",
+                "switchcard",
+                "switch",
+                "switchquestion"
+            ],
             "Link": "https://i.imgur.com/ocr2s9p.png",
             "Emoji": "switchCard",
             "Usage": "Use this powerup when you encounter a hard question you can't answer in the `$prefixhunt` or `$prefixquick` commands to make the bot switch to another question... Powerups can only be used once per question",
@@ -2559,7 +2689,12 @@
             "ID": "switch"
         },
         {
-            "Name": ["Black Mud", "blackmud", "mud", "mudbomb"],
+            "Name": [
+                "Black Mud",
+                "blackmud",
+                "mud",
+                "mudbomb"
+            ],
             "Link": "https://i.imgur.com/IY5b2UJ.png",
             "Emoji": "blackMud",
             "Usage": "This powerup is useable via the command `$prefixuse` and it allows you to throw a mud-ball at your friend's `logicpath` profile\nThe effect lasts for **24 hours** but can be removed by using the **Excitement-Powerup**\n\n**Usage:** `$prefixuse mud <user>`",
@@ -2567,7 +2702,14 @@
             "ID": "mud"
         },
         {
-            "Name": ["Cooldown Minimizer", "cooldownminimizer", "speed", "speedpill", "speedpotion", "cooldown"],
+            "Name": [
+                "Cooldown Minimizer",
+                "cooldownminimizer",
+                "speed",
+                "speedpill",
+                "speedpotion",
+                "cooldown"
+            ],
             "Link": "https://i.imgur.com/KbFzIQu.png",
             "Emoji": "speedPill",
             "Usage": "This powerup minimizes the cooldowns for all commands... The percentage of the cooldowns' reducement is randomized, it can be either **10%**, **30%** or **50%**...\nTo use this powerup, do `$prefixuse cooldownMinimizer`... The effect lasts for **1 hour** and Can't be stacked.",
@@ -2575,7 +2717,12 @@
             "ID": "cooldownMinimizer"
         },
         {
-            "Name": ["Excitement", "excitement", "exc", "exitment"],
+            "Name": [
+                "Excitement",
+                "excitement",
+                "exc",
+                "exitment"
+            ],
             "Link": "https://i.imgur.com/NjC5N6r.png",
             "Emoji": "Excitement",
             "Usage": "Use this powerup to remove negative effects/powerups put on you by other users...\nThis powerup removes the effect of Black Mud...\nDo `$prefixuse excitement` to remove the effect",

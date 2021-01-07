@@ -2,389 +2,449 @@
     "firstEssence": [
         {
             "Shortcuts": [
-                "s13-1",
+                "s14-1",
                 "ess1",
                 "1",
-                "s131",
-                "131",
+                "s141",
+                "141",
                 "one",
-                "dr1",
-                "dangan",
-                "dangan1",
-                "danganronpa",
-                "danganronpa1",
-                "dr"
+                "coa3",
+                "coaiii",
+                "calloftheabyss3",
+                "calloftheabyssiii"
             ],
             "WhichEss": "Ess1",
-            "LinkOfIt": "https://i.imgur.com/M8OK22c.png",
+            "LinkOfIt": "https://i.imgur.com/itIoIEx.png",
             "Format": ".jpg",
-            "Emoji": "<:dangan_1:785446747056898072>"
+            "Emoji": "<:coaIII:796428394463100968>"
         },
         {
-            "Name": "[Costume] Guard 26 - Monokuma",
-            "LinkTag": "GOA3vQn",
-            "Item": "dangan-1",
+            "Name": "[Costume] Smiley Face - Netherwalker",
+            "LinkTag": "QRQyG0s",
+            "Item": "coa-1",
             "Tier": "S",
             "FragAmount": 2000,
-            "Title": "💛 Wooo author got Monokuma 💛",
+            "Title": "💛 Waaaa author got Netherwalker 💛",
             "Color": "0xfcba03",
-            "Footer": "🐻🐻🐻💣💣💣🤖🤖"
+            "Footer": "🤡🤡🤡🤡"
         },
         {
-            "Name": "[Costume] Barmaid - Enoshima Junko",
-            "LinkTag": "6YhSn8r",
-            "Item": "dangan-2",
+            "Name": "[Costume] Mechanic - Puppeteer",
+            "LinkTag": "dEubVtC",
+            "Item": "coa-2",
             "Tier": "A",
             "FragAmount": 1000,
-            "Title": "💜 author got Junkooooo :D 💜",
+            "Title": "💜 author got Puppeteer :D 💜",
             "Color": "0xbb2af5",
             "Footer": "(●'◡'●)"
         },
         {
-            "Name": "[Costume] Coordinator - Kyoko Kirigiri",
-            "LinkTag": "zw1Mwmr",
-            "Item": "dangan-3",
+            "Name": "[Costume] Cowboy - Whiplash",
+            "LinkTag": "dNG7poD",
+            "Item": "coa-3",
             "Tier": "A",
             "FragAmount": 1000,
-            "Title": "💜 author got Kyokoooooo 💜",
+            "Title": "💜 OMG author got Whiplash 💜",
             "Color": "0xbb2af5",
-            "Footer": "╰(*°▽°*)╯"
+            "Footer": "Aaaaa look at that sexy Cowboy skin >.>"
         },
         {
-            "Name": "[Costume] Lucky Guy - Makoto Naegi",
-            "LinkTag": "UzjV07e",
-            "Item": "dangan-4",
+            "Name": "[Costume] Embalmer - Trickster",
+            "LinkTag": "Zd4uoTT",
+            "Item": "coa-4",
             "Tier": "A",
             "FragAmount": 1000,
-            "Title": "💜 author got Makotooooo 💜",
+            "Title": "💜 OMG author got Trickster 💜",
             "Color": "0xbb2af5",
-            "Footer": "╰(°3°)╯"
+            "Footer": "Handsome Aesop with a frozen coat :v"
         },
         {
-            "Name": "[Standby Motion] Barmaid - Say Hello",
-            "LinkTag": "o8rNMzg",
-            "Item": "dangan-5",
+            "Name": "[Costume] Seer - Surveyor",
+            "LinkTag": "8VVaCBb",
+            "Item": "coa-5",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "💜 OMG author got Surveyor 💜",
+            "Color": "0xbb2af5",
+            "Footer": "How come he stalk with that thing covering his eyes?"
+        },
+        {
+            "Name": "[Costume] Wildling - Bodyguard",
+            "LinkTag": "KFbb1Nw",
+            "Item": "coa-6",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "💙 author got a standby motion for Barmaid 💙",
+            "Title": "💙 author gets his own Bodyguard 💙",
             "Color": "0x2e65b8",
-            "Footer": "*says hello ^-^/*"
+            "Footer": "Yey a Bodyguard for your because you're important <3"
         },
         {
-            "Name": "[Standby Motion] Lucky Guy - Say Hello",
-            "LinkTag": "5pLK7Zv",
-            "Item": "dangan-6",
+            "Name": "[Costume] Geisha - Porcelain Doll",
+            "LinkTag": "INuTp2I",
+            "Item": "coa-7",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "💙 author got a standby motion for LockiGoi 💙",
+            "Title": "💙 author gets Porcelain Doll 💙",
             "Color": "0x2e65b8",
-            "Footer": "*says hello ^-^/*"
+            "Footer": "🎎🎎🎎🎎"
         },
         {
-            "Name": "[Standby Motion] Coordinator - Ponder",
-            "LinkTag": "by89g0P",
-            "Item": "dangan-7",
+            "Name": "[Costume] Priestess - Teleoperator",
+            "LinkTag": "b82EK6j",
+            "Item": "coa-8",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "💙 author got a standby motion for Coordie 💙",
+            "Title": "💙 Oooh author gets Teleoperator 💙",
             "Color": "0x2e65b8",
-            "Footer": "Yey ヾ(•ω•`)o"
+            "Footer": "🕳🕳💫"
         },
         {
-            "Name": "[Standby Motion] Guard 26 - Sober Up",
-            "LinkTag": "Tua5huk",
-            "Item": "dangan-8",
+            "Name": "[Costume] Photographer - Auctioneer",
+            "LinkTag": "CGLRAHG",
+            "Item": "coa-9",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "💙 author got sob- I mean sober up 💙",
+            "Title": "💙 Oooh author gets Auctioneer 💙",
             "Color": "0x2e65b8",
-            "Footer": "*sobs T-T*"
+            "Footer": "Joseph OWO"
         },
         {
-            "Name": "[Emote] Guard 26 - Ultimate “Dance”",
-            "LinkTag": "fucAZnm",
-            "Item": "dangan-9",
+            "Name": "[Costume] Prospector - Patchwork",
+            "LinkTag": "XA2B5rk",
+            "Item": "coa-10",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "🧡 author got Dance for Bonbon 🧡",
-            "Color": "0x795C4C",
-            "Footer": "*Dances like a chicken OWO*"
+            "Title": "💙 Oooh author gets Patchwork 💙",
+            "Color": "0x2e65b8",
+            "Footer": "He cute `(*>﹏<*)′"
         },
         {
-            "Name": "[Emote] Guard 26 - Ultimate “Salute”",
-            "LinkTag": "5pCZ5TH",
-            "Item": "dangan-10",
+            "Name": "[Emote] First Officer - Dance",
+            "LinkTag": "cUJWI18",
+            "Item": "coa-11",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "🧡 author got Salute for Bonbon 🧡",
+            "Title": "🧡 author get Dance for 1st Officer 🧡",
             "Color": "0x795C4C",
-            "Footer": "*Salutes ✪ ω ✪*"
+            "Footer": "*dances*"
         },
         {
-            "Name": "[Emote] Coordinator - Ultimate “Lie Down”",
-            "LinkTag": "owbsdAt",
-            "Item": "dangan-11",
+            "Name": "[Emote] Wildling - Dance",
+            "LinkTag": "o4CjAFR",
+            "Item": "coa-12",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "🧡 ashsh author gets “Lie Down” for coordie 🧡",
+            "Title": "🧡 author get Dance for Wildling 🧡",
             "Color": "0x795C4C",
-            "Footer": "Ngl the way she lies down is h o t"
+            "Footer": "He shakes it in this emote 👀"
         },
         {
-            "Name": "[Emote] Barmaid - Ultimate “Juggle”",
-            "LinkTag": "KptEKYU",
-            "Item": "dangan-12",
+            "Name": "[Emote] Acrobat  - Dance",
+            "LinkTag": "dQbx8HF",
+            "Item": "coa-13",
             "Tier": "B",
             "FragAmount": 200,
-            "Title": "🧡 author gets Ultimate “Juggle” 🧡",
+            "Title": "🧡 author get Dance for Acrobat 🧡",
             "Color": "0x795C4C",
-            "Footer": "⚽⚽⚽"
+            "Footer": "Ow"
         },
         {
-            "Name": "[Emote] Lucky Guy - Ultimate “Forward”",
-            "LinkTag": "TESlSZj",
-            "Item": "dangan-13",
-            "Tier": "B",
-            "FragAmount": 200,
-            "Title": "🧡 author gets Ultimate “Forward” 🧡",
-            "Color": "0x795C4C",
-            "Footer": "Fast forward because yeah :v ⏩⏩"
-        },
-        {
-            "Name": "[Graffiti] Hope's Peak Academy's School Insignia",
-            "LinkTag": "MOUlamj",
-            "Item": "dangan-14",
-            "Tier": "D",
+            "Name": "[Portrait] Priestess - Dark Side",
+            "PortraitName": "Priestess Dark Side",
+            "LinkTag": "7s2ZFEH",
+            "Item": "coa-14",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 author gets a Danganronpa Graffiti 🖤",
+            "Title": "💚 author got Dark Side for Priestess 💚",
+            "Color": "0x4CD31E",
+            "Footer": "(*^▽^*)"
+        },
+        {
+            "Name": "[Portrait] Cowboy - Dark Side",
+            "PortraitName": "Cowboy Dark Side",
+            "LinkTag": "7s2ZFEH",
+            "Item": "coa-15",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Cowboy 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Aaaa Cowboish Portrait OWO"
+        },
+        {
+            "Name": "[Portrait] Perfumer - Dark Side",
+            "PortraitName": "Perfumer Dark Side",
+            "LinkTag": "7s2ZFEH",
+            "Item": "coa-16",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Perfumer 💚",
+            "Color": "0x4CD31E",
+            "Footer": "(✿◡‿◡)"
+        },
+        {
+            "Name": "[Portrait] Lucky Guy - Dark Side",
+            "PortraitName": "Lucky Guy Dark Side",
+            "LinkTag": "rMME9YJ",
+            "Item": "coa-17",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Lucky Guy 💚",
+            "Color": "0x4CD31E",
+            "Footer": "( •̀ ω •́ )/"
+        },
+        {
+            "Name": "[Portrait] Geisha - Dark Side",
+            "PortraitName": "Geisha Dark Side",
+            "LinkTag": "zalN8VM",
+            "Item": "coa-18",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Geisha 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Aaaaa Geisha o((>ω< ))o"
+        },
+        {
+            "Name": "[Portrait] Soul Weaver - Dark Side",
+            "PortraitName": "Soul Weaver Dark Side",
+            "LinkTag": "Bd1crf9",
+            "Item": "coa-19",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Soul Weaver 💚",
+            "Color": "0x4CD31E",
+            "Footer": "U w U"
+        },
+        {
+            "Name": "[Portrait] Wu Chang - Dark Side",
+            "PortraitName": "Wu Chang Dark Side",
+            "LinkTag": "ClmoHE5",
+            "Item": "coa-20",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Wu Chang 💚",
+            "Color": "0x4CD31E",
+            "Footer": "U w U"
+        },
+        {
+            "Name": "[Portrait] Feaster - Dark Side",
+            "PortraitName": "Feaster Dark Side",
+            "LinkTag": "peuwVFh",
+            "Item": "coa-21",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Dark Side for Feaster 💚",
+            "Color": "0x4CD31E",
+            "Footer": "U w U"
+        },
+        {
+            "Name": "[Costume] Cowboy - Autumn Yellow",
+            "LinkTag": "FLL4n6j",
+            "Item": "coa-22",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Autumn Yellow 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Waaa I see myself :0"
+        },
+        {
+            "Name": "[Costume] Prospector - Brownstone",
+            "LinkTag": "jvmLd5L",
+            "Item": "coa-23",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ew author got Brownstone 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Ewgh"
+        },
+        {
+            "Name": "[Costume] Acrobat - Liliac",
+            "LinkTag": "lCkzrrv",
+            "Item": "coa-24",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ow author got Liliac for Acro 💚",
+            "Color": "0x4CD31E",
+            "Footer": "💜💛🟣🟡🟪🟨"
+        },
+        {
+            "Name": "[Costume] First Officer - White Sail",
+            "LinkTag": "wEFUTId",
+            "Item": "coa-25",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ow author got White Sail 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Beautiful 🤍🎀"
+        },
+        {
+            "Name": "[Costume] Barmaid - Barley Wine",
+            "LinkTag": "Bs4Tyyw",
+            "Item": "coa-26",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ow author got Barley Wine 💚",
+            "Color": "0x4CD31E",
+            "Footer": "*Thinks of Barley in Brawl Stars*"
+        },
+        {
+            "Name": "[Costume] Barmaid - Blue Curacao",
+            "LinkTag": "CiOMNd4",
+            "Item": "coa-27",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ow author got Blue Curacao 💚",
+            "Color": "0x4CD31E",
+            "Footer": "💙"
+        },
+        {
+            "Name": "[Costume] Guard 26 - Turquoise Blue",
+            "LinkTag": "e69guml",
+            "Item": "coa-28",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ow author got Turquoise Blue 💚",
+            "Color": "0x4CD31E",
+            "Footer": "💙"
+        },
+        {
+            "Name": "[Costume] Guard 26 - Purple Metal",
+            "LinkTag": "DlJJ4wf",
+            "Item": "coa-29",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 Ow author got Purple Metal 💚",
+            "Color": "0x4CD31E",
+            "Footer": "💜"
+        },
+        {
+            "Name": "[Graffiti] Netherwalker",
+            "LinkTag": "72Nit0n",
+            "Item": "coa-30",
+            "Tier": "D",
+            "FragAmount": 6,
+            "Title": "🖤 lmao author got Netherwalker graffiti 🖤",
             "Color": "0xFFFFFF",
-            "Footer": "I don't think you'll be using it HAHA you can't"
+            "Footer": "It's pretty though"
         },
         {
-            "Name": "[Graffiti] Guard 26 - Monokuma",
-            "LinkTag": "HtnTq8r",
-            "Item": "dangan-15",
+            "Name": "[Graffiti] Mechanic - Puppeteer",
+            "LinkTag": "gcPzY3H",
+            "Item": "coa-31",
             "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets a Monokuma Graffiti 🖤",
+            "FragAmount": 6,
+            "Title": "🖤 author gets Puppeteer but graffiti  🖤",
             "Color": "0xFFFFFF",
-            "Footer": "I don't think you'll be using it HAHA you can't"
+            "Footer": "Does it say 'Moon'?"
         },
         {
-            "Name": "[Graffiti] Barmaid - Ultimate Analytical Prowess",
-            "LinkTag": "Zhvpmcj",
-            "Item": "dangan-16",
+            "Name": "[Graffiti] Cowboy - Whiplash",
+            "LinkTag": "sS9Dmfc",
+            "Item": "coa-32",
             "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets a Barmaid Graffiti 🖤",
+            "FragAmount": 6,
+            "Title": "🖤 aaa author got Whiplash graffiti 🖤",
             "Color": "0xFFFFFF",
-            "Footer": "Graffiti but it's cute (*￣3￣)╭"
+            "Footer": "Simp for Whiplash :>"
         },
         {
-            "Name": "[Graffiti] Lucky Guy - Reference Book",
-            "LinkTag": "SwpVqGX",
-            "Item": "dangan-17",
+            "Name": "[Graffiti] Embalmer - Trickster",
+            "LinkTag": "lpPOhFF",
+            "Item": "coa-33",
             "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets a Locki Goi Graffiti 🖤",
+            "FragAmount": 6,
+            "Title": "🖤 aaa author got Trickster graffiti 🖤",
             "Color": "0xFFFFFF",
-            "Footer": "Graffiti but it's cute (*￣3￣)╭"
+            "Footer": "I callenge you to read what that graffiti says"
         },
         {
-            "Name": "[Graffiti] Coordinator - Reference Book",
-            "LinkTag": "geBEmBj",
-            "Item": "dangan-18",
+            "Name": "[Graffiti] Dancer - Vile Blossom",
+            "LinkTag": "bUal4Xk",
+            "Item": "coa-34",
             "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets a Coordie Graffiti 🖤",
+            "FragAmount": 6,
+            "Title": "🖤 aaa author got a Dancer graffiti 🖤",
             "Color": "0xFFFFFF",
-            "Footer": "Graffiti but it's cute (*￣3￣)╭"
+            "Footer": "Ow never noticed it's existance :V"
         },
         {
-            "Name": "[Graffiti] Guard 26 - Mondo Butter",
-            "LinkTag": "CI5VCRO",
-            "Item": "dangan-19",
+            "Name": "[Graffiti] Seer - Surveyor",
+            "LinkTag": "1f5eaKt",
+            "Item": "coa-35",
             "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 You get Mondo Butter 🖤",
+            "FragAmount": 6,
+            "Title": "🖤 aaa author got a Surveyor graffiti 🖤",
             "Color": "0xFFFFFF",
-            "Footer": "Mondo 🧈🧈"
+            "Footer": "U W U"
         },
         {
-            "Name": "[Portrait] Makoto Naegi",
-            "PortraitName": "Makoto Naegi",
-            "LinkTag": "wOzD4MC",
-            "Item": "dangan-20",
+            "Name": "[Graffiti] Photographer - Auctioneer",
+            "LinkTag": "aaCgPIy",
+            "Item": "coa-36",
             "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 That's Makoto Naegi, author 🖤",
-            "Color": "0x000000",
-            "Footer": "o((>ω< ))o"
+            "FragAmount": 6,
+            "Title": "🖤 aaa author got an Auctioneer graffiti 🖤",
+            "Color": "0xFFFFFF",
+            "Footer": "And when is this skin coming? 👀"
         },
         {
-            "Name": "[Portrait] Kyoko Kirigiri",
-            "PortraitName": "Kyoko Kirigiri",
-            "LinkTag": "Z3dEU0E",
-            "Item": "dangan-21",
-            "Tier": "D",
+            "Name": "[Emote] Enchantress - Lie Down",
+            "LinkTag": "ozyyRf4",
+            "Item": "coa-37",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 That's Kyoko Kirigiri, author 🖤",
-            "Color": "0x000000",
-            "Footer": "o((>ω< ))o"
+            "Title": "💙 aaa author got Lie Down for Enchantress 💙",
+            "Color": "0x2B4F69",
+            "Footer": "*^*"
         },
         {
-            "Name": "[Portrait] Sayaka Maizono",
-            "PortraitName": "Sayaka Maizono",
-            "LinkTag": "EXQHVR5",
-            "Item": "dangan-22",
-            "Tier": "D",
+            "Name": "[Emote] Enchantress - Provoke",
+            "LinkTag": "7lIOEoQ",
+            "Item": "coa-38",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 That's Sayaka Maizono, author 🖤",
-            "Color": "0x000000",
-            "Footer": "o((>ω< ))o"
+            "Title": "💙 aaa author got Provoke for Enchantress 💙",
+            "Color": "0x2B4F69",
+            "Footer": "*^*"
         },
         {
-            "Name": "[Portrait] Leon Kuwata",
-            "PortraitName": "Leon Kuwata",
-            "LinkTag": "P5vtVYh",
-            "Item": "dangan-23",
-            "Tier": "D",
+            "Name": "[Emote] Prospector - Lie Down",
+            "LinkTag": "VtE5zP1",
+            "Item": "coa-39",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 That's Leon Kuwata, author 🖤",
-            "Color": "0x000000",
-            "Footer": "（︶^︶）"
+            "Title": "💙 aaa author got Lie Down for Prospector 💙",
+            "Color": "0x2B4F69",
+            "Footer": "*^*"
         },
         {
-            "Name": "[Portrait] Mondo Owada",
-            "PortraitName": "Mondo Owada",
-            "LinkTag": "tNQI7ca",
-            "Item": "dangan-24",
-            "Tier": "D",
+            "Name": "[Emote] Prospector - Provoke",
+            "LinkTag": "Vwtkuhv",
+            "Item": "coa-40",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 author gets Mondo Owada 🖤",
-            "Color": "0x000000",
-            "Footer": "（︶^︶）/"
+            "Title": "💙 aaa author got Provoke for Prospector 💙",
+            "Color": "0x2B4F69",
+            "Footer": "*^*"
         },
         {
-            "Name": "[Portrait] Celestia Ludenberg",
-            "PortraitName": "Celestia Ludenberg",
-            "LinkTag": "kiZbpzs",
-            "Item": "dangan-25",
-            "Tier": "D",
+            "Name": "[Emote] Embalmer - Lie Down",
+            "LinkTag": "QcSIT1m",
+            "Item": "coa-41",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 author gets Celestia Ludenberg UwU 🖤",
-            "Color": "0x000000",
-            "Footer": "（︶^︶）/"
+            "Title": "💙 aaa author got Lie Down for Aesop 💙",
+            "Color": "0x2B4F69",
+            "Footer": "*^*"
         },
         {
-            "Name": "[Portrait] Toko Fukawa",
-            "PortraitName": "Toko Fukawa",
-            "LinkTag": "R1rozi6",
-            "Item": "dangan-26",
-            "Tier": "D",
+            "Name": "[Emote] Seer - Lie Down",
+            "LinkTag": "z7PTi0T",
+            "Item": "coa-42",
+            "Tier": "C",
             "FragAmount": 36,
-            "Title": "🖤 author gets Toko Fukawa UwU 🖤",
-            "Color": "0x000000",
-            "Footer": "（︶^︶）/"
-        },
-        {
-            "Name": "[Portrait] Aoi Asahina",
-            "PortraitName": "Aoi Asahina",
-            "LinkTag": "2KeTxiH",
-            "Item": "dangan-27",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Aoi Asahina U~U 🖤",
-            "Color": "0x000000",
-            "Footer": "(´･ω･`)?"
-        },
-        {
-            "Name": "[Portrait] Byakuya Togami 2",
-            "PortraitName": "Byakuya Togami 2",
-            "LinkTag": "ZS085t7",
-            "Item": "dangan-28",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Byakuya Togami U~U 🖤",
-            "Color": "0x000000",
-            "Footer": "(´･ω･`)/"
-        },
-        {
-            "Name": "[Portrait] Hifumi Yamada",
-            "PortraitName": "Hifumi Yamada",
-            "LinkTag": "Vh0WwHf",
-            "Item": "dangan-29",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Hifumi Yamada :D 🖤",
-            "Color": "0x000000",
-            "Footer": "(´･ω･`)/"
-        },
-        {
-            "Name": "[Portrait] Enoshima Junko",
-            "PortraitName": "Enoshima Junko",
-            "LinkTag": "HblXElh",
-            "Item": "dangan-30",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Enoshima Junko :D 🖤",
-            "Color": "0x000000",
-            "Footer": "The portrait not the skin tho 😁"
-        },
-        {
-            "Name": "[Portrait] Chihiro Fujisaki",
-            "PortraitName": "Chihiro Fujisaki",
-            "LinkTag": "FpYSq7z",
-            "Item": "dangan-31",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Chihiro Fujisaki :D 🖤",
-            "Color": "0x000000",
-            "Footer": ":D"
-        },
-        {
-            "Name": "[Portrait] Sakura Ogami",
-            "PortraitName": "Sakura Ogami",
-            "LinkTag": "0Z6gZh9",
-            "Item": "dangan-32",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Sakura Ogami :D 🖤",
-            "Color": "0x000000",
-            "Footer": "Imagine putting spoilers in here hehe"
-        },
-        {
-            "Name": "[Portrait] Kiyotaka Ishimaru",
-            "PortraitName": "Kiyotaka Ishimaru",
-            "LinkTag": "hHhye2P",
-            "Item": "dangan-33",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Kiyotaka Ishimaru :D 🖤",
-            "Color": "0x000000",
-            "Footer": "Imagine putting spoilers in here hehe"
-        },
-        {
-            "Name": "[Portrait] Mukuro Ikusaba",
-            "PortraitName": "Mukuro Ikusaba",
-            "LinkTag": "wZatEoX",
-            "Item": "dangan-34",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Mukuro Ikusaba :D 🖤",
-            "Color": "0x000000",
-            "Footer": "Online classes gave me time to do these xD"
-        },
-        {
-            "Name": "[Portrait] Yasuhiro Hagakure",
-            "PortraitName": "Yasuhiro Hagakure",
-            "LinkTag": "ldQOdBJ",
-            "Item": "dangan-35",
-            "Tier": "D",
-            "FragAmount": 36,
-            "Title": "🖤 author gets Yasuhiro Hagakure :D 🖤",
-            "Color": "0x000000",
-            "Footer": "Yeah Corona is such a blessing but please stay safe <3"
+            "Title": "💙 aaa author got Lie Down for Seer 💙",
+            "Color": "0x2B4F69",
+            "Footer": "*^*"
         }
     ],
     "secondEssence": [
@@ -752,7 +812,6 @@
             "Color": "0x000000",
             "Footer": "It's a cute littole pink Monokuma UwU"
         }
-
     ],
     "thirdEssence": [
         {
@@ -790,14 +849,14 @@
             "Footer": "Netease finishing 2020 with a scary skin 👀"
         },
         {
-        "Name": "[Costume] Gravekeeper - Cheese",
-        "LinkTag": "Gq4DpQk",
-        "Item": "s14-3-3",
-        "Tier": "A",
-        "FragAmount": 1000,
-        "Title": "🟪 Ah yes author gets some Cheese 🟪",
-        "Color": "0xbb2af5",
-        "Footer": "🧀🧀🧀🧀"
+            "Name": "[Costume] Gravekeeper - Cheese",
+            "LinkTag": "Gq4DpQk",
+            "Item": "s14-3-3",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "🟪 Ah yes author gets some Cheese 🟪",
+            "Color": "0xbb2af5",
+            "Footer": "🧀🧀🧀🧀"
         },
         {
             "Name": "[Costume] Bloody Queen - Roaster",
@@ -1246,6 +1305,5 @@
             "Color": "0xFFFFFF",
             "Footer": "Mec cutie >___<"
         }
-        
     ]
 }

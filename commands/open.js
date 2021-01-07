@@ -17,26 +17,26 @@ module.exports = {
 
         const cooldownCheck = await findCooldown(message, "open");
 
-        //if (cooldownCheck) return coolEmbed(message, "Ooops! The cooldown is still on >:/", "Please wait **REMAINING** before being able to execute this command again :)", cooldownCheck.timeRemaining, ["s"]);
+        if (cooldownCheck) return coolEmbed(message, "Ooops! The cooldown is still on >:/", "Please wait **REMAINING** before being able to execute this command again :)", cooldownCheck.timeRemaining, ["s"]);
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        var s10_cmd = "`dangan`, `dr`, or `1`";
-        s10_2_cmd = "`dangan2`, `dr2`, or `2`",
+        var s10_cmd = "`COAIII`, `coa3`, or `1`";
+        s10_2_cmd = "`COAIV`, `coa4`, or `2`",
             s10_3_cmd = "`s14-3`, `ess3` or `3`",
 
-            exmple = "`" + prefix + "open 1` to open a `Danganronpa1` " + ess1 + " essence",
+            exmple = "`" + prefix + "open 1` to open a `COAIII` " + ess1 + " essence",
             stats_cmd = "`" + prefix + "open stats <essenceID>`",
             author = message.author.username,
-            open10 = "`" + prefix + "open s14-1 10`\n`" + prefix + "open s14-1 3`",
+            open10 = "`" + prefix + "open COAIII 10`\n`" + prefix + "open COAIII 3`",
             boolean = false;
 
         const noargsEmbed = new MessageEmbed()
             .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL())
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
-                        ${ess1} | **Danganronpa Essence 1** ─ ID ➜ ${s10_cmd}
-                        ${ess2} | **Danganronpa Essence 2** ─ ID ➜ ${s10_2_cmd}
+                        ${ess1} | **Call Of The Abyss 3** ─ ID ➜ ${s10_cmd}
+                        ${ess2} | ~~**Call Of The Abyss 4**~~ ─ ID ➜ ${s10_2_cmd}
                         ${ess3} | **Essence s14-3** ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
@@ -68,6 +68,7 @@ module.exports = {
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
 
                 if (essence[0].Shortcuts.includes(args[1].toLowerCase())) {
+                    if (i === 1) return message.channel.send(`**${message.author.toString()}, this essence is currently unavailable to open!**`);
 
                     const EssenceONLY = essence.slice(1);
 
@@ -196,8 +197,9 @@ module.exports = {
 
                 else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                     boolean = true;
+                    if (i === 1) return message.channel.send(`**${message.author.toString()}, this essence is currently unavailable to open!**`);
 
-                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Essences s14-1** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Essence s14-2** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s14-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats s14-1`");
+                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Call Of The Abyss 3** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Call Of The Abyss 4** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s14-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats COAIII`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
                         await statsCheck(message, `s14-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);

@@ -36,9 +36,9 @@ module.exports = async (bot) => {
 
 
 
-    setInterval(async () => {
+    while (true) {
 
-        let cooldownCheck = await Cooldown.find({});
+        const cooldownCheck = await Cooldown.find({});
 
         for (const cooldown of cooldownCheck) {
 
@@ -56,15 +56,14 @@ module.exports = async (bot) => {
 
         const mutes = await Mutes.find({});
 
+        if (!mutes) return;
         for (const mute of mutes) {
             async function deleteDoc() {
                 await Mutes.deleteOne(mute).catch(e => console.log(e));
             }
 
             if (mute.created + mute.muteTime <= Date.now() || mute.muteTime < 1000) {
-
                 const guild = await bot.guilds.cache.get(mute.guildID);
-
                 if (!guild) return deleteDoc();
 
                 const member = await guild.members.cache.get(mute.userID);
@@ -73,11 +72,11 @@ module.exports = async (bot) => {
 
                 let muteRole = await guild.roles.cache.find((x) => x.name === "muted");
 
-                if (!muteRole) muteRole = await guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
+                if (!muteRole) muteRole = await guild.roles.create({ name: "muted", color: "#27272b", permissions: [] });
 
                 if (!member.roles.cache.has(muteRole.id)) return deleteDoc();
 
-                member.roles.remove(muteRole);
+                await member.roles.remove(muteRole);
 
                 const logChannel = await guild.channels.cache.get(mute.channelID);
 
@@ -88,7 +87,7 @@ module.exports = async (bot) => {
 
             }
         }
-    }, 3000);
+    }
 
 
     const dbl = new DBL(config.dbl_token, bot);

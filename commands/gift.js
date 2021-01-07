@@ -55,22 +55,22 @@ module.exports = {
 
             },
             {
-                searchArray: ["s13-1 essences", "ess1", "s13-1", "1"],
+                searchArray: ["s14-1 essences", "ess1", "s14-1", "1", "coaiv", "coa4", "coavi", "calloftheabyss4"],
                 item: "Ess1",
-                link: "M8OK22c",
+                link: "itIoIEx",
                 emoji: e.ess1,
-                hex: "0x1994F4"
+                hex: "0xAC2C1C"
 
             },
             {
-                searchArray: ["13-2 essences", "ess2", "s13-2", "2"],
+                searchArray: ["14-2 essences", "ess2", "s14-2", "2", "coaiii", "coa3", "calloftheabyss3"],
                 item: "Ess2",
-                link: "tmohFQk",
+                link: "",
                 emoji: e.ess2,
                 hex: "0xEA0CD6"
             },
             {
-                searchArray: ["13-2 essences", "ess3", "s13-3", "3"],
+                searchArray: ["14-3 essences", "ess3", "s14-3", "3"],
                 item: "Ess3",
                 link: "QQxyNKu",
                 emoji: e.ess3,
@@ -135,7 +135,7 @@ module.exports = {
             }
         }
 
-        return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\n**Here is a list of giftable items**:\n<:frags:655840344725913600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n" + e.ess1 + " | Shortcuts: `ess1`, `s13-1`, `1`\n<:ess2:655840643847028751> | Shortcuts: `ess2`, `s13-2`, `2`\n<:ess3:655840571616919586> | Shortcuts: `ess3`, `s13-3`, `3`\n**Example**: `" + prefix + "gift`" + ` ${message.author}` + "` 10 fragments`\n\nYou can also gift your friends **skins** by doing\n`" + prefix + "gift <@tagSomeone> skin <skinName/Number>`");
+        return ErrorMsg(bot, message, "Looks like you're having trouble with the items you want to gift\n**Here is a list of giftable items**:\n<:frags:655840344725914600> | Shortcuts: `frags`, `fragment`, `fragments`\n<:inspirations:655840409674711060> | Shortcuts: `insp`, `inspirations`, `inspiration`\n<:clue:655384523735040000> | Shortcuts: `clue`, `clues`\n" + e.ess1 + " | Shortcuts: `ess1`, `s14-1`, `1`\n" + e.ess2 + " | Shortcuts: `ess2`, `s14-2`, `2`\n" + e.ess3 + " | Shortcuts: `ess3`, `s14-3`, `3`\n**Example**: `" + prefix + "gift`" + ` ${message.author}` + "` 10 fragments`\n\nYou can also gift your friends **skins** by doing\n`" + prefix + "gift <@tagSomeone> skin <skinName/Number>`");
 
     }
 }
