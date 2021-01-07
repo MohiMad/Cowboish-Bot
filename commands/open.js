@@ -197,10 +197,12 @@ module.exports = {
 
                 else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                     boolean = true;
-                    if (i === 1) return message.channel.send(`**${message.author.toString()}, this essence is currently unavailable to open!**`);
+                    
                     if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Call Of The Abyss 3** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Call Of The Abyss 4** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s14-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats COAIII`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
+                        if (i === 1) return message.channel.send(`**${message.author.toString()}, this essence is currently unavailable to open!**`);
+
                         await addCooldown(message, 3000, "open");
                         return await statsCheck(message, `s14-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
                     }
