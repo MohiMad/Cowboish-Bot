@@ -50,7 +50,7 @@ module.exports = {
             ${e.ess1} | **Call Of The Abyss 3** - Price : *96* ${e.insp} - ID: $COAIII$
             ${e.ess2} | ~~**Call Of The Abyss 4**~~ - Price : *96* ${e.insp} - ID: $COAIV$
             ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: $s14-3$
-            `)
+            `.replace(rg, "`"))
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")
             .setFooter("Cowboish Essence Shop ─ page 1 of 1");

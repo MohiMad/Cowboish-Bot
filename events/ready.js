@@ -36,7 +36,7 @@ module.exports = async (bot) => {
 
 
 
-    while (true) {
+    setInterval(() => {
 
         const cooldownCheck = await Cooldown.find({});
 
@@ -87,7 +87,7 @@ module.exports = async (bot) => {
 
             }
         }
-    }
+    }, 2000);
 
 
     const dbl = new DBL(config.dbl_token, bot);
