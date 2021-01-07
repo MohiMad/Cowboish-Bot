@@ -73,7 +73,7 @@ module.exports = async (bot) => {
 
                 let muteRole = await guild.roles.cache.find((x) => x.name === "muted");
 
-                if (!muteRole) muteRole = await guild.createRole({ name: "muted", color: "#27272b", permissions: [] });
+                if (!muteRole) muteRole = await guild.roles.create({ name: "muted", color: "#27272b", permissions: [] });
 
                 if (!member.roles.cache.has(muteRole.id)) return deleteDoc();
 
