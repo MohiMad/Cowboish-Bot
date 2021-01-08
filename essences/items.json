@@ -232,6 +232,15 @@
         },
         {
             "Name": [
+                "[Costume] Smiley Face - Netherwalker"
+            ],
+            "linkTag": "https://i.imgur.com/YD3JDKD.png",
+            "Item": "coa-1",
+            "Color": "0xfcba03",
+            "Des": "Pickman only took what he saw in the Nether as inspiration, and somehow those fools couldn't get enough of his work. When he discovered that the Vile Blossom's deteriorating erosion can only be transferred and can't be eliminated, he chose to be the container himself. But who can ever replace her as Pickman's model?"
+        },
+        {
+            "Name": [
                 "[Costume] Percy - Conquer",
                 "conquer",
                 "33",
@@ -301,12 +310,48 @@
         },
         {
             "Name": [
-                "[Costume] Gravekeeper - "
+                "[Costume] Gravekeeper - Cheese"
             ],
             "linkTag": "https://i.imgur.com/8UGXGK5.png",
             "Item": "s14-3-3",
             "Color": "0xbb2af5",
             "Des": "A piece of soft and peculiar cheese, nothing more. Despite it being the first dish coming out of the oven, its sense of inferiority diminishes its courage to escape from utopia."
+        },
+        {
+            "Name": [
+                "[Costume] Mechanic - Puppeteer"
+            ],
+            "linkTag": "https://i.imgur.com/nUwZWjy.png",
+            "Item": "coa-2",
+            "Color": "0xbb2af5",
+            "Des": "She never figured out why the Investigation Bureau sealed off the Secrets of the Abyss, until the Netherwalker's existence made her realise the catastrophe if it is ever revealed. But the Abyss will no doubt find a way to show itself, and just when she's willing to step up..."
+        },
+        {
+            "Name": [
+                "[Costume] Cowboy - Whiplash"
+            ],
+            "linkTag": "https://i.imgur.com/L1TqoIK.png",
+            "Item": "coa-3",
+            "Color": "0xbb2af5",
+            "Des": "At the exit on the other side, the veteran's last lesson for the newcomer is about choice: take on everything alone and stay behind, or accept the horrible price and leave. No matter which choice is made, it will only bring him closer to the Netherwalker."
+        },
+        {
+            "Name": [
+                "[Costume] Embalmer - Trickster"
+            ],
+            "linkTag": "https://i.imgur.com/yyYSBzZ.png",
+            "Item": "coa-4",
+            "Color": "0xbb2af5",
+            "Des": "The Trickster tried his best to protect the Surveyors mind from being eroded, just so they could continue with their journey on the road of darkness with the Abyss' creation in their hands. Yet, his playful miscommunication finally took its toll on the Puppeteer."
+        },
+        {
+            "Name": [
+                "[Costume] Seer - Surveyor"
+            ],
+            "linkTag": "https://i.imgur.com/aOkDH94.png",
+            "Item": "coa-5",
+            "Color": "0xbb2af5",
+            "Des": "The admirers call it the Nether, while the opponents call it the Abyss. To the Surveyor, this is how the indiscernible manipulate people's mind, so that the admirers become strong and the opponents shrink in fear. The erosion of mind and engraving of flesh through art is nothing but another of their hobbies."
         },
         {
             "Name": [
