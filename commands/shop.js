@@ -502,8 +502,9 @@ module.exports = {
             if (!args[2]) page = 0;
             else if (isNaN(args[2])) page = 0;
             else if (Number(args[2]) > skinPages.length) return message.channel.send(`Um- there are only ${skinPages.length} skin pages... **${message.author.username}**`)
-            else if(Number(args[2]) == 0) page = 0;
-            else if(["-"].includes(args[2])) Math.abs(args[2] + 1)
+            else if (Number(args[2]) == 0) page = 0;
+            else if (Math.sign(args[2]) == -1) page = Math.abs(args[2] + 1)
+            else if (Math.sign(args[2]) == -1 && args[2] < -5) page = 0;
             else page = Math.abs(args[2] - 1);
 
             let skinsEmbed = new MessageEmbed()
