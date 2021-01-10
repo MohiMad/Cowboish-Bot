@@ -3,7 +3,7 @@ const logicPath = require("./models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Cooldown = require("./models/cooldown.js");
 const humanizeDuration = require("humanize-duration");
-const { clues, frags, insp, ess1, ess2, ess3, twitter, feaster } = require("./emojis.json");
+const { clues, frags, insp, ess1, ess2, ess3, twitter, topGG, cowboishEmoji } = require("./emojis.json");
 const Guild = require("./models/guild.js");
 
 const permissions = require("./permissions.js");
@@ -318,12 +318,15 @@ module.exports = {
 
 		let randomNumber = Math.round(Math.random() * 3);
 
-		if (randomNumber === 1) {
+		if (randomNumber === 0) {
+			des += `**Enjoying Cowboish? ${cowboishEmoji}**\nWrite a review about your experience with using Cowboish on our [Top.gg](https://top.gg/bot/632291800585076761)${topGG} page!`
+		}
+		else if (randomNumber === 1) {
 			if (message.guild.id !== "636241255994490900") {
-				des = des + `\n\n**You're missing our daily giveaways on [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be ${clues}, ${frags}, ${insp}, ${ess1}, ${ess2}, ${ess3}, and more!`
+				des = des + `\n\n**You're missing our daily giveaways in [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be ${clues}, ${frags}, ${insp}, ${ess1}, ${ess2}, ${ess3}, and more!`
 			}
 		} else if (randomNumber === 2) {
-			des = des + `\n\nWhile you here, you may want to follow **[Mohi on Twitter](https://twitter.com/MohiHaw)**${twitter} to stay updated ^-^`
+			des = des + `\n\n**Cowboish Fact:**\nWe host daily logicpath giveaways in [Cowboish Server](https://discord.com/invite/YWcSukS)${cowboishEmoji}`
 		} else if (randomNumber === 3) {
 			if (message.guild.id !== "636241255994490900") {
 				des += `\n\n**Tired of Waiting?**\nUse Cowboish in **[Cowboish Server](https://discord.com/invite/YWcSukS)** and you'll get **20%** shorter cooldowns!`
