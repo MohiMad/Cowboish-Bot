@@ -319,14 +319,14 @@ module.exports = {
 		let randomNumber = Math.round(Math.random() * 3);
 
 		if (randomNumber === 0) {
-			des += `**Enjoying Cowboish? ${cowboishEmoji}**\nWrite a review about your experience with using Cowboish on our [Top.gg](https://top.gg/bot/632291800585076761)${topGG} page!`
+			des += `\n\n**Enjoying Cowboish? ${cowboishEmoji}**\nWrite a review about your experience with using Cowboish on our [Top.gg](https://top.gg/bot/632291800585076761) page!`
 		}
 		else if (randomNumber === 1) {
 			if (message.guild.id !== "636241255994490900") {
 				des = des + `\n\n**You're missing our daily giveaways in [Cowboish Server](https://discord.com/invite/YWcSukS)**\nGiveaway rewards may be ${clues}, ${frags}, ${insp}, ${ess1}, ${ess2}, ${ess3}, and more!`
 			}
 		} else if (randomNumber === 2) {
-			des = des + `\n\n**Cowboish Fact:**\nWe host daily logicpath giveaways in [Cowboish Server](https://discord.com/invite/YWcSukS)${cowboishEmoji}`
+			des = des + `\n\n**Cowboish Fact:**\nWe host daily logicpath giveaways in [Cowboish Server](https://discord.com/invite/YWcSukS) ${cowboishEmoji}`
 		} else if (randomNumber === 3) {
 			if (message.guild.id !== "636241255994490900") {
 				des += `\n\n**Tired of Waiting?**\nUse Cowboish in **[Cowboish Server](https://discord.com/invite/YWcSukS)** and you'll get **20%** shorter cooldowns!`
