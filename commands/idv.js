@@ -35,7 +35,8 @@ module.exports = {
                 if (Image.includes("gallery")) Image = `https://i.redd.it/${allowed[randomPostNumber].data["gallery_data"]["items"][0].media_id}.jpg`;
 
 
-                let postFalir = allowed[randomPostNumber].data.link_flair_richtext[0].t;
+                let postFalir = allowed[randomPostNumber].data.link_flair_richtext[0].t ? allowed[randomPostNumber].data.link_flair_richtext[0].t : " ";
+
                 let PostTitle = allowed[randomPostNumber].data.title;
 
                 let Upvotes = allowed[randomPostNumber].data.ups;
@@ -72,7 +73,7 @@ module.exports = {
             if (e.message === "Response code 403 (Forbidden)") return message.reply("Can't access that subreddit! Sorry :'(");
             if (e.message === "Response code 429 (Too Many Requests)") return message.reply("The execution of this command is quite fast... Please slow it down ;-;");
 
-            console.log(`Identity V Error: ${e}`);
+            console.log(`Identity V Reddit Error: ${e}`);
 
         }
 

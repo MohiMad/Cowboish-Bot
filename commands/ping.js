@@ -2,7 +2,7 @@ const spamStopper = new Set();
 
 module.exports = {
     name: ["ping", "ingameping", "ingame-ping"],
-    description: "Hahah your ingame-ping is 998ms\nYou get it right? ingame-ping but in-discord ;)\nCowboish will ask you to send a message after executing the command, the faster you respond the lower your ping is going to be...\n\n**Lowest Ping By Noctilla?**: 🟩`13.5ms`\nLet us know in [Cowboish Server](https://discord.com/invite/YWcSukS) if you beat that record ;)",
+    description: "Hahah your ingame-ping is 998ms\nYou get it right? ingame-ping but in-discord ;)\nCowboish will ask you to send a message after executing the command, the faster you respond the lower your ping is going to be...\n\n**Lowest Ping By Betelgeusa**: 🟩`3.25ms`\nLet us know in [Cowboish Server](https://discord.com/invite/YWcSukS) if you beat that record ;)",
     permissions: ["SEND_MESSAGES", "MANAGE_MESSAGES"],
     category: "IdentityV",
     execute: async (message, prefix) => {

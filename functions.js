@@ -12,53 +12,25 @@ module.exports = {
 
 	rewards: async (bot) => {
 
+
 		await logicPath.find({})
 			.sort({ logic: -1 }).limit(5).exec(async (err, res) => {
 				if (err) console.log(err);
 
 				//the ID of Rewards channel on Cowboish server
 				let reChannel = bot.channels.cache.get('676502025499836416');
+				if (!reChannel) return console.log("LMAO WHERE IS MY REWARDS CHANNEL MOHEEEE?");
 
-				let n1 = bot.users.cache.get(res[0].UserID) || "Not found";
-				let n2 = bot.users.cache.get(res[1].UserID) || "Not found";
-				let n3 = bot.users.cache.get(res[2].UserID) || "Not found";
-				let n4 = bot.users.cache.get(res[3].UserID) || "Not found";
-				let n5 = bot.users.cache.get(res[4].UserID) || "Not found";
+				for(i = 0; i < 5; i++){
+					await bot.users.fetch(res[i].UserID).catch(e => console.log(e));
+				}
 
-				let reeEmbed = new MessageEmbed()
-					.setTitle("Yaaaay a new week has began!")
-					.setColor("0xf0cf07")
-					.setDescription(stripIndents`
-			《<:uno:676017997420167187>》 **${n1.tag}** 
-			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
-			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
-
-			- - - - -
-			〘<:dos:676019548016738304>〙 **${n2.tag}**
-			**Logicpath Points**: **${res[1].logic}**<:LP:675763680863977513>
-			**Rewards**: **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
-
-			- - - - -
-			〘<:tres:676019592757248001>〙 **${n3.tag}**
-			**Logicpath Points** **${res[2].logic}**<:LP:675763680863977513>
-			**Rewards**: **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
-
-			- - - - -
-			〘4〙 **${n4.tag}**
-			**Logicpath Points**: **${res[3].logic}**<:LP:675763680863977513>
-			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
-
-			- - - - -
-			〘5〙 **${n5.tag}**
-			**Logicpath Points**: **${res[4].logic}**<:LP:675763680863977513>
-			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
+				const n1 = bot.users.cache.get(res[0].UserID) || "Not found";
+				const n2 = bot.users.cache.get(res[1].UserID) || "Not found";
+				const n3 = bot.users.cache.get(res[2].UserID) || "Not found";
+				const n4 = bot.users.cache.get(res[3].UserID) || "Not found";
+				const n5 = bot.users.cache.get(res[4].UserID) || "Not found";
 				
-				`)
-					.setThumbnail("https://i.imgur.com/VGo6rp3.png")
-					.setTimestamp()
-
-				if (!reChannel) return;
-				reChannel.send(reeEmbed);
 
 				res[0].Echoes = res[0].Echoes + 50;
 				res[0].Ess1 = res[0].Ess1 + 3;
@@ -99,6 +71,39 @@ module.exports = {
 				res[4].Clues = res[4].Clues + 200;
 				res[4].save().catch(err => console.log(err));
 
+				let reeEmbed = new MessageEmbed()
+					.setTitle("Yaaaay a new week has began!")
+					.setColor("0xf0cf07")
+					.setDescription(stripIndents`
+			《<:uno:676017997420167187>》 **${n1.tag}** 
+			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
+			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
+
+			- - - - -
+			〘<:dos:676019548016738304>〙 **${n2.tag}**
+			**Logicpath Points**: **${res[1].logic}**<:LP:675763680863977513>
+			**Rewards**: **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
+
+			- - - - -
+			〘<:tres:676019592757248001>〙 **${n3.tag}**
+			**Logicpath Points** **${res[2].logic}**<:LP:675763680863977513>
+			**Rewards**: **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
+
+			- - - - -
+			〘4〙 **${n4.tag}**
+			**Logicpath Points**: **${res[3].logic}**<:LP:675763680863977513>
+			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
+
+			- - - - -
+			〘5〙 **${n5.tag}**
+			**Logicpath Points**: **${res[4].logic}**<:LP:675763680863977513>
+			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
+				
+				`)
+					.setThumbnail("https://i.imgur.com/VGo6rp3.png")
+					.setTimestamp()
+
+				await reChannel.send(reeEmbed);
 			});
 
 	},
