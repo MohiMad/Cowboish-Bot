@@ -8,11 +8,10 @@ const bot = new Discord.Client({
 const schedule = require('node-schedule');
 const { rewards } = require("./functions.js");
 
-const config = require("./config.json");
 const Cooldown = require("./models/cooldown.js");
 const mongoose = require("mongoose");
 
-mongoose.connect(config.mongoose_uri, {
+mongoose.connect(process.env.mongoose_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -45,5 +44,5 @@ schedule.scheduleJob("0 9 * * *", async function () {
 });
 
 
-bot.login(config.token);
+bot.login(process.env.BOT_TOKEN);
 

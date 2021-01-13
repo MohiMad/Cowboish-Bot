@@ -5,7 +5,6 @@ const Cooldown = require("../models/cooldown.js");
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
-const config = require("../config.json");
 
 module.exports = async (bot) => {
 
@@ -87,24 +86,24 @@ module.exports = async (bot) => {
     }, 2000);
 
 
-    const dbl = new DBL(config.dbl_token, bot);
+    const dbl = new DBL(process.env.dbl_token, bot);
 
     dbl.postStats(botGuildCount).catch(e => console.log(e));
 
 
-    const Boats = new BOATS(config.boatsToken);
+    const Boats = new BOATS(process.env.boatsToken);
 
     Boats.postStats(botGuildCount, "632291800585076761")
         .catch((err) => console.log(err));
 
-    /*const Glenn = new GBL(bot.user.id, config.glenToken, false, false);
+    /*const Glenn = new GBL(bot.user.id, process.env.glenToken, false, false);
     
     Glenn.updateStats(botGuildCount).catch(e => console.log(e));
     
     const updateBotList = async () => {
     
     const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
-    .set("Authorization", `Bot ${config.dblToken_2}`)
+    .set("Authorization", `Bot ${process.env.dblToken_2}`)
     .send({
         guilds: botGuildCount,
         users: bot.users.size,
