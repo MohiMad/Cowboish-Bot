@@ -44,5 +44,5 @@ schedule.scheduleJob("0 9 * * *", async function () {
 });
 
  
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.token);
 
