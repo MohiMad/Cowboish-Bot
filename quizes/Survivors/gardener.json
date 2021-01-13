@@ -44,7 +44,7 @@
 	},
 	{
 		"Question": "**Question:**\nWhat debuff does a chair get when gardner dismantles it?",
-		"Answer": ["10% longer chair time", "-10% launch speed", "10% slower launch speed", "10% more chair time"],
+		"Answer": ["10% longer chair time", "-10% launch speed", "10% slower launch speed", "10% more chair time", "the chair countdown becomes 10% slower", "10% slower chair countdown", "10% slower chair launch speed"],
 		"Difficulty": "Hard",
 		"Attachment": "https://i.imgur.com/mDu8m9A.png",
 		"Artist": "@Thortyyyy on Twitter"
