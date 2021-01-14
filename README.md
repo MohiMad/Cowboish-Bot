@@ -13,6 +13,6 @@
 </a>
 
 # [Cowboish-Bot](https://discord.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=268758102)
-**Cowboish Bot is now an open-source Identity V Discord bot coded using JavaScript**
+**Cowboish Bot is an open-source Identity V Discord bot coded using JavaScript**
 - - - 
 ![https://mohimad.github.io/CowboishBot/](https://i.imgur.com/Y2Y2VZP.png)
