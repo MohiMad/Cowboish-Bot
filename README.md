@@ -16,3 +16,9 @@
 **Cowboish Bot is an open-source Identity V Discord bot coded using JavaScript**
 - - - 
 ![https://mohimad.github.io/CowboishBot/](https://i.imgur.com/Y2Y2VZP.png)
+
+Cowboish Bot allows you to interact with the Identity V community in every possible way through Discord.
+
+- - -
+## License
+MIT
