@@ -21,4 +21,4 @@ Cowboish Bot allows you to interact with the Identity V community in every possi
 
 - - -
 ## License
-MIT
+[MIT](https://github.com/MohiMad/Cowboish-Bot/blob/master/LICENSE)
