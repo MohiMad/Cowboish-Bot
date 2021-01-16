@@ -160,7 +160,7 @@ module.exports = {
 
         //buy essences here
         if (["s14-2", "s142", "ess2", "coaiv", "coavi", "calloftheabyss4", "coa4"].includes(args[1].toLowerCase()) || args[1] === "2") {
-            return await essBuy("s14-2", "ess2", e.ess2, "https://i.imgur.com/tmohFQk.png");
+            return await essBuy("s14-2", "ess2", e.ess2, "https://i.imgur.com/B6qZ2Kn.png");
         }
         if (["s211", "s14-1", "ess1", "coaiii", "coa111", "coa3", "calloftheabyss3"].includes(args[1].toLowerCase()) || args[1] === "1") {
             return await essBuy("s14-1", "ess1", e.ess1, "https://i.imgur.com/itIoIEx.png");

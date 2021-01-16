@@ -3,7 +3,7 @@ const { stripIndents } = require('common-tags');
 const Canvas = require('canvas');
 const Discord = require("discord.js");
 const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../functions.js");
-const { Portraits, Frames } = require("../essences/items.json");
+const { Portraits, Frames, Skins } = require("../essences/items.json");
 
 module.exports = {
     name: ["logicpath", "lp", "profile", "inv", "inventory"],
@@ -76,7 +76,7 @@ module.exports = {
                 }
             }
 
-            const background = await Canvas.loadImage("https://i.imgur.com/aQJ0kl7.png");
+            const background = await Canvas.loadImage("https://i.imgur.com/GflnHbf.png");
 
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -86,53 +86,71 @@ module.exports = {
                     ctx.drawImage(FrameLoaded, frame.x, frame.y, frame.Width, frame.Height);
                 }
             }
+            ctx.font = 'bold 20px Aria';
+            ctx.fillStyle = '#000000';
+
+            ctx.fillText(LPuser.username, 160, 50);
 
             ctx.font = 'bold 16px Arial';
-            ctx.fillStyle = '#000000';
-            ctx.fillText(LPuser.username, 160, 35);
+            ctx.fillStyle = '#FFFFFF';
 
             //We change font size
             ctx.font = '14px Arial';
 
+            function positionChange(value, Width) {
+                if (value > 100) Width -= 10;
+                else if (value > 1000) Width -= 20;
+
+                return Width;
+            }
+
             [
                 {
                     printValue: LP.Ess1,
-                    Width: 70,
-                    Height: 268
+                    Width: 58,
+                    Height: 243
                 },
                 {
                     printValue: LP.Ess2,
-                    Width: 189,
-                    Height: 267
+                    Width: 58,
+                    Height: 328
                 },
                 {
                     printValue: LP.Ess3,
-                    Width: 308,
-                    Height: 267
-                },
-                {
-                    printValue: LP.Dices,
-                    Width: 409,
-                    Height: 264
+                    Width: 58,
+                    Height: 408
                 },
                 {
                     printValue: LP.Inspirations,
-                    Width: 407,
-                    Height: 343
+                    Width: 150,
+                    Height: 243
                 },
                 {
-                    printValue: LP.frags,
-                    Width: 400,
-                    Height: 410
+                    printValue: LP.Dices,
+                    Width: 150,
+                    Height: 328
+                },
+                {
+                    printValue: LP.Echoes,
+                    Width: 150,
+                    Height: 408
                 }
-            ].forEach(x => ctx.fillText(x.printValue, x.Width, x.Height));
+            ].forEach(x => ctx.fillText(x.printValue, positionChange(x.printValue, x.Width), x.Height));
 
 
-            ctx.font = 'bold 23px sitka-display';
+            ctx.font = 'bold 20px sitka-display';
+            ctx.fillStyle = '#000000';
 
-            //Edit this here to check through the Opened instead
-            ctx.fillText(LP.S, 90, 405);
-            ctx.fillText(LP.A, 246, 405);
+            let A = 0, S = 0;
+            for (const Askin of Skins.filter(s => s.Color == "0xbb2af5")) {
+                if (LP.Opened.includes(Askin.Item)) A++;
+            }
+            for (const Sskin of Skins.filter(s => s.Color == "0xfcba03")) {
+                if (LP.Opened.includes(Sskin.Item)) S++;
+            }
+
+            ctx.fillText(S, 247, 345);
+            ctx.fillText(A, 363, 342);
 
             ctx.font = '15px sitka-display';
             ctx.fillStyle = '#ffffff';
@@ -142,26 +160,26 @@ module.exports = {
             if (ID === "0") {
                 ID = prefix + "set ID [ID]";
                 ctx.fillStyle = '#000000';
-                ctx.fillRect(381, 16, 100, 21);
+                ctx.fillRect(190, 85, 90, 23);
                 ctx.fillStyle = '#ffffff';
-                ctx.fillText(ID, 382, 32);
+                ctx.fillText(ID, 193, 102);
             } else {
                 ID = LP.ID;
                 ctx.fillStyle = '#000000';
-                ctx.fillText(ID, 382, 32);
+                ctx.fillText(ID, 193, 102);
             }
 
             let region = LP.region || prefix + "set region [region]";
             if (LP.region === "0") {
                 ctx.fillStyle = '#000000';
-                ctx.fillRect(220, 48, 158, 18);
+                ctx.fillRect(225, 60, 145, 20);
                 ctx.fillStyle = '#ffffff';
                 region = prefix + "set region [region]";
-                ctx.fillText(region, 222, 62);
+                ctx.fillText(region, 228, 75);
             } else {
                 region = LP.region;
                 ctx.fillStyle = '#000000';
-                ctx.fillText(region, 222, 62);
+                ctx.fillText(region, 228, 75);
             }
 
             ctx.font = 'italic 14px Courier';
@@ -170,76 +188,37 @@ module.exports = {
             if (LP.bio === "0") {
                 ctx.fillStyle = '#000000';
                 bio = "I'm very cowboiiiiiish >:3";
-                ctx.fillText(bio, 200, 88, 575);
+                ctx.fillText(bio, 197, 128, 575);
             }
             else {
                 bio = LP.bio
                 ctx.fillStyle = '#000000';
-                ctx.fillText(bio, 200, 88, 571);
+                ctx.fillText(bio, 197, 128, 571);
             }
 
-            ctx.font = 'bold 15px sitka-display';
-            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 20px sitka-display';
+            ctx.fillStyle = '#000000';
 
 
-            let opened = LP.S + LP.A + LP.B + LP.C + LP.D;
             [
-                {
-                    printValue: LP.logic,
-                    Height: 230
 
-                },
                 {
-                    printValue: opened,
+                    printValue: LP.frags,
                     Height: 291
 
                 },
                 {
-                    printValue: LP.Echoes,
+                    printValue: LP.Clues,
                     Height: 350
 
                 },
                 {
-                    printValue: LP.Clues,
+                    printValue: LP.logic,
                     Height: 410
 
                 }
-            ].forEach(x => ctx.fillText(x.printValue, 500, x.Height, 570))
 
-
-            let HunterNumber = 1;
-
-            [LP.Hunters.WuChang, LP.Hunters.AxeBoi, LP.Hunters.Lizard,
-            LP.Hunters.Clown, LP.Hunters.GameKeeper, LP.Hunters.Ripper,
-            LP.Hunters.SoulWeaver, LP.Hunters.Geisha, LP.Hunters.PhotoGrapher,
-            LP.Hunters.MadEyes, LP.Hunters.Feaster, LP.Hunters.DreamWitch,
-            LP.Hunters.BloodyQueen, LP.Hunters.Pingu, LP.Hunters.Sister,
-            LP.Hunters.NewHunta, LP.Hunters.AnotherHunta, LP.Sculptor, LP.Percy].forEach(x => { if (x === true) HunterNumber++; });
-
-            ctx.fillStyle = '#d73232';
-            ctx.fillText(HunterNumber, 206, 130);
-
-            let portraitAmount = 0;
-            Portraits.forEach(x => {
-                if (LP.Opened.includes(x.Item)) portraitAmount++;
-            });
-
-            ctx.fillStyle = '#000000';
-            ctx.fillText(portraitAmount, 390, 130);
-
-            let SurvivorNumber = 5;
-
-            [LP.Survivors.Cowboy, LP.Survivors.Mercenary, LP.Survivors.Coordinator,
-            LP.Survivors.Priestess, LP.Survivors.Mechanic, LP.Survivors.Mindseye,
-            LP.Survivors.Prefumer, LP.Survivors.Dancer, LP.Survivors.Seer,
-            LP.Survivors.Embalmer, LP.Survivors.Acrobat, LP.Survivors.Officer,
-            LP.Survivors.Barmaid, LP.Survivors.Magician, LP.Survivors.Explorer,
-            LP.Survivors.Forward, LP.Survivors.Prospector, LP.Survivors.Enchantress,
-            LP.Survivors.Wilding, LP.Survivors.Postman, LP.Survivors.NewSurv,
-            LP.Survivors.AnotherSurv, LP.Entomologist, LP.Painter, LP.Batter].forEach(x => { if (x === true) SurvivorNumber++; });
-
-            ctx.fillStyle = '#0a8fd0';
-            ctx.fillText(SurvivorNumber, 292, 130);
+            ].forEach(x => ctx.fillText(x.printValue, positionChange(x.printValue, 500), x.Height, 570))
 
             const findMud = await findCooldownByCommand(`Mud[${LP.UserID}]`);
             if (findMud) {
