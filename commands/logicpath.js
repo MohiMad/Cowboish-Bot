@@ -160,7 +160,7 @@ module.exports = {
             if (ID === "0") {
                 ID = prefix + "set ID [ID]";
                 ctx.fillStyle = '#000000';
-                ctx.fillRect(190, 85, 90, 23);
+                ctx.fillRect(190, 85, 95, 23);
                 ctx.fillStyle = '#ffffff';
                 ctx.fillText(ID, 193, 102);
             } else {
@@ -172,7 +172,7 @@ module.exports = {
             let region = LP.region || prefix + "set region [region]";
             if (LP.region === "0") {
                 ctx.fillStyle = '#000000';
-                ctx.fillRect(225, 60, 145, 20);
+                ctx.fillRect(225, 60, 155, 20);
                 ctx.fillStyle = '#ffffff';
                 region = prefix + "set region [region]";
                 ctx.fillText(region, 228, 75);
