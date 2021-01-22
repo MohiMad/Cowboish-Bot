@@ -241,6 +241,15 @@
         },
         {
             "Name": [
+                "[Costume] Gamekeeper - Molten Hound"
+            ],
+            "linkTag": "https://i.imgur.com/rDlf5r1.png",
+            "Item": "COAIV-1",
+            "Color": "0xfcba03",
+            "Des": "It should have been the best vessel, yet it devoured the 'prize' from its first victory. Driven by instinct, it swept away the racers who were fighting for themselves on each racecourse."
+        },
+        {
+            "Name": [
                 "[Costume] Percy - Conquer",
                 "conquer",
                 "33",
@@ -352,6 +361,42 @@
             "Item": "coa-5",
             "Color": "0xbb2af5",
             "Des": "The admirers call it the Nether, while the opponents call it the Abyss. To the Surveyor, this is how the indiscernible manipulate people's mind, so that the admirers become strong and the opponents shrink in fear. The erosion of mind and engraving of flesh through art is nothing but another of their hobbies."
+        },
+        {
+            "Name": [
+                "[Costume] Barmaid - Fueling Agent"
+            ],
+            "linkTag": "https://i.imgur.com/YHaRknP.png",
+            "Item": "COAIV-2",
+            "Color": "0xbb2af5",
+            "Des": "An agent of the Energy Corporation. She secretly works as an experimenter for the Pharmaceutical Corporation. She understands that just like fueling agents can be applied to engines, enhancers can be used on racers, but the kind of spirit they're looking for can only be identified through tragic and fierce competitions."
+        },
+        {
+            "Name": [
+                "[Costume] Priestess - Refelctive Mirror"
+            ],
+            "linkTag": "https://i.imgur.com/u7LIRoZ.png",
+            "Item": "COAIV-3",
+            "Color": "0xbb2af5",
+            "Des": "An agent of the Pharmaceutical Corporation. She uses the reflection in her mirror to find hidden shortcuts in the Garden Corridor. She realized long ago that she is merely a stepping stone for the company to investigate the disobedient monsters."
+        },
+        {
+            "Name": [
+                "[Costume] Acrobat - Pumping Tires"
+            ],
+            "linkTag": "https://i.imgur.com/hv5HCWu.png",
+            "Item": "COAIV-4",
+            "Color": "0xbb2af5",
+            "Des": "An agent of the Transportation Corporation. He is well-prepared for the Wintry Harbor race track: No matter the cost, he is adamant in uncovering the secrets hidden behind this racetrack in order to put an end to this testing ground for conspiracies."
+        },
+        {
+            "Name": [
+                "[Costume] Prospector - Highway Cavalier"
+            ],
+            "linkTag": "https://i.imgur.com/tTN7PJp.png",
+            "Item": "COAIV-5",
+            "Color": "0xbb2af5",
+            "Des": "Having once worked for the transportation corporation, he is adamant that he is the last true racer of his time who wishes to complete each race with the simplest sportsmanship - despite the significant pain and failure he has suffered."
         },
         {
             "Name": [
@@ -1961,6 +2006,121 @@
             "y": 13,
             "Width": 135,
             "Height": 135
+        },
+        {
+            "Name": [
+                "Dancer Dark Side",
+                "dancer dark side",
+                "dacerdarkside"
+            ],
+            "Item": "COAIV-33",
+            "linkTag": "https://i.imgur.com/7nq234N.png",
+            "logicpathID": "dancer_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Seer Dark Side",
+                "seer dark side",
+                "seerdarkside"
+            ],
+            "Item": "COAIV-34",
+            "linkTag": "https://i.imgur.com/zx5HP0q.png",
+            "logicpathID": "seer_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Embalmer Dark Side",
+                "embalmer dark side",
+                "embalmerdarkside"
+            ],
+            "Item": "COAIV-35",
+            "linkTag": "https://i.imgur.com/JsmHALe.png",
+            "logicpathID": "embalmer_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Prospector Dark Side",
+                "prospector dark side",
+                "prospectordarkside"
+            ],
+            "Item": "COAIV-36",
+            "linkTag": "https://i.imgur.com/0bmTSWg.png",
+            "logicpathID": "prospector_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Photographer Dark Side",
+                "photographer dark side",
+                "photographerdarkside"
+            ],
+            "Item": "COAIV-37",
+            "linkTag": "https://i.imgur.com/FjoieJk.png",
+            "logicpathID": "photographer_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "MadEyes Dark Side",
+                "madeyes dark side",
+                "madeyesdarkside",
+                "mad eyes dark side"
+            ],
+            "Item": "COAIV-38",
+            "linkTag": "https://i.imgur.com/rQdtwdt.png",
+            "logicpathID": "madeyes_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Dream Witch Dark Side",
+                "dream witch dark side",
+                "dreamwitchdarkside",
+                "dream witch dark side"
+            ],
+            "Item": "COAIV-39",
+            "linkTag": "https://i.imgur.com/zUCAwrR.png",
+            "logicpathID": "dreamwitch_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Axeboy Dark Side",
+                "axeboy dark side",
+                "axeboydarkside",
+                "axe boy dark side"
+            ],
+            "Item": "COAIV-40",
+            "linkTag": "https://i.imgur.com/UQT0GJa.png",
+            "logicpathID": "axeboy_DS",
+            "x": 15,
+            "y": 13,
+            "Width": 140,
+            "Height": 140
         },
         {
             "Name": [

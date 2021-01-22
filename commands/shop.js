@@ -48,7 +48,7 @@ module.exports = {
             .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
             ${e.ess1} | **Call Of The Abyss 3** - Price : *96* ${e.insp} - ID: $COAIII$
-            ${e.ess2} | ~~**Call Of The Abyss 4**~~ - Price : *96* ${e.insp} - ID: $COAIV$
+            ${e.ess2} | **Call Of The Abyss 4** - Price : *96* ${e.insp} - ID: $COAIV$
             ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: $s14-3$
             `.replace(rg, "`"))
             .setColor("RANDOM")
