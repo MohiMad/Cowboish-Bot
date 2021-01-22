@@ -76,7 +76,7 @@ module.exports = {
 
                         let oneEssLink = EssenceONLY[randomItem].LinkTag;
                         if (!oneEssLink.includes("https://")) oneEssLink = `https://i.imgur.com/${EssenceONLY[randomItem].LinkTag}${essence[0].Format}`;
-                        console.log(oneEssLink);
+
                         const embed = new MessageEmbed()
                             .setAuthor(EssenceONLY[randomItem].Title.replace("author", message.author.username), essence[0].LinkOfIt)
                             .setImage(oneEssLink)
