@@ -9,7 +9,9 @@ const Guild = require("./models/guild.js");
 const permissions = require("./permissions.js");
 
 module.exports = {
-
+	randomizeAnIndex: (array) => {
+		return Math.floor(Math.random() * array.length);
+	},
 	rewards: async (bot) => {
 
 
@@ -21,7 +23,7 @@ module.exports = {
 				let reChannel = bot.channels.cache.get('676502025499836416');
 				if (!reChannel) return console.log("LMAO WHERE IS MY REWARDS CHANNEL MOHEEEE?");
 
-				for(i = 0; i < 5; i++){
+				for (i = 0; i < 5; i++) {
 					await bot.users.fetch(res[i].UserID).catch(e => console.log(e));
 				}
 
@@ -30,7 +32,7 @@ module.exports = {
 				const n3 = bot.users.cache.get(res[2].UserID) || "Not found";
 				const n4 = bot.users.cache.get(res[3].UserID) || "Not found";
 				const n5 = bot.users.cache.get(res[4].UserID) || "Not found";
-				
+
 
 				res[0].Echoes = res[0].Echoes + 50;
 				res[0].Ess1 = res[0].Ess1 + 3;

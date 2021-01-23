@@ -1,81 +1,76 @@
-const { ErrorMsg } = require("../functions.js");
-
+const { ErrorMsg, findRole, randomizeAnIndex } = require("../functions.js");
+const { Characters } = require("../essences/items.json");
 module.exports = {
     name: ["randomize", "random", "pickrandomly"],
-    description: "Picks you a random Item, Survivor or Hunter... You choose which ;)\nTo randomize between Survivors, add `survivors` as your 1st arguments and same goes for Hunters...\n\nIf you want Cowboish to pick something from a list your provide, add the list of your items you want Cowboih to pick between separated with a whitespace\n\n**Usage:** `$prefixrandomize <survivors/hunters>`",
+    description: "Picks you a random Item, Survivor or Hunter... You choose which ;)\nTo randomize between Survivors, add `survivors` as your 1st arguments and same goes for Hunters...\nI can pick a random member form the server if you do `$prefixrandomize member`...\nI can also pick a random member from a role you provided if you do it this way `$prefixrandomize member role <role name/id/mention>`\n\nIf you want Cowboish to pick something from a list your provide, add the list of your items you want Cowboih to pick between separated with a comma\n\n**Usage:** `$prefixrandomize <survivors/hunters>`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     category: "IdentityV",
-    execute(message, args, bot, prefix) {
+    execute: async (message, args, bot, prefix) => {
 
-        var facts = [
-            "1st Officer",
-            "Enchantress",
-            "Mechanic",
-            "Wilding",
-            "Barmaid",
-            "Acrobat",
-            "Prospector",
-            "Seer",
-            "Forward",
-            "Embalmer",
-            "Dancer",
-            "Coordinator",
-            "Explorer",
-            "Magician",
-            "Perfumer",
-            "Priestess",
-            "Minds eye",
-            "Mercenary",
-            "Gardener",
-            "Lucky guy",
-            "Doctor",
-            "Thief",
-            "Lawyer",
-            "Cowboy",
-            "Postman",
-            "Gravekeeper",
-            "Prisoner",
-            "Entomologist",
-            "Painter"
-        ];
+        function filterItems(isSurv) {
+            return Characters.filter(x => (x.isSurvivor ? x.isSurvivor : false) == isSurv);
+        }
+        function insert(arr, index, ...items) {
+            return [
+                ...arr.slice(0, index),
+                ...items,
+                ...arr.slice(index)
+            ];
+        } 
 
-        var hunters = [
-            "Geisha",
-            "Smiley Face",
-            "Feaster",
-            "Axe Boy",
-            "Dream Witch",
-            "Soul Weaver",
-            "Hell Ember",
-            "Gamekeeper",
-            "Mad eyes",
-            "Wu chang",
-            "The Ripper",
-            "Evil Reptilian",
-            "Bloody queen",
-            "No. 26",
-            "Ann",
-            "Violinist",
-            "Sculptor",
-            "Percy"
-        ];
+        if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values separated with a comma for me to pick from!\n\n**Example:** `" + prefix + "randomize cat, fish, and a dog`\n**Example respond: **I choose **dog**\n\nRemember to seperate the values with a comma in between\n\nOr you can do `" + prefix + "randomize survivor` or `" + prefix + "randomize hunter` so i pick a random character for you!\n\nYou can also do `" + prefix + "randomize member` if you want me to pick a random member from this server...\n\nDo `" + prefix + "randomize member role <role Here>` and I will pick a random member from the role you provided!");
 
-        var hunter = Math.floor(Math.random() * hunters.length);
+        if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) {
+            let survivorArray = insert(filterItems(true), 0,
+                {
+                    Name: ["The Doctor"]
+                },
+                {
+                    Name: ["The Lawyer"]
+                },
+                {
+                    Name: ["The Thief"]
+                },
+                {
+                    Name: ["The Gardener"]
+                },
+                {
+                    Name: ["The LuckyGuy"]
+                },
+            );
 
-        var fact = Math.floor(Math.random() * facts.length);
+            return message.channel.send(`I choose **${survivorArray[randomizeAnIndex(survivorArray)].Name[0].replace("The ", "")}**`);
+        }
 
-        if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values to randomly pick from them!\n**Example:** `" + prefix + "randomize cat fish dog`\n**Example respond:** I choose **dog**\nRemember to seperate the values with a space in between\n\nOr you can do `" + prefix + "randomize survivor` or `" + prefix + "randomize hunter` so i pick a random character for you!")
+        if (["hunter", "hunters"].includes(args[1].toLowerCase())) {
+            let hunterArray = insert(filterItems(false), 0, { Name: ["The HellEmber"] });
 
-        if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) return message.channel.send(`I choose **${facts[fact]}**`);
+            return message.channel.send(`I choose **${hunterArray[randomizeAnIndex(hunterArray)].Name[0].replace("The ", "")}**`);
+        }
 
-        if (["hunter", "hunters"].includes(args[1].toLowerCase())) return message.channel.send(`I choose **${hunters[hunter]}**`);
+        if (["member", "members", "server-members", "server-member"].includes(args[1].toLowerCase())) {
+            await message.guild.members.fetch().catch(console.error);
+
+            if (["role", "roles"].includes(args[2].toLowerCase())){
+                const role = await findRole(message, args.slice(3).join(" "));
+                if(!role) return message.channel.send(`**You gave no role... ${message.author.toString()}**\nPlease mention the role, provide it's name or ID in your 3rd arguments in order for me to randomize a member from that role`);
+
+                const randomMemberFromTheRole = role.members.random();
+
+                return message.channel.send(`I choose **${randomMemberFromTheRole.user.tag}**`);
+            }
+
+            const randomMember = await message.guild.members.cache.filter((m) => m.user.bot != true).random();
+            if(!randomMember) return message.channel.send(`I choose **${message.author.tag}** because I couldn't find anyone else >:v`);
+            if(randomMember.id === message.author.id) return message.channel.send(`I choose **you** ;)`);
+
+            return message.channel.send(`I choose **${randomMember.user.tag}**`);
+        }
+
+        if(!args.slice(1).join(" ").includes(",")) return message.channel.send(`I choose **${args.slice(1).join(" ")}** since you didn't provide anything else -v-`);
+
+        const values = args.slice(1).join(" ").split(",");
         
-        let values = args.slice(1).join(" ").split(" ").length;
-        let rNumber = Math.floor(Math.random() * (values - 1 + 1)) + 1;
-
-        return message.channel.send(`I choose **${args[rNumber]}**`);
-
-
-
+        return message.channel.send(`I choose **${values[randomizeAnIndex(values)]}**`);
     }
 }
