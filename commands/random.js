@@ -1,5 +1,6 @@
 const { ErrorMsg, findRole, randomizeAnIndex } = require("../functions.js");
 const { Characters } = require("../essences/items.json");
+const { Util } = require('discord.js');
 module.exports = {
     name: ["randomize", "random", "pickrandomly"],
     description: "Picks you a random Item, Survivor or Hunter... You choose which ;)\nTo randomize between Survivors, add `survivors` as your 1st arguments and same goes for Hunters...\nI can pick a random member form the server if you do `$prefixrandomize member`...\nI can also pick a random member from a role you provided if you do it this way `$prefixrandomize member role <role name/id/mention>`\n\nIf you want Cowboish to pick something from a list your provide, add the list of your items you want Cowboih to pick between separated with a comma\n\n**Usage:** `$prefixrandomize <survivors/hunters>`",
@@ -71,6 +72,6 @@ module.exports = {
 
         const values = args.slice(1).join(" ").split(",");
         
-        return message.channel.send(`I choose **${values[randomizeAnIndex(values)]}**`);
+        return message.channel.send(Util.cleanContent(`I choose **${values[randomizeAnIndex(values)]}**`));
     }
 }
