@@ -3,7 +3,7 @@ const { stripIndents } = require('common-tags');
 const Canvas = require('canvas');
 const Discord = require("discord.js");
 const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../functions.js");
-const { Portraits, Frames, Skins } = require("../essences/items.json");
+const { Portraits, Frames, Skins } = require("../assets/items.json");
 
 module.exports = {
     name: ["logicpath", "lp", "profile", "inv", "inventory"],

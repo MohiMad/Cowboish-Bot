@@ -1,5 +1,5 @@
-const { ErrorMsg, findRole, randomizeAnIndex } = require("../functions.js");
-const { Characters } = require("../essences/items.json");
+const { ErrorMsg, findRole, randomizeAnIndex, } = require("../functions.js");
+const { Characters } = require("../assets/items.json");
 const { Util } = require('discord.js');
 module.exports = {
     name: ["randomize", "random", "pickrandomly"],
@@ -17,7 +17,8 @@ module.exports = {
                 ...items,
                 ...arr.slice(index)
             ];
-        } 
+        }
+
 
         if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values separated with a comma for me to pick from!\n\n**Example:** `" + prefix + "randomize cat, fish, and a dog`\n**Example respond: **I choose **dog**\n\nRemember to seperate the values with a comma in between\n\nOr you can do `" + prefix + "randomize survivor` or `" + prefix + "randomize hunter` so i pick a random character for you!\n\nYou can also do `" + prefix + "randomize member` if you want me to pick a random member from this server...\n\nDo `" + prefix + "randomize member role <role Here>` and I will pick a random member from the role you provided!");
 
@@ -52,9 +53,9 @@ module.exports = {
         if (["member", "members", "server-members", "server-member"].includes(args[1].toLowerCase())) {
             await message.guild.members.fetch().catch(console.error);
 
-            if (["role", "roles"].includes(args[2].toLowerCase())){
+            if (["role", "roles"].includes(args[2].toLowerCase())) {
                 const role = await findRole(message, args.slice(3).join(" "));
-                if(!role) return message.channel.send(`**You gave no role... ${message.author.toString()}**\nPlease mention the role, provide it's name or ID in your 3rd arguments in order for me to randomize a member from that role`);
+                if (!role) return message.channel.send(`**You gave no role... ${message.author.toString()}**\nPlease mention the role, provide it's name or ID in your 3rd arguments in order for me to randomize a member from that role`);
 
                 const randomMemberFromTheRole = role.members.random();
 
@@ -62,16 +63,16 @@ module.exports = {
             }
 
             const randomMember = await message.guild.members.cache.filter((m) => m.user.bot != true).random();
-            if(!randomMember) return message.channel.send(`I choose **${message.author.tag}** because I couldn't find anyone else >:v`);
-            if(randomMember.id === message.author.id) return message.channel.send(`I choose **you** ;)`);
+            if (!randomMember) return message.channel.send(`I choose **${message.author.tag}** because I couldn't find anyone else >:v`);
+            if (randomMember.id === message.author.id) return message.channel.send(`I choose **you** ;)`);
 
             return message.channel.send(`I choose **${randomMember.user.tag}**`);
         }
 
-        if(!args.slice(1).join(" ").includes(",")) return message.channel.send(`I choose **${args.slice(1).join(" ")}** since you didn't provide anything else -v-`);
+        if (!args.slice(1).join(" ").includes(",")) return message.channel.send(`I choose **${args.slice(1).join(" ")}** since you didn't provide anything else -v-`);
 
         const values = args.slice(1).join(" ").split(",");
-        
+
         return message.channel.send(Util.cleanContent(`I choose **${values[randomizeAnIndex(values)]}**`));
     }
 }

@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 const { ErrorMsg, newLP } = require("../functions.js");
 
 const { MessageEmbed } = require('discord.js');
-const { Skins, PowerUps } = require("../essences/items.json");
+const { Skins, PowerUps } = require("../assets/items.json");
 const e = require("../emojis.json");
 
 module.exports = {

@@ -3,9 +3,9 @@ const { stripIndents } = require("common-tags");
 const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../functions.js");
 const { ess1, ess2, ess3, frags } = require("../emojis.json");
 const logicPath = require("../models/logicpath.js");
-const { firstEssence, secondEssence, thirdEssence } = require("../essences/essences.json");
+const { firstEssence, secondEssence, thirdEssence } = require("../assets/essences.json");
 
-const { statsCheck } = require("../essences/essenceFunctions.js");
+const { statsCheck } = require("../assets/essenceFunctions.js");
 
 module.exports = {
     name: ["open", "essence", "ess", "e"],

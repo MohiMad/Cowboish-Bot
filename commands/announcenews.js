@@ -2,7 +2,7 @@ const Guild = require("../models/guild.js");
 const { MessageEmbed } = require("discord.js");
 const IdentityVNews = require("../models/news.js");
 const spamStopper = new Set();
-const p = require("../essences/patchnotes.js");
+const p = require("../assets/patchnotes.js");
 const PERMISSIONS = require("../permissions.js");
 
 module.exports = {

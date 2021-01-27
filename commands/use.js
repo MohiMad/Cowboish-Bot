@@ -1,7 +1,7 @@
 
 const logicPath = require("../models/logicpath.js");
 const { newLP, addCooldown, findMember, findCooldown, spliceArray, findCooldownByCommand, getMember } = require("../functions.js");
-const { PowerUps } = require("../essences/items.json");
+const { PowerUps } = require("../assets/items.json");
 const { stripIndents } = require("common-tags");
 const { MessageEmbed } = require("discord.js");
 const e = require("../emojis.json");
