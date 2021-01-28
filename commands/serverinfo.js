@@ -44,7 +44,7 @@ module.exports = {
 				🕐 Created at: ${(created)}
 			`,
 			)
-			.setThumbnail(message.guild.iconURL())
+			.setThumbnail(message.guild.iconURL({ dynamic: true }));
 
 
 		message.channel.send(embed);

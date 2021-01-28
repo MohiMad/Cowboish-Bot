@@ -21,7 +21,7 @@ module.exports = {
         const created = formatDate(member.user.createdAt);
 
         const embed = new MessageEmbed()
-            .setFooter(member.displayName, member.user.displayAvatarURL())
+            .setFooter(member.displayName, member.user.displayAvatarURL({ dynamic: true }))
             .setThumbnail(member.user.displayAvatarURL())
             .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
 
