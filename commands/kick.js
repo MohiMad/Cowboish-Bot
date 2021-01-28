@@ -1,12 +1,12 @@
 const { MessageEmbed } = require('discord.js');
-const { findMember, ErrorMsg } = require("../functions.js");
+const { findMember } = require("../assets/functions.js");
 
 module.exports = {
     name: ["kick", "kickmember"],
     description: "Kicks the mentioned user out of the server\n\n**Usage:** `$prefixkick <user> [reason]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "KICK_MEMBERS"],
     category: "Moderation",
-    execute: async (message, args, bot, prefix) => {
+    execute: async (message, args, prefix) => {
         const member = await findMember(message, args[1]);
 
         const reason = args.slice(2).join(" ") || "No Reason";

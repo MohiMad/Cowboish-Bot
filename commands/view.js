@@ -1,5 +1,5 @@
 const logicPath = require("../models/logicpath.js");
-const { newLP, ErrorMsg } = require("../functions.js");
+const { newLP, ErrorMsg } = require("../assets/functions.js");
 const spamStopper = new Set();
 const { Skins, Portraits, Frames, Characters } = require("../assets/items.json");
 

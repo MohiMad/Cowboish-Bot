@@ -1,4 +1,4 @@
-const { findMember } = require("../functions.js");
+const { findMember } = require("../assets/functions.js");
 
 module.exports = {
     name: ["identify", "whois", "stereotype"],

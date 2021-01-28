@@ -1,4 +1,4 @@
-const { ErrorMsg } = require("../functions.js");
+const { ErrorMsg } = require("../assets/functions.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {

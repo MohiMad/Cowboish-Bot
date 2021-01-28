@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { newLP } = require("../functions.js");
+const { newLP } = require("../assets/functions.js");
 const logicPath = require("../models/logicpath.js");
 
 module.exports = {

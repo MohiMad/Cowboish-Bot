@@ -1,7 +1,7 @@
-const { clues, insp, frags, ess1, ess2, ess3, dice, logic } = require("../emojis.json");
+const { clues, insp, frags, ess1, ess2, ess3, dice, logic } = require("../assets/emojis.json");
 
 const { MessageEmbed } = require('discord.js');
-const { newLP, coolEmbed, findCooldown, addCooldown, } = require("../functions.js");
+const { newLP, coolEmbed, findCooldown, addCooldown, } = require("../assets/functions.js");
 const logicPath = require("../models/logicpath.js");
 
 module.exports = {

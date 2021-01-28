@@ -1,9 +1,9 @@
 const logicPath = require("../models/logicpath.js");
-const { ErrorMsg, newLP } = require("../functions.js");
+const { ErrorMsg, newLP } = require("../assets/functions.js");
 
 const { MessageEmbed } = require('discord.js');
 const { Skins, PowerUps } = require("../assets/items.json");
-const e = require("../emojis.json");
+const e = require("../assets/emojis.json");
 
 module.exports = {
     name: ["buy", "purchase"],

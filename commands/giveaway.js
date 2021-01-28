@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 
 const { MessageEmbed } = require('discord.js');
 const Cooldown = require("../models/cooldown.js");
-const { clues, insp, ess1, ess2, ess3, frags } = require("../emojis.json");
+const { clues, insp, ess1, ess2, ess3, frags } = require("../assets/emojis.json");
 
 module.exports = {
     name: 'giveaway',

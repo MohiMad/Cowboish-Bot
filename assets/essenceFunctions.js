@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags");
-const { ess1, ess2, ess3, frags } = require("../emojis.json");
+const { ess1, ess2, ess3, frags } = require("./emojis.json");
 const logicPath = require("../models/logicpath.js");
 
 module.exports = {

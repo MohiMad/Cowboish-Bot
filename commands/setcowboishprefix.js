@@ -1,6 +1,6 @@
 const Guild = require("../models/guild.js");
 
-const { ErrorMsg, checkForGuildDataExistance } = require("../functions.js");
+const { ErrorMsg, checkForGuildDataExistance } = require("../assets/functions.js");
 
 module.exports = {
     name: ["setcowboishprefix", "cowboishprefix", "setcowboishbotprefix"],

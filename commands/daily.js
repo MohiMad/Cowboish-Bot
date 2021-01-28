@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
-const { newLP, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
-const { ess2, ess1, ess3, clues, dice } = require("../emojis.json");
+const { newLP, coolEmbed, addCooldown, findCooldown } = require("../assets/functions.js");
+const { ess2, ess1, ess3, clues, dice } = require("../assets/emojis.json");
 const logicPath = require("../models/logicpath.js");
 
 module.exports = {

@@ -1,6 +1,6 @@
 const Guild = require("../models/guild.js");
 const { MessageEmbed } = require('discord.js');
-const { findRole, checkForGuildDataExistance, findChannel } = require("../functions.js");
+const { findRole, checkForGuildDataExistance, findChannel } = require("../assets/functions.js");
 
 module.exports = {
     name: ["identityvnews", "idvnews", "identityvupdates", "identityvupdatesandnews", "identityvnewsandupdates", "idvupdates"],

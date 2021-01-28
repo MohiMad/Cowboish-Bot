@@ -1,4 +1,4 @@
-const { ErrorMsg, findRole, randomizeAnIndex, } = require("../functions.js");
+const { ErrorMsg, findRole, randomizeAnIndex, } = require("../assets/functions.js");
 const { Characters } = require("../assets/items.json");
 const { Util } = require('discord.js');
 module.exports = {

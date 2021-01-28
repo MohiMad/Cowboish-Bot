@@ -6,7 +6,7 @@ const bot = new Discord.Client({
 });
 
 const schedule = require('node-schedule');
-const { rewards } = require("./functions.js");
+const { rewards } = require("./assets/functions.js");
 
 const Cooldown = require("./models/cooldown.js");
 const mongoose = require("mongoose");

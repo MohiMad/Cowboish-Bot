@@ -2,7 +2,7 @@ const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Canvas = require('canvas');
 const Discord = require("discord.js");
-const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../functions.js");
+const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../assets/functions.js");
 const { Portraits, Frames, Skins } = require("../assets/items.json");
 
 module.exports = {

@@ -1,7 +1,7 @@
 const logicPath = require("../models/logicpath.js");
 const { MessageEmbed } = require("discord.js")
-const { coolEmbed, findCooldown, addCooldown, ErrorMsg } = require("../functions.js");
-const { first, second, third } = require("../emojis.json");
+const { coolEmbed, findCooldown, addCooldown, ErrorMsg } = require("../assets/functions.js");
+const { first, second, third } = require("../assets/emojis.json");
 
 module.exports = {
     name: ["leaderboard", "ld"],

@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require('common-tags');
-const e = require("../emojis.json");
-const permissions = require("../permissions.js");
+const e = require("../assets/emojis.json");
+const permissions = require("../assets/permissions.js");
 
 module.exports = {
     name: ["help", "helpme", "commands"],

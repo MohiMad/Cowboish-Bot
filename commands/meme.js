@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const got = require('got');
 
-const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
+const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../assets/functions.js");
 
 module.exports = {
     name: ["meme", "memes"],

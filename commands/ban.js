@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { findMember, ErrorMsg } = require("../functions.js");
+const { findMember, ErrorMsg } = require("../assets/functions.js");
 
 module.exports = {
     name: ["ban"],

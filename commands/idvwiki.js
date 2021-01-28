@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { ErrorMsg } = require("../functions.js");
+const { ErrorMsg } = require("../assets/functions.js");
 
 let spamStopper = new Set();
 module.exports = {

@@ -1,8 +1,8 @@
 const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
-const e = require("../emojis.json");
+const e = require("../assets/emojis.json");
 const { MessageEmbed } = require('discord.js');
-const { newLP } = require("../functions.js");
+const { newLP } = require("../assets/functions.js");
 
 module.exports = {
     name: ["shop", "lpshop", "logicpathshop"],

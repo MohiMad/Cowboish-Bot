@@ -1,6 +1,5 @@
 const Guild = require("../models/guild.js");
-const logicPath = require("../models/logicpath.js");
-const { permsCheck } = require('../functions.js');
+const { permsCheck } = require('../assets/functions.js');
 const SpamSet = new Set();
 
 module.exports = async (bot, message) => {

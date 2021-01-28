@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const IdentityVNews = require("../models/news.js");
 const spamStopper = new Set();
 const p = require("../assets/patchnotes.js");
-const PERMISSIONS = require("../permissions.js");
+const PERMISSIONS = require("../assets/permissions.js");
 
 module.exports = {
     name: 'announcenews',

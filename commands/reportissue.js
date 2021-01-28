@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { coolEmbed, addCooldown, findCooldown } = require("../functions.js");
+const { coolEmbed, addCooldown, findCooldown } = require("../assets/functions.js");
 let spamStopper = new Set();
 
 module.exports = {

@@ -1,5 +1,5 @@
 const Canvas = require('canvas');
-const { findMember, coolEmbed, addCooldown, findCooldown } = require("../functions.js");
+const { findMember, coolEmbed, addCooldown, findCooldown } = require("../assets/functions.js");
 const Discord = require("discord.js");
 
 module.exports = {
