@@ -73,6 +73,6 @@ module.exports = {
 
         const values = args.slice(1).join(" ").split(",");
 
-        return message.channel.send(Util.cleanContent(`I choose **${values[randomizeAnIndex(values)]}**`));
+        return message.channel.send(Util.cleanContent(`I choose **${values[randomizeAnIndex(values)]}**`, message));
     }
 }
