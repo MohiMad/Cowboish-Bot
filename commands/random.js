@@ -53,13 +53,15 @@ module.exports = {
         if (["member", "members", "server-members", "server-member"].includes(args[1].toLowerCase())) {
             await message.guild.members.fetch().catch(console.error);
 
-            if (["role", "roles"].includes(args[2].toLowerCase())) {
-                const role = await findRole(message, args.slice(3).join(" "));
-                if (!role) return message.channel.send(`**You gave no role... ${message.author.toString()}**\nPlease mention the role, provide it's name or ID in your 3rd arguments in order for me to randomize a member from that role`);
+            if (args[2]) {
+                if (["role", "roles"].includes(args[2].toLowerCase())) {
+                    const role = await findRole(message, args.slice(3).join(" "));
+                    if (!role) return message.channel.send(`**You gave no role... ${message.author.toString()}**\nPlease mention the role, provide it's name or ID in your 3rd arguments in order for me to randomize a member from that role`);
 
-                const randomMemberFromTheRole = role.members.random();
+                    const randomMemberFromTheRole = role.members.random();
 
-                return message.channel.send(`I choose **${randomMemberFromTheRole.user.tag}**`);
+                    return message.channel.send(`I choose **${randomMemberFromTheRole.user.tag}**`);
+                }
             }
 
             const randomMember = await message.guild.members.cache.filter((m) => m.user.bot != true).random();
