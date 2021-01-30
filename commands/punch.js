@@ -10,7 +10,7 @@ module.exports = {
 
         const member = await getMember(message, args.slice(1).join(" ")) || await getMember(message, message.author.id);
 
-        const reponses = [
+        const responses = [
             "$author punches $victim",
             "$victim got punched by $author",
             "$author gave $victim a fat punch...",
@@ -29,7 +29,7 @@ module.exports = {
 
         const reponseEmbed = new MessageEmbed()
             .setAuthor(member.user.displayAvatarURL({ dynamic: true }))
-            .setTitle(reponses[randomizeAnIndex(responses)].replace("$author", merc).replace("$victim", victim))
+            .setTitle(responses[randomizeAnIndex(responses)].replace("$author", merc).replace("$victim", victim))
             .setColor("0x4E7FC4")
             .setImage("https://media.giphy.com/media/zlQwztwr0y8OuO5WMR/giphy.gif")
             .setFooter(`Poor ${member.user.username}...`);
