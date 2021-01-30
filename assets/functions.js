@@ -418,7 +418,7 @@ module.exports = {
 	permsCheck(message, bot, highestRole, requiredPerms, permissionsInGuild, permissionsInChannel) {
 
 		const missingPermissionsEmbed = new MessageEmbed()
-			.setAuthor("🟥 Missing permissions!", message.author.displayAvatarURL, "https://mohimad.github.io/CowboishBot/")
+			.setAuthor("🟥 Missing permissions!", message.author.displayAvatarURL, "https://mohimad.github.io/cowboishbot/")
 			.setColor("0xE75A5A")
 			.setTimestamp()
 			.setFooter(bot.user.tag, bot.user.displayAvatarURL);

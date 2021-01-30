@@ -333,7 +333,7 @@ module.exports = {
 
 
             const DiceEmbed = new MessageEmbed()
-                .setAuthor(`${number} Dice(s) has been rolled!`, message.author.displayAvatarURL, "https://mohimad.github.io/CowboishBot/")
+                .setAuthor(`${number} Dice(s) has been rolled!`, message.author.displayAvatarURL, "https://mohimad.github.io/cowboishbot/")
                 .setColor("0xC9B37A")
                 .setDescription("**《** " + emojiDices + " **》**" + "\n" + loot)
 

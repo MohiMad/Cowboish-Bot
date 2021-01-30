@@ -28,7 +28,7 @@ module.exports = {
     
     `, true)
             .addField("\u200b", stripIndents`**For More Information**
-    [Cowboish Website](https://mohimad.github.io/CowboishBot/)
+    [Cowboish Website](https://mohimad.github.io/cowboishbot/)
     [Invite Me ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
     [Cowboish Server](https://discordapp.com/invite/YWcSukS)`)
             .setThumbnail(bot.user.displayAvatarURL())

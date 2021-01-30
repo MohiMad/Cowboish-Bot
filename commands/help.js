@@ -56,7 +56,7 @@ module.exports = {
         const helpEmbed = new MessageEmbed()
             .setColor("RANDOM")
             .setTitle('Did someone say help?')
-            .setURL('https://mohimad.github.io/CowboishBot/')
+            .setURL('https://mohimad.github.io/cowboishbot/')
             .addField('<:idvtroll:651464392243675156> IdentityV <:idvtroll:651464392243675156>', '`' + prefix + 'help idv`', true)
             .addField('😁 Idv Actions 😁', '`' + prefix + 'help actions`', true)
             .addField('🔧 Moderation 🔧', '`' + 'help moderation`', true)
@@ -66,7 +66,7 @@ module.exports = {
             .addField("🛠 Utility 🛠", "`" + prefix + "help utility`", true)
             .addField(`${e.dice} Logicpath ${e.ess1}`, '`' + prefix + 'help logicpath`', true)
             .addField("❓ Errors/suggestions ❓", "`" + prefix + "suggest`/`" + prefix + "reportissue`", true)
-            .addField("For more info ", "[Cowboish Website](https://mohimad.github.io/CowboishBot/)\n[Invite Me :3](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)\n[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
+            .addField("For more info ", "[Cowboish Website](https://mohimad.github.io/cowboishbot/)\n[Invite Me :3](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)\n[Cowboish Server](https://discordapp.com/invite/YWcSukS)")
             .setFooter("Remember to use my prefix ( " + prefix + ") and help before providing the category's name ;D", bot.user.displayAvatarURL());
 
         if (!args[1]) return message.channel.send(helpEmbed);
@@ -78,7 +78,7 @@ module.exports = {
             const idvEmbed = new MessageEmbed()
                 .setTitle('😁  Help is here  😁')
                 .setColor("RANDOM")
-                .setURL('https://mohimad.github.io/CowboishBot/')
+                .setURL('https://mohimad.github.io/cowboishbot/')
                 .setThumbnail("https://i.imgur.com/owSSNF4.png")
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
                 .setDescription("To check how to use a specific command do `" + prefix + "help idv <command>`\n\n**Commands:** " + await listThemCommands("IdentityV"));
@@ -93,7 +93,7 @@ module.exports = {
             const actionEmbed = new MessageEmbed()
                 .setTitle('<:wilding:648981862429097994> Identity V actions <:wilding:648981862429097994>')
                 .setColor("RANDOM")
-                .setURL('https://mohimad.github.io/CowboishBot/')
+                .setURL('https://mohimad.github.io/cowboishbot/')
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL())
                 .setDescription("To check how to use a specific command do `" + prefix + "help actions <command>`\n\n**Commands:** " + await listThemCommands("Actions"));
 
@@ -107,7 +107,7 @@ module.exports = {
             const modEmbed = new MessageEmbed()
                 .setTitle('🔧So u need sum help huh?🔧')
                 .setColor("RANDOM")
-                .setURL('https://mohimad.github.io/CowboishBot/')
+                .setURL('https://mohimad.github.io/cowboishbot/')
                 .setDescription("To check how to use a specific command do `" + prefix + "help moderation <command>`\n\n**Commands:** " + await listThemCommands("Moderation"))
                 .setFooter('Remember to use my prefix `' + prefix + '` before the commands', bot.user.displayAvatarURL());
 
@@ -121,7 +121,7 @@ module.exports = {
             const genEmbed = new MessageEmbed()
                 .setTitle('⚙ Help is here :D ⚙', true)
                 .setColor("RANDOM")
-                .setURL('https://mohimad.github.io/CowboishBot/')
+                .setURL('https://mohimad.github.io/cowboishbot/')
                 .setDescription("To check how to use a specific command do `" + prefix + "help config <command>`\n\n**Commands:** " + await listThemCommands("Config"))
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
@@ -135,7 +135,7 @@ module.exports = {
             const funEmbed = new MessageEmbed()
                 .setColor("RANDOM")
                 .setTitle("🤣 Don't move i'm coming :v", true)
-                .setURL('https://mohimad.github.io/CowboishBot/')
+                .setURL('https://mohimad.github.io/cowboishbot/')
                 .setDescription("To check how to use a specific command do `" + prefix + "help fun <command>`\n\n**Commands:** " + await listThemCommands("Fun"))
                 .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
