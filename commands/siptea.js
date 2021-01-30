@@ -1,6 +1,6 @@
 const Canvas = require('canvas');
 const Discord = require("discord.js");
-const { findMember, coolEmbed, addCooldown, findCooldown } = require("../assets/functions.js");
+const { getMember, coolEmbed, addCooldown, findCooldown } = require("../assets/functions.js");
 
 module.exports = {
     name: ["siptea", "sip-tea", "sippingtea", "sip"],
@@ -14,11 +14,7 @@ module.exports = {
         if (cooldownCheck) return coolEmbed(message, "Oof the cooldown is still on .-.", "Please wait **REMAINING** before you can use this command once again ^^", cooldownCheck.timeRemaining, ["s"]);
 
 
-        let person = await findMember(message, args.slice(1).join(" "));
-
-        if (!args[1]) person = message.author;
-        if (!person) person = message.author;
-        else person = await findMember(message, args.slice(1).join(" "));
+        const person = await getMember(message, args.slice(1).join(" ")) || await getMember(message, message.author.id);
 
         const canvas = Canvas.createCanvas(193, 261);
 
@@ -28,9 +24,7 @@ module.exports = {
 
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-        let avatar = await Canvas.loadImage(person.user.displayAvatarURL({ format: 'png', dynamic: false }));
-
-        if (!person.user) avatar = await Canvas.loadImage(person.displayAvatarURL({ format: 'png', dynamic: false }));
+        const avatar = await Canvas.loadImage(person.user.displayAvatarURL({ format: 'png', dynamic: false }));
 
         ctx.drawImage(avatar, 29, 46, 117, 108);
 
