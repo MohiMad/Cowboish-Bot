@@ -14,7 +14,7 @@ module.exports = {
             "$author punches $victim",
             "$victim got punched by $author",
             "$author gave $victim a fat punch...",
-            "Oof $author punched $victim..."
+            "Oof $author punched $victim...",
         ];
 
         let victim = member.user.username;
@@ -22,19 +22,21 @@ module.exports = {
 
         if (victim == merc) {
             merc = bot.user.username;
+
             setTimeout(() => {
                 message.channel.send(`This what happens when you don't mention someone you want to punch, ${message.author.toString()}`);
             }, 5000);
         }
 
         const reponseEmbed = new MessageEmbed()
-            .setAuthor(member.user.displayAvatarURL({ dynamic: true }))
             .setTitle(responses[randomizeAnIndex(responses)].replace("$author", merc).replace("$victim", victim))
             .setColor("0x4E7FC4")
             .setImage("https://media.giphy.com/media/zlQwztwr0y8OuO5WMR/giphy.gif")
             .setFooter(`Poor ${member.user.username}...`);
 
-        return message.channel.send(reponseEmbed);
+        if(victim === bot.user.username) reponseEmbed.setFooter("Poor me...");
+
+        message.channel.send(reponseEmbed);
 
     }
 }
