@@ -8,7 +8,7 @@ const PERMISSIONS = require("../assets/permissions.js");
 module.exports = {
     name: 'announcenews',
     description: "...",
-    admins: ["478527909250990090", "427200618399268874", "638831021995065344"],
+    admins: ["478527909250990090", "698795283055902832", "427200618399268874", "638831021995065344"],
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "MANAGE_MESSAGES", "ADD_REACTIONS"],
     execute: async (message, bot, args) => {
 
