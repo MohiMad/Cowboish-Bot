@@ -357,6 +357,11 @@ module.exports = {
 
 
 	},
+	/**
+	 * [checkForGuildDataExistance]
+	 * A function that will check whether the guild's data exists in the database. If not, it will create one without interuppting the code.
+	 * @param {Object} message the message parameter that is passed in 'message' event or even other guidMemberAdd events, 'member' in that case.
+	 */
 	checkForGuildDataExistance: async (message) => {
 		const guild = await Guild.findOne({ guildID: message.guild.id });
 
@@ -387,13 +392,15 @@ module.exports = {
 	},
 	/**
 		 * [awaitMessage function usage]
-		 * @message {Discord.Message} message [the message object obtained from the message event]
-		 * @filter {arrowFunction} filter [The filter that will be passed into awaitMessages function.]
-		 * @max {number} max [The maximum number of messages you want the bot to await for before running 'code']
-		 * @time {number} time [Amount of time in milliseconds until awaitMessages runs out]
-		 * @toSend {string} toSend [A string that includes what you want to send to the channel before awaiting messages]
-		 * @code {string} code [The code you want to run once a message that refers to the filter has been sent. Will be evaluated]
-		 * @returnText {string} returnText [A string you want to return to the channel if the time runs out]
+		 * Use this function to await a message from the author.
+		 * @param {Object} message [the message object obtained from the message event]
+		 * @param {Function} filter [The filter that will be passed into awaitMessages function.]
+		 * @param {Number} max [The maximum number of messages you want the bot to await for before running 'code']
+		 * @param {Number} time [Amount of time in milliseconds until awaitMessages runs out]
+		 * @param {String} toSend [A string that includes what you want to send to the channel before awaiting messages]
+		 * @param {String} code [The code you want to run once a message that refers to the filter has been sent. Will be evaluated]
+		 * @param {String} returnText [A string you want to return to the channel if the time runs out]
+		 * @returns {null}
 		 * 
 	**/
 	async awaitMessage(message, filter, max, time, toSend, code, returnText) {

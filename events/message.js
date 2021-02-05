@@ -38,7 +38,7 @@ module.exports = async (bot, message) => {
     }*/
 
     if (!message.content.startsWith(prefix)) return;
-    if(message.content.length === prefix.length) return;
+    if (message.content.length === prefix.length) return;
     //if(message.author.id !== MohiMoo.id) return;
 
     const objects = {
@@ -71,11 +71,12 @@ module.exports = async (bot, message) => {
         if (name.length === 1) name = command.name;
 
         if (command.name.includes(args[0].toLowerCase())) {
-            let admins = command.admins;
-            if (!admins) admins = [message.author.id];
+            let admins = command.admins ? command.admins : [message.author.id];
+            let banned = command.banned ? command.banned : [];
 
             if (!admins.includes(message.author.id)) return;
-            if (command.isDisabled === true) return;
+            if (command.isDisabled) return;
+            if (banned.includes(message.author.id)) return;
 
             if (permsCheck(message, bot, highestRole, command.permissions, permissionsInGuild, permissionsInChannel) === true) return;
 
