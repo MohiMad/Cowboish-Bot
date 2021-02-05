@@ -385,6 +385,35 @@ module.exports = {
 		await newGuild.save().catch(err => console.log(err));
 
 	},
+	/**
+		 * [awaitMessage function usage]
+		 * @message {Discord.Message} message [the message object obtained from the message event]
+		 * @filter {arrowFunction} filter [The filter that will be passed into awaitMessages function.]
+		 * @max {number} max [The maximum number of messages you want the bot to await for before running 'code']
+		 * @time {number} time [Amount of time in milliseconds until awaitMessages runs out]
+		 * @toSend {string} toSend [A string that includes what you want to send to the channel before awaiting messages]
+		 * @code {string} code [The code you want to run once a message that refers to the filter has been sent. Will be evaluated]
+		 * @returnText {string} returnText [A string you want to return to the channel if the time runs out]
+		 * 
+	**/
+	async awaitMessage(message, filter, max, time, toSend, code, returnText) {
+
+		message.channel.send(toSend);
+
+		await message.channel.awaitMessages(filter, {
+			max: max,
+			time: time,
+			errors: ['time'],
+		}).then(async (collected) => {
+			eval(code);
+			return true;
+		}).catch((e) => {
+			if (!e.message) return message.channel.send(returnText), true;
+
+			console.log(e);
+			return true;
+		});
+	},
 	announcIt: async (message, event) => {
 		let randomNumber = Math.floor(Math.random() * 10),
 			oneTo10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
