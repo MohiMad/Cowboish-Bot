@@ -53,6 +53,13 @@ module.exports = async (bot, message) => {
         highestRole: highestRole
     }
 
+    /**
+     * [getArgsRequested function]
+     * 
+     * This function grabs the arguments in a function and converts them into an array.
+     * @param {Function} func 
+     * @returns {Array}
+     */
     function getArgsRequested(func) {
         var comments = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
         var argsName = /([^\s,]+)/g;
@@ -80,7 +87,7 @@ module.exports = async (bot, message) => {
 
             if (permsCheck(message, bot, highestRole, command.permissions, permissionsInGuild, permissionsInChannel) === true) return;
 
-            const execParms = await getArgsRequested(command.execute);
+            const execParms = getArgsRequested(command.execute);
             return command.execute(objects[execParms[0]], objects[execParms[1]], objects[execParms[2]], objects[execParms[3]], objects[execParms[4]]);
         }
 

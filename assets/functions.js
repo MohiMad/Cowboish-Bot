@@ -12,104 +12,6 @@ module.exports = {
 	randomizeAnIndex: (array) => {
 		return Math.floor(Math.random() * array.length);
 	},
-	rewards: async (bot) => {
-
-
-		await logicPath.find({})
-			.sort({ logic: -1 }).limit(5).exec(async (err, res) => {
-				if (err) console.log(err);
-
-				//the ID of Rewards channel on Cowboish server
-				let reChannel = bot.channels.cache.get('676502025499836416');
-				if (!reChannel) return console.log("LMAO WHERE IS MY REWARDS CHANNEL MOHEEEE?");
-
-				for (i = 0; i < 5; i++) {
-					await bot.users.fetch(res[i].UserID).catch(e => console.log(e));
-				}
-
-				const n1 = bot.users.cache.get(res[0].UserID) || "Not found";
-				const n2 = bot.users.cache.get(res[1].UserID) || "Not found";
-				const n3 = bot.users.cache.get(res[2].UserID) || "Not found";
-				const n4 = bot.users.cache.get(res[3].UserID) || "Not found";
-				const n5 = bot.users.cache.get(res[4].UserID) || "Not found";
-
-
-				res[0].Echoes = res[0].Echoes + 50;
-				res[0].Ess1 = res[0].Ess1 + 3;
-				res[0].Ess2 = res[0].Ess2 + 3;
-				res[0].Ess3 = res[0].Ess3 + 3;
-				res[0].Clues = res[0].Clues + 500;
-				res[0].save().catch(err => console.log(err));
-				//Top 1 rewards!
-
-				res[1].Echoes = res[1].Echoes + 40;
-				res[1].Ess1 = res[1].Ess1 + 2;
-				res[1].Ess2 = res[1].Ess2 + 2;
-				res[1].Ess3 = res[1].Ess3 + 2;
-				res[1].Clues = res[1].Clues + 400;
-				res[1].save().catch(err => console.log(err));
-				//Top 2 rewards
-
-				res[2].Echoes = res[2].Echoes + 30;
-				res[2].Ess1 = res[2].Ess1 + 2;
-				res[2].Ess2 = res[2].Ess2 + 2;
-				res[2].Ess3 = res[2].Ess3 + 2;
-				res[2].Clues = res[2].Clues + 300;
-				res[2].save().catch(err => console.log(err));
-				//Top 3 rewards!
-
-				res[3].Echoes = res[3].Echoes + 20;
-				res[3].Ess1 = res[3].Ess1 + 1;
-				res[3].Ess2 = res[3].Ess2 + 1;
-				res[3].Ess3 = res[3].Ess3 + 1;
-				res[3].Clues = res[3].Clues + 200;
-				res[3].save().catch(err => console.log(err));
-				//Top 4 rewards
-
-				res[4].Echoes = res[4].Echoes + 20;
-				res[4].Ess1 = res[4].Ess1 + 1;
-				res[4].Ess2 = res[4].Ess2 + 1;
-				res[4].Ess3 = res[4].Ess3 + 1;
-				res[4].Clues = res[4].Clues + 200;
-				res[4].save().catch(err => console.log(err));
-
-				let reeEmbed = new MessageEmbed()
-					.setTitle("Yaaaay a new week has began!")
-					.setColor("0xf0cf07")
-					.setDescription(stripIndents`
-			《<:uno:676017997420167187>》 **${n1.tag}** 
-			**Logicpath Points**: **${res[0].logic}**<:LP:675763680863977513>
-			**Rewards**: **50**<:echoes:655840505225281536>, **3**<:ess1:655840713904488469>, **3**<:ess2:655840643847028751>, **3**<:ess3:655840571616919586> and **500**<:clue:655384523735040000>
-
-			- - - - -
-			〘<:dos:676019548016738304>〙 **${n2.tag}**
-			**Logicpath Points**: **${res[1].logic}**<:LP:675763680863977513>
-			**Rewards**: **40**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **400**<:clue:655384523735040000>
-
-			- - - - -
-			〘<:tres:676019592757248001>〙 **${n3.tag}**
-			**Logicpath Points** **${res[2].logic}**<:LP:675763680863977513>
-			**Rewards**: **30**<:echoes:655840505225281536>, **2**<:ess1:655840713904488469>, **2**<:ess2:655840643847028751>, **2**<:ess3:655840571616919586> and **300**<:clue:655384523735040000>
-
-			- - - - -
-			〘4〙 **${n4.tag}**
-			**Logicpath Points**: **${res[3].logic}**<:LP:675763680863977513>
-			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
-
-			- - - - -
-			〘5〙 **${n5.tag}**
-			**Logicpath Points**: **${res[4].logic}**<:LP:675763680863977513>
-			**Rewards**: **20**<:echoes:655840505225281536>, **1**<:ess1:655840713904488469>, **1**<:ess2:655840643847028751>, **1**<:ess3:655840571616919586> and **200**<:clue:655384523735040000>
-				
-				`)
-					.setThumbnail("https://i.imgur.com/VGo6rp3.png")
-					.setTimestamp()
-
-				await reChannel.send(reeEmbed);
-			});
-
-	},
-
 	getMember: function (message, toFind = '') {
 		toFind = toFind.toLowerCase().replace("<@", "").replace(">", "");
 
@@ -163,7 +65,7 @@ module.exports = {
 			.setTitle(errMsgs[errMsg])
 			.setColor("RED")
 			.setDescription(error)
-			.setAuthor(message.author.username, message.author.displayAvatarURL())
+			.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true}))
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(errEmbed);
 	},
@@ -313,6 +215,17 @@ module.exports = {
 		await newCooldown.save().catch(err => console.log(err));
 
 	},
+	/**
+	 * [CoolEmbed function]
+	 * Yes I know it says cool-embed but here, I mean cooldown embed.
+	 * This function is used to tell a user that they're still on cooldown in a specific command.
+	 * THe function is also used to advertise.
+	 * @param {Object} message the message that fired the command. 
+	 * @param {String} Title The title of the embed.
+	 * @param {String} Description The description of the embed. Also allows "REMAINING" to get set as the remaining time.
+	 * @param {Number} remainingTime The remaining time, is grabbed from the findCooldown() function, accessed by <findCooldown>.timeRemaining
+	 * @param {Array} units An array that includes the units you want the "REMAINING" to get displayed in, ["s", "m"] for instance. 
+	 */
 	coolEmbed: async (message, Title, Description, remainingTime, units) => {
 
 		const timeLeft = new Date(remainingTime);
@@ -420,36 +333,6 @@ module.exports = {
 			console.log(e);
 			return true;
 		});
-	},
-	announcIt: async (message, event) => {
-		let randomNumber = Math.floor(Math.random() * 10),
-			oneTo10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-		const checkForChannel = Cooldown.findOne({ userID: message.channel.id, command: event });
-
-		if (checkForChannel) return;
-
-		const cooldownChannel = new Cooldown({
-			command: event,
-			userID: message.channel.id,
-			timeRemaining: Date.now() + 1800000,
-			dateNow: Date.now()
-		});
-
-		await cooldownChannel.save().catch(err => console.log(err));
-
-		if (oneTo10[randomNumber] > 3 && oneTo10[randomNumber] < 8) {
-			/*await newLP(message);
-			const LP = await logicPath.findOne({ UserID: message.author.id });
-			if (LP.Opened.includes("1yrAnniversary")) return;
-			if (LP.Opened.includes("hasFired")) return;
-	
-			LP.Opened = [...LP.Opened, "hasFired"];
-			LP.save().catch(e => console.log(e));
-	
-			message.channel.send("**Celebrating Cowboish's one year anniversary :D**\nType __`Happy Birthday Cowboish`__ in the chat to trigger the anniversary event :3", new MessageAttachment("https://i.imgur.com/LZlynfT.png"))
-			*/
-		}
 	},
 	permsCheck(message, bot, highestRole, requiredPerms, permissionsInGuild, permissionsInChannel) {
 

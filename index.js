@@ -1,4 +1,3 @@
-//_______________Modules_____________
 const Discord = require('discord.js');
 
 const bot = new Discord.Client({
@@ -6,7 +5,7 @@ const bot = new Discord.Client({
 });
 
 const schedule = require('node-schedule');
-const { rewards } = require("./assets/functions.js");
+const { rewards, giveaway, resetMatches } = require("./assets/minor-commands.js");
 
 const Cooldown = require("./models/cooldown.js");
 const mongoose = require("mongoose");
@@ -39,10 +38,10 @@ schedule.scheduleJob("0 9 * * *", async function () {
     const checkForExecution = await Cooldown.findOne({ userID: bot.user.id, command: "giveaway" });
 
     if (checkForExecution) return;
-    await bot.commands.get('giveaway').execute(bot);
+    await giveaway(bot);
+    await resetMatches();
 
 });
-
  
 bot.login(process.env.token);
 
