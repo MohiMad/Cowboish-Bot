@@ -5,14 +5,18 @@ const { Collection } = require("discord.js");
 module.exports = (bot) => {
     bot.commands = new Collection();
 
-    const commandFiles = fs.readdirSync('./commands/').filter(File => File.endsWith('.js'));
+    const categories = fs.readdirSync('./commands/');
 
-    for (const file of commandFiles) {
-        const command = require(`../commands/${file}`);
+    for (const category of categories) {
+        const commandFiles = fs.readdirSync(`./commands/${category}`).filter(File => File.endsWith('.js'));
 
-        let name = command.name[0];
-        if(name.length === 1) name = command.name;
+        for (const file of commandFiles) {
+            const command = require(`../commands/${category}/${file}`);
 
-        bot.commands.set(name, command);
+            let name = command.name[0];
+            if (name.length === 1) name = command.name;
+
+            bot.commands.set(name, command);
+        }
     }
 };
