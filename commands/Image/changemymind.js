@@ -10,7 +10,7 @@ module.exports = {
     execute: async (message, args) => {
 
          const cooldownCheck = await findCooldown(message, "changemymind");
- 
+  
          if (cooldownCheck) return coolEmbed(message, "You're abusing this command .-.", "The cooldown on this command is literally set to **10** seconds... can't you wait that long? 0-o\nPlease wait **REMAINING** before attempting to use this command again... :))", cooldownCheck.timeRemaining, ["s"]);
 
         let sayMessage = args.slice(1).join(" "),
