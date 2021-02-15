@@ -8,7 +8,7 @@ module.exports = {
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Image",
     execute: async (message, args) => {
-
+ 
          const cooldownCheck = await findCooldown(message, "spidermanpresenation");
  
          if (cooldownCheck) return coolEmbed(message, "You're having too many presenations!", "The cooldown on this command is literally set to **10** seconds... can't you wait that long? 0-o\nPlease wait **REMAINING** before attempting to use this command again... :))", cooldownCheck.timeRemaining, ["s"]);

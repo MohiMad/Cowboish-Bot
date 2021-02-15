@@ -42,7 +42,7 @@ module.exports = {
         ctx.font = `${pixelSize}px sans-serif`;
         ctx.fillStyle = '#000000';
 
-        ctx.fillText(sayMessage.replace(letterInALine, "$&@").split(/\s+@/).join("\n"), 50, height);
+        ctx.fillText(sayMessage.replace(letterInALine, "$&@").split(/\s+@/).join("\n"), 50, height, 1550);
 
         const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'deth.png');
 

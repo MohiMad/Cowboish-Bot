@@ -54,7 +54,7 @@ module.exports = {
         ctx.fillStyle = '#000000';
 
         ctx.rotate(g * Math.PI / 180);
-        ctx.fillText(sayMessage.replace(letterInALine, "$&@").split(/\s+@/).join("\n"), 300, height);
+        ctx.fillText(sayMessage.replace(letterInALine, "$&@").split(/\s+@/).join("\n"), 300, height, 485);
 
         const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'changemymind.png');
 
