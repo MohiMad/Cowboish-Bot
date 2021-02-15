@@ -4,7 +4,7 @@ let spamStopper = new Set();
 
 module.exports = {
     name: ["reportissue", "issue", "reportbug", "bugreport"],
-    description: "Gives you the ability to report an existing issue/bug in Cowboish...\nThe issue/bug will be send in [Cowboish Server](https://discord.com/invite/YWcSukS)\nYou can even attach a screenshot/bug-replication-preview\n\n**Note:** Do not report big explicits using this command. Instead, DM **Mohi#2888** because the bug report using this command is visible to all members in the Support server...\n\n**Usage:** `$prefixreportissue`\n*and then cowboish will ask you multiple questions about the bug/issue you've encountered*",
+    description: "Gives you the ability to report an existing issue/bug in Cowboish...\nThe issue/bug will be sent in [Cowboish Server](https://discord.com/invite/YWcSukS)\nYou can even attach a screenshot/bug-replication-preview\n\n**Note:** Do not report big explicits using this command. Instead, DM **Mohi#2888** because the bug report using this command is visible to all members in the Support server...\n\n**Usage:** `$prefixreportissue`\n*and then cowboish will ask you multiple questions about the bug/issue you've encountered*",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "MANAGE_MESSAGES"],
     category: "Config",
     banned: ["742743667168510092"],
