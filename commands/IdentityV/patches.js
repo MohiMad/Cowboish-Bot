@@ -11,8 +11,10 @@ module.exports = {
 
         if (spamStopper.has(message.author)) return message.reply("**You can't run two patchnotes-scrollers at once... Please react with ❌ on the previous embed before being able to start a new scroller!**");
 
-        let patchNotes = p.patchNotes.replace(/(])/g, ']**')
+        let patchNotes = p.patchNotes
+            .replace(/(])/g, ']**')
             .replace(/[[]/g, '**[')
+            .replace(/\d+%/g, "**$&**")
             .match(/.{1,1900}(\n|$)/gism);
 
         let pageI = 0;

@@ -32,8 +32,8 @@ module.exports = {
                 const splitted = object[keys[i]].match(/.{1,900}(\n|$)/gism);
 
                 for (var j = 0; j < splitted.length; j++) {
-                    if (j == 0) embed.addField(keys[i].replace(rg, " "), splitted[j]);
-                    else embed.addField("\u200b", splitted[j]);
+                    if (j == 0) embed.addField(keys[i].replace(rg, " "), splitted[j].replace(/\d+%/g, "**$&**"));
+                    else embed.addField("\u200b", splitted[j].replace(/\d+%/g, "**$&**"));
                 }
 
             }
@@ -52,18 +52,18 @@ module.exports = {
                 await message.channel.send(embed).then(async (msg) => {
 
                     for (const emoji of ["⏪", "⏩", "❌"]) {
-                        msg.react(emoji);
+                        await msg.react(emoji);
                     }
 
                     const backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
 
                     const forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
 
-                    const back = msg.createReactionCollector(backFilter, {
+                    const back = await msg.createReactionCollector(backFilter, {
                         time: 300000
                     });
 
-                    const forward = msg.createReactionCollector(forwardFilter, {
+                    const forward = await msg.createReactionCollector(forwardFilter, {
                         time: 300000
                     });
 
@@ -76,8 +76,8 @@ module.exports = {
                             pageI--;
                         }
 
-                        await Pages[pageI].then((embed) => {
-                            msg.edit(embed);
+                        await Pages[pageI].then(async (embed) => {
+                            await msg.edit(embed);
                         });
                     });
 
@@ -90,15 +90,15 @@ module.exports = {
                         } else {
                             pageI++;
                         }
-                        await Pages[pageI].then((embed) => {
-                            msg.edit(embed);
+                        await Pages[pageI].then(async (embed) => {
+                            await msg.edit(embed);
                         });
 
                     });
 
                     let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
 
-                    let end = msg.createReactionCollector(endFilter, {
+                    let end = await msg.createReactionCollector(endFilter, {
                         time: 300000
                     });
 
@@ -114,13 +114,13 @@ module.exports = {
                         await forward.stop();
                         await back.stop();
                         spamStopper.delete(message.author);
-                        msg.reactions.removeAll().catch(error => console.log(error));
+                        await msg.reactions.removeAll().catch(error => console.log(error));
 
                     });
 
                     end.on('end', async () => {
                         spamStopper.delete(message.author);
-                        msg.reactions.removeAll().catch(error => console.log(error));
+                        await msg.reactions.removeAll().catch(error => console.log(error));
                     });
 
 
@@ -150,14 +150,14 @@ module.exports = {
                 }
 
                 spamStopper.add(message.author);
-                return switchPages(wikiArray);
+                return await switchPages(wikiArray);
 
             }
             //If the author is looking for a specific wikipedia page
             for (const x of wikipedia[wikiObject].slice(1)) {
                 if (x.Name.includes(searchForString)) {
 
-                    sendWikiInfo(x, wikipedia[wikiObject]).then(embed => {
+                    await sendWikiInfo(x, wikipedia[wikiObject]).then(embed => {
                         return message.channel.send(embed);
                     });
                     return;

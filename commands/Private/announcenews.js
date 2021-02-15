@@ -23,6 +23,7 @@ module.exports = {
 
                 const patchNotes = p.patchNotes.replace(/(])/g, ']**')
                     .replace(/[[]/g, '**[')
+                    .replace(/\d+%/g, "**$&**")
                     .match(/.{1,1900}(\n|$)/gism);
 
                 //.replace(/[(]/g, '**(').replace(/[)]/g, ')**');
