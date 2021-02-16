@@ -1,6 +1,7 @@
 const { ErrorMsg } = require("../../assets/functions.js");
 const { MessageEmbed } = require("discord.js");
-const { Filter, Maps } = require("../../assets/spawnLocations.json")
+const { Filter, Maps } = require("../../assets/spawnLocations.json");
+const { survivorIcon, hunterIcon, dungeonIcon, cipherIcon } = require("../../assets/emojis.json");
 
 const spamStopper = new Set();
 module.exports = {
@@ -21,6 +22,7 @@ module.exports = {
 
             let embed = new MessageEmbed()
                 .setColor("RANDOM")
+                .setDescription(`${survivorIcon} ➜ **Survivor Spawn Location**\n${hunterIcon} ➜ **Hunter Spawn Location**\n${cipherIcon} ➜ **Cipher Spawn Location**\n${dungeonIcon} ➜ **Dungeon Location**`)
                 .setAuthor(title, message.author.displayAvatarURL(), imageArray[pageI].replace(".jpg", ""));
 
             embed.setFooter(`Spawn 1 of ${imageArray.length}`);

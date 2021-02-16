@@ -53,6 +53,12 @@
             "Ciphers": ["https://i.imgur.com/yd08ixc.jpg", "https://i.imgur.com/TsQfxYu.jpg", "https://i.imgur.com/2NNA5Fh.jpg", "https://i.imgur.com/uZM3dyA.jpg", "https://i.imgur.com/rg5TYRg.jpg"],
             "Players": ["https://i.imgur.com/nIbTQPv.jpg", "https://i.imgur.com/O2NqU8S.jpg", "https://i.imgur.com/FLHqzDo.jpg", "https://i.imgur.com/1VL3Cvg.jpg", "https://i.imgur.com/A4cRX8l.jpg"],
             "Dungeon": ["https://i.imgur.com/PKaY8MW.jpg", "https://i.imgur.com/EwgIENt.jpg", "https://i.imgur.com/j2KqSWF.jpg", "https://i.imgur.com/PFDzGgn.jpg", "https://i.imgur.com/5OLdqo0.jpg"]
+        },
+        {
+            "Name": ["China Town", "china town", "chinatown"],
+            "Ciphers": ["https://i.imgur.com/sxLFmhF.jpg", "https://i.imgur.com/mmhBPlJ.jpg", "https://i.imgur.com/hbTDVUE.jpg", "https://i.imgur.com/ibcBvp2.jpg", "https://i.imgur.com/vJ9mnhJ.jpg", "https://i.imgur.com/XMIQikT.jpg"],
+            "Players": ["https://i.imgur.com/KoyxFJ3.jpg", "https://i.imgur.com/eEoODbO.jpg", "https://i.imgur.com/zKEC8RC.jpg", "https://i.imgur.com/1swwVCe.jpg", "https://i.imgur.com/QlnVLDS.jpg", "https://i.imgur.com/grpMmaS.jpg"],
+            "Dungeon": ["https://i.imgur.com/490kmFp.jpg", "https://i.imgur.com/O9Iu62l.jpg", "https://i.imgur.com/x3d2CYo.png"]
         }
     ]
 }
