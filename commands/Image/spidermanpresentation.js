@@ -3,7 +3,7 @@ const { coolEmbed, addCooldown, findCooldown } = require("../../assets/functions
 const Discord = require("discord.js");
 
 module.exports = {
-    name: ["spidermanpresenation", "smp"],
+    name: ["spidermanpresentation", "presenation", "sppresentation"],
     description: `Make your own Spider Man Presenation meme!\n\n**Usage:**\`$prefixspidermanpresenation <text>\``,
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Image",
