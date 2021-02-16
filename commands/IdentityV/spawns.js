@@ -11,7 +11,7 @@ module.exports = {
     category: "IdentityV",
     execute: async (message, args, bot, prefix) => {
 
-        let msg = "**Too few arguments were given...**\nPlease provide me what map you want to check the spawns for... \n**Optional**: You can also provide what spawns you want to check for after providing the map name...\n\n**Map Names/Arguments (2nd):**\n\n**The Red Chruch** ➜ `church`\n**Sacred Heart Hospital** ➜ `hospital`\n**Arms Factory** ➜ `factory`\n**Leo's Memory** ➜ `memory`\n**Moonlit River Park** ➜ `moonlit`\n**Lakeside Village** ➜ `lakeside`\n**Eversleeping Town** ➜ `eversleeping`\n**White Sand Street Asylum** ➜ `asylum`\n\n**Spawn Arguments (3rd):**\n\n**Cipher Machines** ➜ `cipher`\n**Survivors/Hunter** ➜ `players`\n**Dungeon Location** ➜ `dungeon` Duuuh on this one xD\n\n**Examples:**\n`" + prefix + "spawns <mapName> <spawnType(optional)>`\n`" + prefix + "spawns church ciphermachines`";
+        let msg = "**Too few arguments were given...**\nPlease provide me what map you want to check the spawns for... \n**Optional**: You can also provide what spawns you want to check for after providing the map name...\n\n**Map Names/Arguments (1st):**\n\n**The Red Chruch** ➜ `church`\n**Sacred Heart Hospital** ➜ `hospital`\n**Arms Factory** ➜ `factory`\n**Leo's Memory** ➜ `memory`\n**Moonlit River Park** ➜ `moonlit`\n**Lakeside Village** ➜ `lakeside`\n**Eversleeping Town** ➜ `eversleeping`\n**White Sand Street Asylum** ➜ `asylum`\n**China Town** ➜ `chinatown`\n\n**Spawn Arguments (2nd):**\n\n**Cipher Machines** ➜ `cipher`\n**Survivors/Hunter** ➜ `players`\n**Dungeon Location** ➜ `dungeon`\n\n**Examples:**\n`" + prefix + "spawns <mapName> <spawnType(optional)>`\n`" + prefix + "spawns church ciphermachines`";
 
         async function pageScroller(message, imageArray, title) {
 
@@ -23,7 +23,8 @@ module.exports = {
             let embed = new MessageEmbed()
                 .setColor("RANDOM")
                 .setDescription(`${survivorIcon} ➜ **Survivor Spawn Location**\n${hunterIcon} ➜ **Hunter Spawn Location**\n${cipherIcon} ➜ **Cipher Spawn Location**\n${dungeonIcon} ➜ **Dungeon Location**`)
-                .setAuthor(title, message.author.displayAvatarURL(), imageArray[pageI].replace(".jpg", ""));
+                .setTitle(title)
+                .setURL(imageArray[pageI].replace(".jpg", ""));
 
             embed.setFooter(`Spawn 1 of ${imageArray.length}`);
             embed.setImage(imageArray[pageI]);
@@ -60,8 +61,9 @@ module.exports = {
                     pageI--;
                 }
 
-                embed.setImage(imageArray[pageI]);
-                embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
+                embed.setImage(imageArray[pageI])
+                    .setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`)
+                    .setURL(imageArray[pageI].replace(".jpg", ""));
 
                 await msg.edit(embed);
             });
@@ -77,7 +79,8 @@ module.exports = {
                     pageI++;
                 }
                 embed.setImage(imageArray[pageI]);
-                embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`);
+                embed.setFooter(`Spawn ${pageI + 1} of ${imageArray.length}`)
+                    .setURL(imageArray[pageI].replace(".jpg", ""));
 
                 await msg.edit(embed);
             });
@@ -124,7 +127,7 @@ module.exports = {
                         }
                     }
                     const array = map.Players.concat(map.Ciphers, map.Dungeon);
-                    return pageScroller(message, array, `All Spawn LocationS In ${map.Name[0]}`);
+                    return pageScroller(message, array, `All Spawn Locations In ${map.Name[0]}`);
                 }
             }
         }
