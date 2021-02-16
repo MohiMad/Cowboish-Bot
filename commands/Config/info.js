@@ -6,35 +6,71 @@ module.exports = {
     description: "Sends general information about Cowboish bot",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Config",
-    execute(message, bot, MohiMoo, prefix) {
+    execute(message, bot, MohiMoo, prefix, args) {
 
 
-        const betterEmbed = new MessageEmbed()
+        const embed = new MessageEmbed()
             .setColor("0xFFE700")
-            .setDescription(stripIndents`👇 <@632291800585076761> information 👇
-    Cowboish bot is Mohi's first project coded using *JavaScript*
-
-    ⚙️ Bot's prefix : **${prefix}**
-    - *Use this prefix before any of my commands ;D*
-
-    📌 Do __*${prefix}help*__ to recieve help >:D
-
-    <:cowboy:649130677253439508> Creator: **${MohiMoo.tag}**
-
-    🎉 My birthday : 🎂 **14/10/2019**
-
-    **Credits And Usage Rights:**
-    - All art used in Cowboish have their artists credited.\nIf you have any issues with your content being featured don't hesitate in contacting me.
-    
-    `, true)
-            .addField("\u200b", stripIndents`**For More Information**
-    [Cowboish Website](https://mohimad.github.io/cowboishbot/)
-    [Invite Me ;D](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502)
-    [Cowboish Server](https://discordapp.com/invite/YWcSukS)`)
+            .setTitle("Cowboish Bot Information")
             .setThumbnail(bot.user.displayAvatarURL())
-            .setTimestamp();
+            .setAuthor(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 
-        message.channel.send(betterEmbed);
+        if (!args[1] || isNaN(args[1]) || Number(args[1]) > 2) {
+            embed.setDescription(stripIndents`
+            Cowboish bot is a community-made Identity V Discord bot. Written using JavaScript but with love 💛
+            Navigate to the next page by sending \`${prefix}info 2\`
+
+
+                > 📄 **Server Count**:
+                 - ${bot.guilds.cache.size} servers
+
+                > 👥 **User Count**:
+                - ${bot.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} users
+
+                > ⚙️ **Bot's prefix**:
+                  - My prefix is \`${prefix}\`
+
+                > 🔳 **Creator:** 
+                  - ${MohiMoo.tag}
+
+                > 🎉 Bot's Creation Date: 
+                  - **14/10/2019**
+
+
+            `)
+            .setFooter("Cowboish Bot's Information - Page 1 of 2", bot.user.displayAvatarURL())
+                .addField("> Regarding Credits And Usage Rights", "- All art used in Cowboish have their artists credited.\nIf you have any issues with your content being featured don't hesitate in contacting the developer.")
+                .addField("Reference Links", "[Cowboish Website](https://mohimad.github.io/cowboishbot/) `|` [Invitation Link](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) `|` [Cowboish Server](https://discordapp.com/invite/YWcSukS) `|` [Github Repository](https://github.com/MohiMad/Cowboish-Bot)")
+        } else {
+            embed.setTitle("Sweet people Cowboish wouldn't make it this far without:")
+            .addField("\u200b", stripIndents`
+                > **DrpyCatty#8878**
+                 - Helped a lot with command inspiration and quizes question creation. 🧡
+    
+                > **Dziadek#3639**
+                 - Sent me the essences' items screenshots for multiple seasons. 💛
+    
+                > **Lilith#9210**
+                 - A very old supporter who helped me with various things I can't even count them with my fingers. 💚
+    
+                > **xBunnyHop#0001**
+                 - A fellew Discord bot developer I met since the beginning and is still with me till this point. ❤
+    
+                > **Xie Bi’An#3582**
+                 - A very creative quizes question maker who wrote most of the questions in Cowboish. 🤍
+    
+                > **chr3st5an#3210**
+                 - Photographer Bot developer and my one and only Identity V Discord bot competitor. 💙
+    
+                > **Hanhan#3156**
+                 - My sweetie 💞💕💕 Been always there when I needed her. 💖
+
+                `)
+                .setFooter("Cowboish Bot's Information - Page 2 of 2", bot.user.displayAvatarURL())
+
+        }
+
+        message.channel.send(embed);
 
 
     }

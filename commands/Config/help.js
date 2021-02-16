@@ -33,18 +33,19 @@ module.exports = {
 
                 if (command.name.includes(args[2].toLowerCase())) {
 
-                    const rg = new RegExp(/\$prefix/, "g");
-
                     let betterPerms = new Array();
 
-                    for (perm of command.permissions){
+                    for (perm of command.permissions) {
                         betterPerms.push(permissions[perm]);
                     }
 
                     const embed = new MessageEmbed()
                         .setTitle(`Usage of the command "${name}" in the ${category} Category`)
                         .setColor("RANDOM")
-                        .setDescription("Arguments put inside of `<>` are **mandatory** but arguments put inside of `[]` are **optional**!\n\n" + `${command.description.replace(rg, prefix)}\n**Command Aliases:** ` + "`" + command.name.join("`, `") + "`" + "\n**Required Permissions:** " + betterPerms.join(", "))
+                        .setDescription("Arguments put inside of `<>` are **mandatory** but arguments put inside of `[]` are **optional**!")
+                        .addField("Command Description", command.description.replace(/\$prefix/g, prefix))
+                        .addField("Aliases", "`" + command.name.join("`, `") + "`")
+                        .addField("Required Permissions:", betterPerms.join(", "))
                         .setFooter(`Information about the ${name} command`);
 
                     message.channel.send(embed)
