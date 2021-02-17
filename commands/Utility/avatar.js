@@ -8,8 +8,7 @@ module.exports = {
     execute: async (message, args) => {
         const u = await getMember(message, args.slice(1).join(" ")) || await getMember(message, message.author.id);
 
-
-        const avatar = new Discord.MessageEmbed()
+        const avatar = new MessageEmbed()
             .setTitle(`${u.user.username}'s avatar!`)
             .setDescription(`[jpg](${u.user.displayAvatarURL({ dynamic: true, format: 'jpg' })}) \`|\` [png](${u.user.displayAvatarURL({ dynamic: true, format: 'png' })})`)
             .setColor(u.user.displayHexColor ? u.user.displayHexColor : "0xDFF42F")
