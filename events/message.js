@@ -29,13 +29,17 @@ module.exports = async (bot, message) => {
 
     const highestRole = message.guild.me.roles.highest;
 
-    if (message.content.startsWith("setcowboishprefix")) {
-        bot.commands.get('setcowboishprefix').execute(message, args, bot);
-    }
-
     /*if (["happybirthdayseer", "happybdseer", "hbdseer", "happybirthdayseer", "happybdseer"].includes(message.content.split(" ").join("").toLowerCase())) {
         bot.commands.get("birthday").execute(message, args, bot, prefix);
     }*/
+
+    if (message.content.startsWith("setcowboishprefix")) {
+        return bot.commands.get('setcowboishprefix').execute(message, args, bot);
+    }
+
+    if (message.mentions.has(bot.user) && message.content.length < (bot.user.toString().length + 2)) {
+        return message.channel.send(`Hello ${message.author.toString()}!\nMy prefix is \`${prefix}\`\nWrite \`${prefix}help\` to see my commands.`);
+    }
 
     if (!message.content.startsWith(prefix)) return;
     if (message.content.length === prefix.length) return;
