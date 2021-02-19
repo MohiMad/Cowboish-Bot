@@ -72,7 +72,12 @@ module.exports = {
                         keepGoing = false;
 
                         message.channel.send(\`**Canceled suggesting, ${authorName}!**\`);
-                    } else if (collected.first().content.startsWith(prefix)) {
+                    } else if(collected.first().content.length < 20){
+                        keepGoing = false;
+
+                        message.channel.send(\`**${message.author.toString()} Your suggestion was too short!**\nThe minium length of a sugestion is 20 characters, your suggestion was ${20 - collected.first().content.length} characters shorter.\`);
+                    }
+                    else if (collected.first().content.startsWith(prefix)) {
                         keepGoing = false;
                     } else {
                         firstQuestion = collected.first().content;
@@ -123,6 +128,8 @@ module.exports = {
 
 
         } else {
+            if (sayMessage.length < 20) return message.channel.send(`**${message.author.toString()} Your suggestion was too short!**\nThe minium length of a sugestion is 20 characters, your suggestion was ${20 - collected.first().content.length} characters shorter.`);
+
             firstQuestion = sayMessage;
 
             awaitMessage("**At what priority level do you want this suggestion to happen?**\nLow? Medium? High?... You can cancel by sending \"Cancel\"",

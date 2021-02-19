@@ -76,12 +76,12 @@ module.exports = async (bot, message) => {
         return result;
     }
 
-    for (const command of bot.commands.array()) {
 
-        let name = command.name[0];
-        if (name.length === 1) name = command.name;
+    const command = bot.commands.get(args[0].toLowerCase()) || bot.commands.find(c => c.name.includes(args[0].toLowerCase()));
 
-        if (command.name.includes(args[0].toLowerCase())) {
+
+    if (command) {
+        try {
             let admins = command.admins ? command.admins : [message.author.id];
             let banned = command.banned ? command.banned : [];
 
@@ -89,12 +89,13 @@ module.exports = async (bot, message) => {
             if (command.isDisabled) return;
             if (banned.includes(message.author.id)) return;
 
-            if (permsCheck(message, bot, highestRole, command.permissions, permissionsInGuild, permissionsInChannel) === true) return;
+            if (permsCheck(message, bot, highestRole, command.permissions ? command.permissions : ["SEND_MESSAGES"], permissionsInGuild, permissionsInChannel) === true) return;
 
             const execParms = getArgsRequested(command.execute);
             return command.execute(objects[execParms[0]], objects[execParms[1]], objects[execParms[2]], objects[execParms[3]], objects[execParms[4]]);
+        } catch (err) {
+            console.log(err);
         }
-
     }
 
 };
