@@ -46,15 +46,15 @@ module.exports = async (bot, message) => {
     //if(message.author.id !== MohiMoo.id) return;
 
     const objects = {
-        message: message,
-        args: args,
-        bot: bot,
-        prefix: prefix,
-        MohiMoo: MohiMoo,
-        SpamSet: SpamSet,
-        permissionsInChannel: permissionsInChannel,
-        permissionsInGuild: permissionsInGuild,
-        highestRole: highestRole
+        message,
+        args,
+        bot,
+        prefix,
+        MohiMoo,
+        SpamSet,
+        permissionsInChannel,
+        permissionsInGuild,
+        highestRole
     }
 
     /**

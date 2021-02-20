@@ -20,143 +20,96 @@ module.exports = {
             let pageI = 0;
             if (!array.length) return message.reply(`**you don't have any ${item}s**`);
 
-            let embed = new MessageEmbed()
+            const embed = new MessageEmbed()
                 .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
                 .setTitle(`${array[pageI].Name[0]}`)
                 .setFooter(`${item} ${pageI + 1} of ${array.length}`)
-                .setURL("https://youtu.be/K3GuaZlyiVw")
+                .setURL(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
                 .setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()));
 
             if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
-
             if (array.length === 1) return message.channel.send(embed);
 
             spamStopper.add(message.author);
-            let msg = await message.channel.send(embed);
+            const msg = await message.channel.send(embed);
+
+            const emojis = ["⏪", "⏩", "❌"];
+
+            if (item === "Portrait" || item === "Frame") emojis.push("📥");
 
 
-            if (item === "Portrait" || item === "Frame") {
+            for (const emoji of emojis) {
+                await msg.react(emoji);
+            }
 
-                await msg.react("⏪");
-                await msg.react("⏩");
-                await msg.react("📥");
-                await msg.react("❌");
+            const Filter = (reaction, user) => emojis.includes(reaction.emoji.name) & user.id === message.author.id;
 
-                let equipFilter = (reaction, user) => reaction.emoji.name === '📥' & user.id === message.author.id;
+            const collector = msg.createReactionCollector(Filter, {
+                time: 300000
+            });
 
-                let equip = msg.createReactionCollector(equipFilter, {
-                    time: 300000
-                });
+            collector.on('collect', async (r) => {
+                if (r.emoji.name == "❌") {
+                    await collector.stop();
 
-
-                equip.on('collect', async r => {
-                    if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
-                        spamStopper.delete(message.author);
-                        return equip.stop();
-                    }
-
-                    msg.reactions.removeAll().catch(error => console.log(error));
                     spamStopper.delete(message.author);
+                    await msg.reactions.removeAll().catch(error => console.log(error));
+                    embed.setFooter(`This message is now inactive`);
+
+
+                } else if (r.emoji.name == "⏩") {
+                    await r.users.remove(message.author);
+
+                    if (pageI === array.length - 1) pageI = 0;
+                    else pageI++;
+
+                    embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
+                        .setFooter(`${item} ${pageI + 1} of ${array.length}`)
+                        .setURL(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL())).setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
+                        .setTitle(`${array[pageI].Name[0]}`)
+
+                    if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
+
+                    await msg.edit(embed);
+                } else if (r.emoji.name == "⏪") {
+                    await r.users.remove(message.author);
+
+                    if (pageI === 0) pageI = array.length - 1;
+                    else pageI--;
+
+                    embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
+                        .setFooter(`${item} ${pageI + 1} of ${array.length}`)
+                        .setURL(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
+                        .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
+                        .setTitle(`${array[pageI].Name[0]}`);
+
+                    if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
+
+                } else if (r.emoji.name == "📥") {
+                    spamStopper.delete(message.author);
+                    await msg.reactions.removeAll().catch(error => console.log(error));
+                    await collector.stop();
 
                     if (item === "Portrait") LP.Portrait = array[pageI].logicpathID;
                     else LP.frames.equipped = array[pageI].Item;
 
-                    LP.save().catch(e => console.log(e));
+                    await LP.save().catch(e => console.log(e));
 
                     embed.setFooter(`Equipped ${array[pageI].Name[0]}`);
-                    await msg.edit(embed);
-
-                });
-
-            } else {
-                await msg.react("⏪");
-                await msg.react("⏩");
-                await msg.react("❌");
-
-            }
-
-            let backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
-
-            let forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
-
-            let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
-
-            let end = msg.createReactionCollector(endFilter, {
-                time: 300000
-            });
-
-            let back = msg.createReactionCollector(backFilter, {
-                time: 300000
-            });
-
-            let forward = msg.createReactionCollector(forwardFilter, {
-                time: 300000
-            });
-
-            back.on('collect', async r => {
-                await r.users.remove(message.author);
-
-                if (pageI === 0) pageI = array.length - 1;
-                else pageI--;
-
-
-                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
-                    .setFooter(`${item} ${pageI + 1} of ${array.length}`)
-                    .setURL("https://youtu.be/K3GuaZlyiVw")
-                    .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
-                    .setTitle(`${array[pageI].Name[0]}`);
-
-
-                if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
-
+                }
 
                 await msg.edit(embed);
             });
 
-            forward.on('collect', async r => {
 
-                await r.users.remove(message.author);
-
-                if (pageI === array.length - 1) pageI = 0;
-                else pageI++;
-
-                embed.setImage(array[pageI].linkTag.replace("pfp", message.author.displayAvatarURL()))
-                    .setFooter(`${item} ${pageI + 1} of ${array.length}`)
-                    .setURL("https://youtu.be/K3GuaZlyiVw")
-                    .setColor(array[pageI].Color ? array[pageI].Color : "RANDOM")
-                    .setTitle(`${array[pageI].Name[0]}`)
-
-                if (item === "Skin") embed.setDescription(array[pageI].Des ? array[pageI].Des : "Unknown Description...");
-
-
-                await msg.edit(embed);
-            });
-
-            end.on('collect', async r => {
-
-
-                await end.stop();
-                await forward.stop();
-                await back.stop();
-                spamStopper.delete(message.author);
-                msg.reactions.removeAll().catch(error => console.log(error));
-
-                embed.setFooter(`This message is now inactive`);
-
-                await msg.edit(embed);
-
-            });
-
-            end.on('end', async (r) => {
+            collector.on('end', async (r) => {
                 if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
-                    forward.stop();
-                    back.stop();
                     spamStopper.delete(message.author);
-                    return end.stop();
+                    return collector.stop();
                 }
 
                 spamStopper.delete(message.author);
-                msg.reactions.removeAll().catch(error => console.log(error));
+                await msg.reactions.removeAll().catch(error => console.log(error));
                 embed.setFooter(`This message is now inactive`);
 
                 await msg.edit(embed);
@@ -201,9 +154,10 @@ module.exports = {
                     if (boolean === true) return;
 
                     boolean = true;
-                    let setPortraitEmbed = new MessageEmbed()
+                    const setPortraitEmbed = new MessageEmbed()
                         .setTitle("Succesfully changed your portrait!")
                         .setAuthor(message.author.tag, message.author.displayAvatarURL())
+                        .setURL(x.linkTag.replace("pfp", message.author.displayAvatarURL()))
                         .setThumbnail(x.linkTag.replace("pfp", message.author.displayAvatarURL()))
                         .setColor("0x952cdb")
                         .setDescription("Your portrait has been set to:\n**" + x.Name[0] + "**\n\nWanna see how it looks like? Do `" + prefix + "logicpath`")

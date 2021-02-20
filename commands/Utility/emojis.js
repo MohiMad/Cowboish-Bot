@@ -55,7 +55,6 @@ module.exports = {
 
         if (spamStopper.has(message.author)) return message.reply("**Please react with ❌ on the previous embed before being able to start a new Emoji scroller!**");
 
-        let Pages = emojiArray;
         let pageI = 0;
 
         const embed = new MessageEmbed()
@@ -72,32 +71,27 @@ module.exports = {
             await msg.react(emoji);
         }
 
-        const backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
-        const forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
-        const endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
+        const Filter = (reaction, user) => ["⏪", "⏩", "❌"].includes(reaction.emoji.name) & user.id === message.author.id;
 
-        const back = msg.createReactionCollector(backFilter, {
+        const collector = msg.createReactionCollector(Filter, {
             time: 300000
         });
 
-        const forward = msg.createReactionCollector(forwardFilter, {
-            time: 300000
-        });
-
-
-        const end = msg.createReactionCollector(endFilter, {
-            time: 300000
-        });
-
-
-        back.on('collect', async r => {
+        collector.on('collect', async r => {
             await r.users.remove(message.author).catch(e => console.log(e));
 
-            if (pageI === 0) {
-                pageI = emojiArray.length - 1;
+            if (r.emoji.name === "⏪") {
+                if (pageI === 0) pageI = emojiArray.length - 1;
+                else pageI--;
+            } else if (r.emoji.name === "⏩") {
+                if (pageI === emojiArray.length - 1) pageI = 0;
+                else pageI++;
             } else {
-                pageI--;
+                await collector.stop();
+                msg.reactions.removeAll().catch(error => console.log(error));
+                return spamStopper.delete(message.author);
             }
+
 
             embed.setImage(emojiArray[pageI].emoji)
                 .setFooter(`Emoji ${pageI + 1} of ${emojiArray.length}`)
@@ -107,43 +101,9 @@ module.exports = {
             await msg.edit(embed).catch(e => console.log(e));
         });
 
-        forward.on('collect', async r => {
-
-            await r.users.remove(message.author).catch(e => console.log(e));
-
-            if (pageI === emojiArray.length - 1) {
-
-                pageI = 0;
-            } else {
-                pageI++;
-            }
-            embed.setImage(emojiArray[pageI].emoji)
-                .setFooter(`Emoji ${pageI + 1} of ${emojiArray.length}`)
-                .setURL(emojiArray[pageI].emoji)
-                .setTitle(emojiArray[pageI].name);
-
-            await msg.edit(embed).catch(e => console.log(e));
-        });
-
-
-        end.on('collect', async r => {
-
-            for (var i = 0; i < 3; i++) {
-                await [end, forward, back][i].stop();
-            }
-
-            msg.reactions.removeAll().catch(error => console.log(error));
-
-            spamStopper.delete(message.author);
-
-        });
-
-        end.on('end', async (r) => {
+        collector.on('end', async (r) => {
             if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
-                for (const y of [end, forward]) {
-                    await y.stop().catch(error => console.log(error));
-                }
-
+                await collector.stop().catch(error => console.log(error));
                 spamStopper.delete(message.author);
                 return end.stop();
             }

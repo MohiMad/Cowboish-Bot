@@ -174,7 +174,12 @@ module.exports = {
 			        **Question about** : ${charName}
 			        **Difficulty** : ${char2Item.Difficulty}
 			        **Time** : 60 Seconds
-			        **Reward** : ${reward}` + "\n\n" + char2Item.Question)
+			        **Reward** : ${reward}
+
+
+
+                    ${char2Item.Question}
+                     [Attachment](${char2Item.Attachment})`)
                     .setImage(char2Item.Attachment)
                     .setFooter(artist2, bot.user.displayAvatarURL())
                     .setColor("RANDOM");
