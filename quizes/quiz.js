@@ -56,10 +56,15 @@ module.exports = {
             .setTitle(`Answer the question below to get a dice ${emoji.dice}`)
             .setAuthor(message.author.username, message.author.displayAvatarURL())
             .setDescription(stripIndents`
-			**Question about** : ${charName}
-			**Difficulty** : ${charItem.Difficulty}
-			**Time** : 60 Seconds
-			**Reward** : ${reward}` + "\n\n" + charItem.Question)
+            **Question about** : ${charName}
+            **Difficulty** : ${char2Item.Difficulty}
+            **Time** : 60 Seconds
+            **Reward** : ${reward}
+
+
+
+            ${char2Item.Question}
+             [Attachment](${char2Item.Attachment})`)
             .setImage(charItem.Attachment)
             .setFooter(artist, bot.user.displayAvatarURL())
             .setColor("RANDOM");
@@ -99,10 +104,19 @@ module.exports = {
                 }
 
                 quizEmbed.setDescription(stripIndents`
-			    **Question about** : ${charName}
-			    **Difficulty** : ${charItem.Difficulty}
-			    **Time** : 60 Seconds
-                **Reward** : ${reward}` + "\n\n" + charItem.Question + `\n\n**${emoji.revealCard} | Reveal Card Used!**\nThe answer of this question is: ${charItem.Answer[0]}`);
+                **Question about** : ${charName}
+                **Difficulty** : ${char2Item.Difficulty}
+                **Time** : 60 Seconds
+                **Reward** : ${reward}
+
+
+
+                ${char2Item.Question}
+                 [Attachment](${char2Item.Attachment})
+                 
+                 
+                **${emoji.revealCard} | Reveal Card Used!**
+                The answer of this question is: ${charItem.Answer[0]}`);
 
                 sentMsg.edit(quizEmbed);
 
