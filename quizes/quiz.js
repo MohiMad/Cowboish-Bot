@@ -62,7 +62,6 @@ module.exports = {
             **Reward** : ${reward}
 
 
-
             ${charItem.Question}
              [Attachment](${charItem.Attachment})`)
             .setImage(charItem.Attachment)
@@ -108,7 +107,6 @@ module.exports = {
                 **Difficulty** : ${charItem.Difficulty}
                 **Time** : 60 Seconds
                 **Reward** : ${reward}
-
 
 
                 ${charItem.Question}
@@ -189,7 +187,6 @@ module.exports = {
 			        **Difficulty** : ${char2Item.Difficulty}
 			        **Time** : 60 Seconds
 			        **Reward** : ${reward}
-
 
 
                     ${char2Item.Question}
