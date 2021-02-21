@@ -57,14 +57,14 @@ module.exports = {
             .setAuthor(message.author.username, message.author.displayAvatarURL())
             .setDescription(stripIndents`
             **Question about** : ${charName}
-            **Difficulty** : ${char2Item.Difficulty}
+            **Difficulty** : ${charItem.Difficulty}
             **Time** : 60 Seconds
             **Reward** : ${reward}
 
 
 
-            ${char2Item.Question}
-             [Attachment](${char2Item.Attachment})`)
+            ${charItem.Question}
+             [Attachment](${charItem.Attachment})`)
             .setImage(charItem.Attachment)
             .setFooter(artist, bot.user.displayAvatarURL())
             .setColor("RANDOM");
@@ -105,14 +105,14 @@ module.exports = {
 
                 quizEmbed.setDescription(stripIndents`
                 **Question about** : ${charName}
-                **Difficulty** : ${char2Item.Difficulty}
+                **Difficulty** : ${charItem.Difficulty}
                 **Time** : 60 Seconds
                 **Reward** : ${reward}
 
 
 
-                ${char2Item.Question}
-                 [Attachment](${char2Item.Attachment})
+                ${charItem.Question}
+                 [Attachment](${charItem.Attachment})
                  
                  
                 **${emoji.revealCard} | Reveal Card Used!**
