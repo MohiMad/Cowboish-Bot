@@ -1,5 +1,5 @@
-const { ErrorMsg, findRole, randomizeAnIndex, } = require("../../assets/functions.js");
-const { Characters } = require("../../assets/items.json");
+const { ErrorMsg, findRole, randomizeAnIndex, } = require("../../src/functions.js");
+const { Characters } = require("../../src/items.json");
 const { Util } = require('discord.js');
 module.exports = {
     name: ["randomize", "random", "pickrandomly"],

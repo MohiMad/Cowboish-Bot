@@ -1,0 +1,357 @@
+{
+    "firstEssence": [
+        {
+            "Shortcuts": [
+                "s15-1",
+                "ess1",
+                "1",
+                "s151",
+                "151",
+                "one",
+                "thepromisedneverland",
+                "promisedneverland",
+                "tpn"
+            ],
+            "WhichEss": "Ess1",
+            "LinkOfIt": "https://i.imgur.com/bngNsSD.png",
+            "Format": ".jpg",
+            "Emoji": "<:s151:814200863349932072>"
+        },
+        {
+            "Name": "[Costume] Bloody Queen - Isabella",
+            "LinkTag": "ZCwgCfj",
+            "Item": "TPN-1",
+            "Tier": "S",
+            "FragAmount": 2000,
+            "Title": "💛 author gets Isabella for BQ 💛",
+            "Color": "0xfcba03",
+            "Footer": "She lowkey scary ; __ ;"
+        },
+        {
+            "Name": "[Costume] Embalmer - Norman",
+            "LinkTag": "55Oa03g",
+            "Item": "TPN-2",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "💜 author got Norman >:0 💜",
+            "Color": "0xbb2af5",
+            "Footer": "(●'◡'●)"
+        },
+        {
+            "Name": "[Costume] \"Prisoner\" - Ray",
+            "LinkTag": "0G8v80T",
+            "Item": "TPN-3",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "💜 author got Raaaaaay 💜",
+            "Color": "0xbb2af5",
+            "Footer": "Ayy"
+        },
+        {
+            "Name": "[Costume] Gardener - Emma",
+            "LinkTag": "vMf4IEj",
+            "Item": "TPN-4",
+            "Tier": "A",
+            "FragAmount": 1000,
+            "Title": "💜 author got Emma 💜",
+            "Color": "0xbb2af5",
+            "Footer": "Love how they fit the Character's name with the skin's name"
+        },
+        {
+            "Name": "[Accessory] Survivor - Little Barney",
+            "LinkTag": "x4IESI6",
+            "Item": "TPN-5",
+            "Tier": "B",
+            "FragAmount": 1000,
+            "Title": "💙 author gets a Survivor accessory 💙",
+            "Color": "0x2e65b8",
+            "Footer": "u w u"
+        },
+        {
+            "Name": "[Accessory] Embalmer - Paper Cup Phone",
+            "LinkTag": "NMGhBtQ",
+            "Item": "TPN-6",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets a... Paper Cup Phone? 💙",
+            "Color": "0x2e65b8",
+            "Footer": "Uhm- nice?"
+        },
+        {
+            "Name": "[Accessory] \"Prisoner\" - Ray's Book",
+            "LinkTag": "Foo0o7C",
+            "Item": "TPN-7",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author got Ray's Book'💙",
+            "Color": "0x2e65b8",
+            "Footer": "Give it back to Ray >:O"
+        },
+        {
+            "Name": "[Accessory] Gardener - Emma's Lantern",
+            "LinkTag": "dM75OO4",
+            "Item": "TPN-8",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets a Lantern for Emma 💙",
+            "Color": "0x2e65b8",
+            "Footer": "(*^▽^*)"
+        },
+        {
+            "Name": "[Accesssory] Bloody Queen - Isabella's Locator",
+            "LinkTag": "DNWS9oS",
+            "Item": "TPN-9",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author found Isabella's Locator💙",
+            "Color": "0x2e65b8",
+            "Footer": "`(*>~<*)′"
+        },
+        {
+            "Name": "[Emote] Embalmer - Shout",
+            "LinkTag": "NRU1CC1",
+            "Item": "TPN-10",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author got a Shout emote for Embalmer💙",
+            "Color": "0x2A4E68",
+            "Footer": "He finally got one >:v"
+        },
+        {
+            "Name": "[Emote] \"Prisoner\" - Shout",
+            "LinkTag": "oyE7N1e",
+            "Item": "TPN-11",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets shouted at by Luka 💙",
+            "Color": "0x2A4E68",
+            "Footer": "lmao would be cute"
+        },
+        {
+            "Name": "[Emote] Bloody Queen - Troubled",
+            "LinkTag": "L5A5AQl",
+            "Item": "TPN-12",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 author gets Troubled emote for BQ 💙",
+            "Color": "0x2A4E68",
+            "Footer": "*shakes my head*"
+        },
+        {
+            "Name": "[Emote] Gardener - Excited",
+            "LinkTag": "3aM9F5x",
+            "Item": "TPN-13",
+            "Tier": "B",
+            "FragAmount": 200,
+            "Title": "💙 woooo author got Excited emote for Emma 💙",
+            "Color": "0x2A4E68",
+            "Footer": "Ow Emma cutie"
+        },
+        {
+            "Name": "[Graffiti] Isabella",
+            "LinkTag": "MSX6ONw",
+            "Item": "TPN-14",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Isabella's graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "owo"
+        },
+        {
+            "Name": "[Graffiti] Emma",
+            "LinkTag": "OfCrUhX",
+            "Item": "TPN-15",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Emma's graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "uwu"
+        },
+        {
+            "Name": "[Graffiti] Norman",
+            "LinkTag": "16vHR9P",
+            "Item": "TPN-16",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Norman's graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "qwq"
+        },
+        {
+            "Name": "[Graffiti] Ray",
+            "LinkTag": "7yN5SvE",
+            "Item": "TPN-17",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Ray's graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "q-q"
+        },
+        {
+            "Name": "[Graffiti] Don",
+            "LinkTag": "bvFvfGP",
+            "Item": "TPN-18",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Don's graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "q(≧▽≦q)"
+        },
+        {
+            "Name": "[Graffiti] Gilda",
+            "LinkTag": "Jg8FpYK",
+            "Item": "TPN-19",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author got Gilda's graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Gilda cutie ><"
+        },
+        {
+            "Name": "[Graffiti] Truth",
+            "LinkTag": "j5DS87K",
+            "Item": "TPN-20",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Troth u-u"
+        },
+        {
+            "Name": "[Graffiti] Harvest",
+            "LinkTag": "cwzFC15",
+            "Item": "TPN-21",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Horvest u-u"
+        },
+        {
+            "Name": "[Graffiti] Run",
+            "LinkTag": "0fCDcIq",
+            "Item": "TPN-22",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Ron u-u"
+        },
+        {
+            "Name": "[Graffiti] Danger",
+            "LinkTag": "rsccPTa",
+            "Item": "TPN-23",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Oh nu, Danger u-u"
+        },
+        {
+            "Name": "[Graffiti] Doubt",
+            "LinkTag": "sph9opF",
+            "Item": "TPN-24",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Yeah... Doubt u-u"
+        },
+        {
+            "Name": "[Graffiti] Monster",
+            "LinkTag": "Jx8sgQm",
+            "Item": "TPN-25",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Monsta u-u"
+        },
+        {
+            "Name": "[Graffiti] Farm",
+            "LinkTag": "knUdLTT",
+            "Item": "TPN-26",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Farm u-u"
+        },
+        {
+            "Name": "[Graffiti] Promise",
+            "LinkTag": "7Gglt7X",
+            "Item": "TPN-27",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets a graffiti 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Promise..."
+        },
+        {
+            "Name": "[Portrait] Isabella",
+            "PortraitName": "Isabella",
+            "LinkTag": "wcba4GJ",
+            "Item": "TPN-28",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Isabella's Portrait 💚",
+            "Color": "0x4CD31E",
+            "Footer": "That creepy smile..."
+        },
+        {
+            "Name": "[Portrait] Emma",
+            "PortraitName": "Emma",
+            "LinkTag": "HKViGhw",
+            "Item": "TPN-29",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Emma's Portrait 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Aaah Emma >< <3"
+        },
+        {
+            "Name": "[Portrait] Norman",
+            "PortraitName": "Norman",
+            "LinkTag": "HXxCD1R",
+            "Item": "TPN-30",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Norman's Portrait 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Norman u w u"
+        },
+        {
+            "Name": "[Portrait] Ray",
+            "PortraitName": "Ray",
+            "LinkTag": "Fd8rQcH",
+            "Item": "TPN-31",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Ray's Portrait 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Ray >_< <3"
+        },
+        {
+            "Name": "[Portrait] Don",
+            "PortraitName": "Don",
+            "LinkTag": "mrB341F",
+            "Item": "TPN-32",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Don's Portrait 💚",
+            "Color": "0x4CD31E",
+            "Footer": "I want O - O"
+        },
+        {
+            "Name": "[Portrait] Gilda",
+            "PortraitName": "Gilda",
+            "LinkTag": "CdTq9Lu",
+            "Item": "TPN-33",
+            "Tier": "C",
+            "FragAmount": 36,
+            "Title": "💚 author gets Gilda's Portrait 💚",
+            "Color": "0x4CD31E",
+            "Footer": "Cutie >:3"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 const logicPath = require("../../models/logicpath.js");
-const { newLP, ErrorMsg } = require("../../assets/functions.js");
+const { newLP, ErrorMsg } = require("../../src/functions.js");
 const spamStopper = new Set();
-const { Skins, Portraits, Frames, Characters } = require("../../assets/items.json");
+const { Skins, Portraits, Frames, Characters } = require("../../src/items.json");
 
 const { MessageEmbed } = require("discord.js");
 

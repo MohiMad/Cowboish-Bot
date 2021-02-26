@@ -1,8 +1,8 @@
 const logicPath = require("../../models/logicpath.js");
 const { stripIndents } = require('common-tags');
-const e = require("../../assets/emojis.json");
+const e = require("../../src/emojis.json");
 const { MessageEmbed } = require('discord.js');
-const { newLP } = require("../../assets/functions.js");
+const { newLP } = require("../../src/functions.js");
 
 module.exports = {
     name: ["shop", "lpshop", "logicpathshop"],
@@ -16,7 +16,7 @@ module.exports = {
         const rg = new RegExp(/\$/, "g");
         //___________Main shop list_________________
         const shopEmbed = new MessageEmbed()
-            .setTitle("<:cowboy:649130677253439508> Cowboish shop list")
+            .setTitle("Cowboish shop list")
             .setColor("RANDOM")
             .setDescription("Here is a list of the lists available in the shop! do `" + prefix + "shop <listID>`\n\n" + stripIndents`
             ${e.ess1} | **Essences shop!** ─ ID ➜  $essence$
@@ -45,11 +45,11 @@ module.exports = {
 
         //___________Essence embed here_______________
         const EssEmbed = new MessageEmbed()
-            .setTitle("<:cowboy:649130677253439508> Cowboish Essence Shop!")
+            .setTitle("Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
-            ${e.ess1} | **Call Of The Abyss 3** - Price : *96* ${e.insp} - ID: $COAIII$
-            ${e.ess2} | **Call Of The Abyss 4** - Price : *96* ${e.insp} - ID: $COAIV$
-            ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: $s14-3$
+            ${e.ess1} | **The Promised Neverland Essence** - Price : *96* ${e.insp} - ID: $s15-1$
+            ${e.ess2} | **Call Of The Abyss 4** - Price : *96* ${e.insp} - ID: $s15-2$
+            ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: $s15-3$
             `.replace(rg, "`"))
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")

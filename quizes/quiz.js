@@ -1,8 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 const logicPath = require("../models/logicpath.js")
-const emoji = require("../assets/emojis.json");
+const emoji = require("../src/emojis.json");
 
-const { addCooldown, spliceArray } = require("../assets/functions.js");
+const { addCooldown, spliceArray } = require("../src/functions.js");
 const { stripIndents } = require("common-tags");
 
 async function addTheCooldown(message, path) {

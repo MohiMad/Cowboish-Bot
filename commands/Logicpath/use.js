@@ -1,10 +1,10 @@
 
 const logicPath = require("../../models/logicpath.js");
-const { newLP, addCooldown, findMember, findCooldown, spliceArray, findCooldownByCommand } = require("../../assets/functions.js");
-const { PowerUps } = require("../../assets/items.json");
+const { newLP, addCooldown, findMember, findCooldown, spliceArray, findCooldownByCommand } = require("../../src/functions.js");
+const { PowerUps } = require("../../src/items.json");
 const { stripIndents } = require("common-tags");
 const { MessageEmbed } = require("discord.js");
-const e = require("../../assets/emojis.json");
+const e = require("../../src/emojis.json");
 
 module.exports = {
     name: ["use", "consume"],

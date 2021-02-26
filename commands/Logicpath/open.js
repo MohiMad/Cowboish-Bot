@@ -1,11 +1,11 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags");
-const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../../assets/functions.js");
-const { ess1, ess2, ess3, frags } = require("../../assets/emojis.json");
+const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../../src/functions.js");
+const { ess1, ess2, ess3, frags } = require("../../src/emojis.json");
 const logicPath = require("../../models/logicpath.js");
-const { firstEssence, secondEssence, thirdEssence } = require("../../assets/essences.json");
+const { firstEssence } = require("../../src/essences.json");
 
-const { statsCheck } = require("../../assets/essenceFunctions.js");
+const { statsCheck } = require("../../src/essenceFunctions.js");
 
 module.exports = {
     name: ["open", "essence", "ess", "e"],
@@ -21,23 +21,23 @@ module.exports = {
 
         const LP = await logicPath.findOne({ UserID: message.author.id });
 
-        var s10_cmd = "`COAIII`, `coa3`, or `1`";
-        s10_2_cmd = "`COAIV`, `coa4`, or `2`",
-            s10_3_cmd = "`s14-3`, `ess3` or `3`",
+        var s10_cmd = "`ess1`, `s15-1`, or `1`";
+        s10_2_cmd = "`ess2`, `s15-2`, or `2`",
+            s10_3_cmd = "`ess3`, `s15-3` or `3`",
 
-            exmple = "`" + prefix + "open 1` to open a `COAIII` " + ess1 + " essence",
+            exmple = "`" + prefix + "open 1` to open a `Promised neverland` " + ess1 + " essence",
             stats_cmd = "`" + prefix + "open stats <essenceID>`",
             author = message.author.username,
-            open10 = "`" + prefix + "open COAIII 10`\n`" + prefix + "open COAIII 3`",
+            open10 = "`" + prefix + "open s15-1 10`\n`" + prefix + "open s15-1 3`",
             boolean = false;
 
         const noargsEmbed = new MessageEmbed()
             .setAuthor("Please provide one of the essences ID after the command", message.author.displayAvatarURL())
             .setColor("RANDOM")
             .setDescription(stripIndents`The current season's Essences are:
-                        ${ess1} | **Call Of The Abyss 3** ─ ID ➜ ${s10_cmd}
-                        ${ess2} | **Call Of The Abyss 4** ─ ID ➜ ${s10_2_cmd}
-                        ${ess3} | **Essence s14-3** ─ ID ➜ ${s10_3_cmd}
+                        ${ess1} | **The Promised Neverland Essence** ─ ID ➜ ${s10_cmd}
+                        ${ess2} | ~~**Essence s15-2**~~ ─ ID ➜ ${s10_2_cmd}
+                        ${ess3} | ~~**Essence s15-3**~~ ─ ID ➜ ${s10_3_cmd}
 
                         **Example**: ${exmple}
 
@@ -57,13 +57,10 @@ module.exports = {
 
             if (!args[1]) return message.channel.send(noargsEmbed);
 
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < 1; i++) {
 
                 let essence;
-
                 if (i === 0) essence = firstEssence;
-                if (i === 1) essence = secondEssence;
-                if (i === 2) essence = thirdEssence;
 
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
 
@@ -84,11 +81,7 @@ module.exports = {
                             .setFooter(EssenceONLY[randomItem].Footer, bot.user.displayAvatarURL())
 
                         if (LP.Opened.includes(EssenceONLY[randomItem].Item)) {
-                            if (EssenceONLY[randomItem].Item === "s14-3-1") {
-                                if (LP.Batter !== true) {
-                                    LP.Batter = true;
-                                }
-                            }
+
                             embed.setDescription(`You have this item already! You get **${EssenceONLY[randomItem].FragAmount}** ${frags} instead :D`);
                             LP.frags = LP.frags + EssenceONLY[randomItem].FragAmount;
 
@@ -96,10 +89,7 @@ module.exports = {
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
                             LP[EssenceONLY[randomItem].Tier] = LP[EssenceONLY[randomItem].Tier] + 1;
 
-                            if (EssenceONLY[randomItem].Item === "s14-3-1" && i === 2) {
-                                LP.Batter = true;
-                                embed.setDescription("Yey you got Ganji Caputa! Do `" + prefix + "quick batter` to play as him UwU");
-                            }
+
                         }
 
                         LP[essence[0].WhichEss] = LP[essence[0].WhichEss] - 1;
@@ -157,18 +147,12 @@ module.exports = {
                             }
 
                             if (LP.Opened.includes(EssenceONLY[rndom].Item)) {
-                                if (EssenceONLY[rndom].Item === "s14-3-1") {
-                                    if (LP.Batter !== true) {
-                                        LP.Batter = true;
-                                    }
-                                }
+
 
                                 fragments += EssenceONLY[rndom].FragAmount;
                                 description += `\n\n[${s + 1} 】](${tenEssLink}) **${EssenceONLY[rndom].Name}**`;
 
                             } else {
-                                if (EssenceONLY[rndom].Item === "s14-3-1") LP.Batter = true;
-
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
                                 LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
 
@@ -179,13 +163,13 @@ module.exports = {
 
                         description = description.replace("\n", `Duplicated items gave you: **${fragments}** <:frags:655840344725913600>`);
 
-                        let Ess1TenEmbed = new MessageEmbed()
+                        const Ess1TenEmbed = new MessageEmbed()
                             .setTitle(`Here is what you got from your ${EssenceNumber} essences:`)
                             .setTimestamp()
                             .setColor(lastEssenceColor)
                             .setThumbnail(essence[0].LinkOfIt)
                             .setImage(lastEssenceImage)
-                            .setAuthor(`${EssenceNumber} s14-${essence[0].WhichEss.replace("Ess", "")} essences has been opened!`, essence[0].LinkOfIt)
+                            .setAuthor(`${EssenceNumber} s15-${essence[0].WhichEss.replace("Ess", "")} essences has been opened!`, essence[0].LinkOfIt)
                             .setDescription(description);
 
                         LP.frags = LP.frags + fragments;
@@ -201,11 +185,11 @@ module.exports = {
                 else if (["stats", "status", "opened"].includes(args[1].toLowerCase())) {
                     boolean = true;
 
-                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Call Of The Abyss 3** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Call Of The Abyss 4** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s14-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats COAIII`");
+                    if (!args[2]) return ErrorMsg(bot, message, "**Please provide one of the essence's ID**\n\nThe current season's Essences are...\n" + ess1 + " | **Call Of The Abyss 3** ─ ID ➜ " + s10_cmd + "\n" + ess2 + " **Call Of The Abyss 4** ID ➜ " + s10_2_cmd + "\n" + ess3 + " | **Essence s15-3** ─ ID ➜ " + s10_3_cmd + "\n\nExample: `" + prefix + "open stats COAIII`");
 
                     if (essence[0].Shortcuts.includes(args[2].toLowerCase())) {
                         await addCooldown(message, 3000, "open");
-                        return await statsCheck(message, `s14-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
+                        return await statsCheck(message, `s15-${essence[0].WhichEss.replace("Ess", "")}`, essence, essence[0].LinkOfIt);
                     }
 
                 }
@@ -216,7 +200,6 @@ module.exports = {
         } catch (err) {
             console.log(err);
             message.reply("**Sorry, hit an unfamiliar error!**");
-
         }
 
     }

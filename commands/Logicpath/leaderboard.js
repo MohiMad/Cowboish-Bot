@@ -1,7 +1,7 @@
 const logicPath = require("../../models/logicpath.js");
 const { MessageEmbed } = require("discord.js")
-const { coolEmbed, findCooldown, addCooldown, ErrorMsg } = require("../../assets/functions.js");
-const { first, second, third } = require("../../assets/emojis.json");
+const { coolEmbed, findCooldown, addCooldown, ErrorMsg } = require("../../src/functions.js");
+const { first, second, third } = require("../../src/emojis.json");
 
 module.exports = {
     name: ["leaderboard", "ld"],
@@ -28,7 +28,7 @@ module.exports = {
                 if (!n || n === undefined || n === null) n = "Not found";
                 else n = n.tag;
 
-                description = description + `\n\n〘${i + 1}〙**${n}**: <:LP:675763680863977513> ➜ **${res[i].logic}** Logicpath steps`;
+                description = description + `\n\n〘${i + 1}〙**${n}**: <a:WalkinDetective:798252338946244628> ➜ **${res[i].logic}** Logicpath steps`;
             }
 
             const LD_Embed = new MessageEmbed()
@@ -64,10 +64,10 @@ module.exports = {
                             let member = bot.users.cache.get(res[i].UserID) || "Not found";
 
                             if (member == "Not found") {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**`
+                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
                             }
                             else {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**`
+                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
 
                             }
                             LD_Embed.setFooter(`Top users on this guild out of ${res.length} results`);
@@ -83,10 +83,10 @@ module.exports = {
                             let member = bot.users.cache.get(res[i].UserID) || "Not found";
 
                             if (member === "Not found") {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**`;
+                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;
                             }
                             else {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<:LP:675763680863977513> | *LogicPath steps* ➜ **${res[i].logic}**`;
+                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;
 
                             }
                             LD_Embed.setFooter(`Top 5 users out of ${res.length} results`);

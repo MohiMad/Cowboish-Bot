@@ -1,6 +1,6 @@
 const logicPath = require("../../models/logicpath.js");
 const { MessageEmbed } = require('discord.js');
-const { ErrorMsg, newLP } = require("../../assets/functions.js");
+const { ErrorMsg, newLP } = require("../../src/functions.js");
 
 module.exports = {
     name: ["set", "logicpathset", "logicpath-set", "lpset"],

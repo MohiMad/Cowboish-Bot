@@ -42,7 +42,7 @@ module.exports = {
                 .addField("> Regarding Credits And Usage Rights", "- All art used in Cowboish have their artists credited.\nIf you have any issues with your content being featured don't hesitate in contacting the developer.")
                 .addField("> Disclaimer", stripIndents`Cowboish Bot was created for the community's sake and I don't make any profit from it.
                 I don't get paid for the development of the bot and It wasn't made for monetary purposes. 
-                All assets used in this project are screenshots taken from the game.
+                All src used in this project are screenshots taken from the game.
                 
                 If you work at Netease and you visited this page in the desire of wanting the client to be brought down, please contact me and I shall do what's best. Again, this client wasn't made for profiting and I created it for fun only and to improve my programming skills.`)
                 .addField("Reference Links", "[Cowboish Website](https://mohimad.github.io/cowboishbot/) `|` [Invitation Link](https://discordapp.com/oauth2/authorize?client_id=632291800585076761&scope=bot&permissions=1886780502) `|` [Cowboish Server](https://discordapp.com/invite/YWcSukS) `|` [Github Repository](https://github.com/MohiMad/Cowboish-Bot)")

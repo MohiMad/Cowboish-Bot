@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const { ErrorMsg } = require("../../assets/functions.js");
-const wikipedia = require("../../assets/wikipedia.js");
+const { ErrorMsg } = require("../../src/functions.js");
+const wikipedia = require("../../src/wikipedia.js");
 
 let spamStopper = new Set();
 module.exports = {

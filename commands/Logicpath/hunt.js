@@ -1,5 +1,5 @@
 const logicPath = require("../../models/logicpath.js");
-const { ErrorMsg, newLP, coolEmbed, findCooldown } = require("../../assets/functions.js");
+const { ErrorMsg, newLP, coolEmbed, findCooldown } = require("../../src/functions.js");
 const { quiz } = require("../../quizes/quiz.js");
 
 module.exports = {

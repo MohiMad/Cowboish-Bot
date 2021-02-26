@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { findMember } = require("../../assets/functions.js");
+const { findMember } = require("../../src/functions.js");
 
 module.exports = {
     name: ["struggle", "bongostruggle", "bongocatstruggle"],

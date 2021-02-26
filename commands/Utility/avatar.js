@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { getMember } = require('../../assets/functions.js');
+const { getMember } = require('../../src/functions.js');
 module.exports = {
     name: ["avatar", "pfp", "user-avatar", "profilepicture", "profilepic"],
     description: "Returns someone's profile picture in highest resolution\n\n**Usage:** `$prefixavatar [user]`",

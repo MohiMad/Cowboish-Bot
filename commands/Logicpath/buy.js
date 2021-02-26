@@ -1,9 +1,9 @@
 const logicPath = require("../../models/logicpath.js");
-const { ErrorMsg, newLP } = require("../../assets/functions.js");
+const { ErrorMsg, newLP } = require("../../src/functions.js");
 
 const { MessageEmbed } = require('discord.js');
-const { Skins, PowerUps } = require("../../assets/items.json");
-const e = require("../../assets/emojis.json");
+const { Skins, PowerUps } = require("../../src/items.json");
+const e = require("../../src/emojis.json");
 
 module.exports = {
     name: ["buy", "purchase"],
@@ -159,10 +159,10 @@ module.exports = {
         if (!args[1]) return ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + "shop` to check what you can buy")
 
         //buy essences here
-        if (["s14-2", "s142", "ess2", "coaiv", "coavi", "calloftheabyss4", "coa4"].includes(args[1].toLowerCase()) || args[1] === "2") {
+        if (["s14-2", "s142", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
             return await essBuy("s14-2", "ess2", e.ess2, "https://i.imgur.com/B6qZ2Kn.png");
         }
-        if (["s211", "s14-1", "ess1", "coaiii", "coa111", "coa3", "calloftheabyss3"].includes(args[1].toLowerCase()) || args[1] === "1") {
+        if (["s211", "s14-1", "ess1", "promisedneverland"].includes(args[1].toLowerCase()) || args[1] === "1") {
             return await essBuy("s14-1", "ess1", e.ess1, "https://i.imgur.com/itIoIEx.png");
 
         }

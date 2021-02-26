@@ -2,8 +2,8 @@ const logicPath = require("../../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Canvas = require('canvas');
 const Discord = require("discord.js");
-const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../../assets/functions.js");
-const { Portraits, Frames, Skins } = require("../../assets/items.json");
+const { coolEmbed, addCooldown, findCooldown, newLP, findMember, findCooldownByCommand } = require("../../src/functions.js");
+const { Portraits, Frames, Skins } = require("../../src/items.json");
 
 module.exports = {
     name: ["logicpath", "lp", "profile", "inv", "inventory"],
@@ -48,9 +48,9 @@ module.exports = {
                         <:inspirations:655840409674711060> | *Inspirations* ➜ **0**
                         <:frags:655840344725913600> | *Fragments* ➜ **0**
                         **Essences**
-                        <:s121:735775380266549319> | Essence *s12-1* ➜ **0**
-                        <:ess2:655840643847028751> | Essence *s12-2* ➜ **0**
-                        <:ess3:655840571616919586> | Essence *s12-3* ➜ **0**
+                        <:ess1:655840713904488469> | Essence *s15-1* ➜ **0**
+                        <:ess2:655840643847028751> | Essence *s15-2* ➜ **0**
+                        <:ess3:655840571616919586> | Essence *s15-3* ➜ **0**
                         `)
                 .addField("Skins", stripIndents`
                         S: **0**
@@ -76,7 +76,7 @@ module.exports = {
                 }
             }
 
-            const background = await Canvas.loadImage("https://i.imgur.com/GflnHbf.png");
+            const background = await Canvas.loadImage("https://i.imgur.com/axbRKl3.png");
 
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -229,7 +229,7 @@ module.exports = {
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'LP.png');
 
             await addCooldown(message, 30000, "logicpath");
-            message.channel.send(attachment);
+            message.channel.send("Season 15 began! Everyone's logicpath steps has been reset.", attachment);
 
 
         }

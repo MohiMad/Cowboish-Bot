@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const spamStopper = new Set();
-const p = require("../../assets/patchnotes.js");
+const p = require("../../src/patchnotes.js");
 
 module.exports = {
     name: ["patches", "patchnotes", "identityvpatches", "idvpatches", "identityvpatchnotes"],

@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { getMember, randomizeAnIndex } = require("../../assets/functions.js");
+const { getMember, randomizeAnIndex } = require("../../src/functions.js");
 
 module.exports = {
     name: ["punch"],

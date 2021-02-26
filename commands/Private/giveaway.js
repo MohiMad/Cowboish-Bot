@@ -1,4 +1,4 @@
-const { giveaway } = require("../../assets/minor-commands.js");
+const { giveaway } = require("../../src/minor-commands.js");
 
 module.exports = {
     name: 'giveaway',

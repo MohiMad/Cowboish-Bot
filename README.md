@@ -28,7 +28,7 @@ The bot is open source in hope of someone finding use of it's code. I'm not a pr
 ## Disclaimer
 Cowboish Bot was created for the community's sake and I don't make any profit from it.
 I don't get paid for the development of the bot and It wasn't made for monetary purposes. 
-All assets used in this project are screenshots taken from the game.
+All src used in this project are screenshots taken from the game.
 
 If you work at Netease and you visited this page in the desire of wanting the client to be brought down, please contact me <a href="mailto:mohamad.kinjo@gmail.com">here</a> and I shall do what's best. Again, this client wasn't made for profiting and I created it for fun only and to improve my programming skills.
 

@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { coolEmbed, addCooldown, findCooldown } = require("../../assets/functions.js");
+const { coolEmbed, addCooldown, findCooldown } = require("../../src/functions.js");
 const { stripIndents } = require("common-tags");
 
 const spamStopper = new Set();
@@ -25,7 +25,7 @@ module.exports = {
         if (!suggest) return;
         if (message.channel.id === suggest.id) return;
         const filter = m => m.author.id === message.author.id;
-        if (cooldownCheck) return coolEmbed(message, "The cooldown is still on!", "Since this command can be spammed, there is a **5 minutes** cooldown set on it...\nYou have to wait **REMAINING** before being able to send another suggestion ^-^", cooldownCheck.timeRemaining, ["m", "s"]);
+        //if (cooldownCheck) return coolEmbed(message, "The cooldown is still on!", "Since this command can be spammed, there is a **5 minutes** cooldown set on it...\nYou have to wait **REMAINING** before being able to send another suggestion ^-^", cooldownCheck.timeRemaining, ["m", "s"]);
 
         if (spamStopper.has(message.author)) return message.reply("**A suggestion is already ongoing... Now it's cancelled, try again!**");
 
@@ -46,19 +46,20 @@ module.exports = {
 
             await message.channel.awaitMessages(filter, {
                 max: 1,
-                time: 180000,
+                time: 30000,
                 errors: ['time'],
             }).then(async (collected) => {
                 spamStopper.delete(message.author);
                 eval(code);
             }).catch((e) => {
+                keepGoing = false;
                 spamStopper.delete(message.author);
                 if (!e.message) return message.reply("**Time is over!** try again...");
                 console.log(e);
             });
         }
 
-        let respEmbed = new MessageEmbed()
+        const respEmbed = new MessageEmbed()
             .setTitle("Your suggestion has been sent successfully!")
             .setAuthor(message.author.tag, message.author.displayAvatarURL())
             .setDescription("Your suggestion has been sent to [**Cowboish Server**](https://discordapp.com/invite/YWcSukS)\nFeel free to join if you want to see what **" + MohiMoo.tag + "** thinks about it :)")
@@ -72,10 +73,10 @@ module.exports = {
                         keepGoing = false;
 
                         message.channel.send(\`**Canceled suggesting, ${authorName}!**\`);
-                    } else if(collected.first().content.length < 20){
+                    } else if(collected.first().content.length < 16){
                         keepGoing = false;
 
-                        message.channel.send(\`**${message.author.toString()} Your suggestion was too short!**\nThe minium length of a sugestion is 20 characters, your suggestion was ${20 - collected.first().content.length} characters shorter.\`);
+                        message.channel.send(\`**${message.author.toString()} Your suggestion was too short!**\nThe minium length of a sugestion is 16 characters. Please try again...\`);
                     }
                     else if (collected.first().content.startsWith(prefix)) {
                         keepGoing = false;
@@ -128,13 +129,13 @@ module.exports = {
 
 
         } else {
-            if (sayMessage.length < 20) return message.channel.send(`**${message.author.toString()} Your suggestion was too short!**\nThe minium length of a sugestion is 20 characters, your suggestion was ${20 - collected.first().content.length} characters shorter.`);
+            if (sayMessage.length < 16) return message.channel.send(`**${message.author.toString()} Your suggestion was too short!**\nThe minium length of a sugestion is 16 characters. Please try again...`);
 
             firstQuestion = sayMessage;
 
             awaitMessage("**At what priority level do you want this suggestion to happen?**\nLow? Medium? High?... You can cancel by sending \"Cancel\"",
                 `
-                if (["cancel", "yes"].includes(collected.first().content.toLowerCase())) {
+            if (["cancel", "yes"].includes(collected.first().content.toLowerCase())) {
                 keepGoing = false;
 
                 message.channel.send(\`**Canceled suggesting, ${authorName}!**\`);

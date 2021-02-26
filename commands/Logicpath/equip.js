@@ -1,8 +1,8 @@
 const logicPath = require("../../models/logicpath.js");
 const { MessageEmbed } = require("discord.js");
-const { newLP, ErrorMsg } = require("../../assets/functions.js");
-const e = require("../../assets/emojis.json");
-const { Portraits, Frames } = require("../../assets/items.json");
+const { newLP, ErrorMsg } = require("../../src/functions.js");
+const e = require("../../src/emojis.json");
+const { Portraits, Frames } = require("../../src/items.json");
 
 module.exports = {
     name: ["equip"],

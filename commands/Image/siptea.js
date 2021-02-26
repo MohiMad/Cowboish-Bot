@@ -1,6 +1,6 @@
 const Canvas = require('canvas');
 const Discord = require("discord.js");
-const { getMember, coolEmbed, addCooldown, findCooldown } = require("../../assets/functions.js");
+const { getMember, coolEmbed, addCooldown, findCooldown } = require("../../src/functions.js");
 
 module.exports = {
     name: ["siptea", "sip-tea", "sippingtea", "sip"],

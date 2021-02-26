@@ -1,5 +1,5 @@
 const ms = require("ms");
-const { ErrorMsg, findMember, findRole } = require("../../assets/functions.js");
+const { ErrorMsg, findMember, findRole } = require("../../src/functions.js");
 const { MessageEmbed } = require("discord.js");
 const Mutes = require("../../models/mutes.js");
 

@@ -1,6 +1,6 @@
 const Canvas = require('canvas');
 const Discord = require("discord.js");
-const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../../assets/functions.js");
+const { ErrorMsg, coolEmbed, addCooldown, findCooldown } = require("../../src/functions.js");
 const MOHI = require("../../models/mohi.js");
 
 module.exports = {

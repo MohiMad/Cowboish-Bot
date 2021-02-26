@@ -2,8 +2,8 @@ const Guild = require("../../models/guild.js");
 const { MessageEmbed } = require("discord.js");
 const IdentityVNews = require("../../models/news.js");
 const spamStopper = new Set();
-const p = require("../../assets/patchnotes.js");
-const PERMISSIONS = require("../../assets/permissions.js");
+const p = require("../../src/patchnotes.js");
+const PERMISSIONS = require("../../src/permissions.js");
 
 module.exports = {
     name: 'announcenews',

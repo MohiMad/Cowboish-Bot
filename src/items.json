@@ -250,6 +250,15 @@
         },
         {
             "Name": [
+                "[Costume] Bloody Queen - Isabella"
+            ],
+            "linkTag": "https://i.imgur.com/8rtjVGE.png",
+            "Item": "TPN-1",
+            "Color": "0xfcba03",
+            "Des": "Isabella's Costume"
+        },
+        {
+            "Name": [
                 "[Costume] Percy - Conquer",
                 "conquer",
                 "33",
@@ -397,6 +406,33 @@
             "Item": "COAIV-5",
             "Color": "0xbb2af5",
             "Des": "Having once worked for the transportation corporation, he is adamant that he is the last true racer of his time who wishes to complete each race with the simplest sportsmanship - despite the significant pain and failure he has suffered."
+        },
+        {
+            "Name": [
+                "[Costume] Embalmer - Norman"
+            ],
+            "linkTag": "https://i.imgur.com/XM2vkrB.png",
+            "Item": "TPN-2",
+            "Color": "0xbb2af5",
+            "Des": "Norman's Costume"
+        },
+        {
+            "Name": [
+                "[Costume] \"Prisoner\" - Ray"
+            ],
+            "linkTag": "https://i.imgur.com/Y2IOdoo.png",
+            "Item": "TPN-3",
+            "Color": "0xbb2af5",
+            "Des": "Ray's Costume"
+        },
+        {
+            "Name": [
+                "[Costume] Gardener - Emma"
+            ],
+            "linkTag": "https://i.imgur.com/AYLej0l.png",
+            "Item": "TPN-4",
+            "Color": "0xbb2af5",
+            "Des": "Emma's Costume"
         },
         {
             "Name": [
@@ -800,6 +836,15 @@
             "Item": "LP-14",
             "Color": "0xbb2af5",
             "Des": "Knowledge changes one's fate is an inescapable truth. Are you willing to exchange your soul for a little taboo that can stir up a storm?"
+        },
+        {
+            "Name": [
+                "[Costume] Guard 26 - Mr. Eggshell"
+            ],
+            "linkTag": "https://i.imgur.com/Xf4wDZC.png",
+            "Item": "LP-15",
+            "Color": "0xbb2af5",
+            "Des": "He wanted to stay in the peaceful dream forever, yet when he was forced to wake up from his dream abruptly, he realized he wanted to protect was ruined."
         },
         {
             "Name": [
@@ -2119,6 +2164,84 @@
             "logicpathID": "axeboy_DS",
             "x": 15,
             "y": 13,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Isabella",
+                "isabella"
+            ],
+            "Item": "TPN-28",
+            "linkTag": "https://i.imgur.com/PDOTeQa.png",
+            "logicpathID": "Isabella",
+            "x": 13,
+            "y": 12,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Emma",
+                "emma"
+            ],
+            "Item": "TPN-29",
+            "linkTag": "https://i.imgur.com/Hx0CxDq.png",
+            "logicpathID": "Emma",
+            "x": 13,
+            "y": 12,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Norman",
+                "norman"
+            ],
+            "Item": "TPN-30",
+            "linkTag": "https://i.imgur.com/gWKYCBQ.png",
+            "logicpathID": "Norman",
+            "x": 13,
+            "y": 12,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Ray",
+                "ray"
+            ],
+            "Item": "TPN-31",
+            "linkTag": "https://i.imgur.com/MDvri3F.png",
+            "logicpathID": "Ray",
+            "x": 14,
+            "y": 11,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Don",
+                "don"
+            ],
+            "Item": "TPN-32",
+            "linkTag": "https://i.imgur.com/I0bZKP3.png",
+            "logicpathID": "Don",
+            "x": 14,
+            "y": 11,
+            "Width": 140,
+            "Height": 140
+        },
+        {
+            "Name": [
+                "Gilda",
+                "gilda"
+            ],
+            "Item": "TPN-33",
+            "linkTag": "https://i.imgur.com/DcW87MI.png",
+            "logicpathID": "Gilda",
+            "x": 14,
+            "y": 11,
             "Width": 140,
             "Height": 140
         },

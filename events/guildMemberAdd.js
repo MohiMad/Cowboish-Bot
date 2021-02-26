@@ -1,5 +1,5 @@
 const Guild = require("../models/guild.js");
-const { findRole } = require("../assets/functions.js");
+const { findRole } = require("../src/functions.js");
 
 module.exports = async (bot, member) => {
 

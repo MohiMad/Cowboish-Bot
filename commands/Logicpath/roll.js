@@ -1,7 +1,7 @@
-const { clues, insp, frags, ess1, ess2, ess3, dice, logic } = require("../../assets/emojis.json");
+const { clues, insp, frags, ess1, ess2, ess3, dice, logic, LPskin } = require("../../src/emojis.json");
 
 const { MessageEmbed } = require('discord.js');
-const { newLP, coolEmbed, findCooldown, addCooldown, } = require("../../assets/functions.js");
+const { newLP, coolEmbed, findCooldown, addCooldown, } = require("../../src/functions.js");
 const logicPath = require("../../models/logicpath.js");
 
 module.exports = {
@@ -141,7 +141,7 @@ module.exports = {
                         Ess2: 0,
                         Ess3: 1,
                         Logic: 2
-                    }, 
+                    },
                     {
                         Clues: 10,
                         Inspirations: 0,
@@ -337,16 +337,18 @@ module.exports = {
                 .setColor("0xC9B37A")
                 .setDescription("**《** " + emojiDices + " **》**" + "\n" + loot)
 
-            if (LP.logic > 1528) {
-                if (!LP.Opened.includes("LP-14")) {
-                    LP.Opened = [...LP.Opened, "LP-14"];
+            if (LP.logic === 1528 || LP.logic > 1528) {
+                if (!LP.Opened.includes("LP-15")) {
+                    LP.Opened = [...LP.Opened, "LP-15"];
                     LP.A = LP.A + 1;
 
-                    DiceEmbed.setDescription(`You had walked **1528** logicpath steps and got\n__*Feaster - Exoplanet*__\n\n**《**${emojiDices}**》**\n${loot}`)
-                        .setThumbnail("https://i.imgur.com/x2jL9TY.png");
+                    DiceEmbed.setDescription(`You have walked **${LP.logic}** logicpath steps and got\n__*Guard 26 - Mr. Eggshell*__\n\n**《**${emojiDices}**》**\n${loot}`)
+                        .setThumbnail("https://i.imgur.com/Xf4wDZC.png");
                 }
+            } else if (LP.logic > 1000 && LP.logic < 1528) {
+                DiceEmbed.addField("Almost there!", `You're **${1528 - LP.logic}** steps away from getting __Mr. Eggshell__ ${LPskin}`);
             }
-
+            
             LP.Dices = LP.Dices - number;
             await LP.save().catch(e => console.log(e));
             await addCooldown(message, 1000 * number, "roll");

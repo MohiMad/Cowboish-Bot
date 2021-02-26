@@ -1,8 +1,8 @@
 const logicPath = require("../../models/logicpath.js");
 const { MessageEmbed } = require("discord.js");
-const { findMember, newLP, ErrorMsg } = require("../../assets/functions.js");
-const e = require("../../assets/emojis.json");
-const { Skins } = require("../../assets/items.json");
+const { findMember, newLP, ErrorMsg } = require("../../src/functions.js");
+const e = require("../../src/emojis.json");
+const { Skins } = require("../../src/items.json");
 
 module.exports = {
     name: ["gift", "transfer", "give"],
@@ -55,17 +55,17 @@ module.exports = {
 
             },
             {
-                searchArray: ["s14-1 essences", "ess1", "s14-1", "1", "coaiv", "coa4", "coavi", "calloftheabyss4"],
+                searchArray: ["s14-1 essences", "ess1", "s14-1", "1", "thepromisedneverland", "promisdneverland", "pn"],
                 item: "Ess1",
-                link: "itIoIEx",
+                link: "bngNsSD",
                 emoji: e.ess1,
                 hex: "0xAC2C1C"
 
             },
             {
-                searchArray: ["14-2 essences", "ess2", "s14-2", "2", "coaiii", "coa3", "calloftheabyss3"],
+                searchArray: ["14-2 essences", "ess2", "s14-2", "2"],
                 item: "Ess2",
-                link: "https://i.imgur.com/B6qZ2Kn.png",
+                link: "JGu6jXE",
                 emoji: e.ess2,
                 hex: "0xEEAD40"
             },
@@ -88,7 +88,7 @@ module.exports = {
                     if (giftedLP.Opened.includes(skin.Item)) return message.channel.send(`**${gifted.user.username}** already has **__${skinNAME}__**, ${message.author}`);
                     if (LP.frags < skin.Price) return message.channel.send(`**You don't have enough fragments${e.frags}...**\nYou disappointed me and **${gifted.user.username}**`);
 
-                    let boughtSkinEmbed = new MessageEmbed()
+                    const boughtSkinEmbed = new MessageEmbed()
                         .setAuthor(message.author.tag, message.author.displayAvatarURL({ format: "png", dynamic: true }))
                         .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** __${skinNAME}__!\nWorth ${skin.Price} ${e.frags} :3`)
                         .setColor(skin.Color)
@@ -123,7 +123,7 @@ module.exports = {
 
                 [LP, giftedLP].forEach(x => x.save().catch(e => console.log(e)));
 
-                let giftedEmbed = new MessageEmbed()
+                const giftedEmbed = new MessageEmbed()
                     .setAuthor(message.author.tag, message.author.displayAvatarURL())
                     .setDescription(`**${message.author.username}** gifted **${gifted.user.username}** ${args[2]}${x.emoji}`)
                     .setColor(x.hex)

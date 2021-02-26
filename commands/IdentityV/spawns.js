@@ -1,7 +1,7 @@
-const { ErrorMsg } = require("../../assets/functions.js");
+const { ErrorMsg } = require("../../src/functions.js");
 const { MessageEmbed } = require("discord.js");
-const { Filter, Maps } = require("../../assets/spawnLocations.json");
-const { survivorIcon, hunterIcon, dungeonIcon, cipherIcon } = require("../../assets/emojis.json");
+const { Filter, Maps } = require("../../src/spawnLocations.json");
+const { survivorIcon, hunterIcon, dungeonIcon, cipherIcon } = require("../../src/emojis.json");
 
 const spamStopper = new Set();
 module.exports = {

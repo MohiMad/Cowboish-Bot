@@ -1,5 +1,5 @@
 const Guild = require("../models/guild.js");
-const { permsCheck } = require('../assets/functions.js');
+const { permsCheck } = require('../src/functions.js');
 const SpamSet = new Set();
 
 module.exports = async (bot, message) => {

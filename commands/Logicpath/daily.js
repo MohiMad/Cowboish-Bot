@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
-const { newLP, coolEmbed, addCooldown, findCooldown } = require("../../assets/functions.js");
-const { ess2, ess1, ess3, clues, dice } = require("../../assets/emojis.json");
+const { newLP, coolEmbed, addCooldown, findCooldown } = require("../../src/functions.js");
+const { ess2, ess1, ess3, clues, dice } = require("../../src/emojis.json");
 const logicPath = require("../../models/logicpath.js");
 
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
         const dailyEmbed = new MessageEmbed()
             .setTitle("🎁 Daily reward given! 🎁")
             .setThumbnail("https://i.imgur.com/VGo6rp3.png")
-            .setDescription(`I've yeeted **10**${dice}, **500**${clues}, **10**${ess1}, **10**${ess2}, and **10**${ess3} into your account ;D`)
+            .setDescription(`I've yeeted **10**${dice}, **500**${clues}, **10**${ess1} into your account ;D`)
             .setColor("0xffd500")
             .setFooter("Remember to come back the next day to get your rewards again :)");
 
@@ -31,8 +31,7 @@ module.exports = {
         LP.Dices = LP.Dices + 10;
         LP.Clues = LP.Clues + 500;
         LP.Ess1 = LP.Ess1 + 10;
-        LP.Ess2 = LP.Ess2 + 10;
-        LP.Ess3 = LP.Ess3 + 10;
+
 
         LP.save().catch(err => console.log(err));
 
