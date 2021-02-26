@@ -343,7 +343,7 @@ module.exports = {
                     LP.Opened = [...LP.Opened, "LP-15"];
                     LP.A = LP.A + 1;
 
-                    DiceEmbed.setDescription(`You have walked **${LP.logic}** logicpath steps and got\n__*Guard 26 - Mr. Eggshell*__\n\n**《**${emojiDices}**》**\n${loot}`)
+                    DiceEmbed.setDescription(`You have walked **${LP.logic}** logicpath steps and got\n__*Guard 26 - Mr. Eggshell*__\n\nLogicpath Steps ➜ **${LOGIC}** ${logic}\nResults ➜ ${loot}`)
                         .setThumbnail("https://i.imgur.com/Xf4wDZC.png");
                 }
             } else if (LP.logic > 1000 && LP.logic < 1528) {
