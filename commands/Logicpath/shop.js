@@ -489,7 +489,7 @@ module.exports = {
                 },
                 {
                     link: "https://i.imgur.com/7toytbk.png",
-                    des: `:one: :seven: | **Doctor - Rythm Of The Rain** ─ __6888__${e.frags}\n\n:one: :eight: | **Seer - Reculse** ─ __6888__${e.frags}\n\n:one: :nine: | **Perfumer - Fatal Affection** ─ __6888__${e.frags}\n\n:two: :zero: | **Doctor - Holy Angel** ─ __6888__${e.frags}\n\n:two: :one: | **Mercenary - Parasite** ─ __6888__${e.frags}\n\n:two: :two: | **Forward - Bull Power** ─ __6888__${e.frags}\n\n:two: :three: | **Feaster - Nepenthes** ─ __6888__${e.frags}\n\n:two: :four: | **Geisha - White Peacock** ─ __6888__${e.frags}`
+                    des: `:one: :seven: | **Doctor - Rythm Of The Rain** ─ __6888__${e.frags}\n\n:one: :eight: | **Seer - Recluse** ─ __6888__${e.frags}\n\n:one: :nine: | **Perfumer - Fatal Affection** ─ __6888__${e.frags}\n\n:two: :zero: | **Doctor - Holy Angel** ─ __6888__${e.frags}\n\n:two: :one: | **Mercenary - Parasite** ─ __6888__${e.frags}\n\n:two: :two: | **Forward - Bull Power** ─ __6888__${e.frags}\n\n:two: :three: | **Feaster - Nepenthes** ─ __6888__${e.frags}\n\n:two: :four: | **Geisha - White Peacock** ─ __6888__${e.frags}`
                 },
                 {
                     link: "https://i.imgur.com/KgRompQ.png",
