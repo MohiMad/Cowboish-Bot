@@ -48,8 +48,8 @@ module.exports = {
             .setTitle("Cowboish Essence Shop!")
             .setDescription("Are you low on essences? no essences at all?\nIt's all fine, you can buy yourself some by doing:\n`" + prefix + "buy <essenceID> [optional(Amount)]`\n\n" + stripIndents`
             ${e.ess1} | **The Promised Neverland Essence** - Price : *96* ${e.insp} - ID: $s15-1$
-            ${e.ess2} | **Call Of The Abyss 4** - Price : *96* ${e.insp} - ID: $s15-2$
-            ${e.ess3} | **Essence s14-3** - Price : *96* ${e.insp} - ID: $s15-3$
+            ${e.ess2} | ~~**Essence s15-2**~~ - Price : *96* ${e.insp} - ID: $s15-2$
+            ${e.ess3} | **Essence s15-3** - Price : *96* ${e.insp} - ID: $s15-3$
             `.replace(rg, "`"))
             .setColor("RANDOM")
             .setThumbnail("https://i.imgur.com/y5K6iNN.png")

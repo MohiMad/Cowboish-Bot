@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { ErrorMsg } = require("../../src/functions.js");
 const wikipedia = require("../../src/wikipedia.js");
 
-let spamStopper = new Set();
+const spamStopper = new Set();
 module.exports = {
     name: ["idvwiki", "idvwikipedia", "idvw", "identityvwiki", "identityvwikipedia"],
     description: "The Identity V Wikipedia but in Discord UwU\nYou can find any Survivor/Hunter/Map information you're looking for here\nYou can also navigate through `Survivors`, `Hunters`, or `Maps` by providing one of them as your first argument\n\n**Usage:** `$prefixidvwikipedia <characterName/mapName>`",
@@ -55,70 +55,47 @@ module.exports = {
                         await msg.react(emoji);
                     }
 
-                    const backFilter = (reaction, user) => reaction.emoji.name === '⏪' & user.id === message.author.id;
+                    const Filter = (reaction, user) => ["⏪", "⏩", "❌"].includes(reaction.emoji.name) & user.id === message.author.id;
 
-                    const forwardFilter = (reaction, user) => reaction.emoji.name === '⏩' & user.id === message.author.id;
-
-                    const back = await msg.createReactionCollector(backFilter, {
+                    const collector = await msg.createReactionCollector(Filter, {
                         time: 300000
                     });
 
-                    const forward = await msg.createReactionCollector(forwardFilter, {
-                        time: 300000
-                    });
 
-                    back.on('collect', async r => {
-                        await r.users.remove(message.author);
+                    collector.on('collect', async r => {
+                        if (r.emoji.name === "❌") {
+                            if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
 
-                        if (pageI === 0) {
-                            pageI = Pages.length - 1;
-                        } else {
-                            pageI--;
-                        }
+                                spamStopper.delete(message.author);
+                                return await collector.stop();
+                            }
 
-                        await Pages[pageI].then(async (embed) => {
-                            await msg.edit(embed);
-                        });
-                    });
+                            await collector.stop();
 
-                    forward.on('collect', async r => {
-
-                        await r.users.remove(message.author);
-
-                        if (pageI === Pages.length - 1) {
-                            pageI = 0;
-                        } else {
-                            pageI++;
-                        }
-                        await Pages[pageI].then(async (embed) => {
-                            await msg.edit(embed);
-                        });
-
-                    });
-
-                    let endFilter = (reaction, user) => reaction.emoji.name === '❌' & user.id === message.author.id;
-
-                    let end = await msg.createReactionCollector(endFilter, {
-                        time: 300000
-                    });
-
-                    end.on('collect', async r => {
-                        if (msg.deleted === true || !r || r === null || r === undefined || !msg) {
-                            forward.stop();
-                            back.stop();
                             spamStopper.delete(message.author);
-                            return end.stop();
+                            return await msg.reactions.removeAll().catch(error => console.log(error));
                         }
 
-                        await end.stop();
-                        await forward.stop();
-                        await back.stop();
-                        spamStopper.delete(message.author);
-                        await msg.reactions.removeAll().catch(error => console.log(error));
+                        await r.users.remove(message.author);
 
+                        if (r.emoji.name === "⏪") {
+
+                            if (pageI === 0) pageI = Pages.length - 1;
+                            else pageI--;
+
+                        } else if (r.emoji.name === "⏩") {
+
+                            if (pageI === Pages.length - 1) pageI = 0;
+                            else pageI++;
+
+                        }
+
+                        await Pages[pageI].then(async (embed) => {
+                            await msg.edit(embed);
+                        });
                     });
 
-                    end.on('end', async () => {
+                    collector.on('end', async () => {
                         spamStopper.delete(message.author);
                         await msg.reactions.removeAll().catch(error => console.log(error));
                     });

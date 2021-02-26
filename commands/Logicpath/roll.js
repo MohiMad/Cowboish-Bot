@@ -9,7 +9,7 @@ module.exports = {
     description: "Roll a 4-sided Dice and get some Logicpath rewards such as Essences, Clues and Inspirations\nYou can roll up to 10 dices at once by providing the amount of Dices you want to roll as your 1st Argument\n\n**Usage:** `$prefixroll [amount]`",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "USE_EXTERNAL_EMOJIS"],
     category: "Logicpath",
-    execute: async (message, args, prefix) => {
+    execute: async (message, args, prefix, bot) => {
         await newLP(message);
 
         let LP = await logicPath.findOne({ UserID: message.author.id });
@@ -294,7 +294,6 @@ module.exports = {
 
             }
 
-            let emojiDices = ``;
 
             let CLUES = 0;
             let INSPIRATIONS = 0;
@@ -306,7 +305,6 @@ module.exports = {
 
             for (i = 1; i < number + 1; i++) {
                 let nmbr;
-                emojiDices = emojiDices + `${dice}`;
 
                 let rowed = [0, diceChance1, diceChance2, diceChance3, diceChance4, diceChance5, diceChance6, diceChance7, diceChance8, diceChance9, diceChance10];
 
@@ -323,7 +321,7 @@ module.exports = {
 
             }
 
-            let loot = `Logicpath Steps ➜ **${LOGIC}** ${logic}\n`;
+            let loot = ``;
 
             if (CLUES != 0) loot = loot + `**${CLUES}** ${clues}`;
             if (INSPIRATIONS != 0) loot = loot + ` + **${INSPIRATIONS}** ${insp}`;
@@ -333,9 +331,12 @@ module.exports = {
 
 
             const DiceEmbed = new MessageEmbed()
-                .setAuthor(`${number} Dice(s) has been rolled!`, message.author.displayAvatarURL, "https://mohimad.github.io/cowboishbot/")
+                .setTitle(`${number} Dice(s) has been rolled!`)
+                .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true}), "https://mohimad.github.io/cowboishbot/")
                 .setColor("0xC9B37A")
-                .setDescription("**《** " + emojiDices + " **》**" + "\n" + loot)
+                .setDescription(`Logicpath Steps ➜ **${LOGIC}** ${logic}\nResults ➜ ${loot}`)
+                .setThumbnail("https://media.giphy.com/media/ndXWBuMg078f5p0O0I/giphy.gif")
+                .setFooter(bot.user.tag, bot.user.displayAvatarURL());
 
             if (LP.logic === 1528 || LP.logic > 1528) {
                 if (!LP.Opened.includes("LP-15")) {
@@ -348,7 +349,7 @@ module.exports = {
             } else if (LP.logic > 1000 && LP.logic < 1528) {
                 DiceEmbed.addField("Almost there!", `You're **${1528 - LP.logic}** steps away from getting __Mr. Eggshell__ ${LPskin}`);
             }
-            
+
             LP.Dices = LP.Dices - number;
             await LP.save().catch(e => console.log(e));
             await addCooldown(message, 1000 * number, "roll");

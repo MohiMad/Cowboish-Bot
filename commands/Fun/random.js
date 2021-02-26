@@ -8,9 +8,17 @@ module.exports = {
     category: "IdentityV",
     execute: async (message, args, bot, prefix) => {
 
+        /** [FilterItems]
+         * Filters the 'Characters' array object depending on wether 'isSurv' is true or false. Filters the items based on the price.
+         * @param {Boolean} isSurv Whether what you want to filter are survivors or not.
+         * @returns {Array<Object>}
+         */
         function filterItems(isSurv) {
-            return Characters.filter(x => (x.isSurvivor ? x.isSurvivor : false) == isSurv);
+            if (isSurv) return Characters.filter(x => [3568, 1988, 1468, 3048].includes(x.Price));
+            else return Characters.filter(x => ![3568, 1988, 1468, 3048].includes(x.Price));
         }
+
+
         function insert(arr, index, ...items) {
             return [
                 ...arr.slice(0, index),
@@ -23,7 +31,7 @@ module.exports = {
         if (!args[1]) return ErrorMsg(bot, message, "**Too few arguments!**\nPlease provide me some values separated with a comma for me to pick from!\n\n**Example:** `" + prefix + "randomize cat, fish, and a dog`\n**Example respond: **I choose **dog**\n\nRemember to seperate the values with a comma in between\n\nOr you can do `" + prefix + "randomize survivor` or `" + prefix + "randomize hunter` so i pick a random character for you!\n\nYou can also do `" + prefix + "randomize member` if you want me to pick a random member from this server...\n\nDo `" + prefix + "randomize member role <role Here>` and I will pick a random member from the role you provided!");
 
         if (["surv", "survivor", "survivors"].includes(args[1].toLowerCase())) {
-            let survivorArray = insert(filterItems(true), 0,
+            const survivorArray = insert(filterItems(true), 0,
                 {
                     Name: ["The Doctor"]
                 },
@@ -40,6 +48,8 @@ module.exports = {
                     Name: ["The LuckyGuy"]
                 },
             );
+
+            console.log(survivorArray);
 
             return message.channel.send(`I choose **${survivorArray[randomizeAnIndex(survivorArray)].Name[0].replace("The ", "")}**`);
         }
