@@ -43,7 +43,7 @@ module.exports = {
                     {
                         Clues: 10,
                         Inspirations: 0,
-                        Ess1: 0,
+                        Ess1: 1,
                         Ess2: 0,
                         Ess3: 0,
                         Logic: 1
