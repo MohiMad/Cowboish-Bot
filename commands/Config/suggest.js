@@ -8,7 +8,7 @@ module.exports = {
     description: "Send a suggestion to the Developer of Cowboish Bot...\nCowboish will ask you a chain of question to complete your suggestion\nSuggestions are directly sent in the [Cowboish Server](https://discord.com/invite/YWcSukS) but your username/other information won't be displayed... Your suggestion is completely anonymous ^-^",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS"],
     category: "Config",
-    banned: ["742743667168510092"],
+    banned: ["742743667168510092", "707937433299451934"],
     execute: async (message, bot, args, MohiMoo, prefix) => {
 
         const cooldownCheck = await findCooldown(message, "suggest");
