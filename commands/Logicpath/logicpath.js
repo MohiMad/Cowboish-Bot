@@ -229,7 +229,7 @@ module.exports = {
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'LP.png');
 
             await addCooldown(message, 30000, "logicpath");
-            message.channel.send("Season 15 began! Everyone's logicpath steps has been reset.", attachment);
+            message.channel.send("Season 15 has begun! Everyone's logicpath steps have been reset.", attachment);
 
 
         }
