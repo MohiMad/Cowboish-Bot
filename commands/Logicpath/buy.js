@@ -159,15 +159,15 @@ module.exports = {
         if (!args[1]) return ErrorMsg(bot, message, "Please provide something to buy!\nUsage: `" + prefix + "buy <ItemHERE>`\n\nDunno what to buy? do `" + prefix + "shop` to check what you can buy")
 
         //buy essences here
-        if (["s14-2", "s142", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
+        if (["s15-2", "s152", "ess2"].includes(args[1].toLowerCase()) || args[1] === "2") {
             return await essBuy("s14-2", "ess2", e.ess2, "https://i.imgur.com/B6qZ2Kn.png");
         }
-        if (["s211", "s14-1", "ess1", "promisedneverland"].includes(args[1].toLowerCase()) || args[1] === "1") {
-            return await essBuy("s14-1", "ess1", e.ess1, "https://i.imgur.com/itIoIEx.png");
+        if (["s211", "s15-1", "ess1", "promisedneverland"].includes(args[1].toLowerCase()) || args[1] === "1") {
+            return await essBuy("s15-1", "ess1", e.ess1, "https://i.imgur.com/itIoIEx.png");
 
         }
-        if (["s14-3", "s143", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
-            return await essBuy("s14-3", "ess3", e.ess3, "https://i.imgur.com/QQxyNKu.png");
+        if (["s15-3", "s153", "ess3"].includes(args[1].toLowerCase()) || args[1] === "3") {
+            return await essBuy("s15-3", "ess3", e.ess3, "https://i.imgur.com/QQxyNKu.png");
         }
         //buy essences ends here
 
@@ -330,9 +330,9 @@ module.exports = {
 
                 LP.Inspirations = LP.Inspirations - (powerup.Price * amountNumber);
 
-                for(i = 0; i < amountNumber; i++){
+                for (i = 0; i < amountNumber; i++) {
                     LP.Inventory = [...LP.Inventory, powerup.ID];
-                } 
+                }
                 LP.save().catch(console.error);
 
                 return message.channel.send(powerupEmbed);
