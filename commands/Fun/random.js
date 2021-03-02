@@ -48,9 +48,6 @@ module.exports = {
                     Name: ["The LuckyGuy"]
                 },
             );
-
-            console.log(survivorArray);
-
             return message.channel.send(`I choose **${survivorArray[randomizeAnIndex(survivorArray)].Name[0].replace("The ", "")}**`);
         }
 
