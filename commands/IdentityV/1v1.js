@@ -19,7 +19,7 @@ module.exports = {
         const author = await getMember(message, message.author.id);
 
         if (!args[1]) return ErrorMsg(bot, message, "Who would you like to 1v1? Mention them in your 1st arguments.\n**Example:** `" + prefix + "1v1 <@mention>`\n\nYou can run `" + prefix + "1v1 help` to see what every method does and their cons and pros.");
-        else if (["help", "methods"].includes(args[1].toLowerCase())) {
+        if (["help", "methods"].includes(args[1].toLowerCase())) {
 
 
             const explanationEmbed = new MessageEmbed()
@@ -80,10 +80,10 @@ module.exports = {
 
             return message.channel.send(explanationEmbed);
         }
-        else if (!mentionedUser) return ErrorMsg(bot, message, "Couldn't find that user!\nMake sure you mentioned them in your command execution...");
+        if (!mentionedUser) return ErrorMsg(bot, message, "Couldn't find that user!\nMake sure you mentioned them in your command execution...");
 
         if (mentionedUser.id === author.id) return message.reply("Umm do you want to 1v1 yourself??!");
-        if (mentionedUser.bot === true) return message.reply("Dude... you can't 1v1 a bot are you serious?");
+        if (mentionedUser.user.bot) return message.reply("Dude... you can't 1v1 a bot are you serious?");
 
         const filter = (m) => !m.author.bot;
 
