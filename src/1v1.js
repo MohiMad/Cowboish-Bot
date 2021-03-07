@@ -193,7 +193,7 @@ class Survivor extends Player {
             this.Moves.push("x");
 
             if (this.Health == 0) {
-                return this.sendMessage(message, `${this.data.toString()} transitioned too much that they came to a dead end. ${HuntingUser.data.username} made their way to them and kocked them down ${states[this.Health].emoji}\nThe 1v1 is over!`);
+                return this.sendMessage(message, `${this.data.toString()} transitioned too much that they came to a dead end. ${HuntingUser.data.username} made their way to them and knocked them down ${states[this.Health].emoji}\nThe 1v1 is over!`);
             }
 
             return this.sendMessage(message, `${this.data.toString()} transitioned too much that they came to a dead end. ${HuntingUser.data.username} made their way to them and hit them.\n${this.data.username} is now ${states[this.Health].emoji} ${states[this.Health].des}`);
@@ -208,7 +208,7 @@ class Survivor extends Player {
             this.Health--;
 
             if (this.Health == 0) {
-                return this.sendMessage(message, `${this.data.toString()} tried to transition away but ${HuntingUser.data.username} were too close and kocked them down. The 1v1 is over!`);
+                return this.sendMessage(message, `${this.data.toString()} tried to transition away but ${HuntingUser.data.username} were too close and knocked them down. The 1v1 is over!`);
             }
 
             return this.sendMessage(message, `${this.data.toString()} tried to transition away but ${HuntingUser.data.username} were too close and hit them.\n${states[SurvivingUser.Health].emoji} ${SurvivingUser.data.username} is now half health!`);
