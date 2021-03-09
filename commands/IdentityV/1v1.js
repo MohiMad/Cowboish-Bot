@@ -191,7 +191,7 @@ module.exports = {
 
             if (SurvivingUser.Health === 0 || SurvivingUser.Surrendered || HuntingUser.Surrendered) {
                 collector.stop();
-                botMsg.edit(`The Match Has Ended!\n**Total moves made:** ${messagesSent - 1}\n\nHave a suggestion for improving the command? Run \`${prefix}suggest\` to let the developer know about your idea.`, embed.setDescription(description).setThumbnail(bot.user.displayAvatarURL()));
+                botMsg.edit(`The Match Has Ended!\n**Total moves made:** ${messagesSent - 1}\n\nHave a suggestion for improving the command?\nRun \`${prefix}suggest\` to let the developer know about your idea.`, embed.setDescription(description).setThumbnail(bot.user.displayAvatarURL()));
             }
 
 

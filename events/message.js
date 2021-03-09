@@ -17,7 +17,7 @@ module.exports = async (bot, message) => {
     else if (guild_0.prefix.length < 1) prefix = ">";
     else prefix = guild_0.prefix;
 
-    let args = message.content.substring(prefix.length).split(" ");
+    let args = message.content.substring(prefix.length).split(/\s+/);
 
     if (message.author.id === bot.user.id) return;
 

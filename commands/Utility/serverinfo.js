@@ -9,7 +9,6 @@ module.exports = {
 	category: "Utility",
 	execute(message) {
 
-
 		const created =  moment.utc(message.guild.createdAt).format("dddd, MMMM Do YYYY");
 
 		const joined = moment.utc(message.member.joinedAt).format("dddd, MMMM Do YYYY");
