@@ -142,12 +142,13 @@ module.exports = {
             ctx.fillStyle = '#000000';
 
             let A = 0, S = 0;
-            for (const Askin of Skins.filter(s => s.Color == "0xbb2af5")) {
-                if (LP.Opened.includes(Askin.Item)) A++;
+            for (const skin of Skins) {
+                if (LP.Opened.includes(skin.Item)) {
+                    if (skin.Color == "0xbb2af5") A++;
+                    else if (skin.Color == "0xfcba03") S++;
+                }
             }
-            for (const Sskin of Skins.filter(s => s.Color == "0xfcba03")) {
-                if (LP.Opened.includes(Sskin.Item)) S++;
-            }
+
 
             ctx.fillText(S, 247, 345);
             ctx.fillText(A, 363, 342);
@@ -229,7 +230,7 @@ module.exports = {
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'LP.png');
 
             await addCooldown(message, 30000, "logicpath");
-            message.channel.send("Season 15 has begun! Everyone's logicpath steps have been reset.", attachment);
+            message.channel.send(attachment);
 
 
         }

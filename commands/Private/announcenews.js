@@ -22,7 +22,7 @@ module.exports = {
                 if (!p.patchNotes) return;
 
                 const patchNotes = p.patchNotes
-                    .replace(/(\[.*\])|(\(.*\))|(\d+%)/g, "**$&**")
+                    .replace(/(\[.*\])|(\d+%)/g, "**$&**")
                     .match(/.{1,1900}(\n|$)/gism);
 
                 //.replace(/[(]/g, '**(').replace(/[)]/g, ')**');
