@@ -1,9 +1,9 @@
 const { stripIndents } = require('common-tags');
 
 module.exports = {
-    PatchDate: "Feb. 23rd, 2021",
+    PatchDate: "Mar. 11th, 2021",
     patchImage: "https://i.imgur.com/FuZtLio.png",
-    patchDateFooter: "Patch 2.23.21 - February 23, 2021",
+    patchDateFooter: "Patch 11.3.21 - March 11th, 2021",
 
     patchNotes:
         stripIndents`Maintenance content for this week:
