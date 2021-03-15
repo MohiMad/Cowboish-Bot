@@ -107,12 +107,12 @@ module.exports = {
             const kited = humanizeDuration(SurvivingUser.Kited, { units: ["s", "m"], round: true });
 
             description = stripIndents`
-                    
+
                     ${hunterIcon} | **${users[randomFaction].toString()} is the Hunter:** 
                     Hunters can use the methods: \`chase\`, \`blink\`, and \`attack\`
             
-                    ~ ${hunterIcon} ⁝ **Hunter's Current Presence:** *${String(HuntingUser.isStunned).replace(true, "Stunned").replace(false, "Active")}*
-                    ~ ${Blink} ⁝ **Hunter's Blink:** *${String(HuntingUser.hasBlink).replace(false, "On Cooldown").replace(true, "Ready to use")}*
+                    ~ ${hunterIcon} ⁝ **Hunter's Current Presence:** *${(HuntingUser.isStunned) ? "Stunned" : "Active"}*
+                    ~ ${Blink} ⁝ **Hunter's Blink:** *${(HuntingUser.hasBlink) ? "Ready to use" : "On Cooldown"}*
                     ~ ${distance[HuntingUser.Distance].e} ⁝ **Distance From The Survivor:** *${distance[HuntingUser.Distance].des}*
             
                     > ⏱ ⁝ **Match Duration:** *${time}*
@@ -139,6 +139,8 @@ module.exports = {
 
         collector.on('collect', async (m) => {
             setTimeout(async () => {
+                if (!m || m === undefined || m === null || m.deleted || !m.deletable) return;
+
                 await m.delete().catch((e) => console.log(e));
             }, 15000);
 

@@ -264,8 +264,8 @@ module.exports = {
 		let m = await message.channel.send(coolEmbed);
 
 		setTimeout(() => {
-			if (!m || m == null || m == undefined || !m.deletable) return;
-			else m.delete();
+			if (!m || m == null || m == undefined || m.deleted || !m.deletable) return;
+			 m.delete();
 		}, 30000);
 
 

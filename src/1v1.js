@@ -30,6 +30,8 @@ const distance = [
     }
 ];
 
+
+//template for future usage?
 let attachment = "";
 
 const attachments = {
@@ -61,8 +63,14 @@ class Player {
         return this;
     }
 
-    sendMessage(message, toSend) {
-        return message.channel.send(toSend).then((m) => m.delete({ timeout: 15500 }).catch(e => console.log(e)));
+    async sendMessage(message, toSend) {
+        const m = await message.channel.send(toSend);
+        
+        setTimeout(async () => {
+            if(!m || m === undefined || m === null || m.deleted || !m.deletable) return;
+
+            await m.delete().catch(e => console.log(e));
+        }, 15500);
     }
 
 }
