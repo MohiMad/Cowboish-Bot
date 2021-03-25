@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client({
     messageCacheMaxSize: 35,
-    shards: 'auto'
+    shards: 2,
+    shardCount: 2
 });
 
 const schedule = require('node-schedule');
