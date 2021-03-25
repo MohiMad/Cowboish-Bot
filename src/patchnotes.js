@@ -1,118 +1,124 @@
 const { stripIndents } = require('common-tags');
 
 module.exports = {
-    PatchDate: "Mar. 18th, 2021",
+    PatchDate: "Mar. 25th, 2021",
     patchImage: "https://i.imgur.com/FuZtLio.png",
-    patchDateFooter: "Patch 18.3.21 - March 18th, 2021",
+    patchDateFooter: "Patch 25.3.21 - March 25th, 2021",
 
     patchNotes:
-        stripIndents`Maintenance content for this week:
+        stripIndents`
+        Maintenance content for this week:
 
-        [Event]:
+[Event]
+Once upon a time, a king wished to pass a new law strongly opposed by his subjects. The displeased citizens conjured a plot to infect the palace with a "cat malady" in an attempt to disfigure the king's face into that of a cat.
+When the prime minister learned of the plot, he told the king that, as long as he collected a variety of certain fish and boiled them into a bowl of fish soup, he would be immune to the cat malady.
+And so the king offered a reward to any champion who could make this special fish soup for him and save him from the cat malady.
+Event 1: The King's Story
+Hear the king's story, as told by different characters, to check in daily. Checking in will earn you Clues, Fragments, [Trial Card] A Costume, and other items.
+Only after checking in can you activate the next day's story.
+Make-up check-ins can also activate the story for the corresponding days.
+Check-in Period: March 25, 2021 (after maintenance) - April 3, 2021, 23:59:59 (Server Time) (Note: For NA and EU Servers, the event begins on March 25 at 00:00:00)
+Make-up Check-in Period: April 1, 2021, 00:00:00 - April 3, 2021, 23:59:59 (Server Time)
+Event 2: Making Fish Soup
+Participate in different modes during the event for a chance to obtain different types of fish.
+Participate in Quick Match, Rank Match, and Duo Hunters Mode (with more than 2,000 Deduction Points) for a chance to obtain "Cabillaud," "Turbot," and "le merlan." For these three types of fish, players can obtain a maximum of three each day.
+Participate in Blackjack Mode (with more than 200 Chips), Tarot Mode (with more than 2,000 Deduction Points), and Chasing Shadows Mode (complete the match) for a chance to obtain "Sole," "la dorade," and "la truite." For these three types of fish, players can obtain a maximum of three each day.
+Availability: March 25, 2021 (after maintenance) - April 1, 2021, 23:59:59 (Server Time) (Note: For NA and EU Servers, the event begins on March 25 at 00:00:00)
+If you participate in any mode during the final two days of the event and meet corresponding requirements for that mode, you will have a chance to obtain Magical Fish (up to 5 per day).
+Magical Fish can be exchanged for "la truite," "Cabillaud,"" Turbot," "le merlan," "Sole," or "la dorade."
+Availability of Magical Fish: April 2, 2021, 00:00:00 - April 3, 2021, 23:59:59 (Server Time)
+Use different kinds of fish to boil up a bowl of fish soup, then exchange it with the king for various rewards, including the Wildling's B Costume - Fish Soup Feast, Survivor's B Accessory - Little Red Fish, the Wildling's Emote - Soothe, the Photographer's Emote - Drinking Soup, and more.
+Reward Redemption Period: March 25, 2021 (after maintenance) - April 3, 2021, 23:59:59
+(Note: For NA and EU Servers, the event begins on March 25 at 00:00:00 Server Time)
 
-Character Day: Norton's Prospector birthday (March 19) is here and the annual birthday party has officially begun. Participate in the event and complete quests to obtain unique Character rewards! 
-For Norton's second birthday in Identity V, we've prepared various new rewards to celebrate this milestone! Players who have obtained the portrait from his first birthday event will receive a second-year Birthday Portrait Frame after completing the event quests! 
-Those who haven't obtained the reward from Norton's first birthday event will receive his first-year birthday reward.
-Event Period: March 19, 00:00:00 - March 19, 23:59:59 (Server Time)
-The Hunter, Gamekeeper, is free-to-play for a limited time.
-Event Period: March 18, 2021 after maintenance - March 25, 2021, 08:00:00 (UTC+8)
-As The Promised Neverland Crossover comes to an end, any remaining Crossover Essence Chests will be opened automatically. Rewards on the Logic Path will be also replaced by S15 Essence 2.
+
+[Season Essence]
+- Season 15 Essence 2 is officially available this week. New Costume updates include the Breaking Wheel's S Costume - Three-faced God, the Sculptor's A Costume - "Maria," and the Cowboy's A Costume - Candleman. Obtain the S Costume "Three-faced God" to unlock the new Hunter "The Breaking Wheel" for free. This Character cannot be used in Rank Matches, Duo Hunters Mode, Tarot Mode, and Blackjack Mode at the moment.
+
+
+[New Character]
+A new Hunter, The Breaking Wheel (the Will Brothers), has joined the Manor. Obtain Season 15 Essence 2 S Costume to unlock this Character in advance for free.
+External Trait [Execution Wheel]
+Survivors who have been run over by their wheel form will be Pierced, which can be stacked up to 3 times. When a Pierced Survivor gets hit by their human form, each stack of Pierce will transform into Fear equals half of a Normal Attack.
+Survivors will need help from others to remove the spikes. The higher the number of stacks, the more time is required for removing the spikes.
+Pierce won't be inflicted again within a short period of time.
+Tier 0 Ability [Reticent]
+(Human form) Hurls a nail board toward a specified location. Survivors who step on the nail board will have their Movement Speed significantly reduced for 2 seconds, and those who have been Pierced will be confined for 2 seconds instead.
+Tier 0 Ability [Wheel of Silence]
+(Wheel form) Instantly obtain a significant Movement Speed Boost. This ability can save up to 2 speed boosts for later use.
+Tier 1 Ability [Pessimistic]
+(Human form) Controls spikes and inflicts Pierce on all Survivors within 18 meters.
+Tier 1 Ability [Wheel of Impalement]
+(Wheel form) The hit range of Pierce is extended for 10 seconds.
+Tier 2 Ability [Ridicule]
+Upon switching from wheel form to human form, tosses out numerous spikes within a 12 meters radius and inflicts 1 stack of Pierce to Survivors.
+Tier 2 Ability [Wheel of Destruction]
+An additional speed boost can be saved in wheel form.
+[Character Deduction]
+- The new Hunter, the Breaking Wheel, will be available for deduction. Complete the final deduction quest to receive the Breaking Wheel's Deduction Reward "Worn Clothes."
 
 
 [Battle]
-
-Gamekeeper Adjustments:
-External Trait "Suffocation" Adjustments: Added new effects for landing. Reduced the vaulting speed of Survivors within a certain range by 20%. 
-Decreased the movement speed reduction from 20% to 13%, and this effect can now be stacked up to 3 times, but the reduction in vaulting speed can't be stacked.
-Added a Tier 0 ability - Traps: Bane places a trap at his location. Survivors who step on the trap will be imprisoned for 8 seconds. Survivors can disarm traps placed in the open area and release their imprisoned teammates. Once they're released from the traps, these Survivors will be visible to Bane for 5 seconds, and they won't be imprisoned by another trap during this period. There can be a maximum of 8 traps in the scene. When the maximum limit is exceeded, the first trap placed in the scene will be destroyed. Traps can't be placed in or near a Basement, and neither can they be placed within 20 meters of a Rocket Chair that has a Survivor on it, and any traps placed beforehand will be destroyed.
-Adjusted the Tier 0 ability - Chain Hook: Bane swings his Chain Hook, pulling hooked Survivor toward him. If the Chain Hook hits an obstacle, he will be pulled toward the obstacle instead. In this case, Bane can cast the Chain Hook again within 8 seconds for up to 1 time.
-Adjusted the Tier 2 ability, Fury Hook: The enraged Bane won't let an intruder escape his Chain Hook. If the Chain Hook hits an obstacle, Bane can now cast the Chain Hook again with restrictions. The first 2 re-casts can be used within 8 seconds, while subsequent re-casts can be used within 3 seconds.
-- Reduced the Chain Hook's hitbox, reduced the time it takes to prepare the Chain Hook before casting and increased the Chain Hook's speed as appropriate.
-- Reduced the time it takes for the Gamekeeper to be pulled toward an obstacle. Decreased the backswing duration when the Chain Hook hits an obstacle/when the Chain Hook misses a target/after landing.
-- Removed the mechanism that resets the Chain Hook's cooldown when the Gamekeeper unlocks Tier 1 and Tier 2 abilities.
-
-Other Adjustments:
-Increased the Deduction Points obtained by the "Undead" when he knocks down or hits a Survivor with Charged Strike.
-The progress bar for inflicted Demon Notes will now gradually diminish to 0 over 40 seconds.
-Adjusted the rules regarding EXP Points in Blackjack Mode to avoid having excess EXP Points over the season's limit.
-Added a progress bar as a notification for the Gardener's current Recall progress.
-Added a display next to the Enchantress' portrait to showcase the number of "Guard" stacks: Teammates will now see the Enchantress' "Guard" stacks. When there are multiple Hunters, only the stacks of Guard gained from the latest Hunter will be shown.
-
-
-
-[Shop]
-The Gamekeeper's A Costume "Punk" can now be purchased at a limited-time 15% discount with Echoes.
-Discount Period: March 18, 2021 (after maintenance) - March 25, 2021, 08:00:00 (UTC+8)
-
-
-
-[Experience Optimizations]
-- Optimized the animation of dismantling an item into Fragments when players obtain a duplicated item.
-- Optimized the display effects on the Emote wheel for emotes with longer names.
-- Supplemented sound effects for some of Soul Weaver's emotes.
-- Removed the "Team-up with Friends" button in Ranking.
-- Upon receiving a friend's invitation to team up, the friend's "Remark" will be shown.
-- Added the sound effect "stepping on puddles in Chinatown" for some of the Characters.
-- Optimized the special effects of the Perfumer's S Accessory - "Starlight."
-
+- Fixed an issue where, if the Dancer was hit by a Hunter while placing a Music Box, the Music Box cannot be placed and the number of Music Boxes would be reduced.
+- Improved the performance of the Gamekeeper's traps in the Mind's Eye's camera.
+- Adjusted the Hunters' status judgment when climbing stairs in the Golden Cave so that they will no longer be interrupted.
+- When the Wildling is in Riding State, the Bravery points "Pursued Bonus Points" is adjusted to 50% of the original points.
+- In Rank Matches, the required containment time for the Wildling to obtain bonus points is adjusted from 110 seconds to 150 seconds.
+- In Rank Matches and Quick Matches, when only two Survivors remain, both parties can surrender.
 
 
 [Bug Fixes]
-- Fixed an issue where the handheld items of the Priestess's Costume "Golden Future" were abnormally displayed.
-- Fixed an issue where two Followers could appear in the Standby Motion of the Dream Witch's Costume "Vajytte."
-- Fixed an issue where grey cubes would appear at the back of the Enchantress' Costume "Maroon Crystal."
-- Fixed an issue where the eyes in some of the emotes of the Mechanic's Costume "Everlasting Flowers" were abnormal.
-- Fixed an issue where the neck would overlap with the Batter's Costume "Lava Cake."
-- Fixed an issue where the hair on the Barmaid's Costume "Vermouth" would overlap with the Cowboy when she was on the Cowboy's back.
-- Fixed an issue where the Hunter could hit Survivors through obstacles near the Roller Coaster tracks in Moon River Park.
-- Fixed an issue on some Android devices in High Graphics mode where mosaics would appear when a Survivor was hit in the Sacred Heart Hospital.
-- Fixed an issue where Geisha couldn't release Swallowtail Butterflies at certain locations in Chinatown.
-- Fixed an issue where the Wildling's Bump would be abnormal when he had three stacks of Entangled on him.
-- Improved the issue where the "Undead" would get stuck in mid-air when using Jump Chop and then fell onto the ground in some situations.
-- Fixed an issue where the previous character's Talent setting would still apply even after switching Characters in the Matching Room.
-- Fixed an issue where the Graffiti button would disappear when an attempted Rocket Chair rescue has failed.
-- Fixed an issue where the Costume Effect Settings interface couldn't be close when players opened the interface during matching.
-- Fixed an issue in Duo Hunters Mode where a player's Character Knowledge Points badge would be shown when the Hunter switched Characters.
-- Fixed an issue where the recruitment system would sometimes put a player in two teams, forcing the player to return to the Lobby.
-- Fixed an issue where Survivors couldn't obtain Pursuit Points after entering and escaping the Photographer's Camera World.
-- Fixed an issue where there's a chance that the Cobweb icon would remain when Survivors entered Synesthesia Mode after they were eliminated by Cocoon Death.
-- Fixed an issue where Survivors couldn't obtain Pursuit Points after entering the Locker and could only obtain them until they exit the locker.
-- Fixed an issue where some Hunters' weapon models were missing in the Duo Hunters Mode's Matching Room.
-- Fixed an issue where the Quest slot would show two Deduction Quests at the moment when a player lost connection and reconnected in Synesthesia Mode.
-- Fixed an issue in the Tutorial where the Hell Ember would still be holding his weapon after throwing a Puppet.
-- Fixed an issue where there's a chance that the Hunter model would disappear and be replaced by a red light when spectating after a battle.
-- Fixed an issue where the eye mask of the Priestess' Costume "Reflective Mirror" would be abnormal when the standby motion was played in Personal Profile.
-- Fixed an issue where the Embalmer's Costume "Norman" would behave abnormally when using the Decoy.
-- Fixed an issue where the Return button had to be hit twice in order to return to Duo Hunters Mode.
-- Fixed an issue where there's a chance that the "Undead" would be able to use the Jump Chop when his Energy Load was at 49.
-- Fixed an issue where there's a chance that the Hieroglyphic Graveyard couldn't be activated after the Sculptor lost connection and reconnected while using a Hieroglyphic Graveyard.
-- Fixed an issue where the charging progress bar would remain when the "Undead" was hit by a Pallet while using Charged Strike.
-- Fixed an issue where Wu Chang's ability cooldown would be abnormal and the attack speed boost would disappear when the player lost connection and reconnected while using Summon or Infinite Nirvana.
-- Fixed an issue where the ability cooldown would stop when the app was put in the background during battle.
-- Fixed an issue where the stun duration was abnormal when a Hunter was stunned by the Flashlight and hit by a Pallet at the same time.
-- Fixed an issue in the Custom Blackjack Mode where a "Like" button was erroneously displayed.
-- Fixed an issue where Hunter players could tap on the "Like" and "Add as Friend" buttons through the results page when a battle ended.
-- Fixed an issue in some extreme circumstances where Survivors could never successfully escape by struggling.
-- Fixed an issue where a teammate could still see the Mechanic's Doll when losing connection and reconnecting while the Mechanic's Doll was disappearing.
-- Fixed an issue where the "Undead's" Energy Conversion ability icon was displayed incorrectly when spectating in Custom Mode.
-- Fixed an issue where the sound effects for the Embalmer transferring the Coffin were missing.
-- Fixed an issue where there's a chance that Smash couldn't be triggered for the selected Tentacle when the Feaster tapped the ability button to use Nightmare Attack.
-- Fixed an issue where the special effects and some of the scene objects would overlap when the Coordinator hit a Hunter in the Lakeside Village while carrying the Sterling Silver Bullet.
-- Fixed an issue where the Entomologist could see the Photographer's red light in the Camera World from a Swarm Of Insects' perspective.
-- Fixed an issue where the Evil Reptilian would get stuck when jumping from a height at certain locations in Chinatown.
-- Fixed an issue where the Hunter could hit Survivors through pallets at certain locations on the second floor in Chinatown.
-- Fixed an issue where Survivors couldn't see the effective range of Guard 26's bombs at certain locations in Chinatown.
-- Fixed an issue where, when the Dream Witch who was pursuing a Survivor switched to her own perspective then immediately lost connection and reconnected, both parties couldn't obtain Pursuit Points.
-- Fixed an issue where the Herald's ability "Swoop" would enter cooldown after being stunned while using Swoop.
-- Fixed an issue where the sound effects for the emote "Provoke" were missing in some of the Mechanic's costumes.
-- Fixed an issue where some parts of the Bloody Queen's Costume "Scarlett" would overlap while playing the emote "Salute."
-- Fixed an issue where the head and mouth would overlap in some of the Dream Witch's costumes.
-- Fixed an issue where certain head movements in the Prospector's Costume "Hajime Hinata" were abnormal.
-- Fixed a display issue with the mood melody of the event reward furniture - “Spirit Tree Light”.
+- Fixed an issue where Axe Boy could use Dispel Souls on a Resentful Soul outside of his view.
+
+- Fixed an issue where multiple Music Boxes would be placed when the Dancer placed a single Music Box.
+
+- Fixed an issue where the Dancer's Switch Music Box ability would enter cooldown if she lost connection and reconnected while placing a Music Box.
+
+- Fixed an issue where the Geisha could use Dash Hit toward a Swallowtail Butterfly outside of her view when the player switched phone applications after releasing a Swallowtail Butterfly.
+
+- Fixed an issue where Geisha could fall into the level below when using Dash Hit in the Golden Cave.
+
+- Fixed an issue where, when the "Undead" lost connection while triggering the second stage of Charged Strike, the ability couldn't be used when reconnected.
+
+- Fixed an issue in the White Sand Street Asylum where the Mercenary couldn't use Elbow Pads on a certain side of a Rocket Chair.
+
+- Fixed an issue where Smiley Face's weapon parts would be refreshed in a locked Basement.
+
+- Fixed an issue where, if the Hunter used the Patroller to attach a Survivor who's vaulting over a window and the Survivor was hit at the same time, the Hunter's camera would get stuck on the same spot.
+
+- Fixed an issue where, when the Bloody Queen lost connection and reconnected after using Mirror Rotation, the Mirror Rotation icon would show that the ability could be used.
+
+- Fixed an issue where the sound effect would become abnormal after players came out of a locker.
+
+- Fixed an issue in Leo's Memory where the Priestess could create an Ultra-long Passage while throwing a snowball.
+
+- Fixed an issue in Eversleeping Town on some iOS devices where the tram's windows would blink abnormally.
+
+- Fixed an issue where the Priestess' Passage couldn't be seen from a certain location in Eversleeping Town.
+
+- Fixed an issue in Chinatown where the sound of characters stepping on puddles could still be heard despite all sounds were turned off.
+
+- Fixed an issue in Spectate mode where the display of the Enchantress' number of Cursed Guards didn't match the actual number.
+
+- Fixed an issue in Blackjack matches where Cipher Machines would disappear when a player logged in again between rounds.
+
+- Fixed an issue where, when a player quit Synesthesia Mode while a Hunter was capturing a Survivor, there was a chance that the balloon would have display issues when they re-entered Synesthesia Mode.
+
+- Fixed an issue where, when a player's surrender was refused and it went into cooldown, the countdown would have display issues when the player reconnected after losing connection.
+
+- Fixed an issue where the player and their teammates would see different results when using "Rolls 4-sided Dice" in the Room.
+
+- Fixed an issue where duplicated props would appear on some of the costumes in the Display Interface.
+
+- Fixed an issue where the Owl wasn't displayed when playing the Seer's Emote "Mourn" in the Display Interface.
+
+- Fixed an issue where the size of Wu Chang's Accessory "Parchment" was inconsistent on different costumes.
 
 
-Update Notice [March 25, 2021]
-Identity V will be updated on March 25, 2021 (UTC+8). The following content is for reference only, and the content of the actual maintenance notice shall prevail.
-A new Hunter, "The Breaking Wheel," has joined the Manor. Obtain Season 15 Essence 2 S Costume to unlock this Character in advance. This Character can only be used in Quick Matches during the first week.
-Thank you for your continued support for Identity V. We will attach gifts via in-game mail to compensate for any inconvenience that the maintenance may cause!`
+Update Notice [April 1, 2021]
+Identity V will be updated on April 1, 2021 (UTC+8). The following content is for reference only, and the content of the actual maintenance notice shall prevail.
+- 1000th Day Anniversary: Today marks the 1000th day since the Manor opened its doors to the public! The 1000th Day Anniversary Event "Heartbeat MAX" will soon be available. Let's re-experience the excitement and adrenaline rush during our first pursuit!
+Thank you for your continued support for Identity V. We will attach gifts via in-game mail to compensate for any inconvenience that the maintenance may cause!
+        `
+
 }

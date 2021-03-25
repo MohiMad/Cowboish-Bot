@@ -23,14 +23,15 @@ module.exports = {
                 if (!reChannel) return console.log("LMAO WHERE IS MY REWARDS CHANNEL MOHEEEE?");
 
                 for (i = 0; i < 5; i++) {
-                    await bot.users.fetch(res[i].UserID).catch(e => console.log(e));
+                    await bot.shard.broadcastEval(`this.users.fetch('${res[i].UserID}')`)
+                    //await bot.users.fetch(res[i].UserID).catch(e => console.log(e));
                 }
 
-                const n1 = bot.users.cache.get(res[0].UserID) || "Not found";
-                const n2 = bot.users.cache.get(res[1].UserID) || "Not found";
-                const n3 = bot.users.cache.get(res[2].UserID) || "Not found";
-                const n4 = bot.users.cache.get(res[3].UserID) || "Not found";
-                const n5 = bot.users.cache.get(res[4].UserID) || "Not found";
+                const n1 = await bot.shard.broadcastEval(`this.users.cache.get('${res[0].UserID}')`) || "Not found";
+                const n2 = await bot.shard.broadcastEval(`this.users.cache.get('${res[1].UserID}')`) || "Not found";
+                const n3 = await bot.shard.broadcastEval(`this.users.cache.get('${res[2].UserID}')`) || "Not found";
+                const n4 = await bot.shard.broadcastEval(`this.users.cache.get('${res[3].UserID}')`) || "Not found";
+                const n5 = await bot.shard.broadcastEval(`this.users.cache.get('${res[4].UserID}')`) || "Not found";
 
 
                 res[0].Echoes = res[0].Echoes + 50;
@@ -106,7 +107,7 @@ module.exports = {
 
                 await reChannel.send(reeEmbed);
             });
-            //I know it's messy shhhhh
+        //I know it's messy shhhhh
 
     },
     /**
@@ -119,34 +120,34 @@ module.exports = {
      * @param {String} event Which event holds this notification? 
      */
     announcIt: async (message, event) => {
-		let randomNumber = Math.floor(Math.random() * 10),
-			oneTo10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let randomNumber = Math.floor(Math.random() * 10),
+            oneTo10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-		const checkForChannel = Cooldown.findOne({ userID: message.channel.id, command: event });
+        const checkForChannel = Cooldown.findOne({ userID: message.channel.id, command: event });
 
-		if (checkForChannel) return;
+        if (checkForChannel) return;
 
-		const cooldownChannel = new Cooldown({
-			command: event,
-			userID: message.channel.id,
-			timeRemaining: Date.now() + 1800000,
-			dateNow: Date.now()
-		});
+        const cooldownChannel = new Cooldown({
+            command: event,
+            userID: message.channel.id,
+            timeRemaining: Date.now() + 1800000,
+            dateNow: Date.now()
+        });
 
-		await cooldownChannel.save().catch(err => console.log(err));
+        await cooldownChannel.save().catch(err => console.log(err));
 
-		if (oneTo10[randomNumber] > 3 && oneTo10[randomNumber] < 8) {
-			await newLP(message);
-			const LP = await logicPath.findOne({ UserID: message.author.id });
-			if (LP.Opened.includes("1yrAnniversary")) return;
-			if (LP.Opened.includes("hasFired")) return;
-	
-			LP.Opened = [...LP.Opened, "hasFired"];
-			LP.save().catch(e => console.log(e));
-	
-			message.channel.send("**Celebrating Cowboish's one year anniversary :D**\nType __`Happy Birthday Cowboish`__ in the chat to trigger the anniversary event :3", new MessageAttachment("https://i.imgur.com/LZlynfT.png"))	
-		}
-	},
+        if (oneTo10[randomNumber] > 3 && oneTo10[randomNumber] < 8) {
+            await newLP(message);
+            const LP = await logicPath.findOne({ UserID: message.author.id });
+            if (LP.Opened.includes("1yrAnniversary")) return;
+            if (LP.Opened.includes("hasFired")) return;
+
+            LP.Opened = [...LP.Opened, "hasFired"];
+            LP.save().catch(e => console.log(e));
+
+            message.channel.send("**Celebrating Cowboish's one year anniversary :D**\nType __`Happy Birthday Cowboish`__ in the chat to trigger the anniversary event :3", new MessageAttachment("https://i.imgur.com/LZlynfT.png"))
+        }
+    },
     /** [Birthday function]
      * Fires a notification message in the chat regearding a character's/someone's birthday
      * 
@@ -179,7 +180,7 @@ module.exports = {
      */
     giveaway: async (bot) => {
 
-        let mainGuild = bot.guilds.cache.get("636241255994490900");
+        const mainGuild = await bot.shard.broadcastEval("this.guilds.cache.get('636241255994490900')");
         await mainGuild.members.fetch().catch(e => console.log("Giveaway fetching error:", e));
 
         let giveawayRole = mainGuild.roles.cache.get("721657451916820543");
@@ -238,7 +239,7 @@ module.exports = {
 
                 case 5:
                     LP.Ess1 = LP.Ess1 + 50;
-                    
+
                     break;
 
             }

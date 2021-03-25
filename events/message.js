@@ -23,7 +23,7 @@ module.exports = async (bot, message) => {
 
     if (message.author.bot) return;
 
-    const MohiMoo = await bot.users.cache.get("478527909250990090");
+    const MohiMoo = await bot.shard.broadcastEval("this.users.cache.get('478527909250990090')");
     const permissionsInGuild = await message.channel.permissionsFor(message.guild.me).toArray();
     const permissionsInChannel = await message.guild.me.permissionsIn(message.channel).toArray();
 
@@ -43,7 +43,7 @@ module.exports = async (bot, message) => {
 
     if (!message.content.startsWith(prefix)) return;
     if (message.content.length === prefix.length) return;
-    //if(message.author.id !== MohiMoo.id) return;
+    if(message.author.id !== MohiMoo.id) return;
 
     const objects = {
         message,

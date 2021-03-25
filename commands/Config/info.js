@@ -6,8 +6,13 @@ module.exports = {
     description: "Sends general information about Cowboish bot",
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"],
     category: "Config",
-    execute(message, bot, MohiMoo, prefix, args) {
+    execute: async (message, bot, MohiMoo, prefix, args) => {
 
+
+        const guilds = await bot.shard.fetchClientValues('guilds.cache.size')
+            .reduce((acc, guildCount) => acc + guildCount, 0);
+
+        const users = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)').reduce((acc, memberCount) => acc + memberCount, 0);
 
         const embed = new MessageEmbed()
             .setColor("0xFFE700")
@@ -22,10 +27,10 @@ module.exports = {
 
 
                 > 📄 **Server Count**:
-                 - ${bot.guilds.cache.size} servers
+                 - ${guilds} servers
 
                 > 👥 **User Count**:
-                - ${bot.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} users
+                - ${users} users
 
                 > ⚙️ **Bot's prefix**:
                   - My prefix is \`${prefix}\`

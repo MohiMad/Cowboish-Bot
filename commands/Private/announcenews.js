@@ -10,6 +10,7 @@ module.exports = {
     description: "...",
     admins: ["478527909250990090", "698795283055902832", "427200618399268874", "638831021995065344"],
     permissions: ["SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "MANAGE_MESSAGES", "ADD_REACTIONS"],
+    isDisabled: true,
     execute: async (message, bot, args) => {
 
         const GUILDS = await Guild.find({});

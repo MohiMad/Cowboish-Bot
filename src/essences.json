@@ -353,5 +353,31 @@
             "Color": "0x4CD31E",
             "Footer": "Cutie >:3"
         }
+    ], 
+    "secondEssence": [
+        {
+            "Shortcuts": [
+                "s15-2",
+                "ess2",
+                "2",
+                "s152",
+                "152",
+                "two"
+            ],
+            "WhichEss": "Ess2",
+            "LinkOfIt": "https://i.imgur.com/JGu6jXE.png",
+            "Format": ".jpg",
+            "Emoji": "<:ess2:655840643847028751>"
+        },
+        {
+            "Name": "[Costume] ",
+            "LinkTag": "",
+            "Item": "15-2-1",
+            "Tier": "S",
+            "FragAmount": 2000,
+            "Title": "💛 author  💛",
+            "Color": "0xfcba03",
+            "Footer": ""
+        }
     ]
 }

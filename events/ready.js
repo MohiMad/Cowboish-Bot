@@ -8,7 +8,10 @@ const BOATS = require('boats.js');
 
 module.exports = async (bot) => {
 
-    const botGuildCount = bot.guilds.cache.size;
+    const botGuildCount = await bot.shard.fetchClientValues('guilds.cache.size')
+        .reduce((acc, guildCount) => acc + guildCount, 0);
+
+    const userCount = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)').reduce((acc, memberCount) => acc + memberCount, 0)
 
     console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
@@ -16,7 +19,7 @@ module.exports = async (bot) => {
         `and yoinking around >:v`,
         `>invite | >help`,
         `Identity V in ${botGuildCount} servers 💕`,
-        `With ${bot.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} damsels ;)`,
+        `With ${userCount} damsels ;)`,
         "Welcome to Identit.",
         `Milestone ${botGuildCount}/2000`,
         `Never forget Bonbon's "铁皮人" skin`,
@@ -60,7 +63,7 @@ module.exports = async (bot) => {
             }
 
             if (mute.created + mute.muteTime <= Date.now() || mute.muteTime < 1000) {
-                const guild = await bot.guilds.cache.get(mute.guildID);
+                const guild = await bot.shard.broadcastEval(`this.guilds.cache.get("${mute.guildID}")`);
                 if (!guild) return deleteDoc();
 
                 const member = await guild.members.cache.get(mute.userID);
