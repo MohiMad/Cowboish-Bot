@@ -61,17 +61,20 @@ module.exports = {
                     else if (res.length < 5) {
                         LD_Embed.setColor("GREEN");
                         for (i = 0; i < res.length; i++) {
-                            let member = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`) || "Not found";
+                            async function run() {
+                                const member = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`) || "Not found";
 
-                            if (member == "Not found") {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
-                            }
-                            else {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
+                                if (member == "Not found") {
+                                    guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
+                                }
+                                else {
+                                    guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
 
+                                }
+                                LD_Embed.setFooter(`Top users on this guild out of ${res.length} results`);
+                                LD_Embed.setDescription(guildDesc);
                             }
-                            LD_Embed.setFooter(`Top users on this guild out of ${res.length} results`);
-                            LD_Embed.setDescription(guildDesc);
+                            run();
                         }
 
                     }
@@ -79,18 +82,21 @@ module.exports = {
                         LD_Embed.setColor("GREEN");
 
                         for (i = 0; i < 5; i++) {
+                            async function run() {
 
-                            let member = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`) || "Not found";
+                                const member = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`) || "Not found";
 
-                            if (member === "Not found") {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;
+                                if (member === "Not found") {
+                                    guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;
+                                }
+                                else {
+                                    guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;
+
+                                }
+                                LD_Embed.setFooter(`Top 5 users out of ${res.length} results`);
+                                LD_Embed.setDescription(guildDesc);
                             }
-                            else {
-                                guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member.tag}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;
-
-                            }
-                            LD_Embed.setFooter(`Top 5 users out of ${res.length} results`);
-                            LD_Embed.setDescription(guildDesc);
+                            run();
                         }
                     }
                     message.channel.send(LD_Embed);
