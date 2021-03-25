@@ -8,7 +8,7 @@ const BOATS = require('boats.js');
 
 module.exports = async (bot) => {
 
-    const botGuildCount, userCount;
+    let botGuildCount, userCount;
 
     bot.shard.fetchClientValues('guilds.cache.size').then((res) => {
         botGuildCount = res.reduce((acc, guildCount) => acc + guildCount, 0);
