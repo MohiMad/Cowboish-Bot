@@ -46,7 +46,7 @@ module.exports = {
             await logicPath.find({ guildsID: message.guild.id })
                 .sort([
                     ["logic", "descending"]
-                ]).exec((err, res) => {
+                ]).exec(async (err, res) => {
                     if (err) console.log(err);
 
                     let guildDesc = "▔ ▔ ▔ ▔ ▔";
