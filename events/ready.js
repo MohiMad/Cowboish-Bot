@@ -8,10 +8,15 @@ const BOATS = require('boats.js');
 
 module.exports = async (bot) => {
 
-    const botGuildCount = await bot.shard.fetchClientValues('guilds.cache.size')
-        .reduce((acc, guildCount) => acc + guildCount, 0);
+    const botGuildCount, userCount;
 
-    const userCount = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)').reduce((acc, memberCount) => acc + memberCount, 0)
+    bot.shard.fetchClientValues('guilds.cache.size').then((res) => {
+        botGuildCount = res.reduce((acc, guildCount) => acc + guildCount, 0);
+    });
+
+    bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)').then((res) => {
+        userCount = res.reduce((acc, memberCount) => acc + memberCount, 0);
+    });
 
     console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
