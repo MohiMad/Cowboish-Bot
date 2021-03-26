@@ -15,7 +15,7 @@ mongoose.connect(process.env.mongoose_uri, {
     useUnifiedTopology: true
 });
 
-bot.setMaxListeners(20);
+bot.setMaxListeners(25);
 
 ["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
 

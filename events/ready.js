@@ -8,27 +8,22 @@ const BOATS = require('boats.js');
 
 module.exports = async (bot) => {
 
-    let botGuildCount, userCount;
+    const botGuildCount = await bot.shard.fetchClientValues('guilds.cache.size');
+    const userCount = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)');
 
-    bot.shard.fetchClientValues('guilds.cache.size').then((res) => {
-        botGuildCount = res.reduce((acc, guildCount) => acc + guildCount, 0);
-    });
 
-    bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)').then((res) => {
-        userCount = res.reduce((acc, memberCount) => acc + memberCount, 0);
-    });
-
-    console.log(botGuildCount, userCount);
+    console.log(botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0),
+        userCount.reduce((acc, memberCount) => acc + memberCount, 0));
 
     console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
     const activities_list = [
         `and yoinking around >:v`,
         `>invite | >help`,
-        `Identity V in ${botGuildCount} servers 💕`,
-        `With ${userCount} damsels ;)`,
+        `Identity V in ${botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0)} servers 💕`,
+        `With ${userCount.reduce((acc, memberCount) => acc + memberCount, 0)} damsels ;)`,
         "Welcome to Identit.",
-        `Milestone ${botGuildCount}/2000`,
+        `Milestone ${botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0)}/2500`,
         `Never forget Bonbon's "铁皮人" skin`,
         `Someone pay NetEase an English translator`,
         `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`,
@@ -99,24 +94,24 @@ module.exports = async (bot) => {
     
         const dbl = new DBL(process.env.dbl_token, bot);
     
-        dbl.postStats(botGuildCount).catch(e => console.log(e));
+        dbl.postStats(botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0)).catch(e => console.log(e));
     
     
         const Boats = new BOATS(process.env.boatsToken);
     
-        Boats.postStats(botGuildCount, "632291800585076761")
+        Boats.postStats(botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0), "632291800585076761")
             .catch((err) => console.log(err));
     
         /*const Glenn = new GBL(bot.user.id, process.env.glenToken, false, false);
         
-        Glenn.updateStats(botGuildCount).catch(e => console.log(e));
+        Glenn.updateStats(botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0)).catch(e => console.log(e));
         
         const updateBotList = async () => {
         
         const { body: reply } = await snekfetch.post(`https://discordbotlist.com/api/bots/632291800585076761/stats`)
         .set("Authorization", `Bot ${process.env.dblToken_2}`)
         .send({
-            guilds: botGuildCount,
+            guilds: botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0),
             users: bot.users.size,
         })
         
