@@ -40,7 +40,6 @@ module.exports = async (bot) => {
         bot.user.setActivity(activities_list[index]);
     }, 300000);
 
-    /
 
     setInterval(async () => {
 
