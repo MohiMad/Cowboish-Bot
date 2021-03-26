@@ -5,15 +5,15 @@ const Cooldown = require("../models/cooldown.js");
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
+const { getUsersCount, getServerCount } = require("../src/functions.js");
 
 module.exports = async (bot) => {
 
-    const botGuildCount = await bot.shard.fetchClientValues('guilds.cache.size');
-    const userCount = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)');
+    const botGuildCount = await getServerCount(bot);
+    const userCount = await getUsersCount(bot);
 
 
-    console.log(botGuildCount.reduce((acc, guildCount) => acc + guildCount, 0),
-        userCount.reduce((acc, memberCount) => acc + memberCount, 0));
+    console.log(botGuildCount, userCount);
 
     console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 

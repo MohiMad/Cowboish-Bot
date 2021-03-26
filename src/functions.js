@@ -372,6 +372,17 @@ module.exports = {
 		SplicedArray.splice(SplicedArray.indexOf(toSplice), 1);
 
 		return SplicedArray;
+	},
+	getServerCount: async (bot) => {
+		const req = await bot.shard.fetchClientValues('guilds.cache.size');
+
+		return req.reduce((acc, guildCount) => acc + guildCount, 0)
+	},
+	getUsersCount: async (bot) => {
+		
+		const req = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)');
+
+		return req.reduce((acc, memberCount) => acc + memberCount, 0)
 	}
 
 
