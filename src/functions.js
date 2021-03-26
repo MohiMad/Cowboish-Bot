@@ -65,7 +65,7 @@ module.exports = {
 			.setTitle(errMsgs[errMsg])
 			.setColor("RED")
 			.setDescription(error)
-			.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true}))
+			.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
 			.setFooter("Cowboish bot", "https://i.imgur.com/ktOrGA4.png");
 		message.channel.send(errEmbed);
 	},
@@ -265,7 +265,7 @@ module.exports = {
 
 		setTimeout(() => {
 			if (!m || m == null || m == undefined || m.deleted || !m.deletable) return;
-			 m.delete();
+			m.delete();
 		}, 30000);
 
 
@@ -379,10 +379,13 @@ module.exports = {
 		return req.reduce((acc, guildCount) => acc + guildCount, 0)
 	},
 	getUsersCount: async (bot) => {
-		
+
 		const req = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)');
 
 		return req.reduce((acc, memberCount) => acc + memberCount, 0)
+	},
+	sleep: (ms) => {
+		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 
 

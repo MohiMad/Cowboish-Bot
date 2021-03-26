@@ -5,13 +5,11 @@ const Cooldown = require("../models/cooldown.js");
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
-const { getUsersCount, getServerCount } = require("../src/functions.js");
+const { getUsersCount, getServerCount, sleep } = require("../src/functions.js");
 
 module.exports = async (bot) => {
 
-    setTimeout(() => {
-        //boot time
-    }, 10000);
+    sleep(10000);
 
     const botGuildCount = await getServerCount(bot);
     const userCount = await getUsersCount(bot);
