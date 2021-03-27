@@ -4,7 +4,6 @@ const bot = new Discord.Client({
     messageCacheMaxSize: 35
 });
 
-
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.mongoose_uri, {
@@ -14,7 +13,9 @@ mongoose.connect(process.env.mongoose_uri, {
 
 bot.setMaxListeners(0);
 
-["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
+setTimeout(() => {
+    ["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
+}, 60000);
 
 
 bot.login(process.env.token);
