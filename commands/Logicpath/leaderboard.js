@@ -22,7 +22,7 @@ module.exports = {
             let description = "Here is the top 5 list of Cowboish bot **Logicpath** commands based on how many steps they've walked in their logicpath\nThere will be a weekly rewards for top 5 players of the week!\n\nIf you want to check this guild's leaderboard, do `" + prefix + "LD guild`";
 
             for (i = 0; i < 5; i++) {
-                let n = getUserByID(bot, res[i].UserID) || "Not found";
+                let n = await getUserByID(bot, res[i].UserID) || "Not found";
 
                 if (!n || n === undefined || n === null) n = "Not found";
                 else n = n.tag;

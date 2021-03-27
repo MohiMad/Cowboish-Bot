@@ -8,7 +8,6 @@ module.exports = {
     execute: async (message, bot) => {
 
         const guilds = await getServerCount(bot);
-        console.log(guilds);
 
         message.channel.send(`I'm in **${guilds}** Guilds :D`);
     }

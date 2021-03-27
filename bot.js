@@ -6,19 +6,16 @@ const bot = new Discord.Client({
 
 const mongoose = require("mongoose");
 
-let boo = false;
 
-setTimeout(() => {
-    if (boo) return;
-    boo = true;
-    mongoose.connect(process.env.mongoose_uri, {
+bot.on('shardReady', async (shard) => {
+    console.log(shard.id, bot.shard.count);
+    /* mongoose.connect(process.env.mongoose_uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
 
-    ["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
-}, 30000);
-
+    ["event", "command"].forEach(x => require(`./handlers/${x}`)(bot)); */
+})
 
 bot.setMaxListeners(0);
 

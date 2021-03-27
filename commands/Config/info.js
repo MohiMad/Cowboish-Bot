@@ -9,8 +9,8 @@ module.exports = {
     execute: async (message, bot, MohiMoo, prefix, args) => {
 
 
-        const guilds = getServerCount(bot);
-        const users = getUsersCount(bot);
+        const guilds = await getServerCount(bot);
+        const users = await getUsersCount(bot);
 
         const embed = new MessageEmbed()
             .setColor("0xFFE700")
