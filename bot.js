@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 
 
 bot.on('shardReady', async (shard) => {
-    console.log(shard.id, bot.shard.count);
+    console.log(shard, bot.shard.count);
     /* mongoose.connect(process.env.mongoose_uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true
