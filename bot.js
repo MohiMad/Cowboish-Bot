@@ -6,9 +6,11 @@ const bot = new Discord.Client({
 
 const mongoose = require("mongoose");
 
-
+let boo = false;
 
 setTimeout(() => {
+    if (boo) return;
+    boo = true;
     mongoose.connect(process.env.mongoose_uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true

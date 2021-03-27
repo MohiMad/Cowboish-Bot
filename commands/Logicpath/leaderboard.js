@@ -15,7 +15,6 @@ module.exports = {
         if (cooldownCheck) return coolEmbed(message, "Ooof there is a cooldown on this command :C", "Please wait **REMAINING** until you can use this command again... :)", cooldownCheck.timeRemaining, ["s"]);
 
         if (!args[1]) {
-
             const res = await logicPath.find({}).sort({ logic: -1 }).limit(5).catch(e => {
                 console.log(e);
             });
@@ -23,7 +22,7 @@ module.exports = {
             let description = "Here is the top 5 list of Cowboish bot **Logicpath** commands based on how many steps they've walked in their logicpath\nThere will be a weekly rewards for top 5 players of the week!\n\nIf you want to check this guild's leaderboard, do `" + prefix + "LD guild`";
 
             for (i = 0; i < 5; i++) {
-                let n = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`);
+                let n = await bot.shard.broadcastEval(`this.users.cache.get(res[i].UserID)`);
 
                 if (!n || n === undefined || n === null) n = "Not found";
                 else n = n.tag;
