@@ -124,5 +124,5 @@ module.exports = async (bot) => {
         let botUPDATE = await updateBotList();
         */
 
-    }, 10000);
+    }, 60000);
 };
