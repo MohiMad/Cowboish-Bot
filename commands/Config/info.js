@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
-
+const { getServerCount, getUsersCount } = require("../../src/functions.js");
 module.exports = {
     name: ["info", "botinfo", "bot-info"],
     description: "Sends general information about Cowboish bot",
@@ -9,10 +9,8 @@ module.exports = {
     execute: async (message, bot, MohiMoo, prefix, args) => {
 
 
-        const guilds = await bot.shard.fetchClientValues('guilds.cache.size')
-            .reduce((acc, guildCount) => acc + guildCount, 0);
-
-        const users = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)').reduce((acc, memberCount) => acc + memberCount, 0);
+        const guilds = getServerCount(bot);
+        const users = getUsersCount(bot);
 
         const embed = new MessageEmbed()
             .setColor("0xFFE700")
