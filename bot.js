@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 
 const { shardManager, shardNum } = require("./index.js");
 
+console.log("botjs", shardNum);
+
 if ((shardNum + 1) != shardManager.totalShards) {
     mongoose.connect(process.env.mongoose_uri, {
         useNewUrlParser: true,
