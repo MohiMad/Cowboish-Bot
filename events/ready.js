@@ -5,18 +5,17 @@ const Cooldown = require("../models/cooldown.js");
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
-const { getUsersCount, getServerCount, sleep } = require("../src/functions.js");
+const { getUsersCount, getServerCount } = require("../src/functions.js");
+const schedule = require('node-schedule');
+const { rewards, giveaway, resetMatches } = require("./src/minor-commands.js");
+const Cooldown = require("./models/cooldown.js");
 
 module.exports = async (bot) => {
 
     setTimeout(async () => {
 
-
         const botGuildCount = await getServerCount(bot);
         const userCount = await getUsersCount(bot);
-
-
-        console.log(botGuildCount, userCount);
 
         console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
@@ -123,6 +122,30 @@ module.exports = async (bot) => {
         
         let botUPDATE = await updateBotList();
         */
+
+        schedule.scheduleJob("1 12 * * 1", async function () {
+            const checkForWeeklyExecution = await Cooldown.findOne({ userID: bot.user.id, command: "weeklyrewards" });
+
+            if (checkForWeeklyExecution) return;
+            const weeklySpamStopper = new Cooldown({
+                command: "weeklyrewards",
+                userID: bot.user.id,
+                timeRemaining: Date.now() + 300000,
+                dateNow: Date.now()
+            });
+
+            await weeklySpamStopper.save().catch(err => console.log(err));
+            rewards(bot);
+        });
+
+        schedule.scheduleJob("0 9 * * *", async function () {
+            const checkForExecution = await Cooldown.findOne({ userID: bot.user.id, command: "giveaway" });
+
+            if (checkForExecution) return;
+            await giveaway(bot);
+            await resetMatches();
+
+        });
 
     }, 60000);
 };

@@ -7,6 +7,8 @@ module.exports = (bot) => {
 		const evt = require(`../events/${file}`);
 
 		const eName = file.split(".")[0];
-		bot.on(eName, evt.bind(null, bot));
+		
+		if (file == "ready.js") bot.once(eName, evt.bind(null, bot));
+		else bot.on(eName, evt.bind(null, bot));
 	}
 };
