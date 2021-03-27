@@ -7,7 +7,8 @@ module.exports = {
     category: "Config",
     execute: async (message, bot) => {
 
-        const guilds = getServerCount(bot);
+        const guilds = await getServerCount(bot);
+        console.log(guilds);
 
         message.channel.send(`I'm in **${guilds}** Guilds :D`);
     }
