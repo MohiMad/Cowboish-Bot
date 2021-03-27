@@ -384,9 +384,5 @@ module.exports = {
 
 		return req.reduce((acc, memberCount) => acc + memberCount, 0)
 	},
-	sleep: (ms) => {
-		return new Promise(resolve => setTimeout(resolve, ms));
-	}
-
-
+	
 };
