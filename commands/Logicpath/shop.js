@@ -337,6 +337,11 @@ module.exports = {
                         LP_Path: LP.Percy,
                         CharacterName: "Undead",
                         Emoji: "💀"
+                    },
+                    {
+                        LP_Path: LP.BreakingWheel,
+                        CharacterName: "Breaking Wheel",
+                        Emoji: "🎭"
                     }
 
                 ];

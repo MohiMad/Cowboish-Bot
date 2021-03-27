@@ -177,6 +177,7 @@ module.exports = {
 			Painter: false,
 			Sculptor: false,
 			Percy: false,
+			BreakingWheel: false,
 			Portrait: "0",
 			ThreeMatches: 3,
 			Batter: false,

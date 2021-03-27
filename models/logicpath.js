@@ -97,10 +97,11 @@ const LPSchema = mongoose.Schema({
     Entomologist: Boolean,
     Sculptor: Boolean,
     Percy: Boolean,
+    BreakingWheel: Boolean,
     Painter: Boolean,
+    Batter: Boolean,
     Portrait: String,
     ThreeMatches: Number,
-    Batter: Boolean,
     Inventory: Array
 
 });

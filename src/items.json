@@ -259,6 +259,15 @@
         },
         {
             "Name": [
+                "[Costume] The Breaking Wheel - Three-faced God"
+            ],
+            "linkTag": "https://i.imgur.com/pZWknyC.png",
+            "Item": "s15-2-1",
+            "Color": "0xfcba03",
+            "Des": "See no evil, hear no evil, speak no evil.\nAsk not the truth in this world. Enforce the commandants to alleviate the sins of the mortals while toying with the hideous humanity."
+        },
+        {
+            "Name": [
                 "[Costume] Percy - Conquer",
                 "conquer",
                 "33",
@@ -433,6 +442,24 @@
             "Item": "TPN-4",
             "Color": "0xbb2af5",
             "Des": "Emma's Costume"
+        },
+        {
+            "Name": [
+                "[Costume] Sculptor - \"Maria\""
+            ],
+            "linkTag": "https://i.imgur.com/pbidNZB.png",
+            "Item": "s15-2-2",
+            "Color": "0xbb2af5",
+            "Des": "An isolated village caught in a cruel cycle of punishment.\nA poor girl was chosen as the martyr. Yet her resentment was directed not toward this horrifying torture device, but those ruthless cowards."
+        },
+        {
+            "Name": [
+                "[Costume] Cowboy - Candleman"
+            ],
+            "linkTag": "https://i.imgur.com/wphwfPW.png",
+            "Item": "s15-2-3",
+            "Color": "0xbb2af5",
+            "Des": "The day the candles on him extinguish is the day a sinner gets punished."
         },
         {
             "Name": [
@@ -2970,7 +2997,20 @@
             ],
             "linkTag": "https://i.imgur.com/GGsCZLS.png",
             "Price": 4508,
-            "BoughtMessage": "Yey! You bought the hated-by-the-community hunter :'D\nYou can play as him by doing $prefixhunt percy"
+            "BoughtMessage": "Yey! You bought the hated-by-community hunter :'D\nYou can play as him by doing $prefixhunt percy"
+        },
+        {
+            "LP_Value": "BreakingWheel",
+            "Name": [
+                "The Breaking Wheel",
+                "breakingwheel",
+                "bw",
+                "thebreakingwheel",
+                "willbrothers"
+            ],
+            "linkTag": "https://i.imgur.com/exMkrvC.png",
+            "Price": 4508,
+            "BoughtMessage": "Roll roll? .w.\nYou bought The Breaking Wheel\nYou can play as him by doing $prefixhunt bw"
         }
     ],
     "PowerUps": [

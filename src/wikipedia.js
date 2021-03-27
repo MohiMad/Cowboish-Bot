@@ -520,11 +520,43 @@ module.exports = {
 
             Energy_Conversion: stripIndents`When this ability is used while Percy's Energy Load is below 50, his Energy Load will increase by 50 and he'll enter Energy Surge. When this ability is used when Percy is in Energy Surge mode, his Energy Load will decrease by 50 and he will exit Energy Surge mode.`
 
+        },
+        {
+            Name: ["The Breaking Wheel", "bw", "the breaking wheel", "breaking wheel", "breakingwheel", "will brothers", "willbrothers"],
+            Image: "https://i.imgur.com/exMkrvC.png",
+            Href: "The_Breaking_Wheel",
+            Execution_Wheel: stripIndents`The Will Brothers can "assemble" themselves into a wheel:
+            In wheel form, they will gain a massive speed boost. When they exceed a certain speed, they can crush pallets, but their ability to change directions is hindered.
+            In such form, they can't launch Normal Attacks or perform general interactions and will be immune to control effects
+            `,
+            Pierce: stripIndents`Survivors who have been run over by the Will Brothers in wheel form will be Pierced:
+            Pierce can be stacked up to 3 times. When a Pierced Survivor gets hit by the Will Brothers in human form, each stack of Pierce will transform into Fear equals to half of a Normal Attack. 
+            Survivors will need help from others to remove the spikes. For 1/2/3 stack(s) of Pierce, removing the spikes will take 7/10/15 seconds, respectively. 
+            For a single Survivor, there is a 3-second interval between each additional stack of Pierce. 
+            `,
+            Wheel_Of_Silence: stripIndents`In car form, immediately gains an 80% Movement Speed boost.
+            The speed boost will gradually diminish over 3 seconds.
+            A speed boost can be saved up every 15 seconds for up to 2 times.
+            `,
+            Reticent: stripIndents`The reticent eldest brother solves problems with actions: 
+            In human form, he hurls a nail board toward a specific location. 
+            Survivors who step on the nail board will have their Movement Speed reduced by 60% for 2 seconds. If a Survivor who steps on the nail board is stacked with Pierce, they will be confined for 2 seconds instead. The nail board will stay on the field for 10 seconds.
+            `,
+            Wheel_Of_Impalement: stripIndents`In car form, the middle brother will push out spikes from both sides, extending Pierce's hit range for 10 seconds.`,
+            Pessimistic: stripIndents`The pessimistic middle brother affects others with his emotions: 
+            In human form, controls spikes and inflicts Pierce on all Survivors within 18 meters.
+            `,
+            Wheel_Of_Destruction: stripIndents`No one could stop the Breaking Wheel on it's track: 
+            An additional 1 speed boost can be saved in car form.
+            `,
+            Ridicule: stripIndents`The younest brother loves to ridicule those who are confused and disturbed:
+            Upon switching from wheel form to human form, tosses out numerous spikes within a 12 meters radius, inflicting 1 stack of Pierce to Survivors.
+            `
         }
     ],
     Survivors: [
         {
-            Name: ["survivors", "survivors", "the survivors", "ths survivor", "surv", "survs"], 
+            Name: ["survivors", "survivors", "the survivors", "ths survivor", "surv", "survs"],
             Link: "https://i.imgur.com/ZA35VWa.png",
             Hex: "0x15f153",
             Footer: "The Survivors - Page $index of $length — Information taken from Identity Gamepedia"

@@ -3,7 +3,7 @@ const { stripIndents } = require("common-tags");
 const { newLP, ErrorMsg, addCooldown, findCooldown, coolEmbed } = require("../../src/functions.js");
 const { ess1, ess2, ess3, frags } = require("../../src/emojis.json");
 const logicPath = require("../../models/logicpath.js");
-const { firstEssence } = require("../../src/essences.json");
+const { firstEssence, secondEssence } = require("../../src/essences.json");
 
 const { statsCheck } = require("../../src/essenceFunctions.js");
 
@@ -57,10 +57,11 @@ module.exports = {
 
             if (!args[1]) return message.channel.send(noargsEmbed);
 
-            for (var i = 0; i < 1; i++) {
+            for (var i = 0; i < 2; i++) {
 
                 let essence;
                 if (i === 0) essence = firstEssence;
+                if (i === 1) essence = secondEssence;
 
                 let randomItem = Math.floor(Math.random() * essence.slice(1).length);
 
@@ -86,9 +87,9 @@ module.exports = {
                             LP.frags = LP.frags + EssenceONLY[randomItem].FragAmount;
 
                         } else {
+                            if (EssenceONLY[randomItem].Item == "s15-2-1") LP.BreakingWheel = true;
                             LP.Opened = [...LP.Opened, EssenceONLY[randomItem].Item];
                             LP[EssenceONLY[randomItem].Tier] = LP[EssenceONLY[randomItem].Tier] + 1;
-
 
                         }
 
@@ -147,12 +148,11 @@ module.exports = {
                             }
 
                             if (LP.Opened.includes(EssenceONLY[rndom].Item)) {
-
-
                                 fragments += EssenceONLY[rndom].FragAmount;
                                 description += `\n\n[${s + 1} 】](${tenEssLink}) **${EssenceONLY[rndom].Name}**`;
 
                             } else {
+                                if (EssenceONLY[rndom].Item == "s15-2-1") LP.BreakingWheel = true;
                                 LP.Opened = [...LP.Opened, EssenceONLY[rndom].Item];
                                 LP[EssenceONLY[rndom].Tier] = LP[EssenceONLY[rndom].Tier] + 1;
 
