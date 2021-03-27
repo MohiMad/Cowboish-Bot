@@ -8,16 +8,16 @@ const mongoose = require("mongoose");
 
 const { shardManager, shardNum } = require("./index.js");
 
-if ((shardNum + 1) != shardManager.totalShards) return;
+if ((shardNum + 1) != shardManager.totalShards) {
+    mongoose.connect(process.env.mongoose_uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
 
-mongoose.connect(process.env.mongoose_uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+    ["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
+}
 
 bot.setMaxListeners(0);
-
-["event", "command"].forEach(x => require(`./handlers/${x}`)(bot));
 
 
 bot.login(process.env.token);
