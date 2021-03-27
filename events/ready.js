@@ -7,7 +7,7 @@ const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
 const { getUsersCount, getServerCount } = require("../src/functions.js");
 const schedule = require('node-schedule');
-const { rewards, giveaway, resetMatches } = require("./src/minor-commands.js");
+const { rewards, giveaway, resetMatches } = require("../src/minor-commands.js");
 
 module.exports = async (bot) => {
 
