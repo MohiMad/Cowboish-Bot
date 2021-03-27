@@ -5,7 +5,7 @@ const Cooldown = require("../models/cooldown.js");
 const DBL = require("dblapi.js");
 const BOATS = require('boats.js');
 //const GBL = require('gblapi.js');
-const { getUsersCount, getServerCount } = require("../src/functions.js");
+const { getUsersCount, getServerCount, getServerByID } = require("../src/functions.js");
 const schedule = require('node-schedule');
 const { rewards, giveaway, resetMatches } = require("../src/minor-commands.js");
 
@@ -23,7 +23,7 @@ module.exports = async (bot, shard) => {
         `Identity V in ${botGuildCount} servers 💕`,
         `With ${userCount} damsels ;)`,
         "Welcome to Identit.",
-        `Milestone ${botGuildCount}/2500`,
+        `Milestone ${botGuildCount}/3000`,
         `Never forget Bonbon's "铁皮人" skin`,
         `Someone pay NetEase an English translator`,
         `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`,
@@ -65,7 +65,7 @@ module.exports = async (bot, shard) => {
             }
 
             if (mute.created + mute.muteTime <= Date.now() || mute.muteTime < 1000) {
-                const guild = await bot.shard.broadcastEval(`this.guilds.cache.get("${mute.guildID}")`);
+                const guild = await getServerByID(bot, mute.guildID);
                 if (!guild) return deleteDoc();
 
                 const member = await guild.members.cache.get(mute.userID);

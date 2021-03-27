@@ -1,5 +1,5 @@
 const Guild = require("../models/guild.js");
-const { permsCheck } = require('../src/functions.js');
+const { permsCheck, getUserByID } = require('../src/functions.js');
 const SpamSet = new Set();
 
 module.exports = async (bot, message) => {
@@ -23,7 +23,7 @@ module.exports = async (bot, message) => {
 
     if (message.author.bot) return;
 
-    const MohiMoo = await bot.shard.broadcastEval("this.users.cache.get('478527909250990090')");
+    const MohiMoo = await getUserByID(bot, '478527909250990090');
     const permissionsInGuild = await message.channel.permissionsFor(message.guild.me).toArray();
     const permissionsInChannel = await message.guild.me.permissionsIn(message.channel).toArray();
 
