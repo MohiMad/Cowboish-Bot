@@ -6,10 +6,14 @@ const bot = new Discord.Client({
 
 const mongoose = require("mongoose");
 
+//const { shardManager } = require("./index.js");
+
 mongoose.connect(process.env.mongoose_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
+console.log("once");
 
 bot.setMaxListeners(0);
 

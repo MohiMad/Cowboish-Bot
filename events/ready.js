@@ -11,8 +11,6 @@ const { rewards, giveaway, resetMatches } = require("../src/minor-commands.js");
 
 module.exports = async (bot) => {
 
-    
-
         const botGuildCount = await getServerCount(bot);
         const userCount = await getUsersCount(bot);
 

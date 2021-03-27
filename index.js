@@ -9,3 +9,4 @@ manager.on('shardCreate', (shard) => {
 });
 
 manager.spawn();
+module.exports.shardManager = manager;
