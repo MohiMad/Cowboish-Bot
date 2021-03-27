@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 
 bot.on('shardReady', async (shard) => {
     if ((shard + 1) === bot.shard.count) {
-        mongoose.connect(process.env.mongoose_uri, {
+        await mongoose.connect(process.env.mongoose_uri, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
