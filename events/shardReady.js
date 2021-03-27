@@ -9,7 +9,8 @@ const { getUsersCount, getServerCount } = require("../src/functions.js");
 const schedule = require('node-schedule');
 const { rewards, giveaway, resetMatches } = require("../src/minor-commands.js");
 
-module.exports = async (bot) => {
+module.exports = async (bot, shard) => {
+    if (shard.id != bot.shard.count) return console.log("false");
 
     const botGuildCount = await getServerCount(bot);
     const userCount = await getUsersCount(bot);
@@ -27,6 +28,7 @@ module.exports = async (bot) => {
         `Someone pay NetEase an English translator`,
         `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
+        "as (K e l v i n)",
         `Yeehaw! >:D`
     ];
 

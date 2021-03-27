@@ -1,6 +1,6 @@
 const logicPath = require("../../models/logicpath.js");
 const { MessageEmbed } = require("discord.js")
-const { coolEmbed, findCooldown, addCooldown, ErrorMsg } = require("../../src/functions.js");
+const { coolEmbed, findCooldown, addCooldown, ErrorMsg, getUserByID } = require("../../src/functions.js");
 const { first, second, third } = require("../../src/emojis.json");
 
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
             let description = "Here is the top 5 list of Cowboish bot **Logicpath** commands based on how many steps they've walked in their logicpath\nThere will be a weekly rewards for top 5 players of the week!\n\nIf you want to check this guild's leaderboard, do `" + prefix + "LD guild`";
 
             for (i = 0; i < 5; i++) {
-                let n = await bot.shard.broadcastEval(`this.users.cache.get(res[i].UserID)`);
+                let n = getUserByID(bot, res[i].UserID) || "Not found";
 
                 if (!n || n === undefined || n === null) n = "Not found";
                 else n = n.tag;
@@ -61,7 +61,7 @@ module.exports = {
                         LD_Embed.setColor("GREEN");
                         for (i = 0; i < res.length; i++) {
                             async function run() {
-                                const member = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`) || "Not found";
+                                const member = await getUserByID(bot, res[i].UserID) || "Not found";
 
                                 if (member == "Not found") {
                                     guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`
@@ -83,7 +83,7 @@ module.exports = {
                         for (i = 0; i < 5; i++) {
                             async function run() {
 
-                                const member = await bot.shard.broadcastEval(`this.users.cache.get('${res[i].UserID}')`) || "Not found";
+                                const member = await getUserByID(bot, res[i].UserID) || "Not found";
 
                                 if (member === "Not found") {
                                     guildDesc = guildDesc + `\n\n〘**${i + 1}**〙 **${member}**\n<a:WalkinDetective:798252338946244628> | *LogicPath steps* ➜ **${res[i].logic}**`;

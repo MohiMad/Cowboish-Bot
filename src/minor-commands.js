@@ -3,6 +3,7 @@ const logicPath = require("../models/logicpath.js");
 const { stripIndents } = require('common-tags');
 const Cooldown = require("../models/cooldown.js");
 const { clues, frags, insp, ess1, ess2, ess3 } = require("./emojis.json");
+const { getChannelByID, getUserByID } = require("./functions.js");
 
 module.exports = {
     /**
@@ -19,19 +20,18 @@ module.exports = {
                 if (err) console.log(err);
 
                 //the ID of Rewards channel on Cowboish server
-                let reChannel = bot.channels.cache.get('676502025499836416');
+                let reChannel = getChannelByID(bot, '676502025499836416');
                 if (!reChannel) return console.log("LMAO WHERE IS MY REWARDS CHANNEL MOHEEEE?");
 
                 for (i = 0; i < 5; i++) {
-                    await bot.shard.broadcastEval(`this.users.fetch('${res[i].UserID}')`)
-                    //await bot.users.fetch(res[i].UserID).catch(e => console.log(e));
+                    await bot.shard.broadcastEval(`this.users.fetch('${res[i].UserID}')`);
                 }
 
-                const n1 = await bot.shard.broadcastEval(`this.users.cache.get('${res[0].UserID}')`) || "Not found";
-                const n2 = await bot.shard.broadcastEval(`this.users.cache.get('${res[1].UserID}')`) || "Not found";
-                const n3 = await bot.shard.broadcastEval(`this.users.cache.get('${res[2].UserID}')`) || "Not found";
-                const n4 = await bot.shard.broadcastEval(`this.users.cache.get('${res[3].UserID}')`) || "Not found";
-                const n5 = await bot.shard.broadcastEval(`this.users.cache.get('${res[4].UserID}')`) || "Not found";
+                const n1 = await getUserByID(bot, res[0].UserID) || "Not found";
+                const n2 = await getUserByID(bot, res[1].UserID) || "Not found";
+                const n3 = await getUserByID(bot, res[2].UserID) || "Not found";
+                const n4 = await getUserByID(bot, res[3].UserID) || "Not found";
+                const n5 = await getUserByID(bot, res[4].UserID) || "Not found";
 
 
                 res[0].Echoes = res[0].Echoes + 50;
@@ -255,7 +255,7 @@ module.exports = {
                 .setTimestamp()
                 .setFooter(`Oooohoo lucky ${randomUser.user.username} >:3`, bot.user.displayAvatarURL());
 
-            let giveawayChannel = bot.channels.cache.get('676502025499836416');
+            const giveawayChannel = getChannelByID(bot, '676502025499836416');
 
             if (!giveawayChannel) return;
 

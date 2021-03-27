@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { coolEmbed, addCooldown, findCooldown } = require("../../src/functions.js");
+const { coolEmbed, addCooldown, findCooldown, getChannelByID } = require("../../src/functions.js");
 const { stripIndents } = require("common-tags");
 
 const spamStopper = new Set();
@@ -17,7 +17,7 @@ module.exports = {
         let secondQuestion = "";
 
         const authorName = message.author.username;
-        const suggest = bot.channels.cache.get('653529896903245834');
+        const suggest = await getChannelByID(bot, '653529896903245834');
 
         const sayMessage = args.slice(1).join("  ");
         let keepGoing = true;
@@ -25,7 +25,7 @@ module.exports = {
         if (!suggest) return;
         if (message.channel.id === suggest.id) return;
         const filter = m => m.author.id === message.author.id;
-        //if (cooldownCheck) return coolEmbed(message, "The cooldown is still on!", "Since this command can be spammed, there is a **5 minutes** cooldown set on it...\nYou have to wait **REMAINING** before being able to send another suggestion ^-^", cooldownCheck.timeRemaining, ["m", "s"]);
+        if (cooldownCheck) return coolEmbed(message, "The cooldown is still on!", "Since this command can be spammed, there is a **5 minutes** cooldown set on it...\nYou have to wait **REMAINING** before being able to send another suggestion ^-^", cooldownCheck.timeRemaining, ["m", "s"]);
 
         if (spamStopper.has(message.author)) return message.reply("**A suggestion is already ongoing... Now it's cancelled, try again!**");
 

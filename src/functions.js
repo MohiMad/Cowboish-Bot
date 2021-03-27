@@ -376,13 +376,30 @@ module.exports = {
 	getServerCount: async (bot) => {
 		const req = await bot.shard.fetchClientValues('guilds.cache.size');
 
-		return req.reduce((acc, guildCount) => acc + guildCount, 0)
+		return req.reduce((p, n) => p + n, 0);
 	},
 	getUsersCount: async (bot) => {
-
-		const req = await bot.shard.broadcastEval('this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)');
-
-		return req.reduce((acc, memberCount) => acc + memberCount, 0)
+		let usersCount;
+		await msg.client.shard.fetchClientValues('users.size')
+			.then((results) => {
+				usersCount = results.reduce((prev, userCount) => prev + userCount, 0);
+			});
+		return usersCount;
 	},
-	
+	getServerByID: async (bot, ID) => {
+		const req = await bot.shard.broadcastEval(`this.guilds.cache.get("${ID}")`);
+
+		return req.find(res => !!res) || null;
+	},
+	getUserByID: async (bot, ID) => {
+		const req = await bot.shard.broadcastEval(`this.users.cache.get("${ID}")`);
+
+		return req.find(res => !!res) || null;
+	},
+	getChannelByID: async (bot, ID) => {
+		const req = await bot.shard.broadcastEval(`this.channels.cache.get("${ID}")`);
+
+		return req.find(res => !!res) || null;
+	}
+
 };

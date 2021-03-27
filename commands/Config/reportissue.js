@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { coolEmbed, addCooldown, findCooldown } = require("../../src/functions.js");
+const { coolEmbed, addCooldown, findCooldown, getChannelByID } = require("../../src/functions.js");
 let spamStopper = new Set();
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
 
         var firstQuestion = "0";
         var secondQuestion = "0";
-        const suggest = bot.channels.cache.get('721685336161517579');
+        const suggest = await getChannelByID(bot, '721685336161517579');
         let errorMsg = args.slice(1).join(" ");
 
         if (!suggest) return;
