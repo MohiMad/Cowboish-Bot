@@ -9,7 +9,7 @@ const { getUsersCount, getServerCount, sleep } = require("../src/functions.js");
 
 module.exports = async (bot) => {
 
-    setTimeout(() => {
+    setTimeout(async () => {
 
 
         const botGuildCount = await getServerCount(bot);
