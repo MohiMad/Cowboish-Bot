@@ -9,13 +9,12 @@ const { getUsersCount, getServerCount, getServerByID } = require("../src/functio
 const schedule = require('node-schedule');
 const { rewards, giveaway, resetMatches } = require("../src/minor-commands.js");
 
-module.exports = async (bot, shard) => {
-    if (shard.id != bot.shard.count) return console.log("false");
+module.exports = async (bot) => {
+
+    console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\nYeehaw let's yeet some damsels 🤠\n___________________________________________`);
 
     const botGuildCount = await getServerCount(bot);
     const userCount = await getUsersCount(bot);
-
-    console.log(`Logged in as ${bot.user.tag}!\n___________________________________________\n🤠\n___________________________________________`);
 
     const activities_list = [
         `and yoinking around >:v`,
@@ -26,7 +25,7 @@ module.exports = async (bot, shard) => {
         `Milestone ${botGuildCount}/3000`,
         `Never forget Bonbon's "铁皮人" skin`,
         `Someone pay NetEase an English translator`,
-        `I'm not forgiving NE for naming my Black-and-White Portrait "Cowgirl"`,
+        `I'm not forgiving NetEase for naming my Black-and-White Portrait "Cowgirl"`,
         `R.I.P Cowboy's One Tap Lassos 😔`,
         "as (K e l v i n)",
         `Yeehaw! >:D`

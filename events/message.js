@@ -56,7 +56,6 @@ module.exports = async (bot, message) => {
         permissionsInGuild,
         highestRole
     }
-    console.log(MohiMoo);
 
     /**
      * [getArgsRequested function]

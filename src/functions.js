@@ -380,10 +380,11 @@ module.exports = {
 	},
 	getUsersCount: async (bot) => {
 		let usersCount;
-		await msg.client.shard.fetchClientValues('users.size')
+		await bot.shard.fetchClientValues('users.size')
 			.then((results) => {
 				usersCount = results.reduce((prev, userCount) => prev + userCount, 0);
 			});
+			
 		return usersCount;
 	},
 	getServerByID: async (bot, ID) => {
