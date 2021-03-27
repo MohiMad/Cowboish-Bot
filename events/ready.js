@@ -8,7 +8,6 @@ const BOATS = require('boats.js');
 const { getUsersCount, getServerCount } = require("../src/functions.js");
 const schedule = require('node-schedule');
 const { rewards, giveaway, resetMatches } = require("./src/minor-commands.js");
-const Cooldown = require("./models/cooldown.js");
 
 module.exports = async (bot) => {
 
