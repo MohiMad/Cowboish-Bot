@@ -1,0 +1,31 @@
+[
+    {
+        "Question": "**Question:**\nThe Breaking Wheel has another name, what is it?",
+        "Answer": [
+            "the will brothers",
+            "will brothers",
+            "willbrothers"
+        ],
+        "Difficulty": "Medium",
+        "Attachment": "https://i.imgur.com/exMkrvC.png"
+    },
+    {
+        "Question": "**Fill in The Gap:**\n`The Breaking Wheel can stack up to _ _ _ _ _ Pierces`",
+        "Answer": [
+            "three"
+        ],
+        "Difficulty": "Medium",
+        "Attachment": "https://i.imgur.com/exMkrvC.png"
+    },
+    {
+        "Question": "**Question:**\nHow long does the Wheel Speed Boost ability last for? Answer in seconds!",
+        "Answer": [
+            "3 seconds",
+            "three seconds",
+            "three",
+            "3"
+        ],
+        "Difficulty": "Hard",
+        "Attachment": "https://i.imgur.com/exMkrvC.png"
+    }
+]
