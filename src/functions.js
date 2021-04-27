@@ -85,14 +85,15 @@ module.exports = {
 		return channel;
 	},
 	newLP: async (message) => {
-		let LP = await logicPath.findOne({ UserID: message.author.id });
+		const LP = await logicPath.findOne({ UserID: message.author.id });
 
 		if (LP) {
 			if (!LP.guildsID.includes(message.guild.id)) {
 				LP.guildsID = [...LP.guildsID, message.guild.id];
-				return await LP.save().catch(e => console.log(e));
+				await LP.save().catch(e => console.log(e));
 			}
-			else return;
+
+			return LP;
 		}
 
 		const newLP = new logicPath({
@@ -177,7 +178,6 @@ module.exports = {
 			Painter: false,
 			Sculptor: false,
 			Percy: false,
-			BreakingWheel: false,
 			Portrait: "0",
 			ThreeMatches: 3,
 			Batter: false,
@@ -186,6 +186,7 @@ module.exports = {
 		});
 		await newLP.save().catch(err => console.log(err));
 
+		return newLP;
 	},
 	findCooldownByCommand: async (command) => {
 		const cooldownChecker = Cooldown.findOne({ command: command });
@@ -385,7 +386,7 @@ module.exports = {
 			.then((results) => {
 				usersCount = results.reduce((prev, userCount) => prev + userCount, 0);
 			});
-			
+
 		return usersCount;
 	},
 	getServerByID: async (bot, ID) => {

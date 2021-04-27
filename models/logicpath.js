@@ -3,39 +3,22 @@ const mongoose = require("mongoose");
 const LPSchema = mongoose.Schema({
 
     UserID: String,
-
     guildsID: Array,
-
     logic: Number,
-
     Dices: Number,
-
     Clues: Number,
-
     Ess1: Number,
-
     Ess2: Number,
-
     Ess3: Number,
-
     Inspirations: Number,
-
     frags: Number,
-
     S: Number,
-
     A: Number,
-
     B: Number,
-
     C: Number,
-
     D: Number,
-
     Echoes: Number,
-
     ID: String,
-
     Survivors: {
         Cowboy: Boolean,
         Mercenary: Boolean,
@@ -60,9 +43,7 @@ const LPSchema = mongoose.Schema({
         NewSurv: Boolean,
         AnotherSurv: Boolean,
     },
-
     Hunters: {
-
         WuChang: Boolean,
         AxeBoi: Boolean,
         Lizard: Boolean,
@@ -80,7 +61,6 @@ const LPSchema = mongoose.Schema({
         Sister: Boolean,
         NewHunta: Boolean,
         AnotherHunta: Boolean
-
     },
     Opened: Array,
     region: String,
